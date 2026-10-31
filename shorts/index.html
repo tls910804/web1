@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>문장 쇼츠</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <!-- 0 · 스플래시 -->
+    <section class="screen splash" id="splash">
+      <div class="logo">문</div>
+      <h1>문장 쇼츠</h1>
+      <p>한 문장씩 넘기며 배우는 외국어</p>
+    </section>
+
+    <!-- 1 · 온보딩 -->
+    <section class="screen" id="onboarding" hidden>
+      <div class="page" style="padding-bottom:150px">
+        <h2 class="title" style="margin-top:24px">어떤 언어를 배울까요?</h2>
+        <p class="desc">고른 언어의 문장이 섞여서 나와요. 나중에 언제든 바꿀 수 있어요.</p>
+        <div class="lang-pickers"></div>
+      </div>
+      <div class="bottom" style="text-align:center">
+        <button class="btn dark" id="start-btn" data-action="start">시작하기</button>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">언어는 '언어' 탭에서 나중에 바꿀 수 있어요</div>
+      </div>
+    </section>
+
+    <!-- 2 · 둘러보기 -->
+    <section class="screen glow" id="feed" hidden>
+      <div class="feed" id="feed-list"></div>
+      <div class="cats" id="cats"></div>
+      <div class="feed-head" id="feed-head"></div>
+      <div class="acts" id="acts">
+        <button class="act" data-action="save-card" aria-label="배울 문장으로 저장"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>배울래요</button>
+        <button class="act" data-action="speak-card" aria-label="발음 듣기"><svg class="i" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>듣기</button>
+        <button class="act" data-action="toggle-tr" aria-label="해석 가리기"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>해석 가림</span></button>
+        <button class="act" data-action="copy-card" aria-label="문장 복사"><svg class="i" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>복사</button>
+      </div>
+      <div class="swipe">위로 넘기기 · 두 번 탭해서 문장 저장</div>
+    </section>
+
+    <!-- 5 · 배울래요 -->
+    <section class="screen" id="saved" hidden>
+      <div class="page" id="saved-page"></div>
+    </section>
+
+    <!-- 6 · 언어 설정 -->
+    <section class="screen" id="langs" hidden>
+      <div class="page">
+        <h2 class="title">언어</h2>
+        <p class="desc" id="langs-summary"></p>
+        <div class="lang-pickers"></div>
+      </div>
+    </section>
+
+    <!-- R1~R3 · 복습 -->
+    <section class="screen glow" id="review" hidden></section>
+    <section class="screen done" id="review-done" hidden></section>
+
+    <!-- A1 · 문장 추가 -->
+    <section class="screen glow" id="add" hidden>
+      <div class="page">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px">
+          <h2 class="title" style="margin:0">문장 추가</h2>
+          <button class="ib" data-action="close-add" aria-label="닫기"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </div>
+        <p class="desc" style="margin-top:6px">드라마·수업·대화에서 만난 문장을 내 카드로 저장해요</p>
+        <span class="lbl">배우는 언어</span>
+        <div class="grid" id="add-langs"></div>
+        <label class="lbl" for="add-text">문장</label>
+        <textarea class="field" id="add-text" rows="2" placeholder="I'm running late, be there in ten."></textarea>
+        <label class="lbl" for="add-tr">해석<small id="add-native"></small></label>
+        <textarea class="field" id="add-tr" rows="1" placeholder="좀 늦어, 10분 안에 갈게."></textarea>
+        <span class="lbl">핵심 표현<small>선택 · 단어를 눌러 묶어요</small></span>
+        <div class="words sm" id="add-words"><span class="desc">문장을 입력하면 단어가 나타나요</span></div>
+        <div class="expr" id="add-expr" style="margin-top:14px" hidden>
+          <i></i>
+          <div style="flex:1"><b id="add-expr-text"></b>
+            <input class="field" id="add-mean" style="margin-top:6px;font-size:14px;padding:8px 12px" placeholder="뜻을 직접 적어요 (예: 예정보다 늦어지고 있다)">
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <button class="btn dark" id="add-save" data-action="add-save">배울래요에 저장</button>
+      </div>
+    </section>
+
+    <!-- 하단 탭 -->
+    <nav class="tabs" id="tabs" hidden>
+      <button class="tab" data-tab="feed"><span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>둘러보기</button>
+      <button class="tab" data-tab="saved"><span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg><span class="badge" id="badge" hidden></span></span>배울래요</button>
+      <button class="tab" data-tab="langs"><span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>언어</button>
+    </nav>
+
+    <div id="layer"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
