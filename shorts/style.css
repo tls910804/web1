@@ -5,15 +5,15 @@
 }
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:#e9e7e2;display:flex;justify-content:center;align-items:center}
+body{margin:0;font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:#e9e7e2}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
 button:disabled{opacity:.4;cursor:default}
 input,textarea{font:inherit;color:inherit}
 [hidden]{display:none !important}
 
-.app{position:relative;width:100%;max-width:430px;height:100vh;height:100dvh;overflow:hidden;background:var(--bg)}
+.app{position:fixed;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;overflow:hidden;background:var(--bg)}
 @media (min-width:500px) and (min-height:700px){
-  .app{height:min(100dvh - 40px,880px);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+  .app{top:50%;bottom:auto;height:min(100dvh - 40px,880px);transform:translate(-50%,-50%);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
 }
 .screen{position:absolute;inset:0;overflow:hidden}
 .glow{background:radial-gradient(60% 38% at 100% 8%,rgba(37,99,235,.09),transparent 70%),radial-gradient(75% 42% at 0% 80%,rgba(37,99,235,.12),transparent 70%),var(--bg)}
