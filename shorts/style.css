@@ -47,7 +47,7 @@ h3.sec{font-size:14px;margin:22px 0 10px}
 
 /* 공통 버튼 */
 .chip{padding:7px 14px;border-radius:999px;border:1px solid var(--line);font-size:13px;color:var(--muted);background:var(--card);white-space:nowrap}
-.chip small{opacity:.6;margin-left:4px;font-size:11px}
+.chip small{margin-left:4px;font-size:11px}
 .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:700}
 .grid{display:flex;flex-wrap:wrap;gap:8px}
 .btn{width:100%;border-radius:14px;padding:15px 20px;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;text-align:center}
