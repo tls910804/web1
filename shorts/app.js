@@ -552,6 +552,22 @@ $('app').addEventListener('click', function(e){
   }
 });
 
+// ---------- 화면 높이 맞추기 ----------
+// 모바일 브라우저는 하단 도구 모음이 접히고 펴지면서 화면 크기가 바뀌므로, 실제로 보이는 영역에 맞춘다.
+function fitViewport(){
+  var v = window.visualViewport;
+  var root = document.documentElement.style;
+  root.setProperty('--vh', (v ? v.height : window.innerHeight) + 'px');
+  root.setProperty('--vt', (v ? v.offsetTop : 0) + 'px');
+}
+fitViewport();
+window.addEventListener('resize', fitViewport);
+window.addEventListener('orientationchange', fitViewport);
+if (window.visualViewport) {
+  visualViewport.addEventListener('resize', fitViewport);
+  visualViewport.addEventListener('scroll', fitViewport);
+}
+
 // ---------- 시작 ----------
 show('splash');
 setTimeout(function(){ show(state.onboarded ? 'feed' : 'onboarding'); }, 1100);
