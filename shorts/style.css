@@ -12,6 +12,9 @@ input,textarea{font:inherit;color:inherit}
 [hidden]{display:none !important}
 
 .app{position:fixed;top:var(--vt,0px);height:var(--vh,100dvh);left:50%;transform:translateX(-50%);width:100%;max-width:430px;overflow:hidden;background:var(--bg)}
+@media (max-width:499px){
+  html,body{background:var(--bg)}
+}
 @media (min-width:500px) and (min-height:700px){
   .app{top:50%;height:min(100dvh - 40px,880px);transform:translate(-50%,-50%);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
 }
