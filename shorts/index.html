@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
   <title>문장 쇼츠</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <div class="app" id="app">
@@ -26,18 +27,26 @@
       </div>
       <div class="bottom" style="text-align:center">
         <button class="btn dark" id="start-btn" data-action="start">시작하기</button>
-        <div style="margin-top:10px;font-size:12px;color:var(--muted)">언어는 '언어' 탭에서 나중에 바꿀 수 있어요</div>
+        <div style="margin-top:10px;font-size:12px;color:var(--muted)">언어는 '설정' 탭에서 나중에 바꿀 수 있어요</div>
       </div>
     </section>
 
     <!-- 2 · 둘러보기 -->
     <section class="screen glow" id="feed" hidden>
       <div class="feed" id="feed-list"></div>
-      <div class="cats" id="cats"></div>
-      <div class="feed-head" id="feed-head"></div>
+      <div class="feed-top">
+        <div class="cats" id="cats"></div>
+        <button class="ib filter-btn" data-action="open-filter" aria-label="필터"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span class="dot" id="filter-dot" hidden></span></button>
+      </div>
+      <div class="feed-head">
+        <button class="auto-chip" id="auto-chip" data-action="open-auto"><svg class="i" viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></svg>자동재생</button>
+        <div class="info" id="feed-head"></div>
+      </div>
       <div class="acts" id="acts">
         <button class="act" data-action="save-card" aria-label="배울 문장으로 저장"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>배울래요</button>
         <button class="act" data-action="speak-card" aria-label="발음 듣기"><svg class="i" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>듣기</button>
+        <button class="act" data-action="slow-card" aria-label="느리게 듣기"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>느리게</button>
+        <button class="act" data-action="known-card" aria-label="이미 알아요, 다시 보지 않기"><svg class="i" viewBox="0 0 24 24"><path d="M6 5l10 7-10 7z"/><path d="M19 5v14"/></svg>이미 알아요</button>
         <button class="act" data-action="toggle-tr" aria-label="해석 가리기"><svg class="i" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>해석 가림</span></button>
         <button class="act" data-action="copy-card" aria-label="문장 복사"><svg class="i" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg>복사</button>
       </div>
@@ -49,18 +58,27 @@
       <div class="page" id="saved-page"></div>
     </section>
 
-    <!-- 6 · 언어 설정 -->
-    <section class="screen" id="langs" hidden>
-      <div class="page">
-        <h2 class="title">언어</h2>
-        <p class="desc" id="langs-summary"></p>
-        <div class="lang-pickers"></div>
-      </div>
+    <!-- 기록 -->
+    <section class="screen" id="stats" hidden>
+      <div class="page" id="stats-page"></div>
+    </section>
+
+    <!-- 설정 -->
+    <section class="screen" id="settings" hidden>
+      <div class="page" id="settings-page"></div>
+    </section>
+
+    <!-- 설정 하위 화면 (언어 · 학습 · 복습 방식 · 알림 · 화면 · 데이터 · 계정) -->
+    <section class="screen" id="sub" hidden>
+      <div class="page" id="sub-page"></div>
     </section>
 
     <!-- R1~R3 · 복습 -->
     <section class="screen glow" id="review" hidden></section>
     <section class="screen done" id="review-done" hidden></section>
+
+    <!-- 연속 일수 끊김 안내 -->
+    <section class="screen" id="streak" hidden></section>
 
     <!-- A1 · 문장 추가 -->
     <section class="screen glow" id="add" hidden>
@@ -90,17 +108,22 @@
       </div>
     </section>
 
+    <!-- 오프라인 안내 -->
+    <div class="net" id="net" hidden><svg class="i" viewBox="0 0 24 24"><path d="M2 8.5a15 15 0 0 1 5-3M22 8.5a15 15 0 0 0-11-4M5 12.5a10 10 0 0 1 4-2.3M19 12.5a10 10 0 0 0-3-2M8.5 16a5 5 0 0 1 7 0M3 3l18 18"/><circle cx="12" cy="19.5" r="1"/></svg><span><b>오프라인이에요</b>저장한 문장과 복습은 그대로 쓸 수 있어요</span></div>
+
     <!-- 하단 탭 -->
     <nav class="tabs" id="tabs" hidden>
       <button class="tab" data-tab="feed"><span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>둘러보기</button>
       <button class="tab" data-tab="saved"><span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg><span class="badge" id="badge" hidden></span></span>배울래요</button>
-      <button class="tab" data-tab="langs"><span class="ico"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>언어</button>
+      <button class="tab" data-tab="stats"><span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M6 20V11M12 20V5M18 20v-6"/></svg></span>기록</button>
+      <button class="tab" data-tab="settings"><span class="ico"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></span>설정</button>
     </nav>
 
+    <input type="file" id="import-file" accept="application/json,.json" hidden>
     <div id="layer"></div>
   </div>
 
-  <script src="data.js?v=5"></script>
-  <script src="app.js?v=5"></script>
+  <script src="data.js?v=6"></script>
+  <script src="app.js?v=6"></script>
 </body>
 </html>
