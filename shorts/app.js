@@ -125,6 +125,7 @@ var ICON = {
   check: '<path d="M5 12l5 5 9-10"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',
   plus: '<path d="M12 5v14M5 12h14"/>',
+  user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',
   mark: '<path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/>',
   back: '<path d="M15 5l-7 7 7 7"/>',
   chev: '<path d="M9 5l7 7-7 7"/>',
@@ -842,7 +843,7 @@ function renderSettings(){
     '<h2 class="title" style="margin-bottom:14px">설정</h2>' +
     (state.account
       ? '<button class="profile" data-action="sub" data-v="account"><span class="avatar">' + esc(state.account[0]) + '</span><span style="flex:1;min-width:0"><b>' + esc(accountName()) + '</b><span>데모 로그인 · 이 기기에 저장</span></span>' + icon(ICON.chev, ' style="width:18px;height:18px;stroke:var(--icon)"') + '</button>'
-      : '<button class="profile" data-action="open-login"><span class="avatar">' + icon(ICON.mark, ' style="width:22px;height:22px;stroke:var(--blue)"') + '</span><span style="flex:1;min-width:0"><b>로그인하기</b><span>다른 기기에서도 이어서 볼 수 있어요</span></span>' + icon(ICON.chev, ' style="width:18px;height:18px;stroke:var(--icon)"') + '</button>') +
+      : '<button class="profile" data-action="open-login"><span class="avatar">' + icon(ICON.user, ' style="width:22px;height:22px;stroke:var(--blue)"') + '</span><span style="flex:1;min-width:0"><b>로그인하기</b><span>다른 기기에서도 이어서 볼 수 있어요</span></span>' + icon(ICON.chev, ' style="width:18px;height:18px;stroke:var(--icon)"') + '</button>') +
     '<div class="group-t">학습</div><div class="group">' +
       row('언어', langVal, 'sub', {data: ' data-v="langs"'}) +
       row('학습 설정', (state.auto ? '자동재생' : '수동') + ' · ' + MODES[state.mode].name, 'sub', {data: ' data-v="learn"'}) +
@@ -1224,7 +1225,15 @@ $('app').addEventListener('click', function(e){
     case 'learned':
       state.saved.forEach(function(x){ if (x.id === d.id) { x.learned = !x.learned; if (!x.learned) x.due = Date.now(); } });
       persist(); renderBadge(); renderSaved(); break;
-    case 'remove': removeItem(d.id); renderSaved(); break;
+    case 'remove': (function(){
+      var idx = state.saved.findIndex(function(x){ return x.id === d.id; });
+      var gone = idx >= 0 ? state.saved[idx] : null;
+      removeItem(d.id); renderSaved();
+      if (gone) toast('삭제했어요', '되돌리기', function(){
+        state.saved.splice(Math.min(idx, state.saved.length), 0, gone);
+        persist(); renderBadge(); renderSaved();
+      });
+    })(); break;
     case 'review-start':
       startReview(dueItems().slice(0, state.daily).map(function(x){ return x.id; })); break;
     case 'review-again':
