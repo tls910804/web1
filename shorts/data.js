@@ -158,3 +158,128 @@ c('id','감정',['Saya','senang','sekali.'],[1,2],'senang sekali','정말 기뻐
 c('id','여행',['Berapa','harganya?'],[0,1],'berapa harganya','얼마예요?','How much is it?','얼마예요','how much is it');
 c('id','일상',['Sampai','jumpa','lagi.'],[0,1,2],'sampai jumpa lagi','또 만나요.','See you again.','또 만나요','see you again');
 c('id','감정',['Terima','kasih','banyak.'],[0,1],'terima kasih','정말 감사합니다.','Thank you very much.','감사합니다','thank you');
+
+// 단어별 뜻: 카드 id → 단어 조각 순서대로 "한국어|English". 핵심 표현 조각은 비워 두고 expr/mean을 쓴다.
+var GLOSS = {};
+function g(id, list){ GLOSS[id] = list; }
+// English
+g('en1', ["나는 ~이다|I am", "", "있다, ~이다|to be", "거기에|there", "~ 안에, ~ 후에|within, after", "10, 열|the number ten"]);
+g('en2', ["~하자|let us", ""]);
+g('en3', ["~해도 될까요?|may I", "받다, 얻다|to get", "이것|this", ""]);
+g('en4', ["~인가요?|is (question)", "그것|it", "~ 안에|within", ""]);
+g('en5', ["나는 ~이다|I am", "", "~에 대해|about", "그것|it"]);
+g('en6', ["제가 ~할게요|let me", "", "~에 대해|about", "그것|that"]);
+g('en7', ["그것은 ~이다|it is", ""]);
+g('en8', ["~해 주실래요?|could you", "", "가장 가까운 역|the nearest station"]);
+g('en9', ["~해도 될까요?|may I", "가지다, 받다|to have", "", "~해 주세요|please"]);
+g('en10', ["나는 ~이다|I am", "느끼고 있다|feeling", "", "오늘|today"]);
+// 한국어
+g('ko1', ["|now", "", "|polite ending (is/am)"]);
+g('ko2', ["|a little", ""]);
+g('ko3', ["|iced", "|americano", "|one cup", ""]);
+g('ko4', ["|here", ""]);
+g('ko5', ["|check and then", "|again", ""]);
+g('ko6', ["|this", ""]);
+g('ko7', ["|the restroom", ""]);
+g('ko8', ["|so, very", ""]);
+g('ko9', ["", ""]);
+g('ko10', ["|really", ""]);
+// 日本語
+g('ja1', ["조금|a little", "", "~입니다 (공손)|is (polite)"]);
+g('ja2', ["", "부탁드립니다|please"]);
+g('ja3', ["역은|as for the station", "", "~입니까?|is it? (question)"]);
+g('ja4', ["", ""]);
+g('ja5', ["", "기다림|waiting", "~해 주세요|please"]);
+g('ja6', ["", "무엇|what", "~입니까?|is it? (question)"]);
+g('ja7', ["", "", "~해 주실 수 있나요?|could you (do for me)"]);
+g('ja8', ["", "기쁘다|happy"]);
+g('ja9', ["또|again", "", "~지? (가볍게 동의를 구함)|right? (softener)"]);
+g('ja10', ["", ""]);
+// 中文
+g('zh1', ["주세요, 원해요|I want", "한 잔|one cup", ""]);
+g('zh2', ["나|I", "", "곧 도착해|arrive soon"]);
+g('zh3', ["실례지만|excuse me", "", "어디에 있어요?|where is it"]);
+g('zh4', ["~해도 되다|can, may", "", "~까? (의문 조사)|question particle"]);
+g('zh5', ["", ""]);
+g('zh6', ["우리|we", "", "~합시다 (제안)|let's (suggestion)"]);
+g('zh7', ["", ""]);
+g('zh8', ["나|I", "너무|too, so", ""]);
+g('zh9', ["", ""]);
+g('zh10', ["", "완료를 나타내는 조사|completed-action particle"]);
+// Español
+g('es1', ["", "부탁해요|please"]);
+g('es2', ["정말, 얼마나|what a", ""]);
+g('es3', ["", "내일|tomorrow"]);
+g('es4', ["", "", "역|the station"]);
+g('es5', ["", "커피 한 잔|a coffee", "우유를 넣은|with milk"]);
+g('es6', ["", ""]);
+g('es7', ["나는 ~하고 있다|I am", ""]);
+g('es8', ["나는 ~이다|I am", "매우|very", ""]);
+g('es9', ["", "", "이것|this"]);
+g('es10', ["", ""]);
+// Français
+g('fr1', [""]);
+g('fr2', ["", "커피 한 잔|a coffee", "부탁합니다|please"]);
+g('fr3', ["어디|where", "~이다, ~에 있다|is", ""]);
+g('fr4', [""]);
+g('fr5', ["", ""]);
+g('fr6', ["", ""]);
+g('fr7', ["나는 ~이다|I am", "", "당신을 만나서|to see you"]);
+g('fr8', ["", ""]);
+g('fr9', ["", "부탁합니다|please"]);
+g('fr10', ["", ""]);
+// Deutsch
+g('de1', ["어디|where", "~이다, ~에 있다|is", ""]);
+g('de2', ["", "부탁해요|please"]);
+g('de3', ["", ""]);
+g('de4', ["나|I", "", "나중에|later"]);
+g('de5', ["", ""]);
+g('de6', ["", "", "이것|this"]);
+g('de7', ["나|I", "", "그것을 기대하며|for it"]);
+g('de8', ["커피 한 잔|a coffee", "", "부탁해요|please"]);
+g('de9', ["그것|that", "~이다|is", ""]);
+g('de10', ["", ""]);
+// Português
+g('pt1', ["", ""]);
+g('pt2', ["", "부탁해요|please"]);
+g('pt3', ["~해도 될까요?|can, could", "되다, ~이다|to be", ""]);
+g('pt4', ["", "", "지하철|the subway"]);
+g('pt5', ["", ""]);
+g('pt6', ["~합시다|let's", "", ""]);
+g('pt7', ["", "매우|very", ""]);
+g('pt8', ["", "", "이것|this"]);
+g('pt9', ["", ""]);
+g('pt10', ["나는 ~한 상태이다|I am", "~와 함께, ~을 가진|with", ""]);
+// Русский
+g('ru1', ["나|I", "", ""]);
+g('ru2', ["", "부탁합니다|please"]);
+g('ru3', ["", "", "기차역|train station"]);
+g('ru4', ["", ""]);
+g('ru5', ["", "", "회의|meeting"]);
+g('ru6', ["나에게|to me", "커피|coffee", ""]);
+g('ru7', ["나|I", "매우|very", ""]);
+g('ru8', ["", "이것|this", ""]);
+g('ru9', ["", ""]);
+g('ru10', ["", ""]);
+// Tiếng Việt
+g('vi1', ["나|I", "", "", "이미, 완료|already (completed)"]);
+g('vi2', ["", "", "한 잔|one glass", "커피|coffee"]);
+g('vi3', ["", "~해 주세요|please do for me"]);
+g('vi4', ["화장실|restroom", ""]);
+g('vi5', ["", ""]);
+g('vi6', ["", "나|me", ""]);
+g('vi7', ["나|I", "매우|very", ""]);
+g('vi8', ["이것|this", "", ""]);
+g('vi9', ["", ""]);
+g('vi10', ["", ""]);
+// Bahasa Indonesia
+g('id1', ["나|I", "", ""]);
+g('id2', ["~을 주세요|may I have", "", "~요 (부드러운 말끝)|softener"]);
+g('id3', ["하나|one", "커피|coffee", "", "~요 (부드러운 말끝)|softener"]);
+g('id4', ["", "화장실|the restroom"]);
+g('id5', ["", ""]);
+g('id6', ["~해 주세요 (공손)|please", "", ""]);
+g('id7', ["나|I", "", ""]);
+g('id8', ["", ""]);
+g('id9', ["", "", ""]);
+g('id10', ["", "", "많이|a lot"]);

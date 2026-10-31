@@ -17,6 +17,14 @@ var state = Object.assign({
   lastReview: null
 }, load());
 
+// 이전 버전의 표현 저장 항목(문장 하나에 표현 하나)을 새 형식으로 옮긴다
+state.saved.forEach(function(x){
+  if (x.wi === undefined) {
+    x.wi = -1;
+    if (x.kind === 'w' && x.id.split(':').length === 2) x.id += ':e';
+  }
+});
+
 var ui = {screen: null, cat: '전체', index: 0, lastTap: 0, savedTab: 's', savedFilter: 'learning', rv: null, add: null};
 
 function load(){
@@ -42,6 +50,21 @@ function trOf(obj){
   return obj[state.native] || obj.ko || obj.en || Object.keys(obj).map(function(k){ return obj[k]; })[0] || '';
 }
 function sentence(card){ return card.words.join(NO_SPACE[card.lang] ? '' : ' '); }
+function clean(w){ return w.replace(/^[¡¿\s]+|[.,!?。、！？\s]+$/g, ''); }
+function glossOf(card, wi){
+  var g = (window.GLOSS && GLOSS[card.id] && GLOSS[card.id][wi]) || '';
+  if (!g) return '';
+  var p = g.split('|');
+  return state.native === 'ko' ? (p[0] || p[1] || '') : (p[1] || p[0] || '');
+}
+// 단어 조각 하나의 정보. 핵심 표현 조각은 표현 전체(expr)로 합쳐서 다룬다.
+function wordInfo(card, wi){
+  if (wi < 0 || card.key.indexOf(wi) >= 0) {
+    return {wi: -1, expr: true, text: card.expr, mean: trOf(card.mean), speak: card.expr.replace(/\s*\(.*\)$/, '')};
+  }
+  var t = clean(card.words[wi]);
+  return {wi: wi, expr: false, text: t, mean: glossOf(card, wi), speak: t};
+}
 function startOfDay(t){ var d = new Date(t); d.setHours(0,0,0,0); return d.getTime(); }
 function dayKey(t){ var d = new Date(t); return d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate(); }
 function icon(path, extra){ return '<svg class="i" viewBox="0 0 24 24"' + (extra || '') + '>' + path + '</svg>'; }
@@ -165,9 +188,10 @@ function renderFeed(){
   updateFeedHead();
 }
 
-function wordsHtml(card, action, cardIndex){
+function wordsHtml(card, action, cardIndex, hl){
+  hl = hl || card.key;
   return '<div class="words">' + card.words.map(function(w, j){
-    var isKey = card.key.indexOf(j) >= 0;
+    var isKey = hl.indexOf(j) >= 0;
     return '<button class="w' + (isKey ? ' key' : '') + '"' + (action ? ' data-action="' + action + '" data-card="' + cardIndex + '" data-w="' + j + '"' : '') + '>' + esc(w) + '</button>';
   }).join('') + '</div>';
 }
@@ -214,8 +238,7 @@ function onWord(cardIndex, w){
     var hint = document.querySelector('.hint');
     if (hint) hint.remove();
   }
-  if (c.key.indexOf(w) >= 0 && c.expr) openWordSheet(c);
-  else speak(c.words[w], c.lang);
+  openWordSheet(c, w);
 }
 
 // ---------- 시트 (표현 · 로그인) ----------
@@ -224,19 +247,24 @@ function openLayer(html){
 }
 function closeLayer(){
   $('layer').innerHTML = '';
-  document.querySelectorAll('.w.key.sel').forEach(function(el){ el.classList.remove('sel'); });
+  document.querySelectorAll('.w.sel').forEach(function(el){ el.classList.remove('sel'); });
 }
 
-function openWordSheet(card){
+function openWordSheet(card, wi){
+  var info = wordInfo(card, wi);
   ui.sheetCard = card;
+  ui.sheetWi = wi;
   var cardEl = document.querySelector('.card[data-i="' + ui.index + '"]');
-  if (cardEl) cardEl.querySelectorAll('.w.key').forEach(function(el){ el.classList.add('sel'); });
-  var saved = !!findSaved('w', card);
+  if (cardEl) cardEl.querySelectorAll('.w').forEach(function(el){
+    var j = +el.dataset.w;
+    el.classList.toggle('sel', info.expr ? card.key.indexOf(j) >= 0 : j === wi);
+  });
+  var saved = !!findSaved('w', card, wi);
   openLayer(
     '<div class="grab"></div>' +
-    '<div style="display:flex;align-items:center;gap:10px"><h3 class="big">' + esc(card.expr) + '</h3><span class="pill">표현</span>' +
+    '<div style="display:flex;align-items:center;gap:10px"><h3 class="big">' + esc(info.text) + '</h3><span class="pill">' + (info.expr ? '표현' : '단어') + '</span>' +
     '<button class="ib" style="margin-left:auto" data-action="speak-expr" aria-label="발음 듣기">' + icon(ICON.speak) + '</button></div>' +
-    '<div class="mean">' + esc(trOf(card.mean) || '뜻을 아직 적지 않았어요') + '</div>' +
+    '<div class="mean">' + esc(info.mean || '뜻을 아직 적지 않았어요') + '</div>' +
     '<div class="ctx"><b>이 문장에서</b>' + esc(sentence(card)) + ' (' + esc(trOf(card.tr)) + ')</div>' +
     '<div style="display:flex;gap:10px">' +
       '<button class="btn dark" style="flex:1' + (saved ? '' : ';box-shadow:0 0 0 4px rgba(37,99,235,.45)') + '" data-action="save-expr">' + icon(ICON.mark, saved ? ' style="fill:currentColor"' : '') + (saved ? '저장됨' : '배울래요') + '</button>' +
@@ -260,14 +288,18 @@ function openLogin(){
 }
 
 // ---------- 저장 ----------
-function itemId(kind, card){ return kind + ':' + card.id; }
-function findSaved(kind, card){
-  var id = itemId(kind, card);
+function itemId(kind, card, wi){
+  if (kind === 's') return 's:' + card.id;
+  var i = wordInfo(card, wi).wi;
+  return 'w:' + card.id + ':' + (i < 0 ? 'e' : i);
+}
+function findSaved(kind, card, wi){
+  var id = itemId(kind, card, wi);
   for (var i = 0; i < state.saved.length; i++) if (state.saved[i].id === id) return state.saved[i];
   return null;
 }
-function saveItem(kind, card){
-  state.saved.unshift({id: itemId(kind, card), kind: kind, card: card, learned: false, due: Date.now(), at: Date.now()});
+function saveItem(kind, card, wi){
+  state.saved.unshift({id: itemId(kind, card, wi), kind: kind, card: card, wi: kind === 'w' ? wordInfo(card, wi).wi : -1, learned: false, due: Date.now(), at: Date.now()});
   persist();
   renderBadge();
   if (ui.screen === 'feed') updateFeedHead();
@@ -279,10 +311,10 @@ function removeItem(id){
   persist();
   renderBadge();
 }
-function toggleSave(kind, card){
-  var it = findSaved(kind, card);
+function toggleSave(kind, card, wi){
+  var it = findSaved(kind, card, wi);
   if (it) { removeItem(it.id); toast('저장을 취소했어요'); if (ui.screen === 'feed') updateFeedHead(); }
-  else saveItem(kind, card);
+  else saveItem(kind, card, wi);
 }
 
 function dueItems(){
@@ -307,9 +339,10 @@ function renderSaved(){
 
   var items = list.map(function(x){
     var c = x.card;
-    var head = x.kind === 's' ? sentence(c) : c.expr;
-    var sub = x.kind === 's' ? trOf(c.tr) : (trOf(c.mean) || sentence(c));
-    var speakText = x.kind === 's' ? sentence(c) : c.expr.replace(/\s*\(.*\)$/, '');
+    var info = x.kind === 'w' ? wordInfo(c, x.wi) : null;
+    var head = x.kind === 's' ? sentence(c) : info.text;
+    var sub = x.kind === 's' ? trOf(c.tr) : (info.mean || sentence(c));
+    var speakText = x.kind === 's' ? sentence(c) : info.speak;
     return '<div class="item">' +
       '<div class="en">' + esc(head) + '<span class="pill">' + esc(lang(c.lang).name) + '</span></div>' +
       '<div class="ko">' + esc(sub) + '</div>' +
@@ -356,13 +389,15 @@ function renderReview(){
   var c = item.card;
   var pct = Math.round(rv.i / rv.ids.length * 100);
   var body = '<div style="display:flex;gap:8px;align-items:center;margin-bottom:18px;font-size:12px;font-weight:700">' + esc(c.cat) +
-      '<span class="pill">' + esc(lang(c.lang).name) + '</span>' + (item.kind === 'w' ? '<span class="pill">표현</span>' : '') + '</div>' +
-      wordsHtml(c, null);
+      '<span class="pill">' + esc(lang(c.lang).name) + '</span>' + (item.kind === 'w' ? '<span class="pill">' + (item.wi >= 0 ? '단어' : '표현') + '</span>' : '') + '</div>' +
+      wordsHtml(c, null, 0, item.kind === 'w' && item.wi >= 0 ? [item.wi] : c.key);
+  var info = item.kind === 'w' ? wordInfo(c, item.wi) : null;
   if (rv.shown) {
-    body += '<p class="tr">' + esc(trOf(c.tr)) + '</p>' +
-      (c.expr ? '<div class="divider"></div><div class="expr"><i></i><div><b>' + esc(c.expr) + '</b><span>' + esc(trOf(c.mean) || '뜻을 아직 적지 않았어요') + '</span></div></div>' : '');
+    body += '<p class="tr">' + esc(trOf(c.tr)) + '</p>';
+    if (info) body += '<div class="divider"></div><div class="expr"><i></i><div><b>' + esc(info.text) + '</b><span>' + esc(info.mean || '뜻을 아직 적지 않았어요') + '</span></div></div>';
+    else if (c.expr) body += '<div class="divider"></div><div class="expr"><i></i><div><b>' + esc(c.expr) + '</b><span>' + esc(trOf(c.mean) || '뜻을 아직 적지 않았어요') + '</span></div></div>';
   } else {
-    body += '<div class="ask">' + (item.kind === 'w' ? '파란 표현의 뜻을 먼저 떠올려 보세요' : '뜻을 먼저 떠올려 보세요') + '</div>';
+    body += '<div class="ask">' + (item.kind === 'w' ? '파란 표시의 뜻을 먼저 떠올려 보세요' : '뜻을 먼저 떠올려 보세요') + '</div>';
   }
   var foot = rv.shown
     ? '<div style="text-align:center;font-size:13px;color:var(--muted)">얼마나 기억났나요?</div>' +
@@ -474,8 +509,8 @@ function saveAdd(){
   if ($('add-mean').value.trim()) mean[state.native] = $('add-mean').value.trim();
   var card = {id: 'c' + Date.now(), lang: ui.add.lang, cat: '내 문장', words: tokens, key: sel, expr: addExpr(tokens), tr: tr_, mean: mean};
   state.custom.push(card);
-  state.saved.unshift({id: itemId('s', card), kind: 's', card: card, learned: false, due: Date.now(), at: Date.now()});
-  if (card.expr) state.saved.unshift({id: itemId('w', card), kind: 'w', card: card, learned: false, due: Date.now(), at: Date.now()});
+  state.saved.unshift({id: itemId('s', card), kind: 's', card: card, wi: -1, learned: false, due: Date.now(), at: Date.now()});
+  if (card.expr) state.saved.unshift({id: itemId('w', card, -1), kind: 'w', card: card, wi: -1, learned: false, due: Date.now(), at: Date.now()});
   persist();
   ui.add = null;
   ui.savedTab = 's';
@@ -519,9 +554,9 @@ $('app').addEventListener('click', function(e){
       }
       break;
     case 'speak-expr':
-      speak(ui.sheetCard.expr.replace(/\s*\(.*\)$/, ''), ui.sheetCard.lang); break;
+      speak(wordInfo(ui.sheetCard, ui.sheetWi).speak, ui.sheetCard.lang); break;
     case 'save-expr':
-      c = ui.sheetCard; closeLayer(); toggleSave('w', c); break;
+      c = ui.sheetCard; closeLayer(); toggleSave('w', c, ui.sheetWi); break;
     case 'close-layer': closeLayer(); break;
     case 'login':
       state.account = d.by; persist(); closeLayer(); toast(d.by + '(으)로 로그인했어요 · 데모'); break;
