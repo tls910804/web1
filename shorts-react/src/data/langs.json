@@ -1,0 +1,68 @@
+[
+ {
+  "code": "en",
+  "name": "English",
+  "ko": "영어",
+  "voice": "en-US"
+ },
+ {
+  "code": "ko",
+  "name": "한국어",
+  "ko": "한국어",
+  "voice": "ko-KR"
+ },
+ {
+  "code": "ja",
+  "name": "日本語",
+  "ko": "일본어",
+  "voice": "ja-JP"
+ },
+ {
+  "code": "zh",
+  "name": "中文",
+  "ko": "중국어",
+  "voice": "zh-CN"
+ },
+ {
+  "code": "es",
+  "name": "Español",
+  "ko": "스페인어",
+  "voice": "es-ES"
+ },
+ {
+  "code": "fr",
+  "name": "Français",
+  "ko": "프랑스어",
+  "voice": "fr-FR"
+ },
+ {
+  "code": "de",
+  "name": "Deutsch",
+  "ko": "독일어",
+  "voice": "de-DE"
+ },
+ {
+  "code": "pt",
+  "name": "Português",
+  "ko": "포르투갈어",
+  "voice": "pt-BR"
+ },
+ {
+  "code": "ru",
+  "name": "Русский",
+  "ko": "러시아어",
+  "voice": "ru-RU"
+ },
+ {
+  "code": "vi",
+  "name": "Tiếng Việt",
+  "ko": "베트남어",
+  "voice": "vi-VN"
+ },
+ {
+  "code": "id",
+  "name": "Bahasa Indonesia",
+  "ko": "인도네시아어",
+  "voice": "id-ID"
+ }
+]
