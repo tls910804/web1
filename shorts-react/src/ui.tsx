@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useStore } from './store';
+import { playAudio, stopAudio } from './lib/audio';
 import { hasVoice, say, speechOk } from './lib/speech';
 import { lang } from './lib/text';
 import type { DialogAction, ReviewSession, Screen, SubName } from './types';
@@ -78,7 +79,7 @@ export function UiProvider({ children }: { children: ReactNode }) {
     setScreen(s);
     closeLayer();
     if (s === 'settings') setSubStack([]);
-    if (speechOk() && s !== 'feed') speechSynthesis.cancel();
+    if (s !== 'feed') { stopAudio(); if (speechOk()) speechSynthesis.cancel(); }
   }, [closeLayer]);
 
   const openSub = useCallback((name: SubName) => {
@@ -107,6 +108,12 @@ export function UiProvider({ children }: { children: ReactNode }) {
   }, [toastNode]);
 
   const speak = useCallback((text: string, code: string, opt: SpeakOpt = {}) => {
+    const rate = opt.rate || (state.slow ? 0.7 : 0.9);
+    // 미리 만들어 둔 음성이 있으면 그걸 쓰고, 없을 때만 브라우저 기본 음성으로 읽는다
+    if (playAudio(text, code, rate < 0.8, opt.repeat)) {
+      if (speechOk()) speechSynthesis.cancel();
+      return;
+    }
     if (!speechOk()) {
       if (!opt.quiet) openDialog('음성을 들을 수 없어요', '이 브라우저는 발음 듣기를 지원하지 않아요. 크롬이나 사파리 최신 버전에서 열어 주세요.', [{ label: '확인', kind: 'dark' }]);
       return;
@@ -116,7 +123,7 @@ export function UiProvider({ children }: { children: ReactNode }) {
       const l = lang(code);
       openDialog(`이 기기에 ${l.ko} 음성이 없어요`, `기기 설정의 '텍스트 음성 변환'에서 ${l.ko} 음성을 내려받으면 정확한 발음으로 들을 수 있어요. 지금은 기본 음성으로 읽어요.`, [{ label: '확인', kind: 'dark' }]);
     }
-    say(text, code, opt.rate || (state.slow ? 0.7 : 0.9), opt.repeat);
+    say(text, code, rate, opt.repeat);
   }, [openDialog, state.slow]);
 
   const value = useMemo<Ui>(() => ({

@@ -18,7 +18,7 @@ const defaults: AppState = {
   lastReview: null,
   log: {},
   level: '전체',
-  auto: false,
+  auto: true,
   autoRepeat: 1,
   slow: false,
   mode: 'std',

@@ -3,6 +3,8 @@ import { DAY } from '../constants';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import { Button } from '../components/Button';
+import { notifPerm } from './notify';
+import { NotifyPrompt } from '../screens/Sheets';
 import { Grab } from '../components/Layer';
 import { dueItems, rateResult } from './srs';
 import { dayKey, startOfDay, todayKey, wordInfo } from './text';
@@ -48,9 +50,16 @@ export function useActions() {
 
   const saveItem = useCallback((kind: 's' | 'w', card: Card, wi = -1) => {
     set((s) => ({ saved: [newItem(kind, card, wi, s.native), ...s.saved] }));
-    if (!state.account && !state.loginAsked) openLogin();
+    navigator.vibrate?.(12);
+    const login = () => { if (!state.account && !state.loginAsked) openLogin(); };
+    // 첫 저장 직후에 알림을 한 번 물어보고, 로그인은 그 다음에 한 번만 권한다
+    if (!state.notifyAsked && notifPerm() === 'default') {
+      set({ notifyAsked: true });
+      toast('배울래요에 저장했어요');
+      setTimeout(() => openSheet(<NotifyPrompt then={login} />), 700);
+    } else if (!state.account && !state.loginAsked) login();
     else toast('배울래요에 저장했어요');
-  }, [set, state.account, state.loginAsked, openLogin, toast]);
+  }, [set, state.account, state.loginAsked, state.notifyAsked, openLogin, openSheet, toast]);
 
   const removeItem = useCallback((id: string) => set((s) => ({ saved: s.saved.filter((x) => x.id !== id) })), [set]);
 

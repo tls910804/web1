@@ -4,7 +4,7 @@ import { Icon } from './components/Icon';
 import { Layer } from './components/Layer';
 import { TAB_SCREENS, TabBar } from './components/TabBar';
 import { Toast } from './components/Toast';
-import { dueNotifications, notifPerm } from './lib/notify';
+import { dueNotifications } from './lib/notify';
 import { exportBackup } from './lib/backup';
 import { speechOk } from './lib/speech';
 import { dayKey, todayKey } from './lib/text';
@@ -13,7 +13,6 @@ import { useUi } from './ui';
 import { Add } from './screens/Add';
 import { Feed } from './screens/Feed';
 import { Onboarding } from './screens/Onboarding';
-import { NotifyPrompt } from './screens/Sheets';
 import { Review, ReviewDone } from './screens/Review';
 import { Saved } from './screens/Saved';
 import { Settings } from './screens/Settings';
@@ -24,14 +23,10 @@ import { Sub } from './screens/Sub';
 
 export function App() {
   const { state, set, saveFailed, retrySave } = useStore();
-  const { screen, go, toast, layer, openDialog, openSheet, setStreakWas } = useUi();
+  const { screen, go, toast, openDialog, setStreakWas } = useUi();
   const [online, setOnline] = useState(navigator.onLine !== false);
   const stateRef = useRef(state);
   stateRef.current = state;
-  const layerRef = useRef(layer);
-  layerRef.current = layer;
-  const screenRef = useRef(screen);
-  screenRef.current = screen;
 
   // 화면 테마 · 글자 크기
   useEffect(() => {
@@ -114,17 +109,6 @@ export function App() {
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // 둘러보기에 처음 들어오면 알림 허용을 한 번 물어본다
-  useEffect(() => {
-    if (screen !== 'feed' || state.notifyAsked || notifPerm() !== 'default' || !state.onboarded) return;
-    set({ notifyAsked: true });
-    const t = setTimeout(() => {
-      if (screenRef.current === 'feed' && !layerRef.current) openSheet(<NotifyPrompt />);
-    }, 1500);
-    return () => clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [screen]);
 
   return (
     <div className="app" id="app">

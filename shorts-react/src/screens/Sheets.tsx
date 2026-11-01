@@ -100,7 +100,7 @@ export function LevelSheet() {
   );
 }
 
-export function NotifyPrompt() {
+export function NotifyPrompt({ then }: { then?: () => void }) {
   const { set } = useStore();
   const { closeLayer, toast } = useUi();
   const allow = () => {
@@ -109,9 +109,11 @@ export function NotifyPrompt() {
       Notification.requestPermission().then((r) => {
         if (r === 'granted') { set({ notify: { morning: true, evening: true } }); toast('알림을 켰어요'); }
         else toast('알림은 설정에서 다시 켤 수 있어요');
+        then?.();
       });
-    }
+    } else then?.();
   };
+  const later = () => { closeLayer(); then?.(); };
   return (
     <>
       <Grab />
@@ -121,7 +123,7 @@ export function NotifyPrompt() {
       <h3>매일 한 문장, 알림으로 받을래요?</h3>
       <p style={{ margin: '-6px 0 2px', fontSize: 14, color: 'var(--muted)', lineHeight: 1.55 }}>아침에 오늘의 문장을, 저녁엔 복습할 게 있을 때만 알려 드려요. 설정에서 언제든 끌 수 있어요.</p>
       <Button kind="dark" onClick={allow}>알림 받기</Button>
-      <Button kind="link" onClick={closeLayer}>나중에</Button>
+      <Button kind="link" onClick={later}>나중에</Button>
     </>
   );
 }

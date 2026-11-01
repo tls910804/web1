@@ -4,6 +4,7 @@ import { Icon } from '../components/Icon';
 import { Expr } from '../components/Rows';
 import { WordChips } from '../components/WordChips';
 import { allCats, feedCards, allCards } from '../lib/feed';
+import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
 import { lang, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
@@ -42,11 +43,16 @@ export function Feed() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [curId, state.auto, state.autoRepeat]);
 
+  useEffect(() => {
+    const next = cards[index + 1];
+    if (next) preloadAudio(sentence(next), next.lang);
+  }, [cards, index]);
+
   const onScroll = () => {
     const el = listRef.current;
     if (!el || !el.clientHeight) return;
     const i = Math.round(el.scrollTop / el.clientHeight);
-    if (i !== index) setIndex(i);
+    if (i !== index) { setIndex(i); navigator.vibrate?.(6); }
   };
 
   // 카드 빈 곳을 두 번 탭하면 문장 저장
@@ -98,7 +104,7 @@ export function Feed() {
             {hasCards && <Button kind="line" auto style={{ marginTop: 12, minHeight: 44, fontSize: 14 }} onClick={openFilter}>필터 열기</Button>}
           </div>
         ) : cards.map((c, i) => (
-          <article className="card" key={c.id}>
+          <article className={`card${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className="card-body">
               {i === 0 && !state.tapped && <span className="hint">단어를 눌러 보세요</span>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} />
@@ -128,7 +134,7 @@ export function Feed() {
 
       {cards.length > 0 && (
         <div className="acts">
-          <button className={`act${saved ? ' on' : ''}`} aria-label="배울 문장으로 저장" onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" />배울래요</button>
+          <button key={saved ? 'on' : 'off'} className={`act${saved ? ' on pop' : ''}`} aria-label="배울 문장으로 저장" onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" />배울래요</button>
           <button className="act" aria-label="발음 듣기" onClick={() => cur && speak(sentence(cur), cur.lang)}><Icon name="speak" />듣기</button>
           <button className="act" aria-label="느리게 듣기" onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" />느리게</button>
           <button className="act" aria-label="이미 알아요, 다시 보지 않기" onClick={markKnown}><Icon name="skip" />이미 알아요</button>
@@ -136,7 +142,7 @@ export function Feed() {
           <button className="act" aria-label="문장 복사" onClick={copy}><Icon name="copy" />복사</button>
         </div>
       )}
-      <div className="swipe">위로 넘기기 · 두 번 탭해서 문장 저장</div>
+      {state.tapped && <div className="swipe">위로 넘기기 · 두 번 탭해서 문장 저장</div>}
     </section>
   );
 }

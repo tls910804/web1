@@ -5,12 +5,13 @@ interface Props {
   highlight?: number[];
   selected?: number[];
   onWord?: (wi: number) => void;
+  small?: boolean;
 }
 
-export function WordChips({ card, highlight, selected, onWord }: Props) {
+export function WordChips({ card, highlight, selected, onWord, small }: Props) {
   const hl = highlight ?? card.key;
   return (
-    <div className="words">
+    <div className={`words${small ? ' sm' : ''}`}>
       {card.words.map((w, j) => (
         <button
           key={j}
