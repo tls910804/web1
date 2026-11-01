@@ -2,7 +2,7 @@
   --ink:#22262b; --muted:#6b7078; --sub:#4b5057; --icon:#5b6168;
   --bg:#faf9f6; --card:#ffffff; --outer:#e9e7e2;
   --line:rgba(31,41,55,.14); --soft:rgba(31,41,55,.06); --track:rgba(0,0,0,.08);
-  --blue:#2563eb; --blue-soft:rgba(37,99,235,.16); --blue-tint:rgba(37,99,235,.12);
+  --blue:#2563eb; --blue-soft:rgba(37,99,235,.16); --blue-tint:rgba(31,41,55,.06);
   --btn:#000000; --btn-ink:#ffffff;
   --scrim:rgba(0,0,0,.5);
   --warn:#8a5a00; --warn-soft:#fff3d6;
@@ -15,7 +15,7 @@
   --ink:#eceef1; --muted:#9aa0a8; --sub:#c3c7cd; --icon:#aeb3ba;
   --bg:#121417; --card:#1c1f23; --outer:#0a0b0d;
   --line:rgba(255,255,255,.14); --soft:rgba(255,255,255,.07); --track:rgba(255,255,255,.12);
-  --blue:#5b8cff; --blue-soft:rgba(91,140,255,.2); --blue-tint:rgba(91,140,255,.16);
+  --blue:#5b8cff; --blue-soft:rgba(91,140,255,.2); --blue-tint:rgba(255,255,255,.08);
   --btn:#ffffff; --btn-ink:#000000;
   --scrim:rgba(0,0,0,.65);
   --warn:#f5c26b; --warn-soft:rgba(245,194,107,.14);
@@ -39,9 +39,9 @@ input,textarea{font:inherit;color:inherit}
   .app{top:50%;height:min(100dvh - 40px,880px);transform:translate(-50%,-50%);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
 }
 .screen{position:absolute;inset:0;overflow:hidden;background:var(--bg)}
-.glow{background:radial-gradient(60% 38% at 100% 8%,rgba(37,99,235,.09),transparent 70%),radial-gradient(75% 42% at 0% 80%,rgba(37,99,235,.12),transparent 70%),var(--bg)}
+.glow{background:var(--bg)}
 .page{position:absolute;inset:0;padding:28px 16px 110px;overflow-y:auto;overscroll-behavior:contain}
-h2.title{font-size:26px;font-weight:700;margin:4px 0 8px}
+h2.title{font-size:26px;font-weight:500;margin:4px 0 8px}
 .desc{font-size:13px;color:var(--muted);margin:0 0 6px;line-height:1.5}
 h3.sec{font-size:14px;margin:22px 0 10px}
 
@@ -134,7 +134,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .sheet{position:absolute;left:0;right:0;bottom:0;max-height:88%;overflow-y:auto;background:var(--card);border-radius:24px 24px 0 0;padding:10px 20px 24px;box-shadow:0 -4px 24px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:14px;z-index:11;animation:up .22s ease-out}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
 .grab{width:40px;height:4px;border-radius:2px;background:var(--muted);opacity:.4;align-self:center;flex:none}
-.sheet h3{margin:0;font-size:20px;font-weight:700}
+.sheet h3{margin:0;font-size:20px;font-weight:500}
 .sheet .big{font-family:"Bricolage Grotesque","Noto Sans KR",sans-serif;font-weight:700;font-size:32px;line-height:1.1;letter-spacing:-.015em}
 .sheet .mean{font-size:18px;font-weight:500;line-height:1.45}
 .sheet .sh-head{display:flex;align-items:center;justify-content:space-between}
@@ -169,7 +169,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .review-banner b{display:block;font-size:16px}
 .review-banner span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
 .seg{display:flex;gap:24px;border-bottom:1px solid var(--line);margin:8px 0 12px}
-.seg button{padding:8px 0 6px;font-size:16px;font-weight:700;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.seg button{padding:8px 0 6px;font-size:16px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
 .seg button.on{color:var(--ink);border-bottom-color:var(--ink)}
 .seg small{font-size:13px;font-weight:500;margin-left:6px}
 .seg button.on small{color:var(--blue)}
@@ -192,7 +192,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ans small{font-size:11px;font-weight:500;opacity:.75}
 .ans.good{background:var(--btn);color:var(--btn-ink)}
 .ans.easy{background:var(--blue);color:#fff}
-.done{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 24px 120px;background:radial-gradient(70% 40% at 50% 30%,rgba(37,99,235,.14),transparent 70%),var(--bg)}
+.done{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:0 24px 120px;background:var(--bg)}
 .done .ok{width:88px;height:88px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
 .done h1{margin:0;font-size:28px}
 .done p{margin:0;font-size:15px;color:var(--muted);text-align:center;line-height:1.6}
@@ -237,7 +237,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .chart.month .bar2{border-radius:3px}
 
 /* 설정 */
-.group-t{font-size:13px;font-weight:700;color:var(--sub);margin:20px 0 8px}
+.group-t{font-size:13px;font-weight:500;color:var(--sub);margin:20px 0 8px}
 .group{border:1px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;margin-bottom:12px}
 .row{display:flex;align-items:center;gap:12px;width:100%;min-height:52px;padding:12px 16px;border-top:1px solid var(--line);font-size:15px}
 .row:first-child{border-top:0}
@@ -282,7 +282,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .brk{position:absolute;inset:0;padding:28px 16px 150px;overflow-y:auto}
 
 /* 문장 추가 */
-.lbl{display:block;font-size:13px;font-weight:700;color:var(--sub);margin:20px 0 8px}
+.lbl{display:block;font-size:13px;font-weight:500;color:var(--sub);margin:20px 0 8px}
 .lbl small{font-weight:500;color:var(--muted);margin-left:6px}
 .field{display:block;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:16px;line-height:1.5;resize:none;outline:none}
 .field:focus{border-color:var(--blue)}
