@@ -306,3 +306,60 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 @keyframes bump{0%{transform:scale(.7)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
 .act:active svg{transform:scale(.9)}
 @media (prefers-reduced-motion:reduce){.card.cur .card-body>*,.act.pop svg,.preview{animation:none}}
+
+/* ===== 배울래요: 상세 · 선택 · 배지 ===== */
+.item{cursor:pointer;position:relative;user-select:none;-webkit-user-select:none}
+.item.sel{background:var(--blue-tint)}
+.item .chk{position:absolute;left:0;top:18px;width:22px;height:22px;border-radius:50%;border:2px solid var(--line)}
+.item .chk.on{background:var(--blue);border-color:var(--blue)}
+.item .chk + .en,.item .chk ~ .ko{margin-left:32px}
+.bdg2{margin-left:6px;font-family:"Noto Sans KR",sans-serif;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted);vertical-align:middle;white-space:nowrap}
+.bdg2.due{background:var(--blue-soft);color:var(--blue)}
+.bdg2.weak{background:#ffe6de;color:var(--danger)}
+.sort{margin-left:auto;font-size:13px;color:var(--muted)}
+.radio{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:14px;border-radius:14px;border:1px solid var(--line);margin-bottom:8px}
+.radio i{width:20px;height:20px;border-radius:50%;border:2px solid var(--line);flex:none}
+.radio.on{border-color:var(--blue);background:var(--blue-tint)}
+.radio.on i{border-color:var(--blue);box-shadow:inset 0 0 0 4px var(--bg);background:var(--blue)}
+.radio b{display:block;font-size:15px}.radio small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.det-s{font-size:22px;font-weight:700;line-height:1.35}
+.det-k{font-size:15px;color:var(--muted);margin:6px 0 12px}
+.det-act{display:flex;gap:8px;margin-bottom:12px}
+.det-rows>div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.det-rows span{color:var(--muted)}
+.det-memo{width:100%;margin:12px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px}
+
+/* ===== 복습: 카드형 ===== */
+.rv-card{--rc-bg:#f2f1ff;--rc-card:#4f5fe0;--rc-btn:#22265e;--rc-track:#d9dbf7;background:var(--rc-bg)}
+:root[data-theme="dark"] .rv-card{--rc-bg:#14152b;--rc-card:#3a46b8;--rc-btn:#e6e8ff;--rc-track:#2a2d58}
+.rv-card .bar{background:var(--rc-track)}.rv-card .bar div{background:#4f5fe0}
+.rv-card .rv-body{justify-content:flex-start;top:76px;bottom:200px}
+.rcard{min-height:100%;border-radius:24px;background:var(--rc-card);color:#fff;padding:20px;display:flex;flex-direction:column;box-shadow:0 8px 24px rgba(79,95,224,.25)}
+.rc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
+.rc-chip{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.18)}
+.rc-spk{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center}
+.rc-spk .i{stroke:#fff}
+.rc-s{color:#fff;font-size:26px}.rc-s *{color:inherit}
+.rc-hint{margin:auto 0 16px;text-align:center;font-size:14px;opacity:.85;padding-top:24px}
+.rc-pills{display:flex;gap:8px;justify-content:center}
+.rc-pills button{padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font-size:13px;font-weight:500}
+.rc-line{height:1px;background:rgba(255,255,255,.3);margin:20px 0}
+.rc-tr{font-size:18px;font-weight:500;line-height:1.5}
+.rc-expr{margin-top:16px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.16)}
+.rc-expr b{display:block;font-size:16px}.rc-expr span{display:block;font-size:13px;opacity:.85;margin-top:2px}
+.rv-card .foot .btn.dark{background:var(--rc-btn);color:#fff}
+:root[data-theme="dark"] .rv-card .foot .btn.dark{color:#14152b}
+.rv-card .ans{height:84px;gap:4px;font-size:13px}
+.rv-card .ans.again{background:#ffe6de;color:#e4572e}
+.rv-card .ans.hard{background:#fff0c7;color:#b7791f}
+.rv-card .ans.good{background:#e2e5ff;color:#4f5fe0}
+.rv-card .ans.easy{background:#d9f5ea;color:#1f9d74}
+.rv-card .ans small{color:inherit}
+.sched{display:flex;gap:6px}
+.sched div{flex:1;text-align:center;padding:10px 0;border-radius:12px;background:var(--soft)}
+.sched b{display:block;font-size:16px}.sched span{font-size:11px;color:var(--muted)}
+.sched .heavy b{color:var(--danger)}
+.rcard .w{background:rgba(255,255,255,.14);color:#fff;font-size:24px}
+.rcard .w.key{background:#fff;color:#4f5fe0;box-shadow:none}
+.rv-card .rv-body{overflow:visible}
+.rc-spk .i{width:20px;height:20px;stroke-width:2}

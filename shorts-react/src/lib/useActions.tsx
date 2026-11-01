@@ -6,7 +6,7 @@ import { Button } from '../components/Button';
 import { notifPerm } from './notify';
 import { NotifyPrompt } from '../screens/Sheets';
 import { Grab } from '../components/Layer';
-import { dueItems, rateResult } from './srs';
+import { dueItems, rateResult, weakItems } from './srs';
 import { dayKey, startOfDay, todayKey, wordInfo } from './text';
 import type { AppState, Card, Rate, SavedItem } from '../types';
 
@@ -95,7 +95,7 @@ export function useActions() {
         const k = todayKey();
         const e = s.log[k] || { n: 0, ok: 0 };
         return {
-          saved: s.saved.map((x) => (x.id === item.id ? { ...x, step: res.step, due: startOfDay(Date.now()) + res.days * DAY } : x)),
+          saved: s.saved.map((x) => (x.id === item.id ? { ...x, step: res.step, due: startOfDay(Date.now()) + res.days * DAY, lapses: r === 'again' ? (x.lapses || 0) + 1 : r === 'hard' ? (x.lapses || 0) : Math.max(0, (x.lapses || 0) - 1) } : x)),
           log: { ...s.log, [k]: { n: e.n + 1, ok: e.ok + (r !== 'again' ? 1 : 0) } },
         };
       });
@@ -106,7 +106,7 @@ export function useActions() {
     if (next.i >= next.ids.length) { finishStreak(); ui.go('review-done'); }
   }, [ui, state.saved, state.mode, set, finishStreak]);
 
-  const startToday = useCallback((s: AppState) => startReview(dueItems(s).slice(0, s.daily).map((x) => x.id)), [startReview]);
+  const startToday = useCallback((s: AppState, weakOnly = false) => startReview((weakOnly ? weakItems(s) : dueItems(s).slice(0, s.daily)).map((x) => x.id)), [startReview]);
 
   const exportData = useCallback(() => {
     try {

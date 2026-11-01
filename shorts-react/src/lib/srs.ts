@@ -33,3 +33,11 @@ export function nextDueText(s: AppState) {
   const n = s.saved.filter((x) => !x.learned && startOfDay(x.due) === startOfDay(next)).length;
   return `${days <= 1 ? '내일' : days + '일 뒤'} ${n}개를 복습해요`;
 }
+
+/** '다시'를 이만큼 받으면 약점으로 본다 */
+export const WEAK_AT = 2;
+export const isWeak = (x: SavedItem) => !x.learned && (x.lapses || 0) >= WEAK_AT;
+export const weakItems = (s: AppState) => s.saved.filter(isWeak);
+/** 오늘 복습 목록 중 약점이 몇 개인지 */
+export const weakInToday = (s: AppState) => dueItems(s).slice(0, s.daily).filter(isWeak).length;
+export const minutesFor = (n: number) => Math.max(1, Math.ceil(n / 3));

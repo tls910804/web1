@@ -1,8 +1,8 @@
 import { DAY } from '../constants';
 import { Button, Chip } from '../components/Button';
 import { Icon } from '../components/Icon';
-import { mastered } from '../lib/srs';
-import { dayKey, lang, todayKey } from '../lib/text';
+import { mastered, minutesFor, todayCount } from '../lib/srs';
+import { dayKey, lang, startOfDay, todayKey } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 
@@ -35,6 +35,16 @@ export function Stats() {
     cols.push({ t, n: e.n, today: i === 0 });
     max = Math.max(max, e.n); sum += e.n; ok += e.ok;
   }
+  const due = todayCount(state);
+  const doneToday = state.log[todayKey()]?.n || 0;
+  const goal = Math.max(state.daily, 1);
+  const base = startOfDay(Date.now());
+  const sched = Array.from({ length: 7 }, (_, i) => {
+    const t = base + i * DAY;
+    const n = state.saved.filter((x) => !x.learned && (i === 0 ? x.due < t + DAY : x.due >= t && x.due < t + DAY)).length;
+    return { n, label: i === 0 ? '오늘' : WEEKDAYS[new Date(t).getDay()] };
+  });
+  const heavy = Math.max(...sched.map((d) => d.n));
   const langs = [...new Set(state.saved.map((x) => x.card.lang))];
 
   return (
@@ -44,6 +54,14 @@ export function Stats() {
         <div className="toggle2">
           <Chip on={statsRange === 'week'} onClick={() => setStatsRange('week')}>주</Chip>
           <Chip on={statsRange === 'month'} onClick={() => setStatsRange('month')}>월</Chip>
+        </div>
+      </div>
+
+      <div className="box">
+        <h4>{due ? `오늘 복습 ${due}개 · 약 ${minutesFor(due)}분` : '오늘 복습은 끝났어요'}</h4>
+        <div className="prog">
+          <div className="t"><b>오늘 목표</b><span>{Math.min(doneToday, goal)} / {goal}</span></div>
+          <div className="bar"><div style={{ width: `${Math.min(100, Math.round((doneToday / goal) * 100))}%` }} /></div>
         </div>
       </div>
 
@@ -69,6 +87,15 @@ export function Stats() {
               <div className={`bar2${c.today ? ' today' : ''}`} style={{ height: `${Math.max(Math.round((c.n / max) * 100), 3)}%` }} />
               {days === 7 && <span>{WEEKDAYS[new Date(c.t).getDay()]}</span>}
             </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="box">
+        <h4>복습 일정</h4>
+        <div className="sched">
+          {sched.map((d, i) => (
+            <div key={i} className={d.n && d.n === heavy && d.n >= 5 ? 'heavy' : ''}><b>{d.n}</b><span>{d.label}</span></div>
           ))}
         </div>
       </div>

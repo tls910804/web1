@@ -20,6 +20,9 @@ export interface SavedItem {
   due: number;
   at: number;
   step: number;
+  /** '다시'를 받은 횟수 (약점 판단) */
+  lapses?: number;
+  note?: string;
 }
 
 export type ThemeKey = 'light' | 'dark' | 'system';

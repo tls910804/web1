@@ -41,8 +41,8 @@ interface Ui {
   setIndex: (i: number) => void;
   savedTab: 's' | 'w';
   setSavedTab: (t: 's' | 'w') => void;
-  savedFilter: 'learning' | 'learned';
-  setSavedFilter: (f: 'learning' | 'learned') => void;
+  savedFilter: 'learning' | 'weak' | 'learned';
+  setSavedFilter: (f: 'learning' | 'weak' | 'learned') => void;
   statsRange: 'week' | 'month';
   setStatsRange: (r: 'week' | 'month') => void;
   rv: ReviewSession | null;
@@ -64,7 +64,7 @@ export function UiProvider({ children }: { children: ReactNode }) {
   const [cats, setCats] = useState<string[]>([]);
   const [index, setIndex] = useState(0);
   const [savedTab, setSavedTab] = useState<'s' | 'w'>('s');
-  const [savedFilter, setSavedFilter] = useState<'learning' | 'learned'>('learning');
+  const [savedFilter, setSavedFilter] = useState<'learning' | 'weak' | 'learned'>('learning');
   const [statsRange, setStatsRange] = useState<'week' | 'month'>('week');
   const [rv, setRv] = useState<ReviewSession | null>(null);
   const [streakWas, setStreakWas] = useState(0);
