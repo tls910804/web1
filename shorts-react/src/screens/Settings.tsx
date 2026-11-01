@@ -11,7 +11,7 @@ export const accountName = (account: string | null) => (account ? `${account} �
 
 export function Settings() {
   const { state } = useStore();
-  const { openSub } = useUi();
+  const { openSub, go } = useUi();
   const { openLogin } = useActions();
   const names = state.learn.map((c) => lang(c).name);
   const langVal = `${lang(state.native).ko} → ${names[0]}${names.length > 1 ? ` 외 ${names.length - 1}` : ''}`;
@@ -41,6 +41,8 @@ export function Settings() {
         <Row label="화면" value={`${FONT_SIZES[state.fontSize].name} · ${THEMES[state.theme]}`} onClick={() => openSub('display')} />
         <Row label="데이터" value={state.lastBackup ? '백업함' : '백업'} onClick={() => openSub('data')} />
       </Group>
+      {/* 임시: 온보딩 확인용, 나중에 지운다 */}
+      <Group><Row label="온보딩 맨 앞으로 돌아가기" onClick={() => go('onboarding')} /></Group>
       <Note>문장 쇼츠 · 외국어 문장과 뜻은 아직 원어민 검수 전이에요.</Note>
     </div></section>
   );
