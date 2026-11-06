@@ -72,7 +72,7 @@ export function Review() {
       <div className={`foot${rv.shown ? ' back' : ''}`}>
         {rv.shown ? (
           <>
-            <div style={{ textAlign: 'center', fontSize: 14, color: 'var(--muted)' }}>기억났나요?</div>
+            <div style={{ textAlign: 'center', fontSize: 14, color: 'var(--muted)', marginBottom: 8 }}>기억났나요?</div>
             <div className="rates">
               <button className="ans again" onClick={() => answer('again')}>다시 볼래요<small>{daysLabel(rateResult(state.mode, item, 'again').days)}</small></button>
               <button className="ans good" onClick={() => answer('good')}>기억나요<small>{daysLabel(rateResult(state.mode, item, 'good').days)}</small></button>
@@ -81,7 +81,7 @@ export function Review() {
         ) : (
           <>
             <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => setRv({ ...rv, shown: true })}>정답 보기</Button>
-            <Button kind="link" style={{ marginTop: -4 }} onClick={() => answer('again')}>모르겠어요, 건너뛰기</Button>
+            <Button kind="link" style={{ marginTop: -6 }} onClick={() => answer('again')}>모르겠어요, 건너뛰기</Button>
           </>
         )}
       </div>
@@ -107,8 +107,8 @@ export function ReviewDone() {
         <div className="hi"><b>{state.streak}일</b><span>연속 복습</span></div>
       </div>
       <div className={`foot${rv.shown ? ' back' : ''}`}>
-        <Button kind="dark" onClick={() => go('saved')}>배울래요로 돌아가기</Button>
-        <Button kind="link" disabled={!rv.again.length} onClick={() => startReview(rv.again.slice())}>틀린 것만 다시 보기</Button>
+        <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
+        <Button kind="link" style={{ marginTop: -13 }} disabled={!rv.again.length} onClick={() => startReview(rv.again.slice())}>틀린 것만 다시 보기</Button>
       </div>
     </section>
   );

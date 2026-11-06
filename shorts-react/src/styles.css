@@ -129,7 +129,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .empty-state .btn{width:auto;padding:12px 22px;min-height:46px;font-size:15px}
 
 /* 탭 바 */
-.tabs{position:absolute;bottom:0;left:0;right:0;display:flex;padding:8px 8px 10px;background:linear-gradient(transparent,var(--bg) 40%);z-index:5}
+.tabs{position:absolute;bottom:0;left:0;right:0;display:flex;padding:8px 8px 23px;background:var(--bg);z-index:5}
 .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;font-size:11px;color:var(--muted);font-weight:500;text-align:center}
 .tab.on{color:var(--ink);font-weight:700}
 .tab .ico{position:relative;display:block;width:24px;height:24px}
@@ -346,7 +346,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .rv-card .rv-body{justify-content:flex-start;left:16px;right:16px;top:64px;bottom:190px;overflow:visible}
 .rv-card .rcard{min-height:0;height:100%;max-height:440px}.rv-card .rcard.back{max-height:460px}
 .rv-card .rc-main{overflow-y:auto}
-.rv-card .foot{padding-bottom:73px}.rv-card .foot.back{padding-bottom:84px}
+.rv-card .foot{padding-bottom:7px}.rv-card .foot.back{padding-bottom:20px}
 .rcard{position:relative;min-height:100%;border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-card);padding:23px 52px 23px 23px;display:flex;flex-direction:column;gap:16px}
 .rc-chip{align-self:flex-start;font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--muted)}
 .rc-main{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
@@ -361,7 +361,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .rc-rail{position:absolute;right:11px;bottom:19px;display:flex;flex-direction:column;gap:12px}
 .rc-rail button{width:32px;height:32px;display:grid;place-items:center}
 .rc-rail .i{width:32px;height:32px;padding:5px;stroke:var(--ink);stroke-width:1.5}
-.rv-card .ans{height:66px;gap:2px;font-size:17px;border-radius:20px}
+.rv-card .ans{height:64px;gap:2px;font-size:17px;border-radius:20px}
 .rv-card .ans.again{background:var(--card);border:1px solid var(--line)}
 .rv-card .ans.good{background:var(--btn);color:var(--btn-ink)}
 .rv-card .ans small{color:inherit;font-size:12px}
@@ -416,3 +416,5 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ob-n ~ .desc{line-height:16px}
 .ob-n ~ .lang-pickers{margin-top:47px}
 .ob-n ~ .lang-pickers .sec{margin:0 0 12px}
+
+.screen.done .foot{padding-bottom:14px}
