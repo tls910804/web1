@@ -117,7 +117,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .act svg{width:32px;height:32px;padding:5px;stroke:var(--ink);stroke-width:1.5}
 .act.on svg{fill:var(--blue);stroke:var(--blue)}
 .act.playing svg{stroke:var(--blue)}
-@media (max-height:700px){ .card-body{top:106px;bottom:110px} .acts{bottom:131px} .peek{display:none} }
+@media (max-height:700px){ .card-body{top:106px;bottom:130px} .acts{bottom:152px} .peek{bottom:-82px} }
 
 /* 빈 화면 */
 .empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:0 32px;text-align:center;color:var(--muted);font-size:14px;line-height:1.55}
@@ -306,8 +306,11 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .steps{display:flex;gap:6px;margin:0 0 20px}
 .steps i{flex:1;height:3px;border-radius:2px;background:var(--line);transition:background .25s}
 .steps i.on{background:var(--ink)}
-.preview{margin-top:22px;padding:14px 14px 10px;border-radius:18px;background:var(--card);border:1px solid var(--line);animation:up .28s ease-out}
-.preview .tr{margin:6px 0 4px;font-size:14px}
+.preview{margin-top:69px;padding:19px;border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-card);display:flex;flex-direction:column;gap:12px;animation:up .28s ease-out}
+.preview .words{padding-bottom:0}
+.preview .tr{margin:0;font-size:17px;color:var(--sub)}
+.pv-cap{font-size:12px;color:var(--muted)}
+.ob-n + h2.title{margin-top:0}
 .card.cur .card-body>*{animation:rise .42s cubic-bezier(.2,.8,.2,1) both}
 .card.cur .card-body>*:nth-child(2){animation-delay:.07s}
 .card.cur .card-body>*:nth-child(n+3){animation-delay:.14s}
@@ -340,9 +343,10 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .det-memo{width:100%;margin:12px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px}
 
 /* ===== 복습: 카드형 ===== */
-.rv-card .rv-body{justify-content:flex-start;left:16px;right:16px;top:64px;bottom:auto;overflow:visible}
-.rv-card .rcard{min-height:440px}.rv-card .rcard.back{min-height:460px}
-.rv-card .foot{padding-bottom:73px}.rv-card .rates{margin-bottom:18px}.rv-card .foot.back{padding-bottom:58px}
+.rv-card .rv-body{justify-content:flex-start;left:16px;right:16px;top:64px;bottom:190px;overflow:visible}
+.rv-card .rcard{min-height:0;height:100%;max-height:440px}.rv-card .rcard.back{max-height:460px}
+.rv-card .rc-main{overflow-y:auto}
+.rv-card .foot{padding-bottom:73px}.rv-card .foot.back{padding-bottom:84px}
 .rcard{position:relative;min-height:100%;border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-card);padding:23px 52px 23px 23px;display:flex;flex-direction:column;gap:16px}
 .rc-chip{align-self:flex-start;font-size:12px;font-weight:500;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--muted)}
 .rc-main{flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px}
@@ -390,14 +394,16 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ob-missions i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:11px;background:var(--line)}
 .ob-missions .now{background:var(--blue);color:#fff}.ob-missions .now i{background:#fff;color:var(--blue)}
 .ob-missions .fin{color:var(--ink)}.ob-missions .fin i{background:var(--ink);color:var(--bg)}
-.ob-practice{min-height:330px}.ob-practice .rc-main{justify-content:flex-start}
+.rv-card .ob-practice,.ob-practice{min-height:330px}.ob-practice .rc-main{justify-content:flex-start}
 .ob-practice:not(.back) .rc-rail{top:96px;bottom:auto}
-.ob-practice.back{min-height:420px}
+.rv-card .ob-practice.back{min-height:420px;max-height:none}
 .ob-head{display:flex;justify-content:space-between;align-items:center}
 .ob-tag{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--ink);color:var(--bg)}
 .ob-bubble{align-self:flex-start;font-size:12px;font-weight:700;color:#fff;background:var(--blue);padding:5px 10px;border-radius:999px}
 .ob-foot{margin:0 0 10px;font-size:12px;color:var(--muted)}
-.ans-row{display:flex;gap:10px;margin-bottom:10px}
+.ans-row{display:flex;gap:12px;margin-bottom:18px}
+.screen > .bottom.rv-card{padding-bottom:7px}
+.ob-bubble.tip{display:inline-block;margin-bottom:8px}
 .ob-done{text-align:center;display:flex;flex-direction:column;gap:12px;padding-top:44px}
 .ob-done .ok{margin:0 auto;width:88px;height:88px;border-radius:50%;background:var(--blue);display:grid;place-items:center}
 .ob-row{display:flex;gap:12px;align-items:center;text-align:left;padding:14px;border-radius:20px;background:var(--card);box-shadow:var(--shadow-card);border:1px solid var(--line)}
@@ -406,3 +412,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ob-row b{display:block;font-size:15px}
 
 .item .tags>*{min-height:19px;display:inline-flex;align-items:center}
+
+.ob-n ~ .desc{line-height:16px}
+.ob-n ~ .lang-pickers{margin-top:47px}
+.ob-n ~ .lang-pickers .sec{margin:0 0 12px}

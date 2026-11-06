@@ -77,7 +77,6 @@ export function Review() {
               <button className="ans again" onClick={() => answer('again')}>다시 볼래요<small>{daysLabel(rateResult(state.mode, item, 'again').days)}</small></button>
               <button className="ans good" onClick={() => answer('good')}>기억나요<small>{daysLabel(rateResult(state.mode, item, 'good').days)}</small></button>
             </div>
-            <div style={{ textAlign: 'center', fontSize: 12, color: 'var(--muted)' }}>기억날수록 복습 간격이 길어져요</div>
           </>
         ) : (
           <>

@@ -60,7 +60,7 @@ export function Onboarding() {
 
   return (
     <section className="screen">
-      <div className="page" style={{ paddingBottom: 190 }}>
+      <div className="page" style={{ paddingTop: 16, paddingBottom: 190 }}>
         {step <= 5 && <div className="ob-n">{Math.min(step, 4)} / 4</div>}
         {step === 1 && (
           <>
@@ -76,8 +76,8 @@ export function Onboarding() {
             <LangPickers part="learn" onboarding />
             {sample && (
               <div className="preview" key={sample.id}>
-                <span className="pill">{lang(sample.lang).name} 미리보기</span>
-                <WordChips card={sample} small />
+                <span className="pv-cap">미리보기 · {lang(sample.lang).name}</span>
+                <WordChips card={sample} />
                 <p className="tr">{tr}</p>
               </div>
             )}
@@ -137,15 +137,15 @@ export function Onboarding() {
         {step === 5 && (
           <>
             <p className="ob-foot" style={{ fontSize: 14 }}>기억났나요?</p>
+            <span className="ob-bubble tip">하나를 골라 보세요</span>
             <div className="ans-row">
               <button className="ans again" onClick={() => setStep(6)}>다시 볼래요<small>내일</small></button>
               <button className="ans good" onClick={() => setStep(6)}>기억나요<small>3일 뒤</small></button>
             </div>
-            <p className="ob-foot">고른 만큼 다음 복습 시점이 달라져요</p>
           </>
         )}
         {step === 6 && <Button onClick={finish}>첫 카드 보러 가기</Button>}
-        {(step === 3 || step === 4 || step === 5) && <Button kind="link" onClick={finish}>건너뛰기</Button>}
+        {(step === 3 || step === 4 || step === 5) && <Button kind="link" style={{ marginTop: -4 }} onClick={finish}>건너뛰기</Button>}
       </div>
     </section>
   );
