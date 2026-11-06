@@ -35,8 +35,8 @@ export const Pill = ({ children }: { children: ReactNode }) => <span className="
 export const Note = ({ children }: { children: ReactNode }) => <p className="note">{children}</p>;
 
 /** 핵심 표현 + 뜻 블록 (왼쪽 파란 막대) */
-export function Expr({ text, mean }: { text: string; mean: string }) {
+export function Expr({ text, mean, lang }: { text: string; mean: string; lang?: string }) {
   return (
-    <div className="expr"><i /><div><b>{text}</b><span>{mean || '뜻을 아직 적지 않았어요'}</span></div></div>
+    <div className="expr"><i /><div><b lang={lang}>{text}</b><span>{mean || '뜻을 아직 적지 않았어요'}</span></div></div>
   );
 }

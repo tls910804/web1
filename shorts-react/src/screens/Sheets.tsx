@@ -5,7 +5,7 @@ import { Icon } from '../components/Icon';
 import { Grab, Lbl, SheetHead } from '../components/Layer';
 import { Group, Pill } from '../components/Rows';
 import { useActions } from '../lib/useActions';
-import { sentence, trOf, wordInfo } from '../lib/text';
+import { langTag, sentence, trOf, wordInfo } from '../lib/text';
 import { allCats, countFeed } from '../lib/feed';
 import { useStore } from '../store';
 import { useUi } from '../ui';
@@ -21,7 +21,7 @@ export function WordSheet({ card, wi }: { card: Card; wi: number }) {
     <>
       <Grab />
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <h3 className="big">{info.text}</h3><Pill>{info.expr ? '표현' : '단어'}</Pill>
+        <h3 className="big" lang={langTag(card.lang)}>{info.text}</h3><Pill>{info.expr ? '표현' : '단어'}</Pill>
         <IconButton label="발음 듣기" style={{ marginLeft: 'auto' }} onClick={() => speak(info.speak, card.lang)}><Icon name="speak" /></IconButton>
       </div>
       <div className="mean">{info.mean || '뜻을 아직 적지 않았어요'}</div>

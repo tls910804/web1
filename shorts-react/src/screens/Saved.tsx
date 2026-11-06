@@ -6,7 +6,7 @@ import { Pill } from '../components/Rows';
 import { DAY } from '../constants';
 import { daysLabel, dueItems, isWeak, minutesFor, nextDueText, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
 import { useActions } from '../lib/useActions';
-import { lang, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
+import { lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { SavedItem } from '../types';
@@ -24,10 +24,10 @@ export function Saved() {
   const longed = useRef(false);
 
   const head = (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '4px 0 12px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '0 0 12px' }}>
       <h2 className="title" style={{ margin: 0 }}>배울래요</h2>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-        <IconButton label="검색" onClick={() => setQ(q === null ? '' : null)}><Icon name="search" /></IconButton>
+        <IconButton label="검색" style={{ width: 38, height: 38 }} onClick={() => setQ(q === null ? '' : null)}><Icon name="search" /></IconButton>
         <button className="add-btn" onClick={() => go('add')}><Icon name="plus" style={{ width: 16, height: 16, strokeWidth: 2.2 }} />문장 추가</button>
       </div>
     </div>
@@ -146,7 +146,7 @@ export function Saved() {
   const bulk = (f: () => void) => { f(); setSel(null); };
 
   return (
-    <section className="screen"><div className="page" style={sel ? { paddingBottom: 150 } : undefined}>
+    <section className="screen"><div className="page" style={{ paddingTop: 12, ...(sel ? { paddingBottom: 150 } : {}) }}>
       {sel ? (
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '4px 0 12px' }}>
           <Button kind="link" auto onClick={() => setSel(null)}>취소</Button>
@@ -161,14 +161,14 @@ export function Saved() {
             <b>{due ? `오늘 복습 ${due}개` : '오늘 복습은 끝났어요'}</b>
             <span>{due ? (weakToday ? `약점 ${weakToday}개 포함 · 약 ${minutesFor(due)}분` : waiting > 0 ? `하루 ${state.daily}개씩 · ${waiting}개는 다음에` : `약 ${minutesFor(due)}분`) : (nextDueText(state) || '새로 저장하면 복습할 수 있어요')}</span>
           </div>
-          <Button kind="dark" auto disabled={!due} style={{ minHeight: 44, padding: '10px 16px', fontSize: 14, borderRadius: 12 }} onClick={openStart}>복습 시작</Button>
+          <Button kind="dark" auto disabled={!due} style={{ minHeight: 37, padding: '8px 16px', fontSize: 14, borderRadius: 12 }} onClick={openStart}>복습 시작</Button>
         </div>
       )}
       <div className="seg">
         <button className={savedTab === 's' ? 'on' : ''} onClick={() => setSavedTab('s')}>문장<small>{countS}</small></button>
         <button className={savedTab === 'w' ? 'on' : ''} onClick={() => setSavedTab('w')}>단어·표현<small>{countW}</small></button>
       </div>
-      <div className="grid" style={{ marginBottom: 4, alignItems: 'center' }}>
+      <div className="grid" style={{ marginBottom: 14, alignItems: 'center' }}>
         <Chip on={savedFilter === 'learning'} onClick={() => setSavedFilter('learning')}>외우는 중</Chip>
         <Chip on={savedFilter === 'weak'} onClick={() => setSavedFilter('weak')}>약점<small>{weak.length}</small></Chip>
         <Chip on={savedFilter === 'learned'} onClick={() => setSavedFilter('learned')}>외웠어요</Chip>
@@ -178,14 +178,17 @@ export function Saved() {
         const t = text(x);
         const d = dueIn(x);
         const badge = x.learned ? null : dueIds.has(x.id) ? <span className="bdg2 due">오늘 복습</span>
-          : isWeak(x) ? <span className="bdg2 weak">약점 ×{x.lapses}</span> : <span className="bdg2">{daysLabel(d)}</span>;
+          : isWeak(x) ? <span className="bdg2 weak">약점 ×{x.lapses}</span> : null;
         const on = sel?.includes(x.id);
         return (
           <div className={`item${on ? ' sel' : ''}`} key={x.id} {...press(x)}>
             {sel && <i className={`chk${on ? ' on' : ''}`} />}
-            <div className="en">{t.head}<Pill>{lang(x.card.lang).name}</Pill>{badge}</div>
+            <div className="tags"><Pill>{lang(x.card.lang).name}</Pill>{badge}</div>
+            <div className="en" lang={langTag(x.card.lang)}>{t.head}</div>
             <div className="ko">{t.sub}</div>
-            {!sel && (
+            <div className="row2">
+              <span className="nx">{x.learned ? '외웠어요' : `다음 복습 · ${dueIds.has(x.id) ? '오늘' : daysLabel(d)}`}</span>
+              {!sel && (
               <div className="btns" onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}>
                 <IconButton label="발음 듣기" onClick={() => speak(t.say, x.card.lang)}><Icon name="speak" /></IconButton>
                 <IconButton label={x.learned ? '다시 외우기' : '외웠어요'} style={x.learned ? { background: 'var(--blue-soft)' } : undefined} onClick={() => toggleLearned(x)}>
@@ -193,7 +196,8 @@ export function Saved() {
                 </IconButton>
                 <IconButton label="삭제" onClick={() => remove(x.id)}><Icon name="close" /></IconButton>
               </div>
-            )}
+              )}
+            </div>
           </div>
         );
       }) : (

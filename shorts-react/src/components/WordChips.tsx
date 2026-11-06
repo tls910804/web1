@@ -1,3 +1,4 @@
+import { langTag } from '../lib/text';
 import type { Card } from '../types';
 
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
 export function WordChips({ card, highlight, selected, onWord, small }: Props) {
   const hl = highlight ?? card.key;
   return (
-    <div className={`words${small ? ' sm' : ''}`}>
+    <div className={`words${small ? ' sm' : ''}`} lang={langTag(card.lang)}>
       {card.words.map((w, j) => (
         <button
           key={j}

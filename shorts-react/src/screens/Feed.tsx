@@ -6,7 +6,7 @@ import { WordChips } from '../components/WordChips';
 import { allCats, feedCards, allCards } from '../lib/feed';
 import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
-import { lang, sentence, trOf } from '../lib/text';
+import { lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
@@ -73,13 +73,6 @@ export function Feed() {
     openSheet(<WordSheet card={card} wi={wi} />);
   };
 
-  const markKnown = () => {
-    if (!cur) return;
-    const id = cur.id;
-    set((s) => ({ known: [...s.known, id] }));
-    toast('이 문장은 다시 보여주지 않아요', '되돌리기', () => set((s) => ({ known: s.known.filter((k) => k !== id) })));
-  };
-
   const copy = () => {
     if (!cur) return;
     if (navigator.clipboard) navigator.clipboard.writeText(sentence(cur)).then(() => toast('문장을 복사했어요'), () => toast('복사하지 못했어요'));
@@ -96,6 +89,7 @@ export function Feed() {
 
   return (
     <section className="screen glow">
+      {index < cards.length - 1 && <div className="peek"><span>다음 문장</span></div>}
       <div className="feed" ref={listRef} onScroll={onScroll} onClick={onListClick}>
         {!cards.length ? (
           <div className="empty">
@@ -109,7 +103,7 @@ export function Feed() {
               {i === 0 && !state.tapped && <span className="hint">단어를 눌러 보세요</span>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`} onClick={(e) => { if (state.hideTr) e.currentTarget.classList.toggle('hide'); }}>{trOf(c.tr, state.native)}</p>
-              {c.expr && <><div className="divider" /><Expr text={c.expr} mean={trOf(c.mean, state.native)} /></>}
+              {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
             </div>
           </article>
         ))}
@@ -134,15 +128,13 @@ export function Feed() {
 
       {cards.length > 0 && (
         <div className="acts">
-          <button key={saved ? 'on' : 'off'} className={`act${saved ? ' on pop' : ''}`} aria-label="배울 문장으로 저장" onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" />배울래요</button>
-          <button className="act" aria-label="발음 듣기" onClick={() => cur && speak(sentence(cur), cur.lang)}><Icon name="speak" />듣기</button>
-          <button className="act" aria-label="느리게 듣기" onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" />느리게</button>
-          <button className="act" aria-label="이미 알아요, 다시 보지 않기" onClick={markKnown}><Icon name="skip" />이미 알아요</button>
-          <button className={`act${state.hideTr ? ' on' : ''}`} aria-label="해석 가리기" onClick={() => set({ hideTr: !state.hideTr })}><Icon name="eye" /><span>{state.hideTr ? '해석 보기' : '해석 가림'}</span></button>
-          <button className="act" aria-label="문장 복사" onClick={copy}><Icon name="copy" />복사</button>
+          <button key={saved ? 'on' : 'off'} className={`act${saved ? ' on pop' : ''}`} aria-label="배울 문장으로 저장" onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" /></button>
+          <button className="act" aria-label="발음 듣기" onClick={() => cur && speak(sentence(cur), cur.lang)}><Icon name="speak" /></button>
+          <button className="act" aria-label="느리게 듣기" onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" /></button>
+          <button className={`act${state.hideTr ? ' on' : ''}`} aria-label="해석 가리기" onClick={() => set({ hideTr: !state.hideTr })}><Icon name="eye" /></button>
+          <button className="act" aria-label="문장 복사" onClick={copy}><Icon name="copy" /></button>
         </div>
       )}
-      {state.tapped && <div className="swipe">위로 넘기기 · 두 번 탭해서 문장 저장</div>}
     </section>
   );
 }

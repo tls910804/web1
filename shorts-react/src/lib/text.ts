@@ -2,6 +2,9 @@ import { CARDS, GLOSS, LANGS } from '../data';
 import { NO_SPACE } from '../constants';
 import type { Card } from '../types';
 
+/** 글꼴을 고르는 데 쓰는 언어 태그. 중국어는 간체/번체가 글꼴이 달라서 구분한다 */
+export const langTag = (code: string) => (code === 'zh' ? 'zh-Hans' : code);
+
 export function lang(code: string) {
   return LANGS.find((l) => l.code === code) ?? LANGS[0];
 }
