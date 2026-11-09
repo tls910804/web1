@@ -27,7 +27,7 @@ export function WordSheet({ card, wi }: { card: Card; wi: number }) {
       <div className="mean">{info.mean || '뜻을 아직 적지 않았어요'}</div>
       <div className="ctx"><b>이 문장에서</b>{sentence(card)} ({trOf(card.tr, state.native)})</div>
       <div style={{ display: 'flex', gap: 10 }}>
-        <Button kind="dark" style={{ flex: 1, ...(saved ? {} : { boxShadow: '0 0 0 4px rgba(37,99,235,.45)' }) }}
+        <Button kind="dark" style={{ flex: 1 }}
           onClick={() => { closeLayer(); toggleSave('w', card, wi); }}>
           <Icon name="mark" style={saved ? { fill: 'currentColor' } : undefined} />{saved ? '저장됨' : '배울래요'}
         </Button>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button } from '../components/Button';
+import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
 import { CARDS } from '../data';
 import { WordChips } from '../components/WordChips';
@@ -33,14 +34,15 @@ export function Onboarding() {
   const finish = () => { set({ onboarded: true }); setIndex(0); go('feed'); };
   const tr = sample ? trOf(sample.tr, state.native) : '';
 
+  // 저장 체험 가이드: 1 단어 누르기 → 2 두 번 탭 → 3 완료
+  const guide = !tapped ? 1 : !saved ? 2 : 3;
   const practiceCard = (back: boolean) => sample && (
-    <div className={`rcard ob-practice${back ? ' back' : ''}`} onDoubleClick={() => !back && setSaved(true)}>
+    <div className={`rcard ob-practice${back ? ' back' : ` g${guide}`}`} onDoubleClick={() => !back && setSaved(true)}>
       {back ? (
         <span className="rc-chip">{sample.cat} · {lang(sample.lang).name}</span>
       ) : (
         <div className="ob-head"><span className="ob-tag">연습</span><span className="rc-chip">{lang(sample.lang).name}</span></div>
       )}
-      {!back && !tapped && <span className="ob-bubble">단어를 눌러 보세요</span>}
       <div className="rc-main">
         {back
           ? <p className="rc-s" lang={langTag(sample.lang)}>{sentence(sample)}</p>
@@ -55,6 +57,7 @@ export function Onboarding() {
         <button aria-label="느리게 듣기" onClick={() => speak(sentence(sample), sample.lang, { rate: 0.7 })}><Icon name="clock" /></button>
         {!back && <><button aria-label="해석 가림"><Icon name="eye" /></button><button aria-label="복사"><Icon name="copy" /></button></>}
       </div>
+      {!back && guide === 2 && <i className="ob-tap" aria-hidden />}
     </div>
   );
 
@@ -85,13 +88,15 @@ export function Onboarding() {
         )}
         {step === 3 && (
           <>
-            <h2 className="title">문장을 저장해 볼까요?</h2>
-            <p className="desc">연습용 카드예요. 직접 눌러 보며 익혀 보세요.</p>
+            <h2 className="title">{['파란 단어를 눌러 보세요', '카드를 두 번 톡톡 눌러 저장해요', '잘했어요! 문장을 저장했어요'][guide - 1]}</h2>
+            <p className="desc">{['모르는 단어는 눌러서 뜻을 바로 확인해요.', '마음에 드는 문장은 배울래요에 모아 두고 복습해요.', '저장한 문장은 배울래요 탭에서 다시 볼 수 있어요.'][guide - 1]}</p>
             <div className="ob-missions">
-              <span className={tapped ? 'fin' : 'now'}><i>1</i>단어 누르기</span>
-              <span className={saved ? 'fin' : tapped ? 'now' : ''}><i>2</i>두 번 탭해서 저장</span>
+              <span className={tapped ? 'fin' : 'now'}><i>{tapped ? '✓' : 1}</i>단어 누르기</span>
+              <span className={saved ? 'fin' : tapped ? 'now' : ''}><i>{saved ? '✓' : 2}</i>두 번 탭해서 저장</span>
             </div>
             {practiceCard(false)}
+            {guide === 2 && <div className="ob-coach"><b>카드 아무 곳이나 톡톡 두 번</b><small>오른쪽 저장 아이콘을 눌러도 돼요</small></div>}
+            {guide === 3 && <div className="ob-saved"><Icon name="check" />배울래요에 저장했어요</div>}
           </>
         )}
         {step === 4 && (
@@ -129,18 +134,17 @@ export function Onboarding() {
         )}
         {step === 3 && (
           <>
-            {!(tapped && saved) && <p className="ob-foot">미션을 마치면 열려요</p>}
+            <p className={`ob-foot${guide === 3 ? ' fin' : ''}`}>{['단어를 누르면 다음 미션이 열려요 · 0 / 2', '한 번만 더 하면 끝나요 · 1 / 2', '미션 완료 · 2 / 2'][guide - 1]}</p>
             <Button disabled={!(tapped && saved)} onClick={() => setStep(4)}>다음</Button>
           </>
         )}
         {step === 4 && <Button onClick={() => setStep(5)}>복습 해 보기</Button>}
         {step === 5 && (
           <>
-            <p className="ob-foot" style={{ fontSize: 14 }}>기억났나요?</p>
             <span className="ob-bubble tip">하나를 골라 보세요</span>
             <div className="ans-row">
-              <button className="ans again" onClick={() => setStep(6)}>다시 볼래요<small>내일</small></button>
-              <button className="ans good" onClick={() => setStep(6)}>기억나요<small>3일 뒤</small></button>
+              <FaceButton kind="again" label="다시 볼래요" sub="내일" onClick={() => setStep(6)} />
+              <FaceButton kind="good" label="기억나요" sub="3일 뒤" onClick={() => setStep(6)} />
             </div>
           </>
         )}
