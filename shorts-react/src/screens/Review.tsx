@@ -1,12 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button, IconButton } from '../components/Button';
+import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
 import { WordChips } from '../components/WordChips';
-import { daysLabel, rateResult } from '../lib/srs';
+import { DAY } from '../constants';
+import { daysLabel, mastered, rateResult } from '../lib/srs';
 import { useActions } from '../lib/useActions';
-import { lang, langTag, sentence, trOf, wordInfo } from '../lib/text';
+import { dayKey, lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
+import { Exercise, exKind } from './Exercise';
 import { useStore } from '../store';
 import { useUi } from '../ui';
+import type { SavedItem } from '../types';
 
 export function Review() {
   const { state } = useStore();
@@ -37,13 +41,26 @@ export function Review() {
     ]);
   };
 
-  return (
-    <section className="screen rv-card">
-      <div className="rv-top">
+  const top = (
+    <div className="rv-top">
         <IconButton label="복습 그만두기" style={{ width: 38, height: 38 }} onClick={quit}><Icon name="close" /></IconButton>
         <div className="bar"><div style={{ width: `${pct}%` }} /></div>
         <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--muted)' }}>{rv.i + 1} / {rv.ids.length}</span>
       </div>
+  );
+  const ex = exKind(item);
+  if (ex) {
+    return (
+      <section className="screen rv-card">
+        {top}
+        <Exercise key={`${item.id}-${rv.i}`} kind={ex} item={item} onDone={(ok) => answer(ok ? 'good' : 'again')} onSkip={() => answer('again')} />
+      </section>
+    );
+  }
+
+  return (
+    <section className="screen rv-card">
+      {top}
       <div className="rv-body">
         <div className={`rcard${rv.shown ? ' back' : ''}`} onClick={() => rv.shown && setRv({ ...rv, shown: false })}>
           <span className="rc-chip">{c.cat} · {lang(c.lang).name}{item.kind === 'w' ? (item.wi >= 0 ? ' · 단어' : ' · 표현') : ''}</span>
@@ -72,16 +89,15 @@ export function Review() {
       <div className={`foot${rv.shown ? ' back' : ''}`}>
         {rv.shown ? (
           <>
-            <div style={{ textAlign: 'center', fontSize: 14, color: 'var(--muted)', marginBottom: 8 }}>기억났나요?</div>
             <div className="rates">
-              <button className="ans again" onClick={() => answer('again')}>다시 볼래요<small>{daysLabel(rateResult(state.mode, item, 'again').days)}</small></button>
-              <button className="ans good" onClick={() => answer('good')}>기억나요<small>{daysLabel(rateResult(state.mode, item, 'good').days)}</small></button>
+              <FaceButton kind="again" label="다시 볼래요" sub="5분 뒤" onClick={() => answer('again')} />
+              <FaceButton kind="good" label="기억나요" sub={daysLabel(rateResult(state.mode, item, 'good').days)} onClick={() => answer('good')} />
             </div>
           </>
         ) : (
           <>
             <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => setRv({ ...rv, shown: true })}>정답 보기</Button>
-            <Button kind="link" style={{ marginTop: -6 }} onClick={() => answer('again')}>모르겠어요, 건너뛰기</Button>
+            <Button kind="link" style={{ marginTop: -6 }} onClick={() => answer('again')}>건너뛰기</Button>
           </>
         )}
       </div>
@@ -89,26 +105,92 @@ export function Review() {
   );
 }
 
+
+/** on일 때 1초마다 다시 그린다 (5분 뒤 카운트다운용) */
+export function useNow(on: boolean) {
+  const [now, setNow] = useState(Date.now());
+  useEffect(() => {
+    if (!on) return;
+    setNow(Date.now());
+    const t = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(t);
+  }, [on]);
+  return now;
+}
+
+const mmss = (ms: number) => { const s = Math.max(0, Math.ceil(ms / 1000)); return `${String(Math.floor(s / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`; };
+
+export function RetryBar({ label, items, now }: { label: string; items: SavedItem[]; now: number }) {
+  if (!items.length) return null;
+  return <div className="retry"><span>{label}</span><b>{mmss(Math.min(...items.map((x) => x.due)) - now)}</b></div>;
+}
+
 export function ReviewDone() {
   const { state } = useStore();
   const { rv, go } = useUi();
   const { startReview } = useActions();
+  const [tab, setTab] = useState<'ok' | 'no' | null>(null);
+  const again = rv ? state.saved.filter((x) => rv.again.includes(x.id)) : [];
+  const waiting = again.filter((x) => x.due > Date.now());
+  const now = useNow(waiting.length > 0);
   if (!rv) return <section className="screen done" />;
+  const known = state.saved.filter((x) => rv.known.includes(x.id));
   const total = rv.known.length + rv.again.length;
-  return (
-    <section className="screen done">
-      <div className="ok"><Icon name="check" style={{ width: 44, height: 44, stroke: '#fff', strokeWidth: 2.5 }} /></div>
-      <h1>오늘 복습 끝!</h1>
-      <p>{total}개 중 <b style={{ color: 'var(--blue)' }}>{rv.known.length}개</b>를 알았어요.
-        {rv.again.length ? <><br />모르는 {rv.again.length}개는 내일 다시 보여드릴게요.</> : <><br />모두 기억했어요!</>}</p>
-      <div className="stats">
-        <div><b>{rv.known.length}</b><span>알았어요</span></div>
-        <div><b>{rv.again.length}</b><span>다시</span></div>
-        <div className="hi"><b>{state.streak}일</b><span>연속 복습</span></div>
+  const t = tab ?? (known.length ? 'ok' : 'no');
+  const week = Array.from({ length: 7 }, (_, i) => state.log[dayKey(now - i * DAY)]?.n || 0).reduce((a, b) => a + b, 0);
+  const daysTo = (x: SavedItem) => Math.max(1, Math.round((startOfDay(x.due) - startOfDay(now)) / DAY));
+  const row = (x: SavedItem, badge: string) => {
+    const info = x.kind === 'w' ? wordInfo(x.card, x.wi, state.native) : null;
+    return (
+      <div className="rs-row" key={x.id}>
+        <div><b lang={langTag(x.card.lang)}>{info ? info.text : sentence(x.card)}</b><span>{info ? info.mean : trOf(x.card.tr, state.native)}</span></div>
+        <span className="bdg2">{badge}</span>
       </div>
-      <div className={`foot${rv.shown ? ' back' : ''}`}>
-        <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
-        <Button kind="link" style={{ marginTop: -13 }} disabled={!rv.again.length} onClick={() => startReview(rv.again.slice())}>틀린 것만 다시 보기</Button>
+    );
+  };
+  const retryNow = () => startReview(rv.again.slice());
+  return (
+    <section className="screen rdone">
+      <div className="rd-page">
+        <div className="rd-head">
+          <div className="ok"><Icon name="check" style={{ width: 28, height: 28, stroke: '#fff', strokeWidth: 2.5 }} /></div>
+          <h1>오늘 복습 끝!</h1>
+          <p>{total}개 중 {rv.known.length}개를 알았어요.</p>
+        </div>
+        <div className="stats">
+          <div><span>알았어요</span><b>{rv.known.length}</b></div>
+          <div><span>이번 주 복습</span><b>{week}</b></div>
+          <div className="hi"><span>오래 기억해요</span><b>{state.saved.filter(mastered).length}</b></div>
+        </div>
+        <div className="seg">
+          <button className={t === 'ok' ? 'on' : ''} onClick={() => setTab('ok')}>맞췄어요<small>{known.length}</small></button>
+          <button className={t === 'no' ? 'on' : ''} onClick={() => setTab('no')}>틀렸어요<small>{again.length}</small></button>
+        </div>
+        {t === 'ok' ? (
+          <>
+            {known.map((x) => row(x, daysLabel(daysTo(x))))}
+            <p className="rd-note">{known.length ? '잘 기억할수록 다시 나오는 간격이 길어져요' : '이번에는 맞춘 문장이 없어요'}</p>
+          </>
+        ) : (
+          <>
+            <RetryBar label="5분 뒤 다시 보여드려요" items={waiting} now={now} />
+            {again.map((x) => row(x, x.due > now ? '5분 뒤' : '지금'))}
+            <p className="rd-note">{again.length ? '바로 이어서 복습하면 기억이 더 오래가요' : '모두 기억했어요!'}</p>
+          </>
+        )}
+      </div>
+      <div className="foot">
+        {t === 'no' && again.length ? (
+          <>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={retryNow}>지금 바로 다시 보기</Button>
+            <Button kind="link" style={{ marginTop: -13 }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
+          </>
+        ) : (
+          <>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
+            <Button kind="link" style={{ marginTop: -13 }} disabled={!again.length} onClick={retryNow}>틀린 것 지금 다시 보기</Button>
+          </>
+        )}
       </div>
     </section>
   );

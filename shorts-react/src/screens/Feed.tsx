@@ -99,10 +99,10 @@ export function Feed() {
           </div>
         ) : cards.map((c, i) => (
           <article className={`card${c.id === curId ? ' cur' : ''}`} key={c.id}>
-            <div className="card-body">
+            <div className="card-body" onClick={(e) => { if (state.hideTr && (e.target as Element).closest('.tr,.expr')) e.currentTarget.querySelector('.tr')?.classList.toggle('hide'); }}>
               {i === 0 && !state.tapped && <span className="hint">단어를 눌러 보세요</span>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} />
-              <p className={`tr${state.hideTr ? ' hide' : ''}`} onClick={(e) => { if (state.hideTr) e.currentTarget.classList.toggle('hide'); }}>{trOf(c.tr, state.native)}</p>
+              <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
             </div>
           </article>
@@ -131,7 +131,7 @@ export function Feed() {
           <button key={saved ? 'on' : 'off'} className={`act${saved ? ' on pop' : ''}`} aria-label="배울 문장으로 저장" onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" /></button>
           <button className="act" aria-label="발음 듣기" onClick={() => cur && speak(sentence(cur), cur.lang)}><Icon name="speak" /></button>
           <button className="act" aria-label="느리게 듣기" onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" /></button>
-          <button className={`act${state.hideTr ? ' on' : ''}`} aria-label="해석 가리기" onClick={() => set({ hideTr: !state.hideTr })}><Icon name="eye" /></button>
+          <button className={`act${state.hideTr ? ' off' : ''}`} aria-label="해석 가리기" onClick={() => set({ hideTr: !state.hideTr })}><Icon name={state.hideTr ? 'eyeOff' : 'eye'} /></button>
           <button className="act" aria-label="문장 복사" onClick={copy}><Icon name="copy" /></button>
         </div>
       )}

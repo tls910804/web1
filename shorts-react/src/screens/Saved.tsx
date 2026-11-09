@@ -4,11 +4,12 @@ import { Icon } from '../components/Icon';
 import { Grab, SheetHead } from '../components/Layer';
 import { Pill } from '../components/Rows';
 import { DAY } from '../constants';
-import { daysLabel, dueItems, isWeak, minutesFor, nextDueText, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
+import { daysLabel, dueItems, isWeak, minutesFor, nextDueText, retryItems, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
 import { useActions } from '../lib/useActions';
 import { lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
+import { RetryBar, useNow } from './Review';
 import type { SavedItem } from '../types';
 
 const dueIn = (x: SavedItem) => Math.max(0, Math.floor((x.due - startOfDay(Date.now())) / DAY));
@@ -22,6 +23,8 @@ export function Saved() {
   const [sel, setSel] = useState<string[] | null>(null);
   const timer = useRef<number>();
   const longed = useRef(false);
+  const now = useNow(retryItems(state).length > 0);
+  const retry = retryItems(state, now);
 
   const head = (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '0 0 12px' }}>
@@ -157,13 +160,15 @@ export function Saved() {
       {q !== null && !sel && <input className="det-memo" autoFocus placeholder="문장 · 뜻 검색" value={q} onChange={(e) => setQ(e.target.value)} />}
       {!sel && (
         <div className="review-banner">
+          <span className="rb-n">{due}</span>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <b>{due ? `오늘 복습 ${due}개` : '오늘 복습은 끝났어요'}</b>
+            <b>{due ? '오늘 복습할 문장' : '오늘 복습은 끝났어요'}</b>
             <span>{due ? (weakToday ? `약점 ${weakToday}개 포함 · 약 ${minutesFor(due)}분` : waiting > 0 ? `하루 ${state.daily}개씩 · ${waiting}개는 다음에` : `약 ${minutesFor(due)}분`) : (nextDueText(state) || '새로 저장하면 복습할 수 있어요')}</span>
           </div>
-          <Button kind="dark" auto disabled={!due} style={{ minHeight: 37, padding: '8px 16px', fontSize: 14, borderRadius: 12 }} onClick={openStart}>복습 시작</Button>
+          <Button auto disabled={!due} style={{ minHeight: 41, padding: '12px 16px', fontSize: 14, borderRadius: 8, background: 'var(--blue)', color: '#fff' }} onClick={openStart}>복습 시작</Button>
         </div>
       )}
+      {!sel && <RetryBar label={`5분 뒤 다시 볼 문장 ${retry.length}개`} items={retry} now={now} />}
       <div className="seg">
         <button className={savedTab === 's' ? 'on' : ''} onClick={() => setSavedTab('s')}>문장<small>{countS}</small></button>
         <button className={savedTab === 'w' ? 'on' : ''} onClick={() => setSavedTab('w')}>단어·표현<small>{countW}</small></button>

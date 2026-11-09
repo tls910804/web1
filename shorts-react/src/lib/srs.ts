@@ -34,6 +34,11 @@ export function nextDueText(s: AppState) {
   return `${days <= 1 ? '내일' : days + '일 뒤'} ${n}개를 복습해요`;
 }
 
+/** 틀린 문장은 이만큼 뒤에 다시 복습에 나온다 */
+export const RETRY = 5 * 60_000;
+export const retryItems = (s: AppState, now = Date.now()) =>
+  s.saved.filter((x) => !x.learned && x.due > now && x.due - now <= RETRY);
+
 /** '다시'를 이만큼 받으면 약점으로 본다 */
 export const WEAK_AT = 2;
 export const isWeak = (x: SavedItem) => !x.learned && (x.lapses || 0) >= WEAK_AT;
