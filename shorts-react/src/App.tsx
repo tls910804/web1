@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { tt } from './i18n';
 import { DAY, FONT_SIZES } from './constants';
 import { Icon } from './components/Icon';
 import { Layer } from './components/Layer';
@@ -65,7 +66,7 @@ export function App() {
 
   // 오프라인 안내
   useEffect(() => {
-    const on = () => { setOnline(true); toast('다시 연결됐어요'); };
+    const on = () => { setOnline(true); toast(tt('다시 연결됐어요')); };
     const off = () => setOnline(false);
     window.addEventListener('online', on);
     window.addEventListener('offline', off);
@@ -86,9 +87,9 @@ export function App() {
   // 저장 공간이 꽉 차면 알려 준다
   useEffect(() => {
     if (!saveFailed) return;
-    openDialog('저장하지 못했어요', '브라우저 저장 공간이 꽉 찼거나 비공개 모드일 수 있어요. 이 화면을 닫으면 방금 바꾼 내용이 사라질 수 있으니 파일로 내보내 두세요.', [
-      { label: '다시 시도', kind: 'light', fn: () => { if (retrySave()) toast('저장했어요'); } },
-      { label: '파일로 내보내기', kind: 'dark', fn: () => exportBackup(stateRef.current) },
+    openDialog(tt('저장하지 못했어요'), tt('브라우저 저장 공간이 꽉 찼거나 비공개 모드일 수 있어요. 이 화면을 닫으면 방금 바꾼 내용이 사라질 수 있으니 파일로 내보내 두세요.'), [
+      { label: tt('다시 시도'), kind: 'light', fn: () => { if (retrySave()) toast(tt('저장했어요')); } },
+      { label: tt('파일로 내보내기'), kind: 'dark', fn: () => exportBackup(stateRef.current) },
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [saveFailed]);
@@ -125,7 +126,7 @@ export function App() {
       {screen === 'streak' && <StreakBroken />}
 
       {!online && (
-        <div className="net"><Icon name="offline" /><span><b>오프라인이에요</b>저장한 문장과 복습은 그대로 쓸 수 있어요</span></div>
+        <div className="net"><Icon name="offline" /><span><b>{tt('오프라인이에요')}</b>{tt('저장한 문장과 복습은 그대로 쓸 수 있어요')}</span></div>
       )}
       {TAB_SCREENS.includes(screen) && <TabBar />}
       <Toast />

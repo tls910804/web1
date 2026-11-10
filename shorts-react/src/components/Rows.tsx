@@ -1,3 +1,4 @@
+import { tt } from '../i18n';
 import type { ReactNode } from 'react';
 import { Icon } from './Icon';
 
@@ -37,6 +38,6 @@ export const Note = ({ children }: { children: ReactNode }) => <p className="not
 /** 핵심 표현 + 뜻 블록 (왼쪽 파란 막대) */
 export function Expr({ text, mean, lang }: { text: string; mean: string; lang?: string }) {
   return (
-    <div className="expr"><i /><div><b lang={lang}>{text}</b><span>{mean || '뜻을 아직 적지 않았어요'}</span></div></div>
+    <div className="expr"><i /><div><b lang={lang}>{text}</b><span>{mean || tt('뜻을 아직 적지 않았어요')}</span></div></div>
   );
 }

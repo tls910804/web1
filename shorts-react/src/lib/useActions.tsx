@@ -1,3 +1,4 @@
+import { tt } from '../i18n';
 import { useCallback } from 'react';
 import { DAY } from '../constants';
 import { useStore } from '../store';
@@ -34,16 +35,16 @@ export function useActions() {
 
   const openLogin = useCallback(() => {
     set({ loginAsked: true });
-    const by = (name: string) => { set({ account: name }); closeLayer(); toast(`${name}(으)로 로그인했어요 · 데모`); };
+    const by = (name: string) => { set({ account: name }); closeLayer(); toast(tt('{name}(으)로 로그인했어요 · 데모', { name })); };
     openSheet(
       <>
         <Grab />
-        <h3>저장한 단어를 잃지 않으려면</h3>
-        <p style={{ margin: '-6px 0 2px', fontSize: 14, color: 'var(--muted)' }}>로그인하면 다른 기기에서도 이어서 볼 수 있어요.</p>
-        <Button kind="dark" onClick={() => by('Apple')}><span className="bdg" style={{ background: 'var(--btn-ink)', color: 'var(--btn)' }}>A</span>Apple로 계속하기</Button>
-        <Button kind="line" onClick={() => by('Google')}><span className="bdg" style={{ background: '#3b4047', color: '#fff' }}>G</span>Google로 계속하기</Button>
-        <Button kind="light" onClick={() => by('이메일')}>이메일로 계속하기</Button>
-        <Button kind="link" onClick={closeLayer}>나중에</Button>
+        <h3>{tt('저장한 단어를 잃지 않으려면')}</h3>
+        <p style={{ margin: '-6px 0 2px', fontSize: 14, color: 'var(--muted)' }}>{tt('로그인하면 다른 기기에서도 이어서 볼 수 있어요.')}</p>
+        <Button kind="dark" onClick={() => by('Apple')}><span className="bdg" style={{ background: 'var(--btn-ink)', color: 'var(--btn)' }}>A</span>{tt('{p}로 계속하기', { p: 'Apple' })}</Button>
+        <Button kind="line" onClick={() => by('Google')}><span className="bdg" style={{ background: '#3b4047', color: '#fff' }}>G</span>{tt('{p}로 계속하기', { p: 'Google' })}</Button>
+        <Button kind="light" onClick={() => by('이메일')}>{tt('이메일로 계속하기')}</Button>
+        <Button kind="link" onClick={closeLayer}>{tt('나중에')}</Button>
       </>,
     );
   }, [set, openSheet, closeLayer, toast]);
@@ -55,17 +56,17 @@ export function useActions() {
     // 첫 저장 직후에 알림을 한 번 물어보고, 로그인은 그 다음에 한 번만 권한다
     if (!state.notifyAsked && notifPerm() === 'default') {
       set({ notifyAsked: true });
-      toast('배울래요에 저장했어요');
+      toast(tt('배울래요에 저장했어요'));
       setTimeout(() => openSheet(<NotifyPrompt then={login} />), 700);
     } else if (!state.account && !state.loginAsked) login();
-    else toast('배울래요에 저장했어요');
+    else toast(tt('배울래요에 저장했어요'));
   }, [set, state.account, state.loginAsked, state.notifyAsked, openLogin, openSheet, toast]);
 
   const removeItem = useCallback((id: string) => set((s) => ({ saved: s.saved.filter((x) => x.id !== id) })), [set]);
 
   const toggleSave = useCallback((kind: 's' | 'w', card: Card, wi = -1) => {
     const it = findSaved(kind, card, wi);
-    if (it) { removeItem(it.id); toast('저장을 취소했어요'); } else saveItem(kind, card, wi);
+    if (it) { removeItem(it.id); toast(tt('저장을 취소했어요')); } else saveItem(kind, card, wi);
   }, [findSaved, removeItem, saveItem, toast]);
 
   // ----- 복습 -----
@@ -119,9 +120,9 @@ export function useActions() {
       a.click();
       setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
       set({ lastBackup: next.lastBackup });
-      toast('파일로 내보냈어요');
+      toast(tt('파일로 내보냈어요'));
     } catch {
-      toast('내보내지 못했어요');
+      toast(tt('내보내지 못했어요'));
     }
   }, [state, set, toast]);
 

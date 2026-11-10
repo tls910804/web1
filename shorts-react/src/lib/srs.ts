@@ -1,3 +1,4 @@
+import { tt } from '../i18n';
 import { DAY, MODES } from '../constants';
 import type { AppState, ModeKey, Rate, SavedItem } from '../types';
 import { startOfDay } from './text';
@@ -8,7 +9,7 @@ export function interval(mode: ModeKey, step: number) {
   return Math.min(d[last] * Math.pow(2, step - last), 120);
 }
 
-export const daysLabel = (n: number) => (n === 1 ? '내일' : `${n}일 뒤`);
+export const daysLabel = (n: number) => (n === 1 ? tt('내일') : tt('{n}일 뒤', { n }));
 
 // 평가별 다음 단계와 간격
 export function rateResult(mode: ModeKey, item: SavedItem, r: Rate) {
@@ -31,7 +32,7 @@ export function nextDueText(s: AppState) {
   if (!next) return '';
   const days = Math.round((startOfDay(next) - startOfDay(Date.now())) / DAY);
   const n = s.saved.filter((x) => !x.learned && startOfDay(x.due) === startOfDay(next)).length;
-  return `${days <= 1 ? '내일' : days + '일 뒤'} ${n}개를 복습해요`;
+  return days <= 1 ? tt('내일 {n}개를 복습해요', { n }) : tt('{d}일 뒤 {n}개를 복습해요', { d: days, n });
 }
 
 /** 틀린 문장은 이만큼 뒤에 다시 복습에 나온다 */

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { tt } from '../i18n';
 import { useUi } from '../ui';
 import { Button, IconButton } from './Button';
 import { Icon } from './Icon';
@@ -36,7 +37,7 @@ export function SheetHead({ title }: { title: string }) {
   return (
     <>
       <div className="grab" />
-      <div className="sh-head"><h3>{title}</h3><IconButton label="닫기" onClick={closeLayer}><Icon name="close" /></IconButton></div>
+      <div className="sh-head"><h3>{title}</h3><IconButton label={tt('닫기')} onClick={closeLayer}><Icon name="close" /></IconButton></div>
     </>
   );
 }

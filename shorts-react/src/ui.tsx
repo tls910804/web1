@@ -1,3 +1,4 @@
+import { tt } from './i18n';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { useStore } from './store';
 import { playAudio, stopAudio } from './lib/audio';
@@ -37,12 +38,14 @@ interface Ui {
   // 화면을 떠났다 돌아와도 남아야 하는 상태
   cats: string[];
   setCats: (c: string[]) => void;
+  tab: string;
+  setTab: (t: string) => void;
   index: number;
   setIndex: (i: number) => void;
   savedTab: 's' | 'w';
   setSavedTab: (t: 's' | 'w') => void;
-  savedFilter: 'learning' | 'weak' | 'learned';
-  setSavedFilter: (f: 'learning' | 'weak' | 'learned') => void;
+  savedFilter: 'learning' | 'learned';
+  setSavedFilter: (f: 'learning' | 'learned') => void;
   statsRange: 'week' | 'month';
   setStatsRange: (r: 'week' | 'month') => void;
   rv: ReviewSession | null;
@@ -62,9 +65,10 @@ export function UiProvider({ children }: { children: ReactNode }) {
   const [selection, setSelection] = useState<Ui['selection']>(null);
   const [toastNode, setToastNode] = useState<Toast | null>(null);
   const [cats, setCats] = useState<string[]>([]);
+  const [tab, setTab] = useState('');
   const [index, setIndex] = useState(0);
   const [savedTab, setSavedTab] = useState<'s' | 'w'>('s');
-  const [savedFilter, setSavedFilter] = useState<'learning' | 'weak' | 'learned'>('learning');
+  const [savedFilter, setSavedFilter] = useState<'learning' | 'learned'>('learning');
   const [statsRange, setStatsRange] = useState<'week' | 'month'>('week');
   const [rv, setRv] = useState<ReviewSession | null>(null);
   const [streakWas, setStreakWas] = useState(0);
@@ -115,13 +119,13 @@ export function UiProvider({ children }: { children: ReactNode }) {
       return;
     }
     if (!speechOk()) {
-      if (!opt.quiet) openDialog('음성을 들을 수 없어요', '이 브라우저는 발음 듣기를 지원하지 않아요. 크롬이나 사파리 최신 버전에서 열어 주세요.', [{ label: '확인', kind: 'dark' }]);
+      if (!opt.quiet) openDialog(tt('음성을 들을 수 없어요'), tt('이 브라우저는 발음 듣기를 지원하지 않아요. 크롬이나 사파리 최신 버전에서 열어 주세요.'), [{ label: tt('확인'), kind: 'dark' }]);
       return;
     }
     if (!hasVoice(code) && !voiceWarned.current[code]) {
       voiceWarned.current[code] = true;
       const l = lang(code);
-      openDialog(`이 기기에 ${l.ko} 음성이 없어요`, `기기 설정의 '텍스트 음성 변환'에서 ${l.ko} 음성을 내려받으면 정확한 발음으로 들을 수 있어요. 지금은 기본 음성으로 읽어요.`, [{ label: '확인', kind: 'dark' }]);
+      openDialog(tt('이 기기에 {l} 음성이 없어요', { l: l.ko }), tt('기기 설정의 \'텍스트 음성 변환\'에서 {l} 음성을 내려받으면 정확한 발음으로 들을 수 있어요. 지금은 기본 음성으로 읽어요.', { l: l.ko }), [{ label: tt('확인'), kind: 'dark' }]);
     }
     say(text, code, rate, opt.repeat);
   }, [openDialog, state.slow]);
@@ -129,10 +133,10 @@ export function UiProvider({ children }: { children: ReactNode }) {
   const value = useMemo<Ui>(() => ({
     screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, setSelection,
     toast, toastNode, dismissToast, speak,
-    cats, setCats, index, setIndex, savedTab, setSavedTab, savedFilter, setSavedFilter,
+    cats, setCats, tab, setTab, index, setIndex, savedTab, setSavedTab, savedFilter, setSavedFilter,
     statsRange, setStatsRange, rv, setRv, streakWas, setStreakWas,
   }), [screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, toast, toastNode, dismissToast, speak,
-    cats, index, savedTab, savedFilter, statsRange, rv, streakWas]);
+    cats, tab, index, savedTab, savedFilter, statsRange, rv, streakWas]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }

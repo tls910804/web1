@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
+import { tt } from '../i18n';
 import { Button } from '../components/Button';
-import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
 import { NO_SPACE } from '../constants';
 import { CARDS } from '../data';
-import { daysLabel, rateResult } from '../lib/srs';
+import { rateResult } from '../lib/srs';
 import { clean, lang, langTag, sentence, trOf, wordInfo } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
@@ -61,9 +61,11 @@ function findMiss(text: string, answer: string, code: string, native: string) {
   return null;
 }
 
+const when = (days: number) => (days === 1 ? tt('내일') : tt('{n}일 뒤에', { n: days }));
 type Miss = { w: string; mean: string };
 
-export function Exercise({ kind, item, onDone, onSkip }: { kind: ExKind; item: SavedItem; onDone: (ok: boolean) => void; onSkip: () => void }) {
+/** practice: 온보딩 체험용. 모르면 평가 대신 정답과 '5분 뒤' 안내를 바로 보여준다 */
+export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKind; item: SavedItem; onDone: (ok: boolean, hinted?: boolean) => void; onSkip: () => void; practice?: boolean }) {
   const { state } = useStore();
   const { speak } = useUi();
   const c = item.card;
@@ -72,7 +74,7 @@ export function Exercise({ kind, item, onDone, onSkip }: { kind: ExKind; item: S
   const ansMean = item.kind === 'w' ? wordInfo(c, item.wi, state.native).mean : trOf(c.mean, state.native);
   const [text, setText] = useState('');
   const [hint, setHint] = useState(false);
-  const [phase, setPhase] = useState<'ask' | 'ok' | 'reveal'>('ask');
+  const [phase, setPhase] = useState<'ask' | 'ok' | 'no'>('ask');
   const [res, setRes] = useState<boolean | null>(null);
   const [lastMiss, setLastMiss] = useState<Miss | null>(null);
   const input = useRef<HTMLInputElement>(null);
@@ -91,34 +93,39 @@ export function Exercise({ kind, item, onDone, onSkip }: { kind: ExKind; item: S
   const submit = () => {
     if (!text.trim()) return;
     if (norm(text, c.lang) === norm(answer, c.lang)) setPhase('ok');
-    else setPhase('reveal');
+    else setPhase('no');
   };
+  const giveUp = () => (practice ? setPhase('no') : onSkip());
+  // 복습 정책: 틀리면 5분 뒤 다시, 맞히면 간격을 늘리되 힌트를 봤으면 한 단계 덜 늘린다
+  const days = rateResult(state.mode, item, hint ? 'hard' : 'good').days;
 
   if (kind === 'dictation') {
     return (
       <>
         <div className="rv-body ex-body">
           <div className="rcard ex ex-dict">
-            <span className="rc-chip">듣고 받아쓰기 · {lang(c.lang).name}</span>
-            <button className="ex-play" aria-label="발음 듣기" onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
-            <button className="ex-slow" onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}>느리게 듣기</button>
+            <span className="rc-chip">{tt('듣고 받아쓰기')} · {lang(c.lang).name}</span>
+            <button className="ex-play" aria-label={tt('발음 듣기')} onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
+            <button className="ex-slow" onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}>{tt('느리게 듣기')}</button>
           </div>
-          <p className="ex-cap">들은 문장을 그대로 써 보세요</p>
+          <p className="ex-cap">{tt('들은 문장을 그대로 써 보세요')}</p>
           <textarea className="ex-input" value={text} disabled={res !== null} lang={langTag(c.lang)} rows={3}
             autoCapitalize="off" autoCorrect="off" spellCheck={false} onChange={(e) => setText(e.target.value)} />
-          {res === null && <button className="lnk ex-hint" onClick={() => setHint(true)}>{hint ? `첫 단어: ${clean(c.words[0])}` : '첫 단어 힌트 보기'}</button>}
+          {res === null && <button className="lnk ex-hint" onClick={() => setHint(true)}>{hint ? tt('첫 단어: {w}', { w: clean(c.words[0]) }) : tt('첫 단어 힌트 보기')}</button>}
         </div>
         <div className="foot">
           {res !== null ? (
             <div className={`ex-fb ${res ? 'ok' : 'no'}`}>
-              <b>{res ? '정답이에요!' : '아쉬워요'}</b>
+              <div className="ex-note">
+<b>{res ? tt('정답이에요! {when} 다시 보여 드려요', { when: when(rateResult(state.mode, item, 'good').days) }) : tt('괜찮아요! 5분 뒤에 다시 보여 드려요')}</b>
               <small lang={langTag(c.lang)}>{sentence(c)}</small>
-              <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => onDone(res)}>다음</Button>
+</div>
+              <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => onDone(res)}>{tt('다음')}</Button>
             </div>
           ) : (
             <>
-              <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} disabled={!text.trim()} onClick={() => setRes(norm(text, c.lang) === norm(sentence(c), c.lang))}>확인</Button>
-              <Button kind="link" style={{ marginTop: -6 }} onClick={onSkip}>건너뛰기</Button>
+              <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} disabled={!text.trim()} onClick={() => setRes(norm(text, c.lang) === norm(sentence(c), c.lang))}>{tt('확인')}</Button>
+              <Button kind="link" style={{ marginTop: -6 }} onClick={onSkip}>{tt('건너뛰기')}</Button>
             </>
           )}
         </div>
@@ -126,52 +133,16 @@ export function Exercise({ kind, item, onDone, onSkip }: { kind: ExKind; item: S
     );
   }
 
-  // 정답 확인: 뜻과 헷갈린 표현을 보고 스스로 평가한다
-  if (phase === 'reveal') {
-    return (
-      <>
-        <div className="rv-body">
-          <div className="rcard back">
-            <span className="rc-chip">{c.cat} · {lang(c.lang).name}</span>
-            <div className="rc-main">
-              <p className="rc-s" lang={langTag(c.lang)}>{sentence(c)}</p>
-              <div className="rc-line" />
-              <p className="rc-tr">{tr}</p>
-              <div className="rc-expr"><b lang={langTag(c.lang)}>{answer}</b><span>{ansMean}</span></div>
-              {lastMiss && (
-                <div className="ex-conf">
-                  <small>이 표현과 헷갈리기 쉬워요</small>
-                  <b lang={langTag(c.lang)}>{lastMiss.w} = {lastMiss.mean}</b>
-                  <span>‘{lastMiss.mean}’라는 뜻이라 이 문장과는 맞지 않아요.</span>
-                </div>
-              )}
-            </div>
-            <div className="rc-rail">
-              <button aria-label="발음 듣기" onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
-              <button aria-label="느리게 듣기" onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}><Icon name="clock" /></button>
-            </div>
-          </div>
-        </div>
-        <div className="foot back">
-          <div className="rates">
-            <FaceButton kind="again" label="다시 볼래요" sub="5분 뒤" onClick={() => onDone(false)} />
-            <FaceButton kind="good" label="기억나요" sub={daysLabel(rateResult(state.mode, item, 'good').days)} onClick={() => onDone(true)} />
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  const ok = phase === 'ok';
+  const ok = phase === 'ok', no = phase === 'no', end = ok || no;
   const first = idx[0], last = idx[idx.length - 1];
   const tail = c.words[last].match(/[.,!?。、！？]+$/)?.[0] ?? '';
   const parts: React.ReactNode[] = [];
   c.words.forEach((w, i) => {
     if (i === first) {
       parts.push(
-        <span key={i} className={`ex-blank${ok ? ' ok' : wrong ? ' no' : ''}`}>
-          {ok ? answer : (
-            <input ref={input} value={text} lang={langTag(c.lang)} aria-label="빈칸 입력" enterKeyHint="done"
+        <span key={i} className={`ex-blank${ok ? ' ok' : wrong || no ? ' no' : ''}`}>
+          {end ? answer : (
+            <input ref={input} value={text} lang={langTag(c.lang)} aria-label={tt('빈칸 입력')} enterKeyHint="done"
               autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false}
               style={{ width: `${Math.max(answer.length, text.length) + 1}ch` }}
               onChange={(e) => onType(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && submit()} />
@@ -186,33 +157,35 @@ export function Exercise({ kind, item, onDone, onSkip }: { kind: ExKind; item: S
     <>
       <div className="rv-body ex-body">
         <div className="rcard ex">
-          <span className="rc-chip">빈칸 채우기 · {lang(c.lang).name}</span>
+          <span className="rc-chip">{tt('빈칸 채우기')} · {lang(c.lang).name}</span>
           <p className="rc-s" lang={langTag(c.lang)}>{parts}</p>
           <p className="rc-tr">{tr}</p>
-          {miss && (
+          {(miss || (no && lastMiss)) && (
             <div className="ex-why">
-              <b lang={langTag(c.lang)}>{miss.w} = {miss.mean}</b>
-              <span>뜻이 달라서 맞지 않아요. 이 자리는 ‘{ansMean}’라는 뜻이에요.</span>
+              <b lang={langTag(c.lang)}>{(miss || lastMiss)!.w} = {(miss || lastMiss)!.mean}</b>
+              <span>{tt('뜻이 달라서 맞지 않아요. 이 자리는 ‘{m}’라는 뜻이에요.', { m: ansMean })}</span>
             </div>
           )}
-          {!ok && (
+          {!end && (
             <div className="ex-acts">
               {hint
-                ? <button className="ex-pill" onClick={() => setPhase('reveal')}>정답 보기</button>
-                : <button className="ex-pill" onClick={() => { setHint(true); if (!norm(answer, c.lang).startsWith(norm(text, c.lang)) || text.length < nHint) setText(answer.slice(0, nHint)); input.current?.focus(); }}>힌트 보기</button>}
-              {!hint && !miss && <span className="ex-meta">{NO_SPACE[c.lang] ? '' : `${words}단어 · `}{answer.replace(/\s/g, '').length}글자</span>}
-              <button className="lnk ex-skip" onClick={onSkip}>건너뛰기</button>
+                ? <button className="ex-pill" onClick={() => setPhase('no')}>{tt('정답 보기')}</button>
+                : <button className="ex-pill" onClick={() => { setHint(true); if (!norm(answer, c.lang).startsWith(norm(text, c.lang)) || text.length < nHint) setText(answer.slice(0, nHint)); input.current?.focus(); }}>{tt('힌트 보기')}</button>}
+              {!hint && !miss && <span className="ex-meta">{NO_SPACE[c.lang] ? '' : `${tt('{n}단어', { n: words })} · `}{tt('{n}글자', { n: answer.replace(/\s/g, '').length })}</span>}
+              <button className="lnk ex-skip" onClick={giveUp}>{tt('건너뛰기')}</button>
             </div>
           )}
         </div>
-        {!ok && <p className="ex-cap">{hint ? `앞 ${nHint === 2 ? '두' : '한'} 글자를 보여 드렸어요` : '빈칸에 알맞은 표현을 직접 써 보세요'}</p>}
+        {!end && <p className="ex-cap">{hint ? tt(nHint === 2 ? '앞 두 글자를 보여 드렸어요' : '앞 한 글자를 보여 드렸어요') : practice ? tt('방금 저장한 표현이에요. 빈칸에 직접 써 보세요') : tt('빈칸에 알맞은 표현을 직접 써 보세요')}</p>}
       </div>
-      {ok && (
+      {end && (
         <div className="foot">
-          <div className="ex-fb ok">
-            <b>정답이에요!</b>
-            <small lang={langTag(c.lang)}>{answer} = {ansMean}</small>
-            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => onDone(true)}>다음</Button>
+          <div className={`ex-fb ${ok ? 'ok' : 'no'}`}>
+            <div className="ex-note">
+<b>{ok ? tt('정답이에요! {when} 다시 보여 드려요', { when: practice ? tt('3일 뒤에') : when(days) }) : tt('괜찮아요! 5분 뒤에 다시 보여 드려요')}</b>
+            <small lang={langTag(c.lang)}>{practice ? (ok ? tt('잘 기억할수록 다시 나오는 간격이 길어져요') : tt('헷갈린 문장은 금방 다시 나와서 바로 복습할 수 있어요')) : `${answer} = ${ansMean}`}</small>
+</div>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => onDone(ok || !!practice, hint)}>{tt('다음')}</Button>
           </div>
         </div>
       )}

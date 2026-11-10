@@ -1,3 +1,4 @@
+import { tt } from '../i18n';
 import { useStore } from '../store';
 import { todayCount } from '../lib/srs';
 import { useUi } from '../ui';
@@ -25,7 +26,7 @@ export function TabBar() {
             <Icon name={t.icon} />
             {t.id === 'saved' && n > 0 && <span className="badge">{n}</span>}
           </span>
-          {t.label}
+          {tt(t.label)}
         </button>
       ))}
     </nav>

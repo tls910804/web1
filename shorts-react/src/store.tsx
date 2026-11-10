@@ -1,3 +1,4 @@
+import { setUiLang } from './i18n';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { STORE_KEY } from './constants';
 import type { AppState } from './types';
@@ -72,6 +73,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   const [saveFailed, setSaveFailed] = useState(false);
   const stateRef = useRef(state);
   stateRef.current = state;
+  setUiLang(state.native); // 화면 문구는 내 언어를 따른다 (i18n.ts)
 
   const write = useCallback((s: AppState) => {
     try {

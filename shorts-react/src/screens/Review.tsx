@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { tt } from '../i18n';
 import { Button, IconButton } from '../components/Button';
 import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
@@ -35,15 +36,15 @@ export function Review() {
   const quit = () => {
     const doneN = rv.known.length + rv.again.length, left = rv.ids.length - rv.i;
     if (!doneN) { go('saved'); return; }
-    openDialog('복습을 그만할까요?', `지금까지 푼 ${doneN}개는 저장돼요. 남은 ${left}개는 다음에 다시 보여드릴게요.`, [
-      { label: '계속하기', kind: 'light' },
-      { label: '나가기', kind: 'dark', fn: () => { finishStreak(); go('saved'); } },
+    openDialog(tt('복습을 그만할까요?'), tt('지금까지 푼 {a}개는 저장돼요. 남은 {b}개는 다음에 다시 보여드릴게요.', { a: doneN, b: left }), [
+      { label: tt('계속하기'), kind: 'light' },
+      { label: tt('나가기'), kind: 'dark', fn: () => { finishStreak(); go('saved'); } },
     ]);
   };
 
   const top = (
     <div className="rv-top">
-        <IconButton label="복습 그만두기" style={{ width: 38, height: 38 }} onClick={quit}><Icon name="close" /></IconButton>
+        <IconButton label={tt('복습 그만두기')} style={{ width: 38, height: 38 }} onClick={quit}><Icon name="close" /></IconButton>
         <div className="bar"><div style={{ width: `${pct}%` }} /></div>
         <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--muted)' }}>{rv.i + 1} / {rv.ids.length}</span>
       </div>
@@ -53,7 +54,7 @@ export function Review() {
     return (
       <section className="screen rv-card">
         {top}
-        <Exercise key={`${item.id}-${rv.i}`} kind={ex} item={item} onDone={(ok) => answer(ok ? 'good' : 'again')} onSkip={() => answer('again')} />
+        <Exercise key={`${item.id}-${rv.i}`} kind={ex} item={item} onDone={(ok, hinted) => answer(ok ? (hinted ? 'hard' : 'good') : 'again')} onSkip={() => answer('again')} />
       </section>
     );
   }
@@ -63,7 +64,7 @@ export function Review() {
       {top}
       <div className="rv-body">
         <div className={`rcard${rv.shown ? ' back' : ''}`} onClick={() => rv.shown && setRv({ ...rv, shown: false })}>
-          <span className="rc-chip">{c.cat} · {lang(c.lang).name}{item.kind === 'w' ? (item.wi >= 0 ? ' · 단어' : ' · 표현') : ''}</span>
+          <span className="rc-chip">{tt(c.cat)} · {lang(c.lang).name}{item.kind === 'w' ? ` · ${tt(item.wi >= 0 ? '단어' : '표현')}` : ''}</span>
           <div className="rc-main">
             {item.kind === 'w'
               ? <WordChips card={c} highlight={item.wi >= 0 ? [item.wi] : c.key} />
@@ -77,12 +78,12 @@ export function Review() {
                 )}
               </>
             ) : (
-              <p className="rc-hint">{item.kind === 'w' ? '파란 표시의 뜻을 먼저 떠올려 보세요' : '뜻을 먼저 떠올려 보세요'}</p>
+              <p className="rc-hint">{item.kind === 'w' ? tt('파란 표시의 뜻을 먼저 떠올려 보세요') : tt('뜻을 먼저 떠올려 보세요')}</p>
             )}
           </div>
           <div className="rc-rail" onClick={(e) => e.stopPropagation()}>
-            <button aria-label="발음 듣기" onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
-            <button aria-label="느리게 듣기" onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}><Icon name="clock" /></button>
+            <button aria-label={tt('발음 듣기')} onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
+            <button aria-label={tt('느리게 듣기')} onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}><Icon name="clock" /></button>
           </div>
         </div>
       </div>
@@ -90,14 +91,14 @@ export function Review() {
         {rv.shown ? (
           <>
             <div className="rates">
-              <FaceButton kind="again" label="다시 볼래요" sub="5분 뒤" onClick={() => answer('again')} />
-              <FaceButton kind="good" label="기억나요" sub={daysLabel(rateResult(state.mode, item, 'good').days)} onClick={() => answer('good')} />
+              <FaceButton kind="again" label={tt('다시 볼래요')} sub={tt('5분 뒤')} onClick={() => answer('again')} />
+              <FaceButton kind="good" label={tt('기억나요')} sub={daysLabel(rateResult(state.mode, item, 'good').days)} onClick={() => answer('good')} />
             </div>
           </>
         ) : (
           <>
-            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => setRv({ ...rv, shown: true })}>정답 보기</Button>
-            <Button kind="link" style={{ marginTop: -6 }} onClick={() => answer('again')}>건너뛰기</Button>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => setRv({ ...rv, shown: true })}>{tt('정답 보기')}</Button>
+            <Button kind="link" style={{ marginTop: -6 }} onClick={() => answer('again')}>{tt('건너뛰기')}</Button>
           </>
         )}
       </div>
@@ -154,41 +155,41 @@ export function ReviewDone() {
       <div className="rd-page">
         <div className="rd-head">
           <div className="ok"><Icon name="check" style={{ width: 28, height: 28, stroke: '#fff', strokeWidth: 2.5 }} /></div>
-          <h1>오늘 복습 끝!</h1>
-          <p>{total}개 중 {rv.known.length}개를 알았어요.</p>
+          <h1>{tt('오늘 복습 끝!')}</h1>
+          <p>{tt('{n}개 중 {k}개를 알았어요.', { n: total, k: rv.known.length })}</p>
         </div>
         <div className="stats">
-          <div><span>알았어요</span><b>{rv.known.length}</b></div>
-          <div><span>이번 주 복습</span><b>{week}</b></div>
-          <div className="hi"><span>오래 기억해요</span><b>{state.saved.filter(mastered).length}</b></div>
+          <div><span>{tt('알았어요')}</span><b>{rv.known.length}</b></div>
+          <div><span>{tt('이번 주 복습')}</span><b>{week}</b></div>
+          <div className="hi"><span>{tt('오래 기억해요')}</span><b>{state.saved.filter(mastered).length}</b></div>
         </div>
         <div className="seg">
-          <button className={t === 'ok' ? 'on' : ''} onClick={() => setTab('ok')}>맞췄어요<small>{known.length}</small></button>
-          <button className={t === 'no' ? 'on' : ''} onClick={() => setTab('no')}>틀렸어요<small>{again.length}</small></button>
+          <button className={t === 'ok' ? 'on' : ''} onClick={() => setTab('ok')}>{tt('맞췄어요')}<small>{known.length}</small></button>
+          <button className={t === 'no' ? 'on' : ''} onClick={() => setTab('no')}>{tt('틀렸어요')}<small>{again.length}</small></button>
         </div>
         {t === 'ok' ? (
           <>
             {known.map((x) => row(x, daysLabel(daysTo(x))))}
-            <p className="rd-note">{known.length ? '잘 기억할수록 다시 나오는 간격이 길어져요' : '이번에는 맞춘 문장이 없어요'}</p>
+            <p className="rd-note">{known.length ? tt('잘 기억할수록 다시 나오는 간격이 길어져요') : tt('이번에는 맞춘 문장이 없어요')}</p>
           </>
         ) : (
           <>
-            <RetryBar label="5분 뒤 다시 보여드려요" items={waiting} now={now} />
-            {again.map((x) => row(x, x.due > now ? '5분 뒤' : '지금'))}
-            <p className="rd-note">{again.length ? '바로 이어서 복습하면 기억이 더 오래가요' : '모두 기억했어요!'}</p>
+            <RetryBar label={tt('5분 뒤 다시 보여드려요')} items={waiting} now={now} />
+            {again.map((x) => row(x, x.due > now ? tt('5분 뒤') : tt('지금')))}
+            <p className="rd-note">{again.length ? tt('바로 이어서 복습하면 기억이 더 오래가요') : tt('모두 기억했어요!')}</p>
           </>
         )}
       </div>
       <div className="foot">
         {t === 'no' && again.length ? (
           <>
-            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={retryNow}>지금 바로 다시 보기</Button>
-            <Button kind="link" style={{ marginTop: -13 }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={retryNow}>{tt('지금 바로 다시 보기')}</Button>
+            <Button kind="link" style={{ marginTop: -13 }} onClick={() => go('saved')}>{tt('배울래요로 돌아가기')}</Button>
           </>
         ) : (
           <>
-            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => go('saved')}>배울래요로 돌아가기</Button>
-            <Button kind="link" style={{ marginTop: -13 }} disabled={!again.length} onClick={retryNow}>틀린 것 지금 다시 보기</Button>
+            <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => go('saved')}>{tt('배울래요로 돌아가기')}</Button>
+            <Button kind="link" style={{ marginTop: -13 }} disabled={!again.length} onClick={retryNow}>{tt('틀린 것 지금 다시 보기')}</Button>
           </>
         )}
       </div>

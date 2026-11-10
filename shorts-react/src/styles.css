@@ -341,9 +341,17 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .det-s{font-size:22px;font-weight:700;line-height:1.35}
 .det-k{font-size:15px;color:var(--muted);margin:6px 0 12px}
 .det-act{display:flex;gap:8px;margin-bottom:12px}
-.det-rows>div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
-.det-rows span{color:var(--muted)}
-.det-memo{width:100%;margin:12px 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px}
+.det-expr{margin:0 0 14px}
+.det-act .chip{display:inline-flex;align-items:center;gap:6px;padding:9px 14px 9px 12px;border:0;background:var(--soft);color:var(--ink);font-size:14px;font-weight:700}
+.det-act .chip svg{width:18px;height:18px}
+.det-tiles{display:flex;gap:8px;margin-bottom:14px}
+.det-tile{flex:1;display:flex;flex-direction:column;gap:4px;padding:14px;border-radius:14px;background:var(--soft)}
+.det-tile b{font-size:16px;font-weight:700;color:var(--ink)}
+.det-tile span{font-size:12px;color:var(--muted)}
+.det-tile.hi{background:var(--blue-soft)}.det-tile.hi b{color:var(--blue)}
+.det-memo-l{display:block;margin:0 0 12px}
+.det-memo-l>span{display:block;margin-bottom:8px;font-size:13px;color:var(--muted)}
+.det-memo{width:100%;margin:0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px}
 
 /* ===== 복습: 카드형 ===== */
 .rv-card .rv-body{justify-content:flex-start;left:16px;right:16px;top:64px;bottom:190px;overflow:visible}
@@ -444,10 +452,11 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ex-slow{padding:6px 14px;border-radius:999px;background:var(--soft);font-size:12px;font-weight:600;color:var(--muted)}
 .ex-input{width:100%;box-sizing:border-box;padding:14px 16px;border:2px solid var(--blue);border-radius:16px;background:var(--card);color:var(--ink);font:inherit;font-size:17px;resize:none}
 .ex-hint{margin:10px 4px 0;font-size:13px;color:var(--blue);font-weight:600}
-.ex-fb{display:flex;flex-direction:column;gap:4px;margin:0 -16px -7px;padding:20px 16px 20px;border-radius:24px 24px 0 0}
-.ex-fb.ok{background:var(--ok-soft);color:var(--ok)}
-.ex-fb.no{background:var(--warn-soft);color:var(--warn)}
-.ex-fb b{font-size:17px}.ex-fb small{font-size:13px;margin-bottom:12px}
+.ex-fb{display:flex;flex-direction:column;gap:12px}
+.ex-note{display:flex;flex-direction:column;gap:4px;padding:14px 16px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.ex-fb.ok .ex-note{background:var(--ok-soft);color:var(--ok)}
+.ex-fb.no .ex-note{background:var(--warn-soft);color:var(--warn)}
+.ex-note b{font-size:17px}.ex-note small{font-size:13px}
 
 /* 복습 직접 쓰기 · 정답 확인 · 완료 */
 .ex-blank input{width:6ch;min-width:3ch;max-width:100%;border:0;outline:0;background:transparent;font:inherit;font-size:22px;color:var(--blue);padding:0}
@@ -505,3 +514,52 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ob-saved .i{width:16px;height:16px;stroke:#5fd08a;stroke-width:2.5}
 .ob-foot.fin{color:var(--blue)}
 @media (prefers-reduced-motion:reduce){.ob-practice.g1 .w.key,.ob-tap::before{animation:none}}
+.ob-rv-head{position:absolute;top:16px;left:16px;right:16px}
+.ob-rv-head .title{margin:0 0 8px}.ob-rv-head .desc{margin:0}
+.rv-card.ob-rv .rv-body.ex-body{top:150px}
+.words.sync .w{opacity:.35;transition:opacity .15s,background .15s,color .15s}
+.words.sync .w.said{opacity:1}
+.words.sync .w.now{opacity:1;background:var(--blue);color:#fff;box-shadow:none}
+/* 전체 화면 쇼츠 카드: 영상을 꽉 채우고 자막을 겹친다 */
+.vfull{position:absolute;inset:0;overflow:hidden;background:#000}
+.vfull iframe{position:absolute;top:0;left:50%;height:100%;width:auto;min-width:100%;aspect-ratio:var(--ar,9/16);transform:translateX(-50%);border:0}
+.card.full .vsub{position:absolute;left:16px;right:72px;bottom:96px;padding:14px;border-radius:20px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.6));backdrop-filter:blur(2px);pointer-events:none}
+.card.full .vsub .words{pointer-events:auto;padding-bottom:4px}
+.card.full .vsub .w{background:rgba(255,255,255,.14);color:#fff}
+.card.full .vsub .w.key{background:rgba(91,140,255,.3);color:#fff;box-shadow:inset 0 0 0 2px #8fb0ff}
+.card.full .vsub .words.sync .w.now{background:var(--blue);color:#fff;box-shadow:none}
+.card.full .vsub .tr{margin:8px 0 0;font-size:15px;color:rgba(255,255,255,.88)}
+.card.full .vsub .tr.hide{filter:blur(6px)}
+.card-body.vcard{padding:0;overflow:hidden;background:#000}
+.card.full .vsub{left:0;right:0;bottom:0;padding:72px 52px 16px 16px;border-radius:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,rgba(0,0,0,.5) 45%,transparent 100%);backdrop-filter:none}
+.card.full .vsub .words{gap:6px 5px}
+.card.full .vsub .w{font-size:15px;line-height:20px;min-height:28px;padding:4px 9px;border-radius:9px}
+.card.full .vsub .tr{font-size:13px;margin-top:6px}
+.on-video .acts .act svg{stroke:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
+.on-video .acts .act.on svg{fill:#fff}
+/* 정책에 맞춘 영상 카드: 플레이어는 16:9 그대로, 위에 아무것도 겹치지 않는다 */
+.vid{position:relative;aspect-ratio:16/9;margin:0 0 16px;border-radius:10px;overflow:hidden;background:#000;flex:none}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* 영상을 카드 위·좌·우 끝까지 붙이고, 아래 경계선으로 영상 영역을 구분한다 */
+.card-body.has-vid{justify-content:flex-start;padding-top:0;overflow:hidden}
+.card-body.has-vid .vid{margin:0 -51px 20px -19px;border-radius:0;border-bottom:1px solid var(--line)}
+/* 영상 카드 스크립트: 세 줄까지 채우고, 넘치면 오른쪽 다음 쪽으로 넘긴다 */
+.card-body.has-vid .words{display:block;position:relative;height:102px;columns:1;column-gap:24px;column-fill:auto;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;padding:0}
+.card-body.has-vid .words::-webkit-scrollbar{display:none}
+.card-body.has-vid .w{display:inline-block;margin:0 5px 4px 0;font-size:calc(18px * var(--fs));line-height:24px;min-height:30px;padding:3px 10px;border-radius:10px;white-space:nowrap;break-inside:avoid}
+.card-body.has-vid .tr{font-size:15px}
+.card-body.has-vid .expr b{font-size:15px}.card-body.has-vid .expr span{font-size:13px}
+/* 세로 쇼츠도 자르지 않는다: 영역 높이만 제한하고 유튜브 플레이어가 양옆을 검게 채운다 */
+.card-body.has-vid .vid{max-height:300px;aspect-ratio:auto;height:min(300px,calc((100vw - 32px) / var(--ar,1.7778)))}
+.card-body.has-vid .words{flex:none}.card-body.has-vid .vid{max-height:260px;height:min(260px,calc((100vw - 32px) / var(--ar,1.7778)))}
+.card-body.has-vid .vid{max-height:236px;height:min(236px,calc((100vw - 32px) / var(--ar,1.7778)))}.card-body.has-vid .tr{font-size:14px}
+/* 쇼츠 카드 자막도 세 줄씩 채우고 좌우로 넘긴다 */
+.card.full .vsub .words{display:block;position:relative;height:108px;columns:1;column-gap:24px;column-fill:auto;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;padding:0}
+.card.full .vsub .words::-webkit-scrollbar{display:none}
+.card.full .vsub .w{display:inline-block;margin:0 5px 8px 0;white-space:nowrap;break-inside:avoid}
+.card.full .vsub .words{height:120px}
+.card.full .vsub .words,.card-body.has-vid .words{orphans:1;widows:1}
+.words.paged{cursor:grab;user-select:none}.words.paged:active{cursor:grabbing}
+
+.item .vid{aspect-ratio:auto;margin:0 0 12px;height:260px}
+.rv-card .foot:has(.ex-fb){padding-bottom:28px}
