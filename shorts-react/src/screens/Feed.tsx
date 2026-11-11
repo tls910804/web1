@@ -73,7 +73,10 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   const { state, set } = useStore();
   const ui = useUi();
   const { findSaved, saveItem, toggleSave } = useActions();
-  const { cats, setCats, tab, setTab, index, setIndex, toast, speak, openSheet, closeLayer, selection } = ui;
+  const { cats, setCats, tab, setTab, toast, speak, openSheet, closeLayer, selection } = ui;
+
+  const [vIndex, setVIndex] = useState(0); // 쇼츠 탭은 둘러보기와 위치를 따로 둔다
+  const index = onlyVideo ? vIndex : ui.index, setIndex = onlyVideo ? setVIndex : ui.setIndex;
 
   const listRef = useRef<HTMLDivElement>(null);
   const lastTap = useRef(0);

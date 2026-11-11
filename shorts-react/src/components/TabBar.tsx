@@ -25,7 +25,7 @@ export function TabBar() {
         <button key={t.id} className={`tab${screen === t.id ? ' on' : ''}`} onClick={() => go(t.id)}>
           <span className="ico">
             <Icon name={t.icon} />
-            {t.id === 'saved' && n > 0 && <span className="badge">{n}</span>}
+            {t.id === 'saved' && n > 0 && <span className="badge" key={n}>{n}</span>}
           </span>
           {tt(t.label)}
         </button>

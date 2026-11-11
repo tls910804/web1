@@ -563,3 +563,24 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 
 .item .vid{aspect-ratio:auto;margin:0 0 12px;height:260px}
 .rv-card .foot:has(.ex-fb){padding-bottom:28px}
+
+/* 손맛: 누를 때 살짝 눌리고, 저장·정답 순간에 작게 튄다 */
+.btn,.chip,.tab,.ex-pill,.auto-chip{transition:transform .12s ease}
+.btn:active:not(:disabled),.chip:active,.ex-pill:active,.auto-chip:active{transform:scale(.97)}
+.tab:active .ico{transform:scale(.9)}.tab .ico{transition:transform .12s ease}
+.badge{animation:bump .35s cubic-bezier(.3,1.6,.5,1)}
+.ex-blank.ok{animation:bump .35s cubic-bezier(.3,1.6,.5,1)}
+.ex-blank.no{animation:shake .32s ease}
+@keyframes shake{20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+.rd-head .ok{animation:bump .5s cubic-bezier(.3,1.6,.5,1)}
+.ex-note{animation:rise .3s cubic-bezier(.2,.8,.2,1) both}
+@media (prefers-reduced-motion:reduce){.badge,.ex-blank.ok,.ex-blank.no,.rd-head .ok,.ex-note{animation:none}.btn,.chip,.tab,.ex-pill,.auto-chip,.tab .ico{transition:none}}
+/* 작은 화면(아이폰 SE 등): 카드 안 내용이 잘리지 않게 줄인다 */
+@media (max-height:620px){
+  .card-body{bottom:108px;padding-top:16px;padding-bottom:14px}.acts{bottom:124px}.peek{display:none}
+  .card .w{font-size:calc(20px * var(--fs));min-height:36px}.card .divider{margin:10px 0}
+  .card-body:not(.has-vid):not(.vcard){overflow-y:auto;scrollbar-width:none}
+  .card-body.has-vid .vid{height:132px;max-height:132px;margin-bottom:12px}.card-body.has-vid .words{height:68px}
+  .card-body.has-vid .divider,.card-body.has-vid .expr{display:none}.acts{gap:4px}
+}
+.empty-state p,.empty{text-wrap:balance}

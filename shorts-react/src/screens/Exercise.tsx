@@ -74,7 +74,8 @@ export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKin
   const ansMean = item.kind === 'w' ? wordInfo(c, item.wi, state.native).mean : trOf(c.mean, state.native);
   const [text, setText] = useState('');
   const [hint, setHint] = useState(false);
-  const [phase, setPhase] = useState<'ask' | 'ok' | 'no'>('ask');
+  const [phase, setPhase0] = useState<'ask' | 'ok' | 'no'>('ask');
+  const setPhase = (p: 'ok' | 'no') => { navigator.vibrate?.(p === 'ok' ? 12 : [20, 40, 20]); setPhase0(p); };
   const [res, setRes] = useState<boolean | null>(null);
   const [lastMiss, setLastMiss] = useState<Miss | null>(null);
   const input = useRef<HTMLInputElement>(null);
