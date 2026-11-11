@@ -21,6 +21,7 @@ export const THEMES: Record<ThemeKey, string> = { light: '라이트', dark: '다
 export const ICON = {
   speak: '<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>',
   check: '<path d="M5 12l5 5 9-10"/>',
+  play: '<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M10 9l5 3-5 3z"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',
   plus: '<path d="M12 5v14M5 12h14"/>',
   user: '<circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/>',

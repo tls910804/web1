@@ -68,7 +68,8 @@ export function VideoBlock({ video, active, onSpoken }: { video: NonNullable<Car
   return <div className={video.full ? 'vfull' : 'vid'} style={video.ratio ? { '--ar': video.ratio } as React.CSSProperties : undefined}><div ref={ref} /></div>;
 }
 
-export function Feed() {
+/** onlyVideo: 쇼츠 탭 — 같은 카드 화면에서 영상 카드만 보여준다 */
+export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   const { state, set } = useStore();
   const ui = useUi();
   const { findSaved, saveItem, toggleSave } = useActions();
@@ -84,7 +85,7 @@ export function Feed() {
   const activeCats = useMemo(() => cats.filter((c) => catList.includes(c)), [cats, catList]);
   const tabs = useMemo(() => tabList(state), [state]);
   const activeTab = tabs.includes(tab) ? tab : '';
-  const cards = useMemo(() => feedCards(state, activeCats, activeTab), [state, activeCats, activeTab]);
+  const cards = useMemo(() => { const l = feedCards(state, onlyVideo ? [] : activeCats, onlyVideo ? '' : activeTab); return onlyVideo ? l.filter((c) => c.video) : l; }, [state, activeCats, activeTab, onlyVideo]);
   const cur: Card | undefined = cards[Math.min(index, Math.max(cards.length - 1, 0))];
   const curId = cur?.id;
 
@@ -172,7 +173,7 @@ export function Feed() {
           ) : (
           <article className={`card${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className={`card-body${c.video ? ' has-vid' : ''}`} onClick={(e) => { if (state.hideTr && (e.target as Element).closest('.tr,.expr')) e.currentTarget.querySelector('.tr')?.classList.toggle('hide'); }}>
-              {i === 0 && !state.tapped && <span className="hint">{tt('단어를 눌러 보세요')}</span>}
+              {i === 0 && !state.tapped && !onlyVideo && <span className="hint">{tt('단어를 눌러 보세요')}</span>}
               {c.video && <VideoBlock video={c.video} active={c.id === curId} onSpoken={onSpoken(c)} />}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
@@ -183,7 +184,7 @@ export function Feed() {
         ))}
       </div>
 
-      <div className="feed-top">
+      {!onlyVideo && <div className="feed-top">
         <div className="cats">
           <Chip on={!activeTab} onClick={() => { setTab(''); setIndex(0); }}>{tt('전체')}</Chip>
           {tabs.map((t) => <Chip key={t} on={activeTab === t} onClick={() => { setTab(t); setIndex(0); }}>{tt(t)}</Chip>)}
@@ -191,7 +192,7 @@ export function Feed() {
         <IconButton label={tt('필터')} extra="filter-btn" onClick={openFilter}>
           <Icon name="filter" />{(state.level !== '전체' || activeCats.length > 1) && <span className="dot" />}
         </IconButton>
-      </div>
+      </div>}
 
       <div className="feed-head">
         <button className={`auto-chip${state.auto ? ' on' : ''}`} onClick={() => openSheet(<AutoSheet />)}><Icon name="repeat" />{tt('자동재생')}</button>

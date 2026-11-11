@@ -5,14 +5,15 @@ import { useUi } from '../ui';
 import type { Screen } from '../types';
 import { Icon } from './Icon';
 
-const TABS: { id: Screen; label: string; icon: 'compass' | 'mark' | 'chart' | 'filter' }[] = [
+const TABS: { id: Screen; label: string; icon: 'compass' | 'play' | 'mark' | 'chart' | 'filter' }[] = [
   { id: 'feed', label: '둘러보기', icon: 'compass' },
+  { id: 'shorts', label: '쇼츠', icon: 'play' },
   { id: 'saved', label: '배울래요', icon: 'mark' },
   { id: 'stats', label: '기록', icon: 'chart' },
   { id: 'settings', label: '설정', icon: 'filter' },
 ];
 
-export const TAB_SCREENS: Screen[] = ['feed', 'saved', 'stats', 'settings'];
+export const TAB_SCREENS: Screen[] = ['feed', 'shorts', 'saved', 'stats', 'settings'];
 
 export function TabBar() {
   const { screen, go } = useUi();

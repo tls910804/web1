@@ -116,6 +116,7 @@ export function App() {
       {screen === 'splash' && <Splash />}
       {screen === 'onboarding' && <Onboarding />}
       {screen === 'feed' && <Feed />}
+      {screen === 'shorts' && <Feed onlyVideo />}
       {screen === 'saved' && <Saved />}
       {screen === 'stats' && <Stats />}
       {screen === 'settings' && <Settings />}
