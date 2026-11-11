@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { tt } from '../i18n';
 import { Button } from '../components/Button';
 import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
-import { CARDS } from '../data';
+import { CARDS, LANGS } from '../data';
 import { WordChips } from '../components/WordChips';
 import { lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
@@ -24,11 +24,17 @@ const RECAP = [
   ['chart', tt('기록으로 확인'), tt('연속 일수와 진행률이 기록 탭에 쌓여요')],
 ] as const;
 
-/** 첫 실행: 내 언어 → 배울 언어 → 저장 체험 → 복습 이해 → 복습 체험 → 준비 완료 (3~5단계는 건너뛸 수 있다) */
+/** 첫 실행: (내 언어는 기기 언어로 자동, 1단계는 바꿀 때만) 배울 언어 → 저장 체험 → 복습 이해 → 복습 체험 → 준비 완료 (3~5단계는 건너뛸 수 있다) */
 export function Onboarding() {
   const { state, set } = useStore();
   const { go, setIndex, speak } = useUi();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(2);
+  // 설명 언어는 묻지 않고 기기 언어로 맞춘다 (지원하지 않는 언어면 기본값 유지)
+  useEffect(() => {
+    const code = navigator.language.slice(0, 2);
+    if (code !== state.native && LANGS.some((l) => l.code === code)) set((s) => ({ native: code, learn: s.learn.filter((c) => c !== code) }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const [tapped, setTapped] = useState(false);
   const [saved, setSaved] = useState(false);
   const n = state.learn.length;
@@ -69,7 +75,7 @@ export function Onboarding() {
     return (
       <section className="screen rv-card ob-rv">
         <div className="ob-rv-head">
-          <div className="ob-n">4 / 4</div>
+          <div className="ob-n">3 / 3</div>
           <h2 className="title">{tt('저장한 표현, 기억나나요?')}</h2>
           <p className="desc">{tt('복습은 빈칸을 직접 써 보는 방식이에요.')}</p>
         </div>
@@ -81,7 +87,7 @@ export function Onboarding() {
   return (
     <section className="screen">
       <div className="page" style={{ paddingTop: 16, paddingBottom: 190 }}>
-        {step <= 5 && <div className="ob-n">{Math.min(step, 4)} / 4</div>}
+        {step >= 2 && step <= 5 && <div className="ob-n">{Math.min(step - 1, 3)} / 3</div>}
         {step === 1 && (
           <>
             <h2 className="title">{tt('어떤 언어로 설명해 드릴까요?')}</h2>
@@ -101,6 +107,7 @@ export function Onboarding() {
                 <p className="tr">{tr}</p>
               </div>
             )}
+            <button className="lnk ob-lang" onClick={() => setStep(1)}>{tt('설명 언어: {l} · 바꾸기', { l: lang(state.native).name })}</button>
           </>
         )}
         {step === 3 && (

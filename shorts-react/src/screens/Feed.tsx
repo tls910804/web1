@@ -4,7 +4,7 @@ import { Button, Chip, IconButton } from '../components/Button';
 import { Icon } from '../components/Icon';
 import { Expr } from '../components/Rows';
 import { WordChips } from '../components/WordChips';
-import { allCats, feedCards, allCards, tabList } from '../lib/feed';
+import { allCats, feedCards, allCards, tabList, videoCards } from '../lib/feed';
 import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
 import { lang, langTag, sentence, trOf } from '../lib/text';
@@ -88,7 +88,7 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   const activeCats = useMemo(() => cats.filter((c) => catList.includes(c)), [cats, catList]);
   const tabs = useMemo(() => tabList(state), [state]);
   const activeTab = tabs.includes(tab) ? tab : '';
-  const cards = useMemo(() => { const l = feedCards(state, onlyVideo ? [] : activeCats, onlyVideo ? '' : activeTab); return onlyVideo ? l.filter((c) => c.video) : l; }, [state, activeCats, activeTab, onlyVideo]);
+  const cards = useMemo(() => (onlyVideo ? videoCards(state) : feedCards(state, activeCats, activeTab)), [state, activeCats, activeTab, onlyVideo]);
   const cur: Card | undefined = cards[Math.min(index, Math.max(cards.length - 1, 0))];
   const curId = cur?.id;
 
@@ -153,7 +153,7 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   const shown = Math.min(index, Math.max(cards.length - 1, 0));
 
   return (
-    <section className={`screen glow${cur?.video?.full ? ' on-video' : ''}`}>
+    <section className={`screen glow${cur?.video?.full ? ' on-video' : ''}${onlyVideo ? ' shorts' : ''}`}>
       {index < cards.length - 1 && <div className="peek"><span>{tt('다음 문장')}</span></div>}
       <div className="feed" ref={listRef} onScroll={onScroll} onClick={onListClick}>
         {!cards.length ? (
@@ -178,6 +178,7 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
             <div className={`card-body${c.video ? ' has-vid' : ''}`} onClick={(e) => { if (state.hideTr && (e.target as Element).closest('.tr,.expr')) e.currentTarget.querySelector('.tr')?.classList.toggle('hide'); }}>
               {i === 0 && !state.tapped && !onlyVideo && <span className="hint">{tt('단어를 눌러 보세요')}</span>}
               {c.video && <VideoBlock video={c.video} active={c.id === curId} onSpoken={onSpoken(c)} />}
+              {onlyVideo && <div className="sh-meta"><span>{tt(c.cat)} · {lang(c.lang).name}</span><span>{i + 1} / {cards.length}</span></div>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}

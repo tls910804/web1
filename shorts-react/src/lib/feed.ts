@@ -1,4 +1,5 @@
 import { CARDS } from '../data';
+import VIDEOS from '../data/videos.json';
 import type { AppState, Card } from '../types';
 import { levelOf } from './text';
 
@@ -33,9 +34,9 @@ const VIDEO_CARD: Card = {
   video: { id: 'Gf-7s8F85Vg', start: 0, end: 11, ratio: 9 / 16, times: [0.44, 0.69, 0.82, 1.19, 1.81, 2.19, 2.6, 2.69, 2.81, 3.06, 3.31, 3.44, 3.69, 3.94, 6.19, 6.31, 6.56, 6.69, 6.94, 7.06, 7.32, 7.44, 8.44] },
 };
 
-export function feedCards(s: AppState, cats: string[], tab = '') {
-  const list = allCards(s).filter((c) => matches(s, c, s.level, cats, tab));
-  if (s.learn.includes(VIDEO_CARD.lang) && !s.known.includes(VIDEO_CARD.id) && (!cats.length || cats.includes(VIDEO_CARD.cat)) && (!tab || tabOf(VIDEO_CARD) === tab)) list.splice(Math.min(2, list.length), 0, VIDEO_CARD);
-  return list;
-}
+const VIDEO_CARDS: Card[] = [VIDEO_CARD, ...(VIDEOS as Card[])];
+
+export const feedCards = (s: AppState, cats: string[], tab = '') => allCards(s).filter((c) => matches(s, c, s.level, cats, tab));
+/** 쇼츠 탭: 영상 카드만. 둘러보기에는 섞지 않는다 */
+export const videoCards = (s: AppState) => VIDEO_CARDS.filter((v) => s.learn.includes(v.lang) && !s.known.includes(v.id));
 export const countFeed = (s: AppState, level: string, cats: string[], tab = '') => allCards(s).filter((c) => matches(s, c, level, cats, tab)).length;

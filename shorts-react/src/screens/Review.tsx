@@ -5,7 +5,7 @@ import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
 import { WordChips } from '../components/WordChips';
 import { DAY } from '../constants';
-import { daysLabel, mastered, rateResult } from '../lib/srs';
+import { daysLabel, mastered, nextDueText, rateResult } from '../lib/srs';
 import { useActions } from '../lib/useActions';
 import { dayKey, lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { Exercise, exKind } from './Exercise';
@@ -158,6 +158,12 @@ export function ReviewDone() {
           <h1>{tt('오늘 복습 끝!')}</h1>
           <p>{tt('{n}개 중 {k}개를 알았어요.', { n: total, k: rv.known.length })}</p>
         </div>
+        {state.streak > 0 && (
+          <div className="rd-streak">
+            <b className="n">{state.streak}</b>
+            <div><b>{state.streak > 1 ? tt('{n}일 연속으로 복습했어요', { n: state.streak }) : tt('오늘 복습을 마쳤어요')}</b><small>{nextDueText(state)}</small></div>
+          </div>
+        )}
         <div className="stats">
           <div><span>{tt('알았어요')}</span><b>{rv.known.length}</b></div>
           <div><span>{tt('이번 주 복습')}</span><b>{week}</b></div>
