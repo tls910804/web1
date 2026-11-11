@@ -4,7 +4,7 @@ import { useStore } from './store';
 import { playAudio, stopAudio } from './lib/audio';
 import { hasVoice, say, speechOk } from './lib/speech';
 import { lang } from './lib/text';
-import type { DialogAction, ReviewSession, Screen, SubName } from './types';
+import type { DialogAction, ReviewSession, Screen, StudySession, SubName } from './types';
 
 type Layer =
   | { kind: 'sheet'; node: ReactNode }
@@ -50,6 +50,8 @@ interface Ui {
   setStatsRange: (r: 'week' | 'month') => void;
   rv: ReviewSession | null;
   setRv: (r: ReviewSession | null) => void;
+  study: StudySession | null;
+  setStudy: (s: StudySession | null) => void;
   streakWas: number;
   setStreakWas: (n: number) => void;
 }
@@ -71,6 +73,7 @@ export function UiProvider({ children }: { children: ReactNode }) {
   const [savedFilter, setSavedFilter] = useState<'learning' | 'learned'>('learning');
   const [statsRange, setStatsRange] = useState<'week' | 'month'>('week');
   const [rv, setRv] = useState<ReviewSession | null>(null);
+  const [study, setStudy] = useState<StudySession | null>(null);
   const [streakWas, setStreakWas] = useState(0);
   const voiceWarned = useRef<Record<string, boolean>>({});
   const toastId = useRef(0);
@@ -134,8 +137,8 @@ export function UiProvider({ children }: { children: ReactNode }) {
     screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, setSelection,
     toast, toastNode, dismissToast, speak,
     cats, setCats, tab, setTab, index, setIndex, savedTab, setSavedTab, savedFilter, setSavedFilter,
-    statsRange, setStatsRange, rv, setRv, streakWas, setStreakWas,
-  }), [screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, toast, toastNode, dismissToast, speak,
+    statsRange, setStatsRange, rv, setRv, study, setStudy, streakWas, setStreakWas,
+  }), [study, screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, toast, toastNode, dismissToast, speak,
     cats, tab, index, savedTab, savedFilter, statsRange, rv, streakWas]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

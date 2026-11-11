@@ -65,11 +65,14 @@ export interface AppState {
 
 export type Screen =
   | 'splash' | 'onboarding' | 'feed' | 'shorts' | 'saved' | 'stats' | 'settings'
-  | 'sub' | 'review' | 'review-done' | 'add' | 'streak';
+  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study';
 
 export type SubName = 'langs' | 'learn' | 'review-mode' | 'notify' | 'display' | 'data' | 'account';
 
 export type Rate = 'again' | 'hard' | 'good' | 'easy';
+
+/** 자동 공부: 둘러보기에서 이어지는 문장들(영상 제외)과, 끝나고 돌아갈 둘러보기 순서 */
+export interface StudySession { queue: Card[]; feedIds: string[] }
 
 export interface ReviewSession { ids: string[]; i: number; shown: boolean; known: string[]; again: string[] }
 

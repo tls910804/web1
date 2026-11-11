@@ -149,8 +149,11 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   );
 
   const hasCards = allCards(state).length > 0;
+  const startStudy = (from: number) => {
+    ui.setStudy({ queue: cards.slice(from).filter((c) => !c.video), feedIds: cards.map((c) => c.id) });
+    ui.go('study');
+  };
   const saved = !!(cur && findSaved('s', cur));
-  const shown = Math.min(index, Math.max(cards.length - 1, 0));
 
   return (
     <section className={`screen glow${cur?.video?.full ? ' on-video' : ''}${onlyVideo ? ' shorts' : ''}`}>
@@ -176,12 +179,17 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
           ) : (
           <article className={`card${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className={`card-body${c.video ? ' has-vid' : ''}`} onClick={(e) => { if (state.hideTr && (e.target as Element).closest('.tr,.expr')) e.currentTarget.querySelector('.tr')?.classList.toggle('hide'); }}>
+              {!onlyVideo && <div className="band">
+                <span>{tt(c.cat)} · {lang(c.lang).name} · {i + 1} / {cards.length}</span>
+                <button className={`auto-chip${state.auto ? ' on' : ''}`} aria-label={tt('자동재생')} onClick={() => openSheet(<AutoSheet />)}><Icon name="repeat" />{tt('자동')}</button>
+              </div>}
               {i === 0 && !state.tapped && !onlyVideo && <span className="hint">{tt('단어를 눌러 보세요')}</span>}
               {c.video && <VideoBlock video={c.video} active={c.id === curId} onSpoken={onSpoken(c)} />}
               {onlyVideo && <div className="sh-meta"><span>{tt(c.cat)} · {lang(c.lang).name}</span><span>{i + 1} / {cards.length}</span></div>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
+              {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i>{tt('10문장 공부하기')}</button>}
             </div>
           </article>
           )
@@ -197,13 +205,6 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
           <Icon name="filter" />{(state.level !== '전체' || activeCats.length > 1) && <span className="dot" />}
         </IconButton>
       </div>}
-
-      <div className="feed-head">
-        <button className={`auto-chip${state.auto ? ' on' : ''}`} onClick={() => openSheet(<AutoSheet />)}><Icon name="repeat" />{tt('자동재생')}</button>
-        <div className="info">
-          {cur && <>{tt(cur.cat)}<span className="pill">{lang(cur.lang).name}</span><span className="cnt">{shown + 1} / {cards.length}</span></>}
-        </div>
-      </div>
 
       {cards.length > 0 && (
         <div className="acts">
