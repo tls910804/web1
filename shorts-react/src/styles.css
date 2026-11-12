@@ -435,7 +435,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 :root{--ok:#1f8a4c;--ok-soft:#e3f5e9}
 :root[data-theme="dark"]{--ok:#5fd08a;--ok-soft:rgba(95,208,138,.14)}
 .rv-card .rv-body.ex-body{bottom:120px;overflow-y:auto}
-.rv-card .rcard.ex{height:auto;max-height:none;padding:23px}
+.rv-card .rcard.ex{flex:none;height:auto;max-height:none;padding:23px}
 .ex .rc-tr{margin:0;font-size:15px;color:var(--muted)}
 .ex-cap{margin:22px 4px 10px;font-size:13px;color:var(--muted)}
 .ex-blank{display:inline-block;min-width:90px;padding:0 10px;border-radius:10px;border:2px dashed var(--blue);background:var(--blue-soft);color:var(--ink)}
@@ -709,3 +709,4 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .st-cnt{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:38px;text-align:right}
 .st-cnt b{font-weight:600;color:var(--ink)}
 @media (prefers-reduced-motion:reduce){.st-dots i{transition:none;animation:none}}
+.rv-card:not(:has(.foot)) .rv-body.ex-body{bottom:12px}
