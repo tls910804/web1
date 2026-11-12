@@ -21,6 +21,7 @@ import { Splash } from './screens/Splash';
 import { Stats } from './screens/Stats';
 import { StreakBroken } from './screens/Streak';
 import { Study } from './screens/Study';
+import { Call } from './screens/Call';
 import { Sub } from './screens/Sub';
 
 export function App() {
@@ -127,6 +128,7 @@ export function App() {
       {screen === 'add' && <Add />}
       {screen === 'streak' && <StreakBroken />}
       {screen === 'study' && <Study />}
+      {screen === 'call' && <Call />}
 
       {!online && (
         <div className="net"><Icon name="offline" /><span><b>{tt('오프라인이에요')}</b>{tt('저장한 문장과 복습은 그대로 쓸 수 있어요')}</span></div>
