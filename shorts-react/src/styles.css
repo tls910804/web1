@@ -711,7 +711,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 @media (prefers-reduced-motion:reduce){.st-dots i{transition:none;animation:none}}
 .rv-card:not(:has(.foot)) .rv-body.ex-body{bottom:12px}
 /* AI 전화 */
-.app:has(.screen.call-home),.app:has(.screen.call-live){
+.app:has(.screen.call-home),.app:has(.screen.call-live),.app:has(.screen.call-sum){
   --ink:#fff; --muted:#9aa3b8; --sub:#c3c9d6; --icon:#aeb6c8; --bg:#0e1527; --card:#1b2440;
   --line:rgba(255,255,255,.12); --soft:rgba(255,255,255,.08); --btn:#fff; --btn-ink:#000; --shadow-card:none; color:var(--ink);
 }
@@ -885,3 +885,164 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .cl-me .pill,.cl-picks button{background:rgba(255,255,255,.07)}
 .cl-ask{border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.75)}.cl-ask svg{stroke:rgba(255,255,255,.75)}
 .cl-picks button{border-color:rgba(255,255,255,.18)}
+.app:has(.screen.call-home) .tabs{background:transparent;border-top:0;box-shadow:none}
+/* 써 볼 표현: 화면 가운데에 세로로 */
+.call-home .ch-mission{position:absolute;left:24px;right:24px;top:47%;transform:translateY(-50%);gap:12px}
+.call-home .ch-mission>div{flex-direction:column;align-items:center;gap:8px}
+.call-home .ch-mission i{font-size:15px;padding:8px 18px}
+/* 통화 결과 · 대화 다시 보기 (어두운 톤) */
+.app:has(.screen.call-sum){--bg:#222427;--card:#2c2f33}
+.call-sum{background:radial-gradient(60% 40% at 15% 55%,rgba(70,72,58,.3),transparent 70%),radial-gradient(55% 45% at 90% 85%,rgba(40,52,80,.4),transparent 70%),linear-gradient(160deg,#3a3a3a 0%,#262728 40%,#232629 100%);z-index:8;color:#fff}
+.cs-top{position:absolute;top:10px;left:12px;right:12px;height:52px;display:flex;align-items:center;justify-content:space-between}
+.cs-top .x{width:44px;height:44px;display:flex;align-items:center;justify-content:center}.cs-top .x svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round}
+.cs-top b{font-size:15px;font-weight:500}.cs-top>span{width:44px}
+.call-sum .cs-body{position:absolute;top:64px;left:0;right:0;bottom:150px;inset:64px 0 150px;overflow-y:auto;padding:12px 20px 20px;display:flex;flex-direction:column;align-items:stretch;gap:12px;scrollbar-width:none}
+.cs-av{align-self:center;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600}
+.call-sum h2{margin:4px 0 0;font-size:19px;font-weight:700;text-align:center}
+.call-sum .cs-meta{margin:-6px 0 6px;font-size:13px;color:rgba(255,255,255,.5);text-align:center}
+.cs-stats{display:flex;gap:8px}
+.cs-stats>div{flex:1;padding:14px 8px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:center;gap:2px}
+.cs-stats b{font-size:21px;font-weight:600;font-variant-numeric:tabular-nums}.cs-stats small{font-size:11.5px;color:rgba(255,255,255,.55)}
+.cs-card{padding:16px;border-radius:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.cs-card .hd{align-self:stretch;display:flex;justify-content:space-between;align-items:center}.cs-card .hd b{font-size:14px}.cs-card .hd span{font-size:14px;font-weight:600;color:#7fa2ff}
+.cs-card .cs-mission{justify-content:flex-start;margin:0}
+.cs-card .note{font-size:12px;color:rgba(255,255,255,.5)}
+.cs-card .said{margin:0;font-size:14.5px;color:rgba(255,255,255,.5)}
+.cs-card .better{margin:0;display:flex;align-items:center;gap:6px;font-size:14.5px;font-weight:500;color:#5fd08a}.cs-card .better svg{width:14px;height:14px;stroke:#5fd08a;stroke-width:2.6}
+.cs-save{margin-top:2px;padding:7px 12px;border-radius:14px;background:rgba(255,255,255,.1);font-size:12.5px;font-weight:500;color:#fff}.cs-save.on{background:rgba(76,125,255,.25);color:#b9cbff}
+.call-sum .cs-mission i{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#c3c9d6}
+.call-sum .cs-mission i.on{background:var(--call);border-color:var(--call);color:#fff}
+.cs-foot{position:absolute;left:20px;right:20px;bottom:max(20px, env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;gap:10px}
+.cs-foot .two{align-self:stretch;display:flex;gap:10px}
+.cs-foot .two button,.cs-foot .full{flex:1;height:52px;border-radius:16px;font-size:15px;font-weight:600;color:#fff}
+.cs-foot .full{align-self:stretch;flex:none}
+.cs-foot .ghost{background:rgba(255,255,255,.1)}.cs-foot .blue{background:#3d6df2}
+.cs-foot .lnk{font-size:14px;color:rgba(255,255,255,.5);padding:4px 12px}
+.cs-tabs{position:absolute;top:66px;left:20px;right:20px;display:flex;gap:4px;padding:4px;border-radius:12px;background:rgba(255,255,255,.07)}
+.cs-tabs button{flex:1;padding:7px 0;border-radius:9px;font-size:13px;color:rgba(255,255,255,.6)}.cs-tabs button.on{background:rgba(255,255,255,.14);color:#fff;font-weight:700}
+.call-sum .cs-body.talk{top:116px;inset:116px 0 96px;gap:14px}
+.cs-play{flex:none;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;align-self:center}.cs-play svg{width:9px;height:9px;fill:#fff}
+.cs-tag{font-size:11.5px;padding:3px 8px;border-radius:10px;background:rgba(245,194,107,.16);color:#f5c26b}.cs-tag.good{background:rgba(95,208,138,.16);color:#5fd08a}
+.call-sum .cl-me{align-items:flex-end;display:flex;flex-direction:column;gap:6px;align-self:flex-end}
+.cs-empty{margin:40px 0;text-align:center;font-size:13px;color:rgba(255,255,255,.5)}
+.cs-foot .two button,.cs-foot .full,.cs-tabs button{display:flex;align-items:center;justify-content:center;text-align:center}
+.cl-end{position:absolute;left:24px;bottom:max(46px, calc(env(safe-area-inset-bottom) + 20px));z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.6);font-size:11.5px}
+.cl-end svg{width:52px;height:52px;padding:15px;box-sizing:border-box;border-radius:50%;background:#e5484d;stroke:#fff;transform:rotate(135deg)}
+.cl-end:active svg{transform:rotate(135deg) scale(.94)}
+/* 상황 고르기 시트 */
+.ch-sheet{background:rgba(0,0,0,.5);backdrop-filter:blur(2px)}
+.ch-sheet .in.pick{background:#2a2c30;border-top:1px solid rgba(255,255,255,.08);border-radius:26px 26px 0 0;padding:10px 16px max(24px, env(safe-area-inset-bottom));gap:14px}
+.ch-sheet .grab{align-self:center;width:38px;height:4px;border-radius:2px;background:rgba(255,255,255,.2)}
+.ch-sheet .ttl{display:flex;flex-direction:column;gap:3px;padding:0 4px}
+.ch-sheet .ttl b{font-size:18px;color:#fff}.ch-sheet .ttl small{font-size:12.5px;color:rgba(255,255,255,.5)}
+.ch-sheet .grp{display:flex;flex-direction:column;gap:6px}
+.ch-sheet .gl{padding:0 4px;font-size:12px;color:rgba(255,255,255,.45)}
+.ch-sheet .it{display:flex;align-items:center;gap:12px;padding:12px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);text-align:left}
+.ch-sheet .it.on{background:rgba(76,125,255,.14);border-color:rgba(127,162,255,.5)}
+.ch-sheet .it .ic{flex:none;width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+.ch-sheet .it .ic svg{width:20px;height:20px;fill:none;stroke:#e6e8eb;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ch-sheet .it .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.ch-sheet .it .tx b{font-size:15px;font-weight:600;color:#fff}
+.ch-sheet .it .tx small{font-size:12px;color:rgba(255,255,255,.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-sheet .it .ck{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center}
+.ch-sheet .it.on .ck{background:var(--call);border-color:var(--call)}.ch-sheet .it .ck svg{width:12px;height:12px;stroke:#fff;stroke-width:3}
+/* 통화 설정 시트 */
+.ch-sheet .co-list{display:flex;flex-direction:column;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06);overflow:hidden}
+.ch-sheet .co{display:flex;flex-direction:row;align-items:center;gap:12px;padding:14px;border-radius:0;background:none;border:0;border-bottom:1px solid rgba(255,255,255,.06);text-align:left;width:100%}
+.ch-sheet .co:last-child{border-bottom:0}
+.ch-sheet .co .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.ch-sheet .co .tx b{font-size:15px;font-weight:600;color:#fff}.ch-sheet .co .tx small{font-size:12px;color:rgba(255,255,255,.5)}
+.ch-sheet .co-sw{flex:none;position:relative;display:block;width:44px;height:26px;border-radius:13px;background:rgba(255,255,255,.18);transition:background .2s}
+.ch-sheet .co-sw::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .2s}
+.ch-sheet .co-sw.on{background:var(--call)}.ch-sheet .co-sw.on::after{transform:translateX(18px)}
+.ch-sheet .co-seg{flex:none;display:flex;flex-direction:row;padding:3px;border-radius:10px;background:rgba(255,255,255,.08)}
+.ch-sheet .co-seg button{display:block;padding:6px 12px;border-radius:8px;border:0;background:none;font-size:13px;color:rgba(255,255,255,.6)}
+.ch-sheet .co-seg button.on{background:rgba(255,255,255,.16);color:#fff;font-weight:600}
+.ch-sheet .co.dim .tx{opacity:.55}
+.ch-sheet .co-soon{flex:none;padding:4px 9px;border-radius:9px;background:rgba(255,255,255,.08);font-size:11.5px;color:rgba(255,255,255,.55)}
+
+/* 마이 탭 */
+.my .profile{border-radius:20px;margin-bottom:12px}
+.my-chev{display:flex;flex:none}
+.my-chev .i{width:18px;height:18px;stroke:var(--icon)}
+.my-pro{position:relative;overflow:hidden;background:#15171c;color:#fff;border-radius:24px;padding:20px;margin-bottom:12px}
+.my-pro::before{content:"";position:absolute;width:220px;height:220px;right:-50px;top:-110px;border-radius:50%;background:#c6ff4a;opacity:.3;filter:blur(60px);pointer-events:none}
+.my-pro .top{position:relative;display:flex;align-items:center;justify-content:space-between}
+.my-pro .lb{font:700 11px/1 var(--f-latin);letter-spacing:1.6px;color:#c6ff4a}
+.my-pro .pill{background:#c6ff4a;color:#15171c;font-size:11.5px;font-weight:700;padding:5px 10px;border-radius:999px}
+.my-pro h3{position:relative;margin:12px 0 16px;font-size:22px;line-height:30px;font-weight:700;letter-spacing:-.3px;color:#fff}
+.my-pro ul{position:relative;list-style:none;margin:0 0 20px;padding:0;display:grid;gap:9px}
+.my-pro li{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:#c9ccd3}
+.my-pro .ck{width:18px;height:18px;border-radius:50%;background:rgba(198,255,74,.18);display:flex;align-items:center;justify-content:center;flex:none}
+.my-pro .ck .i{width:11px;height:11px;stroke:#c6ff4a;stroke-width:3}
+.my-pro .bot{position:relative;display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)}
+.my-pro .price s{display:block;font-size:12px;color:rgba(201,204,211,.6);margin-bottom:2px}
+.my-pro .price b{font:700 22px/1 var(--f-latin);letter-spacing:-.4px}
+.my-pro .price small{font-size:12.5px;color:rgba(201,204,211,.8);margin-left:3px}
+.my-pro .bot button{height:46px;padding:0 22px;border-radius:23px;background:#c6ff4a;color:#15171c;font-size:14.5px;font-weight:700;border:0}
+.my-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}
+.my-card small{display:block;font-size:12px;color:var(--muted)}
+.my-use{display:flex;justify-content:space-between;align-items:center}
+.my-use b{font-size:15px}
+.my-use span{font-size:14px;font-weight:600;color:var(--blue)}
+.my-bar{height:8px;border-radius:4px;background:var(--track);margin:10px 0}
+.my-bar i{display:block;height:100%;border-radius:4px;background:var(--blue);transition:width .3s}
+.my-quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.my-quick button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;color:var(--ink)}
+.my-quick .top{display:flex;justify-content:space-between;align-items:center;width:100%;margin-bottom:10px}
+.my-quick .switch{width:40px;height:24px}
+.my-quick .switch::after{width:18px;height:18px}
+.my-quick .switch.on::after{transform:translateX(16px)}
+.my-quick b{font-size:14px}
+.my-quick small{font-size:12px;color:var(--muted);margin-top:1px}
+.my-ic{width:36px;height:36px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex:none}
+.my-ic .i{width:19px;height:19px;stroke:currentColor}
+.my-quick .my-ic{width:32px;height:32px;border-radius:10px}
+.my-card.list{padding:0;overflow:hidden}
+.my-item{display:flex;align-items:center;gap:12px;width:100%;padding:13px 14px;background:none;border:0;text-align:left;color:var(--ink)}
+.my-item+.my-item{border-top:1px solid var(--soft)}
+.my-tx{flex:1;min-width:0}
+.my-tx b{display:block;font-size:15px;font-weight:500}
+.my-tx small{display:block;font-size:12.5px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* 마이 · 언어 카드 + 언어 설정 시트 */
+.my-lang{display:block;width:100%;text-align:left;color:var(--ink);margin:0 0 12px;padding:14px 16px 16px}
+.my-lang .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.my-lang .hd b{font-size:15px}
+.my-lang .ed{display:flex;align-items:center;gap:1px;font-size:13px;font-weight:500;color:var(--blue)}
+.my-lang .ed .i{width:14px;height:14px;stroke:var(--blue)}
+.my-lang .pair{display:flex;align-items:center;gap:8px}
+.my-lang .nat,.my-lang .lrn{display:flex;flex-direction:column;gap:4px;border-radius:14px;padding:10px 12px}
+.my-lang .nat{background:var(--soft)}
+.my-lang .nat b{font-size:15px}
+.my-lang .lrn{flex:1;min-width:0;background:color-mix(in srgb,var(--blue) 8%,transparent)}
+.my-lang small{font-size:11.5px;color:var(--muted)}
+.my-lang .lrn small{color:var(--blue)}
+.my-lang .arr .i{width:16px;height:16px;stroke:var(--muted);transform:scaleX(-1);display:block}
+.my-lang .chips{display:flex;flex-wrap:wrap;gap:6px}
+.my-lang .chips span{background:var(--blue);color:#fff;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px}
+.lg-sheet{display:flex;flex-direction:column}
+.lg-sheet h3{font-weight:700!important;font-size:19px!important}
+.lg-sum{margin:12px 0 20px;padding:12px 14px;border-radius:14px;background:var(--soft);font-size:13.5px;color:var(--muted)}
+.lg-sum b{color:var(--ink)}
+.lg-sum b.b{color:var(--blue)}
+.lg-h{display:flex;align-items:center;gap:8px}
+.lg-h b{font-size:16px}
+.lg-h .n{width:20px;height:20px;border-radius:50%;background:var(--ink);color:var(--bg);font:700 11px/20px var(--f-latin);text-align:center}
+.lg-h .n.b{background:var(--blue);color:#fff}
+.lg-s{display:block;font-size:12.5px;color:var(--muted);margin:3px 0 10px}
+.lg-nat{display:flex;gap:8px;overflow-x:auto;margin:0 -20px 22px;padding:0 20px;scrollbar-width:none}
+.lg-nat::-webkit-scrollbar{display:none}
+.lg-nat button{flex:none;display:flex;align-items:center;gap:4px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:13.5px;font-weight:500}
+.lg-nat button.on{background:var(--ink);border-color:var(--ink);color:var(--bg);font-weight:700}
+.lg-nat .i{width:13px;height:13px;stroke:currentColor;stroke-width:3}
+.lg-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+.lg-grid button{display:flex;align-items:center;gap:8px;padding:10px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-align:left}
+.lg-grid button.on{border:1.5px solid color-mix(in srgb,var(--blue) 60%,transparent);background:color-mix(in srgb,var(--blue) 7%,transparent)}
+.lg-grid .nm{flex:1;min-width:0;font-size:14px;font-weight:500}
+.lg-grid .on .nm{font-weight:700}
+.lg-grid .ck{width:20px;height:20px;border-radius:6px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:none}
+.lg-grid .on .ck{background:var(--blue);border-color:var(--blue)}
+.lg-grid .ck .i{width:13px;height:13px;stroke:#fff;stroke-width:3}
+.lg-code{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:700 10px/1 var(--f-latin);flex:none}
+.lg-done{display:flex;align-items:center;justify-content:center;flex:none;height:50px;border-radius:14px;background:var(--ink);color:var(--bg);font-size:15px;font-weight:700;border:0;width:100%}

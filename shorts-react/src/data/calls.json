@@ -3,7 +3,7 @@
   "id": "late",
   "title": "친구에게 늦는다고 말하기",
   "who": "Samantha",
-  "sub": "친구 · 약속 10분 전",
+  "sub": "약속에 늦어서 친구에게 연락하기",
   "turns": [
    {
     "ai": "Hey! Are you almost here? I'm already at the cafe.",
@@ -68,13 +68,14 @@
    "on my way",
    "see you soon"
   ],
-  "role": "친구"
+  "role": "친구",
+  "group": "일상"
  },
  {
   "id": "cafe",
   "title": "카페에서 주문하기",
   "who": "Samantha",
-  "sub": "카페 · 주문 받는 중",
+  "sub": "카페에서 음료 주문하기",
   "turns": [
    {
     "ai": "Hi there! What can I get for you today?",
@@ -139,13 +140,14 @@
    "for here",
    "that's all"
   ],
-  "role": "카페 점원"
+  "role": "카페 점원",
+  "group": "카페·식당"
  },
  {
   "id": "work",
   "title": "회의 일정 잡기",
   "who": "Samantha",
-  "sub": "회사 동료 · 업무 통화",
+  "sub": "동료와 회의 일정 잡기",
   "turns": [
    {
     "ai": "Hi, do you have a minute to talk about the project?",
@@ -210,6 +212,7 @@
    "let me check",
    "sounds good"
   ],
-  "role": "회사 동료"
+  "role": "회사 동료",
+  "group": "회사"
  }
 ]

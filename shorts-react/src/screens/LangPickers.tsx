@@ -5,10 +5,10 @@ import { useStore } from '../store';
 import { useUi } from '../ui';
 
 /** 내 언어 · 배우는 언어 고르기 (온보딩, 설정 > 언어 둘 다 쓴다) */
-export function LangPickers({ onboarding, part }: { onboarding?: boolean; part?: 'native' | 'learn' }) {
+/** 내 언어 바꾸기 · 배우는 언어 켜고 끄기 (LangPickers, 마이 언어 시트) */
+export function useLangPick(onboarding?: boolean) {
   const { state, set } = useStore();
   const { toast } = useUi();
-
   const setNative = (code: string) => set((s) => {
     let learn = s.learn.filter((c) => c !== code);
     if (!learn.length && !onboarding) learn = [code === 'en' ? 'ja' : 'en'];
@@ -20,6 +20,12 @@ export function LangPickers({ onboarding, part }: { onboarding?: boolean; part?:
       set({ learn: state.learn.filter((c) => c !== code) });
     } else set({ learn: [...state.learn, code] });
   };
+  return { setNative, toggleLearn };
+}
+
+export function LangPickers({ onboarding, part }: { onboarding?: boolean; part?: 'native' | 'learn' }) {
+  const { state } = useStore();
+  const { setNative, toggleLearn } = useLangPick(onboarding);
 
   return (
     <div className="lang-pickers">
