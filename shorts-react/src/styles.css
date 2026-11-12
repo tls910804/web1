@@ -621,26 +621,61 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .card.cur .card-body>.band,.card.cur .card-body>.study-btn{animation:none}
 
 /* 자동 공부 */
-.study .rc-s{font-size:28px}
-.study .ex-pill:not(.ex-again){background:var(--blue);color:#fff;font-weight:700;box-shadow:0 4px 10px -3px rgba(37,99,235,.45)}
-.study .ex-again{display:inline-flex;align-items:center;gap:5px;background:var(--soft);color:var(--sub)}
-.study .ex-again svg{width:15px;height:15px}
-.st-note{align-self:flex-start;font-size:13px;color:var(--muted);background:var(--soft);padding:6px 12px;border-radius:999px}
-.st-listen{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:40px;color:var(--ink);font-size:20px}
-.st-pulse{width:96px;height:96px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 0 rgba(37,99,235,.35);animation:stpulse 1.4s ease-out infinite}
-.st-pulse svg{width:40px;height:40px;stroke:#fff}
-@keyframes stpulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.35)}100%{box-shadow:0 0 0 28px rgba(37,99,235,0)}}
-.paused .st-pulse{animation:none;opacity:.5}
-.st-sheet{gap:6px}
-.st-sheet b{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.st-tr{font-size:17px;font-weight:700;color:var(--ink)}
-.st-sheet small{color:var(--sub)}
+.study .st-top{position:absolute;top:12px;left:16px;right:16px;display:flex;align-items:center;gap:12px;z-index:2}
+.study .st-top .ib{width:38px;height:38px}.study .st-top .ib svg{width:18px;height:18px}
+.study .st-top .bar{flex:1;height:6px;border-radius:3px;background:var(--track);overflow:hidden}
+.study .st-top .bar>div{height:100%;background:var(--blue);border-radius:3px;transition:width .3s}
+.study .st-top .cnt{font-size:13px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.st-body{position:absolute;top:66px;left:16px;right:16px;bottom:0;overflow-y:auto;padding-bottom:24px;scrollbar-width:none}
+.st-card{border-radius:28px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow-card);transition:background .25s}
+.st-card.ok{background:var(--ok-soft)}.st-card.no{background:var(--warn-soft)}
+.st-ko{padding:18px 22px;border-radius:28px 28px 0 0;background:var(--soft);display:flex;flex-direction:column;gap:8px}
+.st-card.ok .st-ko,.st-card.no .st-ko{background:transparent;padding-top:6px}
+.st-ko small{font-size:12px;font-weight:500;color:var(--muted)}
+.st-ko p{margin:0;font-size:17px;font-weight:500;line-height:1.5;color:var(--sub)}
+.st-en{padding:22px}
+.st-s{margin:0;font-size:calc(23px * var(--fs));font-weight:600;line-height:1.7;letter-spacing:-.01em;color:var(--ink)}
+.st-s .w{opacity:.25;transition:opacity .2s,color .2s}.st-s .w.rd{opacity:1}.st-s .w.now{opacity:1;color:var(--blue)}
+.st-expr{margin:10px 0 0;font-size:14px;color:var(--muted)}.st-expr b{font-weight:600;color:var(--ok)}.st-card.no .st-expr b{color:var(--warn)}
+.st-listen{display:flex;align-items:center;justify-content:center;gap:8px;margin:22px 0 0;font-size:14px;font-weight:500;color:var(--muted)}
+.st-listen i{width:28px;height:28px;border-radius:50%;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;animation:stpulse 1.4s ease-out infinite}
+.st-listen svg{width:15px;height:15px;stroke:var(--blue)}
+@keyframes stpulse{0%{box-shadow:0 0 0 0 rgba(37,99,235,.3)}100%{box-shadow:0 0 0 10px rgba(37,99,235,0)}}
+.st-blank{position:relative;display:inline-block;min-width:90px;padding:0 12px;border-radius:12px;background:var(--blue-soft);color:var(--blue);line-height:1.6;vertical-align:baseline}
+.st-blank input{position:relative;width:6ch;min-width:3ch;max-width:100%;border:0;outline:0;background:transparent;font:inherit;color:var(--blue);padding:0}
+.st-blank .ghost{position:absolute;left:12px;top:0;opacity:.35;pointer-events:none;white-space:nowrap}
+.st-blank.no{background:var(--card);box-shadow:inset 0 0 0 1.5px var(--warn);animation:shake .32s ease}.st-blank.no input{color:var(--warn)}
+.st-blank.ok{background:var(--card);color:var(--ok);box-shadow:inset 0 0 0 1.5px var(--ok);animation:bump .35s cubic-bezier(.3,1.6,.5,1)}
+.st-note{margin:12px 14px 0;padding:12px 16px;border-radius:14px;font-size:14px;font-weight:500;display:flex;flex-direction:column;gap:4px;animation:rise .25s ease both}
+.st-note.info{background:var(--blue-soft);color:var(--blue);font-weight:600}
+.st-note.warn{background:var(--warn-soft);color:var(--sub);display:block;font-size:13.5px;font-weight:400;line-height:1.6}
+.st-note.warn b{display:block;color:var(--warn);font-size:14px;font-weight:600;margin-bottom:3px}
+.st-note .bad{color:#d9480f;text-decoration:underline}
+.st-tools{display:flex;align-items:center;gap:8px;padding:0 22px 20px}
+.st-tools .tb{height:38px;display:inline-flex;align-items:center;gap:6px;padding:0 16px 0 13px;border-radius:19px;background:var(--soft);color:var(--sub);font-size:14px;font-weight:600}
+.st-tools .tb svg{width:17px;height:17px;stroke-width:1.8}
+.st-tools .tb.main{background:var(--blue-soft);color:var(--blue)}.st-tools .tb.main.soft{opacity:.6}
+.st-tools .tb.skip{margin-left:auto;padding:0 8px 0 14px;gap:2px;background:none;color:var(--muted);font-weight:500}
+.st-tools .tb.skip svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.st-res{display:flex;align-items:center;gap:8px;padding:18px 16px 0 22px}
+.st-res .ic{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--ok);color:#fff;font-size:15px;font-weight:800;animation:bump .45s cubic-bezier(.3,1.6,.5,1)}
+.st-card.no .st-res .ic{background:var(--warn)}
+.st-res .ic svg{width:15px;height:15px;stroke:#fff;stroke-width:3}
+.st-res b{font-size:15px;font-weight:600;color:var(--ok)}.st-card.no .st-res b{color:var(--warn)}
+.st-res .st-save{margin-left:auto}
 .st-run{font-size:12px;font-weight:700;color:#fff;background:var(--ok);padding:4px 10px;border-radius:999px;animation:bump .4s cubic-bezier(.3,1.6,.5,1)}
-.ex-fb.no .st-run{display:none}
-.st-timer{display:block;height:5px;border-radius:3px;margin-top:8px;background:currentColor;opacity:.85;transform-origin:left;animation:stfill linear both}
+.st-save{width:36px;height:36px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.st-save svg{width:17px;height:17px;stroke:var(--ink)}.st-save.on{background:var(--btn)}.st-save.on svg{stroke:var(--btn-ink);fill:var(--btn-ink)}
+.st-acts{margin-top:16px;display:flex;gap:10px}
+.st-acts button{position:relative;overflow:hidden;flex:1;height:80px;border-radius:20px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink)}
+.st-acts svg{position:relative;width:22px;height:22px}
+.st-acts .go{background:var(--blue);border-color:var(--blue);color:#fff}
+.st-acts .go svg{width:18px;height:18px;fill:#fff}
+.st-acts .go i{position:absolute;inset:0;background:rgba(255,255,255,.18);transform-origin:left;animation:stfill linear both}
 @keyframes stfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.paused .st-timer{animation-play-state:paused}
-.st-paused{position:absolute;left:50%;top:70px;transform:translateX(-50%);background:var(--btn);color:var(--btn-ink);font-size:13px;font-weight:500;padding:9px 14px;border-radius:999px;white-space:nowrap;z-index:3}
+.st-pause{position:absolute;inset:0;background:var(--scrim);z-index:6;display:flex;align-items:flex-end}
+.st-pause .sheet-in{width:100%;background:var(--card);border-radius:28px 28px 0 0;padding:24px 24px 18px;display:flex;flex-direction:column;gap:6px;animation:rise .25s ease both}
+.st-pause b{font-size:20px}.st-pause small{font-size:13px;color:var(--muted);margin-bottom:12px}
 .st-done{overflow:hidden}
 .st-done-body{position:absolute;inset:0 0 120px;overflow-y:auto;padding:48px 20px 20px;display:flex;flex-direction:column;align-items:center}
 .st-big{flex:none;width:88px;height:88px;border-radius:50%;background:var(--ok);display:flex;align-items:center;justify-content:center;animation:bump .5s cubic-bezier(.3,1.6,.5,1)}
@@ -661,4 +696,16 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .confetti i{position:absolute;top:-20px;width:8px;height:5px;border-radius:1px;animation:fall ease-in both}
 .confetti i.r{width:6px;height:6px;border-radius:50%}
 @keyframes fall{from{transform:translateY(0) rotate(0)}to{transform:translateY(110vh) rotate(540deg);opacity:.6}}
-@media (prefers-reduced-motion:reduce){.confetti,.st-run,.st-big{display:none;animation:none}.st-big{display:flex}.st-pulse,.st-timer{animation:none}}
+@media (prefers-reduced-motion:reduce){.confetti{display:none}.st-run,.st-big,.st-res .ic,.st-blank.ok,.st-blank.no,.st-note,.st-listen i,.st-pause .sheet-in{animation:none}.st-acts .go i{animation:none;transform:none}}
+.st-cap{margin:16px 6px 0;font-size:13px;color:var(--muted)}
+:root{--hl:#4a90e2}:root[data-theme="dark"]{--hl:#8ab8f0}
+.st-ko em{font-style:normal;color:var(--hl)}
+.st-card.ok .st-ko em{color:var(--ok)}.st-card.no .st-ko em{color:var(--warn)}
+.st-s .key{color:var(--ok)}.st-card.no .st-s .key{color:var(--warn)}
+.st-dots{flex:1;display:flex;gap:4px;align-items:center}
+.st-dots i{flex:1;height:8px;border-radius:4px;background:var(--track);transition:background .3s,flex .3s}
+.st-dots i.now{flex:2.2;background:var(--blue)}
+.st-dots i.ok,.st-dots i.no{background:var(--icon);opacity:.55}
+.st-cnt{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;min-width:38px;text-align:right}
+.st-cnt b{font-weight:600;color:var(--ink)}
+@media (prefers-reduced-motion:reduce){.st-dots i{transition:none;animation:none}}

@@ -12,9 +12,9 @@ import type { Card, SavedItem } from '../types';
 
 export type ExKind = 'type' | 'dictation';
 
-const join = (c: Card, ws: string[]) => ws.join(NO_SPACE[c.lang] ? '' : ' ');
+export const join = (c: Card, ws: string[]) => ws.join(NO_SPACE[c.lang] ? '' : ' ');
 /** 빈칸으로 비울 단어 조각: 단어 저장은 그 단어, 문장·표현 저장은 핵심 표현 */
-const blankOf = (item: SavedItem) => (item.kind === 'w' && item.wi >= 0 ? [item.wi] : item.card.key);
+export const blankOf = (item: SavedItem) => (item.kind === 'w' && item.wi >= 0 ? [item.wi] : item.card.key);
 
 /** 오래 기억한 문장(4단계~)은 받아쓰기, 나머지는 빈칸 직접 쓰기. 빈칸을 정할 수 없으면 기존 카드 */
 export function exKind(item: SavedItem): ExKind | null {
@@ -22,7 +22,7 @@ export function exKind(item: SavedItem): ExKind | null {
   return blankOf(item).length ? 'type' : null;
 }
 
-const norm = (s: string, code: string) => {
+export const norm = (s: string, code: string) => {
   const t = s.toLowerCase().replace(/[¡¿.,!?。、！？'"’“”]/g, '');
   return NO_SPACE[code] ? t.replace(/\s+/g, '') : t.replace(/\s+/g, ' ').trim();
 };
@@ -46,7 +46,7 @@ function dict(code: string, native: string) {
 }
 
 /** 쓰고 있는 글자 중 뜻을 아는 틀린 단어를 찾는다 */
-function findMiss(text: string, answer: string, code: string, native: string) {
+export function findMiss(text: string, answer: string, code: string, native: string) {
   const t = norm(text, code), a = norm(answer, code);
   if (!t || a.startsWith(t)) return null;
   const d = dict(code, native);
@@ -64,9 +64,8 @@ function findMiss(text: string, answer: string, code: string, native: string) {
 const when = (days: number) => (days === 1 ? tt('내일') : tt('{n}일 뒤에', { n: days }));
 type Miss = { w: string; mean: string };
 
-/** practice: 온보딩 체험용. 모르면 평가 대신 정답과 '5분 뒤' 안내를 바로 보여준다
- *  auto: 자동 공부용. 뜻은 숨기고, 다시 듣기를 보여주고, 끝나면 아래 안내 없이 바로 onDone */
-export function Exercise({ kind, item, onDone, onSkip, practice, auto }: { kind: ExKind; item: SavedItem; onDone: (ok: boolean, hinted?: boolean) => void; onSkip: () => void; practice?: boolean; auto?: boolean }) {
+/** practice: 온보딩 체험용. 모르면 평가 대신 정답과 '5분 뒤' 안내를 바로 보여준다 */
+export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKind; item: SavedItem; onDone: (ok: boolean, hinted?: boolean) => void; onSkip: () => void; practice?: boolean }) {
   const { state } = useStore();
   const { speak } = useUi();
   const c = item.card;
@@ -97,8 +96,7 @@ export function Exercise({ kind, item, onDone, onSkip, practice, auto }: { kind:
     if (norm(text, c.lang) === norm(answer, c.lang)) setPhase('ok');
     else setPhase('no');
   };
-  const giveUp = () => (practice || auto ? setPhase('no') : onSkip());
-  useEffect(() => { if (auto && phase !== 'ask') onDone(phase === 'ok', hint); }, [phase]); // eslint-disable-line react-hooks/exhaustive-deps
+  const giveUp = () => (practice ? setPhase('no') : onSkip());
   // 복습 정책: 틀리면 5분 뒤 다시, 맞히면 간격을 늘리되 힌트를 봤으면 한 단계 덜 늘린다
   const days = rateResult(state.mode, item, hint ? 'hard' : 'good').days;
 
@@ -162,7 +160,7 @@ export function Exercise({ kind, item, onDone, onSkip, practice, auto }: { kind:
         <div className="rcard ex">
           <span className="rc-chip">{tt('빈칸 채우기')} · {lang(c.lang).name}</span>
           <p className="rc-s" lang={langTag(c.lang)}>{parts}</p>
-          {!auto && <p className="rc-tr">{tr}</p>}
+          <p className="rc-tr">{tr}</p>
           {(miss || (no && lastMiss)) && (
             <div className="ex-why">
               <b lang={langTag(c.lang)}>{(miss || lastMiss)!.w} = {(miss || lastMiss)!.mean}</b>
@@ -174,15 +172,14 @@ export function Exercise({ kind, item, onDone, onSkip, practice, auto }: { kind:
               {hint
                 ? <button className="ex-pill" onClick={() => setPhase('no')}>{tt('정답 보기')}</button>
                 : <button className="ex-pill" onClick={() => { setHint(true); if (!norm(answer, c.lang).startsWith(norm(text, c.lang)) || text.length < nHint) setText(answer.slice(0, nHint)); input.current?.focus(); }}>{tt('힌트 보기')}</button>}
-              {auto && <button className="ex-pill ex-again" onClick={() => { speak(sentence(c), c.lang); input.current?.focus(); }}><Icon name="speak" />{tt('다시 듣기')}</button>}
-              {!hint && !miss && !auto && <span className="ex-meta">{NO_SPACE[c.lang] ? '' : `${tt('{n}단어', { n: words })} · `}{tt('{n}글자', { n: answer.replace(/\s/g, '').length })}</span>}
-              <button className="lnk ex-skip" onClick={giveUp}>{auto ? tt('넘어가기') : tt('건너뛰기')}</button>
+              {!hint && !miss && <span className="ex-meta">{NO_SPACE[c.lang] ? '' : `${tt('{n}단어', { n: words })} · `}{tt('{n}글자', { n: answer.replace(/\s/g, '').length })}</span>}
+              <button className="lnk ex-skip" onClick={giveUp}>{tt('건너뛰기')}</button>
             </div>
           )}
         </div>
-        {!end && <p className="ex-cap">{hint ? tt(nHint === 2 ? '앞 두 글자를 보여 드렸어요' : '앞 한 글자를 보여 드렸어요') : auto ? tt('방금 들은 표현을 빈칸에 써 보세요') : practice ? tt('방금 저장한 표현이에요. 빈칸에 직접 써 보세요') : tt('빈칸에 알맞은 표현을 직접 써 보세요')}</p>}
+        {!end && <p className="ex-cap">{hint ? tt(nHint === 2 ? '앞 두 글자를 보여 드렸어요' : '앞 한 글자를 보여 드렸어요') : practice ? tt('방금 저장한 표현이에요. 빈칸에 직접 써 보세요') : tt('빈칸에 알맞은 표현을 직접 써 보세요')}</p>}
       </div>
-      {end && !auto && (
+      {end && (
         <div className="foot">
           <div className={`ex-fb ${ok ? 'ok' : 'no'}`}>
             <div className="ex-note">

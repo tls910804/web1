@@ -11,6 +11,8 @@ export interface Card {
   expr: string;
   tr: Record<string, string>;
   mean: Record<string, string>;
+  /** 뜻(tr) 안에서 빈칸(key)에 해당하는 부분. 자동 공부에서 색으로 표시 */
+  trKey?: Record<string, string>;
   /** 유튜브 영상 카드: 이 구간(초)을 카드 위에서 재생한다 */
   /** full: 카드 전체를 영상으로 채우고 자막을 위에 겹친다, ratio: 영상 가로/세로 비율 */
   video?: { id: string; start: number; end: number; times?: number[]; full?: boolean; ratio?: number };
