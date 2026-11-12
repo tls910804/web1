@@ -1,0 +1,215 @@
+[
+ {
+  "id": "late",
+  "title": "친구에게 늦는다고 말하기",
+  "who": "Samantha",
+  "sub": "친구 · 약속 10분 전",
+  "turns": [
+   {
+    "ai": "Hey! Are you almost here? I'm already at the cafe.",
+    "ko": "야! 거의 다 왔어? 나 벌써 카페야.",
+    "replies": [
+     {
+      "en": "Sorry, I'm running late.",
+      "ko": "미안, 좀 늦어."
+     },
+     {
+      "en": "I'm on my way!",
+      "ko": "가는 중이야!"
+     }
+    ]
+   },
+   {
+    "ai": "Oh no, how long do you think you will be?",
+    "ko": "저런, 얼마나 걸릴 것 같아?",
+    "replies": [
+     {
+      "en": "I'll be there in ten minutes.",
+      "ko": "10분 안에 갈게."
+     },
+     {
+      "en": "Maybe fifteen minutes.",
+      "ko": "15분쯤?"
+     }
+    ]
+   },
+   {
+    "ai": "No worries. Do you want me to order something for you?",
+    "ko": "괜찮아. 뭐 먼저 시켜 줄까?",
+    "replies": [
+     {
+      "en": "An iced americano, please.",
+      "ko": "아이스 아메리카노 부탁해."
+     },
+     {
+      "en": "I'm good, thanks.",
+      "ko": "괜찮아, 고마워."
+     }
+    ]
+   },
+   {
+    "ai": "Got it. See you soon!",
+    "ko": "알겠어. 이따 봐!",
+    "replies": [
+     {
+      "en": "See you soon!",
+      "ko": "이따 봐!"
+     },
+     {
+      "en": "Thanks, see you!",
+      "ko": "고마워, 이따 봐!"
+     }
+    ]
+   }
+  ],
+  "voice": "en-US-AvaNeural",
+  "mission": [
+   "running late",
+   "on my way",
+   "see you soon"
+  ],
+  "role": "친구"
+ },
+ {
+  "id": "cafe",
+  "title": "카페에서 주문하기",
+  "who": "Samantha",
+  "sub": "카페 · 주문 받는 중",
+  "turns": [
+   {
+    "ai": "Hi there! What can I get for you today?",
+    "ko": "안녕하세요! 오늘 뭐 드릴까요?",
+    "replies": [
+     {
+      "en": "Can I get an iced latte?",
+      "ko": "아이스 라떼 주시겠어요?"
+     },
+     {
+      "en": "I'd like a hot americano.",
+      "ko": "따뜻한 아메리카노 주세요."
+     }
+    ]
+   },
+   {
+    "ai": "Sure. For here or to go?",
+    "ko": "네. 드시고 가세요, 가져가세요?",
+    "replies": [
+     {
+      "en": "To go, please.",
+      "ko": "가져갈게요."
+     },
+     {
+      "en": "For here, please.",
+      "ko": "먹고 갈게요."
+     }
+    ]
+   },
+   {
+    "ai": "Anything else?",
+    "ko": "더 필요한 거 있으세요?",
+    "replies": [
+     {
+      "en": "That's all, thanks.",
+      "ko": "그게 다예요, 감사합니다."
+     },
+     {
+      "en": "Can I get a cookie too?",
+      "ko": "쿠키도 하나 주세요."
+     }
+    ]
+   },
+   {
+    "ai": "Great, it'll be ready in a minute.",
+    "ko": "좋아요, 금방 나와요.",
+    "replies": [
+     {
+      "en": "Thank you!",
+      "ko": "감사합니다!"
+     },
+     {
+      "en": "Great, thanks.",
+      "ko": "좋아요, 고마워요."
+     }
+    ]
+   }
+  ],
+  "voice": "en-US-AvaNeural",
+  "mission": [
+   "to go",
+   "for here",
+   "that's all"
+  ],
+  "role": "카페 점원"
+ },
+ {
+  "id": "work",
+  "title": "회의 일정 잡기",
+  "who": "Samantha",
+  "sub": "회사 동료 · 업무 통화",
+  "turns": [
+   {
+    "ai": "Hi, do you have a minute to talk about the project?",
+    "ko": "안녕하세요, 프로젝트 얘기 잠깐 할 수 있어요?",
+    "replies": [
+     {
+      "en": "Sure, what is it?",
+      "ko": "그럼요, 무슨 일이에요?"
+     },
+     {
+      "en": "Yes, I'm free now.",
+      "ko": "네, 지금 괜찮아요."
+     }
+    ]
+   },
+   {
+    "ai": "Can we set up a meeting this week?",
+    "ko": "이번 주에 회의 잡을 수 있을까요?",
+    "replies": [
+     {
+      "en": "How about Thursday?",
+      "ko": "목요일 어때요?"
+     },
+     {
+      "en": "Let me check my schedule.",
+      "ko": "일정 확인해 볼게요."
+     }
+    ]
+   },
+   {
+    "ai": "Thursday at 3 works for me.",
+    "ko": "목요일 3시 좋아요.",
+    "replies": [
+     {
+      "en": "Perfect, I'll send an invite.",
+      "ko": "좋아요, 초대 보낼게요."
+     },
+     {
+      "en": "Sounds good.",
+      "ko": "좋습니다."
+     }
+    ]
+   },
+   {
+    "ai": "Great. Let's call it a day then. Talk soon!",
+    "ko": "좋아요. 그럼 오늘은 여기까지 해요. 또 얘기해요!",
+    "replies": [
+     {
+      "en": "Talk soon!",
+      "ko": "또 얘기해요!"
+     },
+     {
+      "en": "Thanks, bye!",
+      "ko": "고마워요, 안녕히!"
+     }
+    ]
+   }
+  ],
+  "voice": "en-US-AvaNeural",
+  "mission": [
+   "how about",
+   "let me check",
+   "sounds good"
+  ],
+  "role": "회사 동료"
+ }
+]
