@@ -16,8 +16,8 @@ export const accountName = (account: string | null) => (account ? tt('{a} 계정
 
 type IconName = Parameters<typeof Icon>[0]['name'];
 const FREE_CALLS = 3;
-const LANG_COLOR: Record<string, string> = { en: '#2563eb', ko: '#0ea5e9', ja: '#e11d48', zh: '#d97706', es: '#16a34a', fr: '#7c5cff', de: '#0f766e', pt: '#65a30d', ru: '#9333ea', vi: '#dc2626', id: '#ea580c' };
-const Code = ({ c }: { c: string }) => {
+export const LANG_COLOR: Record<string, string> = { en: '#2563eb', ko: '#0ea5e9', ja: '#e11d48', zh: '#d97706', es: '#16a34a', fr: '#7c5cff', de: '#0f766e', pt: '#65a30d', ru: '#9333ea', vi: '#dc2626', id: '#ea580c' };
+export const Code = ({ c }: { c: string }) => {
   const col = LANG_COLOR[c] || '#6b7078';
   return <span className="lg-code" style={{ color: col, background: `color-mix(in srgb, ${col} 13%, transparent)` }}>{c.toUpperCase()}</span>;
 };

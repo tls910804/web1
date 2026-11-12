@@ -8,7 +8,8 @@ import { WordChips } from '../components/WordChips';
 import { lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import { LangPickers } from './LangPickers';
+import { useLangPick } from './LangPickers';
+import { Code } from './Settings';
 import { Exercise } from './Exercise';
 
 const TIMELINE = [
@@ -18,17 +19,38 @@ const TIMELINE = [
   [tt('7일 뒤'), tt('더 오래 기억해요'), tt('점점 간격이 길어져요')],
 ];
 
+// 맨 처음 화면은 누가 볼지 몰라서 고른 언어로 바로 보여 준다 (앱 번역 파일과 따로)
+const ASK: Record<string, [string, string, string, string]> = {
+  ko: ['어떤 언어를 쓰세요?', '문장의 뜻과 설명이 이 언어로 나와요.', '기기 언어', '다음'],
+  en: ['Which language do you speak?', 'Meanings and explanations will appear in this language.', 'Device', 'Next'],
+  ja: ['どの言語を使いますか？', '文の意味と説明がこの言語で表示されます。', '端末の言語', '次へ'],
+  zh: ['你使用哪种语言？', '句子的意思和说明将以这种语言显示。', '设备语言', '下一步'],
+  es: ['¿Qué idioma hablas?', 'Los significados y explicaciones aparecerán en este idioma.', 'Del dispositivo', 'Siguiente'],
+  fr: ['Quelle langue parlez-vous ?', "Les sens et explications s'afficheront dans cette langue.", "De l'appareil", 'Suivant'],
+  de: ['Welche Sprache sprichst du?', 'Bedeutungen und Erklärungen erscheinen in dieser Sprache.', 'Gerät', 'Weiter'],
+  pt: ['Qual idioma você fala?', 'Os significados e explicações aparecerão neste idioma.', 'Do aparelho', 'Próximo'],
+  ru: ['На каком языке вы говорите?', 'Значения и пояснения будут на этом языке.', 'Язык устройства', 'Далее'],
+  vi: ['Bạn nói ngôn ngữ nào?', 'Nghĩa và giải thích sẽ hiển thị bằng ngôn ngữ này.', 'Thiết bị', 'Tiếp'],
+  id: ['Bahasa apa yang kamu gunakan?', 'Arti dan penjelasan akan tampil dalam bahasa ini.', 'Perangkat', 'Lanjut'],
+};
+const HELLO = ['Hello', '안녕하세요', 'こんにちは', '你好', 'Hola', 'Bonjour', 'Xin chào'];
+/** 진행 점: 내 언어 → 배울 언어 → 저장 체험 → 복습 */
+const Dots = ({ at }: { at: number }) => <div className="ob-dots">{[0, 1, 2, 3].map((i) => <i key={i} className={i === at ? 'on' : ''} />)}</div>;
+
 const RECAP = [
   ['mark', tt('두 번 탭해서 저장'), tt('마음에 드는 문장은 배울래요에 쌓여요')],
   ['repeat', tt('잊을 때쯤 복습'), tt('배울래요 탭에서 복습을 시작해요')],
   ['chart', tt('기록으로 확인'), tt('연속 일수와 진행률이 기록 탭에 쌓여요')],
 ] as const;
 
-/** 첫 실행: (내 언어는 기기 언어로 자동, 1단계는 바꿀 때만) 배울 언어 → 저장 체험 → 복습 이해 → 복습 체험 → 준비 완료 (3~5단계는 건너뛸 수 있다) */
+/** 첫 실행: 내 언어(기기 언어가 미리 골라짐) → 배울 언어 → 저장 체험 → 복습 이해 → 복습 체험 → 준비 완료 (3~5단계는 건너뛸 수 있다) */
 export function Onboarding() {
   const { state, set } = useStore();
   const { go, setIndex, speak } = useUi();
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
+  const { setNative, toggleLearn } = useLangPick(true);
+  const dev = navigator.language.slice(0, 2);
+  const ask = ASK[state.native] || ASK.en;
   // 설명 언어는 묻지 않고 기기 언어로 맞춘다 (지원하지 않는 언어면 기본값 유지)
   useEffect(() => {
     const code = navigator.language.slice(0, 2);
@@ -75,7 +97,7 @@ export function Onboarding() {
     return (
       <section className="screen rv-card ob-rv">
         <div className="ob-rv-head">
-          <div className="ob-n">3 / 3</div>
+          <Dots at={3} />
           <h2 className="title">{tt('저장한 표현, 기억나나요?')}</h2>
           <p className="desc">{tt('복습은 빈칸을 직접 써 보는 방식이에요.')}</p>
         </div>
@@ -86,28 +108,41 @@ export function Onboarding() {
 
   return (
     <section className="screen">
-      <div className="page" style={{ paddingTop: 16, paddingBottom: 190 }}>
-        {step >= 2 && step <= 5 && <div className="ob-n">{Math.min(step - 1, 3)} / 3</div>}
+      <div className="page" style={{ paddingTop: 16, paddingBottom: step === 2 ? 300 : 190 }}>
+        {step >= 3 && step <= 5 && <Dots at={Math.min(step - 1, 3)} />}
         {step === 1 && (
           <>
-            <h2 className="title">{tt('어떤 언어로 설명해 드릴까요?')}</h2>
-            <p className="desc">{tt('문장의 뜻을 이 언어로 보여 드려요.')}</p>
-            <LangPickers part="native" onboarding />
+            <Dots at={0} />
+            <div className="ob-hi">{HELLO.map((h) => <span key={h}>{h}</span>)}</div>
+            <h2 className="title ob-q">{ask[0]}</h2>
+            {state.native !== 'en' && <p className="ob-en">Which language do you speak?</p>}
+            <p className="desc">{ask[1]}</p>
+            <div className="ob-nat">
+              {[...LANGS].sort((a, b) => +(b.code === dev) - +(a.code === dev)).map((l) => (
+                <button key={l.code} className={l.code === state.native ? 'on' : ''} onClick={() => setNative(l.code)}>
+                  <b>{l.name}</b>{state.native === 'ko' && l.code !== 'ko' && <small>{l.ko}</small>}
+                  {l.code === dev && <em>{ask[2]}</em>}
+                  <span className="rd" />
+                </button>
+              ))}
+            </div>
           </>
         )}
         {step === 2 && (
           <>
-            <h2 className="title">{tt('어떤 언어를 배울까요?')}</h2>
-            <p className="desc">{tt('고른 언어의 문장이 섞여서 나와요. 아래에서 어떤 모습인지 미리 볼 수 있어요.')}</p>
-            <LangPickers part="learn" onboarding />
-            {sample && (
-              <div className="preview" key={sample.id}>
-                <span className="pv-cap">{tt('미리보기')} · {lang(sample.lang).name}</span>
-                <WordChips card={sample} />
-                <p className="tr">{tr}</p>
-              </div>
-            )}
-            <button className="lnk ob-lang" onClick={() => setStep(1)}>{tt('설명 언어: {l} · 바꾸기', { l: lang(state.native).name })}</button>
+            <div className="ob-top"><Dots at={1} /><button className="ob-natpill" onClick={() => setStep(1)}>{tt('뜻은')} <b>{lang(state.native).ko}</b><Icon name="chev" /></button></div>
+            <h2 className="title ob-q">{tt('어떤 언어를')}<br />{tt('배울까요?')}</h2>
+            <p className="desc">{tt('여러 개 골라도 돼요. 고른 언어 문장이 섞여서 나와요.')}</p>
+            <div className="lg-grid ob-grid">
+              {LANGS.filter((l) => l.code !== state.native).map((l) => {
+                const on = state.learn.includes(l.code);
+                return (
+                  <button key={l.code} className={on ? 'on' : ''} onClick={() => toggleLearn(l.code)}>
+                    <Code c={l.code} /><span className="nm">{l.ko}<small>{l.name}</small></span><span className="ck">{on && <Icon name="check" />}</span>
+                  </button>
+                );
+              })}
+            </div>
           </>
         )}
         {step === 3 && (
@@ -149,11 +184,18 @@ export function Onboarding() {
         )}
       </div>
       <div className="bottom rv-card" style={{ textAlign: 'center' }}>
-        {step === 1 && <Button onClick={() => setStep(2)}>{tt('다음')}</Button>}
+        {step === 1 && <Button onClick={() => setStep(2)}>{ask[3]}</Button>}
         {step === 2 && (
           <>
-            <Button disabled={!n} onClick={() => setStep(3)}>{n ? tt('시작하기 · {n}개 언어', { n }) : tt('배울 언어를 골라 주세요')}</Button>
-            <p className="ob-foot" style={{ marginTop: 10 }}>{tt('언어는 \'설정\' 탭에서 나중에 바꿀 수 있어요')}</p>
+            {sample && (
+              <div className="ob-pv" key={sample.id}>
+                <span className="cap"><Code c={sample.lang} />{tt('이런 문장이 나와요')}</span>
+                <b lang={langTag(sample.lang)}>{sentence(sample)}</b>
+                <small>{tr}</small>
+              </div>
+            )}
+            <Button disabled={!n} onClick={() => setStep(3)}>{n ? tt('{n}개 언어로 시작하기', { n }) : tt('배울 언어를 골라 주세요')}</Button>
+            <p className="ob-foot" style={{ marginTop: 10 }}>{tt('언어는 \'마이\' 탭에서 언제든 바꿀 수 있어요')}</p>
           </>
         )}
         {step === 3 && (
