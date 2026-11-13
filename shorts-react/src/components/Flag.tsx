@@ -23,6 +23,10 @@ const FLAGS: Record<string, string> = {
 // 흰 국기(일본·인도네시아)가 흰 카드에 묻히지 않게 얇은 테두리
 const RING = '<circle cx="18" cy="18" r="17.5" fill="none" stroke="#000" stroke-opacity=".12"/>';
 
+/** 언어 목록 보여 줄 순서 (온보딩 · 언어 설정 같이 씀) */
+export const LANG_ORDER = ['ko', 'en', 'ja', 'zh', 'es', 'id', 'vi', 'fr', 'de', 'pt', 'ru'];
+export const byOrder = (a: { code: string }, b: { code: string }) => LANG_ORDER.indexOf(a.code) - LANG_ORDER.indexOf(b.code);
+
 export function Flag({ code, size = 34 }: { code: string; size?: number }) {
   // FLAGS는 코드 안의 고정 svg라 그대로 넣어도 안전하다.
   return <svg className="flag" width={size} height={size} viewBox="0 0 36 36" aria-hidden dangerouslySetInnerHTML={{ __html: (FLAGS[code] || '<rect width="36" height="36" fill="#ccc"/>') + RING }} />;

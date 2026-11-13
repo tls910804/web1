@@ -10,7 +10,7 @@ import { useStore } from '../store';
 import { useUi } from '../ui';
 import { useLangPick } from './LangPickers';
 import { Code } from './Settings';
-import { Flag } from '../components/Flag';
+import { Flag, LANG_ORDER } from '../components/Flag';
 import { Exercise } from './Exercise';
 
 const TIMELINE = [
@@ -35,7 +35,6 @@ const ASK: Record<string, [string, string, string, string]> = {
   id: ['Bahasa apa yang kamu gunakan?', 'Arti dan penjelasan akan tampil dalam bahasa ini.', 'Perangkat', 'Lanjut dengan bahasa Indonesia'],
 };
 const HELLO = [['en', 'Hello'], ['ko', '안녕하세요'], ['ja', 'こんにちは'], ['es', '¡Hola!']];
-const NAT_ORDER = ['ko', 'en', 'ja', 'zh', 'es', 'id', 'vi', 'fr', 'de', 'pt', 'ru'];
 /** 진행 점: 내 언어 → 배울 언어 → 저장 체험 → 복습 */
 const Dots = ({ at }: { at: number }) => <div className="ob-dots">{[0, 1, 2, 3].map((i) => <i key={i} className={i === at ? 'on' : ''} />)}</div>;
 
@@ -119,7 +118,7 @@ export function Onboarding() {
             <h2 className="title ob-q">{ask[0]}</h2>
             {state.native !== 'en' && <p className="ob-en">Which language do you speak?</p>}
             <div className="ob-nat">
-              {[...LANGS].sort((a, b) => (a.code === dev ? -1 : b.code === dev ? 1 : NAT_ORDER.indexOf(a.code) - NAT_ORDER.indexOf(b.code))).map((l) => {
+              {[...LANGS].sort((a, b) => (a.code === dev ? -1 : b.code === dev ? 1 : LANG_ORDER.indexOf(a.code) - LANG_ORDER.indexOf(b.code))).map((l) => {
                 const on = l.code === state.native;
                 const sub = l.code === dev ? ask[2] : state.native === 'ko' && l.code !== 'ko' ? l.ko : '';
                 return (

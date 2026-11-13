@@ -9,8 +9,9 @@ import { useStore } from '../store';
 import { useUi } from '../ui';
 import { callsToday, FREE_CALLS } from './Call';
 import { LANGS } from '../data';
-import { SheetHead } from '../components/Layer';
 import { useLangPick } from './LangPickers';
+import { useState } from 'react';
+import { Flag, byOrder } from '../components/Flag';
 
 export const accountName = (account: string | null) => (account ? tt('{a} 계정', { a: account }) : tt('로그인하지 않음'));
 
@@ -22,38 +23,42 @@ export const Code = ({ c }: { c: string }) => {
   return <span className="lg-code" style={{ color: col, background: `color-mix(in srgb, ${col} 13%, transparent)` }}>{c.toUpperCase()}</span>;
 };
 
-/** 내 언어(하나) · 배울 언어(여러 개) 고르는 시트 */
+/** 언어 설정 시트: 탭으로 배울 언어(여러 개) / 내 언어(하나), 온보딩과 같은 국기 카드 */
 function LangSheet() {
   const { state } = useStore();
   const { closeLayer } = useUi();
   const { setNative, toggleLearn } = useLangPick();
-  const learnKo = state.learn.map((c) => lang(c).ko).join(', ');
+  const [tab, setTab] = useState<'learn' | 'native'>('learn');
+  const dev = navigator.language.slice(0, 2);
+  const learnKo = state.learn.map((c) => lang(c).ko).join('·');
+  const items = [...LANGS].sort(byOrder).filter((l) => tab === 'native' || l.code !== state.native);
   return (
     <div className="lg-sheet">
-      <SheetHead title={tt('언어 설정')} />
-      <p className="lg-sum">{tt('뜻은')} <b>{lang(state.native).ko}</b>{tt('로, 문장은')} <b className="b">{learnKo}</b>{tt('로 나와요')}</p>
-      <div className="lg-h"><span className="n">1</span><b>{tt('내 언어')}</b></div>
-      <small className="lg-s">{tt('뜻과 설명이 이 언어로 나와요 · 하나만')}</small>
-      <div className="lg-nat">
-        {[...LANGS].sort((a, b) => +(b.code === state.native) - +(a.code === state.native)).map((l) => (
-          <button key={l.code} className={l.code === state.native ? 'on' : ''} onClick={() => setNative(l.code)}>
-            {l.code === state.native && <Icon name="check" />}{l.ko}
-          </button>
-        ))}
+      <div className="grab" />
+      <div className="lg-hd"><h3>{tt('언어 설정')}</h3><button onClick={closeLayer}>{tt('완료')}</button></div>
+      <p className="lg-sum">
+        <span className="fl"><Flag code={state.native} size={20} /><i>→</i>{state.learn.map((c) => <Flag key={c} code={c} size={20} />)}</span>
+        {tt('뜻은 {a}로, 문장은 {b}로', { a: lang(state.native).ko, b: learnKo })}
+      </p>
+      <div className="lg-tabs">
+        <button className={tab === 'learn' ? 'on' : ''} onClick={() => setTab('learn')}>{tt('배울 언어')} {state.learn.length}</button>
+        <button className={tab === 'native' ? 'on' : ''} onClick={() => setTab('native')}>{tt('내 언어')} · {lang(state.native).ko}</button>
       </div>
-      <div className="lg-h"><span className="n b">2</span><b>{tt('배울 언어')}</b></div>
-      <small className="lg-s">{tt('이 언어 문장이 나와요 · 여러 개 골라도 돼요')}</small>
-      <div className="lg-grid">
-        {LANGS.filter((l) => l.code !== state.native).map((l) => {
-          const on = state.learn.includes(l.code);
+      <small className="lg-s">{tab === 'learn' ? tt('이 언어 문장이 나와요 · 여러 개 골라도 돼요') : tt('뜻과 설명, 앱 글자가 이 언어로 나와요 · 하나만')}</small>
+      <div className={`lg-flags${tab === 'native' ? ' one' : ''}`}>
+        {items.map((l) => {
+          const on = tab === 'learn' ? state.learn.includes(l.code) : l.code === state.native;
+          const main = tab === 'learn' ? l.ko : l.name.replace('Bahasa ', '');
+          const sub = tab === 'learn' ? l.name.replace('Bahasa ', '') : l.code === dev ? tt('기기 언어') : l.ko;
           return (
-            <button key={l.code} className={on ? 'on' : ''} onClick={() => toggleLearn(l.code)}>
-              <Code c={l.code} /><span className="nm">{l.ko}</span><span className="ck">{on && <Icon name="check" />}</span>
+            <button key={l.code} className={on ? 'on' : ''} onClick={() => (tab === 'learn' ? toggleLearn(l.code) : setNative(l.code))}>
+              <Flag code={l.code} size={28} />
+              <span className="nm"><b>{main}</b><small>{sub}</small></span>
+              <span className="ck">{on && <Icon name="check" />}</span>
             </button>
           );
         })}
       </div>
-      <button className="lg-done" onClick={closeLayer}>{tt('완료')}</button>
     </div>
   );
 }
@@ -95,9 +100,9 @@ export function Settings() {
       <button className="my-card my-lang" onClick={() => openSheet(<LangSheet />)}>
         <span className="hd"><b>{tt('언어')}</b><span className="ed">{tt('바꾸기')}<Icon name="chev" /></span></span>
         <span className="pair">
-          <span className="nat"><small>{tt('내 언어')}</small><b>{lang(state.native).ko}</b></span>
+          <span className="nat"><Flag code={state.native} size={28} /><span><small>{tt('내 언어')}</small><b>{lang(state.native).ko}</b></span></span>
           <span className="arr"><Icon name="back" /></span>
-          <span className="lrn"><small>{tt('배울 언어')}</small><span className="chips">{state.learn.map((c) => <span key={c}>{lang(c).ko}</span>)}</span></span>
+          <span className="lrn"><small>{tt('배울 언어')}</small><span className="chips">{state.learn.map((c) => <span key={c}><Flag code={c} size={18} />{lang(c).ko}</span>)}</span></span>
         </span>
       </button>
 
