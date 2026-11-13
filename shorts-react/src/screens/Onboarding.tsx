@@ -10,6 +10,7 @@ import { useStore } from '../store';
 import { useUi } from '../ui';
 import { useLangPick } from './LangPickers';
 import { Code } from './Settings';
+import { Flag } from '../components/Flag';
 import { Exercise } from './Exercise';
 
 const TIMELINE = [
@@ -21,19 +22,20 @@ const TIMELINE = [
 
 // 맨 처음 화면은 누가 볼지 몰라서 고른 언어로 바로 보여 준다 (앱 번역 파일과 따로)
 const ASK: Record<string, [string, string, string, string]> = {
-  ko: ['어떤 언어를 쓰세요?', '문장의 뜻과 설명이 이 언어로 나와요.', '기기 언어', '다음'],
-  en: ['Which language do you speak?', 'Meanings and explanations will appear in this language.', 'Device', 'Next'],
-  ja: ['どの言語を使いますか？', '文の意味と説明がこの言語で表示されます。', '端末の言語', '次へ'],
-  zh: ['你使用哪种语言？', '句子的意思和说明将以这种语言显示。', '设备语言', '下一步'],
-  es: ['¿Qué idioma hablas?', 'Los significados y explicaciones aparecerán en este idioma.', 'Del dispositivo', 'Siguiente'],
-  fr: ['Quelle langue parlez-vous ?', "Les sens et explications s'afficheront dans cette langue.", "De l'appareil", 'Suivant'],
-  de: ['Welche Sprache sprichst du?', 'Bedeutungen und Erklärungen erscheinen in dieser Sprache.', 'Gerät', 'Weiter'],
-  pt: ['Qual idioma você fala?', 'Os significados e explicações aparecerão neste idioma.', 'Do aparelho', 'Próximo'],
-  ru: ['На каком языке вы говорите?', 'Значения и пояснения будут на этом языке.', 'Язык устройства', 'Далее'],
-  vi: ['Bạn nói ngôn ngữ nào?', 'Nghĩa và giải thích sẽ hiển thị bằng ngôn ngữ này.', 'Thiết bị', 'Tiếp'],
-  id: ['Bahasa apa yang kamu gunakan?', 'Arti dan penjelasan akan tampil dalam bahasa ini.', 'Perangkat', 'Lanjut'],
+  ko: ['어떤 언어를 쓰세요?', '문장의 뜻과 설명이 이 언어로 나와요.', '기기 언어', '한국어로 시작하기'],
+  en: ['Which language do you speak?', 'Meanings and explanations will appear in this language.', 'Device', 'Continue in English'],
+  ja: ['どの言語を使いますか？', '文の意味と説明がこの言語で表示されます。', '端末の言語', '日本語で始める'],
+  zh: ['你使用哪种语言？', '句子的意思和说明将以这种语言显示。', '设备语言', '用中文开始'],
+  es: ['¿Qué idioma hablas?', 'Los significados y explicaciones aparecerán en este idioma.', 'Del dispositivo', 'Continuar en español'],
+  fr: ['Quelle langue parlez-vous ?', "Les sens et explications s'afficheront dans cette langue.", "De l'appareil", 'Continuer en français'],
+  de: ['Welche Sprache sprichst du?', 'Bedeutungen und Erklärungen erscheinen in dieser Sprache.', 'Gerät', 'Weiter auf Deutsch'],
+  pt: ['Qual idioma você fala?', 'Os significados e explicações aparecerão neste idioma.', 'Do aparelho', 'Continuar em português'],
+  ru: ['На каком языке вы говорите?', 'Значения и пояснения будут на этом языке.', 'Язык устройства', 'Продолжить на русском'],
+  vi: ['Bạn nói ngôn ngữ nào?', 'Nghĩa và giải thích sẽ hiển thị bằng ngôn ngữ này.', 'Thiết bị', 'Tiếp tục bằng tiếng Việt'],
+  id: ['Bahasa apa yang kamu gunakan?', 'Arti dan penjelasan akan tampil dalam bahasa ini.', 'Perangkat', 'Lanjut dengan bahasa Indonesia'],
 };
-const HELLO = ['Hello', '안녕하세요', 'こんにちは', '你好', 'Hola', 'Bonjour', 'Xin chào'];
+const HELLO = [['en', 'Hello'], ['ko', '안녕하세요'], ['ja', 'こんにちは'], ['es', '¡Hola!']];
+const NAT_ORDER = ['ko', 'en', 'ja', 'zh', 'es', 'id', 'vi', 'fr', 'de', 'pt', 'ru'];
 /** 진행 점: 내 언어 → 배울 언어 → 저장 체험 → 복습 */
 const Dots = ({ at }: { at: number }) => <div className="ob-dots">{[0, 1, 2, 3].map((i) => <i key={i} className={i === at ? 'on' : ''} />)}</div>;
 
@@ -107,24 +109,27 @@ export function Onboarding() {
   }
 
   return (
-    <section className="screen">
+    <section className={`screen${step === 1 ? ' ob-s1' : ''}`}>
       <div className="page" style={{ paddingTop: 16, paddingBottom: step === 2 ? 300 : 190 }}>
         {step >= 3 && step <= 5 && <Dots at={Math.min(step - 1, 3)} />}
         {step === 1 && (
           <>
             <Dots at={0} />
-            <div className="ob-hi">{HELLO.map((h) => <span key={h}>{h}</span>)}</div>
+            <div className="ob-hi">{HELLO.map(([c, h]) => <span key={h}><Flag code={c} size={18} />{h}</span>)}</div>
             <h2 className="title ob-q">{ask[0]}</h2>
             {state.native !== 'en' && <p className="ob-en">Which language do you speak?</p>}
-            <p className="desc">{ask[1]}</p>
             <div className="ob-nat">
-              {[...LANGS].sort((a, b) => +(b.code === dev) - +(a.code === dev)).map((l) => (
-                <button key={l.code} className={l.code === state.native ? 'on' : ''} onClick={() => setNative(l.code)}>
-                  <b>{l.name}</b>{state.native === 'ko' && l.code !== 'ko' && <small>{l.ko}</small>}
-                  {l.code === dev && <em>{ask[2]}</em>}
-                  <span className="rd" />
-                </button>
-              ))}
+              {[...LANGS].sort((a, b) => (a.code === dev ? -1 : b.code === dev ? 1 : NAT_ORDER.indexOf(a.code) - NAT_ORDER.indexOf(b.code))).map((l) => {
+                const on = l.code === state.native;
+                const sub = l.code === dev ? ask[2] : state.native === 'ko' && l.code !== 'ko' ? l.ko : '';
+                return (
+                  <button key={l.code} className={on ? 'on' : ''} onClick={() => setNative(l.code)}>
+                    <Flag code={l.code} />
+                    <span className="nm"><b>{l.name.replace('Bahasa ', '')}</b>{sub && <small className={l.code === dev ? 'dev' : ''}>{sub}</small>}</span>
+                    {on && <span className="ck"><Icon name="check" /></span>}
+                  </button>
+                );
+              })}
             </div>
           </>
         )}
@@ -184,7 +189,7 @@ export function Onboarding() {
         )}
       </div>
       <div className="bottom rv-card" style={{ textAlign: 'center' }}>
-        {step === 1 && <Button onClick={() => setStep(2)}>{ask[3]}</Button>}
+        {step === 1 && <button className="ob-go" onClick={() => setStep(2)}>{ask[3]}</button>}
         {step === 2 && (
           <>
             {sample && (

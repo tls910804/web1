@@ -1056,24 +1056,36 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
 .ob-natpill{display:flex;align-items:center;gap:3px;padding:6px 8px 6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:12.5px;color:var(--muted)}
 .ob-natpill b{color:var(--ink)}
 .ob-natpill .i{width:13px;height:13px;stroke:var(--muted);transform:rotate(90deg)}
-.ob-hi{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
-.ob-hi span{font-size:12px;font-weight:500;color:var(--muted);background:var(--soft);padding:4px 10px;border-radius:999px}
 h2.title.ob-q{font-size:26px;line-height:34px;font-weight:700;letter-spacing:-.4px;margin:0}
 .ob-en{margin:2px 0 0;font:500 14px/20px var(--f-latin);color:var(--muted)}
 .ob-q ~ .desc{margin:10px 0 18px;font-size:14px;line-height:20px;color:var(--muted)}
-.ob-nat{display:flex;flex-direction:column;gap:6px}
-.ob-nat button{display:flex;align-items:center;gap:8px;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-align:left}
-.ob-nat button.on{border:1.5px solid var(--ink)}
-.ob-nat b{font-size:16px;font-weight:500}
-.ob-nat .on b{font-weight:700}
-.ob-nat small{font-size:12px;color:var(--muted)}
-.ob-nat em{margin-left:auto;font-style:normal;font-size:11px;font-weight:700;color:var(--blue);background:color-mix(in srgb,var(--blue) 10%,transparent);padding:3px 7px;border-radius:6px}
-.ob-nat .rd{width:22px;height:22px;border-radius:50%;border:1.5px solid var(--line);flex:none;margin-left:auto}
-.ob-nat em + .rd{margin-left:0}
-.ob-nat .on .rd{border:7px solid var(--ink)}
 .ob-grid .nm small{display:block;font:400 11px/1.3 var(--f-latin);color:var(--muted)}
 .ob-pv{display:flex;flex-direction:column;gap:3px;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:10px;animation:up .25s ease-out}
 .ob-pv .cap{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted)}
 .ob-pv .cap .lg-code{width:20px;height:20px;font-size:7.5px}
 .ob-pv b{font-size:17px;line-height:24px}
 .ob-pv small{font-size:13px;color:var(--muted)}
+
+/* 온보딩 1단계 · 국기 2열 */
+.screen.ob-s1{background:radial-gradient(130% 34% at 50% -6%,color-mix(in srgb,var(--blue) 22%,transparent),transparent 70%),var(--bg)}
+.flag{border-radius:50%;flex:none;display:block}
+.ob-hi{display:flex;gap:6px;margin-bottom:16px;overflow:hidden}
+.ob-hi span{display:flex;align-items:center;gap:5px;flex:none;font-size:12px;font-weight:500;color:var(--ink);padding:4px 10px 4px 4px;border-radius:14px 14px 14px 4px}
+.ob-hi span:nth-child(1){background:var(--card);box-shadow:0 2px 6px rgba(26,40,80,.08)}
+.ob-hi span:nth-child(2){background:#ffeef0}
+.ob-hi span:nth-child(3){background:#fff4e5}
+.ob-hi span:nth-child(4){background:#eafaf0}
+:root[data-theme="dark"] .ob-hi span:not(:first-child){background:var(--soft)}
+.ob-q + .ob-en{margin-bottom:18px}
+.ob-nat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.ob-en + .ob-nat{margin-top:0}
+.ob-nat button{display:flex;align-items:center;gap:9px;min-width:0;padding:13px 10px;border-radius:16px;border:1.5px solid transparent;background:var(--card);color:var(--ink);text-align:left;box-shadow:0 4px 14px rgba(38,51,89,.07)}
+.ob-nat button.on{background:color-mix(in srgb,var(--blue) 9%,var(--card));border-color:color-mix(in srgb,var(--blue) 45%,transparent);box-shadow:none}
+.ob-nat .nm{flex:1;min-width:0}
+.ob-nat b{display:block;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ob-nat .on b{font-weight:700;color:color-mix(in srgb,var(--blue) 70%,var(--ink))}
+.ob-nat small{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.ob-nat small.dev{color:var(--blue);font-weight:700}
+.ob-nat .ck{width:20px;height:20px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex:none}
+.ob-nat .ck .i{width:12px;height:12px;stroke:#fff;stroke-width:3}
+.ob-go{width:100%;height:54px;border-radius:18px;border:0;background:var(--blue);color:#fff;font-size:16px;font-weight:700;box-shadow:0 6px 16px color-mix(in srgb,var(--blue) 30%,transparent)}
