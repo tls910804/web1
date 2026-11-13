@@ -120,6 +120,7 @@ export function App() {
       {screen === 'onboarding' && <Onboarding />}
       {screen === 'feed' && <Feed />}
       {screen === 'shorts' && <Feed onlyVideo />}
+      {screen === 'shorts2' && <Feed onlyVideo overlay />}
       {screen === 'saved' && <Saved />}
       {screen === 'stats' && <Stats />}
       {screen === 'settings' && <Settings />}

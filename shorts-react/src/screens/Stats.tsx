@@ -2,7 +2,7 @@ import { DAY } from '../constants';
 import { tt } from '../i18n';
 import { Icon } from '../components/Icon';
 import { mastered, minutesFor, todayCount } from '../lib/srs';
-import { dayKey, lang, sentence, startOfDay, trOf } from '../lib/text';
+import { dayKey, lang, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { useActions } from '../lib/useActions';
 import { useStore } from '../store';
 import { useUi } from '../ui';
@@ -80,7 +80,7 @@ export function Stats() {
         </span>
         <span className="week">
           {week.map((w) => (
-            <span key={w.d} className={`${w.done ? 'done' : ''}${w.today ? ' today' : ''}`}><i>{w.done && <Icon name="check" />}</i>{tt(w.d)}</span>
+            <span key={w.d} className={`${w.done ? 'wd-on' : ''}${w.today ? ' wd-today' : ''}`}><i>{w.done && <Icon name="check" />}</i>{tt(w.d)}</span>
           ))}
         </span>
       </button>
@@ -95,7 +95,7 @@ export function Stats() {
         <button className="st2-go" onClick={() => go('feed')}>{tt('10문장 공부 시작')}</button>
         <div className="st2-card">
           <b className="h">{tt('앞으로 여기에 쌓여요')}</b>
-          {[tt('외운 표현 수와 이번 주 새로 담은 수'), tt('이번 주 복습 · 자동 공부 · AI 전화'), tt('자꾸 헷갈리는 문장 → 바로 복습')].map((t) => <p key={t} className="dot">{t}</p>)}
+          {[tt('외운 표현 수와 이번 주 새로 담은 수'), tt('이번 주 복습 · 자동 공부 · AI 전화'), tt('자꾸 헷갈리는 문장 → 바로 복습')].map((t) => <p key={t} className="st2-li">{t}</p>)}
         </div>
       </div></section>
     );
@@ -142,7 +142,7 @@ export function Stats() {
           <div className="st2-row"><b className="h">{tt('자꾸 헷갈리는 문장')}</b><span className="cnt">{tt('{n}개', { n: weak.length })}</span></div>
           {weak.map((x) => (
             <div key={x.id} className="wk">
-              <span><b lang={x.card.lang}>{x.kind === 'w' ? x.card.words[x.wi] : sentence(x.card)}</b><small>{trOf(x.card.tr, state.native)}</small></span>
+              {(() => { const w = x.kind === 'w' ? wordInfo(x.card, x.wi, state.native) : null; return <span><b lang={x.card.lang}>{w ? w.text : sentence(x.card)}</b><small>{w ? (w.mean || sentence(x.card)) : trOf(x.card.tr, state.native)}</small></span>; })()}
               <i>{tt('{n}번 틀림', { n: x.lapses || 0 })}</i>
             </div>
           ))}

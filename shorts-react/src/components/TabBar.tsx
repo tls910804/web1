@@ -13,7 +13,7 @@ const TABS: { id: Screen; label: string; icon: 'compass' | 'play' | 'phone' | 'm
   { id: 'settings', label: '마이', icon: 'user' },
 ];
 
-export const TAB_SCREENS: Screen[] = ['feed', 'shorts', 'call', 'rest', 'saved', 'stats', 'settings'];
+export const TAB_SCREENS: Screen[] = ['feed', 'shorts', 'shorts2', 'call', 'rest', 'saved', 'stats', 'settings'];
 
 export function TabBar() {
   const { screen, go } = useUi();
@@ -22,7 +22,7 @@ export function TabBar() {
   return (
     <nav className="tabs">
       {TABS.map((t) => (
-        <button key={t.id} className={`tab${screen === t.id || (t.id === 'feed' && screen === 'shorts') || (t.id === 'settings' && screen === 'stats') ? ' on' : ''}`} onClick={() => go(t.id)}>
+        <button key={t.id} className={`tab${screen === t.id || (t.id === 'feed' && (screen === 'shorts' || screen === 'shorts2')) || (t.id === 'settings' && screen === 'stats') ? ' on' : ''}`} onClick={() => go(t.id)}>
           <span className="ico">
             <Icon name={t.icon} />
             {t.id === 'saved' && n > 0 && <span className="badge" key={n}>{n}</span>}

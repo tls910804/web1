@@ -68,7 +68,7 @@ export interface AppState {
 
 export type Screen =
   | 'splash' | 'onboarding' | 'feed' | 'shorts' | 'saved' | 'stats' | 'settings'
-  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest';
+  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest' | 'shorts2';
 
 export type SubName = 'langs' | 'learn' | 'review-mode' | 'notify' | 'display' | 'data' | 'account';
 

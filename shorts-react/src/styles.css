@@ -1185,16 +1185,16 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .streak .week{display:flex;justify-content:space-between}
 .streak .week>span{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
 .streak .week i{width:34px;height:34px;border-radius:50%;background:var(--soft);display:flex;align-items:center;justify-content:center}
-.streak .week .done i{background:#ff7a2f}
+.streak .week .wd-on i{background:#ff7a2f}
 .streak .week .i{width:16px;height:16px;stroke:#fff;stroke-width:3}
-.streak .week .today{color:var(--ink);font-weight:700}
-.streak .week .today i{box-shadow:inset 0 0 0 2px #ff7a2f}
-.streak .week .today.done i{box-shadow:none}
+.streak .week .wd-today{color:var(--ink);font-weight:700}
+.streak .week .wd-today i{box-shadow:inset 0 0 0 2px #ff7a2f}
+.streak .week .wd-today.wd-on i{box-shadow:none}
 .st2-todo{display:flex;align-items:center;gap:10px;padding:10px 10px 10px 16px;border-radius:16px;background:rgba(255,122,47,.09)}
 .st2-todo>span{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
 .st2-todo b{font-size:14px}.st2-todo small{font-size:12px;color:var(--muted)}
 .st2-todo button{flex:none;padding:9px 14px;border-radius:12px;border:0;background:#ff7a2f;color:#fff;font-size:13.5px;font-weight:700}
-.st2-go{height:50px;border-radius:16px;border:0;background:#ff7a2f;color:#fff;font-size:15px;font-weight:700}
+.st2-go{display:flex;align-items:center;justify-content:center;height:50px;border-radius:16px;border:0;background:#ff7a2f;color:#fff;font-size:15px;font-weight:700}
 .st2-card .lbl{display:block;margin:0 0 2px;font-size:13px;font-weight:600;color:var(--muted)}
 .st2-card .big{font:700 30px/1.1 var(--f-latin)}
 .st2-card .big em{font:700 15px var(--f-ui);font-style:normal;margin-left:3px}
@@ -1221,9 +1221,9 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .wk b{font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wk small{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wk i{flex:none;font-style:normal;font-size:11px;font-weight:700;color:#c2410c;background:#fdebe4;padding:3px 7px;border-radius:8px}
-.st2-dark{margin-top:8px;height:46px;border-radius:14px;border:0;background:var(--ink);color:var(--bg);font-size:14.5px;font-weight:700}
-.st2-card .dot{margin:0;padding-left:14px;position:relative;font-size:13.5px;color:var(--muted)}
-.st2-card .dot::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.st2-dark{display:flex;align-items:center;justify-content:center;margin-top:8px;height:46px;border-radius:14px;border:0;background:var(--ink);color:var(--bg);font-size:14.5px;font-weight:700}
+.st2-card .st2-li{margin:0;padding-left:14px;position:relative;font-size:13.5px;color:var(--muted)}
+.st2-card .st2-li::before{content:"";position:absolute;left:2px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
 .st-month{display:flex;flex-direction:column;gap:14px}
 .st-month .hd{display:flex;justify-content:space-between;align-items:center}
 .st-month .hd h3{font-size:20px!important;font-weight:700!important}
@@ -1303,6 +1303,60 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .my-rec .fl .i{width:20px;height:20px;stroke:#ff7a2f;fill:#ff7a2f}
 .my-rec .tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
 .my-rec b{font-size:15px}.my-rec small{font-size:12.5px;color:var(--muted)}
-.st2-hd{display:flex;align-items:center;gap:4px}
+.st2-hd{display:flex;align-items:center;justify-content:flex-start;gap:4px}
 .st2-hd .back{width:36px;height:36px;margin-left:-8px;border:0;background:none;display:flex;align-items:center;justify-content:center}
 .st2-hd .back .i{width:22px;height:22px;stroke:var(--ink)}
+
+/* 둘러보기 위 문장 / 쇼츠 탭 + 처음 한 번 안내 */
+.mode-tabs{display:flex;gap:22px;padding:0 20px;border-bottom:1px solid var(--line)}
+.mode-tabs button{position:relative;display:flex;align-items:center;gap:6px;padding:8px 0 10px;border:0;background:none;font-size:19px;font-weight:700;color:#a3a8af}
+.mode-tabs .i{width:19px;height:19px;stroke:currentColor}
+.mode-tabs small{font:600 12px var(--f-latin);color:#a3a8af}
+.mode-tabs .on{color:var(--ink)}
+.mode-tabs .on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:2px;background:var(--blue)}
+.mode-tabs .on.sh::after{background:#e5484d}
+.shorts .mode-tabs{border-color:rgba(255,255,255,.1)}
+.shorts .mode-tabs button{color:#6b7078}.shorts .mode-tabs small{color:#6b7078}
+.shorts .mode-tabs .on{color:#fff}
+.feed-guide{position:absolute;left:0;right:0;top:52px;bottom:0;z-index:6;background:rgba(10,12,20,.45);padding:12px 16px;animation:up .2s ease both}
+.feed-guide .tip{max-width:300px;display:flex;flex-direction:column;gap:12px;padding:16px 18px;border-radius:18px 18px 18px 18px;border-top-left-radius:6px;background:var(--card);color:var(--ink);box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.feed-guide .tip>b{font-size:16px}
+.feed-guide p{margin:0;display:flex;align-items:center;gap:10px}
+.feed-guide p i{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex:none}
+.feed-guide p i.t{background:color-mix(in srgb,var(--blue) 12%,transparent);color:var(--blue)}
+.feed-guide p i.v{background:rgba(229,72,77,.12);color:#e5484d}
+.feed-guide p .i{width:17px;height:17px;stroke:currentColor}
+.feed-guide p span{display:flex;flex-direction:column}
+.feed-guide p b{font-size:14px}.feed-guide p small{font-size:12px;color:var(--muted)}
+.feed-guide .tip>button{display:flex;align-items:center;justify-content:center;height:42px;border-radius:12px;border:0;background:var(--ink);color:var(--bg);font-size:14px;font-weight:700}
+.feed-top .mode-tabs{padding:0;border:0;gap:18px}
+.feed-top .mode-tabs button{padding:4px 0 8px}
+.feed-guide{top:98px}
+
+/* 10문장 공부하기 (I 시안 C4: 연회색 바탕 + 파란 재생 점) */
+.card-body:has(.study-btn){padding-bottom:100px}
+.study-btn{left:16px;right:16px;width:auto;height:60px;margin:0;gap:12px;padding:0 16px 0 8px;border-radius:18px;border:0;box-shadow:none;background:rgba(0,0,0,.045);text-align:left}
+.study-btn i{width:44px;height:44px;border-radius:50%;flex:none;padding-left:2px}
+.study-btn i svg{width:13px;height:13px}
+.study-btn span{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.study-btn b{font-size:16px;font-weight:700;color:var(--ink)}
+.study-btn small{font-size:12px;font-weight:400;color:var(--muted)}
+.study-btn svg.arr{width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+:root[data-theme="dark"] .study-btn{background:rgba(255,255,255,.07)}
+@media (max-height:700px){.study-btn{height:54px}.card-body:has(.study-btn){padding-bottom:84px}}
+.glow:not(.shorts) .acts{bottom:228px}
+@media (max-height:700px){.glow:not(.shorts) .acts{bottom:196px}}
+
+/* 임시 시안쇼츠: 영상 화면 가득 + 아래 자막 겹치기 (유튜브 정책 확인 전, 배포 금지) */
+.shorts2 .card-body{top:0;left:0;right:0;bottom:66px;border-radius:0}
+.shorts2 .feed-top{top:0;padding-top:6px;background:linear-gradient(rgba(0,0,0,.55),transparent);padding-bottom:18px}
+.shorts2 .mode-tabs .on{color:#fff}
+.shorts2 .acts{left:auto;right:10px;bottom:270px;flex-direction:column;justify-content:flex-start;gap:14px}
+.shorts2 .act{width:42px;height:42px;background:rgba(0,0,0,.28)}
+.shorts2 .card.full .vsub{padding-right:64px}
+.app:has(.screen.shorts2) .tabs{background:#000;border-top:0}
+/* 문장/쇼츠 탭 글자: 너무 굵고 커서 앱 기본 글꼴로 한 단계 가볍게 */
+.mode-tabs button{font-family:var(--f-ui);font-size:17px;font-weight:600;letter-spacing:-.2px}
+.mode-tabs .on{font-weight:700}
+.mode-tabs small{font:500 12px var(--f-ui);letter-spacing:0}
+.mode-tabs .i{width:17px;height:17px}

@@ -69,7 +69,8 @@ export function VideoBlock({ video, active, onSpoken }: { video: NonNullable<Car
 }
 
 /** onlyVideo: 쇼츠 탭 — 같은 카드 화면에서 영상 카드만 보여준다 */
-export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
+// overlay: 임시 시안 — 영상을 화면 가득, 자막을 영상 아래쪽에 겹쳐 보여 준다
+export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: boolean } = {}) {
   const { state, set } = useStore();
   const ui = useUi();
   const { findSaved, saveItem, toggleSave } = useActions();
@@ -88,7 +89,9 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   const activeCats = useMemo(() => cats.filter((c) => catList.includes(c)), [cats, catList]);
   const tabs = useMemo(() => tabList(state), [state]);
   const activeTab = tabs.includes(tab) ? tab : '';
-  const cards = useMemo(() => (onlyVideo ? videoCards(state) : feedCards(state, activeCats, activeTab)), [state, activeCats, activeTab, onlyVideo]);
+  const textCards = useMemo(() => feedCards(state, activeCats, activeTab), [state, activeCats, activeTab]);
+  const vidCards = useMemo(() => videoCards(state), [state]);
+  const cards = onlyVideo ? vidCards : textCards;
   const cur: Card | undefined = cards[Math.min(index, Math.max(cards.length - 1, 0))];
   const curId = cur?.id;
 
@@ -155,15 +158,20 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   };
   const saved = !!(cur && findSaved('s', cur));
 
-  // 쇼츠는 따로 탭이 아니라 둘러보기 안의 "영상" 보기
+  // 위 탭: 문장 / 쇼츠 (개수를 같이 보여 줘서 무엇이 들어 있는지 알게)
   const modeSw = (
-    <div className="mode-sw">
-      <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}><Icon name="mark" />{tt('카드')}</button>
-      <button className={onlyVideo ? 'on' : ''} onClick={() => ui.go('shorts')}><Icon name="play" />{tt('영상')}</button>
+    <div className="mode-tabs">
+      <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}><Icon name="copy" />{tt('문장')}<small>{textCards.length}</small></button>
+      <button className={onlyVideo && !overlay ? 'on sh' : ''} onClick={() => ui.go('shorts')}><Icon name="play" />{tt('쇼츠')}<small>{vidCards.length}</small></button>
+      {import.meta.env.DEV && <button className={overlay ? 'on sh' : ''} onClick={() => ui.go('shorts2')}><Icon name="play" />{tt('시안쇼츠')}</button>}
     </div>
   );
+  // 처음 한 번만: 문장 / 쇼츠가 무엇인지 알려 준다
+  const [guide, setGuide] = useState(() => { try { return !onlyVideo && !localStorage.getItem('feed-guide'); } catch { return false; } });
+  const closeGuide = () => { setGuide(false); try { localStorage.setItem('feed-guide', '1'); } catch { /* 다음에 또 보여도 괜찮음 */ } };
+
   return (
-    <section className={`screen glow${cur?.video?.full ? ' on-video' : ''}${onlyVideo ? ' shorts' : ''}`}>
+    <section className={`screen glow${cur?.video?.full || overlay ? ' on-video' : ''}${onlyVideo ? ' shorts' : ''}${overlay ? ' shorts2' : ''}`}>
       {index < cards.length - 1 && <div className="peek"><span>{tt('다음 문장')}</span></div>}
       <div className="feed" ref={listRef} onScroll={onScroll} onClick={onListClick}>
         {!cards.length ? (
@@ -173,10 +181,10 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
             {hasCards && <Button kind="line" auto style={{ marginTop: 12, minHeight: 44, fontSize: 14 }} onClick={openFilter}>{tt('필터 열기')}</Button>}
           </div>
         ) : cards.map((c, i) => (
-          c.video?.full ? (
+          c.video?.full || (overlay && c.video) ? (
           <article className={`card full${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className="card-body vcard">
-              <VideoBlock video={c.video} active={c.id === curId} onSpoken={onSpoken(c)} />
+              <VideoBlock video={overlay ? { ...c.video!, full: true } : c.video!} active={c.id === curId} onSpoken={onSpoken(c)} />
               <div className="vsub">
                 <WordChips card={c} small selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
                 <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
@@ -196,7 +204,7 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
-              {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i>{tt('10문장 공부하기')}</button>}
+              {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i><span><b>{tt('10문장 공부하기')}</b><small>{tt('듣고 · 빈칸 채우기')}</small></span><svg className="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>}
             </div>
           </article>
           )
@@ -216,6 +224,17 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
           {tabs.map((t) => <Chip key={t} on={activeTab === t} onClick={() => { setTab(t); setIndex(0); }}>{tt(t)}</Chip>)}
         </div>
       </div>}
+
+      {guide && (
+        <div className="feed-guide" onClick={closeGuide}>
+          <div className="tip" onClick={(e) => e.stopPropagation()}>
+            <b>{tt('둘러보기는 두 가지예요')}</b>
+            <p><i className="t"><Icon name="copy" /></i><span><b>{tt('문장')}</b><small>{tt('한 문장씩 카드로 · 모든 언어')}</small></span></p>
+            <p><i className="v"><Icon name="play" /></i><span><b>{tt('쇼츠')}</b><small>{tt('영상 속 장면으로 · 지금은 영어만')}</small></span></p>
+            <button onClick={closeGuide}>{tt('알겠어요')}</button>
+          </div>
+        </div>
+      )}
 
       {cards.length > 0 && (
         <div className="acts">
