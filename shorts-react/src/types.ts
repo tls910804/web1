@@ -50,7 +50,8 @@ export interface AppState {
   streak: number;
   best: number;
   lastReview: string | null;
-  log: Record<string, { n: number; ok: number }>;
+  /** 날짜별 기록: n 복습 수 · ok 맞춘 수 · s 자동 공부 문장 · c AI 전화 */
+  log: Record<string, { n: number; ok: number; s?: number; c?: number }>;
   level: string;
   auto: boolean;
   autoRepeat: number;
@@ -67,7 +68,7 @@ export interface AppState {
 
 export type Screen =
   | 'splash' | 'onboarding' | 'feed' | 'shorts' | 'saved' | 'stats' | 'settings'
-  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call';
+  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest';
 
 export type SubName = 'langs' | 'learn' | 'review-mode' | 'notify' | 'display' | 'data' | 'account';
 

@@ -96,8 +96,10 @@ export function Call() {
   const [opts, setOpts0] = useState<Opts>(loadOpts);
   const setOpts = (p: Partial<Opts>) => setOpts0((o) => { const n = { ...o, ...p }; try { localStorage.setItem(OPT_KEY, JSON.stringify(n)); } catch { /* 저장 못 해도 이번엔 적용 */ } return n; });
   const { toast, speak } = useUi();
+  const { logAct } = useActions();
+  const call = () => { bumpCall(); logAct('c'); setLive(true); };
   const leftCalls = Math.max(0, FREE_CALLS - callsToday());
-  if (done) return <Summary scene={scene} lines={done.lines} secs={done.secs} onClose={() => setDone(null)} onAgain={() => { setDone(null); bumpCall(); setLive(true); }} />;
+  if (done) return <Summary scene={scene} lines={done.lines} secs={done.secs} onClose={() => setDone(null)} onAgain={() => { setDone(null); call(); }} />;
   if (live) return <Live scene={scene} opts={opts} onEnd={(lines, secs) => { setLive(false); markDone(scene.id); setDone({ lines, secs }); }} />;
   return (
     <section className="screen call-home">
@@ -122,7 +124,7 @@ export function Call() {
             <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8" /></svg></span>{tt('통화 설정')}
           </button>
         </div>
-        <Slide label={tt('밀어서 받기')} onGo={() => { bumpCall(); setLive(true); }} />
+        <Slide label={tt('밀어서 받기')} onGo={call} />
       </div>
       {more && (
         <div className="ch-sheet" onClick={() => setMore(false)}>
@@ -185,7 +187,7 @@ function Slide({ label, onGo }: { label: string; onGo: () => void }) {
   const [x, setX] = useState(0);
   const drag = useRef<{ x0: number; max: number } | null>(null);
   const down = (e: React.PointerEvent) => {
-    (e.target as Element).setPointerCapture?.(e.pointerId);
+    try { (e.target as Element).setPointerCapture?.(e.pointerId); } catch { /* 이미 끝난 터치면 잡지 않아도 됨 */ }
     drag.current = { x0: e.clientX, max: (track.current?.clientWidth ?? 300) - 82 };
   };
   const move = (e: React.PointerEvent) => { if (drag.current) setX(Math.min(drag.current.max, Math.max(0, e.clientX - drag.current.x0))); };

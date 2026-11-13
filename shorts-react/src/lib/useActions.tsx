@@ -97,7 +97,7 @@ export function useActions() {
         const e = s.log[k] || { n: 0, ok: 0 };
         return {
           saved: s.saved.map((x) => (x.id === item.id ? { ...x, step: res.step, due: r === 'again' ? Date.now() + RETRY : startOfDay(Date.now()) + res.days * DAY, lapses: r === 'again' ? (x.lapses || 0) + 1 : r === 'hard' ? (x.lapses || 0) : Math.max(0, (x.lapses || 0) - 1) } : x)),
-          log: { ...s.log, [k]: { n: e.n + 1, ok: e.ok + (r !== 'again' ? 1 : 0) } },
+          log: { ...s.log, [k]: { ...e, n: e.n + 1, ok: e.ok + (r !== 'again' ? 1 : 0) } },
         };
       });
       next = r === 'again' ? { ...rv, again: [...rv.again, item.id] } : { ...rv, known: [...rv.known, item.id] };
@@ -106,6 +106,13 @@ export function useActions() {
     ui.setRv(next);
     if (next.i >= next.ids.length) { finishStreak(); ui.go('review-done'); }
   }, [ui, state.saved, state.mode, set, finishStreak]);
+
+  /** 자동 공부 한 문장(s) · AI 전화 한 번(c)을 오늘 기록에 더한다 */
+  const logAct = useCallback((key: 's' | 'c') => set((s) => {
+    const k = todayKey();
+    const e = s.log[k] || { n: 0, ok: 0 };
+    return { log: { ...s.log, [k]: { ...e, [key]: (e[key] || 0) + 1 } } };
+  }), [set]);
 
   const startToday = useCallback((s: AppState, weakOnly = false) => startReview((weakOnly ? weakItems(s) : dueItems(s).slice(0, s.daily)).map((x) => x.id)), [startReview]);
 
@@ -126,5 +133,5 @@ export function useActions() {
     }
   }, [state, set, toast]);
 
-  return { findSaved, saveItem, removeItem, toggleSave, openLogin, startReview, startToday, answer, finishStreak, exportData };
+  return { findSaved, saveItem, removeItem, toggleSave, openLogin, startReview, startToday, answer, finishStreak, exportData, logAct };
 }

@@ -22,6 +22,7 @@ import { Stats } from './screens/Stats';
 import { StreakBroken } from './screens/Streak';
 import { Study } from './screens/Study';
 import { Call } from './screens/Call';
+import { Rest } from './screens/Rest';
 import { Sub } from './screens/Sub';
 
 export function App() {
@@ -128,6 +129,7 @@ export function App() {
       {screen === 'add' && <Add />}
       {screen === 'streak' && <StreakBroken />}
       {screen === 'study' && <Study />}
+      {screen === 'rest' && <Rest />}
       {screen === 'call' && <Call />}
 
       {!online && (

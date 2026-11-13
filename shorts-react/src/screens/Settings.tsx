@@ -8,6 +8,8 @@ import { useActions } from '../lib/useActions';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import { callsToday, FREE_CALLS } from './Call';
+import { streakOf } from './Stats';
+import { mastered } from '../lib/srs';
 import { LANGS } from '../data';
 import { useLangPick } from './LangPickers';
 import { useState } from 'react';
@@ -85,6 +87,11 @@ export function Settings() {
   return (
     <section className="screen"><div className="page my">
       <h2 className="title" style={{ marginBottom: 14 }}>{tt('마이')}</h2>
+      <button className="my-card my-rec" onClick={() => go('stats')}>
+        <span className="fl"><Icon name="flame" /></span>
+        <span className="tx"><b>{tt('내 기록')}</b><small>{tt('{s}일 연속 · 외운 표현 {n}개', { s: streakOf(state.log), n: state.saved.filter(mastered).length })}</small></span>
+        <span className="my-chev"><Icon name="chev" /></span>
+      </button>
       {state.account ? (
         <button className="profile" onClick={() => openSub('account')}>
           <span className="avatar">{state.account[0]}</span>

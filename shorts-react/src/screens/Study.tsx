@@ -207,6 +207,7 @@ function KoLine({ card, native }: { card: Card; native: string }) {
 function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void }) {
   const { state } = useStore();
   const { speak } = useUi();
+  const { logAct } = useActions();
   const idx = c.key;
   const answer = clean(join(c, idx.map((i) => c.words[i])));
   const [text, setText] = useState('');
@@ -224,6 +225,7 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
   const finish = (ok: boolean) => {
     if (done !== null) return;
     setDone(ok);
+    logAct('s');
     navigator.vibrate?.(ok ? 12 : [20, 40, 20]);
     onEnd(ok && !shown);
   };

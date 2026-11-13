@@ -155,6 +155,13 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   };
   const saved = !!(cur && findSaved('s', cur));
 
+  // 쇼츠는 따로 탭이 아니라 둘러보기 안의 "영상" 보기
+  const modeSw = (
+    <div className="mode-sw">
+      <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}>{tt('카드')}</button>
+      <button className={onlyVideo ? 'on' : ''} onClick={() => ui.go('shorts')}>{tt('영상')}</button>
+    </div>
+  );
   return (
     <section className={`screen glow${cur?.video?.full ? ' on-video' : ''}${onlyVideo ? ' shorts' : ''}`}>
       {index < cards.length - 1 && <div className="peek"><span>{tt('다음 문장')}</span></div>}
@@ -196,7 +203,9 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
         ))}
       </div>
 
+      {onlyVideo && <div className="feed-top sh">{modeSw}</div>}
       {!onlyVideo && <div className="feed-top">
+        {modeSw}
         <div className="cats">
           <Chip on={!activeTab} onClick={() => { setTab(''); setIndex(0); }}>{tt('전체')}</Chip>
           {tabs.map((t) => <Chip key={t} on={activeTab === t} onClick={() => { setTab(t); setIndex(0); }}>{tt(t)}</Chip>)}
