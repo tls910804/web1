@@ -7,7 +7,7 @@ import { lang } from '../lib/text';
 import { useActions } from '../lib/useActions';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import { callsToday } from './Call';
+import { callsToday, FREE_CALLS } from './Call';
 import { LANGS } from '../data';
 import { SheetHead } from '../components/Layer';
 import { useLangPick } from './LangPickers';
@@ -15,7 +15,7 @@ import { useLangPick } from './LangPickers';
 export const accountName = (account: string | null) => (account ? tt('{a} 계정', { a: account }) : tt('로그인하지 않음'));
 
 type IconName = Parameters<typeof Icon>[0]['name'];
-const FREE_CALLS = 3;
+
 export const LANG_COLOR: Record<string, string> = { en: '#2563eb', ko: '#0ea5e9', ja: '#e11d48', zh: '#d97706', es: '#16a34a', fr: '#7c5cff', de: '#0f766e', pt: '#65a30d', ru: '#9333ea', vi: '#dc2626', id: '#ea580c' };
 export const Code = ({ c }: { c: string }) => {
   const col = LANG_COLOR[c] || '#6b7078';

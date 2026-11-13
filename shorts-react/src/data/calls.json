@@ -69,7 +69,14 @@
    "see you soon"
   ],
   "role": "친구",
-  "group": "일상"
+  "group": "일상",
+  "level": "쉬움",
+  "mins": 2,
+  "missionKo": [
+   "좀 늦어요",
+   "가는 중이에요",
+   "곧 봐요"
+  ]
  },
  {
   "id": "cafe",
@@ -141,7 +148,14 @@
    "that's all"
   ],
   "role": "카페 점원",
-  "group": "카페·식당"
+  "group": "카페·식당",
+  "level": "쉬움",
+  "mins": 2,
+  "missionKo": [
+   "가져갈게요 (포장)",
+   "여기서 먹을게요",
+   "그게 다예요"
+  ]
  },
  {
   "id": "work",
@@ -213,6 +227,13 @@
    "sounds good"
   ],
   "role": "회사 동료",
-  "group": "회사"
+  "group": "회사",
+  "level": "보통",
+  "mins": 3,
+  "missionKo": [
+   "~는 어때요?",
+   "확인해 볼게요",
+   "좋아요"
+  ]
  }
 ]

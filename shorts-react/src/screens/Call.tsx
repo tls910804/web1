@@ -12,7 +12,7 @@ import CALLS from '../data/calls.json';
 // shortcut: 진짜 AI가 아니라 정해 둔 대본(data/calls.json)으로 통화한다. AI 대화를 붙이려면 서버와 언어 모델 API가 필요하다
 // AI 대사 음성은 tools/audio/gen_call.py로 미리 만들어 public/audio에 넣는다(없으면 기기 음성)
 type Turn = { ai: string; ko: string; replies: { en: string; ko: string }[] };
-type Scene = { id: string; title: string; who: string; role: string; group: string; sub: string; voice: string; mission: string[]; turns: Turn[] };
+type Scene = { id: string; title: string; who: string; role: string; group: string; sub: string; voice: string; mission: string[]; missionKo: string[]; level: string; mins: number; turns: Turn[] };
 const SCENES = CALLS as Scene[];
 // 더 보기에서 바꾸는 통화 설정 (이 기기에만 저장)
 type Opts = { hideKo: boolean; slow: boolean; hint: boolean; mins: 3 | 5 };
@@ -21,6 +21,11 @@ const DAY_KEY = 'call-today';
 const today = () => new Date().toDateString();
 /** 오늘 건 AI 전화 횟수 (마이 화면에서 보여 줌) */
 export const callsToday = (): number => { try { const v = JSON.parse(localStorage.getItem(DAY_KEY) || '{}'); return v.d === today() ? v.n : 0; } catch { return 0; } };
+/** 무료로 하루에 걸 수 있는 횟수 (지금은 세기만 하고 막지 않음) */
+export const FREE_CALLS = 3;
+const DONE_KEY = 'call-done';
+const doneScenes = (): string[] => { try { return JSON.parse(localStorage.getItem(DONE_KEY) || '[]'); } catch { return []; } };
+const markDone = (id: string) => { try { localStorage.setItem(DONE_KEY, JSON.stringify([...new Set([...doneScenes(), id])])); } catch { /* 표시만 못 함 */ } };
 const bumpCall = () => { try { localStorage.setItem(DAY_KEY, JSON.stringify({ d: today(), n: callsToday() + 1 })); } catch { /* 못 세도 통화는 됨 */ } };
 const DEF: Opts = { hideKo: false, slow: false, hint: false, mins: 3 };
 const loadOpts = (): Opts => { try { return { ...DEF, ...JSON.parse(localStorage.getItem(OPT_KEY) || '{}') }; } catch { return DEF; } };
@@ -63,7 +68,8 @@ function Marked({ text, upto }: { text: string; upto?: number }) {
   );
 }
 
-type Line = { who: 'ai' | 'me'; en: string; ko?: string; good?: boolean; flag?: boolean; turn: number; at: number };
+// how: 마이크로 말함 / 키보드로 씀 / 추천 대답을 그냥 보냄 (결과에서 따로 센다)
+type Line = { who: 'ai' | 'me'; en: string; ko?: string; good?: boolean; how?: 'said' | 'typed' | 'picked'; flag?: boolean; turn: number; at: number };
 const hm = (t: number) => new Date(t).toLocaleTimeString('ko-KR', { hour: 'numeric', minute: '2-digit' });
 
 export function Call() {
@@ -74,19 +80,23 @@ export function Call() {
   const [more, setMore] = useState(false);
   const [opts, setOpts0] = useState<Opts>(loadOpts);
   const setOpts = (p: Partial<Opts>) => setOpts0((o) => { const n = { ...o, ...p }; try { localStorage.setItem(OPT_KEY, JSON.stringify(n)); } catch { /* 저장 못 해도 이번엔 적용 */ } return n; });
-  const { toast } = useUi();
+  const { toast, speak } = useUi();
+  const leftCalls = Math.max(0, FREE_CALLS - callsToday());
   if (done) return <Summary scene={scene} lines={done.lines} secs={done.secs} onClose={() => setDone(null)} onAgain={() => { setDone(null); bumpCall(); setLive(true); }} />;
-  if (live) return <Live scene={scene} opts={opts} onEnd={(lines, secs) => { setLive(false); setDone({ lines, secs }); }} />;
+  if (live) return <Live scene={scene} opts={opts} onEnd={(lines, secs) => { setLive(false); markDone(scene.id); setDone({ lines, secs }); }} />;
   return (
     <section className="screen call-home">
       <div className="ch-center">
         <h1>{scene.who}</h1>
-        <p className="ch-scene">{tt(scene.title)}</p>
+        <p className="ch-scene">{tt(scene.title)} · {tt('{r} 역할', { r: tt(scene.role) })}</p>
+        <div className="ch-meta"><i>{tt(scene.level)}</i><i>{tt('약 {n}분', { n: scene.mins })}</i><i className="b">{leftCalls ? tt('오늘 {n}번 남음', { n: leftCalls }) : tt('오늘 무료 통화 다 씀')}</i></div>
         <small className="ch-in">{tt('전화가 왔어요')}</small>
       </div>
       <div className="ch-mission">
         <span>{tt('이번 통화에서 써 볼 표현')}</span>
-        <div>{scene.mission.map((m) => <i key={m} lang="en">{m}</i>)}</div>
+        <ul>{scene.mission.map((m, i) => (
+          <li key={m}><span><b lang="en">{m}</b><small>{scene.missionKo[i]}</small></span><button aria-label={tt('듣기')} onClick={() => speak(m, 'en')}><PlayI /></button></li>
+        ))}</ul>
       </div>
       <div className="ch-bottom">
         <div className="ch-icons">
@@ -94,7 +104,7 @@ export function Call() {
             <span><svg viewBox="0 0 24 24"><path d="M5 6h14M5 12h10M5 18h7" /></svg></span>{tt('상황 바꾸기')}
           </button>
           <button onClick={() => setMore(true)}>
-            <span><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="1.4" /><circle cx="12" cy="12" r="1.4" /><circle cx="18" cy="12" r="1.4" /></svg></span>{tt('더 보기')}
+            <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8" /></svg></span>{tt('통화 설정')}
           </button>
         </div>
         <Slide label={tt('밀어서 받기')} onGo={() => { bumpCall(); setLive(true); }} />
@@ -140,12 +150,13 @@ export function Call() {
                 {SCENES.filter((s) => s.group === g).map((s) => (
                   <button key={s.id} className={`it${s.id === scene.id ? ' on' : ''}`} onClick={() => { setScene(s); setPick(false); }}>
                     <span className="ic">{SCENE_ICON[s.id]}</span>
-                    <span className="tx"><b>{tt(s.title)}</b><small>{tt('{r} 역할', { r: tt(s.role) })} · <span lang="en">{s.mission.join(', ')}</span></small></span>
+                    <span className="tx"><b>{tt(s.title)}</b><small className="tags"><i>{tt('{r} 역할', { r: tt(s.role) })}</i><i className={s.level === '쉬움' ? 'ez' : 'md'}>{tt(s.level)}</i><i>{tt('약 {n}분', { n: s.mins })}</i>{doneScenes().includes(s.id) && <i className="dn">✓ {tt('해 봄')}</i>}</small></span>
                     <span className="ck">{s.id === scene.id && <Icon name="check" />}</span>
                   </button>
                 ))}
               </div>
             ))}
+            <div className="soon">{tt('곧 추가 · 길 묻기, 호텔 체크인, 병원 예약')}</div>
           </div>
         </div>
       )}
@@ -194,6 +205,9 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   const [native, setNative] = useState<number | null>(null);
   const [hideKo, setHideKo] = useState(opts.hideKo);
   const [peek, setPeek] = useState<number[]>([]); // 가린 상태에서 하나씩 눌러 본 뜻
+  const [practice, setPractice] = useState<{ en: string; ko: string } | null>(null); // 고른 대답을 따라 말해 보는 중
+  const [typing, setTyping] = useState(!Recognition);
+  const [typed, setTyped] = useState('');
   const used = useMemo(() => scene.mission.filter((m) => lines.some((l) => l.who === 'me' && l.en.toLowerCase().includes(m))), [lines, scene.mission]);
   const rec = useRef<SpeechRec | null>(null);
   const asked = useRef(false);
@@ -218,17 +232,17 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     const n = turn.ai.split(' ').length, ms = talkMs(turn.ai) * (opts.slow ? 1.45 : 1);
     setReveal(0);
     const iv = setInterval(() => setReveal((r) => Math.min(n, r + 1)), ms / n);
-    const t = setTimeout(() => { clearInterval(iv); setReveal(n); setPhase('me'); setHelp(opts.hint); setSay(''); setHeard(''); heardRef.current = ''; if (asked.current) listen(); }, ms + 300);
+    const t = setTimeout(() => { clearInterval(iv); setReveal(n); setPhase('me'); setHelp(opts.hint); setSay(''); setHeard(''); heardRef.current = ''; if (asked.current && !typing) listen(); }, ms + 300);
     return () => { clearInterval(iv); clearTimeout(t); };
   }, [phase, k]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const answer = (said: string) => {
+  const answer = (said: string, how: 'said' | 'typed' | 'picked' = 'said') => {
     rec.current?.abort();
     setListening(false);
     if (!said.trim()) return;
-    const good = turn.replies.some((r) => closeness(said, r.en) >= 0.5);
-    setLines((l) => [...l, { who: 'me', en: said.trim(), good, turn: k, at: Date.now() }]);
-    setHeard(''); heardRef.current = '';
+    const good = how !== 'picked' && turn.replies.some((r) => closeness(said, r.en) >= 0.5);
+    setLines((l) => [...l, { who: 'me', en: said.trim(), good, how, turn: k, at: Date.now() }]);
+    setHeard(''); heardRef.current = ''; setPractice(null); setTyped('');
     setPhase('check');
     setTimeout(() => {
       if (k + 1 < scene.turns.length) { setK(k + 1); setPhase('ai'); }
@@ -236,12 +250,12 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     }, 1400);
   };
 
-  const listen = async () => {
-    if (!Recognition || micErr) return;
+  const listen = async (force = false) => {
+    if (!Recognition || (micErr && !force)) return;
     hush(); // 상대 목소리가 마이크에 섞이지 않게
     if (!asked.current && navigator.mediaDevices?.getUserMedia) {
       try { const st = await navigator.mediaDevices.getUserMedia({ audio: true }); st.getTracks().forEach((t) => t.stop()); }
-      catch { setMicErr('not-allowed'); setHelp(true); return; }
+      catch { setMicErr('not-allowed'); setTyping(true); return; }
     }
     asked.current = true;
     const r = new Recognition();
@@ -252,7 +266,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     r.onend = () => setListening(false);
     r.onerror = (e) => {
       setListening(false);
-      if (e.error === 'not-allowed' || e.error === 'service-not-allowed' || e.error === 'audio-capture') { setMicErr(e.error); setHelp(true); }
+      if (e.error === 'not-allowed' || e.error === 'service-not-allowed' || e.error === 'audio-capture') { setMicErr(e.error); setTyping(true); }
       else if (e.error === 'no-speech') setSay(tt('아무 말도 안 들렸어요. 마이크를 눌러 다시 말해 보세요'));
       else if (e.error === 'network') setSay(tt('말 인식에 인터넷 연결이 필요해요'));
       else if (e.error !== 'aborted') setSay(tt('말을 알아듣지 못했어요 ({e})', { e: e.error }));
@@ -263,18 +277,21 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   const send = () => { rec.current?.stop(); setTimeout(() => answer(heardRef.current), 250); };
   const cancel = () => { rec.current?.abort(); setHeard(''); heardRef.current = ''; setTimeout(listen, 200); };
   const retry = (i: number) => { setLines((l) => l.slice(0, i)); setPhase('me'); setHeard(''); heardRef.current = ''; listen(); };
+  const retryMic = () => { setMicErr(''); setTyping(false); asked.current = false; listen(true); };
   const flag = (i: number) => setLines((l) => l.map((x, j) => (j === i ? { ...x, flag: !x.flag } : x)));
 
   const lastMe = lines.map((l) => l.who).lastIndexOf('me');
+  const lastAi = lines.map((l) => l.who).lastIndexOf('ai');
+  const canMic = !!Recognition && !micErr;
   const myTurn = phase === 'me' && !heard;
   return (
     <section className="screen call-live">
       <div className="cl-head">
-        <button className="x" aria-label={tt('끊기')} onClick={finish}><Icon name="close" /></button>
+        <span className="sp" />
         <div><small className={left <= 30 ? 'warn' : ''}>{phase === 'ring' ? tt('연결 중…') : mmss(left)}</small><b>{scene.who}</b></div>
         <button className={`ko${hideKo ? ' off' : ''}`} aria-label={hideKo ? tt('번역 보이기') : tt('번역 가리기')} onClick={() => { setHideKo(!hideKo); setPeek([]); }}><Icon name={hideKo ? 'eyeOff' : 'eye'} /></button>
       </div>
-      <div className="cl-mission">{scene.mission.map((m) => <i key={m} lang="en" className={used.includes(m) ? 'on' : ''}>{used.includes(m) && <Icon name="check" />}{m}</i>)}</div>
+      <div className="cl-mission">{scene.mission.map((m) => <i key={m} lang="en" className={used.includes(m) ? 'on' : ''}>{used.includes(m) && <Icon name="check" />}{m}</i>)}<b className="cnt">{used.length}/{scene.mission.length}</b></div>
 
       <div className="cl-talk" ref={box}>
         {phase === 'ring' && <div className="cl-ring"><span className="av">{scene.who[0]}</span><small>{tt('전화 거는 중…')}</small></div>}
@@ -295,11 +312,17 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
                   </div>
                   {showSide && (
                     <div className="side">
-                      <button className={`fl${l.flag ? ' on' : ''}`} aria-label={tt('표현 담기')} onClick={() => flag(i)}><Flag /></button>
+                      <button className={`fl${l.flag ? ' on' : ''}`} aria-label={tt('표현 담기')} onClick={() => flag(i)}><Icon name="mark" /></button>
                       <small className="tm">{hm(l.at)}</small>
                     </div>
                   )}
                 </div>
+                {i === lastAi && showSide && (
+                  <div className="cl-replay">
+                    <button onClick={() => speak(l.en, 'en')}><PlayI />{tt('다시 듣기')}</button>
+                    <button onClick={() => speak(l.en, 'en', { rate: 0.7 })}>{tt('천천히')}</button>
+                  </div>
+                )}
               </div>
             </div>
           ) : (
@@ -308,12 +331,12 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
                 <div className="side">
                   {i === lastMe && phase === 'check'
                     ? <button aria-label={tt('다시 말하기')} onClick={() => retry(i)}><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4" /></svg></button>
-                    : <small className={`res${l.good ? ' good' : ''}`}>{l.good ? tt('완벽해요!') : tt('잘 통했어요')}</small>}
+                    : <small className={`res${l.how === 'picked' ? ' pk' : l.good ? ' good' : ''}`}>{l.how === 'picked' ? tt('골라서 보냄') : l.good ? tt('완벽해요!') : tt('잘 통했어요')}</small>}
                   <small className="tm">{hm(l.at)}</small>
                 </div>
                 <div className="bub"><p lang="en">{l.en}</p></div>
               </div>
-              {!l.good && (i !== lastMe || phase !== 'check') && (
+              {!l.good && l.how !== 'picked' && (i !== lastMe || phase !== 'check') && (
                 native === i
                   ? <div className="nat"><small>{tt('원어민스러운 문장')}</small><p lang="en">{scene.turns[l.turn].replies[0].en}</p><small>{scene.turns[l.turn].replies[0].ko}</small></div>
                   : <button className="pill" onClick={() => setNative(i)}><Spark />{tt('원어민스러운 문장')}</button>
@@ -322,32 +345,58 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
           );
         })}
         {phase === 'me' && heard && <div className="cl-me live"><div className="line"><div className="bub"><p lang="en">{heard}</p></div></div></div>}
-        {myTurn && !help && (
+        {myTurn && !help && !practice && (
           <div className="cl-me"><button className="cl-ask" onClick={() => setHelp(true)}><Icon name="bulb" />{tt('뭐라고 하지?')}</button></div>
         )}
-        {myTurn && help && (
+        {myTurn && help && !practice && (
           <div className="cl-picks">
-            {micErr && <small>{tt('마이크를 쓸 수 없어요. 대답을 골라 주세요')}</small>}
-            {turn.replies.map((r) => <button key={r.en} onClick={() => answer(r.en)}><b lang="en">{r.en}</b><small>{r.ko}</small></button>)}
+            {turn.replies.map((r) => <button key={r.en} onClick={() => { setPractice(r); setHelp(false); }}><b lang="en">{r.en}</b><small>{r.ko}</small></button>)}
           </div>
+        )}
+        {myTurn && practice && (
+          <div className="cl-prac">
+            <small>{tt('이렇게 말해 보세요')}</small>
+            <b lang="en">{practice.en}</b>
+            <p>{practice.ko}</p>
+            <div className="pacts">
+              <button onClick={() => speak(practice.en, 'en')}><PlayI />{tt('듣기')}</button>
+              <button onClick={() => speak(practice.en, 'en', { rate: 0.7 })}>{tt('천천히')}</button>
+            </div>
+            <button className="skip" onClick={() => answer(practice.en, 'picked')}>{tt('그냥 보내기 (연습 안 함)')}</button>
+          </div>
+        )}
+        {phase === 'me' && micErr && (
+          <div className="cl-warn"><span><b>{tt('마이크를 쓸 수 없어요')}</b><small>{tt('마이크를 허용하거나 키보드로 써 주세요')}</small></span><button onClick={retryMic}>{tt('다시 시도')}</button></div>
         )}
         {phase === 'check' && <div className="cl-typing"><span className="av">{scene.who[0]}</span><div className="bub"><i /><i /><i /></div></div>}
       </div>
 
       <button className="cl-end" aria-label={tt('통화 종료')} onClick={finish}><Icon name="phone" /><small>{tt('종료')}</small></button>
+      {phase === 'me' && (canMic || !typing) && (
+        <button className="cl-kb" aria-label={typing ? tt('말하기') : tt('키보드로 쓰기')} onClick={() => { rec.current?.abort(); setListening(false); setTyping(!typing); }}>
+          {typing ? <Icon name="mic" /> : <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2" /><path d="M7 10h1M11 10h2M16 10h1M8 14h8" /></svg>}
+          <small>{typing ? tt('말하기') : tt('키보드')}</small>
+        </button>
+      )}
+      {phase === 'me' && typing && (
+        <form className="cl-type" onSubmit={(e) => { e.preventDefault(); answer(typed, 'typed'); }}>
+          <input value={typed} onChange={(e) => setTyped(e.target.value)} placeholder={tt('영어로 써 보세요')} lang="en" autoFocus autoComplete="off" />
+          <button type="submit" aria-label={tt('보내기')} disabled={!typed.trim()}><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+        </form>
+      )}
       {phase === 'ai' && (
         <div className="cl-speak">
           <div className="bars">{[0.1, 0.35, 0.2, 0.5, 0.05, 0.3, 0.15].map((d, j) => <i key={j} style={{ animationDelay: `${d}s` }} />)}</div>
           {tt('{w}가 말하는 중', { w: scene.who })}
         </div>
       )}
-      {phase === 'me' && Recognition && !micErr && (
+      {phase === 'me' && canMic && !typing && (
         <div className="cl-bar">
           {listening && <div className="dots">{Array.from({ length: 20 }, (_, j) => <i key={j} style={{ animationDelay: `${j * 0.06}s` }} />)}</div>}
-          <button className={`mic${listening ? ' on' : ''}`} aria-label={listening ? tt('보내기') : tt('말하기')} onClick={listening ? send : listen}>
+          <button className={`mic${listening ? ' on' : ''}`} aria-label={listening ? tt('보내기') : tt('말하기')} onClick={listening ? send : () => listen()}>
             {listening ? <svg viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" /></svg> : <Icon name="mic" />}
           </button>
-          <small className="cl-say">{say || (listening ? tt('다 말하면 가운데를 눌러 보내요') : tt('마이크를 누르고 영어로 대답해요'))}</small>
+          <small className="cl-say">{say || (listening ? tt('다 말하면 가운데를 눌러 보내요') : practice ? tt('마이크를 누르고 따라 말해 보세요') : tt('마이크를 누르고 영어로 대답해요'))}</small>
           {listening && <button className="ghost" onClick={cancel}>{tt('지우고 다시')}</button>}
         </div>
       )}
@@ -355,7 +404,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   );
 }
 
-const Flag = () => <svg viewBox="0 0 24 24"><path d="M5 21V4h11l-2 4 2 4H5" /></svg>;
+const PlayI = () => <svg className="play" viewBox="0 0 10 10"><path d="M1.5 0.5l8 4.5-8 4.5z" /></svg>;
 const Spark = () => <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></svg>;
 
 /** 다듬은 문장을 배울래요에 담을 수 있게 카드 모양으로 */
@@ -365,27 +414,41 @@ function Summary({ scene, lines, secs, onClose, onAgain }: { scene: Scene; lines
   const [view, setView] = useState(false);
   const { findSaved, toggleSave } = useActions();
   const mine = lines.filter((l) => l.who === 'me');
-  const good = mine.filter((l) => l.good).length;
+  const self = mine.filter((l) => l.how !== 'picked').length;
   const used = scene.mission.filter((m) => mine.some((l) => l.en.toLowerCase().includes(m)));
-  const fix = mine.filter((l) => !l.good).map((l) => ({ said: l.en, better: scene.turns[l.turn].replies[0] }));
+  const missed = scene.mission.map((m, i) => ({ m, ko: scene.missionKo[i] })).filter((x) => !used.includes(x.m));
+  const fix = mine.filter((l) => !l.good && l.how !== 'picked').map((l) => ({ said: l.en, better: scene.turns[l.turn].replies[0] }));
+  const early = mine.length < scene.turns.length; // 대본 끝까지 가기 전에 끊음
   if (view) return <Replay scene={scene} lines={lines} onBack={() => setView(false)} onAgain={onAgain} />;
   return (
     <section className="screen call-sum">
       <div className="cs-top"><button className="x" aria-label={tt('닫기')} onClick={onClose}><Icon name="close" /></button><b>{tt('통화 결과')}</b><span /></div>
       <div className="cs-body">
         <span className="cs-av">{scene.who[0]}</span>
-        <h2>{tt('{w}와 {t} 통화했어요', { w: scene.who, t: secs >= 60 ? tt('{m}분 {s}초', { m: Math.floor(secs / 60), s: secs % 60 }) : tt('{s}초', { s: secs }) })}</h2>
-        <p className="cs-meta">{tt(scene.title)}</p>
+        <h2>{early
+          ? tt('{t} 만에 끊었어요', { t: secs >= 60 ? tt('{m}분 {s}초', { m: Math.floor(secs / 60), s: secs % 60 }) : tt('{s}초', { s: secs }) })
+          : tt('{w}와 {t} 통화했어요', { w: scene.who, t: secs >= 60 ? tt('{m}분 {s}초', { m: Math.floor(secs / 60), s: secs % 60 }) : tt('{s}초', { s: secs }) })}</h2>
+        <p className="cs-meta">{early && missed.length ? tt('괜찮아요. 미션 표현 {n}개가 남았어요', { n: missed.length }) : tt(scene.title)}</p>
         <div className="cs-stats">
-          <div><b>{mmss(secs)}</b><small>{tt('통화 시간')}</small></div>
-          <div><b>{mine.length}</b><small>{tt('내가 한 문장')}</small></div>
-          <div><b>{good}/{mine.length || 0}</b><small>{tt('자연스러운 대답')}</small></div>
+          <div><b>{self}</b><small>{tt('직접 말함')}</small></div>
+          <div><b>{mine.length - self}</b><small>{tt('골라서 보냄')}</small></div>
+          <div><b>{used.length}/{scene.mission.length}</b><small>{tt('미션 표현')}</small></div>
         </div>
-        <div className="cs-card">
-          <div className="hd"><b>{tt('써 본 표현')}</b><span>{used.length} / {scene.mission.length}</span></div>
-          <div className="cs-mission">{scene.mission.map((m) => <i key={m} lang="en" className={used.includes(m) ? 'on' : ''}>{used.includes(m) && <Icon name="check" />}{m}</i>)}</div>
-          {used.length < scene.mission.length && <small className="note">{tt('못 쓴 표현은 다음 통화에서 다시 써 봐요')}</small>}
-        </div>
+        {missed.length > 0 && (
+          <div className="cs-card">
+            <div className="hd"><b>{tt('아직 못 쓴 표현')}</b></div>
+            {missed.map((x) => {
+              const card = asCard(x.m, x.ko);
+              const on = !!findSaved('s', card);
+              return (
+                <div key={x.m} className="cs-miss">
+                  <span><b lang="en">{x.m}</b><small>{x.ko}</small></span>
+                  <button className={on ? 'on' : ''} onClick={() => toggleSave('s', card)}>{on ? tt('담았어요') : tt('+ 배울래요')}</button>
+                </div>
+              );
+            })}
+          </div>
+        )}
         {fix.map((f, i) => {
           const card = asCard(f.better.en, f.better.ko);
           const on = !!findSaved('s', card);
@@ -403,7 +466,7 @@ function Summary({ scene, lines, secs, onClose, onAgain }: { scene: Scene; lines
       <div className="cs-foot">
         <div className="two">
           <button className="ghost" onClick={() => setView(true)}>{tt('대화 다시 보기')}</button>
-          <button className="blue" onClick={onAgain}>{tt('다시 걸기')}</button>
+          <button className="blue" onClick={onAgain}>{early ? tt('이어서 다시 걸기') : tt('다시 걸기')}</button>
         </div>
         <button className="lnk" onClick={onClose}>{tt('확인')}</button>
       </div>
@@ -434,7 +497,7 @@ function Replay({ scene, lines, onBack, onAgain }: { scene: Scene; lines: Line[]
         ) : (
           <div key={i} className="cl-me">
             <div className="line"><div className="bub"><p lang="en">{l.en}</p></div></div>
-            <small className={`cs-tag${l.good ? ' good' : ''}`}>{l.good ? tt('자연스러워요') : `${tt('다듬기')}: ${scene.turns[l.turn].replies[0].en}`}</small>
+            <small className={`cs-tag${l.good ? ' good' : ''}`}>{l.how === 'picked' ? tt('골라서 보냄') : l.good ? tt('자연스러워요') : `${tt('다듬기')}: ${scene.turns[l.turn].replies[0].en}`}</small>
           </div>
         ))}
       </div>
