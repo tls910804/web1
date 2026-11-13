@@ -40,6 +40,21 @@ interface SpeechRec { lang: string; interimResults: boolean; continuous: boolean
 const W = window as unknown as { SpeechRecognition?: Rec; webkitSpeechRecognition?: Rec };
 const Recognition = W.SpeechRecognition || W.webkitSpeechRecognition;
 
+// 마이크가 안 될 때 원인별 안내 (getUserMedia 오류 이름 · 말 인식 오류 코드)
+const MAC = /Mac/.test(navigator.platform);
+const micMsg = (code: string): [string, string] => {
+  if (code === 'NotAllowedError' || code === 'not-allowed' || code === 'PermissionDeniedError')
+    return [tt('마이크가 막혀 있어요'), tt('주소창 왼쪽 자물쇠(사이트 설정) → 마이크 "허용"으로 바꾼 뒤 다시 시도를 눌러 주세요') + (MAC ? ' ' + tt('맥이라면 시스템 설정 → 개인정보 보호 및 보안 → 마이크에서 Chrome도 켜 주세요') : '')];
+  if (code === 'NotFoundError' || code === 'audio-capture' || code === 'DevicesNotFoundError')
+    return [tt('마이크를 찾지 못했어요'), tt('이어폰·마이크가 연결돼 있는지, 컴퓨터 소리 설정의 입력 장치를 확인해 주세요')];
+  if (code === 'NotReadableError' || code === 'TrackStartError')
+    return [tt('마이크를 열 수 없어요'), tt('다른 앱(줌·디스코드 등)이 마이크를 쓰고 있거나') + (MAC ? ' ' + tt('맥 시스템 설정에서 Chrome 마이크가 꺼져 있어요') : ' ' + tt('기기 설정에서 브라우저 마이크가 꺼져 있어요'))];
+  if (code === 'service-not-allowed') return [tt('이 브라우저는 말 인식을 막고 있어요'), tt('컴퓨터·안드로이드의 크롬이나 사파리에서 써 주세요')];
+  if (code === 'no-recognition') return [tt('이 브라우저는 말 인식이 안 돼요'), tt('아이폰은 사파리, 컴퓨터·안드로이드는 크롬에서 말로 대답할 수 있어요. 지금은 키보드로 써 주세요')];
+  if (code === 'insecure') return [tt('보안 연결(https)에서만 마이크를 쓸 수 있어요'), tt('https 주소로 열어 주세요')];
+  return [tt('마이크를 쓸 수 없어요'), tt('마이크를 허용하거나 키보드로 써 주세요') + ` (${code})`];
+};
+
 const words = (s: string) => s.toLowerCase().replace(/[^a-z' ]/g, '').split(' ').filter(Boolean);
 const closeness = (said: string, ref: string) => {
   const a = new Set(words(said)), b = words(ref);
@@ -199,7 +214,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   const [reveal, setReveal] = useState(99);
   const [heard, setHeard] = useState('');
   const [listening, setListening] = useState(false);
-  const [micErr, setMicErr] = useState('');
+  const [micErr, setMicErr] = useState(Recognition ? '' : 'no-recognition');
   const [say, setSay] = useState('');
   const [help, setHelp] = useState(false);
   const [native, setNative] = useState<number | null>(null);
@@ -253,9 +268,11 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   const listen = async (force = false) => {
     if (!Recognition || (micErr && !force)) return;
     hush(); // 상대 목소리가 마이크에 섞이지 않게
+    if (!window.isSecureContext) { setMicErr('insecure'); setTyping(true); return; }
     if (!asked.current && navigator.mediaDevices?.getUserMedia) {
+      // 마이크 허용 창을 먼저 띄운다 (말 인식만 켜면 크롬이 조용히 막는 경우가 있음)
       try { const st = await navigator.mediaDevices.getUserMedia({ audio: true }); st.getTracks().forEach((t) => t.stop()); }
-      catch { setMicErr('not-allowed'); setTyping(true); return; }
+      catch (err) { setMicErr((err as DOMException)?.name || 'not-allowed'); setTyping(true); return; }
     }
     asked.current = true;
     const r = new Recognition();
@@ -366,7 +383,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
           </div>
         )}
         {phase === 'me' && micErr && (
-          <div className="cl-warn"><span><b>{tt('마이크를 쓸 수 없어요')}</b><small>{tt('마이크를 허용하거나 키보드로 써 주세요')}</small></span><button onClick={retryMic}>{tt('다시 시도')}</button></div>
+          <div className="cl-warn"><span><b>{micMsg(micErr)[0]}</b><small>{micMsg(micErr)[1]}</small></span>{micErr !== 'no-recognition' && <button onClick={retryMic}>{tt('다시 시도')}</button>}</div>
         )}
         {phase === 'check' && <div className="cl-typing"><span className="av">{scene.who[0]}</span><div className="bub"><i /><i /><i /></div></div>}
       </div>
