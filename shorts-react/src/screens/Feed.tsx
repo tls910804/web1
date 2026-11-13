@@ -158,8 +158,8 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
   // 쇼츠는 따로 탭이 아니라 둘러보기 안의 "영상" 보기
   const modeSw = (
     <div className="mode-sw">
-      <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}>{tt('카드')}</button>
-      <button className={onlyVideo ? 'on' : ''} onClick={() => ui.go('shorts')}>{tt('영상')}</button>
+      <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}><Icon name="mark" />{tt('카드')}</button>
+      <button className={onlyVideo ? 'on' : ''} onClick={() => ui.go('shorts')}><Icon name="play" />{tt('영상')}</button>
     </div>
   );
   return (
@@ -205,14 +205,16 @@ export function Feed({ onlyVideo }: { onlyVideo?: boolean } = {}) {
 
       {onlyVideo && <div className="feed-top sh">{modeSw}</div>}
       {!onlyVideo && <div className="feed-top">
-        {modeSw}
+        <div className="ft-row">
+          {modeSw}
+          <IconButton label={tt('필터')} extra="filter-btn" onClick={openFilter}>
+            <Icon name="filter" />{(state.level !== '전체' || activeCats.length > 1) && <span className="dot" />}
+          </IconButton>
+        </div>
         <div className="cats">
           <Chip on={!activeTab} onClick={() => { setTab(''); setIndex(0); }}>{tt('전체')}</Chip>
           {tabs.map((t) => <Chip key={t} on={activeTab === t} onClick={() => { setTab(t); setIndex(0); }}>{tt(t)}</Chip>)}
         </div>
-        <IconButton label={tt('필터')} extra="filter-btn" onClick={openFilter}>
-          <Icon name="filter" />{(state.level !== '전체' || activeCats.length > 1) && <span className="dot" />}
-        </IconButton>
       </div>}
 
       {cards.length > 0 && (
