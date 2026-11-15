@@ -82,12 +82,13 @@ export function Onboarding() {
         <p className="rc-tr">{tr}</p>
         <div className="rc-expr"><b lang={langTag(sample.lang)}>{sample.expr}</b><span>{trOf(sample.mean, state.native)}</span></div>
       </div>
-      <div className="rc-rail" onClick={(e) => e.stopPropagation()}>
-        {!back && <button aria-label={tt('저장')} onClick={() => setSaved((v) => !v)}><Icon name="mark" style={saved ? { fill: 'currentColor' } : undefined} /></button>}
-        <button aria-label={tt('발음 듣기')} onClick={() => speak(sentence(sample), sample.lang)}><Icon name="speak" /></button>
-        <button aria-label={tt('느리게 듣기')} onClick={() => speak(sentence(sample), sample.lang, { rate: 0.7 })}><Icon name="clock" /></button>
-        {!back && <><button aria-label={tt('해석 가림')}><Icon name="eye" /></button><button aria-label={tt('복사')}><Icon name="copy" /></button></>}
-      </div>
+      {/* 연습 카드는 아이콘 줄을 숨겨 눈이 단어에만 가게 */}
+      {back && (
+        <div className="rc-rail" onClick={(e) => e.stopPropagation()}>
+          <button aria-label={tt('발음 듣기')} onClick={() => speak(sentence(sample), sample.lang)}><Icon name="speak" /></button>
+          <button aria-label={tt('느리게 듣기')} onClick={() => speak(sentence(sample), sample.lang, { rate: 0.7 })}><Icon name="clock" /></button>
+        </div>
+      )}
       {!back && guide === 2 && <i className="ob-tap" aria-hidden />}
     </div>
   );
@@ -153,12 +154,12 @@ export function Onboarding() {
           <>
             <h2 className="title">{[tt('파란 단어를 눌러 보세요'), tt('카드를 두 번 톡톡 눌러 저장해요'), tt('잘했어요! 문장을 저장했어요')][guide - 1]}</h2>
             <p className="desc">{[tt('모르는 단어는 눌러서 뜻을 바로 확인해요.'), tt('마음에 드는 문장은 배울래요에 모아 두고 복습해요.'), tt('저장한 문장은 배울래요 탭에서 다시 볼 수 있어요.')][guide - 1]}</p>
-            <div className="ob-missions">
-              <span className={tapped ? 'fin' : 'now'}><i>{tapped ? '✓' : 1}</i>{tt('단어 누르기')}</span>
-              <span className={saved ? 'fin' : tapped ? 'now' : ''}><i>{saved ? '✓' : 2}</i>{tt('두 번 탭해서 저장')}</span>
+            <div className="ob-steps">
+              <span className={tapped ? 'fin' : 'now'}><i />{tapped ? '✓' : '1'} {tt('단어 누르기')}</span>
+              <span className={saved ? 'fin' : tapped ? 'now' : ''}><i />{saved ? '✓' : '2'} {tt('두 번 톡톡 저장')}</span>
             </div>
             {practiceCard(false)}
-            {guide === 2 && <div className="ob-coach"><b>{tt('카드 아무 곳이나 톡톡 두 번')}</b><small>{tt('오른쪽 저장 아이콘을 눌러도 돼요')}</small></div>}
+            {guide === 2 && <div className="ob-coach"><b>{tt('카드 아무 곳이나 톡톡 두 번')}</b><small>{tt('배울래요에 저장돼요')}</small></div>}
             {guide === 3 && <div className="ob-saved"><Icon name="check" />{tt('배울래요에 저장했어요')}</div>}
           </>
         )}
@@ -203,10 +204,7 @@ export function Onboarding() {
           </>
         )}
         {step === 3 && (
-          <>
-            <p className={`ob-foot${guide === 3 ? ' fin' : ''}`}>{tt(['단어를 누르면 다음 미션이 열려요 · 0 / 2', '한 번만 더 하면 끝나요 · 1 / 2', '미션 완료 · 2 / 2'][guide - 1])}</p>
-            <Button disabled={!(tapped && saved)} onClick={() => setStep(4)}>{tt('다음')}</Button>
-          </>
+          <Button disabled={!(tapped && saved)} onClick={() => setStep(4)}>{tt(['단어를 누르면 다음으로', '저장하면 다음으로', '다음'][guide - 1])}</Button>
         )}
         {step === 4 && <Button onClick={() => setStep(5)}>{tt('복습 해 보기')}</Button>}
         {step === 5 && (

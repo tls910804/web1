@@ -2,3 +2,11 @@
 .claude/skills/
 .claude/agents/
 .agents/
+tools/audio/sample/
+tools/audio/.eleven_done.json
+tools/audio/.edge_done.json
+tools/audio/compare/
+tools/audio/.eleven_key
+tools/audio/.eleven3_done.json
+shorts-react/.env.local
+ai-call-worker/node_modules/

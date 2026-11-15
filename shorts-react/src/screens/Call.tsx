@@ -8,8 +8,9 @@ import { useUi } from '../ui';
 import { useActions } from '../lib/useActions';
 import type { Card } from '../types';
 import CALLS from '../data/calls.json';
+import { aiOn, aiReact } from '../lib/callAi';
 
-// shortcut: 진짜 AI가 아니라 정해 둔 대본(data/calls.json)으로 통화한다. AI 대화를 붙이려면 서버와 언어 모델 API가 필요하다
+// 통화의 뼈대는 정해 둔 대본(data/calls.json). 대본에 없는 말을 하면 AI 서버(ai-call-worker)가 한 문장으로 반응해요(서버 주소가 있을 때만)
 // AI 대사 음성은 tools/audio/gen_call.py로 미리 만들어 public/audio에 넣는다(없으면 기기 음성)
 type Turn = { ai: string; ko: string; replies: { en: string; ko: string }[] };
 type Scene = { id: string; title: string; who: string; role: string; group: string; sub: string; voice: string; mission: string[]; missionKo: string[]; level: string; mins: number; turns: Turn[] };
@@ -237,7 +238,8 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
 
   useEffect(() => { const t = setInterval(() => setLeft((s) => s - 1), 1000); return () => clearInterval(t); }, []);
   useEffect(() => { if (left <= 0) finish(); }, [left]); // eslint-disable-line react-hooks/exhaustive-deps
-  useEffect(() => () => { rec.current?.abort(); hush(); }, []);
+  const alive = useRef(true);
+  useEffect(() => { alive.current = true; return () => { alive.current = false; rec.current?.abort(); hush(); }; }, []);
   useEffect(() => { box.current?.scrollTo({ top: box.current.scrollHeight, behavior: 'smooth' }); }, [lines, reveal, heard, phase, native]);
   useEffect(() => { if (phase !== 'ring') return; const t = setTimeout(() => setPhase('ai'), 1500); return () => clearTimeout(t); }, [phase]);
 
@@ -261,10 +263,23 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     setLines((l) => [...l, { who: 'me', en: said.trim(), good, how, turn: k, at: Date.now() }]);
     setHeard(''); heardRef.current = ''; setPractice(null); setTyped('');
     setPhase('check');
-    setTimeout(() => {
+    const next = () => {
+      if (!alive.current) return;
       if (k + 1 < scene.turns.length) { setK(k + 1); setPhase('ai'); }
       else setTimeout(finish, 900);
-    }, 1400);
+    };
+    // 대본에 없는 말이면 AI가 한 문장으로 반응하고 다음 대본 대사로 이어가요 (서버 없거나 실패하면 그냥 대본)
+    const nextLine = scene.turns[k + 1]?.ai;
+    if (!good && how !== 'picked' && aiOn && nextLine) {
+      const history = [...linesRef.current, { who: 'me' as const, en: said.trim() }].map((l) => ({ who: l.who, en: l.en }));
+      aiReact(scene, nextLine, said.trim(), history).then((r) => {
+        if (!alive.current) return;
+        if (!r) { setTimeout(next, 600); return; }
+        setLines((l) => [...l, { who: 'ai', en: r.en, ko: r.ko, turn: k, at: Date.now() }]);
+        speak(r.en, 'en', { quiet: true, rate: opts.slow ? 0.7 : undefined });
+        setTimeout(next, talkMs(r.en) * (opts.slow ? 1.45 : 1) + 500);
+      });
+    } else setTimeout(next, 1400);
   };
 
   const listen = async (force = false) => {

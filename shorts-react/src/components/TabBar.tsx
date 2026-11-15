@@ -8,7 +8,8 @@ import { Icon } from './Icon';
 const TABS: { id: Screen; label: string; icon: 'compass' | 'play' | 'phone' | 'moon' | 'mark' | 'chart' | 'user' }[] = [
   { id: 'feed', label: '둘러보기', icon: 'compass' },
   { id: 'call', label: 'AI 전화', icon: 'phone' },
-  { id: 'rest', label: '쉼', icon: 'moon' },
+  // 쉼 탭은 잠시 뺐어요(화면 코드 Rest.tsx와 라우트는 그대로). 다시 넣으려면 아래 줄 주석만 풀면 돼요.
+  // { id: 'rest', label: '쉼', icon: 'moon' },
   { id: 'saved', label: '배울래요', icon: 'mark' },
   { id: 'settings', label: '마이', icon: 'user' },
 ];

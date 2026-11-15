@@ -1,0 +1,13 @@
+name = "langshort-ai-call"
+main = "src/index.ts"
+compatibility_date = "2026-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# 이 주소에서 온 요청만 받아요 (배포 주소, 개발 미리보기)
+ALLOWED_ORIGINS = "https://tls910804.github.io,http://localhost:5175,http://127.0.0.1:5175"
+
+# npx wrangler kv namespace create LIMITS 로 만든 id를 넣어요
+[[kv_namespaces]]
+binding = "LIMITS"
+id = "1ded7234c9634113941f537539450f96"
