@@ -13,3 +13,4 @@ ai-call-worker/node_modules/
 tools/audio/.cbx/
 tools/audio/.gemini_done.json
 tools/audio/backup-before-gemini/
+tools/audio/backup-gemini-raw/

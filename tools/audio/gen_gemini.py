@@ -5,6 +5,7 @@
   덮어쓰기 전에 원래 파일을 backup-before-gemini/ 에 복사해 둬요(Jessica·Edge 원본 보관).
   .gemini_done.json을 보고 이어서 만들어요. --limit N은 N개만 만들고 멈춰요(시험용).
 """
+from trim_tail import trim
 import ast, base64, getpass, hashlib, json, os, re, shutil, subprocess, sys, time, urllib.error, urllib.request, wave
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -66,6 +67,7 @@ def tts(text, style, dst):
             if e.code not in (429, 500, 503) or wait == 60: print('실패', e.code, msg); return False
     try: pcm = base64.b64decode(res['candidates'][0]['content']['parts'][0]['inlineData']['data'])
     except (KeyError, IndexError): print('소리 없이 돌아옴'); return False
+    pcm = trim(pcm)  # 끝에 붙는 '치지직' 잡음 잘라내기
     tmp = dst + '.wav'
     with wave.open(tmp, 'wb') as w:  # 24kHz 16비트 모노
         w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)
