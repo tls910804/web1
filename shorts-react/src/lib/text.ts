@@ -1,4 +1,4 @@
-import { CARDS, GLOSS, LANGS } from '../data';
+import { GLOSS, LANGS } from '../data';
 import { NO_SPACE } from '../constants';
 import type { Card } from '../types';
 
@@ -35,23 +35,11 @@ export function wordInfo(card: Card, wi: number, native: string): WordInfo {
   return { wi, expr: false, text: t, mean: glossOf(card, wi, native), speak: t };
 }
 
-// 난이도: 언어마다 문장 길이 순으로 세 등분한다 (짧은 1/3 초급, 가운데 중급, 긴 1/3 고급)
-let levelOf_: Record<string, string> | null = null;
+// 난이도: 문장 데이터의 level(사람이 매긴 값). 없는 문장(직접 추가 등)은 길이로 대충 추정
 export function levelOf(card: Card): string {
-  if (!levelOf_) {
-    const map: Record<string, string> = {};
-    const by: Record<string, Card[]> = {};
-    CARDS.forEach((c) => (by[c.lang] ||= []).push(c));
-    Object.values(by).forEach((cards) => {
-      const list = [...cards].sort((a, b) => sentence(a).length - sentence(b).length);
-      list.forEach((c, i) => {
-        const r = i / list.length;
-        map[c.id] = r < 1 / 3 ? '초급' : r < 2 / 3 ? '중급' : '고급';
-      });
-    });
-    levelOf_ = map;
-  }
-  return levelOf_[card.id] || '중급';
+  if (card.level) return card.level;
+  const n = card.words.length;
+  return n <= 5 ? '초급' : n <= 9 ? '중급' : '고급';
 }
 
 export const startOfDay = (t: number) => { const d = new Date(t); d.setHours(0, 0, 0, 0); return d.getTime(); };

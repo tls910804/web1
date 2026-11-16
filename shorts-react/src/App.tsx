@@ -23,6 +23,7 @@ import { StreakBroken } from './screens/Streak';
 import { Study } from './screens/Study';
 import { Call } from './screens/Call';
 import { Rest } from './screens/Rest';
+import { StoryScreen } from './screens/Story';
 import { Sub } from './screens/Sub';
 
 export function App() {
@@ -131,6 +132,7 @@ export function App() {
       {screen === 'streak' && <StreakBroken />}
       {screen === 'study' && <Study />}
       {screen === 'rest' && <Rest />}
+      {screen === 'story' && <StoryScreen />}
       {screen === 'call' && <Call />}
 
       {!online && (

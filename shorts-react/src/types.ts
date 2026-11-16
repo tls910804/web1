@@ -13,6 +13,8 @@ export interface Card {
   mean: Record<string, string>;
   /** 뜻(tr) 안에서 빈칸(key)에 해당하는 부분. 자동 공부에서 색으로 표시 */
   trKey?: Record<string, string>;
+  /** 초급(A1~A2 흔한 말) · 중급(B1~B2 관용 표현) · 고급(C1 긴 문장·뉘앙스). 없으면 길이로 추정 */
+  level?: string;
   /** 유튜브 영상 카드: 이 구간(초)을 카드 위에서 재생한다 */
   /** full: 카드 전체를 영상으로 채우고 자막을 위에 겹친다, ratio: 영상 가로/세로 비율 */
   video?: { id: string; start: number; end: number; times?: number[]; full?: boolean; ratio?: number };
@@ -68,14 +70,14 @@ export interface AppState {
 
 export type Screen =
   | 'splash' | 'onboarding' | 'feed' | 'shorts' | 'saved' | 'stats' | 'settings'
-  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest' | 'shorts2';
+  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest' | 'shorts2' | 'story';
 
 export type SubName = 'langs' | 'learn' | 'review-mode' | 'notify' | 'display' | 'data' | 'account';
 
 export type Rate = 'again' | 'hard' | 'good' | 'easy';
 
 /** 자동 공부: 둘러보기에서 이어지는 문장들(영상 제외)과, 끝나고 돌아갈 둘러보기 순서 */
-export interface StudySession { queue: Card[]; feedIds: string[] }
+export interface StudySession { queue: Card[]; feedIds: string[]; /** 끝나면 돌아갈 화면 (기본 둘러보기) */ back?: Screen }
 
 export interface ReviewSession { ids: string[]; i: number; shown: boolean; known: string[]; again: string[] }
 

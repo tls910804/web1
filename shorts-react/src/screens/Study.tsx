@@ -9,7 +9,7 @@ import { useActions } from '../lib/useActions';
 import { clean, lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import { findMiss, join, norm } from './Exercise';
+import { BlankNote, KoLine, ding, findMiss, join, norm } from './Exercise';
 import type { Card } from '../types';
 
 const SIZE = 10;
@@ -17,39 +17,7 @@ const SIZE = 10;
 const talkMs = (c: Card) => Math.max(1600, sentence(c).length * 75);
 const nextMs = (c: Card) => talkMs(c) + 2200;
 
-/** 정답 효과음: 파일 없이 짧은 '띵' */
-function ding() {
-  try {
-    const A = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
-    const ctx = new A(), o = ctx.createOscillator(), g = ctx.createGain();
-    o.type = 'sine';
-    o.frequency.setValueAtTime(880, ctx.currentTime);
-    o.frequency.setValueAtTime(1320, ctx.currentTime + 0.08);
-    g.gain.setValueAtTime(0.0001, ctx.currentTime);
-    g.gain.exponentialRampToValueAtTime(0.18, ctx.currentTime + 0.02);
-    g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.35);
-    o.connect(g).connect(ctx.destination);
-    o.start();
-    o.stop(ctx.currentTime + 0.36);
-    o.onended = () => ctx.close();
-  } catch { /* 소리를 못 내도 공부는 계속 */ }
-}
 const hush = () => { stopAudio(); if (speechOk()) speechSynthesis.cancel(); };
-
-/** 편집 거리로 몇 글자 다른지, 그리고 내가 쓴 글자 중 틀린 자리 */
-function diff(typed: string, ans: string) {
-  const m = typed.length, n = ans.length;
-  const d = Array.from({ length: m + 1 }, (_, i) => Array.from({ length: n + 1 }, (_, j) => (i ? (j ? 0 : i) : j)));
-  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++)
-    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (typed[i - 1] === ans[j - 1] ? 0 : 1));
-  const bad = new Set<number>();
-  for (let i = m, j = n; i > 0 || j > 0;) {
-    if (i && j && d[i][j] === d[i - 1][j - 1] + (typed[i - 1] === ans[j - 1] ? 0 : 1)) { if (typed[i - 1] !== ans[j - 1]) bad.add(i - 1); i--; j--; }
-    else if (i && d[i][j] === d[i - 1][j] + 1) { bad.add(i - 1); i--; }
-    else { if (i) bad.add(i - 1); else bad.add(0); j--; } // 빠진 글자는 그 앞 글자에 표시
-  }
-  return { n: d[m][n], bad };
-}
 
 type Res = { card: Card; ok: boolean };
 
@@ -90,7 +58,7 @@ export function Study() {
     const seen = phase === 'done' ? chunk[chunk.length - 1] : c;
     const at = seen ? study.feedIds.indexOf(seen.id) : -1;
     if (at >= 0) setIndex(Math.min(at + 1, study.feedIds.length - 1));
-    go('feed');
+    go(study.back ?? 'feed');
   };
 
   if (phase === 'done') {
@@ -178,7 +146,7 @@ export function Study() {
             </button>
           </div>
         )}
-        {phase === 'blank' && <p className="st-cap">{tt('색이 다른 부분에 맞는 표현을 빈칸에 써 보세요')}</p>}
+        {phase === 'blank' && <p className="st-cap">{c?.trKey?.[state.native] ? tt('색이 다른 부분에 맞는 표현을 빈칸에 써 보세요') : tt('뜻을 보고 빈칸에 들어갈 표현을 써 보세요')}</p>}
       </div>
 
       {paused && (
@@ -193,14 +161,6 @@ export function Study() {
       )}
     </section>
   );
-}
-
-/** 뜻 문장에서 빈칸에 해당하는 부분을 색으로 */
-function KoLine({ card, native }: { card: Card; native: string }) {
-  const tr = trOf(card.tr, native), k = card.trKey?.[native];
-  const at = k ? tr.indexOf(k) : -1;
-  if (at < 0) return <>{tr}</>;
-  return <>{tr.slice(0, at)}<em>{k}</em>{tr.slice(at + k!.length)}</>;
 }
 
 /** 빈칸: 힌트 → 정답 보기(흐리게 깔고 다시 쓰기), 다 쓰고 틀리면 몇 글자 다른지 */
@@ -251,33 +211,11 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
     } else if (!idx.includes(i)) parts.push(w, ' ');
   });
 
-  // 다른 글자 자리 표시
-  // 뜻을 모르는 단어: 철자만 조금 다르면 글자 차이, 아예 다른 말이면 맞은 단어와 이 자리에 필요한 뜻
-  const df = tried && !miss ? diff(t, a) : null;
-  const sp0 = NO_SPACE[c.lang] ? '' : ' ';
-  const near = (x: string, y: string) => diff(x, y).n <= Math.max(1, Math.floor(y.length / 3));
-  // 단어마다 비교해 철자 실수인지 다른 말인지 가른다 (띄어 쓰지 않는 언어는 문장 전체로)
-  const typo = !!df && (sp0 ? t.split(' ').length === a.split(' ').length && t.split(' ').every((w, k) => w === a.split(' ')[k] || near(w, a.split(' ')[k])) : near(t, a));
-  const marked = typo ? [...t].map((ch, k) => <span key={k} className={df!.bad.has(k) ? 'bad' : ''}>{ch}</span>) : null;
-  const sp = NO_SPACE[c.lang] ? '' : ' ';
-  const tw = t.split(sp || /(?:)/), aw = a.split(sp || /(?:)/);
-  let same = 0;
-  while (sp && same < tw.length && tw[same] === aw[same]) same++;
-  const other = df && !typo ? { good: tw.slice(0, same).join(sp), bad: tw.slice(same).join(sp) || t } : null;
-
   return (
     <>
-      {shown && !done && <div className="st-note info">{tt('정답을 확인하고, 다시 입력해 보세요')}</div>}
-      {!shown && miss && <div className="st-note warn"><b lang={langTag(c.lang)}>{miss.w} = {miss.mean}</b>{tt('뜻이 달라서 맞지 않아요. 이 자리는 ‘{m}’라는 뜻이에요.', { m: trOf(c.mean, state.native) })}</div>}
-      {!shown && !miss && marked && <div className="st-note warn"><span lang={langTag(c.lang)}>{marked}</span>{tt(' — 철자가 {n}글자 달라요', { n: df!.n })}</div>}
-      {!shown && other && (
-        <div className="st-note warn">
-          <b lang={langTag(c.lang)}>{tt('‘{w}’는 이 자리에 맞지 않아요', { w: other.bad })}</b>
-          {other.good && <>{tt('‘{w}’까지는 맞았어요. ', { w: other.good })}</>}
-          {tt('이 자리에는 ‘{m}’라는 뜻의 표현이 들어가요.', { m: trOf(c.mean, state.native) })}
-        </div>
-      )}
       <div className="st-en"><p className="st-s" lang={langTag(c.lang)}>{parts}</p></div>
+      {/* 맞았는지 알려주는 글은 원문 문장 바로 아래에 */}
+      <BlankNote code={c.lang} text={text} answer={answer} mean={trOf(c.mean, state.native)} shown={shown && !done} tried={tried} miss={miss} />
       {done === null && (
         <div className="st-tools">
           {hint

@@ -37,6 +37,7 @@ export function playAudio(text: string, lang: string, slow: boolean, repeat = 1)
   let left = repeat;
   const play = () => {
     const a = new Audio(url);
+    if (slow && !e.s) a.playbackRate = 0.75; // 느린 파일이 따로 없으면 보통 파일을 느리게(음높이는 그대로)
     current = a;
     a.onended = () => { if (token === my && --left > 0) setTimeout(play, 350); };
     a.play().catch(() => { /* 자동 재생이 막힌 경우는 조용히 넘어간다 */ });

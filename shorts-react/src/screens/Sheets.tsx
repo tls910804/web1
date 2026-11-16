@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { tt } from '../i18n';
 import { LEVELS } from '../constants';
 import { Button, Chip, IconButton } from '../components/Button';
@@ -7,7 +6,6 @@ import { Grab, Lbl, SheetHead } from '../components/Layer';
 import { Group, Pill } from '../components/Rows';
 import { useActions } from '../lib/useActions';
 import { langTag, sentence, trOf, wordInfo } from '../lib/text';
-import { allCats, countFeed } from '../lib/feed';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
@@ -33,36 +31,6 @@ export function WordSheet({ card, wi }: { card: Card; wi: number }) {
           <Icon name="mark" style={saved ? { fill: 'currentColor' } : undefined} />{saved ? tt('저장됨') : tt('배울래요')}
         </Button>
         <Button kind="light" auto onClick={closeLayer}>{tt('닫기')}</Button>
-      </div>
-    </>
-  );
-}
-
-export function FilterSheet({ cats, tab, onApply }: { cats: string[]; tab: string; onApply: (level: string, cats: string[]) => void }) {
-  const { state, set } = useStore();
-  const { toast, closeLayer } = useUi();
-  const [level, setLevel] = useState(state.level);
-  const [picked, setPicked] = useState(cats);
-  const count = countFeed(state, level, picked, tab);
-  const toggleCat = (c: string) => setPicked((p) => (p.includes(c) ? p.filter((x) => x !== c) : [...p, c]));
-  return (
-    <>
-      <SheetHead title={tt('필터')} />
-      <Lbl>{tt('난이도')}</Lbl>
-      <div className="grid">{LEVELS.map((l) => <Chip key={l} on={level === l} onClick={() => setLevel(l)}>{tt(l)}</Chip>)}</div>
-      <Lbl small={tt('여러 개 고를 수 있어요')}>{tt('상황')}</Lbl>
-      <div className="grid">{allCats(state).map((c) => <Chip key={c} on={picked.includes(c)} onClick={() => toggleCat(c)}>{tt(c)}</Chip>)}</div>
-      {state.known.length > 0 && (
-        <div className="ctx" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <span style={{ flex: 1 }}>{tt('\'이미 알아요\'로 숨긴 문장 {n}개', { n: state.known.length })}</span>
-          <button className="lnk" style={{ color: 'var(--blue)', fontWeight: 700, fontSize: 14 }}
-            onClick={() => { const n = state.known.length; set({ known: [] }); toast(tt('숨긴 문장 {n}개를 다시 보여줘요', { n })); closeLayer(); }}>{tt('다시 보기')}</button>
-        </div>
-      )}
-      <p className="desc" style={{ margin: 0 }}>{tt('난이도는 문장 길이로 나눈 기준이에요.')}</p>
-      <div style={{ display: 'flex', gap: 10 }}>
-        <Button kind="light" auto style={{ padding: '15px 18px' }} onClick={() => { setLevel(tt('전체')); setPicked([]); }}>{tt('초기화')}</Button>
-        <Button kind="dark" style={{ flex: 1 }} disabled={!count} onClick={() => onApply(level, picked)}>{count ? tt('{n}개 문장 보기', { n: count }) : tt('맞는 문장이 없어요')}</Button>
       </div>
     </>
   );
@@ -94,7 +62,7 @@ export function LevelSheet() {
       <p className="desc" style={{ margin: 0 }}>{tt('둘러보기에 나올 문장의 난이도예요. 직접 추가한 문장은 항상 보여요.')}</p>
       {LEVELS.map((l) => (
         <button key={l} className={`opt${state.level === l ? ' on' : ''}`} style={{ margin: 0 }} onClick={() => { set({ level: l }); closeLayer(); }}>
-          <span className="rd" /><span><b>{l}</b></span>
+          <span className="rd" /><span><b>{tt(l)}</b></span>
         </button>
       ))}
     </>

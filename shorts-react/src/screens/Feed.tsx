@@ -1,17 +1,18 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { tt } from '../i18n';
-import { Button, Chip, IconButton } from '../components/Button';
+import { Button, Chip } from '../components/Button';
 import { Icon } from '../components/Icon';
 import { Expr } from '../components/Rows';
 import { WordChips } from '../components/WordChips';
-import { allCats, feedCards, allCards, tabList, videoCards } from '../lib/feed';
+import { allCats, countFeed, feedCards, allCards, tabList, videoCards } from '../lib/feed';
+import { LEVELS } from '../constants';
 import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
 import { lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
-import { AutoSheet, FilterSheet, WordSheet } from './Sheets';
+import { AutoSheet, WordSheet } from './Sheets';
 
 let ytApi: Promise<void> | null = null;
 const loadYT = () => (ytApi ||= new Promise<void>((res) => {
@@ -74,7 +75,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   const { state, set } = useStore();
   const ui = useUi();
   const { findSaved, saveItem, toggleSave } = useActions();
-  const { cats, setCats, tab, setTab, toast, speak, openSheet, closeLayer, selection } = ui;
+  const { cats, setCats, tab, setTab, toast, speak, openSheet, selection } = ui;
 
   const [vIndex, setVIndex] = useState(0); // 쇼츠 탭은 둘러보기와 위치를 따로 둔다
   const index = onlyVideo ? vIndex : ui.index, setIndex = onlyVideo ? setVIndex : ui.setIndex;
@@ -147,9 +148,8 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
     else toast(tt('복사하지 못했어요'));
   };
 
-  const openFilter = () => openSheet(
-    <FilterSheet cats={activeCats} tab={activeTab} onApply={(level, picked) => { set({ level }); setCats(picked); setIndex(0); closeLayer(); }} />,
-  );
+  const [menu, setMenu] = useState(false);
+  const openFilter = () => setMenu(true);
 
   const hasCards = allCards(state).length > 0;
   const startStudy = (from: number) => {
@@ -204,7 +204,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
-              {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i><span><b>{tt('10문장 공부하기')}</b><small>{tt('듣고 · 빈칸 채우기')}</small></span><svg className="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>}
+              {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i><span><b>{(() => { const n = Math.min(10, cards.slice(i).filter((x) => !x.video).length); return n === 10 ? tt('10문장 공부하기') : tt('{n}문장 공부하기', { n }); })()}</b><small>{tt('듣고 · 빈칸 채우기')}</small></span><svg className="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>}
             </div>
           </article>
           )
@@ -215,15 +215,13 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
       {!onlyVideo && <div className="feed-top">
         <div className="ft-row">
           {modeSw}
-          <IconButton label={tt('필터')} extra="filter-btn" onClick={openFilter}>
-            <Icon name="filter" />{(state.level !== '전체' || activeCats.length > 1) && <span className="dot" />}
-          </IconButton>
-        </div>
-        <div className="cats">
-          <Chip on={!activeTab} onClick={() => { setTab(''); setIndex(0); }}>{tt('전체')}</Chip>
-          {tabs.map((t) => <Chip key={t} on={activeTab === t} onClick={() => { setTab(t); setIndex(0); }}>{tt(t)}</Chip>)}
+          <button className={`ft-btn${menu ? ' open' : ''}`} aria-expanded={menu} onClick={() => setMenu(!menu)}>
+            {EMOJI[activeTab || '전체']} {tt(activeTab || '전체')}{state.level !== '전체' && ` · ${tt(state.level)}`}{activeCats.length > 0 && ` +${activeCats.length}`}<Icon name="chev" />
+          </button>
         </div>
       </div>}
+      {menu && <FilterMenu tabs={tabs} tab={activeTab} cats={activeCats} onClose={() => setMenu(false)}
+        onApply={(level, t, picked) => { set({ level }); setTab(t); setCats(picked); setIndex(0); setMenu(false); }} />}
 
       {guide && (
         <div className="feed-guide" onClick={closeGuide}>
@@ -249,3 +247,56 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   );
 }
 
+
+const EMOJI: Record<string, string> = { 전체: '🌐', 일상: '🏠', 슬랭: '😎', '일·업무': '💼', 여행: '✈️', 연애: '💕', '드라마·영화': '🎬', 감정: '💛', '카페·식당': '☕', 회사: '🏢', '내 문장': '✏️' };
+const LV_HINT: Record<string, string> = { 전체: '모든 난이도', 초급: '짧고 자주 쓰는 말', 중급: '관용 표현', 고급: '긴 문장과 뉘앙스' };
+
+/** 둘러보기 필터: 위 버튼 바로 아래로 펼친다. 난이도 한 개 · 상황 한 개 · 세부 주제 여러 개 */
+function FilterMenu({ tabs, tab, cats, onApply, onClose }: { tabs: string[]; tab: string; cats: string[]; onApply: (level: string, tab: string, cats: string[]) => void; onClose: () => void }) {
+  const { state, set } = useStore();
+  const { toast } = useUi();
+  const [lv, setLv] = useState(state.level);
+  const [t, setT] = useState(tab);
+  const [picked, setPicked] = useState(cats);
+  const catList = allCats(state);
+  const n = countFeed(state, lv, picked, t);
+  useEffect(() => {
+    const esc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    addEventListener('keydown', esc);
+    return () => removeEventListener('keydown', esc);
+  }, [onClose]);
+  const toggle = (c: string) => setPicked((p) => (p.includes(c) ? p.filter((x) => x !== c) : [...p, c]));
+  return (
+    <>
+      <div className="fmenu-bg" onClick={onClose} />
+      <div className="fmenu" role="dialog" aria-label={tt('필터')}>
+        <p className="fm-lb">{tt('난이도')}</p>
+        <div className="fm-seg">
+          {LEVELS.map((l, i) => (
+            <button key={l} className={lv === l ? 'on' : ''} aria-pressed={lv === l} onClick={() => setLv(l)}>
+              {tt(l)}<span className="fm-bars" aria-hidden>{[1, 2, 3].map((k) => <i key={k} className={k <= i ? 'f' : ''} />)}</span>
+            </button>
+          ))}
+        </div>
+        <p className="fm-hint">{tt(LV_HINT[lv] ?? '')}</p>
+        <div className="fm-hr" />
+        <p className="fm-lb">{tt('상황')}</p>
+        <div className="fm-chips">
+          {['', ...tabs].map((x) => <Chip key={x} on={t === x} onClick={() => setT(x)}>{EMOJI[x || '전체']} {tt(x || '전체')}</Chip>)}
+        </div>
+        {catList.length > 0 && <>
+          <p className="fm-lb">{tt('세부 주제')}<small>{tt('여러 개 고를 수 있어요')}</small></p>
+          <div className="fm-chips">
+            {catList.map((c) => <Chip key={c} on={picked.includes(c)} onClick={() => toggle(c)}>{EMOJI[c] ? `${EMOJI[c]} ` : ''}{tt(c)}</Chip>)}
+          </div>
+        </>}
+        {state.known.length > 0 && (
+          <button className="fm-known" onClick={() => { const k = state.known.length; set({ known: [] }); toast(tt('숨긴 문장 {n}개를 다시 보여줘요', { n: k })); onClose(); }}>
+            {tt('\'이미 알아요\'로 숨긴 문장 {n}개', { n: state.known.length })}<b>{tt('다시 보기')}</b>
+          </button>
+        )}
+        <Button kind="dark" disabled={!n} onClick={() => onApply(lv, t, picked)}>{n ? tt('{n}개 문장 보기', { n }) : tt('맞는 문장이 없어요')}</Button>
+      </div>
+    </>
+  );
+}

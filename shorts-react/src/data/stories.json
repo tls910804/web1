@@ -1,0 +1,72 @@
+[
+{"id":"st-en-cafe","lang":"en","level":"초급","cat":"일상","title":{"ko":"카페에서 친구 기다리기","en":"Meeting a friend at a café"},"lines":[
+ {"t":"Hey! Sorry I'm [running late].","ko":"안녕! 늦어서 미안해.","en":"Hi! Sorry I'm late.","m":{"ko":"늦어지고 있는","en":"behind schedule"}},
+ {"t":"The bus was [super slow] today.","ko":"오늘 버스가 엄청 느렸어.","en":"The bus was very slow today.","m":{"ko":"엄청 느린","en":"very slow"}},
+ {"t":"Did you already [order]?","ko":"벌써 주문했어?","en":"Have you ordered yet?","m":{"ko":"주문하다","en":"to ask for food or drinks"}},
+ {"t":"Let's [grab] something quick.","ko":"간단하게 뭐 좀 먹자.","en":"Let's get something fast to eat.","m":{"ko":"(음식을) 간단히 먹다·사다","en":"to get quickly"}}]},
+{"id":"st-en-meeting","lang":"en","level":"중급","cat":"회사","tab":"일·업무","title":{"ko":"회의 끝나고","en":"After the meeting"},"lines":[
+ {"t":"That meeting went on [forever].","ko":"그 회의 진짜 끝도 없이 길었어.","en":"That meeting was really long.","m":{"ko":"엄청 오래","en":"for a very long time"}},
+ {"t":"But I think we're finally [on the same page].","ko":"그래도 이제야 다들 같은 생각인 것 같아.","en":"But I think we finally agree.","m":{"ko":"같은 생각인","en":"in agreement"}},
+ {"t":"Can you [send over] the slides later?","ko":"나중에 슬라이드 좀 보내 줄래?","en":"Can you send me the slides later?","m":{"ko":"(자료를) 보내 주다","en":"to send to someone"}},
+ {"t":"Sure, I'll [get to it] after lunch.","ko":"응, 점심 먹고 바로 할게.","en":"Sure, I'll do it after lunch.","m":{"ko":"(일을) 시작하다, 처리하다","en":"to start doing it"}}]},
+{"id":"st-en-offer","lang":"en","level":"고급","cat":"감정","title":{"ko":"이직 제안을 받고","en":"Thinking about a job offer"},"lines":[
+ {"t":"I've been [going back and forth] about the new offer.","ko":"새 제안을 두고 계속 오락가락 고민 중이야.","en":"I keep changing my mind about the new offer.","m":{"ko":"결정을 못 하고 오락가락하다","en":"to keep changing one's mind"}},
+ {"t":"The pay is better, but I'd be [starting from scratch].","ko":"월급은 더 좋은데, 처음부터 다시 시작해야 해.","en":"The pay is better, but I'd have to start over.","m":{"ko":"맨 처음부터","en":"from the very beginning"}},
+ {"t":"Honestly, I don't want to [burn any bridges] here.","ko":"솔직히 여기 사람들이랑 관계를 망치고 싶지 않아.","en":"Honestly, I don't want to ruin my relationships here.","m":{"ko":"관계를 완전히 끊다","en":"to destroy a relationship for good"}},
+ {"t":"Maybe I should [sleep on it] before I decide.","ko":"결정하기 전에 하룻밤 더 생각해 봐야겠어.","en":"Maybe I should think about it overnight first.","m":{"ko":"하룻밤 자며 생각해 보다","en":"to think about it overnight"}}]},
+{"id":"st-ko-weekend","lang":"ko","level":"초급","cat":"일상","title":{"ko":"주말 약속 잡기","en":"Making weekend plans"},"lines":[
+ {"t":"이번 주말에 [시간 있어요]?","en":"Are you free this weekend?","m":{"en":"do you have time"}},
+ {"t":"같이 영화 보러 [갈래요]?","en":"Do you want to go see a movie together?","m":{"en":"shall we go / do you want to go"}},
+ {"t":"토요일 오후 [괜찮아요].","en":"Saturday afternoon works for me.","m":{"en":"is fine, works"}},
+ {"t":"그럼 그때 [봐요]!","en":"See you then!","m":{"en":"see (you)"}}]},
+{"id":"st-ko-reserve","lang":"ko","level":"중급","cat":"카페·식당","title":{"ko":"식당 예약하기","en":"Booking a restaurant"},"lines":[
+ {"t":"저녁 7시에 [예약하고 싶은데요].","en":"I'd like to make a reservation for 7 p.m.","m":{"en":"I'd like to book (soft, polite)"}},
+ {"t":"[몇 분]이세요? 네 명이요.","en":"How many people? Four.","m":{"en":"how many people (honorific)"}},
+ {"t":"창가 자리로 [부탁드려요].","en":"A window seat, please.","m":{"en":"please (polite request)"}},
+ {"t":"혹시 [주차 가능한가요]?","en":"Is parking available, by any chance?","m":{"en":"is parking possible"}}]},
+{"id":"st-ja-konbini","lang":"ja","level":"초급","cat":"일상","title":{"ko":"편의점에서","en":"At a convenience store"},"lines":[
+ {"t":"これ、|[温めて]|ください。","ko":"이거 데워 주세요.","en":"Please heat this up.","m":{"ko":"데우다 (あたためる)","en":"to heat up"}},
+ {"t":"袋は|[いりますか]？","ko":"봉투 필요하세요?","en":"Do you need a bag?","m":{"ko":"필요합니까","en":"do you need"}},
+ {"t":"[大丈夫です]。","ko":"괜찮아요. (필요 없어요)","en":"No, thank you.","m":{"ko":"괜찮아요 (정중한 거절)","en":"no thanks (polite)"}},
+ {"t":"ポイントカードは|[お持ちですか]？","ko":"포인트 카드 있으세요?","en":"Do you have a point card?","m":{"ko":"가지고 계세요 (おもち)","en":"do you have (polite)"}}]},
+{"id":"st-zh-order","lang":"zh","level":"초급","cat":"카페·식당","title":{"ko":"식당에서 주문하기","en":"Ordering at a restaurant"},"lines":[
+ {"t":"服务员，|[点菜]！","ko":"여기요, 주문할게요!","en":"Excuse me, we'd like to order!","m":{"ko":"주문하다 (diǎncài)","en":"to order food"}},
+ {"t":"这个|[辣不辣]？","ko":"이거 매워요?","en":"Is this spicy?","m":{"ko":"매워요? (là bu là)","en":"spicy or not"}},
+ {"t":"[少放]|一点|辣椒。","ko":"고추는 조금만 넣어 주세요.","en":"Go easy on the chili.","m":{"ko":"적게 넣다 (shǎo fàng)","en":"to put in less"}},
+ {"t":"再来|一碗|[米饭]。","ko":"밥 한 공기 더 주세요.","en":"One more bowl of rice, please.","m":{"ko":"밥 (mǐfàn)","en":"cooked rice"}}]},
+{"id":"st-es-market","lang":"es","level":"초급","cat":"여행","title":{"ko":"시장에서","en":"At the market"},"lines":[
+ {"t":"¡Buenos días! ¿[Cuánto cuestan] las manzanas?","ko":"안녕하세요! 사과 얼마예요?","en":"Good morning! How much are the apples?","m":{"ko":"얼마예요 (여러 개)","en":"how much (plural)"}},
+ {"t":"Un kilo, [por favor].","ko":"1킬로 주세요.","en":"One kilo, please.","m":{"ko":"부탁해요","en":"please"}},
+ {"t":"¿Algo más? No, [eso es todo].","ko":"더 필요하세요? 아니요, 그게 다예요.","en":"Anything else? No, that's all.","m":{"ko":"그게 다예요","en":"that's all"}},
+ {"t":"¡Que tenga [buen día]!","ko":"좋은 하루 보내세요!","en":"Have a good day!","m":{"ko":"좋은 하루","en":"a good day"}}]},
+{"id":"st-fr-bakery","lang":"fr","level":"초급","cat":"카페·식당","title":{"ko":"빵집에서","en":"At the bakery"},"lines":[
+ {"t":"Bonjour, [je voudrais] une baguette.","ko":"안녕하세요, 바게트 하나 주세요.","en":"Hello, I'd like a baguette.","m":{"ko":"~을 원해요 (공손)","en":"I would like"}},
+ {"t":"Et deux croissants, [s'il vous plaît].","ko":"그리고 크루아상 두 개 주세요.","en":"And two croissants, please.","m":{"ko":"부탁합니다 (존댓말)","en":"please (formal)"}},
+ {"t":"Ça fait [combien] ?","ko":"전부 얼마예요?","en":"How much is that?","m":{"ko":"얼마","en":"how much"}},
+ {"t":"Merci, [bonne journée] !","ko":"감사합니다, 좋은 하루 보내세요!","en":"Thanks, have a nice day!","m":{"ko":"좋은 하루","en":"have a nice day"}}]},
+{"id":"st-de-cafe","lang":"de","level":"초급","cat":"카페·식당","title":{"ko":"카페에서 주문하기","en":"Ordering at a café"},"lines":[
+ {"t":"Ich [hätte gern] einen Cappuccino.","ko":"카푸치노 하나 주세요.","en":"I'd like a cappuccino.","m":{"ko":"~을 원해요 (공손)","en":"I would like"}},
+ {"t":"Zum hier Trinken oder [zum Mitnehmen]?","ko":"드시고 가세요, 가져가세요?","en":"For here or to go?","m":{"ko":"포장해서","en":"to go"}},
+ {"t":"[Hier], bitte.","ko":"여기서 마실게요.","en":"For here, please.","m":{"ko":"여기서","en":"here"}},
+ {"t":"Kann ich [mit Karte zahlen]?","ko":"카드로 계산할 수 있나요?","en":"Can I pay by card?","m":{"ko":"카드로 계산하다","en":"to pay by card"}}]},
+{"id":"st-pt-taxi","lang":"pt","level":"초급","cat":"여행","title":{"ko":"택시 타기","en":"Taking a taxi"},"lines":[
+ {"t":"Boa tarde! [Para o aeroporto], por favor.","ko":"안녕하세요! 공항으로 가 주세요.","en":"Good afternoon! To the airport, please.","m":{"ko":"공항으로","en":"to the airport"}},
+ {"t":"[Quanto tempo] leva?","ko":"얼마나 걸려요?","en":"How long does it take?","m":{"ko":"얼마나 오래","en":"how long"}},
+ {"t":"Mais ou menos [vinte minutos].","ko":"대략 20분이요.","en":"About twenty minutes.","m":{"ko":"20분","en":"twenty minutes"}},
+ {"t":"Pode [parar aqui], por favor?","ko":"여기서 세워 주실래요?","en":"Can you stop here, please?","m":{"ko":"여기서 세우다","en":"to stop here"}}]},
+{"id":"st-ru-cafe","lang":"ru","level":"초급","cat":"카페·식당","title":{"ko":"카페에서","en":"At a café"},"lines":[
+ {"t":"Можно [меню], пожалуйста?","ko":"메뉴판 좀 주시겠어요?","en":"Can I have the menu, please?","m":{"ko":"메뉴","en":"menu"}},
+ {"t":"Я [буду] чай с лимоном.","ko":"레몬 차로 할게요.","en":"I'll have tea with lemon.","m":{"ko":"~로 할게요","en":"I'll have"}},
+ {"t":"А что вы [посоветуете]?","ko":"뭘 추천하세요?","en":"What would you recommend?","m":{"ko":"추천하다","en":"to recommend"}},
+ {"t":"[Счёт], пожалуйста.","ko":"계산서 주세요.","en":"The bill, please.","m":{"ko":"계산서","en":"the bill"}}]},
+{"id":"st-vi-market","lang":"vi","level":"초급","cat":"여행","title":{"ko":"시장에서 흥정하기","en":"Bargaining at the market"},"lines":[
+ {"t":"Chị ơi, cái này [bao nhiêu]?","ko":"저기요, 이거 얼마예요?","en":"Excuse me, how much is this?","m":{"ko":"얼마","en":"how much"}},
+ {"t":"[Đắt quá]! Bớt chút được không?","ko":"너무 비싸요! 좀 깎아 주실래요?","en":"Too expensive! Can you lower it a bit?","m":{"ko":"너무 비싸요","en":"too expensive"}},
+ {"t":"Được, em [lấy] hai cái nhé.","ko":"좋아요, 두 개 살게요.","en":"Okay, I'll take two.","m":{"ko":"사다, 가져가다","en":"to take"}},
+ {"t":"[Cảm ơn] chị nhiều!","ko":"정말 고마워요!","en":"Thank you so much!","m":{"ko":"고마워요","en":"thank you"}}]},
+{"id":"st-id-warung","lang":"id","level":"초급","cat":"카페·식당","title":{"ko":"식당(와룽)에서","en":"At a local eatery"},"lines":[
+ {"t":"Mas, saya [mau pesan] nasi goreng.","ko":"저기요, 나시고렝 주문할게요.","en":"Excuse me, I'd like to order fried rice.","m":{"ko":"주문하고 싶다","en":"want to order"}},
+ {"t":"[Pedas] atau tidak?","ko":"맵게 해 드릴까요?","en":"Spicy or not?","m":{"ko":"매운","en":"spicy"}},
+ {"t":"Jangan [terlalu pedas], ya.","ko":"너무 맵지 않게 해 주세요.","en":"Not too spicy, please.","m":{"ko":"너무 매운","en":"too spicy"}},
+ {"t":"[Berapa] semuanya?","ko":"전부 얼마예요?","en":"How much for everything?","m":{"ko":"얼마","en":"how much"}}]}
+]
