@@ -1,9 +1,11 @@
 // 미리 만들어 둔 음성 파일(public/audio)을 재생한다. 파일이 없는 문장(직접 추가한 문장 등)은 false를 돌려줘서
 // 호출한 쪽이 브라우저 기본 음성으로 읽게 한다.
+import { CONTENT_BASE } from './content';
+
 interface Entry { f: string; s?: number }
 
 let manifest: Record<string, Entry> | null = null;
-const base = `${import.meta.env.BASE_URL}audio/`;
+const base = `${CONTENT_BASE}audio/`;
 
 fetch(`${base}manifest.json`)
   .then((r) => (r.ok ? r.json() : null))

@@ -1,5 +1,5 @@
 import { CARDS } from '../data';
-import VIDEOS from '../data/videos.json';
+import { CONTENT } from './content';
 import type { AppState, Card } from '../types';
 import { levelOf } from './text';
 
@@ -34,7 +34,7 @@ const VIDEO_CARD: Card = {
   video: { id: 'Gf-7s8F85Vg', start: 0, end: 11, ratio: 9 / 16, times: [0.44, 0.69, 0.82, 1.19, 1.81, 2.19, 2.6, 2.69, 2.81, 3.06, 3.31, 3.44, 3.69, 3.94, 6.19, 6.31, 6.56, 6.69, 6.94, 7.06, 7.32, 7.44, 8.44] },
 };
 
-const VIDEO_CARDS: Card[] = [VIDEO_CARD, ...(VIDEOS as Card[])];
+const VIDEO_CARDS: Card[] = [VIDEO_CARD, ...(CONTENT.videos as Card[])];
 
 export const feedCards = (s: AppState, cats: string[], tab = '') => allCards(s).filter((c) => matches(s, c, s.level, cats, tab));
 /** 쇼츠 탭: 영상 카드만. 둘러보기에는 섞지 않는다 */
