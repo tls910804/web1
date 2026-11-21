@@ -22,6 +22,9 @@ export function exKind(item: SavedItem): ExKind | null {
   return blankOf(item).length ? 'type' : null;
 }
 
+/** 빈칸 너비용 글자 수: 한글·한자·가나는 영문보다 두 배쯤 넓어요 */
+export const visLen = (s: string) => [...s].reduce((n, c) => n + (/[\u1100-\u11ff\u3000-\u9fff\uac00-\ud7af\uff00-\uffef]/.test(c) ? 2.2 : 1), 0);
+
 export const norm = (s: string, code: string) => {
   const t = s.toLowerCase().replace(/[¡¿.,!?。、！？'"’“”]/g, '');
   return NO_SPACE[code] ? t.replace(/\s+/g, '') : t.replace(/\s+/g, ' ').trim();
@@ -223,7 +226,7 @@ export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKin
           {end ? answer : (
             <input ref={input} value={text} lang={langTag(c.lang)} aria-label={tt('빈칸 입력')} enterKeyHint="done"
               autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false}
-              style={{ width: `${(Math.max(answer.length, text.length) + 1) * 0.8}ch` }}
+              style={{ width: `${(Math.max(visLen(answer), visLen(text)) + 1) * 0.8}ch` }}
               onChange={(e) => onType(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && submit()} />
           )}
         </span>, tail, ' ',

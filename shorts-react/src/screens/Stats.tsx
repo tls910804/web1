@@ -1,26 +1,16 @@
 import { DAY } from '../constants';
 import { tt } from '../i18n';
 import { Icon } from '../components/Icon';
-import { mastered, minutesFor, todayCount } from '../lib/srs';
+import { amount, mastered, minutesFor, streakInfo, todayCount } from '../lib/srs';
 import { dayKey, lang, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { useActions } from '../lib/useActions';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import type { AppState } from '../types';
 
 const WD = ['월', '화', '수', '목', '금', '토', '일'];
-type Log = AppState['log'][string];
-/** 그날 한 일의 양: 복습 + 자동 공부 문장 + AI 전화 */
-const amount = (e?: Log) => (e ? e.n + (e.s || 0) + (e.c || 0) : 0);
 const level = (n: number) => (n === 0 ? 0 : n < 5 ? 1 : n < 15 ? 2 : 3);
 
-/** 하루라도 뭔가 한 날이 끊기지 않고 이어진 일수 (오늘 아직 안 했으면 어제까지) */
-export function streakOf(log: AppState['log']) {
-  const now = Date.now();
-  let n = 0;
-  for (let i = amount(log[dayKey(now)]) ? 0 : 1; i < 400 && amount(log[dayKey(now - i * DAY)]); i++) n++;
-  return n;
-}
+export { streakInfo, streakOf } from '../lib/srs';
 
 /** 한 달 달력 (연속 기록을 누르면) */
 function MonthSheet({ streak, best }: { streak: number; best: number }) {
@@ -30,6 +20,9 @@ function MonthSheet({ streak, best }: { streak: number; best: number }) {
   const first = (new Date(y, m, 1).getDay() + 6) % 7; // 월요일 시작
   const last = new Date(y, m + 1, 0).getDate();
   const cells = [...Array(first).fill(null), ...Array.from({ length: last }, (_, i) => i + 1)];
+  const { frozen, left } = streakInfo(state.log);
+  const frz = new Set(frozen.map((t) => dayKey(t)));
+  const lastFrz = frozen[0];
   const active = Array.from({ length: last }, (_, i) => amount(state.log[dayKey(new Date(y, m, i + 1).getTime())])).filter(Boolean).length;
   return (
     <div className="st-month">
@@ -40,10 +33,19 @@ function MonthSheet({ streak, best }: { streak: number; best: number }) {
         {cells.map((d, i) => {
           if (!d) return <span key={i} />;
           const lv = d > now.getDate() ? -1 : level(amount(state.log[dayKey(new Date(y, m, d).getTime())]));
-          return <span key={i} className={`d l${lv}${d === now.getDate() ? ' today' : ''}`}>{d}</span>;
+          const fz = frz.has(dayKey(new Date(y, m, d).getTime()));
+          return <span key={i} className={`d l${lv}${d === now.getDate() ? ' today' : ''}${fz ? ' frz' : ''}`} title={fz ? tt('쉬는 날 지키기') : undefined}>{fz ? <Icon name="shield" /> : d}</span>;
         })}
       </div>
       <div className="lg"><small>{tt('적게')}</small>{[0, 1, 2, 3].map((l) => <i key={l} className={`l${l}`} />)}<small>{tt('많이')}</small></div>
+      <div className="frz-card">
+        <span className="ic"><Icon name="shield" /></span>
+        <span className="tx">
+          <b>{tt('쉬는 날 지키기 {n}개 남음', { n: left })}</b>
+          <small>{lastFrz ? tt('{m}월 {d}일처럼 못 한 날도 불꽃이 안 꺼져요', { m: new Date(lastFrz).getMonth() + 1, d: new Date(lastFrz).getDate() }) : tt('하루 못 한 날도 불꽃이 안 꺼져요')}</small>
+          <small className="s">{tt('매주 월요일에 1개 다시 생겨요')}</small>
+        </span>
+      </div>
       <div className="three">
         <div><b>{tt('{n}일', { n: streak })}</b><small>{tt('지금 연속')}</small></div>
         <div><b>{tt('{n}일', { n: best })}</b><small>{tt('최고 기록')}</small></div>
@@ -61,10 +63,10 @@ export function Stats() {
   const today = startOfDay(now);
   const dow = (new Date(today).getDay() + 6) % 7;
   const mon = today - dow * DAY;
-  const streak = streakOf(state.log);
+  const { n: streak, left: freezeLeft, frozen } = streakInfo(state.log);
   const best = Math.max(state.best, streak);
   const doneToday = amount(state.log[dayKey(now)]) > 0;
-  const week = WD.map((d, i) => ({ d, done: amount(state.log[dayKey(mon + i * DAY)]) > 0, today: i === dow }));
+  const week = WD.map((d, i) => ({ d, done: amount(state.log[dayKey(mon + i * DAY)]) > 0, frz: frozen.includes(mon + i * DAY), today: i === dow }));
   const due = todayCount(state);
 
   const head = (
@@ -74,13 +76,13 @@ export function Stats() {
         <span className="top">
           <span className={`fl${streak ? '' : ' off'}`}><Icon name="flame" /></span>
           {streak
-            ? <span className="tx"><b><em>{streak}</em>{tt('일 연속')}</b><small>{doneToday ? tt('최고 {n}일 · 오늘도 했어요', { n: best }) : tt('최고 {n}일 · 오늘도 하면 {m}일', { n: best, m: streak + 1 })}</small></span>
+            ? <span className="tx"><b><em>{streak}</em>{tt('일 연속')}</b><small>{doneToday ? tt('최고 {n}일 · 오늘도 했어요', { n: best }) : tt('최고 {n}일 · 오늘도 하면 {m}일', { n: best, m: streak + 1 })}{freezeLeft > 0 && ` · ${tt('쉬는 날 지키기 {n}개', { n: freezeLeft })}`}</small></span>
             : <span className="tx"><b>{tt('오늘 첫 기록을 시작해요')}</b><small>{tt('하루 1문장만 해도 연속 기록이 쌓여요')}</small></span>}
           <Icon name="chev" />
         </span>
         <span className="week">
           {week.map((w) => (
-            <span key={w.d} className={`${w.done ? 'wd-on' : ''}${w.today ? ' wd-today' : ''}`}><i>{w.done && <Icon name="check" />}</i>{tt(w.d)}</span>
+            <span key={w.d} className={`${w.done ? 'wd-on' : w.frz ? 'wd-frz' : ''}${w.today ? ' wd-today' : ''}`} title={w.frz ? tt('쉬는 날 지키기') : undefined}><i>{w.done ? <Icon name="check" /> : w.frz && <Icon name="shield" />}</i>{tt(w.d)}</span>
           ))}
         </span>
       </button>

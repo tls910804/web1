@@ -12,6 +12,7 @@ import { Exercise, exKind } from './Exercise';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { SavedItem } from '../types';
+import { ShareSheet } from './Share';
 
 export function Review() {
   const { state } = useStore();
@@ -128,7 +129,7 @@ export function RetryBar({ label, items, now }: { label: string; items: SavedIte
 
 export function ReviewDone() {
   const { state } = useStore();
-  const { rv, go } = useUi();
+  const { rv, go, openSheet } = useUi();
   const { startReview } = useActions();
   const [tab, setTab] = useState<'ok' | 'no' | null>(null);
   const again = rv ? state.saved.filter((x) => rv.again.includes(x.id)) : [];
@@ -163,6 +164,11 @@ export function ReviewDone() {
             <b className="n">{state.streak}</b>
             <div><b>{state.streak > 1 ? tt('{n}일 연속으로 복습했어요', { n: state.streak }) : tt('오늘 복습을 마쳤어요')}</b><small>{nextDueText(state)}</small></div>
           </div>
+        )}
+        {known[0] && (
+          <button className="rd-share" onClick={() => openSheet(<ShareSheet card={known[0].card} />)}>
+            <Icon name="share" /><span><b>{tt('오늘 문장 공유하기')}</b><small lang={langTag(known[0].card.lang)}>{sentence(known[0].card)}</small></span>
+          </button>
         )}
         <div className="stats">
           <div><span>{tt('알았어요')}</span><b>{rv.known.length}</b></div>

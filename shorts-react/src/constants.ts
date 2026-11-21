@@ -32,6 +32,8 @@ export const ICON = {
   globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-3 3.5-3 14.5 0 18M12 3c3 3.5 3 14.5 0 18"/>',
   moon: '<path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/>',
   screen: '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/>',
+  share: '<path d="M12 15V4M7.5 8.5L12 4l4.5 4.5M6 12v7h12v-7"/>',
+  shield: '<path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"/>',
   download: '<path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19h14"/>',
   book: '<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 10h8M8 14h5"/>',
   undo: '<path d="M4 12a8 8 0 1 1 2.3 5.7M4 12V7M4 12h5"/>',

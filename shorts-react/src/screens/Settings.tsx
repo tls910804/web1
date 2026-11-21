@@ -12,7 +12,6 @@ import { streakOf } from './Stats';
 import { mastered } from '../lib/srs';
 import { LANGS } from '../data';
 import { useLangPick } from './LangPickers';
-import { useState } from 'react';
 import { Flag, byOrder } from '../components/Flag';
 
 export const accountName = (account: string | null) => (account ? tt('{a} 계정', { a: account }) : tt('로그인하지 않음'));
@@ -25,27 +24,17 @@ export const Code = ({ c }: { c: string }) => {
   return <span className="lg-code" style={{ color: col, background: `color-mix(in srgb, ${col} 13%, transparent)` }}>{c.toUpperCase()}</span>;
 };
 
-/** 언어 설정 시트: 탭으로 배울 언어(여러 개) / 내 언어(하나), 온보딩과 같은 국기 카드 */
-function LangSheet() {
+/** 언어 설정 시트: 마이 언어 카드에서 누른 쪽만 보여줘요. 배울 언어(여러 개) / 내 언어(하나), 온보딩과 같은 국기 카드 */
+function LangSheet({ tab }: { tab: 'learn' | 'native' }) {
   const { state } = useStore();
   const { closeLayer } = useUi();
   const { setNative, toggleLearn } = useLangPick();
-  const [tab, setTab] = useState<'learn' | 'native'>('learn');
   const dev = navigator.language.slice(0, 2);
-  const learnKo = state.learn.map((c) => lang(c).ko).join('·');
   const items = [...LANGS].sort(byOrder).filter((l) => tab === 'native' || l.code !== state.native);
   return (
     <div className="lg-sheet">
       <div className="grab" />
-      <div className="lg-hd"><h3>{tt('언어 설정')}</h3><button onClick={closeLayer}>{tt('완료')}</button></div>
-      <p className="lg-sum">
-        <span className="fl"><Flag code={state.native} size={20} /><i>→</i>{state.learn.map((c) => <Flag key={c} code={c} size={20} />)}</span>
-        {tt('뜻은 {a}로, 문장은 {b}로', { a: lang(state.native).ko, b: learnKo })}
-      </p>
-      <div className="lg-tabs">
-        <button className={tab === 'learn' ? 'on' : ''} onClick={() => setTab('learn')}>{tt('배울 언어')} {state.learn.length}</button>
-        <button className={tab === 'native' ? 'on' : ''} onClick={() => setTab('native')}>{tt('내 언어')} · {lang(state.native).ko}</button>
-      </div>
+      <div className="lg-hd"><h3>{tab === 'learn' ? tt('배울 언어') : tt('내 언어')}</h3><button onClick={closeLayer}>{tt('완료')}</button></div>
       <small className="lg-s">{tab === 'learn' ? tt('이 언어 문장이 나와요 · 여러 개 골라도 돼요') : tt('뜻과 설명, 앱 글자가 이 언어로 나와요 · 하나만')}</small>
       <div className={`lg-flags${tab === 'native' ? ' one' : ''}`}>
         {items.map((l) => {
@@ -104,14 +93,21 @@ export function Settings() {
         </button>
       )}
 
-      <button className="my-card my-lang" onClick={() => openSheet(<LangSheet />)}>
-        <span className="hd"><b>{tt('언어')}</b><span className="ed">{tt('바꾸기')}<Icon name="chev" /></span></span>
-        <span className="pair">
-          <span className="nat"><Flag code={state.native} size={28} /><span><small>{tt('내 언어')}</small><b>{lang(state.native).ko}</b></span></span>
-          <span className="arr"><Icon name="back" /></span>
-          <span className="lrn"><small>{tt('배울 언어')}</small><span className="chips">{state.learn.map((c) => <span key={c}><Flag code={c} size={18} />{lang(c).ko}</span>)}</span></span>
-        </span>
-      </button>
+      {/* 언어: 내 언어 / 배울 언어를 따로 눌러 각자 시트를 열어요 */}
+      <div className="my-card list my-lang">
+        <button className="my-item" onClick={() => openSheet(<LangSheet tab="native" />)}>
+          <span className="fl"><Flag code={state.native} size={30} /></span>
+          <span className="my-tx"><b>{tt('내 언어')}</b><small>{tt('뜻과 설명이 이 언어로 나와요')}</small></span>
+          <span className="val">{lang(state.native).ko}</span>
+          <span className="my-chev"><Icon name="chev" /></span>
+        </button>
+        <button className="my-item" onClick={() => openSheet(<LangSheet tab="learn" />)}>
+          <span className="fl stack">{state.learn.slice(0, 3).map((c) => <Flag key={c} code={c} size={30} />)}</span>
+          <span className="my-tx"><b>{tt('배울 언어')}</b><small>{tt('이 언어 문장이 나와요')}</small></span>
+          <span className="val b">{state.learn.length ? state.learn.map((c) => lang(c).ko).join(', ') : tt('골라 주세요')}</span>
+          <span className="my-chev"><Icon name="chev" /></span>
+        </button>
+      </div>
 
       {/* shortcut: 결제가 아직 없어서 버튼은 안내만 띄움, 결제 붙일 때 연결 */}
       <div className="my-pro">

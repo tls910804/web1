@@ -6,7 +6,7 @@ import { Icon } from '../components/Icon';
 import { Grab, SheetHead } from '../components/Layer';
 import { Expr, Pill } from '../components/Rows';
 import { DAY } from '../constants';
-import { daysLabel, dueItems, isWeak, minutesFor, nextDueText, retryItems, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
+import { daysLabel, dueItems, GRAD_AT, isWeak, minutesFor, nextDueText, retryItems, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
 import { useActions } from '../lib/useActions';
 import { lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
 import { useStore } from '../store';
@@ -107,6 +107,31 @@ export function Saved() {
     openSheet(<Pick />);
   };
 
+  // 오답 노트: '다시'를 WEAK_AT번 이상 받은 문장. GRAD_AT번 연속 맞히면 졸업
+  const wrong = weakItems(state);
+  const openWrong = () => openSheet(
+    <>
+      <SheetHead title={tt('오답 노트')} />
+      <p className="wn-sub">{tt('{n}문장 · {g}번 연속 맞히면 졸업해요', { n: wrong.length, g: GRAD_AT })}</p>
+      <div className="wn-list">
+        {wrong.map((x) => {
+          const t = text(x);
+          return (
+            <div className="wn-row" key={x.id}>
+              <b lang={langTag(x.card.lang)}>{t.head}</b>
+              <small>{t.sub}</small>
+              <span className="wn-bot">
+                <span className="wn-miss">{tt('{n}번 틀림', { n: x.lapses || 0 })}</span>
+                <span className="wn-dots" aria-label={tt('졸업까지 {n}번', { n: GRAD_AT - (x.okRun || 0) })}><small>{tt('졸업까지')}</small>{Array.from({ length: GRAD_AT }, (_, i) => <i key={i} className={i < (x.okRun || 0) ? 'on' : ''} />)}</span>
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <Button kind="danger" onClick={() => { closeLayer(); startReview(wrong.map((x) => x.id)); }}>{tt('오답만 복습 ({n})', { n: wrong.length })}</Button>
+    </>,
+  );
+
   const openDetail = (x: SavedItem) => {
     const t = text(x);
     const next = x.learned ? tt('외웠어요') : dueIn(x) ? daysLabel(dueIn(x)) : tt('오늘');
@@ -172,6 +197,13 @@ export function Saved() {
         </div>
       )}
       {!sel && <RetryBar label={tt('5분 뒤 다시 볼 문장 {n}개', { n: retry.length })} items={retry} now={now} />}
+      {!sel && wrong.length > 0 && (
+        <button className="wn-entry" onClick={openWrong}>
+          <span className="n">{wrong.length}</span>
+          <span className="tx"><b>{tt('오답 노트')}</b><small>{tt('자꾸 틀리는 문장 · {g}번 연속 맞히면 졸업', { g: GRAD_AT })}</small></span>
+          <Icon name="chev" />
+        </button>
+      )}
       <div className="seg">
         <button className={savedTab === 's' ? 'on' : ''} onClick={() => setSavedTab('s')}>{tt('문장')}<small>{countS}</small></button>
         <button className={savedTab === 'w' ? 'on' : ''} onClick={() => setSavedTab('w')}>{tt('단어·표현')}<small>{countW}</small></button>

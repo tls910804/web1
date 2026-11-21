@@ -1,0 +1,2199 @@
+[
+ {
+  "id": "draft-en1",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "I'll",
+   "be right back."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "be right back",
+  "tr": {
+   "ko": "금방 올게.",
+   "en": "I'll return soon."
+  },
+  "mean": {
+   "ko": "곧 돌아오다",
+   "en": "to return very soon"
+  },
+  "trKey": {
+   "ko": "금방 올게"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en2",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "Take your time,",
+   "no",
+   "rush."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Take your time",
+  "tr": {
+   "ko": "천천히 해, 급할 거 없어.",
+   "en": "Go slowly, there is no hurry."
+  },
+  "mean": {
+   "ko": "서두르지 않고 천천히 하다",
+   "en": "do it slowly"
+  },
+  "trKey": {
+   "ko": "천천히 해"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en3",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "I'm",
+   "running out of",
+   "battery."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "running out of",
+  "tr": {
+   "ko": "배터리가 다 떨어져 가.",
+   "en": "My battery is almost empty."
+  },
+  "mean": {
+   "ko": "~이 다 떨어져 가다",
+   "en": "to have almost none left"
+  },
+  "trKey": {
+   "ko": "다 떨어져 가"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en4",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "It slipped my mind."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "It slipped my mind",
+  "tr": {
+   "ko": "깜빡했어.",
+   "en": "I forgot."
+  },
+  "mean": {
+   "ko": "깜빡 잊다",
+   "en": "to forget by accident"
+  },
+  "trKey": {
+   "ko": "깜빡했어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en5",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "Let's",
+   "grab a bite."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "grab a bite",
+  "tr": {
+   "ko": "간단히 뭐 좀 먹자.",
+   "en": "Let's eat something quick."
+  },
+  "mean": {
+   "ko": "간단히 먹다",
+   "en": "to eat something quickly"
+  },
+  "trKey": {
+   "ko": "간단히 뭐 좀 먹자"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en6",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "I've",
+   "been",
+   "swamped",
+   "all",
+   "week."
+  ],
+  "key": [
+   2
+  ],
+  "expr": "swamped",
+  "tr": {
+   "ko": "이번 주 내내 정신없이 바빴어.",
+   "en": "I have been extremely busy all week."
+  },
+  "mean": {
+   "ko": "일이 넘쳐서 매우 바쁜",
+   "en": "extremely busy"
+  },
+  "trKey": {
+   "ko": "정신없이 바빴어"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en7",
+  "lang": "en",
+  "cat": "감정",
+  "words": [
+   "I'm",
+   "on cloud nine."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "on cloud nine",
+  "tr": {
+   "ko": "나 완전 날아갈 것 같아.",
+   "en": "I'm extremely happy."
+  },
+  "mean": {
+   "ko": "아주 행복한",
+   "en": "extremely happy"
+  },
+  "trKey": {
+   "ko": "날아갈 것 같아"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en8",
+  "lang": "en",
+  "cat": "감정",
+  "words": [
+   "That",
+   "really got to me."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "really got to me",
+  "tr": {
+   "ko": "그거 진짜 마음에 와닿았어.",
+   "en": "That really affected me."
+  },
+  "mean": {
+   "ko": "마음을 크게 움직이다",
+   "en": "to affect someone emotionally"
+  },
+  "trKey": {
+   "ko": "마음에 와닿았어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en9",
+  "lang": "en",
+  "cat": "감정",
+  "words": [
+   "I'm",
+   "fed up",
+   "with",
+   "this."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "fed up",
+  "tr": {
+   "ko": "이거 진짜 지긋지긋해.",
+   "en": "I have had enough of this."
+  },
+  "mean": {
+   "ko": "질려서 참을 수 없는",
+   "en": "tired of something"
+  },
+  "trKey": {
+   "ko": "지긋지긋해"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en10",
+  "lang": "en",
+  "cat": "회사",
+  "words": [
+   "Let's",
+   "touch base",
+   "tomorrow."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "touch base",
+  "tr": {
+   "ko": "내일 잠깐 얘기 나눠요.",
+   "en": "Let's talk briefly tomorrow."
+  },
+  "mean": {
+   "ko": "잠깐 연락해서 상황을 공유하다",
+   "en": "to check in briefly"
+  },
+  "trKey": {
+   "ko": "잠깐 얘기 나눠요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en11",
+  "lang": "en",
+  "cat": "회사",
+  "words": [
+   "Can",
+   "we",
+   "push it back",
+   "a",
+   "day?"
+  ],
+  "key": [
+   2
+  ],
+  "expr": "push it back",
+  "tr": {
+   "ko": "하루 미룰 수 있을까요?",
+   "en": "Can we delay it by one day?"
+  },
+  "mean": {
+   "ko": "일정을 뒤로 미루다",
+   "en": "to postpone"
+  },
+  "trKey": {
+   "ko": "미룰 수 있을까요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en12",
+  "lang": "en",
+  "cat": "회사",
+  "words": [
+   "I'll",
+   "loop you in."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "loop you in",
+  "tr": {
+   "ko": "진행 상황 공유해 드릴게요.",
+   "en": "I'll include you in the updates."
+  },
+  "mean": {
+   "ko": "대화나 진행 상황에 포함시키다",
+   "en": "to include someone"
+  },
+  "trKey": {
+   "ko": "공유해 드릴게요"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en13",
+  "lang": "en",
+  "cat": "회사",
+  "words": [
+   "I'm",
+   "off",
+   "today."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "off",
+  "tr": {
+   "ko": "저 오늘 쉬는 날이에요.",
+   "en": "I don't work today."
+  },
+  "mean": {
+   "ko": "일을 쉬는",
+   "en": "not working"
+  },
+  "trKey": {
+   "ko": "쉬는 날"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en14",
+  "lang": "en",
+  "cat": "여행",
+  "words": [
+   "Is",
+   "this",
+   "seat",
+   "taken?"
+  ],
+  "key": [
+   3
+  ],
+  "expr": "taken",
+  "tr": {
+   "ko": "이 자리 누구 있어요?",
+   "en": "Is someone sitting here?"
+  },
+  "mean": {
+   "ko": "(자리가) 이미 맡아진",
+   "en": "already occupied"
+  },
+  "trKey": {
+   "ko": "누구 있어요"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en15",
+  "lang": "en",
+  "cat": "여행",
+  "words": [
+   "Could",
+   "you",
+   "point me in the right direction?"
+  ],
+  "key": [
+   2
+  ],
+  "expr": "point me in the right direction",
+  "tr": {
+   "ko": "길 좀 알려 주실 수 있어요?",
+   "en": "Could you show me which way to go?"
+  },
+  "mean": {
+   "ko": "가야 할 방향을 알려 주다",
+   "en": "to show the way"
+  },
+  "trKey": {
+   "ko": "길 좀 알려"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en16",
+  "lang": "en",
+  "cat": "여행",
+  "words": [
+   "I'd",
+   "like",
+   "to",
+   "check in,",
+   "please."
+  ],
+  "key": [
+   3
+  ],
+  "expr": "check in",
+  "tr": {
+   "ko": "체크인하고 싶어요.",
+   "en": "I'd like to check in, please."
+  },
+  "mean": {
+   "ko": "(호텔·공항에) 도착 수속을 하다",
+   "en": "to register on arrival"
+  },
+  "trKey": {
+   "ko": "체크인"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en17",
+  "lang": "en",
+  "cat": "여행",
+  "words": [
+   "We",
+   "missed",
+   "our",
+   "connecting",
+   "flight."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "missed",
+  "tr": {
+   "ko": "환승 비행기를 놓쳤어요.",
+   "en": "We missed our connecting flight."
+  },
+  "mean": {
+   "ko": "(교통편을) 놓치다",
+   "en": "to fail to catch"
+  },
+  "trKey": {
+   "ko": "놓쳤어요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en18",
+  "lang": "en",
+  "cat": "카페·식당",
+  "words": [
+   "Can",
+   "I",
+   "get this to go?"
+  ],
+  "key": [
+   2
+  ],
+  "expr": "get this to go",
+  "tr": {
+   "ko": "이거 포장되나요?",
+   "en": "Can I take this with me?"
+  },
+  "mean": {
+   "ko": "가지고 가다(포장)",
+   "en": "to take away"
+  },
+  "trKey": {
+   "ko": "포장되나요"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en19",
+  "lang": "en",
+  "cat": "카페·식당",
+  "words": [
+   "What do you recommend?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "What do you recommend",
+  "tr": {
+   "ko": "뭐가 맛있어요?",
+   "en": "What do you suggest?"
+  },
+  "mean": {
+   "ko": "추천해 달라고 하는 말",
+   "en": "asking for a suggestion"
+  },
+  "trKey": {
+   "ko": "뭐가 맛있어요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en20",
+  "lang": "en",
+  "cat": "카페·식당",
+  "words": [
+   "Let's",
+   "split the bill."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "split the bill",
+  "tr": {
+   "ko": "나눠서 내자.",
+   "en": "Let's each pay part of the bill."
+  },
+  "mean": {
+   "ko": "계산을 나눠 내다",
+   "en": "to share the cost"
+  },
+  "trKey": {
+   "ko": "나눠서 내자"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en21",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "That's",
+   "lit!"
+  ],
+  "key": [
+   1
+  ],
+  "expr": "lit",
+  "tr": {
+   "ko": "그거 완전 쩐다!",
+   "en": "That's amazing!"
+  },
+  "mean": {
+   "ko": "아주 멋진, 신나는 (슬랭)",
+   "en": "exciting, amazing (slang)"
+  },
+  "trKey": {
+   "ko": "완전 쩐다"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en22",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "No cap,",
+   "this",
+   "is",
+   "the",
+   "best",
+   "pizza."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "No cap",
+  "tr": {
+   "ko": "진짜로, 이게 최고의 피자야.",
+   "en": "Honestly, this is the best pizza."
+  },
+  "mean": {
+   "ko": "거짓말 아니고, 진짜로 (슬랭)",
+   "en": "no lie, honestly (slang)"
+  },
+  "trKey": {
+   "ko": "진짜로"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en23",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "He's",
+   "been",
+   "ghosting",
+   "me."
+  ],
+  "key": [
+   2
+  ],
+  "expr": "ghosting",
+  "tr": {
+   "ko": "걔가 나 계속 읽씹하고 잠수 타.",
+   "en": "He's been ignoring me completely."
+  },
+  "mean": {
+   "ko": "연락을 갑자기 끊다 (슬랭)",
+   "en": "to suddenly stop replying (slang)"
+  },
+  "trKey": {
+   "ko": "잠수 타"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en24",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "슬랭",
+  "words": [
+   "I'm",
+   "lowkey",
+   "nervous."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "lowkey",
+  "tr": {
+   "ko": "나 은근 긴장돼.",
+   "en": "I'm a little nervous."
+  },
+  "mean": {
+   "ko": "살짝, 은근히 (슬랭)",
+   "en": "slightly, secretly (slang)"
+  },
+  "trKey": {
+   "ko": "은근"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en25",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "My bad."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "My bad",
+  "tr": {
+   "ko": "내 잘못이야, 미안.",
+   "en": "Sorry, my mistake."
+  },
+  "mean": {
+   "ko": "내 실수야, 미안 (가벼운 사과)",
+   "en": "my mistake (casual)"
+  },
+  "trKey": {
+   "ko": "내 잘못이야"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en26",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "I",
+   "have a crush on",
+   "her."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "have a crush on",
+  "tr": {
+   "ko": "나 그녀한테 반했어.",
+   "en": "I like her romantically."
+  },
+  "mean": {
+   "ko": "~에게 반하다, 좋아하다",
+   "en": "to like someone romantically"
+  },
+  "trKey": {
+   "ko": "반했어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en27",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "Are",
+   "you",
+   "seeing anyone?"
+  ],
+  "key": [
+   2
+  ],
+  "expr": "seeing anyone",
+  "tr": {
+   "ko": "요즘 만나는 사람 있어?",
+   "en": "Are you dating anyone?"
+  },
+  "mean": {
+   "ko": "누군가와 사귀다",
+   "en": "to be dating someone"
+  },
+  "trKey": {
+   "ko": "만나는 사람 있어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en28",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "We",
+   "hit it off",
+   "right",
+   "away."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "hit it off",
+  "tr": {
+   "ko": "우리 바로 잘 통했어.",
+   "en": "We got along well immediately."
+  },
+  "mean": {
+   "ko": "처음부터 마음이 잘 맞다",
+   "en": "to get along well quickly"
+  },
+  "trKey": {
+   "ko": "잘 통했어"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en29",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "I",
+   "miss you",
+   "already."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "miss you",
+  "tr": {
+   "ko": "벌써 보고 싶어.",
+   "en": "I already wish you were here."
+  },
+  "mean": {
+   "ko": "그리워하다",
+   "en": "to feel sad someone is away"
+  },
+  "trKey": {
+   "ko": "보고 싶어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en30",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "She",
+   "broke up with",
+   "him."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "broke up with",
+  "tr": {
+   "ko": "그녀가 그 남자랑 헤어졌어.",
+   "en": "She ended the relationship with him."
+  },
+  "mean": {
+   "ko": "~와 헤어지다",
+   "en": "to end a relationship"
+  },
+  "trKey": {
+   "ko": "헤어졌어"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en31",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "드라마·영화",
+  "words": [
+   "I've got your back."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "I've got your back",
+  "tr": {
+   "ko": "내가 네 편이야.",
+   "en": "I will support you."
+  },
+  "mean": {
+   "ko": "도와주고 지켜 주다",
+   "en": "to support someone"
+  },
+  "trKey": {
+   "ko": "네 편이야"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en32",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "드라마·영화",
+  "words": [
+   "Don't push it."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Don't push it",
+  "tr": {
+   "ko": "적당히 해.",
+   "en": "Don't go too far."
+  },
+  "mean": {
+   "ko": "너무 몰아붙이지 마",
+   "en": "don't go too far"
+  },
+  "trKey": {
+   "ko": "적당히 해"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en33",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "드라마·영화",
+  "words": [
+   "It's not what it looks like!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "It's not what it looks like",
+  "tr": {
+   "ko": "보이는 거랑 달라!",
+   "en": "It's not what you think!"
+  },
+  "mean": {
+   "ko": "오해하지 마 (드라마 단골 대사)",
+   "en": "it's a misunderstanding"
+  },
+  "trKey": {
+   "ko": "보이는 거랑 달라"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en34",
+  "lang": "en",
+  "cat": "감정",
+  "tab": "드라마·영화",
+  "words": [
+   "Get out of here!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Get out of here",
+  "tr": {
+   "ko": "말도 안 돼!",
+   "en": "No way, I don’t believe it!"
+  },
+  "mean": {
+   "ko": "(놀라서) 말도 안 돼, 설마",
+   "en": "no way (surprise)"
+  },
+  "trKey": {
+   "ko": "말도 안 돼"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en35",
+  "lang": "en",
+  "cat": "일상",
+  "tab": "드라마·영화",
+  "words": [
+   "We need to talk."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "We need to talk",
+  "tr": {
+   "ko": "우리 얘기 좀 해.",
+   "en": "We have to talk about something serious."
+  },
+  "mean": {
+   "ko": "심각한 대화를 시작할 때 하는 말",
+   "en": "serious talk is coming"
+  },
+  "trKey": {
+   "ko": "얘기 좀 해"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en36",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "I'll",
+   "sleep on it."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "sleep on it",
+  "tr": {
+   "ko": "하룻밤 생각해 볼게.",
+   "en": "I'll think about it overnight."
+  },
+  "mean": {
+   "ko": "하룻밤 자며 생각해 보다",
+   "en": "to decide later after thinking"
+  },
+  "trKey": {
+   "ko": "생각해 볼게"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en37",
+  "lang": "en",
+  "cat": "일상",
+  "words": [
+   "Long time no see!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Long time no see",
+  "tr": {
+   "ko": "진짜 오랜만이다!",
+   "en": "It's been a long time!"
+  },
+  "mean": {
+   "ko": "오랜만이야",
+   "en": "it's been a long time"
+  },
+  "trKey": {
+   "ko": "오랜만이다"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-en38",
+  "lang": "en",
+  "cat": "회사",
+  "words": [
+   "Let's",
+   "circle back",
+   "after",
+   "lunch."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "circle back",
+  "tr": {
+   "ko": "점심 먹고 다시 얘기해요.",
+   "en": "Let's discuss it again after lunch."
+  },
+  "mean": {
+   "ko": "나중에 다시 그 얘기로 돌아오다",
+   "en": "to return to a topic later"
+  },
+  "trKey": {
+   "ko": "다시 얘기해요"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-en39",
+  "lang": "en",
+  "cat": "카페·식당",
+  "words": [
+   "I'm full."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "I'm full",
+  "tr": {
+   "ko": "배불러.",
+   "en": "I've eaten enough."
+  },
+  "mean": {
+   "ko": "배가 부르다",
+   "en": "no longer hungry"
+  },
+  "trKey": {
+   "ko": "배불러"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-en40",
+  "lang": "en",
+  "cat": "여행",
+  "words": [
+   "Our",
+   "flight",
+   "got",
+   "delayed."
+  ],
+  "key": [
+   3
+  ],
+  "expr": "delayed",
+  "tr": {
+   "ko": "비행기가 지연됐어.",
+   "en": "Our flight is late."
+  },
+  "mean": {
+   "ko": "늦어지다, 연기되다",
+   "en": "made late"
+  },
+  "trKey": {
+   "ko": "지연됐어"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-ko1",
+  "lang": "ko",
+  "cat": "일상",
+  "words": [
+   "잠깐만",
+   "기다려",
+   "줘."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "잠깐만",
+  "tr": {
+   "en": "Wait a second for me."
+  },
+  "mean": {
+   "en": "just a moment"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko2",
+  "lang": "ko",
+  "cat": "일상",
+  "words": [
+   "괜찮아,",
+   "신경",
+   "쓰지",
+   "마."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "괜찮아",
+  "tr": {
+   "en": "It's fine, don't worry about it."
+  },
+  "mean": {
+   "en": "it's okay"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko3",
+  "lang": "ko",
+  "cat": "일상",
+  "words": [
+   "오늘",
+   "진짜",
+   "피곤하다."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "진짜",
+  "tr": {
+   "en": "I'm really tired today."
+  },
+  "mean": {
+   "en": "really"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko4",
+  "lang": "ko",
+  "cat": "일상",
+  "words": [
+   "어쩔 수 없지",
+   "뭐."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "어쩔 수 없지",
+  "tr": {
+   "en": "Well, it can't be helped."
+  },
+  "mean": {
+   "en": "it can't be helped"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko5",
+  "lang": "ko",
+  "cat": "일상",
+  "words": [
+   "내일",
+   "시간 돼?"
+  ],
+  "key": [
+   1
+  ],
+  "expr": "시간 돼",
+  "tr": {
+   "en": "Are you free tomorrow?"
+  },
+  "mean": {
+   "en": "are you free?"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko6",
+  "lang": "ko",
+  "cat": "감정",
+  "words": [
+   "속상해",
+   "죽겠어."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "속상해",
+  "tr": {
+   "en": "I'm so upset."
+  },
+  "mean": {
+   "en": "upset, hurt"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko7",
+  "lang": "ko",
+  "cat": "감정",
+  "words": [
+   "다행이다!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "다행이다",
+  "tr": {
+   "en": "What a relief!"
+  },
+  "mean": {
+   "en": "what a relief"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko8",
+  "lang": "ko",
+  "cat": "감정",
+  "words": [
+   "어이가 없네."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "어이가 없네",
+  "tr": {
+   "en": "I'm speechless (in disbelief)."
+  },
+  "mean": {
+   "en": "unbelievable, absurd"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-ko9",
+  "lang": "ko",
+  "cat": "회사",
+  "words": [
+   "수고하셨습니다."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "수고하셨습니다",
+  "tr": {
+   "en": "Thank you for your hard work."
+  },
+  "mean": {
+   "en": "thanks for your effort"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko10",
+  "lang": "ko",
+  "cat": "회사",
+  "words": [
+   "회의",
+   "시간",
+   "좀 당겨도",
+   "될까요?"
+  ],
+  "key": [
+   2
+  ],
+  "expr": "좀 당겨도",
+  "tr": {
+   "en": "Can we move the meeting earlier?"
+  },
+  "mean": {
+   "en": "to move earlier"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko11",
+  "lang": "ko",
+  "cat": "회사",
+  "words": [
+   "확인해 보고",
+   "다시",
+   "연락드릴게요."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "확인해 보고",
+  "tr": {
+   "en": "I'll check and get back to you."
+  },
+  "mean": {
+   "en": "to check"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-ko12",
+  "lang": "ko",
+  "cat": "회사",
+  "words": [
+   "저",
+   "오늘",
+   "반차",
+   "써요."
+  ],
+  "key": [
+   2
+  ],
+  "expr": "반차",
+  "tr": {
+   "en": "I'm taking a half day off today."
+  },
+  "mean": {
+   "en": "half-day leave"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko13",
+  "lang": "ko",
+  "cat": "여행",
+  "words": [
+   "여기서 얼마나",
+   "걸려요?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "여기서 얼마나",
+  "tr": {
+   "en": "How long does it take from here?"
+  },
+  "mean": {
+   "en": "how long from here"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko14",
+  "lang": "ko",
+  "cat": "여행",
+  "words": [
+   "화장실이",
+   "어디예요?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "화장실이",
+  "tr": {
+   "en": "Where is the restroom?"
+  },
+  "mean": {
+   "en": "restroom"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko15",
+  "lang": "ko",
+  "cat": "여행",
+  "words": [
+   "사진 좀",
+   "찍어",
+   "주실래요?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "사진 좀",
+  "tr": {
+   "en": "Could you take a photo for me?"
+  },
+  "mean": {
+   "en": "a photo"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko16",
+  "lang": "ko",
+  "cat": "카페·식당",
+  "words": [
+   "아이스로",
+   "주세요."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "아이스로",
+  "tr": {
+   "en": "Iced, please."
+  },
+  "mean": {
+   "en": "iced"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko17",
+  "lang": "ko",
+  "cat": "카페·식당",
+  "words": [
+   "여기요!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "여기요",
+  "tr": {
+   "en": "Excuse me! (calling staff)"
+  },
+  "mean": {
+   "en": "excuse me (to staff)"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-ko18",
+  "lang": "ko",
+  "cat": "카페·식당",
+  "words": [
+   "덜 맵게",
+   "해",
+   "주세요."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "덜 맵게",
+  "tr": {
+   "en": "Please make it less spicy."
+  },
+  "mean": {
+   "en": "less spicy"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko19",
+  "lang": "ko",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "완전",
+   "꿀잼이야."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "완전",
+  "tr": {
+   "en": "It's super fun."
+  },
+  "mean": {
+   "en": "totally"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko20",
+  "lang": "ko",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "ㄹㅇ",
+   "맛있어."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "ㄹㅇ",
+  "tr": {
+   "en": "It's for real delicious."
+  },
+  "mean": {
+   "en": "for real (texting slang)"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko21",
+  "lang": "ko",
+  "cat": "감정",
+  "tab": "슬랭",
+  "words": [
+   "현타",
+   "왔어."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "현타",
+  "tr": {
+   "en": "Reality just hit me."
+  },
+  "mean": {
+   "en": "a reality check (slang)"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-ko22",
+  "lang": "ko",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "보고 싶었어."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "보고 싶었어",
+  "tr": {
+   "en": "I missed you."
+  },
+  "mean": {
+   "en": "I missed you"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko23",
+  "lang": "ko",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "우리",
+   "썸 타는",
+   "사이야."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "썸 타는",
+  "tr": {
+   "en": "We're kind of seeing each other."
+  },
+  "mean": {
+   "en": "in a \"some\" (pre-dating) stage"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-ko24",
+  "lang": "ko",
+  "cat": "감정",
+  "tab": "드라마·영화",
+  "words": [
+   "내가 뭘 잘못했는데?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "내가 뭘 잘못했는데",
+  "tr": {
+   "en": "What did I do wrong?"
+  },
+  "mean": {
+   "en": "what did I do wrong?"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-ko25",
+  "lang": "ko",
+  "cat": "일상",
+  "tab": "드라마·영화",
+  "words": [
+   "이게 다",
+   "무슨",
+   "일이야?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "이게 다",
+  "tr": {
+   "en": "What is all this?"
+  },
+  "mean": {
+   "en": "all this"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-id1",
+  "lang": "id",
+  "cat": "일상",
+  "words": [
+   "Saya",
+   "lagi di jalan."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "lagi di jalan",
+  "tr": {
+   "ko": "나 지금 가는 중이야.",
+   "en": "I'm on my way."
+  },
+  "mean": {
+   "ko": "가는 중이다",
+   "en": "on the way"
+  },
+  "trKey": {
+   "ko": "가는 중"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id2",
+  "lang": "id",
+  "cat": "일상",
+  "words": [
+   "Nggak apa-apa."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Nggak apa-apa",
+  "tr": {
+   "ko": "괜찮아.",
+   "en": "It's okay."
+  },
+  "mean": {
+   "ko": "괜찮다",
+   "en": "it's okay"
+  },
+  "trKey": {
+   "ko": "괜찮아"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id3",
+  "lang": "id",
+  "cat": "일상",
+  "words": [
+   "Sebentar,",
+   "ya."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Sebentar",
+  "tr": {
+   "ko": "잠깐만요.",
+   "en": "Just a moment."
+  },
+  "mean": {
+   "ko": "잠깐",
+   "en": "a moment"
+  },
+  "trKey": {
+   "ko": "잠깐만요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id4",
+  "lang": "id",
+  "cat": "일상",
+  "words": [
+   "Aku",
+   "capek banget."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "capek banget",
+  "tr": {
+   "ko": "나 너무 피곤해.",
+   "en": "I'm so tired."
+  },
+  "mean": {
+   "ko": "아주 피곤한",
+   "en": "very tired"
+  },
+  "trKey": {
+   "ko": "너무 피곤해"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id5",
+  "lang": "id",
+  "cat": "일상",
+  "words": [
+   "Sampai jumpa",
+   "besok!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Sampai jumpa",
+  "tr": {
+   "ko": "내일 봐!",
+   "en": "See you tomorrow!"
+  },
+  "mean": {
+   "ko": "다음에 만나요",
+   "en": "see you"
+  },
+  "trKey": {
+   "ko": "봐"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id6",
+  "lang": "id",
+  "cat": "감정",
+  "words": [
+   "Aku",
+   "senang banget!"
+  ],
+  "key": [
+   1
+  ],
+  "expr": "senang banget",
+  "tr": {
+   "ko": "나 너무 기뻐!",
+   "en": "I'm so happy!"
+  },
+  "mean": {
+   "ko": "아주 기쁜",
+   "en": "very happy"
+  },
+  "trKey": {
+   "ko": "너무 기뻐"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id7",
+  "lang": "id",
+  "cat": "감정",
+  "words": [
+   "Kasihan",
+   "dia."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Kasihan",
+  "tr": {
+   "ko": "걔 불쌍하다.",
+   "en": "Poor him/her."
+  },
+  "mean": {
+   "ko": "불쌍한",
+   "en": "pitiful"
+  },
+  "trKey": {
+   "ko": "불쌍하다"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id8",
+  "lang": "id",
+  "cat": "감정",
+  "words": [
+   "Bikin kesal",
+   "banget."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Bikin kesal",
+  "tr": {
+   "ko": "진짜 짜증 나게 하네.",
+   "en": "It's so annoying."
+  },
+  "mean": {
+   "ko": "짜증 나게 하다",
+   "en": "annoying"
+  },
+  "trKey": {
+   "ko": "짜증 나게 하네"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-id9",
+  "lang": "id",
+  "cat": "회사",
+  "words": [
+   "Rapatnya",
+   "diundur",
+   "besok."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "diundur",
+  "tr": {
+   "ko": "회의가 내일로 미뤄졌어요.",
+   "en": "The meeting was postponed to tomorrow."
+  },
+  "mean": {
+   "ko": "연기되다",
+   "en": "postponed"
+  },
+  "trKey": {
+   "ko": "미뤄졌어요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id10",
+  "lang": "id",
+  "cat": "회사",
+  "words": [
+   "Saya",
+   "izin",
+   "hari ini."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "izin",
+  "tr": {
+   "ko": "저 오늘 쉬겠습니다.",
+   "en": "I'm taking leave today."
+  },
+  "mean": {
+   "ko": "허가받고 쉬다",
+   "en": "to take leave"
+  },
+  "trKey": {
+   "ko": "쉬겠습니다"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id11",
+  "lang": "id",
+  "cat": "회사",
+  "words": [
+   "Nanti saya kabari",
+   "lagi."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Nanti saya kabari",
+  "tr": {
+   "ko": "나중에 다시 알려 드릴게요.",
+   "en": "I'll let you know later."
+  },
+  "mean": {
+   "ko": "나중에 알려 주다",
+   "en": "I'll update you"
+  },
+  "trKey": {
+   "ko": "알려 드릴게요"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-id12",
+  "lang": "id",
+  "cat": "여행",
+  "words": [
+   "Berapa",
+   "harganya?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Berapa",
+  "tr": {
+   "ko": "이거 얼마예요?",
+   "en": "How much is it?"
+  },
+  "mean": {
+   "ko": "얼마",
+   "en": "how much"
+  },
+  "trKey": {
+   "ko": "얼마예요"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id13",
+  "lang": "id",
+  "cat": "여행",
+  "words": [
+   "Kamar mandi",
+   "di",
+   "mana?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Kamar mandi",
+  "tr": {
+   "ko": "화장실이 어디예요?",
+   "en": "Where is the bathroom?"
+  },
+  "mean": {
+   "ko": "화장실",
+   "en": "bathroom"
+  },
+  "trKey": {
+   "ko": "화장실"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id14",
+  "lang": "id",
+  "cat": "여행",
+  "words": [
+   "Bisa",
+   "kurang",
+   "sedikit?"
+  ],
+  "key": [
+   1
+  ],
+  "expr": "kurang",
+  "tr": {
+   "ko": "조금 깎아 주실 수 있어요?",
+   "en": "Can you lower it a little?"
+  },
+  "mean": {
+   "ko": "(값을) 깎다, 줄이다",
+   "en": "to lower (price)"
+  },
+  "trKey": {
+   "ko": "깎아"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id15",
+  "lang": "id",
+  "cat": "여행",
+  "words": [
+   "Tolong",
+   "antar",
+   "ke",
+   "hotel",
+   "ini."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "antar",
+  "tr": {
+   "ko": "이 호텔로 데려다주세요.",
+   "en": "Please take me to this hotel."
+  },
+  "mean": {
+   "ko": "데려다주다",
+   "en": "to take (someone)"
+  },
+  "trKey": {
+   "ko": "데려다주세요"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id16",
+  "lang": "id",
+  "cat": "카페·식당",
+  "words": [
+   "Tidak pedas,",
+   "ya."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Tidak pedas",
+  "tr": {
+   "ko": "안 맵게 해 주세요.",
+   "en": "Not spicy, please."
+  },
+  "mean": {
+   "ko": "맵지 않은",
+   "en": "not spicy"
+  },
+  "trKey": {
+   "ko": "안 맵게"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id17",
+  "lang": "id",
+  "cat": "카페·식당",
+  "words": [
+   "Enak banget!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Enak banget",
+  "tr": {
+   "ko": "진짜 맛있어!",
+   "en": "It's so delicious!"
+  },
+  "mean": {
+   "ko": "아주 맛있는",
+   "en": "very delicious"
+  },
+  "trKey": {
+   "ko": "진짜 맛있어"
+  },
+  "level": "초급"
+ },
+ {
+  "id": "draft-id18",
+  "lang": "id",
+  "cat": "카페·식당",
+  "words": [
+   "Es",
+   "tehnya",
+   "kurang manis."
+  ],
+  "key": [
+   2
+  ],
+  "expr": "kurang manis",
+  "tr": {
+   "ko": "아이스티 덜 달게요.",
+   "en": "Less sweet iced tea, please."
+  },
+  "mean": {
+   "ko": "덜 단",
+   "en": "less sweet"
+  },
+  "trKey": {
+   "ko": "덜 달게"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id19",
+  "lang": "id",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "Mantap!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Mantap",
+  "tr": {
+   "ko": "대박!",
+   "en": "Awesome!"
+  },
+  "mean": {
+   "ko": "최고야, 멋져 (슬랭)",
+   "en": "awesome (slang)"
+  },
+  "trKey": {
+   "ko": "대박"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id20",
+  "lang": "id",
+  "cat": "일상",
+  "tab": "슬랭",
+  "words": [
+   "Gabut",
+   "banget",
+   "hari",
+   "ini."
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Gabut",
+  "tr": {
+   "ko": "오늘 완전 할 거 없어.",
+   "en": "I've got nothing to do today."
+  },
+  "mean": {
+   "ko": "할 일 없이 심심한 (슬랭)",
+   "en": "bored, nothing to do (slang)"
+  },
+  "trKey": {
+   "ko": "할 거 없어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id21",
+  "lang": "id",
+  "cat": "감정",
+  "tab": "슬랭",
+  "words": [
+   "Jangan",
+   "baper",
+   "dong."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "baper",
+  "tr": {
+   "ko": "너무 감정적으로 받아들이지 마.",
+   "en": "Don't take it so personally."
+  },
+  "mean": {
+   "ko": "쉽게 감정이 상하는 (슬랭)",
+   "en": "oversensitive (slang)"
+  },
+  "trKey": {
+   "ko": "감정적으로 받아들이지"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-id22",
+  "lang": "id",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "Aku",
+   "kangen",
+   "kamu."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "kangen",
+  "tr": {
+   "ko": "보고 싶어.",
+   "en": "I miss you."
+  },
+  "mean": {
+   "ko": "그리워하다",
+   "en": "to miss"
+  },
+  "trKey": {
+   "ko": "보고 싶어"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id23",
+  "lang": "id",
+  "cat": "감정",
+  "tab": "연애",
+  "words": [
+   "Kami",
+   "lagi pendekatan."
+  ],
+  "key": [
+   1
+  ],
+  "expr": "lagi pendekatan",
+  "tr": {
+   "ko": "우리 지금 썸 타는 중이야.",
+   "en": "We're getting to know each other."
+  },
+  "mean": {
+   "ko": "알아 가는 중 (PDKT)",
+   "en": "getting close (dating)"
+  },
+  "trKey": {
+   "ko": "썸 타는 중"
+  },
+  "level": "고급"
+ },
+ {
+  "id": "draft-id24",
+  "lang": "id",
+  "cat": "감정",
+  "tab": "드라마·영화",
+  "words": [
+   "Kok bisa?"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Kok bisa",
+  "tr": {
+   "ko": "어떻게 그럴 수가?",
+   "en": "How could that happen?"
+  },
+  "mean": {
+   "ko": "어째서? 어떻게 그런 일이?",
+   "en": "how come?"
+  },
+  "trKey": {
+   "ko": "어떻게 그럴 수가"
+  },
+  "level": "중급"
+ },
+ {
+  "id": "draft-id25",
+  "lang": "id",
+  "cat": "일상",
+  "tab": "드라마·영화",
+  "words": [
+   "Ya ampun!"
+  ],
+  "key": [
+   0
+  ],
+  "expr": "Ya ampun",
+  "tr": {
+   "ko": "세상에!",
+   "en": "Oh my God!"
+  },
+  "mean": {
+   "ko": "아이고, 세상에 (놀람)",
+   "en": "oh my (surprise)"
+  },
+  "trKey": {
+   "ko": "세상에"
+  },
+  "level": "중급"
+ }
+]

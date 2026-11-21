@@ -31,6 +31,8 @@ export interface SavedItem {
   step: number;
   /** '다시'를 받은 횟수 (약점 판단) */
   lapses?: number;
+  /** 오답 노트(약점)에 들어온 뒤 연속으로 맞힌 횟수. GRAD_AT번이면 졸업 */
+  okRun?: number;
   note?: string;
 }
 

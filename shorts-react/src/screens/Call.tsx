@@ -7,6 +7,7 @@ import { speechOk } from '../lib/speech';
 import { useUi } from '../ui';
 import { useActions } from '../lib/useActions';
 import type { Card } from '../types';
+import { CONTENT } from '../lib/content';
 import CALLS from '../data/calls.json';
 import { aiOn, aiReact } from '../lib/callAi';
 
@@ -14,9 +15,9 @@ import { aiOn, aiReact } from '../lib/callAi';
 // AI 대사 음성은 tools/audio/gen_call.py로 미리 만들어 public/audio에 넣는다(없으면 기기 음성)
 type Turn = { ai: string; ko: string; replies: { en: string; ko: string }[] };
 type Scene = { id: string; title: string; who: string; role: string; group: string; sub: string; voice: string; mission: string[]; missionKo: string[]; level: string; mins: number; turns: Turn[] };
-const SCENES = CALLS as Scene[];
+const SCENES = (CONTENT.calls ?? CALLS) as Scene[]; // 예전에 받아 둔 내용엔 대본이 없을 수 있어요
 // 더 보기에서 바꾸는 통화 설정 (이 기기에만 저장)
-type Opts = { hideKo: boolean; slow: boolean; hint: boolean; mins: 3 | 5 };
+type Opts = { hideKo: boolean; slow: boolean; hint: boolean; mins: 3 | 5; ring: boolean; ringH: number; ringDays: number[] };
 const OPT_KEY = 'call-opts';
 const DAY_KEY = 'call-today';
 const today = () => new Date().toDateString();
@@ -28,8 +29,18 @@ const DONE_KEY = 'call-done';
 const doneScenes = (): string[] => { try { return JSON.parse(localStorage.getItem(DONE_KEY) || '[]'); } catch { return []; } };
 const markDone = (id: string) => { try { localStorage.setItem(DONE_KEY, JSON.stringify([...new Set([...doneScenes(), id])])); } catch { /* 표시만 못 함 */ } };
 const bumpCall = () => { try { localStorage.setItem(DAY_KEY, JSON.stringify({ d: today(), n: callsToday() + 1 })); } catch { /* 못 세도 통화는 됨 */ } };
-const DEF: Opts = { hideKo: false, slow: false, hint: false, mins: 3 };
+const DEF: Opts = { hideKo: false, slow: false, hint: false, mins: 3, ring: false, ringH: 20, ringDays: [1, 2, 3, 4, 5] };
 const loadOpts = (): Opts => { try { return { ...DEF, ...JSON.parse(localStorage.getItem(OPT_KEY) || '{}') }; } catch { return DEF; } };
+// 깜짝 전화 (시안 G): 서버 없이 동작해서, 정한 요일·시각이 지난 뒤 앱을 열어 두면 하루 한 번 전화가 와요
+const RANG_KEY = 'call-rang';
+const DAYS: [number, string][] = [[1, '월'], [2, '화'], [3, '수'], [4, '목'], [5, '금'], [6, '토'], [0, '일']];
+const RING_H: [number, string][] = [[8, '아침 8시'], [12, '점심 12시'], [20, '저녁 8시']];
+const ringDue = () => {
+  const o = loadOpts(), d = new Date();
+  try { if (localStorage.getItem(RANG_KEY) === today()) return false; } catch { return false; }
+  return o.ring && o.ringDays.includes(d.getDay()) && d.getHours() >= o.ringH;
+};
+const answered = { now: false }; // 받기를 누르면 AI 전화 화면이 바로 통화를 시작해요
 const SCENE_ICON: Record<string, JSX.Element> = {
   late: <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6" /></svg>,
   cafe: <svg viewBox="0 0 24 24"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3" /></svg>,
@@ -96,10 +107,11 @@ export function Call() {
   const [more, setMore] = useState(false);
   const [opts, setOpts0] = useState<Opts>(loadOpts);
   const setOpts = (p: Partial<Opts>) => setOpts0((o) => { const n = { ...o, ...p }; try { localStorage.setItem(OPT_KEY, JSON.stringify(n)); } catch { /* 저장 못 해도 이번엔 적용 */ } return n; });
-  const { toast, speak } = useUi();
+  const { speak } = useUi();
   const { logAct } = useActions();
   const call = () => { bumpCall(); logAct('c'); setLive(true); };
   const leftCalls = Math.max(0, FREE_CALLS - callsToday());
+  useEffect(() => { if (answered.now) { answered.now = false; call(); } }, []); // eslint-disable-line react-hooks/exhaustive-deps
   if (done) return <Summary scene={scene} lines={done.lines} secs={done.secs} onClose={() => setDone(null)} onAgain={() => { setDone(null); call(); }} />;
   if (live) return <Live scene={scene} opts={opts} onEnd={(lines, secs) => { setLive(false); markDone(scene.id); setDone({ lines, secs }); }} />;
   return (
@@ -149,10 +161,20 @@ export function Call() {
                 <span className="tx"><b>{tt('통화 시간')}</b><small>{tt('시간이 다 되면 통화가 끝나요')}</small></span>
                 <span className="co-seg">{([3, 5] as const).map((m) => <button key={m} className={opts.mins === m ? 'on' : ''} onClick={() => setOpts({ mins: m })}>{tt('{n}분', { n: m })}</button>)}</span>
               </div>
-              <button className="co dim" onClick={() => toast(tt('매일 정한 시간에 전화가 오는 기능은 준비 중이에요'))}>
-                <span className="tx"><b>{tt('매일 전화 알람')}</b><small>{tt('정한 시간에 Samantha가 먼저 전화해요')}</small></span>
-                <span className="co-soon">{tt('준비 중')}</span>
+              <button className="co" onClick={() => setOpts({ ring: !opts.ring })}>
+                <span className="tx"><b>{tt('깜짝 전화')}</b><small>{tt('정한 시간에 Samantha가 먼저 전화해요')}</small></span>
+                <span className={`co-sw${opts.ring ? ' on' : ''}`} />
               </button>
+              {opts.ring && (
+                <div className="co ring">
+                  <span className="co-seg">{RING_H.map(([h, t]) => <button key={h} className={opts.ringH === h ? 'on' : ''} onClick={() => setOpts({ ringH: h })}>{tt(t)}</button>)}</span>
+                  <span className="days">{DAYS.map(([d, t]) => (
+                    <button key={d} className={opts.ringDays.includes(d) ? 'on' : ''} aria-pressed={opts.ringDays.includes(d)}
+                      onClick={() => setOpts({ ringDays: opts.ringDays.includes(d) ? opts.ringDays.filter((x) => x !== d) : [...opts.ringDays, d] })}>{tt(t)}</button>
+                  ))}</span>
+                  <small>{tt('앱을 열어 두거나 그 시간이 지난 뒤 열면 전화가 와요 · 안 받으면 다음 날로 넘어가요')}</small>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -179,6 +201,41 @@ export function Call() {
         </div>
       )}
     </section>
+  );
+}
+
+/** 깜짝 전화가 왔을 때 화면 위에 뜨는 카드 (App에서 항상 그려요) */
+export function SurpriseCall() {
+  const { screen, go } = useUi();
+  const [show, setShow] = useState(false);
+  const busy = ['splash', 'onboarding', 'call', 'review', 'study', 'streak'].includes(screen);
+  useEffect(() => {
+    if (busy) return;
+    const check = () => { if (!document.hidden && ringDue()) { setShow(true); navigator.vibrate?.([300, 200, 300]); } };
+    check();
+    const t = setInterval(check, 60000);
+    document.addEventListener('visibilitychange', check);
+    return () => { clearInterval(t); document.removeEventListener('visibilitychange', check); };
+  }, [busy]);
+  if (!show || busy) return null;
+  const close = (take: boolean) => {
+    try { localStorage.setItem(RANG_KEY, today()); } catch { /* 오늘 또 울릴 수 있음 */ }
+    setShow(false);
+    if (take) { answered.now = true; go('call'); }
+  };
+  return (
+    <div className="sc-wrap" role="alertdialog" aria-label={tt('깜짝 전화')}>
+      <div className="sc-card">
+        <div className="sc-top">
+          <i className="sc-av">S</i>
+          <span><b>Samantha · {tt('문장 쇼츠')}</b><small>{tt('깜짝 전화가 왔어요 📞 오늘 배운 표현 써 볼까요?')}</small></span>
+        </div>
+        <div className="sc-btns">
+          <button className="no" onClick={() => close(false)}>{tt('나중에')}</button>
+          <button className="yes" onClick={() => close(true)}>{tt('받기')}</button>
+        </div>
+      </div>
+    </div>
   );
 }
 

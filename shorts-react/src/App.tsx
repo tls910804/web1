@@ -9,6 +9,7 @@ import { dueNotifications } from './lib/notify';
 import { exportBackup } from './lib/backup';
 import { speechOk } from './lib/speech';
 import { dayKey, todayKey } from './lib/text';
+import { streakOf } from './lib/srs';
 import { useStore } from './store';
 import { useUi } from './ui';
 import { Add } from './screens/Add';
@@ -21,7 +22,7 @@ import { Splash } from './screens/Splash';
 import { Stats } from './screens/Stats';
 import { StreakBroken } from './screens/Streak';
 import { Study } from './screens/Study';
-import { Call } from './screens/Call';
+import { Call, SurpriseCall } from './screens/Call';
 import { Rest } from './screens/Rest';
 import { StoryScreen } from './screens/Story';
 import { Sub } from './screens/Sub';
@@ -103,7 +104,7 @@ export function App() {
     const t = setTimeout(() => {
       const s = stateRef.current;
       if (!s.onboarded) { go('onboarding'); return; }
-      if (s.streak > 0 && s.lastReview && s.lastReview !== todayKey() && s.lastReview !== dayKey(Date.now() - DAY)) {
+      if (s.streak > 0 && s.lastReview && s.lastReview !== todayKey() && s.lastReview !== dayKey(Date.now() - DAY) && !streakOf(s.log)) {
         setStreakWas(s.streak);
         set({ best: Math.max(s.best || 0, s.streak), streak: 0 });
         go('streak');
@@ -139,6 +140,7 @@ export function App() {
         <div className="net"><Icon name="offline" /><span><b>{tt('오프라인이에요')}</b>{tt('저장한 문장과 복습은 그대로 쓸 수 있어요')}</span></div>
       )}
       {TAB_SCREENS.includes(screen) && <TabBar />}
+      <SurpriseCall />
       <Toast />
       <Layer />
     </div>

@@ -9,7 +9,7 @@ import { useActions } from '../lib/useActions';
 import { clean, lang, langTag, sentence, trOf } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import { BlankNote, KoLine, ding, findMiss, join, norm } from './Exercise';
+import { BlankNote, KoLine, ding, findMiss, join, norm, visLen } from './Exercise';
 import type { Card } from '../types';
 
 const SIZE = 10;
@@ -203,7 +203,7 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
           {done ? answer : (
             <input ref={input} value={text} lang={langTag(c.lang)} aria-label={tt('빈칸 입력')} enterKeyHint="done"
               autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false}
-              style={{ width: `${(Math.max(answer.length, text.length) + 1) * 0.7}ch` }}
+              style={{ width: `${(Math.max(visLen(answer), visLen(text)) + 1) * 0.7}ch` }}
               onChange={(e) => onType(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && setSent(true)} />
           )}
         </span>, tail, ' ',

@@ -13,6 +13,7 @@ import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
 import { AutoSheet, WordSheet } from './Sheets';
+import { ShareSheet } from './Share';
 
 let ytApi: Promise<void> | null = null;
 const loadYT = () => (ytApi ||= new Promise<void>((res) => {
@@ -241,6 +242,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
           <button className="act" aria-label={tt('느리게 듣기')} onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" /></button>
           <button className={`act${state.hideTr ? ' off' : ''}`} aria-label={tt('해석 가리기')} onClick={() => set({ hideTr: !state.hideTr })}><Icon name={state.hideTr ? 'eyeOff' : 'eye'} /></button>
           <button className="act" aria-label={tt('문장 복사')} onClick={copy}><Icon name="copy" /></button>
+          <button className="act" aria-label={tt('공유 카드 만들기')} onClick={() => cur && openSheet(<ShareSheet card={cur} />)}><Icon name="share" /></button>
         </div>
       )}
     </section>

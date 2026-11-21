@@ -7,7 +7,7 @@ import { Button } from '../components/Button';
 import { notifPerm } from './notify';
 import { NotifyPrompt } from '../screens/Sheets';
 import { Grab } from '../components/Layer';
-import { dueItems, rateResult, RETRY, weakItems } from './srs';
+import { dueItems, rateResult, RETRY, streakOf, weakItems, wrongNote } from './srs';
 import { dayKey, startOfDay, todayKey, wordInfo } from './text';
 import type { AppState, Card, Rate, SavedItem } from '../types';
 
@@ -80,7 +80,8 @@ export function useActions() {
     set((s) => {
       const today = todayKey();
       if (s.lastReview === today) return {};
-      const streak = s.lastReview === dayKey(Date.now() - DAY) ? s.streak + 1 : 1;
+      // 쉬는 날 지키기로 이어진 연속 기록도 그대로 (lib/srs streakInfo)
+      const streak = s.lastReview === dayKey(Date.now() - DAY) ? s.streak + 1 : Math.max(1, streakOf(s.log));
       return { streak, best: Math.max(s.best || 0, streak), lastReview: today };
     });
   }, [set]);
@@ -92,11 +93,13 @@ export function useActions() {
     let next = { ...rv, known: rv.known, again: rv.again };
     if (item) {
       const res = rateResult(state.mode, item, r);
+      const wn = wrongNote(item, r);
+      if (wn.grad) ui.toast(tt('오답 노트 졸업! 3번 연속 맞혔어요'));
       set((s) => {
         const k = todayKey();
         const e = s.log[k] || { n: 0, ok: 0 };
         return {
-          saved: s.saved.map((x) => (x.id === item.id ? { ...x, step: res.step, due: r === 'again' ? Date.now() + RETRY : startOfDay(Date.now()) + res.days * DAY, lapses: r === 'again' ? (x.lapses || 0) + 1 : r === 'hard' ? (x.lapses || 0) : Math.max(0, (x.lapses || 0) - 1) } : x)),
+          saved: s.saved.map((x) => (x.id === item.id ? { ...x, step: res.step, due: r === 'again' ? Date.now() + RETRY : startOfDay(Date.now()) + res.days * DAY, lapses: wn.lapses, okRun: wn.okRun } : x)),
           log: { ...s.log, [k]: { ...e, n: e.n + 1, ok: e.ok + (r !== 'again' ? 1 : 0) } },
         };
       });

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import calls from './src/data/calls.json';
 import cards from './src/data/cards.json';
 import gloss from './src/data/gloss.json';
 import stories from './src/data/stories.json';
@@ -13,9 +14,9 @@ export default defineConfig({
   base: './',
   define: { __CONTENT_V__: V },
   plugins: [react(), {
-    name: 'content-json', // 문장·영상·이야기를 content.json 하나로 묶어 함께 올려요(앱 업데이트 없이 내용 추가용)
+    name: 'content-json', // 문장·영상·이야기·통화 대본을 content.json 하나로 묶어 함께 올려요(앱 업데이트 없이 내용 추가용)
     generateBundle() {
-      const c = { v: V, cards, gloss, stories, videos };
+      const c = { v: V, cards, gloss, stories, videos, calls };
       this.emitFile({ type: 'asset', fileName: 'content.json', source: JSON.stringify(c) });
     },
   }],
