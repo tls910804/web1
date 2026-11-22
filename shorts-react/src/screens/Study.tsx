@@ -7,6 +7,7 @@ import { stopAudio } from '../lib/audio';
 import { speechOk } from '../lib/speech';
 import { useActions } from '../lib/useActions';
 import { clean, lang, langTag, sentence, trOf } from '../lib/text';
+import { streakOf } from '../lib/srs';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import { BlankNote, KoLine, ding, findMiss, join, norm, visLen } from './Exercise';
@@ -70,7 +71,7 @@ export function Study() {
         <div className="st-done-body">
           <div className={`st-big${all ? ' gold' : ''}`}><Icon name="check" /></div>
           <h2>{all ? tt('전부 맞혔어요!') : tt('{n}문장 끝!', { n: chunk.length })}</h2>
-          <p className="st-sum">{tt('빈칸 맞힘 {a} / {b}', { a: okN, b: res.length })}{state.streak > 0 ? ` · ${tt('연속 {n}일', { n: state.streak })}` : ''}</p>
+          <p className="st-sum">{tt('빈칸 맞힘 {a} / {b}', { a: okN, b: res.length })}{streakOf(state.log) > 0 ? ` · ${tt('연속 {n}일', { n: streakOf(state.log) })}` : ''}</p>
           <b className="st-lbl">{tt('담고 싶은 문장만 눌러요')}</b>
           <div className="st-list">
             {chunk.map((x) => {

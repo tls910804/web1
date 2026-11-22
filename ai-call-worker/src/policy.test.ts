@@ -23,7 +23,9 @@ test('한도: 기기·주소·전체 중 하나만 넘어도 막음', () => {
   assert.equal(overLimit({ device: 0, ip: POLICY.perIpPerDay, all: 0 }), true);
   assert.equal(overLimit({ device: 0, ip: 0, all: POLICY.globalPerDay }), true);
 });
-test('날짜가 바뀌면 다른 키', () => assert.notEqual(dayKey('d', 'x', new Date('2026-01-01T23:00Z')), dayKey('d', 'x', new Date('2026-01-02T01:00Z'))));
+test('한국 자정이 지나면 다른 키', () => assert.notEqual(dayKey('d', 'x', new Date('2026-01-01T14:00Z')), dayKey('d', 'x', new Date('2026-01-01T16:00Z'))));
+test('한국 같은 날이면 같은 키 (UTC 날짜가 달라도)', () => assert.equal(dayKey('d', 'x', new Date('2026-01-01T23:00Z')), dayKey('d', 'x', new Date('2026-01-02T01:00Z'))));
+test('키 모양은 YYYY-MM-DD', () => assert.equal(dayKey('d', 'x', new Date('2026-01-01T16:00Z')), '2026-01-02:d:x'));
 test('프롬프트에 다음 대사와 미션이 들어감', () => {
   const p = systemPrompt(ok);
   assert.ok(p.includes(ok.next) && p.includes('running late'));

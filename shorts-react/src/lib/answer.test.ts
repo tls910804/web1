@@ -2,7 +2,8 @@
 import assert from 'node:assert/strict';
 import { diff, findMiss, norm, blankOf, exKind } from '../screens/Exercise';
 import { countFeed, tabOf, TABS } from './feed';
-import { GRAD_AT, streakInfo, wrongNote } from './srs';
+import { GRAD_AT, interval, rateResult, streakInfo, wrongNote } from './srs';
+import { normalize } from '../store';
 import { dayKey } from './text';
 import { DAY } from '../constants';
 import { CARDS } from '../data';
@@ -63,5 +64,21 @@ assert.equal(streakInfo(lg([0, 3, 4]), wed).n, 1); // 이틀 빠지면 끊김
 const sun = new Date(2026, 10, 22, 12).getTime(); // 같은 주 토·목이 빠지면 한 번만 메워요
 assert.equal(streakInfo(Object.fromEntries([0, 2, 4, 5].map((o) => [dayKey(sun - o * DAY), { n: 1, ok: 1 }])), sun).n, 2);
 assert.equal(streakInfo(lg([1, 2]), wed).left, 1);
+
+// 복습 간격: 좋음은 한 단계, 쉬움은 두 단계, 다시는 처음부터 내일
+const st0 = { ...item('s', 0), step: 0 } as SavedItem;
+assert.deepEqual(rateResult('std', st0, 'good'), { step: 1, days: 3 });
+assert.deepEqual(rateResult('std', { ...st0, step: 2 }, 'again'), { step: 0, days: 1 });
+assert.deepEqual(rateResult('std', st0, 'hard'), { step: 1, days: 1 });
+assert.equal(interval('std', 10), 120); // 아무리 잘해도 120일이 최대
+
+// 예전 데이터 변환: 단어 항목 id에 :e가 붙고, 깨진 항목·틀린 모양 값은 걸러져요
+const old = normalize({ saved: [{ id: 'w:en1', kind: 'w', card: CARDS[0] } as SavedItem, { kind: 's' } as SavedItem], notify: null } as unknown as Partial<AppState>);
+assert.equal(old.saved.length, 1);
+assert.equal(old.saved[0].id, 'w:en1:e');
+assert.equal(old.saved[0].wi, -1);
+assert.equal(old.saved[0].step, 0);
+assert.deepEqual(old.notify, { morning: false, evening: false });
+assert.equal(normalize({ log: 'x' } as unknown as Partial<AppState>).log.constructor, Object);
 
 console.log('ok answer/filter');

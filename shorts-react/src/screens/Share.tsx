@@ -63,15 +63,16 @@ export function ShareSheet({ card }: { card: Card }) {
   const { toast } = useUi();
   const [bg, setBg] = useState(0);
   const [url, setUrl] = useState('');
-  const canvas = useRef<HTMLCanvasElement>(document.createElement('canvas'));
+  const canvas = useRef<HTMLCanvasElement | null>(null);
+  const cv = () => (canvas.current ??= document.createElement('canvas')); // 처음 쓸 때 한 번만 만든다
   const s = sentence(card), tr = trOf(card.tr, state.native);
   useEffect(() => {
-    drawShare(canvas.current, s, tr, streakOf(state.log), bg);
-    setUrl(canvas.current.toDataURL('image/png'));
+    drawShare(cv(), s, tr, streakOf(state.log), bg);
+    setUrl(cv().toDataURL('image/png'));
   }, [s, tr, bg, state.log]);
 
   const save = async () => {
-    const blob = await toBlob(canvas.current);
+    const blob = await toBlob(cv());
     if (!blob) return;
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob); a.download = 'langshort-card.png'; a.click();
@@ -79,7 +80,7 @@ export function ShareSheet({ card }: { card: Card }) {
     toast(tt('이미지를 저장했어요'));
   };
   const share = async () => {
-    const blob = await toBlob(canvas.current);
+    const blob = await toBlob(cv());
     if (!blob) return;
     const file = new File([blob], 'langshort-card.png', { type: 'image/png' });
     if (navigator.canShare?.({ files: [file] })) {

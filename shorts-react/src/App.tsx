@@ -6,7 +6,7 @@ import { Layer } from './components/Layer';
 import { TAB_SCREENS, TabBar } from './components/TabBar';
 import { Toast } from './components/Toast';
 import { dueNotifications } from './lib/notify';
-import { exportBackup } from './lib/backup';
+import { useActions } from './lib/useActions';
 import { speechOk } from './lib/speech';
 import { dayKey, todayKey } from './lib/text';
 import { streakOf } from './lib/srs';
@@ -33,6 +33,9 @@ export function App() {
   const [online, setOnline] = useState(navigator.onLine !== false);
   const stateRef = useRef(state);
   stateRef.current = state;
+  const { exportData } = useActions();
+  const exportRef = useRef(exportData); // 창이 열린 뒤에도 그때의 최신 상태를 내보내도록
+  exportRef.current = exportData;
 
   // 화면 테마 · 글자 크기
   useEffect(() => {
@@ -94,7 +97,7 @@ export function App() {
     if (!saveFailed) return;
     openDialog(tt('저장하지 못했어요'), tt('브라우저 저장 공간이 꽉 찼거나 비공개 모드일 수 있어요. 이 화면을 닫으면 방금 바꾼 내용이 사라질 수 있으니 파일로 내보내 두세요.'), [
       { label: tt('다시 시도'), kind: 'light', fn: () => { if (retrySave()) toast(tt('저장했어요')); } },
-      { label: tt('파일로 내보내기'), kind: 'dark', fn: () => exportBackup(stateRef.current) },
+      { label: tt('파일로 내보내기'), kind: 'dark', fn: () => exportRef.current() },
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [saveFailed]);

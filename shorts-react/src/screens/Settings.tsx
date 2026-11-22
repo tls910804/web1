@@ -89,7 +89,7 @@ export function Settings() {
       ) : (
         <button className="profile" onClick={openLogin}>
           <span className="avatar"><Icon name="user" style={{ width: 22, height: 22, stroke: 'var(--blue)' }} /></span>
-          <span style={{ flex: 1, minWidth: 0 }}><b>{tt('로그인하기')}</b><span>{tt('다른 기기에서도 이어서 볼 수 있어요')}</span></span><span className="my-chev"><Icon name="chev" /></span>
+          <span style={{ flex: 1, minWidth: 0 }}><b>{tt('로그인하기')}</b><span>{tt('기록은 이 기기에만 저장돼요')}</span></span><span className="my-chev"><Icon name="chev" /></span>
         </button>
       )}
 

@@ -8,7 +8,7 @@ import { Lbl } from '../components/Layer';
 import { notifPerm } from '../lib/notify';
 import { useActions } from '../lib/useActions';
 import { allCards } from '../lib/feed';
-import { useStore } from '../store';
+import { normalize, useStore } from '../store';
 import { useUi } from '../ui';
 import type { AppState, FontKey, ModeKey, ThemeKey } from '../types';
 import { LangPickers } from './LangPickers';
@@ -48,10 +48,11 @@ export function Sub() {
         openDialog(tt('가져오지 못했어요'), tt('문장 쇼츠에서 내보낸 파일이 아니거나 파일이 손상됐어요.'), [{ label: tt('확인'), kind: 'dark' }]);
         return;
       }
-      const incoming = data;
-      openDialog(tt('데이터를 가져올까요?'), tt('저장한 항목 {n}개를 가져와요. 지금 이 기기의 데이터는 파일 내용으로 바뀌어요.', { n: incoming.saved!.length }), [
+      // 모양이 틀린 항목은 빼고 가져온다 (normalize)
+      const incoming = normalize({ ...state, ...data });
+      openDialog(tt('데이터를 가져올까요?'), tt('저장한 항목 {n}개를 가져와요. 지금 이 기기의 데이터는 파일 내용으로 바뀌어요.', { n: incoming.saved.length }), [
         { label: tt('취소'), kind: 'light' },
-        { label: tt('가져오기'), kind: 'dark', fn: () => { replace({ ...state, ...incoming } as AppState); toast(tt('데이터를 가져왔어요')); go('settings'); } },
+        { label: tt('가져오기'), kind: 'dark', fn: () => { replace(incoming); toast(tt('데이터를 가져왔어요')); go('settings'); } },
       ]);
     };
     r.readAsText(f);

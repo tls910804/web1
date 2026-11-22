@@ -35,8 +35,9 @@ export function invalid(b: unknown): string | null {
   return null;
 }
 
-/** 오늘(UTC) 날짜가 붙은 횟수 키. 날이 바뀌면 새 키라 저절로 0부터 */
-export const dayKey = (kind: 'd' | 'ip' | 'all', id: string, now = new Date()) => `${now.toISOString().slice(0, 10)}:${kind}:${id}`;
+/** 오늘(한국 시간) 날짜가 붙은 횟수 키. 한국 자정에 새 키라 저절로 0부터 (en-CA는 YYYY-MM-DD 모양) */
+const seoulDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' });
+export const dayKey = (kind: 'd' | 'ip' | 'all', id: string, now = new Date()) => `${seoulDate.format(now)}:${kind}:${id}`;
 
 /** 세 한도 중 하나라도 넘었으면 true */
 export const overLimit = (n: { device: number; ip: number; all: number }) =>

@@ -33,8 +33,9 @@ export default {
     const [d, i, a] = await Promise.all([keys.device, keys.ip, keys.all].map((k) => env.LIMITS.get(k)));
     const n = { device: Number(d) || 0, ip: Number(i) || 0, all: Number(a) || 0 };
     if (overLimit(n)) return json({ error: 'limit' }, 429, origin);
+    // 횟수는 AI 대답이 성공했을 때만 센다 (AI 장애로 하루 한도가 헛되이 줄지 않게)
     const ttl = { expirationTtl: 60 * 60 * 26 };
-    await Promise.all([env.LIMITS.put(keys.device, String(n.device + 1), ttl), env.LIMITS.put(keys.ip, String(n.ip + 1), ttl), env.LIMITS.put(keys.all, String(n.all + 1), ttl)]);
+    const count = () => Promise.all([env.LIMITS.put(keys.device, String(n.device + 1), ttl), env.LIMITS.put(keys.ip, String(n.ip + 1), ttl), env.LIMITS.put(keys.all, String(n.all + 1), ttl)]);
 
     const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
     try {
@@ -60,6 +61,7 @@ export default {
       const text = res.content.find((c) => c.type === 'text');
       const out = text?.type === 'text' ? (JSON.parse(text.text) as { en: string; ko: string }) : null;
       if (!out?.en) return json({ error: 'no_reply' }, 502, origin);
+      await count();
       return json({ en: out.en.slice(0, 200), ko: (out.ko || '').slice(0, 200), left: POLICY.perDevicePerDay - n.device - 1 }, 200, origin);
     } catch (e) {
       // 실패해도 앱은 대본으로 이어가요

@@ -31,12 +31,18 @@ jobs:
         working-directory: shorts-react
         run: |
           npm ci
+          npm test
           npm run build
+      # AI 전화 서버 규칙 테스트 (의존성 없이 돌아가요). 실패하면 배포를 멈춰요.
+      - name: Test ai-call-worker policy
+        run: node --experimental-strip-types --test ai-call-worker/src/policy.test.ts
       # 기존 정적 페이지는 그대로 두고, React 앱만 /shorts-react/ 아래에 얹는다.
+      # 작업용 파일(참고 이미지·메모·스크립트·서버 코드)은 사이트에 올리지 않는다.
       - name: Assemble site
         run: |
           mkdir _site
-          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='node_modules' --exclude='shorts-react' --exclude='.claude' ./ _site/
+          rsync -a --exclude='.git' --exclude='.github' --exclude='_site' --exclude='node_modules' --exclude='shorts-react' --exclude='.claude' \
+            --exclude='참고자료' --exclude='docs' --exclude='tools' --exclude='ai-call-worker' --exclude='HANDOFF.md' --exclude='CLAUDE.md' --exclude='README.md' --exclude='.DS_Store' ./ _site/
           mkdir _site/shorts-react
           cp -R shorts-react/dist/. _site/shorts-react/
       - uses: actions/configure-pages@v5

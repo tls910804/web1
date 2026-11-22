@@ -8,7 +8,7 @@ import { notifPerm } from './notify';
 import { NotifyPrompt } from '../screens/Sheets';
 import { Grab } from '../components/Layer';
 import { dueItems, rateResult, RETRY, streakOf, weakItems, wrongNote } from './srs';
-import { dayKey, startOfDay, todayKey, wordInfo } from './text';
+import { startOfDay, todayKey, wordInfo } from './text';
 import type { AppState, Card, Rate, SavedItem } from '../types';
 
 export function itemId(kind: 's' | 'w', card: Card, wi: number, native: string) {
@@ -40,7 +40,7 @@ export function useActions() {
       <>
         <Grab />
         <h3>{tt('저장한 단어를 잃지 않으려면')}</h3>
-        <p style={{ margin: '-6px 0 2px', fontSize: 14, color: 'var(--muted)' }}>{tt('로그인하면 다른 기기에서도 이어서 볼 수 있어요.')}</p>
+        <p style={{ margin: '-6px 0 2px', fontSize: 14, color: 'var(--muted)' }}>{tt('지금은 이 기기에만 저장돼요. 기기를 바꿀 땐 설정 › 데이터에서 파일로 내보내 주세요.')}</p>
         <Button kind="dark" onClick={() => by('Apple')}><span className="bdg" style={{ background: 'var(--btn-ink)', color: 'var(--btn)' }}>A</span>{tt('{p}로 계속하기', { p: 'Apple' })}</Button>
         <Button kind="line" onClick={() => by('Google')}><span className="bdg" style={{ background: '#3b4047', color: '#fff' }}>G</span>{tt('{p}로 계속하기', { p: 'Google' })}</Button>
         <Button kind="light" onClick={() => by('이메일')}>{tt('이메일로 계속하기')}</Button>
@@ -80,8 +80,8 @@ export function useActions() {
     set((s) => {
       const today = todayKey();
       if (s.lastReview === today) return {};
-      // 쉬는 날 지키기로 이어진 연속 기록도 그대로 (lib/srs streakInfo)
-      const streak = s.lastReview === dayKey(Date.now() - DAY) ? s.streak + 1 : Math.max(1, streakOf(s.log));
+      // 연속 기록은 내 기록 화면과 같은 계산 하나로 센다 (복습·자동 공부·AI 전화, lib/srs streakInfo)
+      const streak = Math.max(1, streakOf(s.log));
       return { streak, best: Math.max(s.best || 0, streak), lastReview: today };
     });
   }, [set]);

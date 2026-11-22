@@ -34,8 +34,17 @@ const defaults: AppState = {
 
 // 이전 버전 데이터도 그대로 읽도록 기본값 위에 덮어쓴다 (저장 키는 기존 앱과 같다)
 export function normalize(raw: Partial<AppState>): AppState {
-  const s = { ...defaults, ...raw };
-  s.saved = s.saved.map((x) => {
+  const s = { ...defaults, ...raw } as AppState;
+  // 모양이 틀린 값(손상되거나 손으로 고친 백업 파일)은 기본값으로 되돌려 앱이 멈추지 않게 한다
+  const all = s as unknown as Record<string, unknown>;
+  for (const [k, d] of Object.entries(defaults)) {
+    const v = all[k];
+    const ok = d === null ? v === null || typeof v === 'string' || typeof v === 'number'
+      : Array.isArray(d) ? Array.isArray(v) : v !== null && typeof v === typeof d;
+    if (!ok) all[k] = d;
+  }
+  s.custom = s.custom.filter((c) => Array.isArray(c?.words));
+  s.saved = s.saved.filter((x) => typeof x?.id === 'string' && Array.isArray(x.card?.words)).map((x) => {
     const item = { ...x };
     if (item.wi === undefined) {
       item.wi = -1;
@@ -49,9 +58,13 @@ export function normalize(raw: Partial<AppState>): AppState {
 }
 
 function load(): AppState {
+  let raw: string | null = null;
   try {
-    return normalize(JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {});
+    raw = localStorage.getItem(STORE_KEY);
+    return normalize(JSON.parse(raw || '{}') || {});
   } catch {
+    // 곧 기본값이 같은 키에 저장되므로, 읽지 못한 원본은 지우지 않고 따로 남겨 둔다
+    try { if (raw) localStorage.setItem(`${STORE_KEY}-broken`, raw); } catch { /* 공간이 없으면 포기 */ }
     return normalize({});
   }
 }
@@ -87,6 +100,16 @@ export function StoreProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => { write(state); }, [state, write]);
+
+  // 다른 탭에서 저장하면 이 탭도 그 내용으로 맞춘다 (한쪽 저장이 다른 쪽 저장을 덮어쓰지 않게)
+  useEffect(() => {
+    const onStorage = (e: StorageEvent) => {
+      if (e.key !== STORE_KEY || !e.newValue) return;
+      try { setState(normalize(JSON.parse(e.newValue))); } catch { /* 깨진 값이면 지금 상태 유지 */ }
+    };
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+  }, []);
 
   const set = useCallback((patch: Patch) => {
     setState((s) => ({ ...s, ...(typeof patch === 'function' ? patch(s) : patch) }));
