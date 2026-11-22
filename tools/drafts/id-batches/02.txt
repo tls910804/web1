@@ -1,0 +1,167 @@
+# 인도네시아어 +163
+초|일상||*Selamat siang!|안녕하세요 (낮)!|안녕하세요|좋은 낮|good afternoon
+초|일상||*Selamat malam!|안녕하세요 (밤)!|안녕하세요|좋은 밤|good evening
+초|일상||*Halo!|안녕!|안녕|안녕|hello
+초|일상||*Dadah!|잘 가!|잘 가|안녕|bye
+초|일상||*Terima kasih banyak.|정말 고마워요.|정말 고마워요|많이 감사|thanks a lot
+초|일상||*Sama-sama.|천만에요.|천만에요|서로서로|you're welcome
+초|일상||*Permisi.|실례합니다.|실례합니다|실례합니다|excuse me
+초|일상||*Tidak apa-apa.|괜찮아요.|괜찮아요|아무것도 아니다|it's okay
+초|일상||*Tentu saja!|물론이죠!|물론이죠|물론|of course
+초|일상||*Serius?|진짜?|진짜|진지하게|seriously
+초|일상||*Saya tidak tahu.|몰라요.|몰라요|나는 모른다|I don't know
+초|일상||*Nama saya/Dewi.|제 이름은 데위예요.|제 이름은|내 이름|my name|데위
+초|일상||*Saya dari/Korea.|한국에서 왔어요.|에서 왔어요|나는 ~에서|I'm from|한국
+초|일상||Saya bisa/*sedikit/bahasa Indonesia.|인도네시아어 조금 해요.|조금|조금|a little|나는 할 수 있다;인도네시아어
+초|일상||*Jam berapa/sekarang?|지금 몇 시예요?|몇 시|몇 시|what time|지금
+초|일상||*Sedang hujan.|비가 와요.|비가 와요|비가 오는 중|it's raining
+초|일상||Hari ini/*panas sekali.|오늘 정말 더워요.|정말 더워요|아주 덥다|very hot|오늘
+초|일상||Hari ini/*dingin.|오늘 추워요.|추워요|춥다|cold|오늘
+초|일상||Saya/*haus.|목말라요.|목말라요|목마른|thirsty|나는
+초|일상||Saya/*ngantuk.|졸려요.|졸려요|졸린|sleepy|나는
+초|일상||*Hati-hati!|조심해!|조심해|조심|careful
+초|일상||*Tolong!|도와주세요!|도와주세요|도와줘|help
+초|일상||*Selamat!|축하해요!|축하해요|축하|congratulations
+초|일상||*Selamat ulang tahun!|생일 축하해요!|생일 축하해요|생일 축하|happy birthday
+초|일상||*Selamat jalan!|잘 가요! (좋은 여행!)|잘 가요|안전한 길|have a good trip
+초|일상||*Selamat tidur.|잘 자요.|잘 자요|좋은 잠|sleep well
+초|일상||*Sampai besok!|내일 봐요!|내일 봐요|내일까지|see you tomorrow
+초|일상||*Oke.|알겠어요.|알겠어요|좋아|okay
+초|일상||*Bagus sekali!|아주 좋아!|아주 좋아|매우 좋다|very good
+초|일상||*Semoga beruntung!|행운을 빌어요!|행운을 빌어요|운이 좋기를|good luck
+초|카페·식당||*Meja untuk dua orang.|두 명 자리요.|두 명 자리|두 사람용 테이블|table for two
+초|카페·식당||*Minta/air putih.|물 주세요.|주세요|부탁하다|please give|맑은 물
+초|카페·식당||*Boleh lihat/menunya?|메뉴 볼 수 있어요?|볼 수 있어요|봐도 되나|may I see|메뉴
+초|카페·식당||Saya/*mau/teh manis.|단 차 주세요.|원해요|원하다|want|나는;단 차
+초|카페·식당||Saya/*sudah kenyang.|배불러요.|배불러요|이미 배부르다|already full|나는
+초|카페·식당||*Bersulang!|건배!|건배|건배|cheers
+초|카페·식당||*Pedas sekali!|너무 매워요!|너무 매워요|아주 맵다|very spicy
+초|카페·식당||*Selamat makan!|맛있게 드세요!|맛있게 드세요|좋은 식사|enjoy your meal
+초|쇼핑||*Murah sekali!|정말 싸다!|정말 싸다|아주 싸다|very cheap
+초|쇼핑||*Ada warna lain?|다른 색 있어요?|다른 색 있어요|다른 색이 있나|other colors
+초|쇼핑||*Saya ambil/yang ini.|이걸로 살게요.|살게요|나는 가져간다|I'll take|이것
+초|쇼핑||*Bisa bayar/pakai kartu?|카드로 계산돼요?|계산돼요|지불할 수 있다|can pay|카드로
+초|쇼핑||*Saya cuma lihat-lihat.|그냥 구경하는 중이에요.|그냥 구경하는 중이에요|나는 그냥 본다|just looking
+초|여행||Bandara/*di mana?|공항이 어디예요?|어디예요|어디에|where|공항
+초|여행||*Lurus saja.|쭉 직진이요.|쭉 직진|그냥 곧장|straight on
+초|여행||*Belok kiri.|왼쪽으로 도세요.|왼쪽으로 도세요|왼쪽으로 돌다|turn left
+초|여행||*Satu tiket/ke Bali.|발리행 표 한 장이요.|표 한 장|표 하나|one ticket|발리로
+초|여행||Stasiun/*di mana?|역이 어디예요?|어디예요|어디에|where|역
+초|병원||Saya/*sakit kepala.|머리가 아파요.|머리가 아파요|두통|headache|나는
+초|병원||Saya/*demam.|열이 나요.|열이 나요|열이 나다|fever|나는
+초|병원||Saya/*sakit.|아파요.|아파요|아픈|sick|나는
+초|병원||Saya/*masuk angin.|감기 기운이 있어요.|감기 기운이 있어요|바람이 들다(감기 기운)|catch a chill|나는
+초|감정||*Keren!|멋지다!|멋지다|멋지다|cool
+초|감정||Saya/*sedih.|슬퍼요.|슬퍼요|슬픈|sad|나는
+초|감정||Saya/*marah.|화났어요.|화났어요|화난|angry|나는
+초|감정||*Kaget!|깜짝이야!|깜짝이야|놀란|surprised
+초|감정||*Lucu sekali!|너무 귀여워!|너무 귀여워|아주 귀엽다|so cute
+초|감정||Saya/*takut.|무서워요.|무서워요|무서운|scared|나는
+초|감정||Saya/*gugup.|긴장돼요.|긴장돼요|긴장한|nervous|나는
+초|감정||Saya/*senang sekali.|정말 기뻐요.|정말 기뻐요|아주 기쁘다|very happy|나는
+초|회사||Saya/*sibuk.|바빠요.|바빠요|바쁜|busy|나는
+초|회사||*Kerja bagus!|잘했어요!|잘했어요|좋은 일|good job
+중|일상||*Akhir pekan/kamu ngapain?|주말에 뭐 해?|주말|주말|weekend|너 뭐 해
+중|일상||Saya/*telat/lagi.|또 늦었어요.|늦었어요|늦은|late|나는;또
+중|일상||Saya/*kesiangan.|늦잠 잤어요.|늦잠 잤어요|해가 높아질 때까지 자다|overslept|나는
+중|일상||*Jangan khawatir.|걱정하지 마.|걱정하지 마|걱정하지 마|don't worry
+중|일상||*Kamu benar.|네 말이 맞아.|네 말이 맞아|네가 옳다|you're right
+중|일상||Saya/*mau keluar/sekarang.|지금 나가려고 해요.|나가려고 해요|나가고 싶다|want to go out|나는;지금
+중|일상||*Bisa bantu/saya?|저 좀 도와줄 수 있어요?|도와줄 수 있어요|도울 수 있다|can help|나
+중|일상||*Telepon saya/kalau sudah sampai.|도착하면 전화해 줘요.|전화해 줘요|나에게 전화하다|call me|도착하면
+중|일상||HP saya/*habis baterai.|휴대폰 배터리가 다 됐어요.|배터리가 다 됐어요|배터리가 다 되다|battery dead|내 휴대폰
+중|일상||Saya/*buru-buru.|급해요.|급해요|서두르는|in a hurry|나는
+중|일상||Saya/*sedang belajar/bahasa Indonesia.|인도네시아어 배우는 중이에요.|배우는 중이에요|배우는 중이다|learning|나는;인도네시아어
+중|일상||*Lama tidak bertemu!|오랜만이에요!|오랜만이에요|오래 못 만났다|long time no see
+중|일상||*Semoga/semuanya baik.|다 잘되길 바라요.|~하길 바라요|~하기를 바라다|hopefully|모두 좋다
+중|일상||*Macet sekali/hari ini.|오늘 차가 엄청 막혀요.|차가 엄청 막혀요|아주 막히다|very jammed|오늘
+중|일상||Saya/*malas/keluar.|나가기 귀찮아요.|귀찮아요|게으른|lazy|나는;나가다
+중|일상||*Kedengarannya bagus.|좋은 생각 같아요.|좋은 생각 같아요|좋게 들린다|sounds good
+중|일상||*Apa?/Maaf, ulangi.|뭐라고요? 다시 말해 주세요.|뭐라고요|뭐?|what|미안해요, 반복해 주세요
+중|일상||Saya/*segera datang.|곧 갈게요.|곧 갈게요|곧 오다|coming soon|나는
+중|일상||*Tidak masalah.|문제없어요.|문제없어요|문제 아님|no problem
+중|카페·식당||*Sudah termasuk/tip?|팁 포함이에요?|포함|이미 포함된|already included|팁
+중|카페·식당||*Tambah satu/bir lagi.|맥주 하나 더요.|하나 더|하나 추가|add one|맥주 더
+중|카페·식당||*Bisa bayar/sendiri-sendiri?|각자 계산돼요?|계산돼요|지불할 수 있다|can pay|각자
+중|카페·식당||Saya/*vegetarian.|저 채식주의자예요.|채식주의자예요|채식주의자|vegetarian|나는
+중|카페·식당||*Hari ini/saya traktir.|오늘은 제가 살게요.|오늘은|오늘|today|내가 산다
+중|쇼핑||*Ada diskon?|할인 있어요?|할인 있어요|할인이 있나|any discount
+중|쇼핑||*Agak kecil/buat saya.|저한테 좀 작아요.|좀 작아요|약간 작다|a bit small|나에게
+중|쇼핑||*Bisa tukar?|교환돼요?|교환돼요|바꿀 수 있다|can exchange
+중|여행||*Berapa lama?|얼마나 걸려요?|얼마나 걸려요|얼마나 오래|how long
+중|여행||*Ada ATM/di dekat sini?|근처에 ATM 있어요?|ATM 있어요|ATM이 있다|is there an ATM|여기 근처에
+중|여행||Saya/*kehilangan/paspor.|여권을 잃어버렸어요.|잃어버렸어요|잃어버리다|lost|나는;여권
+중|여행||Museum/*tutup jam berapa?|박물관 몇 시에 닫아요?|몇 시에 닫아요|몇 시에 닫나|what time does it close|박물관
+중|여행||Saya/*sudah pesan/kamar.|방 예약했어요.|예약했어요|이미 주문했다|already booked|나는;방
+중|회사||Hari ini/*banyak kerjaan.|오늘 일이 많아요.|일이 많아요|일이 많다|lots of work|오늘
+중|회사||*Nanti saya telepon/lagi.|나중에 다시 전화할게요.|나중에 전화할게요|나중에 내가 전화한다|I'll call later|다시
+중|회사||Saya/*lagi rapat.|회의 중이에요.|회의 중이에요|회의 중|in a meeting|나는
+중|회사||Besok/*saya libur.|내일 쉬어요.|쉬어요|나는 쉰다|I'm off|내일
+중|회사||*Istirahat/sebentar yuk?|잠깐 쉴까요?|쉴까요|휴식|rest|잠깐 ~하자
+중|회사||Saya/*kirim/filenya.|파일 보낼게요.|보낼게요|보내다|send|나는;그 파일
+중|감정||Saya/*suka banget/lagu ini.|이 노래 너무 좋아요.|너무 좋아요|엄청 좋아하다|really like|나는;이 노래
+중|감정||*Saya bangga/sama kamu.|네가 자랑스러워.|자랑스러워|나는 자랑스럽다|I'm proud|너에게
+중|감정||Saya/*sudah tidak tahan.|더는 못 참겠어요.|더는 못 참겠어요|더 견딜 수 없다|can't stand it|나는
+중|감정||*Lega rasanya!|정말 다행이다!|정말 다행이다|안도감이 든다|feels relieved
+중|감정||Saya/*capek banget.|완전 지쳤어요.|완전 지쳤어요|엄청 피곤하다|super tired|나는
+중|감정||*Sayang sekali!|아쉽다!|아쉽다|정말 아깝다|what a pity
+중|감정||*Itu bikin saya sedih.|그게 날 슬프게 해요.|슬프게 해요|나를 슬프게 만들다|makes me sad
+중|연애|연애|*Aku suka kamu.|너 좋아해.|좋아해|나는 너를 좋아한다|I like you
+중|연애|연애|*Kamu sudah punya pacar?|애인 있어?|애인 있어|이미 연인이 있니|have a partner
+중|연애|연애|*Aku kangen banget/sama kamu.|너무너무 보고 싶어.|너무너무 보고 싶어|엄청 그립다|miss so much|너를
+중|일상|슬랭|*Mantap!|끝내준다!|끝내준다|훌륭하다|awesome
+중|일상|슬랭|*Santai aja.|그냥 편하게 해.|편하게 해|그냥 느긋하게|just relax
+중|일상|슬랭|*Gas!|가자! (해 보자!)|가자|밟아(출발)|let's go
+중|일상|슬랭|*Bodo amat.|알 게 뭐야.|알 게 뭐야|상관 안 해|whatever
+고|일상||*Waktu masih kecil,/saya/tinggal di desa.|어렸을 때 시골에 살았어요.|어렸을 때|아직 어렸을 때|when I was little|나는;시골에 살았다
+고|일상||*Kalau kamu ada waktu,/kita/ngopi yuk.|시간 있으면 우리 커피 마시자.|시간 있으면|네가 시간이 있다면|if you have time|우리;커피 마시자
+고|일상||*Sebelum keluar,/jangan lupa/matikan lampu.|나가기 전에 불 끄는 거 잊지 마.|나가기 전에|나가기 전에|before leaving|잊지 마;불을 끄다
+고|일상||*Setelah makan,/saya/selalu ngantuk.|밥 먹고 나면 항상 졸려요.|밥 먹고 나면|먹은 후에|after eating|나는;항상 졸리다
+고|일상||*Saya ingin/jalan-jalan/ke Eropa.|유럽 여행을 가고 싶어요.|가고 싶어요|나는 원한다|I want|여행하다;유럽으로
+고|일상||*Sejak pindah rumah,/saya/tidur lebih nyenyak.|이사한 뒤로 잠을 더 푹 자요.|이사한 뒤로|이사한 이후로|since moving|나는;더 푹 잔다
+고|일상||*Lebih baik/berangkat pagi/supaya tidak macet.|차 막히지 않게 아침에 출발하는 게 나아요.|~하는 게 나아요|더 좋다|it's better|아침에 출발하다;막히지 않도록
+고|일상||*Saya lupa/kalau hari ini/libur.|오늘이 휴일인 걸 깜빡했어요.|깜빡했어요|나는 잊었다|I forgot|~라는 것을 오늘;휴일
+고|회사||*Saya menulis untuk/mengonfirmasi/rapat.|회의를 확인하려고 연락드려요.|~하려고 연락드려요|~하기 위해 씁니다|I'm writing to|확인하다;회의
+고|회사||*Kita perlu/menunda/proyeknya.|프로젝트를 미뤄야 해요.|~해야 해요|우리는 ~할 필요가 있다|we need to|미루다;그 프로젝트
+고|회사||*Jangan ragu/menghubungi saya/kalau ada pertanyaan.|질문 있으면 망설이지 말고 연락 주세요.|망설이지 말고|주저하지 마|don't hesitate|나에게 연락하다;질문이 있으면
+고|감정||*Saya senang sekali/kamu datang.|와 줘서 정말 기뻐.|정말 기뻐|아주 기쁘다|very glad|네가 왔다
+고|감정||*Saya turut prihatin/atas kejadian itu.|그 일 정말 유감이에요.|정말 유감이에요|함께 걱정하다|I'm sorry|그 사건에 대해
+고|여행||*Ini pertama kalinya/saya/ke Indonesia.|인도네시아는 처음이에요.|처음|이번이 처음이다|it's the first time|나는;인도네시아에
+고|연애|연애|*Aku selalu/memikirkan kamu.|늘 네 생각만 해.|늘|항상|always|너를 생각하다
+고|일상|드라마·영화|*Aku tidak akan pernah/melupakanmu.|절대 너를 잊지 않을 거야.|절대 ~않을 거야|결코 ~하지 않을 것이다|I'll never|너를 잊다
+중|일상||Saya/*mau tidur/dulu.|먼저 잘게요.|잘게요|자고 싶다|want to sleep|나는;먼저
+중|일상||*Sudah selesai!|다 끝났어!|다 끝났어|이미 끝났다|done
+중|일상||*Ada apa?|무슨 일이야?|무슨 일이야|무엇이 있나|what's up
+중|일상||Aku/*utang budi/sama kamu.|너한테 신세 졌어.|신세 졌어|은혜를 빚지다|owe a favor|나는;너에게
+중|쇼핑||*Kamar pas/di mana?|탈의실 어디예요?|탈의실|탈의실|fitting room|어디예요
+중|감정||Aku/*nggak sabar/ketemu kamu.|빨리 만나고 싶어.|빨리|참을 수 없다|can't wait|나는;너를 만나다
+중|일상||Hari ini/*saya nggak sempat.|오늘은 시간이 없어요.|시간이 없어요|나는 짬이 없다|I have no time|오늘
+중|일상||*Ketemu/besok ya?|내일 볼까?|볼까|만나다|meet|내일 ~요?
+중|일상||*Aku pulang!|나 왔어!|나 왔어|나는 집에 왔다|I'm home
+중|여행||Stasiunnya/*jauh?|역이 멀어요?|멀어요|먼|far|그 역이
+중|카페·식당||*Satu kopi/dibungkus.|커피 하나 포장이요.|커피 하나|커피 하나|one coffee|포장된
+중|쇼핑||*Ini lagi diskon?|이거 할인 중이에요?|할인 중이에요|이거 할인 중인가|is this on sale
+중|병원||Saya/*perlu/dokter.|의사가 필요해요.|필요해요|필요하다|need|나는;의사
+중|병원||Saya/*sudah mendingan.|이제 좀 나아졌어요.|좀 나아졌어요|이미 나아졌다|already better|나는
+중|일상||*Kamu mau ke mana?|어디 가?|어디 가|너 어디 가고 싶니|where are you going
+중|일상||*Kapan kita/ketemu?|우리 언제 만나?|언제|언제 우리가|when do we|만나다
+중|일상||Lima menit lagi/*aku sampai.|5분 뒤에 도착해.|도착해|나는 도착한다|I arrive|5분 더
+중|감정||*Nggak percaya!|믿을 수 없어!|믿을 수 없어|안 믿긴다|unbelievable
+중|여행||Saya/*lagi cari/hotel.|호텔 찾고 있어요.|찾고 있어요|찾는 중이다|looking for|나는;호텔
+중|카페·식당||*Apa yang enak/di sini?|여기 뭐가 맛있어요?|뭐가 맛있어요|무엇이 맛있나|what's good|여기서
+중|일상||Aku/*excited banget!|너무 설레!|너무 설레|엄청 신나다|super excited|나는
+중|일상||*Masuk akal.|말 되네.|말 되네|이치에 맞다|makes sense
+중|일상||*Yuk,/berangkat!|자, 출발하자!|자|가자|come on|출발하다
+중|감정||Saya/*malu banget.|너무 창피해요.|너무 창피해요|엄청 부끄럽다|so embarrassed|나는
+중|일상||*Selamat berakhir pekan!|주말 잘 보내요!|주말 잘 보내요|좋은 주말|have a good weekend
+중|일상||*Semua aman?|다 괜찮아?|다 괜찮아|모두 안전한가|all good
+중|일상||*Pasti!|당연하지!|당연하지|확실히|definitely
+중|회사||*Serahkan/ke saya.|저한테 맡기세요.|맡기세요|넘기다|hand over|나에게
+중|회사||Minggu depan/*saya cuti.|다음 주에 휴가예요.|휴가예요|나는 휴가다|I'm on leave|다음 주
+중|여행||*Dekat dari sini?|여기서 가까워요?|여기서 가까워요|여기서 가깝나|near here
+중|일상||*Hari ini/hari apa?|오늘 무슨 요일이에요?|오늘|오늘|today|무슨 날
+중|일상||*Tunggu/aku!|나 기다려!|기다려|기다리다|wait|나를
+중|일상||Saya/*setuju.|동의해요.|동의해요|동의하다|agree|나는
+중|감정||Saya/*rindu rumah.|집이 그리워요.|집이 그리워요|집을 그리워하다|homesick|나는
+중|일상||Tiketnya/*berapa?|표 얼마예요?|얼마예요|얼마|how much|그 표
+중|일상||*Saya mengerti.|이해했어요.|이해했어요|나는 이해한다|I understand

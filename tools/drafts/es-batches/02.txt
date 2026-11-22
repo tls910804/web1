@@ -1,0 +1,105 @@
+# 스페인어 +117
+초|일상||*¡Buenas tardes!|안녕하세요 (오후)!|안녕하세요|좋은 오후|good afternoon
+초|일상||*¡Buenas noches!|안녕히 주무세요!|안녕히 주무세요|좋은 밤|good night
+초|일상||*¡Hola!/¿Cómo estás?|안녕! 어떻게 지내?|안녕|안녕|hi|어떻게 지내?
+초|일상||*Gracias.|고마워요.|고마워요|감사|thanks
+초|일상||*De nada.|천만에요.|천만에요|천만에|you're welcome
+초|일상||*Perdón.|미안해요.|미안해요|용서|sorry
+초|일상||*Claro.|물론이죠.|물론이죠|물론|of course
+초|일상||*Vale.|좋아. / 알겠어.|좋아|좋아|okay
+초|일상||*¿En serio?|진짜?|진짜|진지하게|seriously
+초|일상||*¡Qué pena!|안됐다!|안됐다|정말 유감이다|what a pity
+초|일상||*No sé.|몰라요.|몰라요|모르다|I don't know
+초|일상||*Me llamo/Ana.|제 이름은 아나예요.|제 이름은|나는 ~라고 불린다|my name is|아나
+초|일상||*Soy de/Corea.|한국에서 왔어요.|에서 왔어요|~ 출신이다|I'm from|한국
+초|일상||Hablo/*un poco/de español.|스페인어 조금 해요.|조금|조금|a little|나는 말한다;스페인어
+초|일상||¿Qué hora/*es?|몇 시예요?|예요|~이다|is|몇 시
+초|일상||Hace/*frío/hoy.|오늘 추워요.|추워요|추위|cold|(날씨가) ~하다;오늘
+초|일상||*Está lloviendo.|비가 와요.|비가 와요|비가 오고 있다|it's raining
+초|일상||Tengo/*sed.|목말라요.|목말라요|갈증|thirst|나는 가지고 있다
+초|일상||*Estoy aburrido.|심심해.|심심해|지루한|bored
+초|일상||*¡Date prisa!|서둘러!|서둘러|서두르다|hurry up
+초|일상||*¡Ayuda!|도와주세요!|도와주세요|도움|help
+초|일상||*¡Felicidades!|축하해요!|축하해요|축하|congratulations
+초|일상||*¡Feliz cumpleaños!|생일 축하해!|생일 축하해|생일 축하|happy birthday
+초|일상||*Buen viaje.|여행 잘 다녀와.|여행 잘 다녀와|좋은 여행|have a good trip
+초|일상||*Hasta mañana.|내일 봐.|내일 봐|내일까지|see you tomorrow
+초|카페·식당||Una mesa/*para dos,/por favor.|두 명 자리 부탁해요.|두 명|두 명을 위해|for two|자리 하나;부탁해요
+초|카페·식당||*Agua,/por favor.|물 주세요.|물|물|water|부탁해요
+초|카페·식당||Sin/*cebolla,/por favor.|양파 빼 주세요.|양파|양파|onion|없이;부탁해요
+초|카페·식당||*Estoy lleno.|배불러요.|배불러요|배부른|full
+초|카페·식당||*¡Salud!|건배!|건배|건강을 위해|cheers
+초|카페·식당||Está/*picante.|매워요.|매워요|매운|spicy|~이다
+초|쇼핑||Es/*barato.|싸요.|싸요|싼|cheap|~이다
+초|쇼핑||¿Tiene/*otro color?|다른 색 있어요?|다른 색|다른 색|another color|있나요
+초|쇼핑||*Me lo llevo.|이걸로 살게요.|살게요|그것을 가져가다|I'll take it
+초|쇼핑||*¿Aceptan tarjeta?|카드 받아요?|카드 받아요|카드를 받나요|do you take cards
+초|여행||¿Dónde está/el/*aeropuerto?|공항이 어디예요?|공항|공항|airport|어디에 있어요;그
+초|여행||*Al aeropuerto,/por favor.|공항으로 가 주세요.|공항으로|공항으로|to the airport|부탁해요
+초|여행||*Pare aquí,/por favor.|여기 세워 주세요.|여기 세워|여기 세우다|stop here|부탁해요
+초|여행||*Todo recto.|쭉 직진이요.|쭉 직진|곧장|straight ahead
+초|여행||*A la derecha.|오른쪽으로요.|오른쪽으로|오른쪽으로|to the right
+초|병원||Me duele/*la cabeza.|머리가 아파요.|머리|머리|head|나에게 아프다
+초|병원||Tengo/*fiebre.|열이 있어요.|열이|열|fever|나는 가지고 있다
+초|병원||Estoy/*resfriado.|감기 걸렸어요.|감기 걸렸어요|감기 걸린|have a cold|나는 ~이다
+초|감정||*¡Qué bonito!|정말 예쁘다!|정말 예쁘다|정말 예쁜|how pretty
+초|감정||*¡Qué miedo!|무서워!|무서워|정말 무섭다|how scary
+초|감정||Estoy/*triste.|슬퍼요.|슬퍼요|슬픈|sad|나는 ~이다
+초|감정||Estoy/*enfadado.|화났어.|화났어|화난|angry|나는 ~이다
+초|감정||*¡Qué sorpresa!|깜짝이야!|깜짝이야|정말 놀랍다|what a surprise
+초|감정||Estoy/*nervioso.|긴장돼요.|긴장돼요|긴장한|nervous|나는 ~이다
+초|회사||Estoy/*ocupado.|바빠요.|바빠요|바쁜|busy|나는 ~이다
+초|회사||*Buen trabajo.|수고했어요.|수고했어요|좋은 일|good job
+중|일상||¿Qué/*vas a hacer/este fin de semana?|이번 주말에 뭐 할 거야?|할 거야|~할 것이다|going to do|무엇을;이번 주말
+중|일상||*Llego tarde/otra vez.|또 늦었어.|늦었어|늦게 도착하다|arrive late|다시
+중|일상||Me quedé/*dormido.|늦잠 잤어.|잠들어 버렸어|잠들다|fell asleep|나는 ~하게 됐다
+중|일상||*No te preocupes.|걱정하지 마.|걱정하지 마|걱정하지 마|don't worry
+중|일상||*Tienes razón.|네 말이 맞아.|네 말이 맞아|네가 옳다|you're right
+중|일상||Estoy/*a punto de/salir.|막 나가려던 참이야.|막 ~하려던 참이야|막 ~하려는|about to|나는 ~이다;나가다
+중|일상||*¿Me ayudas/con esto?|이것 좀 도와줄래?|도와줄래|나를 돕다|help me|이것으로
+중|일상||*Llámame/cuando llegues.|도착하면 전화해.|전화해|나에게 전화하다|call me|네가 도착하면
+중|일상||Se me/*acabó/la batería.|배터리가 다 됐어.|다 됐어|다 떨어지다|ran out|나에게;배터리
+중|일상||*Tengo prisa.|나 급해.|급해|서두름이 있다|in a hurry
+중|일상||*¡Qué rollo!|정말 지루하다! / 귀찮다!|정말 지루하다|정말 귀찮다|what a drag
+중|일상||Estoy/*aprendiendo/español.|스페인어 배우는 중이야.|배우는 중이야|배우고 있는|learning|나는 ~이다;스페인어
+중|일상||*Hace mucho/que no te veo.|오랜만이다.|오랜만|오래되다|it's been long|너를 못 본 지
+중|일상||*Ojalá/no llueva mañana.|내일 비 안 왔으면 좋겠다.|~했으면 좋겠다|~하기를 바라다|hopefully|내일 비가 안 오다
+중|카페·식당||*¿Está incluida/la propina?|팁 포함인가요?|포함인가요|포함된|included|팁
+중|카페·식당||Quiero/*la carne/poco hecha.|고기는 덜 익혀 주세요.|고기|고기|meat|나는 원한다;덜 익힌
+중|카페·식당||¿Me trae/*más pan?|빵 좀 더 주실래요?|빵 좀 더|더 많은 빵|more bread|저에게 가져다주실래요
+중|카페·식당||*¿Podemos pagar/por separado?|따로 계산할 수 있나요?|따로 계산할|우리가 지불하다|can we pay|따로
+중|쇼핑||*¿Me hace/un descuento?|할인해 주실 수 있어요?|해 주실 수 있어요|나에게 해 주다|do me|할인
+중|쇼핑||Me queda/*pequeño.|작아요. (안 맞아요)|작아요|작은|small|나에게 맞다
+중|쇼핑||¿Puedo/*devolverlo?|반품할 수 있어요?|반품할|그것을 반품하다|return it|~할 수 있나요
+중|여행||¿Cuánto/*se tarda/en llegar?|도착하는 데 얼마나 걸려요?|걸려요|시간이 걸리다|take time|얼마나;도착하는 데
+중|여행||¿Hay/*un cajero/cerca?|근처에 ATM 있어요?|ATM|현금인출기|ATM|있나요;근처에
+중|여행||*Quiero cambiar/dinero.|환전하고 싶어요.|환전하고 싶어요|바꾸고 싶다|want to exchange|돈
+중|여행||*He perdido/mi pasaporte.|여권을 잃어버렸어요.|잃어버렸어요|잃어버렸다|I've lost|내 여권
+중|회사||*Tengo mucho trabajo/hoy.|오늘 일이 많아.|일이 많아|일이 많다|lots of work|오늘
+중|회사||*Te llamo/más tarde.|나중에 전화할게.|전화할게|너에게 전화하다|I'll call you|나중에
+중|회사||*Estoy en una reunión/ahora.|지금 회의 중이야.|회의 중이야|회의 중이다|in a meeting|지금
+중|회사||*Mañana/tengo el día libre.|내일 쉬는 날이야.|내일|내일|tomorrow|하루 쉬는 날이 있다
+중|감정||*Me encanta/esta canción.|이 노래 너무 좋아.|너무 좋아|정말 좋아하다|I love|이 노래
+중|감정||*Estoy muy orgulloso/de ti.|네가 정말 자랑스러워.|정말 자랑스러워|아주 자랑스러운|very proud|너에 대해
+중|감정||*Me da miedo/volar.|비행기 타는 게 무서워.|무서워|나에게 무서움을 주다|scares me|비행하다
+중|감정||*No aguanto más.|더는 못 참겠어.|더는 못 참겠어|더 이상 견딜 수 없다|can't take it anymore
+중|감정||*¡Qué alivio!|다행이다!|다행이다|정말 안심이다|what a relief
+중|연애|연애|*Estoy enamorado/de ti.|너한테 반했어.|반했어|사랑에 빠진|in love|너에게
+중|연애|연애|*¿Tienes novio?|남자친구 있어?|남자친구 있어|남자친구가 있니|do you have a boyfriend
+중|연애|연애|*Te echo mucho de menos.|너무 보고 싶어.|너무 보고 싶어|너를 많이 그리워하다|I miss you a lot
+중|일상|슬랭|*¡Qué fuerte!|대박!|대박|정말 강하다|wow, intense
+중|일상|슬랭|*Estoy flipando.|완전 놀랐어.|완전 놀랐어|깜짝 놀라다|I'm freaking out
+중|일상|슬랭|*¡Qué chulo!|완전 멋져!|완전 멋져|멋지다|so cool
+고|일상||*Cuando era niño,/vivía/en el campo.|어렸을 때 시골에 살았어.|어렸을 때|내가 아이였을 때|when I was a kid|살았다;시골에
+고|일상||*Si tienes tiempo,/podemos/tomar un café.|시간 있으면 커피 한잔하자.|시간 있으면|시간이 있으면|if you have time|우리는 ~할 수 있다;커피를 마시다
+고|일상||*Antes de salir,/no olvides/apagar las luces.|나가기 전에 불 끄는 거 잊지 마.|나가기 전에|나가기 전에|before leaving|잊지 마;불을 끄다
+고|일상||*Después de comer,/siempre/me da sueño.|밥 먹고 나면 항상 졸려.|밥 먹고 나면|먹은 후에|after eating|항상;나는 졸려진다
+고|일상||*Me gustaría/viajar por/toda Sudamérica.|남미 전체를 여행해 보고 싶어.|~해 보고 싶어|~하고 싶다|I'd like|여행하다;남미 전체
+고|일상||*Desde que/me mudé,/duermo mejor.|이사한 뒤로 잠을 더 잘 자.|~한 뒤로|~한 이후로|since|이사했다;더 잘 잔다
+고|일상||*Por mucho que/lo intento,/no me sale.|아무리 해 봐도 잘 안 돼.|아무리 ~해도|아무리 ~해도|no matter how much|그것을 시도하다;나에게 안 된다
+고|회사||*Le escribo para/confirmar/la reunión de mañana.|내일 회의를 확인하려고 연락드려요.|~하려고 연락드려요|~하기 위해 씁니다|I'm writing to|확인하다;내일 회의
+고|회사||*Tendremos que/posponer/el proyecto.|프로젝트를 미뤄야 할 것 같아요.|~해야 할 것 같아요|우리는 ~해야 할 것이다|we'll have to|미루다;프로젝트
+고|감정||*Me alegro mucho de/que hayas venido.|네가 와서 정말 기뻐.|정말 기뻐|~해서 매우 기쁘다|I'm so glad|네가 와 준 것
+고|감정||*Siento mucho/lo que pasó.|일어난 일 정말 유감이야.|정말 유감이야|정말 미안하다|I'm very sorry|일어난 일
+고|여행||*Es la primera vez que/visito/España.|스페인에 온 건 처음이에요.|~한 건 처음이에요|~하는 건 처음이다|first time that|방문하다;스페인
+고|연애|연애|*No puedo dejar de/pensar en ti.|너 생각을 멈출 수가 없어.|멈출 수가 없어|~을 멈출 수 없다|can't stop|너를 생각하다

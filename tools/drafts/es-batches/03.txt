@@ -1,0 +1,13 @@
+중|일상||*Voy a/ducharme.|샤워하러 갈게.|~할게|~할 것이다|I'm going to|샤워하다
+중|일상||*Ya está/listo.|이제 다 됐어.|이제 ~이다|이미 ~이다|it's already|준비된
+중|일상||*¿Qué te pasa?|무슨 일 있어?|무슨 일 있어|너에게 무슨 일이|what's wrong
+중|일상||*Me voy/a la cama.|자러 갈게.|갈게|나는 간다|I'm going|침대로
+중|일상||*Lo dejo/para mañana.|내일로 미룰게.|미룰게|그것을 남겨 두다|I'll leave it|내일로
+중|일상||*Te debo/una.|신세 졌어.|빚졌어|너에게 빚지다|I owe you|하나
+중|카페·식당||*¿Tienen/menú del día?|오늘의 메뉴 있어요?|있어요|가지고 있다|do you have|오늘의 메뉴
+중|카페·식당||*Para mí,/una paella.|저는 파에야 하나요.|저는|나에게는|for me|파에야 하나
+중|쇼핑||*¿Dónde están/los probadores?|탈의실 어디예요?|어디예요|어디에 있나요|where are|탈의실
+중|여행||*¿A qué hora/cierra/el museo?|박물관 몇 시에 닫아요?|몇 시에|몇 시에|at what time|닫다;박물관
+중|감정||*Estoy agotado.|완전 지쳤어.|완전 지쳤어|지친|exhausted
+중|감정||*Qué ganas de/verte.|너무 보고 싶어.|너무 ~하고 싶어|~하고 싶은 마음|really want to|너를 보다
+중|연애|연애|*Me gustas/desde hace tiempo.|오래전부터 너 좋아했어.|좋아했어|네가 좋다|I like you|오래전부터

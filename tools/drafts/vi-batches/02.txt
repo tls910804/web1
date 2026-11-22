@@ -1,0 +1,171 @@
+# 베트남어 +167
+초|일상||*Chào buổi sáng!|좋은 아침!|좋은 아침|아침 인사|good morning
+초|일상||*Chào bạn!|안녕!|안녕|친구에게 인사|hi
+초|일상||*Tạm biệt!|잘 가요!|잘 가요|작별|goodbye
+초|일상||*Cảm ơn bạn.|고마워요.|고마워요|당신에게 감사|thank you
+초|일상||*Cảm ơn nhiều.|정말 고마워요.|정말 고마워요|많이 감사|thanks a lot
+초|일상||*Không có gì.|천만에요.|천만에요|아무것도 아니다|you're welcome
+초|일상||*Xin lỗi nhé.|미안해.|미안해|미안해|sorry
+초|일상||*Không sao.|괜찮아요.|괜찮아요|문제없다|it's okay
+초|일상||*Dĩ nhiên!|물론이죠!|물론이죠|당연히|of course
+초|일상||*Thật không?|정말?|정말|진짜야?|really
+초|일상||*Tôi không biết.|몰라요.|몰라요|나는 모른다|I don't know
+초|일상||*Tôi tên là/Minh.|제 이름은 민이에요.|제 이름은|내 이름은 ~이다|my name is|민
+초|일상||*Tôi đến từ/Hàn Quốc.|한국에서 왔어요.|에서 왔어요|~에서 오다|I come from|한국
+초|일상||Tôi nói/*một chút/tiếng Việt.|베트남어 조금 해요.|조금|조금|a little|나는 말한다;베트남어
+초|일상||*Mấy giờ rồi?|몇 시예요?|몇 시예요|몇 시가 됐나|what time is it
+초|일상||*Trời đang mưa.|비가 와요.|비가 와요|하늘이 비 오는 중|it's raining
+초|일상||Hôm nay/*nóng quá.|오늘 너무 더워요.|너무 더워요|너무 덥다|too hot|오늘
+초|일상||Hôm nay/*lạnh.|오늘 추워요.|추워요|춥다|cold|오늘
+초|일상||Tôi/*khát nước.|목말라요.|목말라요|목마르다|thirsty|나는
+초|일상||Tôi/*buồn ngủ.|졸려요.|졸려요|졸리다|sleepy|나는
+초|일상||*Cẩn thận!|조심해!|조심해|조심하다|careful
+초|일상||*Cứu với!|도와주세요!|도와주세요|구해 줘|help
+초|일상||*Chúc mừng!|축하해요!|축하해요|축하하다|congratulations
+초|일상||*Chúc mừng sinh nhật!|생일 축하해요!|생일 축하해요|생일 축하|happy birthday
+초|일상||*Chúc đi vui vẻ!|즐거운 여행 되세요!|즐거운 여행 되세요|즐겁게 가길 바라|have a nice trip
+초|일상||*Ngủ ngon.|잘 자요.|잘 자요|푹 자다|sleep well
+초|일상||*Hẹn mai gặp.|내일 봐요.|내일 봐요|내일 만나기로|see you tomorrow
+초|일상||*Được rồi.|알겠어요. / 좋아요.|알겠어요|됐다|okay
+초|일상||*Tốt lắm!|아주 좋아!|아주 좋아|매우 좋다|very good
+초|일상||*Chúc may mắn!|행운을 빌어요!|행운을 빌어요|행운을 빌다|good luck
+초|카페·식당||*Bàn cho hai người.|두 명 자리요.|두 명 자리|두 사람용 테이블|table for two
+초|카페·식당||*Cho tôi/nước.|물 주세요.|주세요|나에게 주세요|give me|물
+초|카페·식당||*Cho tôi xem/thực đơn.|메뉴 좀 보여 주세요.|보여 주세요|나에게 보게 해 주세요|let me see|메뉴
+초|카페·식당||Tôi/*muốn/một ly trà.|차 한 잔 주세요.|원해요|원하다|want|나는;차 한 잔
+초|카페·식당||Tôi/*no rồi.|배불러요.|배불러요|배부르다|full|나는
+초|카페·식당||*Một, hai, ba,/dô!|하나, 둘, 셋, 건배!|하나, 둘, 셋|하나, 둘, 셋|one, two, three|건배
+초|카페·식당||*Cay quá!|너무 매워요!|너무 매워요|너무 맵다|too spicy
+초|카페·식당||*Chúc ngon miệng!|맛있게 드세요!|맛있게 드세요|입맛 좋기를|enjoy your meal
+초|쇼핑||*Rẻ quá!|너무 싸다!|너무 싸다|너무 싸다|so cheap
+초|쇼핑||*Có màu khác/không?|다른 색 있어요?|다른 색|다른 색이 있다|other colors|~요?
+초|쇼핑||*Tôi lấy cái này.|이걸로 살게요.|이걸로 살게요|나는 이것을 가져간다|I'll take this
+초|쇼핑||*Trả bằng thẻ/được không?|카드로 돼요?|카드로|카드로 지불하다|pay by card|되나요
+초|쇼핑||*Tôi chỉ xem thôi.|그냥 보는 중이에요.|그냥 보는 중이에요|나는 보기만 한다|just looking
+초|여행||Sân bay/*ở đâu?|공항이 어디예요?|어디예요|어디에 있다|where|공항
+초|여행||*Đi thẳng.|직진하세요.|직진하세요|곧장 가다|go straight
+초|여행||*Rẽ trái.|왼쪽으로 도세요.|왼쪽으로 도세요|왼쪽으로 돌다|turn left
+초|여행||*Một vé/đi Hà Nội.|하노이행 표 한 장이요.|표 한 장|표 하나|one ticket|하노이로 가는
+초|여행||Ga tàu/*ở đâu?|기차역이 어디예요?|어디예요|어디에|where|기차역
+초|병원||Tôi/*bị đau đầu.|머리가 아파요.|머리가 아파요|두통을 겪다|have a headache|나는
+초|병원||Tôi/*bị sốt.|열이 나요.|열이 나요|열이 나다|have a fever|나는
+초|병원||Tôi/*bị ốm.|아파요.|아파요|아프다|sick|나는
+초|병원||Tôi/*bị cảm.|감기 걸렸어요.|감기 걸렸어요|감기에 걸리다|caught a cold|나는
+초|감정||*Tuyệt vời!|대단해!|대단해|훌륭하다|wonderful
+초|감정||Tôi/*buồn.|슬퍼요.|슬퍼요|슬프다|sad|나는
+초|감정||Tôi/*giận rồi.|화났어.|화났어|화났다|angry|나는
+초|감정||*Bất ngờ quá!|깜짝이야!|깜짝이야|너무 놀랍다|what a surprise
+초|감정||*Dễ thương quá!|너무 귀여워!|너무 귀여워|너무 귀엽다|so cute
+초|감정||Tôi/*sợ.|무서워요.|무서워요|무섭다|scared|나는
+초|감정||Tôi/*hồi hộp.|긴장돼요.|긴장돼요|두근거리다|nervous|나는
+초|감정||Tôi/*vui lắm.|정말 기뻐요.|정말 기뻐요|아주 기쁘다|very happy|나는
+초|회사||Tôi/*bận.|바빠요.|바빠요|바쁘다|busy|나는
+초|회사||*Làm tốt lắm!|잘했어요!|잘했어요|아주 잘했다|well done
+중|일상||*Cuối tuần/bạn làm gì?|주말에 뭐 해요?|주말|주말|weekend|당신은 무엇을 하나요
+중|일상||Tôi/*lại/đến muộn.|또 늦었어요.|또|다시|again|나는;늦게 오다
+중|일상||Tôi/*ngủ quên.|늦잠 잤어요.|늦잠 잤어요|잠들어 잊다|overslept|나는
+중|일상||*Đừng lo.|걱정 마.|걱정 마|걱정하지 마|don't worry
+중|일상||*Bạn nói đúng.|네 말이 맞아.|네 말이 맞아|네가 옳게 말한다|you're right
+중|일상||Tôi/*đang ra ngoài.|지금 나가는 중이에요.|나가는 중이에요|나가는 중이다|going out|나는
+중|일상||*Giúp tôi/với.|좀 도와줘요.|도와줘요|나를 도와|help me|~줘
+중|일상||*Gọi cho tôi/khi đến nơi.|도착하면 전화해 줘요.|전화해 줘요|나에게 전화해|call me|도착하면
+중|일상||Điện thoại/*hết pin rồi.|휴대폰 배터리가 다 됐어요.|배터리가 다 됐어요|배터리가 다 되다|battery dead|휴대폰
+중|일상||Tôi/*đang vội.|급해요.|급해요|서두르는 중이다|in a hurry|나는
+중|일상||Tôi/*đang học/tiếng Việt.|베트남어 배우는 중이에요.|배우는 중이에요|공부하는 중이다|learning|나는;베트남어
+중|일상||*Lâu quá/không gặp!|정말 오랜만이에요!|정말 오랜만|아주 오랫동안|so long|못 만났다
+중|일상||*Hy vọng/mọi việc ổn.|다 괜찮길 바라요.|바라요|희망하다|hope|모든 일이 괜찮다
+중|일상||*Kẹt xe quá/hôm nay.|오늘 차가 너무 막혀요.|차가 너무 막혀요|교통 체증이 심하다|traffic is bad|오늘
+중|일상||Tôi/*lười/ra ngoài.|나가기 귀찮아요.|귀찮아요|게으르다|lazy|나는;밖에 나가다
+중|일상||*Nghe hay đấy.|좋은 생각이네요.|좋은 생각이네요|듣기 좋다|sounds good
+중|일상||*Bạn nói gì?|뭐라고요?|뭐라고요|무슨 말을 했나요|what did you say
+중|일상||Tôi/*đến ngay.|금방 갈게요.|금방 갈게요|곧 도착한다|coming right away|나는
+중|일상||*Không vấn đề gì.|문제없어요.|문제없어요|아무 문제 없다|no problem
+중|카페·식당||*Có bao gồm/tiền boa không?|팁 포함이에요?|포함|포함하다|include|팁 ~요?
+중|카페·식당||*Thêm một/bia nữa.|맥주 하나 더요.|하나 더|하나 더하다|one more|맥주 더
+중|카페·식당||*Tính riêng/được không?|따로 계산돼요?|따로 계산|따로 계산하다|pay separately|되나요
+중|카페·식당||Tôi/*ăn chay.|저 채식해요.|채식해요|채식하다|vegetarian|나는
+중|카페·식당||*Hôm nay/tôi mời.|오늘은 내가 살게요.|오늘|오늘|today|내가 대접한다
+중|쇼핑||*Có giảm giá/không?|할인돼요?|할인|가격을 깎다|discount|~요?
+중|쇼핑||*Hơi nhỏ/với tôi.|저한테 좀 작아요.|좀 작아요|조금 작다|a bit small|나에게
+중|쇼핑||*Đổi được/không?|교환돼요?|교환돼요|바꿀 수 있다|can exchange|~요?
+중|여행||*Mất bao lâu?|얼마나 걸려요?|얼마나 걸려요|얼마나 오래 걸리나|how long does it take
+중|여행||Gần đây/*có ATM không?|근처에 ATM 있어요?|ATM 있어요|ATM이 있나|is there an ATM|이 근처
+중|여행||Tôi/*mất/hộ chiếu.|여권을 잃어버렸어요.|잃어버렸어요|잃다|lose|나는;여권
+중|여행||Bảo tàng/*mấy giờ đóng cửa?|박물관 몇 시에 닫아요?|몇 시에 닫아요|몇 시에 문을 닫나|what time does it close|박물관
+중|여행||Tôi/*đã đặt/phòng.|방을 예약했어요.|예약했어요|예약했다|booked|나는;방
+중|회사||Hôm nay/*nhiều việc quá.|오늘 일이 너무 많아요.|일이 너무 많아요|일이 너무 많다|so much work|오늘
+중|회사||*Tôi sẽ gọi lại/sau.|나중에 다시 전화할게요.|다시 전화할게요|나는 다시 전화할 것이다|I'll call back|나중에
+중|회사||Tôi/*đang họp.|회의 중이에요.|회의 중이에요|회의하는 중이다|in a meeting|나는
+중|회사||Ngày mai/*tôi nghỉ.|내일은 쉬어요.|쉬어요|나는 쉰다|I'm off|내일
+중|회사||*Nghỉ giải lao/nhé?|좀 쉴까요?|좀 쉴|휴식하다|take a break|~요?
+중|회사||Tôi/*gửi/file cho bạn.|파일 보낼게요.|보낼게요|보내다|send|나는;파일 너에게
+중|감정||Tôi/*rất thích/bài này.|이 노래 정말 좋아요.|정말 좋아요|매우 좋아하다|really like|나는;이 노래
+중|감정||*Tôi tự hào về/bạn.|네가 자랑스러워.|자랑스러워|~에 대해 자랑스럽다|I'm proud of|너
+중|감정||Tôi/*hết chịu nổi/rồi.|더는 못 참겠어요.|더는 못 참겠어요|더 이상 견딜 수 없다|can't stand anymore|나는;~했다
+중|감정||*Nhẹ cả người!|정말 다행이다!|정말 다행이다|온몸이 가볍다|what a relief
+중|감정||Tôi/*mệt chết đi được.|피곤해 죽겠어.|피곤해 죽겠어|죽을 만큼 피곤하다|dead tired|나는
+중|감정||*Tiếc quá!|아쉽다!|아쉽다|너무 아깝다|what a pity
+중|감정||*Điều đó làm tôi buồn.|그게 날 슬프게 해.|슬프게 해|그것이 나를 슬프게 하다|that makes me sad
+중|연애|연애|*Anh thích em.|너 좋아해.|좋아해|나는 너를 좋아한다|I like you
+중|연애|연애|*Em có người yêu/chưa?|애인 있어?|애인 있어|연인이 있다|have a lover|아직?
+중|연애|연애|*Anh nhớ em/nhiều lắm.|너무너무 보고 싶어.|보고 싶어|나는 너를 그리워한다|I miss you|아주 많이
+중|일상|슬랭|*Đỉnh quá!|최고다!|최고다|정상이다|awesome
+중|일상|슬랭|*Thôi kệ.|됐어, 상관없어.|됐어|그냥 놔둬|forget it
+중|일상|슬랭|*Chill thôi.|그냥 편하게 해.|편하게 해|그냥 칠|just chill
+중|일상|슬랭|*Hết sẩy!|끝내준다!|끝내준다|최고다|amazing
+고|일상||*Khi còn nhỏ,/tôi/sống ở quê.|어렸을 때 시골에 살았어요.|어렸을 때|아직 어렸을 때|when I was young|나는;시골에 살았다
+고|일상||*Nếu bạn rảnh,/mình/đi uống cà phê nhé.|시간 있으면 커피 마시러 가요.|시간 있으면|당신이 한가하면|if you're free|우리;커피 마시러 가자
+고|일상||*Trước khi ra ngoài,/đừng quên/tắt đèn.|나가기 전에 불 끄는 거 잊지 마.|나가기 전에|밖에 나가기 전에|before going out|잊지 마;불을 끄다
+고|일상||*Sau khi ăn,/tôi/luôn buồn ngủ.|밥 먹고 나면 항상 졸려요.|밥 먹고 나면|먹은 후에|after eating|나는;항상 졸리다
+고|일상||*Tôi muốn/đi du lịch/châu Âu.|유럽 여행을 가고 싶어요.|가고 싶어요|나는 원한다|I want|여행 가다;유럽
+고|일상||*Từ khi chuyển nhà,/tôi/ngủ ngon hơn.|이사한 뒤로 잠을 더 잘 자요.|이사한 뒤로|이사한 이후로|since moving|나는;더 잘 잔다
+고|일상||*Tốt hơn là/đi sớm/để tránh kẹt xe.|차 막히는 걸 피하려면 일찍 가는 게 나아요.|~하는 게 나아요|~하는 것이 더 낫다|it's better to|일찍 가다;교통 체증을 피하려면
+고|일상||*Tôi quên mất/hôm nay/là ngày lễ.|오늘이 공휴일인 걸 깜빡했어요.|깜빡했어요|완전히 잊었다|I completely forgot|오늘;공휴일이다
+고|회사||*Tôi viết thư này để/xác nhận/cuộc họp.|회의를 확인하려고 연락드려요.|연락드려요|이 편지를 쓰는 건 ~하려고|I'm writing to|확인하다;회의
+고|회사||*Chúng ta cần/hoãn/dự án.|프로젝트를 미뤄야 해요.|~해야 해요|우리는 ~할 필요가 있다|we need to|미루다;프로젝트
+고|회사||*Đừng ngại/liên hệ/nếu có câu hỏi.|질문 있으면 망설이지 말고 연락 주세요.|망설이지 말고|주저하지 마|don't hesitate|연락하다;질문이 있으면
+고|감정||*Tôi rất vui vì/bạn đã đến.|와 줘서 정말 기뻐요.|정말 기뻐요|~해서 매우 기쁘다|I'm very glad because|당신이 왔다
+고|감정||*Tôi rất tiếc/về chuyện đã xảy ra.|일어난 일 정말 유감이에요.|정말 유감이에요|매우 유감이다|I'm very sorry|일어난 일에 대해
+고|여행||*Đây là lần đầu/tôi đến/Việt Nam.|베트남은 처음 와 봐요.|처음|이번이 처음이다|it's the first time|내가 오다;베트남
+고|연애|연애|*Anh lúc nào cũng/nghĩ về em.|나는 늘 네 생각만 해.|늘|언제나|always|너에 대해 생각하다
+고|일상|드라마·영화|*Anh sẽ không bao giờ/quên em.|절대 너를 잊지 않을 거야.|절대 ~않을 거야|결코 ~하지 않을 것이다|I'll never|너를 잊다
+중|일상||Tôi/*đi ngủ/đây.|자러 갈게요.|자러 가|자러 가다|go to sleep|나는;이제
+중|일상||*Xong rồi!|다 됐어!|다 됐어|끝났다|done
+중|일상||*Có chuyện gì vậy?|무슨 일이야?|무슨 일이야|무슨 일이 있나|what's going on
+중|일상||Tôi/*nợ bạn/một lần.|신세 졌어요.|빚졌어요|당신에게 빚지다|owe you|나는;한 번
+중|쇼핑||*Phòng thử đồ/ở đâu?|탈의실 어디예요?|탈의실|탈의실|fitting room|어디예요
+중|감정||Tôi/*mong được gặp/bạn.|빨리 만나고 싶어요.|만나고 싶어요|만나기를 바라다|look forward to meeting|나는;당신
+중|일상||Hôm nay/*tôi không rảnh.|오늘은 시간이 없어요.|시간이 없어요|나는 한가하지 않다|I'm not free|오늘
+중|일상||*Mai gặp/nhé?|내일 볼까?|내일 볼까|내일 만나다|meet tomorrow|~요?
+중|일상||*Tôi về rồi!|나 돌아왔어!|돌아왔어|나는 돌아왔다|I'm back
+중|여행||Ga tàu/*có xa không?|기차역 멀어요?|멀어요|먼가요|is it far|기차역
+중|카페·식당||*Một ly cà phê/mang đi.|커피 한 잔 포장이요.|커피 한 잔|커피 한 잔|a coffee|가지고 가다
+중|쇼핑||*Cái này/có giảm giá không?|이거 할인돼요?|이거|이것|this|할인돼요?
+중|병원||Tôi/*cần/bác sĩ.|의사가 필요해요.|필요해요|필요하다|need|나는;의사
+중|병원||Tôi/*thấy đỡ hơn/rồi.|좀 나아졌어요.|좀 나아졌어요|더 나아짐을 느끼다|feel better|나는;~했다
+중|일상||*Bạn đi đâu đấy?|어디 가요?|어디 가요|당신 어디 가나요|where are you going
+중|일상||*Khi nào/mình gặp nhau?|우리 언제 만나?|언제|언제|when|우리 서로 만나다
+중|일상||Năm phút nữa/*tôi tới.|5분 뒤에 도착해요.|도착해요|나는 도착한다|I'll arrive|5분 더
+중|감정||*Không thể tin được!|믿을 수 없어!|믿을 수 없어|믿을 수 없다|unbelievable
+중|여행||Tôi/*đang tìm/khách sạn.|호텔을 찾고 있어요.|찾고 있어요|찾는 중이다|looking for|나는;호텔
+중|카페·식당||*Bạn gợi ý món gì?|뭐 추천해요?|뭐 추천해요|무슨 음식을 추천하나|what do you suggest
+중|일상||Tôi/*háo hức quá!|너무 설레요!|너무 설레요|너무 들뜨다|so excited|나는
+중|일상||*Có lý đấy.|일리 있네요.|일리 있네요|이치가 있다|makes sense
+중|일상||*Đi thôi!|가자!|가자|가자|let's go
+중|감정||Tôi/*xấu hổ quá.|너무 창피해요.|너무 창피해요|너무 부끄럽다|so embarrassed|나는
+중|일상||*Cuối tuần vui vẻ!|주말 잘 보내요!|주말 잘 보내요|즐거운 주말|have a good weekend
+중|일상||*Mọi thứ ổn chứ?|다 괜찮죠?|다 괜찮죠|모든 게 괜찮지?|everything okay
+중|일상||*Chắc chắn rồi!|당연하죠!|당연하죠|확실하다|definitely
+중|회사||*Để tôi/lo.|제가 처리할게요.|~할게요|나에게 맡겨|let me|처리하다
+중|회사||Tuần sau/*tôi nghỉ phép.|다음 주에 휴가예요.|휴가예요|나는 휴가를 낸다|I'm on leave|다음 주
+중|여행||*Có gần đây không?|여기서 가까워요?|가까워요|여기서 가깝나|is it near here
+중|일상||*Hôm nay/là thứ mấy?|오늘 무슨 요일이에요?|오늘|오늘|today|며칠째 요일이냐
+중|일상||Tôi/*đang đến muộn.|늦어지고 있어요.|늦어지고 있어요|늦게 오는 중이다|running late|나는
+중|일상||*Chờ tôi/với!|나 좀 기다려!|기다려|나를 기다려|wait for me|~줘
+중|일상||Tôi/*đồng ý.|동의해요.|동의해요|동의하다|agree|나는
+중|감정||Tôi/*nhớ nhà.|집이 그리워요.|집이 그리워요|집을 그리워하다|homesick|나는
+중|일상||Vé/*bao nhiêu tiền?|표 얼마예요?|얼마예요|얼마|how much|표
+중|일상||*Tôi hiểu rồi.|이해했어요.|이해했어요|나는 이해했다|I understand
+중|일상||*Nói chậm/thôi.|천천히 말해 줘요.|천천히 말해|천천히 말하다|speak slowly|좀
+중|일상||*Bao giờ/bạn về?|언제 돌아와요?|언제|언제|when|당신은 돌아오다
+중|감정||Tôi/*thích lắm!|정말 좋아요!|정말 좋아요|아주 좋아하다|really like|나는
