@@ -49,5 +49,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+      # 올린 파일이 GitHub 목록에 늦게 나타나 배포가 "파일 없음"으로 실패한 적이 있어서 잠깐 기다려요
+      - name: Wait for artifact
+        run: sleep 30
       - id: deployment
         uses: actions/deploy-pages@v4
