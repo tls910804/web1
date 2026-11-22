@@ -1,0 +1,116 @@
+ko630|말씀하신 부분은/내부적으로/*검토한 후에/다시/회신 드리겠습니다.|after reviewing|the part you mentioned;internally;again;I'll reply
+ko631|*번거로우시겠지만/한 번만 더/확인 부탁드립니다.|it may be a hassle, but|one more time;please check
+ko632|양해/*부탁드립니다./일정이 조금/늦어질 것 같습니다.|I kindly ask (for)|understanding;the schedule a bit;seems to get delayed
+ko634|*결론부터 말씀드리면/이번 프로젝트는/연기됐습니다.|to start with the conclusion|this project (topic);was postponed
+ko635|바쁘신/*와중에/시간 내 주셔서/감사합니다.|in the midst of|busy (honorific);for making time;thank you
+ko638|책임지고/끝까지/*마무리하겠습니다.|I'll wrap it up|taking responsibility;to the end
+ko639|*말이 나온 김에/다음 분기 계획도/정리해 볼까요?|since it came up|next quarter's plan too;shall we organize
+ko641|이번 달 실적이/*기대에 못 미쳐서/아쉽네요.|fell short of expectations|this month's results (subject);it's a pity
+ko642|*손이 많이 가는/일이라/시간이 좀 걸릴 거예요.|labor-intensive|since it's a task;it'll take some time
+ko643|팀장님이/승인해 주시면/바로/*진행하겠습니다.|I'll proceed|the team lead (subject);if (they) approve;right away
+ko644|다들 의견이/*엇갈리니까/투표로/정하는 게 어때요?|since they're divided|everyone's opinions;by vote;how about deciding
+ko646|경력이/*짧은 편이지만/배우려는 의지는/누구보다 강합니다.|is on the short side, but|career (subject);the will to learn (topic);stronger than anyone
+ko647|연봉 협상이/생각보다/잘/*안 풀렸어요.|didn't work out|salary negotiation (subject);than expected;well
+ko649|일과 삶의 균형을/*지키는 게/제일 중요하다고/생각해요.|keeping|work-life balance (object);most important;I think
+ko650|다음 주까지/초안을/공유해 주시면/*피드백 드릴게요.|I'll give feedback|by next week;draft (object);if you share
+ko651|*아무래도/이번 출장은/미루는 게/나을 것 같아요.|all things considered|this business trip (topic);postponing;seems better
+ko652|거래처와의 미팅이/예상보다/*길어지는 바람에/늦었습니다.|because it ran long|the meeting with the client;than expected;I was late
+ko653|혹시/*실례가 안 된다면/연락처를/여쭤봐도 될까요?|if it's not rude|by any chance;contact info (object);may I ask
+ko655|그렇게/*말씀해 주시니/큰 힘이 됩니다.|since you say so|like that;it's a great strength
+ko656|업무 분담을/명확하게/해 두면/*좋겠어요.|it'd be nice|division of work (object);clearly;if done in advance
+ko658|퇴근 시간이/*다 돼서야/일이 끝났어요.|only when it was almost|quitting time (subject);the work ended
+ko660|신입 때는/모든 게/*낯설고 어려웠어요.|was unfamiliar and hard|when I was new;everything
+ko661|*잘 부탁드립니다./앞으로/열심히 하겠습니다.|please take good care of me|from now on;I'll work hard
+ko663|제 생각은/*조금 다른데,/말씀드려도 될까요?|is a bit different, but|my opinion (topic);may I tell you
+ko664|이 정도면/충분히/*설득력이 있다고/봐요.|it's persuasive|at this level;enough;I see it
+ko665|*발등에 불이 떨어져서/급하게/처리하고 있어요.|since it became urgent|hurriedly;I'm handling it
+ko667|다음부터는/이런 일이/없도록/*주의하겠습니다.|I'll be careful|from next time;this kind of thing;so it doesn't happen
+ko668|시험 범위가/너무 넓어서/어디서부터/*시작해야 할지 모르겠어요.|I don't know where to start|exam scope (subject);since it's too wide;from where
+ko669|교수님께/추천서를/*부탁드리려고 하는데/좀 떨려요.|I'm about to ask (politely), but|to the professor;recommendation letter (object);I'm a bit nervous
+ko670|발표하다가/머릿속이/*하얘졌어요.|went blank|while presenting;my head (subject)
+ko671|*공부할수록/모르는 게/더 많아지는 것 같아요.|the more I study|what I don't know;seems to increase
+ko672|한국 드라마를/*보면서/듣기 실력이/많이 늘었어요.|while watching|Korean dramas (object);listening skill (subject);improved a lot
+ko673|말하기는/아직/*자신이 없어서/연습이 더 필요해요.|since I'm not confident|speaking (topic);still;I need more practice
+ko675|유학을/*갈지 말지/아직/결정을 못 했어요.|whether to go or not|studying abroad (object);still;I haven't decided
+ko676|조별 과제에서/혼자 다 한 것 같아서/*억울해요.|I feel wronged|in the group project;since it seems I did it all alone
+ko677|존댓말과 반말을/*구분해서 쓰는 게/아직도 어려워요.|using them separately|polite and casual speech (object);is still hard
+ko678|하나를 배우면/*열을 아는/학생이네요.|knows ten|if (you) learn one;you're a student
+ko679|꾸준히/*하다 보면/언젠가는/유창해질 거예요.|if you keep doing it|steadily;someday;you'll become fluent
+ko680|한국어로/꿈을/*꾼 적이/있어요?|the experience of having dreamed|in Korean;dream (object);is there
+ko682|한국에서/*살아 보니까/교과서랑 실제 말이/많이 달라요.|after living (here)|in Korea;textbook and real speech;differ a lot
+ko683|*이럴 줄 알았으면/진작/말할 걸 그랬어요.|if I'd known it'd be like this|earlier;I should have said it
+ko684|바쁘다는/*핑계로/운동을/계속 미루고 있어요.|with the excuse|that I'm busy;exercise (object);I keep postponing
+ko685|*말이 씨가 된다더니/진짜/비가 오네요.|they say words become seeds|really;it's raining
+ko686|*아무리 바빠도/밥은/챙겨 먹어야지.|no matter how busy|meals (topic);you should make sure to eat
+ko687|나이가/*들수록/시간이/빨리 가는 것 같아요.|the more it adds up|age (subject);time (subject);seems to go fast
+ko688|그러게/*내가 뭐랬어,/일찍 출발하자고/했잖아.|what did I say|see;let's leave early;I said, didn't I
+ko689|*안 그래도/피곤한데/길까지/막히네요.|as it is|I'm tired and;even the road;is jammed
+ko690|혹시나 해서/물어봤는데/*역시나였어요.|it was as expected|just in case;I asked, and
+ko691|*바늘 도둑이 소도둑 된다고/작은 습관부터/조심해야 해요.|a needle thief becomes a cow thief|from small habits;you must be careful
+ko692|요즘 들어/부쩍/건망증이/*심해진 것 같아요.|seems to have gotten worse|lately;noticeably;forgetfulness (subject)
+ko693|하루가/어떻게/*지나갔는지/모르겠어요.|how it passed|the day (subject);how;I don't know
+ko695|*마음먹은 김에/오늘부터/일찍 일어나 보려고요.|now that I've made up my mind|from today;I'll try waking up early
+ko696|*생각할수록/그 사람 말이/맞는 것 같아요.|the more I think|that person's words;seem right
+ko697|*별일 없으면/이번 주말에/등산 갈래요?|if nothing comes up|this weekend;want to go hiking
+ko698|택시를/*타느니/차라리/걸어가는 게 빠르겠어요.|rather than taking|taxi (object);instead;walking would be faster
+ko699|비싼/*만큼/값어치를 하네요.|as much as|expensive;it's worth it
+ko700|*어차피/늦은 거/천천히 가자.|anyway|we're late;let's go slowly
+ko701|*밑져야 본전이니까/한번/지원해 봐.|since you've got nothing to lose|once;try applying
+ko702|*꿩 대신 닭이라고/이거라도/먹자.|second best will do|at least this;let's eat
+ko703|*등잔 밑이 어둡다더니/안경이/바로 옆에 있었네.|it's darkest under the lamp|my glasses (subject);were right next to me
+ko705|알람을/맞춰 놨는데도/*못 들었어요.|I didn't hear it|alarm (object);even though I set it
+ko706|한 번 사는/인생인데/하고 싶은 거/*하고 살아야죠.|should live doing it|lived once;it's a life, so;what you want
+ko707|*입이 열 개라도/할 말이 없어요.|even if I had ten mouths|I have nothing to say
+ko708|솔직히/서운한 마음이/없다면/*거짓말이에요.|it's a lie|honestly;a hurt feeling;if there weren't
+ko709|괜히/기대했다가/*실망만 했어요.|was only disappointed|for no reason;after expecting
+ko710|그 말을/듣는 순간/가슴이/*철렁했어요.|sank (with a jolt)|those words (object);the moment I heard;my heart (subject)
+ko711|아무 일도 아닌데/괜히/*눈물이 나네요.|tears are coming|it's nothing, but;for no reason
+ko712|*마음은 굴뚝같은데/몸이/안 따라 줘요.|I really want to, but|my body (subject);won't follow
+ko713|그때/그 말을/*하지 말 걸/계속 후회돼요.|I shouldn't have said|back then;those words (object);I keep regretting
+ko714|자꾸/남이랑/비교하게 돼서/*자존감이 떨어져요.|my self-esteem drops|keep;with others;since I end up comparing
+ko715|걱정해 주는 건/*고마운데/이제 괜찮아요.|I'm grateful, but|your worrying (topic);I'm okay now
+ko716|하고 싶은 말은/많은데/*막상 하려니까/안 나와요.|when I actually try|what I want to say (topic);is a lot, but;it won't come out
+ko717|*애써 웃고 있지만/사실/많이 힘들어요.|I'm forcing a smile, but|actually;it's really hard
+ko718|이 기분을/*뭐라고 설명해야 할지/모르겠어요.|how to describe|this feeling (object);I don't know
+ko719|그렇게까지/*할 필요는/없었잖아.|the need to do|that far;there wasn't
+ko720|*아무리 생각해도/이해가/안 돼요.|no matter how much I think|understanding (subject);doesn't happen
+ko721|긴장한/*티를 안 내려고/애썼어요.|so as not to show|nervous;I tried hard
+ko722|*누가 뭐라고 해도/나는/네 편이야.|no matter what anyone says|I (topic);on your side
+ko723|결과가/*어떻든/최선을 다했으니까/후회는 없어요.|whatever it is|the result (subject);since I did my best;no regrets
+ko724|말 한마디로/*천 냥 빚을 갚는다잖아요.|repays a thousand-nyang debt|with one word
+ko725|혼자/*끙끙 앓지 말고/나한테 얘기해.|don't suffer and groan|alone;tell me
+ko726|*이제 와서/그런 말을 하면/어떡해요.|at this point|if you say such things;what am I to do
+ko727|*시간이 약이라고들 하지만/아직은/힘들어요.|they say time is medicine, but|still;it's hard
+ko728|칭찬을/들으니까/괜히/*쑥스럽네요.|I feel shy|praise (object);since I heard;for no reason
+ko729|그동안/참아 왔던 게/한꺼번에/*터졌어요.|burst out|all this time;what I'd held in;all at once
+ko730|*걱정이 태산이라서/잠이/안 와요.|since I have mountains of worry|sleep (subject);doesn't come
+ko731|*생각만 해도/가슴이/두근거려요.|just thinking|my heart (subject);pounds
+ko732|*낯을 많이 가리는 편이라/처음엔/좀 어색해요.|since I'm quite shy with strangers|at first;a bit awkward
+ko733|혹시/시간 괜찮으시면/이번 주 안에/한번/*뵐 수 있을까요?|could I see you (humble)|by any chance;if your time is okay;within this week;once
+ko734|차가/너무 막혀서/약속 시간에/*맞춰 가기 어려울 것 같아요.|it seems hard to arrive in time|traffic (subject);since it's jammed;for the meeting time
+ko735|괜히/나 때문에/일정/*바꾸지 마.|don't change|unnecessarily;because of me;schedule
+ko736|그날은/*선약이 있어서/다른 날로 하면/안 될까요?|since I have prior plans|that day (topic);if we do another day;couldn't we
+ko737|*가는 길에/커피/사 갈까요?|on the way|coffee;shall I buy and take
+ko738|혹시/늦어지면/먼저/*시작하고 계세요.|please start and wait|by any chance;if I'm late;first
+ko739|오랜만에/다 같이/모이는 거니까/꼭/*와야 돼.|you must come|after a long time;all together;since we're gathering;definitely
+ko740|약속을/잡아 놓고/*까맣게 잊어버렸어요.|completely forgot|appointment (object);after setting it up
+ko741|도착하기/10분 전쯤에/*연락 줄게.|I'll contact you|before arriving;about 10 minutes
+ko742|거기/주차하기 힘드니까/대중교통/*타고 와.|ride and come|there;since parking is hard;public transport
+ko743|비 소식이/있어서/야외 말고 실내로/*바꾸는 게 어때요?|how about changing|news of rain;since there is;indoors instead of outdoors
+ko744|이번에는/꼭/*지킬게,/약속해.|I'll keep it|this time;definitely;I promise
+ko745|서로/바빠서 그런지/요즘/*얼굴 보기가 힘드네요.|it's hard to see each other|each other;maybe because busy;lately
+ko746|좋아한다고/말하고 싶은데/*용기가 안 나요.|I can't find the courage|that I like you;I want to say, but
+ko747|우리/이제/그만 만나는 게/서로를 위해/*좋을 것 같아.|seems good|we;now;stopping seeing each other;for each other
+ko748|연락이/뜸해진 걸 보니/*마음이 식은 것 같아요.|their feelings seem to have cooled|contact (subject);seeing it became rare
+ko749|처음 만난 날이/아직도/*어제 일처럼/생생해.|like yesterday|the day we first met;still;is vivid
+ko750|네가 웃으면/*나도 모르게/따라 웃게 돼.|without realizing|when you smile;I end up smiling too
+ko751|*밀당은 그만하고/솔직하게/말해 줘.|stop the push and pull|honestly;tell me
+ko752|*헤어지고 나서야/소중함을/알게 됐어요.|only after breaking up|preciousness (object);I came to know
+ko753|연애는 타이밍이라는 말이/*이제야/이해가 돼요.|only now|the saying that love is timing;I understand
+ko754|친구/이상으로/*생각해 본 적 없어?|have you never thought|friend;beyond
+ko755|기다리게 해서/미안해,/이제/*다시는 안 그럴게.|I won't do that again|for making you wait;I'm sorry;now
+ko756|결혼을/*전제로/만나고 싶어요.|on the premise of|marriage (object);I want to date
+ko757|부모님께/*인사드리러/가기로 했어요.|to go greet (humble)|to the parents;we decided to go
+ko758|첫사랑은/*이루어지지 않는다는데/우리는/다르겠지?|they say it doesn't come true|first love (topic);we (topic);will be different, right
+ko759|내가/너를/*어떻게 잊어,/한 번도/잊은 적 없어.|how could I forget|I;you (object);even once;I've never forgotten
+ko760|지금/나랑/*장난해?|are you kidding|now;with me

@@ -1,0 +1,93 @@
+# 초급 · 일상 / 약속 / 연락
+초|일상||*잘 잤어요?|Did you sleep well?|did you sleep well
+초|일상||오늘/*날씨가 좋네요.|The weather is nice today.|the weather is nice|today
+초|일상||*배고파요.|I'm hungry.|I'm hungry
+초|일상||*피곤해요.|I'm tired.|I'm tired
+초|일상||좀/*쉬고 싶어요.|I want to rest a bit.|want to rest|a little
+초|일상||*다녀올게요.|I'll be back.|I'll go and come back
+초|일상||*다녀왔어요.|I'm home.|I've come back
+초|일상||밥/*먹었어요?|Have you eaten?|did you eat|rice, a meal
+초|일상||*잘 먹겠습니다.|Thanks for the meal. (before eating)|I will eat well
+초|일상||*잘 먹었습니다.|That was delicious, thank you. (after eating)|I ate well
+초|일상||*괜찮아요.|It's okay.|it's okay
+초|일상||*잠깐만요.|Just a moment.|wait a moment
+초|일상||*천천히 말해 주세요.|Please speak slowly.|please speak slowly
+초|일상||다시 한번/*말해 주세요.|Please say that again.|please say|once more
+초|일상||*무슨 뜻이에요?|What does that mean?|what does it mean
+초|일상||이거/*뭐예요?|What is this?|what is it|this
+초|일상||화장실이/*어디예요?|Where is the restroom?|where is it|the restroom (subject)
+초|일상||*모르겠어요.|I don't know.|I don't know
+초|일상||*알겠어요.|Got it.|I understand
+초|일상||*정말요?|Really?|really
+초|일상||*맞아요.|That's right.|that's right
+초|일상||*아니에요.|No, it's not. / Not at all.|no, it isn't
+초|일상||*축하해요!|Congratulations!|congratulations
+초|일상||*생일 축하해요!|Happy birthday!|happy birthday
+초|일상||*수고하셨습니다.|Thank you for your hard work.|you worked hard
+초|일상||*실례합니다.|Excuse me.|excuse me
+초|일상||*죄송합니다.|I'm sorry.|I'm sorry (formal)
+초|일상||*감사합니다.|Thank you.|thank you (formal)
+초|일상||*고마워.|Thanks.|thanks (casual)
+초|일상||*미안해.|Sorry.|sorry (casual)
+초|일상||지금/*몇 시예요?|What time is it now?|what time is it|now
+초|일상||오늘/*무슨 요일이에요?|What day is it today?|what day of the week is it|today
+초|일상||*비가 와요.|It's raining.|it's raining
+초|일상||밖에/*눈이 와요.|It's snowing outside.|it's snowing|outside
+초|일상||너무/*추워요.|It's so cold.|it's cold|too, so
+초|일상||오늘/*진짜 덥다.|It's really hot today.|it's really hot|today
+초|일상||*집에 가고 싶어요.|I want to go home.|want to go home
+초|일상||*일찍 잘게요.|I'll go to bed early.|I'll sleep early
+초|일상||*푹 쉬세요.|Get some good rest.|rest well
+초|일상||*잘 자요.|Good night.|sleep well
+초|일상||*좋은 아침이에요.|Good morning.|good morning
+초|일상||*주말 잘 보내세요.|Have a nice weekend.|have a good weekend
+초|일상||*좋은 하루 보내세요.|Have a nice day.|have a good day
+초|일상||*오랜만이에요.|Long time no see.|it's been a while
+초|일상||*요즘 어떻게 지내요?|How have you been lately?|how are you doing these days
+초|일상||*덕분에 잘 지내요.|I'm doing well, thanks to you.|doing well thanks to you
+초|일상||*처음 뵙겠습니다.|Nice to meet you. (first meeting)|I'm meeting you for the first time
+초|일상||*만나서 반가워요.|Nice to meet you.|glad to meet you
+초|일상||제 이름은/*민지예요.|My name is Minji.|it's Minji|my name (topic)
+초|일상||*어디에서 왔어요?|Where are you from?|where did you come from
+초|일상||*한국어 공부하고 있어요.|I'm studying Korean.|studying Korean
+초|일상||한국어를/*조금 할 수 있어요.|I can speak a little Korean.|can do a little|Korean (object)
+초|일상||*사진 찍어도 돼요?|Can I take a photo?|may I take a photo
+초|일상||*도와주세요!|Help me, please!|please help
+초|일상||*조심하세요.|Be careful.|be careful
+초|일상||*큰일 났다!|Oh no, I'm in trouble!|big trouble happened
+초|일상||*깜빡했어요.|I forgot.|I forgot (slipped my mind)
+초|일상||휴대폰을/*잃어버렸어요.|I lost my phone.|I lost|cell phone (object)
+초|일상||*충전기 있어요?|Do you have a charger?|do you have a charger
+초|일상||배터리가/*다 됐어요.|My battery is dead.|it ran out|battery (subject)
+초|일상||*와이파이 비밀번호가 뭐예요?|What's the Wi-Fi password?|what is the Wi-Fi password
+초|약속||*언제 만날까요?|When shall we meet?|when shall we meet
+초|약속||*어디서 볼까?|Where should we meet?|where shall we see each other
+초|약속||*내일 시간 있어요?|Do you have time tomorrow?|do you have time tomorrow
+초|약속||*이따가 봐요.|See you later.|see you later
+초|약속||*내일 봐요.|See you tomorrow.|see you tomorrow
+초|약속||*다음에 봐요.|See you next time.|see you next time
+초|약속||거의/*다 왔어요.|I'm almost there.|I've come all the way|almost
+초|약속||지금/*출발해요.|I'm leaving now.|I'm departing|now
+초|약속||*먼저 갈게요.|I'll go first.|I'll go first
+초|약속||*기다릴게요.|I'll wait.|I'll wait
+초|약속||*어디쯤이에요?|Whereabouts are you?|about where are you
+초|약속||*도착했어요.|I've arrived.|I arrived
+초|약속||*좋아요, 그때 봐요.|Okay, see you then.|good, see you then
+초|약속||*약속 있어요.|I have plans.|I have an appointment
+초|약속||오늘은/*안 될 것 같아요.|I don't think today works.|it probably won't work|today (topic)
+초|약속||*다음에 해요.|Let's do it next time.|let's do it next time
+초|약속||*몇 시에 만나요?|What time are we meeting?|what time do we meet
+초|약속||*7시 어때요?|How about seven?|how about 7 o'clock
+초|연락||*전화해 줘.|Call me.|call me (for me)
+초|연락||*문자 보낼게요.|I'll text you.|I'll send a text
+초|연락||*번호 좀 알려 주세요.|Can you give me your number?|please tell me (your) number
+초|연락||*나중에 다시 전화할게요.|I'll call you back later.|I'll call again later
+초|연락||*카톡 해.|Message me on KakaoTalk.|send me a KakaoTalk
+초|연락||*연락할게요.|I'll contact you.|I'll get in touch
+초|연락||*답장이 없어요.|There's no reply.|there's no reply
+초|연락||*여보세요?|Hello? (on the phone)|hello (on the phone)
+초|연락||*누구세요?|Who is it?|who is it
+초|연락||잘/*안 들려요.|I can't hear you well.|can't hear|well
+초|연락||*지금 통화 괜찮아요?|Is now a good time to talk?|is a call okay now
+초|연락||*잠깐 끊을게요.|I'll hang up for a sec.|I'll hang up for a moment
+초|연락||*다시 연락 줘.|Get back to me.|contact me again

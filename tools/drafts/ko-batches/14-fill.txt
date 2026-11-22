@@ -1,0 +1,19 @@
+# 1000개 채우기
+고|일상||*하나부터 열까지/다 신경 쓰려니까 정신이 없어요.|Trying to take care of every little thing is driving me crazy.|from one to ten|trying to care about all of it, I'm frazzled
+고|일상||*마음만 먹으면/못 할 게 없다고 생각해요.|I believe there's nothing you can't do once you set your mind to it.|if only you make up your mind|I think there's nothing you can't do
+고|일상||*지하철에서 졸다가/종점까지 가 버렸어요.|I dozed off on the subway and rode all the way to the last stop.|while dozing on the subway|I went all the way to the terminal
+고|일상||*배달 음식을 너무 자주 시켜 먹어서/이번 달 식비가 폭탄이에요.|I ordered delivery too often, and this month's food bill is a bomb.|since I ordered delivery too often|this month's food expenses are a bomb
+고|감정||*이유도 모르고/혼나니까 더 억울했어요.|Getting scolded without knowing why made it even more unfair.|without knowing the reason|getting scolded felt more unfair
+고|감정||*하고 싶은 일과 잘하는 일 사이에서/고민이 많아요.|I'm torn between what I want to do and what I'm good at.|between what I want to do and what I'm good at|I have a lot of worries
+고|회사||*그 부분은 제가 다시 한번 확인한 다음에/정확하게 말씀드릴게요.|Let me double-check that part and give you an exact answer.|after I check that part once more|I'll tell you precisely
+고|회사||*처음 맡은 프로젝트라서/부담이 크지만 기대도 돼요.|It's my first project, so it's a lot of pressure, but I'm excited.|since it's the first project I've taken on|the pressure is big but I'm excited too
+고|여행||*비행기에서 창밖을 보다가/구름 위로 해가 뜨는 걸 봤어요.|Looking out the plane window, I saw the sun rise above the clouds.|while looking out the window on the plane|I saw the sun rise above the clouds
+고|학교||*같은 실수를 반복하지 않으려고/틀린 문제를 따로 정리해요.|I keep a separate list of wrong answers so I don't repeat mistakes.|so as not to repeat the same mistake|I organize the wrong problems separately
+중|일상||*하루 종일/비가 오락가락하네요.|It's been raining on and off all day.|all day long|rain comes and goes
+중|일상||*커피를 마셔야/정신이 들어요.|I need coffee to wake up.|only after drinking coffee|I come to my senses
+중|일상||*일이 술술/잘 풀리네요.|Things are going smoothly.|work smoothly|is going well
+중|감정||*뒤끝 없는 성격이에요.|I don't hold grudges.|a personality with no lingering grudge
+중|회사||*점심 뭐 먹을지가/제일 큰 고민이에요.|What to eat for lunch is my biggest worry.|what to eat for lunch|is the biggest concern
+중|쇼핑||*신상이 나왔대요.|They say new arrivals are out.|they say new products came out
+중|카페·식당||*국물이 끝내줘요.|The broth is amazing.|the soup is fantastic
+중|여행||*비행기 표를/싸게 샀어요.|I got cheap plane tickets.|plane ticket|I bought cheaply

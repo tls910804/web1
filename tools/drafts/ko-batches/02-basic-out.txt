@@ -1,0 +1,92 @@
+# 초급 · 카페·식당 / 쇼핑 / 여행
+초|카페·식당||*메뉴판 주세요.|Can I have a menu, please?|please give me the menu
+초|카페·식당||*이거 주세요.|I'll have this, please.|please give me this
+초|카페·식당||이거/*하나 더 주세요.|One more of this, please.|please give me one more|this
+초|카페·식당||물/*좀 주세요.|Some water, please.|please give me some|water
+초|카페·식당||*얼마예요?|How much is it?|how much is it
+초|카페·식당||*계산해 주세요.|The check, please.|please calculate (the bill)
+초|카페·식당||*카드 돼요?|Do you take cards?|is a card okay
+초|카페·식당||*포장해 주세요.|To go, please.|please pack it (to go)
+초|카페·식당||*여기서 먹을게요.|I'll eat here.|I'll eat here
+초|카페·식당||*두 명이에요.|There are two of us.|it's two people
+초|카페·식당||*자리 있어요?|Do you have a table?|is there a seat
+초|카페·식당||*맛있어요!|It's delicious!|it's tasty
+초|카페·식당||너무/*매워요.|It's too spicy.|it's spicy|too
+초|카페·식당||*안 맵게 해 주세요.|Please make it not spicy.|please make it not spicy
+초|카페·식당||*추천해 주세요.|Please recommend something.|please recommend
+초|카페·식당||*뭐가 제일 맛있어요?|What's the best thing here?|what's the most delicious
+초|카페·식당||*배불러요.|I'm full.|I'm full
+초|카페·식당||*따뜻한 걸로 주세요.|A hot one, please.|please give me a warm one
+초|카페·식당||*아이스로 주세요.|Iced, please.|please make it iced
+초|카페·식당||라떼/*한 잔 주세요.|One latte, please.|please give me one cup|latte
+초|카페·식당||*사이즈 업 해 주세요.|Please size it up.|please upsize it
+초|카페·식당||*빨대 주세요.|A straw, please.|please give me a straw
+초|카페·식당||*진동벨 드릴게요.|Here's your buzzer.|I'll give you a buzzer
+초|카페·식당||*주문할게요.|I'd like to order.|I'll order
+초|카페·식당||*잠깐만 기다려 주세요.|Please wait a moment.|please wait a moment
+초|카페·식당||*남은 거 싸 주세요.|Please wrap up the leftovers.|please wrap the leftovers
+초|카페·식당||*고기 빼 주세요.|No meat, please.|please leave out the meat
+초|카페·식당||*반찬 더 주세요.|More side dishes, please.|please give me more side dishes
+초|카페·식당||*건배!|Cheers!|cheers
+초|카페·식당||*한 그릇 더!|One more bowl!|one more bowl
+초|쇼핑||*그냥 보는 거예요.|I'm just looking.|I'm just looking
+초|쇼핑||*이거 얼마예요?|How much is this?|how much is this
+초|쇼핑||*입어 봐도 돼요?|Can I try it on?|may I try it on
+초|쇼핑||*더 큰 거 있어요?|Do you have a bigger one?|is there a bigger one
+초|쇼핑||*다른 색 있어요?|Do you have another color?|is there another color
+초|쇼핑||*좀 깎아 주세요.|Please give me a discount.|please lower the price a bit
+초|쇼핑||*너무 비싸요.|It's too expensive.|it's too expensive
+초|쇼핑||*이걸로 할게요.|I'll take this one.|I'll go with this
+초|쇼핑||*봉투 필요해요?|Do you need a bag?|do you need a bag
+초|쇼핑||*영수증 주세요.|A receipt, please.|please give me a receipt
+초|쇼핑||*환불돼요?|Can I get a refund?|is a refund possible
+초|쇼핑||*교환하고 싶어요.|I'd like to exchange it.|I want to exchange
+초|쇼핑||*세일해요?|Is it on sale?|is it on sale
+초|쇼핑||*하나 사면 하나 더 줘요.|Buy one, get one free.|buy one, get one more
+초|쇼핑||*탈의실 어디예요?|Where's the fitting room?|where is the fitting room
+초|쇼핑||*딱 맞아요.|It fits perfectly.|it fits exactly
+초|쇼핑||좀/*작아요.|It's a bit small.|it's small|a little
+초|쇼핑||*선물 포장 돼요?|Can you gift-wrap it?|is gift wrapping possible
+초|쇼핑||*현금으로 할게요.|I'll pay in cash.|I'll do it in cash
+초|쇼핑||*품절이에요.|It's sold out.|it's sold out
+초|여행||*지하철역이 어디예요?|Where is the subway station?|where is the subway station
+초|여행||*여기서 멀어요?|Is it far from here?|is it far from here
+초|여행||*걸어서 갈 수 있어요?|Can I walk there?|can I go on foot
+초|여행||*이 버스 시청 가요?|Does this bus go to City Hall?|does this bus go to City Hall
+초|여행||*여기 세워 주세요.|Please stop here.|please stop here
+초|여행||*공항으로 가 주세요.|To the airport, please.|please go to the airport
+초|여행||*길을 잃었어요.|I'm lost.|I lost my way
+초|여행||*지도 좀 보여 주세요.|Can you show me on the map?|please show me the map
+초|여행||*표 두 장 주세요.|Two tickets, please.|please give me two tickets
+초|여행||*체크인하려고요.|I'd like to check in.|I'm going to check in
+초|여행||*체크아웃은 몇 시예요?|What time is checkout?|what time is checkout
+초|여행||*예약했어요.|I have a reservation.|I made a reservation
+초|여행||*짐 맡길 수 있어요?|Can I leave my luggage?|can I leave my bags
+초|여행||*방이 너무 추워요.|The room is too cold.|the room is too cold
+초|여행||*수건 더 주세요.|More towels, please.|please give me more towels
+초|여행||*사진 좀 찍어 주세요.|Could you take a picture for me?|please take a photo
+초|여행||*여기 처음 와 봐요.|It's my first time here.|it's my first time coming here
+초|여행||*경치가 정말 좋아요.|The view is amazing.|the scenery is really nice
+초|여행||*여권 보여 주세요.|Please show me your passport.|please show the passport
+초|여행||*관광 왔어요.|I'm here for sightseeing.|I came for tourism
+초|여행||*환전하고 싶어요.|I want to exchange money.|I want to exchange currency
+초|여행||*택시 불러 주세요.|Please call a taxi.|please call a taxi
+초|여행||*다음 역이 어디예요?|What's the next station?|where is the next station
+초|여행||*갈아타야 돼요?|Do I have to transfer?|do I have to transfer
+초|여행||*몇 정거장 가요?|How many stops is it?|how many stops does it go
+초|여행||*내려야 돼요.|I need to get off.|I have to get off
+초|여행||*표를 잃어버렸어요.|I lost my ticket.|I lost my ticket
+초|여행||*기차가 늦어요.|The train is late.|the train is late
+초|여행||*근처에 편의점 있어요?|Is there a convenience store nearby?|is there a convenience store nearby
+초|여행||*한국은 처음이에요.|It's my first time in Korea.|it's my first time in Korea
+초|병원||*머리가 아파요.|I have a headache.|my head hurts
+초|병원||*배가 아파요.|My stomach hurts.|my stomach hurts
+초|병원||*감기에 걸렸어요.|I caught a cold.|I caught a cold
+초|병원||*열이 나요.|I have a fever.|I have a fever
+초|병원||*기침이 나요.|I'm coughing.|a cough comes out
+초|병원||*약국이 어디예요?|Where's the pharmacy?|where is the pharmacy
+초|병원||*약 먹었어요?|Did you take your medicine?|did you take medicine
+초|병원||*병원에 가야겠어요.|I think I should go to the hospital.|I'd better go to the hospital
+초|병원||*몸이 안 좋아요.|I don't feel well.|my body isn't good
+초|병원||*다쳤어요.|I got hurt.|I got hurt
+초|병원||*빨리 나아요.|Get well soon.|get better quickly

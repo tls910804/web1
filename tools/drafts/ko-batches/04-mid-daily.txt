@@ -1,0 +1,82 @@
+# 중급 · 일상 / 약속 / 연락
+중|일상||요즘/*정신이 없어요.|I've been so swamped lately.|my mind is all over the place|these days
+중|일상||어제/*밤을 새웠어요.|I stayed up all night yesterday.|stayed up all night|yesterday
+중|일상||주말에/*푹 쉬었어요.|I rested well over the weekend.|rested well|on the weekend
+중|일상||*하마터면/늦을 뻔했어요.|I was almost late.|nearly, almost|almost was late
+중|일상||비 올 것 같으니까/*우산 챙겨.|It looks like rain, so take an umbrella.|pack an umbrella|since it looks like rain
+중|일상||오늘은/*집에서 쉬려고요.|I'm going to rest at home today.|planning to rest at home|today (topic)
+중|일상||*그럴 줄 알았어.|I knew it.|I knew it would be so
+중|일상||*그럴 수도 있지.|That can happen. / Fair enough.|it can be that way
+중|일상||*어쩔 수 없죠.|It can't be helped.|there's nothing to do
+중|일상||*말도 안 돼.|No way. / That makes no sense.|it doesn't make sense
+중|일상||*그게 무슨 소리야?|What are you talking about?|what kind of talk is that
+중|일상||*혹시/시간 괜찮으세요?|By any chance, do you have time?|by any chance|is your time okay
+중|일상||*아무거나/괜찮아요.|Anything is fine.|anything|it's okay
+중|일상||*생각보다/쉬웠어요.|It was easier than I thought.|than I thought|it was easy
+중|일상||*갑자기/생각났어요.|It suddenly came to mind.|suddenly|it came to mind
+중|일상||*그냥 그래요.|It's just so-so.|it's just like that
+중|일상||길이/*많이 막혀요.|The traffic is really bad.|very congested|the road (subject)
+중|일상||*요즘 뭐 하고 지내?|What have you been up to lately?|what are you doing these days
+중|일상||*하는 김에/이것도 해 줘.|While you're at it, do this too.|while you're doing it|do this too
+중|일상||*할 수 없이/집에 왔어요.|I had no choice but to come home.|having no choice|I came home
+중|일상||*솔직히 말하면/좀 별로였어.|Honestly, it wasn't that great.|to be honest|it was kind of meh
+중|일상||*혹시 모르니까/하나 더 사자.|Just in case, let's buy one more.|just in case|let's buy one more
+중|일상||날씨가/*점점 추워지네요.|The weather is getting colder.|getting colder and colder|the weather (subject)
+중|일상||*잘 어울려요.|It looks good on you.|it suits well
+중|일상||*그거 좋은 생각이다.|That's a good idea.|that's a good thought
+중|일상||*어떻게 알았어?|How did you know?|how did you know
+중|일상||*그러고 보니/오늘 월요일이네.|Come to think of it, it's Monday today.|come to think of it|it's Monday today
+중|일상||운동을/*꾸준히 하고 있어요.|I've been working out consistently.|doing it steadily|exercise (object)
+중|일상||*살이 쪘어요.|I've gained weight.|I gained weight
+중|일상||*다이어트 중이에요.|I'm on a diet.|I'm dieting
+중|일상||*입맛이 없어요.|I have no appetite.|I have no appetite
+중|일상||머리를/*잘랐어요.|I got a haircut.|I cut|hair (object)
+중|일상||*할 일이 산더미예요.|I have a mountain of things to do.|things to do are a mountain
+중|일상||*잠이 안 와요.|I can't fall asleep.|sleep doesn't come
+중|일상||*꿈을 꿨어요.|I had a dream.|I dreamed a dream
+중|일상||*눈이 부셔요.|It's too bright. (the light is dazzling)|my eyes are dazzled
+중|일상||*정신 차려!|Get a grip! / Snap out of it!|come to your senses
+중|일상||*어디 갔다 왔어?|Where have you been?|where did you go and come back
+중|일상||*마침/잘 왔어요.|You came at just the right time.|just in time|you came well
+중|일상||*이왕이면/좋은 걸로 사자.|If we're going to, let's buy a good one.|if it's going to happen anyway|let's buy a good one
+중|일상||*그렇지 않아도/연락하려고 했어.|I was just about to contact you.|I was about to anyway|was going to contact you
+중|일상||*한번 해 볼게요.|I'll give it a try.|I'll try it once
+중|일상||*잘 모르겠지만/해 볼게요.|I'm not sure, but I'll try.|I'm not sure, but|I'll try
+중|약속||*시간 맞춰서/갈게요.|I'll be there on time.|right on time|I'll go
+중|약속||10분 정도/*늦을 것 같아.|I'll probably be about 10 minutes late.|will probably be late|about 10 minutes
+중|약속||*먼저 들어가 있어.|Go on in first.|go in first and be there
+중|약속||*어디서 만날지/정하자.|Let's decide where to meet.|where to meet|let's decide
+중|약속||약속을/*내일로 미뤄도 될까요?|Can we push our plans to tomorrow?|may I postpone to tomorrow|appointment (object)
+중|약속||*갑자기 일이 생겨서/못 가요.|Something came up, so I can't make it.|something suddenly came up|can't go
+중|약속||*시간 될 때/연락 주세요.|Contact me when you have time.|when you have time|please contact me
+중|약속||*언제든지/괜찮아요.|Anytime is fine.|anytime|it's fine
+중|약속||*거의 다 와 가요.|I'm almost there.|I'm nearly arriving
+중|약속||앞에/*도착하면 전화해.|Call me when you get to the front.|call when you arrive|in front
+중|약속||*오늘 저녁에/한잔할래?|Want to grab a drink tonight?|this evening|want to have a drink
+중|약속||*다음 주쯤/밥 한번 먹자.|Let's grab a meal sometime next week.|around next week|let's eat once
+중|약속||*깜빡하고/약속을 잊어버렸어요.|I completely forgot about our plans.|absent-mindedly|forgot the appointment
+중|약속||*기다리게 해서/미안해요.|Sorry to keep you waiting.|for making you wait|I'm sorry
+중|약속||벌써/*와 있었어?|You were already here?|were you here (already arrived)|already
+중|약속||*날짜를 다시 잡자.|Let's reschedule.|let's set the date again
+중|약속||*거기서 거기야.|It's all the same. (Not much difference.)|it's from there to there
+중|약속||*장소 정해서 보내 줄게.|I'll pick a place and send it to you.|I'll decide the place and send it
+중|연락||*전화를 못 받았어요.|I missed your call.|couldn't answer the call
+중|연락||*문자 확인했어요.|I checked your text.|I checked the text
+중|연락||*나중에 다시 걸게요.|I'll call back later.|I'll dial again later
+중|연락||메시지를/*읽씹했어.|They left me on read.|read and ignored|message (object)
+중|연락||*연락이 안 돼요.|I can't reach them.|contact doesn't go through
+중|연락||*전화가 끊겼어요.|The call got cut off.|the call got disconnected
+중|연락||*바빠서 답을 못 했어.|I was busy and couldn't reply.|I was busy and couldn't answer
+중|연락||*잘 도착했다고/전해 주세요.|Please tell them I arrived safely.|that I arrived safely|please pass it on
+중|연락||*안부 전해 주세요.|Please say hi for me.|please pass on my regards
+중|연락||*단톡방에 올려 줘.|Post it in the group chat.|upload it to the group chat
+중|연락||*스팸 전화인 것 같아요.|I think it's a spam call.|seems like a spam call
+중|연락||*통화 가능할 때/알려 줘.|Let me know when you can talk.|when you can talk|let me know
+중|연락||*번호가 바뀌었어요.|My number has changed.|the number changed
+중|연락||*데이터가 다 떨어졌어요.|I've run out of data.|data ran out completely
+중|연락||*음성 메시지/남겨 주세요.|Please leave a voice message.|voice message|please leave it
+중|연락||*영상 통화할래?|Want to video call?|want to do a video call
+중|연락||*단톡방에서 나왔어.|I left the group chat.|I came out of the group chat
+중|연락||*알림을 꺼 놨어요.|I turned off notifications.|I turned off notifications (and left them)
+중|연락||*나중에 얘기하자.|Let's talk later.|let's talk later
+중|연락||*긴 얘기는/만나서 하자.|Let's save the long talk for when we meet.|long story|let's do it when we meet

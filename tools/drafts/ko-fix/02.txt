@@ -1,0 +1,138 @@
+ko257|짜증/*나.|it arises (I'm annoyed)|annoyance
+ko261|*보고 싶어요.|I miss (want to see)
+ko271|마음에/*들어요.|it enters (I like it)|in the heart
+ko272|마음에/*안 들어요.|doesn't enter (I don't like it)|in the heart
+ko276|밥/*먹자.|let's eat|rice, a meal
+ko277|불/좀/*꺼 줘.|turn it off for me|light;please, a little
+ko278|문/좀/*닫아 줘.|close it for me|door;please, a little
+ko281|빨래/좀/*해야겠다.|I'd better do|laundry;a little
+ko282|TV/*켜 줘.|turn it on for me|TV
+ko284|물/좀/*갖다줄래?|will you bring it|water;please, a little
+ko287|늦잠/*잤어.|slept|late sleep
+ko288|*씻고 올게.|I'll wash up and come back
+ko289|배달/*시킬까?|shall we order|delivery
+ko291|냉장고에/*있어.|it's there|in the fridge
+ko292|같이/*가자.|let's go|together
+ko293|조용히/*해.|do (be)|quietly
+ko294|빨리/*와.|come|quickly
+ko295|숙제/*했어?|did you do|homework
+ko296|시험/*언제야?|when is it|exam
+ko297|수업/*끝났어요.|it ended|class
+ko298|질문/*있어요.|I have|question
+ko299|잘/*모르겠어요.|I don't know|well
+ko300|다시/*설명해 주세요.|please explain|again
+ko301|몇 쪽/*이에요?|is it|what page
+ko302|펜/좀/*빌려줄래?|will you lend me|pen;please, a little
+ko303|같이/*공부하자.|let's study|together
+ko304|시험/*잘 봐!|do well (on it)|exam
+ko305|시험/*망했어.|I bombed it|exam
+ko307|출석/*부를게요.|I'll call|attendance
+ko309|점심/같이/*먹을래?|want to eat|lunch;together
+ko313|회의/*있어요.|there is|meeting
+ko314|점심/*먹으러 가요.|let's go to eat|lunch
+ko315|*확인해 볼게요.|I'll check
+ko316|메일/*보냈어요.|I sent|email
+ko317|잠깐/시간/*돼요?|is it available|for a moment;time
+ko318|내일/*휴가예요.|it's my day off|tomorrow
+ko319|먼저/*퇴근하겠습니다.|I'll leave work|first
+ko320|커피/*한잔할래요?|want to have a cup|coffee
+ko330|*그럴 줄 알았어.|I knew it would be so
+ko331|*그럴 수도 있지.|that can happen
+ko332|*어쩔 수 없죠.|it can't be helped
+ko333|*말도 안 돼.|it makes no sense
+ko334|그게/*무슨 소리야?|what are you talking about|that (subject)
+ko335|혹시/시간/*괜찮으세요?|are you okay (free)|by any chance;time
+ko336|아무거나/*괜찮아요.|it's okay|anything
+ko337|생각보다/*쉬웠어요.|it was easy|than I thought
+ko338|갑자기/*생각났어요.|it came to mind|suddenly
+ko339|그냥/*그래요.|it's so-so|just
+ko341|요즘/뭐 하고/*지내?|are you getting along|these days;doing what
+ko347|잘/*어울려요.|it suits you|well
+ko348|그거/좋은 생각/*이다.|it is|that;a good idea
+ko349|어떻게/*알았어?|did you know|how
+ko352|살이/*쪘어요.|I gained (weight)|flesh (subject)
+ko353|다이어트/*중이에요.|I'm in the middle of|diet
+ko354|입맛이/*없어요.|there's none|appetite (subject)
+ko356|할 일이/*산더미예요.|is a mountain|things to do (subject)
+ko357|잠이/*안 와요.|doesn't come|sleep (subject)
+ko358|꿈을/*꿨어요.|I dreamed|dream (object)
+ko359|눈이/*부셔요.|it's dazzling|eyes (subject)
+ko360|정신/*차려!|get a hold of|your mind, senses
+ko361|어디/*갔다 왔어?|did you go and come back|where
+ko365|한번/*해 볼게요.|I'll try doing it|once
+ko366|잘 모르겠지만/*해 볼게요.|I'll give it a try|I'm not sure, but
+ko367|시간 맞춰서/*갈게요.|I'll go|right on time
+ko369|먼저/*들어가 있어.|go in and wait|first
+ko370|어디서 만날지/*정하자.|let's decide|where to meet
+ko372|갑자기 일이 생겨서/*못 가요.|I can't go|since something suddenly came up
+ko373|시간 될 때/*연락 주세요.|please contact me|when you have time
+ko374|언제든지/*괜찮아요.|it's fine|anytime
+ko375|거의 다/*와 가요.|I'm getting there|almost all the way
+ko377|오늘 저녁에/*한잔할래?|want to have a drink|this evening
+ko378|다음 주쯤/밥 한번/*먹자.|let's eat|around next week;a meal once
+ko379|깜빡하고/약속을/*잊어버렸어요.|I forgot (completely)|absent-mindedly;appointment (object)
+ko380|기다리게 해서/*미안해요.|I'm sorry|for making you wait
+ko382|날짜를/다시/*잡자.|let's set|date (object);again
+ko383|거기서/*거기야.|it's (the same) there|from there
+ko384|장소/정해서/*보내 줄게.|I'll send it to you|place;deciding
+ko385|전화를/*못 받았어요.|I couldn't answer|call (object)
+ko386|문자/*확인했어요.|I checked|text message
+ko387|나중에/다시/*걸게요.|I'll call|later;again
+ko389|연락이/*안 돼요.|doesn't go through|contact (subject)
+ko390|전화가/*끊겼어요.|got cut off|call (subject)
+ko391|바빠서/답을/*못 했어.|I couldn't do|since I was busy;reply (object)
+ko392|잘 도착했다고/*전해 주세요.|please pass it on|that I arrived safely
+ko393|안부/*전해 주세요.|please pass on|regards
+ko394|단톡방에/*올려 줘.|post it for me|in the group chat
+ko395|스팸 전화/*인 것 같아요.|it seems to be|spam call
+ko396|통화 가능할 때/*알려 줘.|let me know|when you can talk
+ko397|번호가/*바뀌었어요.|it changed|number (subject)
+ko398|데이터가/*다 떨어졌어요.|it ran out completely|data (subject)
+ko399|음성 메시지/*남겨 주세요.|please leave|voice message
+ko400|영상/*통화할래?|want to call|video
+ko401|단톡방에서/*나왔어.|I left|from the group chat
+ko402|알림을/*꺼 놨어요.|I turned it off|notifications (object)
+ko403|나중에/*얘기하자.|let's talk|later
+ko404|긴 얘기는/만나서/*하자.|let's do it|the long story (topic);meeting in person
+ko405|여기/자주/*와요?|do you come|here;often
+ko406|예약 안 했는데/자리/*있어요?|is there|didn't reserve, but;table
+ko407|얼마나/*기다려야 돼요?|do we have to wait|how long
+ko408|덜 달게/*해 주세요.|please make it|less sweet
+ko410|디카페인으로/*바꿀 수 있어요?|can I change it|to decaf
+ko411|주문한 게/아직/*안 나왔어요.|hasn't come out|what I ordered;yet
+ko412|이거/제가 시킨 거/*아닌데요.|it isn't|this;what I ordered
+ko413|따로/*계산할게요.|we'll pay|separately
+ko415|각자/*내자.|let's pay|each
+ko416|고기가/*덜 익었어요.|is undercooked|the meat (subject)
+ko417|리필/*되나요?|is it possible|refill
+ko418|입에/*잘 맞아요.|suits well|to my mouth
+ko420|이 집/*맛집이네.|is a great restaurant|this place
+ko421|웨이팅이/너무/*길어요.|is long|the wait (subject);too
+ko422|배달이/*늦어지고 있어요.|is getting delayed|delivery (subject)
+ko423|음식이/*식었어요.|got cold|food (subject)
+ko424|알레르기가/*있어서요.|because I have|allergy (subject)
+ko426|커피 한잔하면서/*얘기해요.|let's talk|over a cup of coffee
+ko427|한 치수 큰 걸로/*주세요.|please give me|one size bigger
+ko428|생각보다/*잘 어울리네요.|it suits you well|than I thought
+ko429|좀 더/*둘러보고 올게요.|I'll look around and come back|a little more
+ko430|할부/*돼요?|is it possible|installment payment
+ko431|일시불로/*할게요.|I'll do it|in a lump sum
+ko432|포인트/*적립해 주세요.|please save (add)|points
+ko433|이거/다른 매장에도/*있어요?|do they have it|this;in other stores too
+ko434|온라인이/더/*싸요.|is cheap|online (subject);more
+ko435|*충동구매 했어요.|I made an impulse buy
+ko436|가성비가/*좋아요.|is good|value for money (subject)
+ko437|택배가/아직/*안 왔어요.|hasn't come|the parcel (subject);yet
+ko438|*반품하고 싶은데요.|I'd like to return it
+ko439|장바구니에/*담아 놨어.|I put it in (and left it)|in the cart
+ko440|사이즈가 안 맞아서/*교환하려고요.|I'm going to exchange|since the size doesn't fit
+ko441|원 플러스 원/*이에요.|it is|buy one get one
+ko442|유통기한이/*지났어요.|has passed|expiration date (subject)
+ko443|계산이/*잘못된 것 같아요.|seems wrong|the bill (subject)
+ko444|마음에/*쏙 들어요.|I really like it|in the heart
+ko445|창가 자리로/*주세요.|please give me|a window seat
+ko446|비행기를/*놓쳤어요.|I missed|the plane (object)
+ko447|짐이/*안 나왔어요.|didn't come out|luggage (subject)
+ko448|몇 시까지/*체크인해야 돼요?|do I have to check in|until what time
+ko449|여기서/사진 찍기/*좋아요.|it's good|here;for taking photos
+ko450|현지인처럼/*여행하고 싶어요.|I want to travel|like a local

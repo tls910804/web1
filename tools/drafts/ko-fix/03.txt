@@ -1,0 +1,152 @@
+ko451|관광객이/너무/*많네요.|there are many|tourists (subject);too
+ko452|시차 때문에/너무/*피곤해요.|I'm tired|because of jet lag;so
+ko453|길/좀/*물어봐도 될까요?|may I ask|the way;please, a little
+ko454|이 근처에/맛집/*있어요?|is there|near here;good restaurant
+ko455|막차가/몇 시/*예요?|is it|last train (subject);what time
+ko456|교통카드/*충전하려고요.|I'm going to top up|transit card
+ko457|렌터카를/*빌렸어요.|I rented|rental car (object)
+ko458|일정이/*바뀌었어요.|changed|schedule (subject)
+ko459|하룻밤 더/*묵을 수 있을까요?|could I stay|one more night
+ko460|조식/*포함이에요?|is it included|breakfast
+ko461|방을/*바꿀 수 있을까요?|could I change|room (object)
+ko462|에어컨이/*안 돼요.|doesn't work|air conditioner (subject)
+ko463|당일치기로/*다녀왔어요.|I went and came back|as a day trip
+ko464|여권을/*두고 왔어요.|I left it behind|passport (object)
+ko465|진료/*예약하고 싶어요.|I want to book|consultation
+ko466|어디가/*불편하세요?|is uncomfortable|where (subject)
+ko467|목이/*붓고 아파요.|is swollen and sore|throat (subject)
+ko468|콧물이/계속/*나요.|comes out|runny nose (subject);continuously
+ko470|발목을/*삐었어요.|I sprained|ankle (object)
+ko471|처방전/*주세요.|please give me|prescription
+ko472|하루에 세 번/*드세요.|please take|three times a day
+ko473|식후 30분에/*드세요.|please take|30 minutes after meals
+ko474|몸살 기운이/*있어요.|I have|signs of body aches
+ko475|잠을/잘/*못 자요.|I can't sleep|sleep (object);well
+ko476|소화가/*안 돼요.|doesn't work|digestion (subject)
+ko477|알레르기 약/*있어요?|do you have|allergy medicine
+ko478|검사 결과는/언제/*나와요?|does it come out|test results (topic);when
+ko479|푹 자고 나니까/좀/*나아졌어요.|I got better|after sleeping soundly;a little
+ko480|회의가/*길어지고 있어요.|is getting longer|meeting (subject)
+ko481|오늘까지/*보내 드릴게요.|I'll send it to you|by today
+ko482|확인/*부탁드립니다.|I ask (politely)|checking
+ko483|검토해 보고/*연락드릴게요.|I'll contact you|after reviewing
+ko484|첨부 파일/*확인해 주세요.|please check|attached file
+ko485|마감이/*내일이에요.|is tomorrow|deadline (subject)
+ko486|일정을/조금/*조정할 수 있을까요?|could we adjust|schedule (object);a little
+ko487|다음 회의 때/다시/*얘기해요.|let's talk|at the next meeting;again
+ko488|아직/*진행 중이에요.|it's in progress|still
+ko489|거의 다/*끝났어요.|it's finished|almost all
+ko490|오늘/*재택근무해요.|I work from home|today
+ko491|연차/*쓰려고요.|I'm going to use|annual leave
+ko492|반차/*냈어요.|I took (put in)|half day off
+ko493|출장/*가요.|I'm going|business trip
+ko494|회식이/*있어요.|there is|company dinner (subject)
+ko495|보고서 쓰느라/*바빠요.|I'm busy|because of writing a report
+ko496|*실수한 것 같아요.|I think I made a mistake
+ko497|제가/*맡을게요.|I'll take charge|I (humble)
+ko499|이 부분은/잘/*모르겠어요.|I don't know|this part (topic);well
+ko500|의견/*있으신가요?|do you have (honorific)|opinion
+ko501|좋은 의견/*감사합니다.|thank you|good opinion
+ko502|지금/자리에/*안 계세요.|isn't here (honorific)|now;at the seat
+ko503|메모/*남겨 드릴게요.|I'll leave it for you|memo
+ko504|점심시간이라서/나중에/*연락드릴게요.|I'll contact you|since it's lunchtime;later
+ko505|월요일 오전까지/*부탁드려요.|I ask of you|by Monday morning
+ko506|이직/*준비 중이에요.|I'm preparing|job change
+ko507|면접/*봤어요.|I took (had)|interview
+ko509|신입이라서/아직 잘/*몰라요.|I don't know|since I'm new;still well
+ko510|상사한테/*혼났어요.|I got scolded|by the boss
+ko511|일이/손에/*안 잡혀요.|doesn't get grabbed (can't focus)|work (subject);in the hand
+ko513|주말에도/*일했어요.|I worked|on the weekend too
+ko514|번아웃이/*온 것 같아요.|seems to have come|burnout (subject)
+ko515|회의록/*공유할게요.|I'll share|meeting minutes
+ko516|화면/*공유해 주시겠어요?|would you share|screen
+ko517|소리가/*끊겨요.|cuts out|sound (subject)
+ko518|마이크가/*꺼져 있어요.|is turned off|mic (subject)
+ko519|이번 분기 목표를/*달성했어요.|we achieved|this quarter's goal (object)
+ko520|과제 마감이/*언제예요?|when is it|assignment deadline (subject)
+ko521|발표/*준비해야 돼요.|I have to prepare|presentation
+ko522|조별 과제가/*힘들어요.|is hard|group assignment (subject)
+ko523|밤새/*공부했어요.|I studied|all night
+ko525|성적이/*올랐어요.|went up|grades (subject)
+ko526|수강 신청/*망했어.|is ruined|course registration
+ko527|이 수업/*들어 봤어요?|have you taken|this class
+ko528|도서관에서/*만나자.|let's meet|at the library
+ko529|노트/좀/*빌려줄 수 있어?|can you lend me|notes;please, a little
+ko530|장학금을/*받았어요.|I received|scholarship (object)
+ko531|졸업하면/뭐/*할 거야?|will you do|after graduating;what
+ko532|교환학생으로/*왔어요.|I came|as an exchange student
+ko533|기숙사에/*살아요.|I live|in the dorm
+ko534|동아리에/*들었어요.|I joined|club (to)
+ko535|선배가/밥/*사 줬어요.|bought for me|my senior (subject);a meal
+ko536|한국어 능력 시험을/*준비하고 있어요.|I'm preparing|the TOPIK exam (object)
+ko537|발음이/*어려워요.|is difficult|pronunciation (subject)
+ko538|문법이/*헷갈려요.|is confusing|grammar (subject)
+ko539|단어를/*외워야 돼요.|I have to memorize|words (object)
+ko540|존댓말이/아직/*어색해요.|is awkward|honorific speech (subject);still
+ko541|실력이/많이/*늘었네요!|has improved|skill (subject);a lot
+ko542|*틀려도 괜찮아요.|it's okay to be wrong
+ko543|연습하면/*늘어요.|it improves|if you practice
+ko545|그게/*마음에 걸려요.|weighs on my mind|that (subject)
+ko546|신경/*쓰지 마세요.|don't use (mind)|nerves, attention
+ko547|기분이/좀/*풀렸어요.|loosened up|mood (subject);a little
+ko548|스트레스/*받아요.|I receive (get)|stress
+ko549|*답답해 죽겠어.|I'm so frustrated I could die
+ko550|어이가/*없네.|there's none (absurd)|sense, reason (subject)
+ko557|눈물이/*날 것 같아요.|seems about to come out|tears (subject)
+ko558|마음이/*편해졌어요.|became comfortable|heart (subject)
+ko559|기가 막혀서/말이/*안 나와.|doesn't come out|so stunned;words (subject)
+ko560|한숨만/*나와요.|only comes out|sighs only
+ko561|*웃겨 죽겠어.|so funny I could die
+ko562|신경이/*쓰여요.|is bothered (it bugs me)|nerves (subject)
+ko563|자신/*있어요.|I have|confidence
+ko564|자신이/*없어요.|there's none|confidence (subject)
+ko565|용기를/*냈어요.|I mustered|courage (object)
+ko566|*포기하지 마.|don't give up
+ko567|네/*편이야.|is (your) side|your
+ko568|너무/*무리하지 마.|don't overdo it|too much
+ko569|마음/단단히/*먹어.|resolve (eat)|heart, mind;firmly
+ko570|첫눈에/*반했어.|I fell for (you)|at first sight
+ko571|썸/*타는 중이야.|in the middle of having|"some" (talking stage)
+ko575|소개팅/*했어요.|I did (went on)|blind date
+ko576|연락/*기다리고 있어.|I'm waiting|contact
+ko577|*밀당하지 마.|don't play push and pull
+ko578|우리/*사귀는 거야?|are (we) dating|we
+ko579|너/*생각났어.|came to mind|you
+ko580|같이 있으면/*편해.|it's comfortable|when we're together
+ko581|나만/*그런 거야?|is it that way|only me
+ko582|질투/*나.|arises (I'm jealous)|jealousy
+ko583|기념일/*챙겨야지.|I should take care of|anniversary
+ko584|데이트/*신청했어요.|I asked (applied)|date
+ko585|눈에/*콩깍지가 씌었네.|bean pods covered (smitten)|on the eyes
+ko586|장거리 연애/*중이에요.|in the middle of|long-distance relationship
+ko587|완전/*꿀잼!|super fun|totally
+ko592|TMI인데/나 어제/*라면 먹었어.|ate ramen|it's TMI but;I yesterday
+ko596|아싸라서/*집에 있어.|I'm at home|since I'm an outsider
+ko598|멘붕/*왔어.|came|mental breakdown
+ko600|별다줄/*하지 마.|don't do|abbreviating everything
+ko601|내/*최애야.|is my favorite|my
+ko602|*덕질하고 있어.|I'm doing fan activities
+ko603|플렉스/*했어.|I did|flex (splurge)
+ko604|오히려/*좋아.|it's good|rather
+ko608|*꾸안꾸/스타일이네.|effortless chic|it's a style
+ko609|갓생/*살자.|let's live|god-life (productive life)
+ko610|이번 주말에/*대청소하자.|let's do a big clean|this weekend
+ko611|분리수거/좀/*해 줘.|do it for me|recycling;please, a little
+ko612|택배/*왔어.|came|parcel
+ko613|층간소음 때문에/잠을/*못 잤어.|couldn't sleep|because of floor noise;sleep (object)
+ko614|월세가/또/*올랐어.|went up|monthly rent (subject);again
+ko615|이사/*가려고요.|I'm going to go|moving
+ko616|집들이/*해요.|we're having|housewarming
+ko617|밥/*해 놨어.|I made it (and left it)|meal
+ko618|먼저/*씻어.|wash up|first
+ko619|보일러/좀/*켜 줘.|turn it on for me|boiler, heating;please, a little
+ko620|고양이가/또/*사고 쳤어.|caused trouble|the cat (subject);again
+ko621|늦게/*들어올 거야.|I'll come in|late
+ko622|문/*잠갔지?|you locked it, right|door
+ko623|장 보러/*가자.|let's go|to buy groceries
+ko624|엄마가 해 준 밥이/제일/*맛있어.|is delicious|food mom made (subject);the most
+ko625|부모님 댁에/*가요.|I'm going|to my parents' house
+ko626|동생이랑/*싸웠어.|I fought|with my younger sibling
+ko627|조카가/너무/*귀여워요.|is cute|niece/nephew (subject);so
+ko628|혼자 사는 게/*편해요.|is comfortable|living alone (subject)
+ko629|요리하는 거/*좋아해요.|I like|cooking (thing)

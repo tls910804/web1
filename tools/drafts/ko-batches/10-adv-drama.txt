@@ -1,0 +1,58 @@
+# 고급 · 연애 / 드라마·영화 / 관용구 / 여행
+고|감정|연애|*좋아한다고 말하고 싶은데/용기가 안 나요.|I want to tell them I like them, but I can't find the courage.|I want to say I like (you), but|courage doesn't come
+고|감정|연애|*우리 이제 그만 만나는 게/서로를 위해 좋을 것 같아.|I think it's better for both of us if we stop seeing each other.|us stopping seeing each other now|seems good for each other
+고|감정|연애|*연락이 뜸해진 걸 보니/마음이 식은 것 같아요.|Seeing how rarely they text now, I think their feelings have cooled.|seeing that contact became rare|it seems feelings cooled
+고|감정|연애|*처음 만난 날이/아직도 어제 일처럼 생생해.|The day we first met is still as vivid as yesterday.|the day we first met|is still vivid like yesterday
+고|감정|연애|*네가 웃으면/나도 모르게 따라 웃게 돼.|When you smile, I can't help smiling too.|when you smile|I end up smiling without knowing
+고|감정|연애|*밀당은 그만하고/솔직하게 말해 줘.|Stop playing games and just be honest with me.|stop the push and pull|tell me honestly
+고|감정|연애|*헤어지고 나서야/소중함을 알게 됐어요.|I only realized how precious it was after we broke up.|only after breaking up|I came to know the preciousness
+고|감정|연애|*연애는 타이밍이라는 말이/이제야 이해가 돼요.|Now I finally understand why they say love is all about timing.|the saying that love is timing|now I finally understand
+고|감정|연애|*친구 이상으로/생각해 본 적 없어?|Have you never thought of me as more than a friend?|beyond a friend|have you never thought
+고|감정|연애|*기다리게 해서 미안해,/이제 다시는 안 그럴게.|Sorry I kept you waiting; I won't do it again.|sorry for making you wait|I won't do that again
+고|감정|연애|*결혼을 전제로/만나고 싶어요.|I want to date you with marriage in mind.|on the premise of marriage|I want to date
+고|감정|연애|*부모님께 인사드리러/가기로 했어요.|We decided to go meet the parents.|to go greet the parents|we decided to go
+고|감정|연애|*첫사랑은 이루어지지 않는다는데/우리는 다르겠지?|They say first loves don't work out, but we'll be different, right?|they say first love doesn't come true|we'll be different, right
+고|감정|드라마·영화|*내가 너를 어떻게 잊어,/한 번도 잊은 적 없어.|How could I forget you? I never did, not even once.|how could I forget you|I've never forgotten even once
+고|감정|드라마·영화|*지금 나랑 장난해?|Are you kidding me right now?|are you playing with me now
+고|감정|드라마·영화|*이 순간을/평생 기억할 거야.|I'll remember this moment for the rest of my life.|this moment|I'll remember forever
+고|감정|드라마·영화|*가지 마,/제발 내 옆에 있어 줘.|Don't go—please stay by my side.|don't go|please stay beside me
+고|일상|드라마·영화|*지금까지 속여 온 거야?|Have you been deceiving me all this time?|have you been deceiving all this time
+고|감정|드라마·영화|*너 하나만 바라보고/여기까지 왔어.|I came all this way looking only at you.|looking only at you|I came this far
+고|감정|드라마·영화|*다시는 내 눈앞에/나타나지 마.|Don't ever show your face in front of me again.|never again before my eyes|don't appear
+고|일상|드라마·영화|*내가 책임질게,/넌 아무 걱정하지 마.|I'll take responsibility—don't you worry about a thing.|I'll take responsibility|don't worry about anything
+고|감정|드라마·영화|*그동안 고마웠어,/진심이야.|Thank you for everything, I mean it.|thank you for all this time|I mean it
+고|일상|드라마·영화|*이건 시작에 불과해.|This is only the beginning.|this is merely the beginning
+고|일상|드라마·영화|*무슨 일이 있어도/너를 지킬 거야.|I'll protect you no matter what happens.|no matter what happens|I'll protect you
+고|감정|드라마·영화|*오늘따라/네가 왜 이렇게 예뻐 보이지?|Why do you look so pretty today of all days?|today of all days|why do you look so pretty
+고|일상|드라마·영화|*시간을 되돌릴 수만 있다면/뭐든 할 텐데.|If only I could turn back time, I'd do anything.|if only I could turn back time|I'd do anything
+고|일상|드라마·영화|*아직 끝난 거 아니야./두고 봐.|It's not over yet. Just wait and see.|it's not over yet|watch and see
+고|일상||*소 잃고 외양간 고친다더니/이제 와서 보안을 강화하네.|Closing the barn door after the horse has bolted—only now they're tightening security.|they say you fix the barn after losing the cow|now they're strengthening security
+고|일상||*가는 말이 고와야/오는 말이 곱다잖아요.|Treat others kindly and they'll treat you kindly.|words going out must be kind|for words coming back to be kind
+고|일상||*발 없는 말이 천 리 간다고/벌써 소문이 다 났어요.|Rumors travel fast—everyone's already heard.|a word without feet travels a thousand li|the rumor already spread
+고|일상||*원숭이도 나무에서 떨어질 때가 있다잖아요.|Even monkeys fall from trees sometimes.|even monkeys have times they fall from trees
+고|일상||*티끌 모아 태산이라고/조금씩 저축하고 있어요.|Every little bit adds up, so I'm saving little by little.|gathering dust makes a mountain|I'm saving bit by bit
+고|일상||*금강산도 식후경이라고/일단 밥부터 먹읍시다.|Even Mount Geumgang is best seen after a meal—let's eat first.|even Geumgang mountain is seen after eating|let's eat first
+고|일상||*고생 끝에 낙이 온다고/조금만 더 버텨 봐요.|After hardship comes happiness, so hang in there a bit longer.|joy comes after hardship|try to endure a bit more
+고|일상||*호랑이도 제 말 하면 온다더니/마침 오셨네요.|Speak of the devil—here you are.|they say even a tiger comes when spoken of|you just arrived
+고|일상||*빈 수레가 요란하다더니/말만 많고 한 게 없네.|Empty carts rattle loudest—all talk and nothing done.|they say an empty cart is noisy|lots of talk but nothing done
+고|일상||*세 살 버릇 여든까지 간다고/습관이 무서워요.|Habits formed at three last until eighty—habits are scary.|a habit at age three lasts till eighty|habits are scary
+고|일상||*우물 안 개구리였다는 걸/외국에 나가 보고 알았어요.|Going abroad, I realized I'd been a frog in a well.|that I was a frog in a well|I learned after going abroad
+고|일상||*쇠뿔도 단김에 빼랬다고/오늘 바로 시작하자.|Strike while the iron is hot—let's start today.|they say pull the ox horn while it's hot|let's start right today
+고|일상||*배보다 배꼽이 더 크다더니/배송비가 더 비싸요.|The tail wags the dog—the shipping costs more than the item.|they say the belly button is bigger than the belly|the shipping fee is more expensive
+고|일상||*낮말은 새가 듣고/밤말은 쥐가 듣는다잖아.|Walls have ears, you know.|daytime words are heard by birds|night words are heard by mice
+고|일상||*사공이 많으면/배가 산으로 간다더니 딱 그 꼴이네.|Too many cooks spoil the broth—that's exactly what happened.|if there are many boatmen|the boat goes up the mountain—exactly that
+고|일상||*개구리 올챙이 적 생각 못 한다더니/자기도 신입이었으면서.|They forget they were once tadpoles—he was a newbie once too.|a frog can't remember being a tadpole|even though he was a newbie himself
+고|일상||*누워서 떡 먹기라더니/생각보다 훨씬 쉬웠어요.|It was a piece of cake—much easier than I thought.|they say it's eating rice cake lying down|much easier than expected
+고|일상||*하늘이 무너져도/솟아날 구멍은 있다고 했어요.|Even if the sky falls, there's always a way out.|even if the sky collapses|there's a hole to rise out of
+고|여행||*비행기가 지연되는 바람에/환승을 놓쳤어요.|My flight was delayed, so I missed my connection.|because the plane was delayed|I missed the transfer
+고|여행||*숙소 사진이랑 실제가/너무 달라서 당황했어요.|The lodging looked so different from the photos that I was taken aback.|the lodging photos and reality|so different I was flustered
+고|여행||*현지 음식을 먹어 봐야/여행 온 기분이 나죠.|You have to try the local food to feel like you're traveling.|only if you try local food|you feel like you're traveling
+고|여행||*관광지보다는/동네 골목을 걷는 게 더 좋아요.|I prefer walking local alleys to tourist spots.|rather than tourist spots|I like walking neighborhood alleys more
+고|여행||*짐을 너무 많이 싸 와서/후회하고 있어요.|I'm regretting packing way too much.|since I packed too much|I'm regretting
+고|여행||*여행 내내 비가 와서/아쉬웠지만 그래도 좋았어요.|It rained the whole trip, which was a shame, but it was still great.|since it rained throughout the trip|it was a pity but still good
+고|여행||*다음에 또 오면/그때는 꼭 바다를 보러 가고 싶어요.|If I come again, I definitely want to go see the sea.|if I come again next time|I want to go see the sea then
+고|여행||*길을 헤매다가/우연히 멋진 카페를 발견했어요.|While wandering lost, I stumbled upon a lovely café.|while wandering the streets|I happened to find a great café
+고|카페·식당||*줄 서서 먹을 만큼/맛있는지는 잘 모르겠어요.|I'm not sure it's good enough to wait in line for.|as much as to line up and eat|I'm not sure if it's tasty
+고|카페·식당||*분위기는 좋은데/가격이 좀 사악하네요.|The vibe is nice, but the prices are kind of brutal.|the atmosphere is good, but|the price is a bit wicked
+고|카페·식당||*여기 처음 왔는데/뭐가 제일 잘 나가요?|It's my first time here—what's most popular?|it's my first time here, but|what sells best
+고|카페·식당||*음식이 너무 늦게 나와서/결국 취소했어요.|The food took so long that we ended up canceling.|since the food came out too late|we ended up canceling

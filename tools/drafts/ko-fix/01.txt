@@ -1,0 +1,127 @@
+ko66|잘/*잤어요?|slept|well
+ko74|잘/*먹겠습니다.|will eat|well
+ko75|잘/*먹었습니다.|ate|well
+ko78|천천히/*말해 주세요.|please speak|slowly
+ko80|무슨/*뜻이에요?|is it the meaning|what kind of
+ko87|*축하해요!|congratulations
+ko88|생일/*축하해요!|congratulations|birthday
+ko95|지금/몇 시/*예요?|is it|now;what time
+ko96|오늘/무슨 요일/*이에요?|is it|today;what day
+ko97|비가/*와요.|is coming (falling)|rain (subject)
+ko101|집에/*가고 싶어요.|want to go|home (to)
+ko102|일찍/*잘게요.|I'll sleep|early
+ko103|푹/*쉬세요.|please rest|deeply, soundly
+ko104|잘/*자요.|sleep|well
+ko105|좋은/*아침이에요.|it's morning|good
+ko106|주말/잘/*보내세요.|please spend|weekend;well
+ko107|좋은 하루/*보내세요.|please spend|a good day
+ko108|*오랜만이에요.|it's been a long time
+ko109|요즘/어떻게/*지내요?|are you getting along|these days;how
+ko110|덕분에/잘/*지내요.|I'm getting along|thanks to you;well
+ko111|처음/*뵙겠습니다.|I humbly meet (you)|for the first time
+ko112|만나서/*반가워요.|I'm glad|because we met
+ko114|어디에서/*왔어요?|did you come|from where
+ko115|한국어/*공부하고 있어요.|am studying|Korean
+ko117|사진/*찍어도 돼요?|is it okay to take|photo
+ko120|큰일/*났다!|happened|big trouble
+ko123|충전기/*있어요?|do you have|charger
+ko125|와이파이 비밀번호가/*뭐예요?|what is it|the Wi-Fi password (subject)
+ko126|언제/*만날까요?|shall we meet|when
+ko127|어디서/*볼까?|shall we see each other|where
+ko128|내일/시간/*있어요?|do you have|tomorrow;time
+ko129|이따가/*봐요.|see you|a bit later
+ko130|내일/*봐요.|see you|tomorrow
+ko131|다음에/*봐요.|see you|next time
+ko134|먼저/*갈게요.|I'll go|first
+ko135|*기다릴게요.|I'll wait
+ko136|*어디쯤이에요?|about where are you
+ko138|좋아요,/그때/*봐요.|see you|okay;then
+ko139|약속/*있어요.|I have|appointment, plans
+ko141|다음에/*해요.|let's do it|next time
+ko142|몇 시에/*만나요?|do we meet|at what time
+ko143|7시/*어때요?|how about|7 o'clock
+ko144|*전화해 줘.|call me
+ko145|문자/*보낼게요.|I'll send|text message
+ko146|번호/좀/*알려 주세요.|please let me know|number;please, a little
+ko147|나중에/다시/*전화할게요.|I'll call|later;again
+ko148|카톡/*해.|do (send)|KakaoTalk
+ko149|*연락할게요.|I'll contact you
+ko150|답장이/*없어요.|there isn't|reply (subject)
+ko154|지금/통화/*괜찮아요?|is it okay|now;phone call
+ko155|잠깐/*끊을게요.|I'll hang up|for a moment
+ko156|다시/*연락 줘.|contact me|again
+ko157|메뉴판/*주세요.|please give me|menu
+ko158|이거/*주세요.|please give me|this
+ko162|*계산해 주세요.|please pay / check please
+ko163|카드/*돼요?|does it work|card
+ko164|*포장해 주세요.|please pack it to go
+ko165|여기서/*먹을게요.|I'll eat|here
+ko166|두 명/*이에요.|it is|two people
+ko167|자리/*있어요?|is there|seat, table
+ko170|안 맵게/*해 주세요.|please make it|not spicy
+ko171|*추천해 주세요.|please recommend
+ko172|뭐가/제일/*맛있어요?|is delicious|what (subject);the most
+ko174|따뜻한 걸로/*주세요.|please give me|a warm one
+ko176|사이즈 업/*해 주세요.|please do|size up
+ko177|빨대/*주세요.|please give me|straw
+ko178|진동벨/*드릴게요.|I'll give you|buzzer
+ko179|*주문할게요.|I'll order
+ko180|잠깐만/*기다려 주세요.|please wait|just a moment
+ko181|남은 거/*싸 주세요.|please wrap it|the leftovers
+ko182|고기/*빼 주세요.|please leave out|meat
+ko183|반찬/더/*주세요.|please give me|side dishes;more
+ko185|한 그릇/*더!|more|one bowl
+ko186|그냥/*보는 거예요.|I'm just looking|just
+ko187|*입어 봐도 돼요?|may I try it on
+ko188|더 큰 거/*있어요?|do you have|a bigger one
+ko189|다른 색/*있어요?|do you have|another color
+ko190|좀/*깎아 주세요.|please lower the price|a little
+ko191|너무/*비싸요.|it's expensive|too
+ko192|이걸로/*할게요.|I'll take (do)|with this one
+ko193|봉투/*필요해요?|do you need|bag
+ko194|영수증/*주세요.|please give me|receipt
+ko196|*교환하고 싶어요.|I want to exchange
+ko198|하나 사면/하나/*더 줘요.|give one more|if you buy one;one
+ko199|탈의실/*어디예요?|where is it|fitting room
+ko200|딱/*맞아요.|it fits|exactly
+ko202|선물 포장/*돼요?|is it possible|gift wrapping
+ko203|현금으로/*할게요.|I'll do it|with cash
+ko205|지하철역이/*어디예요?|where is it|subway station (subject)
+ko206|여기서/*멀어요?|is it far|from here
+ko207|걸어서/*갈 수 있어요?|can I go|on foot
+ko208|이 버스/시청/*가요?|does it go|this bus;City Hall
+ko209|여기/*세워 주세요.|please stop|here
+ko210|공항으로/*가 주세요.|please go|to the airport
+ko211|지도/좀/*보여 주세요.|please show me|map;please, a little
+ko212|표/두 장/*주세요.|please give me|ticket;two (sheets)
+ko213|*체크인하려고요.|I'm going to check in
+ko214|체크아웃은/몇 시/*예요?|is it|checkout (topic);what time
+ko215|*예약했어요.|I made a reservation
+ko216|짐/*맡길 수 있어요?|can I leave (in care)|luggage
+ko217|방이/너무/*추워요.|it's cold|the room (subject);too
+ko218|수건/더/*주세요.|please give me|towels;more
+ko219|사진/좀/*찍어 주세요.|please take|photo;please, a little
+ko220|여기/처음/*와 봐요.|I've come (for the experience)|here;for the first time
+ko221|경치가/정말/*좋아요.|it's nice|scenery (subject);really
+ko222|여권/*보여 주세요.|please show|passport
+ko223|관광/*왔어요.|I came|sightseeing
+ko224|환전하고/*싶어요.|I want to|exchange money
+ko225|택시/*불러 주세요.|please call|taxi
+ko226|다음 역이/*어디예요?|where is it|next station (subject)
+ko227|*갈아타야 돼요?|do I have to transfer
+ko228|몇 정거장/*가요?|does it go|how many stops
+ko229|*내려야 돼요.|I have to get off
+ko230|표를/*잃어버렸어요.|I lost (it)|ticket (object)
+ko231|기차가/*늦어요.|is late|train (subject)
+ko232|근처에/편의점/*있어요?|is there|nearby;convenience store
+ko233|한국은/*처음이에요.|it's my first time|Korea (topic)
+ko234|머리가/*아파요.|it hurts|head (subject)
+ko235|배가/*아파요.|it hurts|stomach (subject)
+ko236|감기에/*걸렸어요.|I caught|a cold (to)
+ko237|열이/*나요.|it comes out (I have)|fever (subject)
+ko238|기침이/*나요.|it comes out (I have)|cough (subject)
+ko239|약국이/*어디예요?|where is it|pharmacy (subject)
+ko240|약/*먹었어요?|did you take|medicine
+ko241|병원에/*가야겠어요.|I'd better go|to the hospital
+ko242|몸이/*안 좋아요.|isn't good|body (subject)
+ko244|빨리/*나아요.|get better|quickly

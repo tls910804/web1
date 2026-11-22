@@ -1,0 +1,101 @@
+ko901|고객 입장에서/다시/*생각해 보면/답이 보일 거예요.|if you think it over|from the customer's position;again;the answer will show
+ko902|인수인계를/제대로/못 받아서/처음엔/*많이 헤맸어요.|I struggled a lot|the handover (object);properly;since I didn't receive;at first
+ko903|아이디어는 좋은데/현실적으로/*실행하기는 어려울 것 같아요.|seems hard to execute|the idea is good, but;realistically
+ko904|실수를/인정하는 것도/*능력이라고 생각해요.|I think it's a skill|mistakes (object);admitting too
+ko905|팀원들이/잘 따라 줘서/*무사히 마무리할 수 있었어요.|we could wrap up safely|the team members (subject);since they followed well
+ko906|점심 먹고 나면/*졸음이 쏟아져서/일이 안 돼요.|sleepiness pours down|after eating lunch;work doesn't happen
+ko907|선생님 말씀을/*듣고 보니/제가/잘못 이해하고 있었네요.|after hearing|the teacher's words (object);I;had misunderstood
+ko908|단어를/외우는 것보다/문장째로 익히는 게/*훨씬 효과적이에요.|is much more effective|words (object);rather than memorizing;learning whole sentences
+ko909|공항 가는 길에/차가/막혀서/비행기를/*놓칠 뻔했어요.|I almost missed|on the way to the airport;traffic;since it was jammed;plane (object)
+ko910|예약한 방이/없다고 해서/한밤중에/숙소를/*다시 구했어요.|I found it again|the reserved room;since they said there wasn't;in the middle of the night;lodging (object)
+ko911|양이/너무 많아서/결국/*반 이상 남겼어요.|I left more than half|the portion (subject);since it was too much;in the end
+ko912|사장님이/*서비스로/디저트를/주셨어요.|on the house|the owner (subject);dessert (object);gave (honorific)
+ko913|비 오는 날엔/부침개가/*생각나요.|comes to mind|on rainy days;Korean pancakes (subject)
+ko914|*어쩐지/조용하다 했어.|no wonder|I thought it was quiet
+ko915|*그럼 그렇지,/역시/너야.|of course, figures|as expected;it's you
+ko916|*눈 깜짝할 사이에/주말이/지나갔어요.|in the blink of an eye|the weekend (subject);passed
+ko917|이 정도는/*식은 죽 먹기예요.|is a piece of cake|this much (topic)
+ko918|*손이 많이 가는/요리예요.|labor-intensive|it's a dish
+ko919|잠깐/*바람 쐬고/올게요.|get some air|for a moment;I'll come back
+ko920|그 사람/*발이 넓어요.|knows lots of people|that person
+ko921|요즘 들어/*부쩍/추워졌어요.|noticeably|lately;it got colder
+ko922|생각보다/금방/*끝났어요.|it ended|than I thought;quickly
+ko923|*입이 짧아서/많이/못 먹어요.|since I'm a picky eater|a lot;I can't eat
+ko924|손발이/*척척 맞네요.|match perfectly|hands and feet (subject)
+ko925|*귀가 얇아서/광고를 보면/다 사고 싶어요.|since I'm easily swayed|when I see ads;I want to buy everything
+ko926|눈치가/*빠르네요.|is quick|social sense (subject)
+ko927|그럴/*리가 없어요.|there's no way|be so
+ko928|밥 한번 먹자는 건/*인사말이에요.|is a greeting|"let's grab a meal sometime" (topic)
+ko929|낯이/*익은데요.|is familiar|face (subject)
+ko930|속이/*시원하다!|feels refreshed (relieved)|my insides (subject)
+ko931|마음이/*무거워요.|is heavy|heart (subject)
+ko932|간이/*콩알만 해졌어요.|shrank to the size of a bean (I was terrified)|liver (subject)
+ko933|가슴이/*벅차요.|is overflowing|chest, heart (subject)
+ko934|눈에/*밟혀요.|lingers (I can't stop thinking of it)|on my eyes
+ko935|맥이/*빠졌어요.|drained out (I lost all energy)|pulse, energy (subject)
+ko936|발 뻗고/*잘 수 있겠다.|I'll be able to sleep|with legs stretched out
+ko937|어깨가/*무거워요.|is heavy (I feel responsibility)|shoulders (subject)
+ko938|입이/*근질근질해요.|is itchy (dying to tell)|mouth (subject)
+ko939|*배가 아파요./친구가 잘돼서.|I'm jealous (my stomach hurts)|because my friend did well
+ko940|*손에 땀을 쥐게 하는/경기였어요.|nail-biting|it was a match
+ko941|오늘은/일찍/*들어가 보겠습니다.|I'll head home (polite)|today (topic);early
+ko942|자료/정리해서/*보내 드릴게요.|I'll send it to you|materials;organizing
+ko943|일이/*손에 익었어요.|got used to (my hands)|work (subject)
+ko944|*머리를 맞대고/고민해 봐요.|putting our heads together|let's think it over
+ko945|*한 수 배웠습니다.|I learned something
+ko946|*발등에 불 떨어졌어.|it's crunch time (fire on my foot)
+ko947|시험이/*코앞이에요.|is right around the corner|exam (subject)
+ko948|머리에/*쏙쏙 들어와요.|sinks right in|into my head
+ko949|*손을 놓고 있었어요.|I had let it go (neglected it)
+ko950|바다 보러/*떠나고 싶다.|I want to leave|to see the sea
+ko951|여행 가방을/아직/*못 쌌어요.|I couldn't pack|suitcase (object);still
+ko952|여기 경치가/*그림 같아요.|is like a painting|the view here (subject)
+ko953|*아는 만큼 보인다더니/공부하고 오니까/훨씬 재밌네요.|you see as much as you know|since I studied before coming;it's much more fun
+ko954|빨리/*가려다가/오히려/더 늦어 버렸어요.|while trying to go|fast;rather;I ended up later
+ko955|별생각 없이/한 말인데/상대가/*상처받았을까 봐/걱정돼요.|in case they were hurt|without much thought;it was something I said, but;the other person;I'm worried
+ko956|요즘은/뭐든/휴대폰으로 되니까/*편하긴 한데/좀 무섭기도 해요.|it is convenient, but|these days;anything;since it works by phone;it's a bit scary too
+ko957|한번/*맛을 들이면/끊기가/쉽지 않아요.|once you get a taste|once;quitting;isn't easy
+ko958|나중에/*후회하지 않으려면/지금/최선을 다해야 해요.|if you don't want to regret|later;now;you must do your best
+ko959|이것저것/*하다 보니/벌써/밤이 됐네요.|while doing|this and that;already;it became night
+ko960|혹시/불편한 점이/있으시면/언제든지/*말씀해 주세요.|please tell me|by any chance;anything uncomfortable;if there is;anytime
+ko961|그때는/몰랐는데/*지금 생각하면/다 이유가 있었어요.|thinking about it now|then (topic);I didn't know, but;there was a reason for all
+ko962|내 편이/한 명이라도/있다는 게/*이렇게 든든할 줄 몰랐어요.|I didn't know it'd be so reassuring|on my side;even one person;that there is
+ko963|*아무리 친한 사이라도/지켜야 할/선이 있어요.|no matter how close|that must be kept;there's a line
+ko964|좋은 일이/*생기려고/그동안/힘들었나 봐요.|in order to happen|good things (subject);all this time;it seems it was hard
+ko965|다/지나가는 일이니까/너무/*마음에 담아 두지 마.|don't keep it in your heart|all;since it's something that passes;too much
+ko966|생각보다/잘 해냈다고/스스로를/*칭찬해 주고 싶어요.|I want to praise|than expected;that I pulled it off;myself (object)
+ko967|결정이/*늦어질수록/우리한테/불리해질 수밖에 없어요.|the later it gets|the decision (subject);to us;it can only become disadvantageous
+ko968|처음부터/완벽할 수는 없으니까/일단/*시작해 봅시다.|let's try starting|from the start;since it can't be perfect;for now
+ko969|말씀하신 내용을/*반영해서/수정본을/다시 보내 드리겠습니다.|reflecting|what you said (object);the revised version (object);I'll send again
+ko970|지금 하는 일이/*적성에 맞는지/잘 모르겠어요.|whether it suits my aptitude|the work I do now;I'm not sure
+ko971|한국어로/농담을/*알아들었을 때/정말 뿌듯했어요.|when I understood|in Korean;a joke (object);I was really proud
+ko972|실수를/*두려워하지 않고/계속 말해 보는 게/중요해요.|without fearing|mistakes (object);keeping trying to speak;is important
+ko973|지도 앱만/믿고 갔다가/*엉뚱한 곳에/도착했어요.|at a completely wrong place|only the map app;after going trusting;I arrived
+ko974|다음 여행은/좀 더/*여유롭게/계획하고 싶어요.|leisurely|the next trip (topic);a bit more;I want to plan
+ko975|여기 커피 맛은/괜찮은데/자리가/*너무 불편해요.|is too uncomfortable|the coffee taste here;is fine, but;the seats (subject)
+ko976|회식 메뉴는/다들 좋아하는 걸로/*정하는 게 좋겠어요.|it'd be good to decide|the dinner menu (topic);something everyone likes
+ko977|좋아하는 사람 앞에서는/왜/자꾸/*말실수를 할까요?|do I misspeak|in front of someone I like;why;keep
+ko978|서로/다른 점이/많지만/그래서/*더 끌리는 것 같아요.|seem more drawn|each other;differences (subject);are many, but;that's why
+ko979|내가/왜/여기까지/*왔는지/이제 알겠어.|why I came|I;why;this far;now I know
+ko980|그건/좀/*선 넘었지.|crossed the line|that (topic);a bit
+ko981|요즘 애들 말을/하나도/*못 알아듣겠어.|I can't understand|kids' words these days;not even one
+ko982|퇴근하고/침대에/누우면/그게 바로/*소확행이지.|is small but certain happiness|after work;in bed;if I lie down;that's exactly
+ko983|다들/MBTI/물어보는데/나는/아직도/*헷갈려.|I'm confused|everyone;MBTI;asks, but;I (topic);still
+ko984|*하나부터 열까지/다/신경 쓰려니까/정신이 없어요.|from one to ten (every little thing)|all;trying to care about;I'm frazzled
+ko985|*마음만 먹으면/못 할 게/없다고 생각해요.|if only you set your mind|what you can't do;I think there's none
+ko986|지하철에서/*졸다가/종점까지/가 버렸어요.|while dozing|on the subway;to the last stop;I ended up going
+ko987|배달 음식을/너무 자주/시켜 먹어서/이번 달 식비가/*폭탄이에요.|is a bomb|delivery food (object);too often;since I ordered;this month's food expenses
+ko988|이유도/모르고/혼나니까/*더 억울했어요.|it felt more unfair|the reason too;without knowing;since I got scolded
+ko989|하고 싶은 일과/잘하는 일/사이에서/*고민이 많아요.|I have many worries|what I want to do and;what I'm good at;between
+ko990|그 부분은/제가/다시 한번/*확인한 다음에/정확하게 말씀드릴게요.|after checking|that part (topic);I;once more;I'll tell you exactly
+ko991|처음 맡은/프로젝트라서/*부담이 크지만/기대도 돼요.|the pressure is big, but|first taken on;since it's a project;I'm excited too
+ko992|비행기에서/창밖을/*보다가/구름 위로/해가 뜨는 걸 봤어요.|while looking|on the plane;out the window (object);above the clouds;I saw the sun rise
+ko993|같은 실수를/*반복하지 않으려고/틀린 문제를/따로 정리해요.|so as not to repeat|the same mistake (object);wrong problems (object);I organize separately
+ko994|하루 종일/비가/*오락가락하네요.|comes and goes|all day;rain (subject)
+ko995|커피를/마셔야/*정신이 들어요.|I come to my senses|coffee (object);only after drinking
+ko996|일이/*술술/잘 풀리네요.|smoothly|work (subject);is going well
+ko997|*뒤끝 없는/성격이에요.|without lingering grudges|it's a personality
+ko998|점심/뭐 먹을지가/제일 큰/*고민이에요.|is the concern|lunch;what to eat;the biggest
+ko999|신상이/*나왔대요.|they say it came out|new products (subject)
+ko1000|국물이/*끝내줘요.|is amazing|broth (subject)
+ko1001|비행기 표를/*싸게/샀어요.|cheaply|plane ticket (object);I bought

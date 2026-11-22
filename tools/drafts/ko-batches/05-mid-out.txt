@@ -1,0 +1,76 @@
+# 중급 · 카페·식당 / 쇼핑 / 여행 / 병원
+중|카페·식당||*여기 자주 와요?|Do you come here often?|do you come here often
+중|카페·식당||*예약 안 했는데/자리 있어요?|We didn't book—do you have a table?|we didn't reserve, but|is there a seat
+중|카페·식당||*얼마나 기다려야 돼요?|How long do we have to wait?|how long must we wait
+중|카페·식당||*덜 달게/해 주세요.|Please make it less sweet.|less sweet|please make it
+중|카페·식당||샷/*추가해 주세요.|Please add an extra shot.|please add|espresso shot
+중|카페·식당||*디카페인으로/바꿀 수 있어요?|Can I switch it to decaf?|to decaf|can I change it
+중|카페·식당||*주문한 게 아직 안 나왔어요.|My order hasn't come out yet.|what I ordered hasn't come out yet
+중|카페·식당||*이거 제가 시킨 거 아닌데요.|This isn't what I ordered.|this isn't what I ordered
+중|카페·식당||*따로 계산할게요.|We'll pay separately.|we'll pay separately
+중|카페·식당||오늘은/*제가 살게요.|Today's on me.|I'll buy|today (topic)
+중|카페·식당||*각자 내자.|Let's split it. (each pays their own)|let's each pay
+중|카페·식당||*고기가 덜 익었어요.|The meat is undercooked.|the meat is less cooked
+중|카페·식당||*리필 되나요?|Can I get a refill?|is a refill possible
+중|카페·식당||*입에 잘 맞아요.|It suits my taste.|it fits my mouth well
+중|카페·식당||생각보다/*양이 많네요.|The portion is bigger than I expected.|the amount is a lot|than expected
+중|카페·식당||*이 집 맛집이네.|This place is really good.|this place is a famous eatery
+중|카페·식당||*웨이팅이 너무 길어요.|The wait is too long.|the waiting (line) is too long
+중|카페·식당||*배달이 늦어지고 있어요.|The delivery is running late.|the delivery is getting delayed
+중|카페·식당||*음식이 식었어요.|The food got cold.|the food cooled down
+중|카페·식당||*알레르기가 있어서요.|It's because I have an allergy.|because I have an allergy
+중|카페·식당||견과류/*빼 주실 수 있어요?|Could you leave out the nuts?|could you leave it out|nuts
+중|카페·식당||*커피 한잔하면서/얘기해요.|Let's talk over coffee.|while having a coffee|let's talk
+중|쇼핑||*한 치수 큰 걸로/주세요.|One size up, please.|in one size bigger|please give me
+중|쇼핑||*생각보다/잘 어울리네요.|It suits you better than I thought.|than expected|it suits you well
+중|쇼핑||*좀 더 둘러보고/올게요.|I'll look around a bit more and come back.|look around a little more|I'll come
+중|쇼핑||*할부 돼요?|Can I pay in installments?|are installments possible
+중|쇼핑||*일시불로 할게요.|I'll pay in full.|I'll pay in one lump sum
+중|쇼핑||*포인트 적립해 주세요.|Please add the points.|please save the points
+중|쇼핑||*이거 다른 매장에도 있어요?|Do other stores have this too?|do other stores have this
+중|쇼핑||*온라인이 더 싸요.|It's cheaper online.|online is cheaper
+중|쇼핑||*충동구매 했어요.|I made an impulse buy.|I impulse-bought
+중|쇼핑||*가성비가 좋아요.|It's good value for money.|cost-performance is good
+중|쇼핑||*택배가 아직 안 왔어요.|My package hasn't arrived yet.|the parcel hasn't come yet
+중|쇼핑||*반품하고 싶은데요.|I'd like to return this.|I want to return it
+중|쇼핑||*장바구니에 담아 놨어.|I put it in my cart.|I put it in the shopping cart
+중|쇼핑||*사이즈가 안 맞아서/교환하려고요.|It doesn't fit, so I want to exchange it.|since the size doesn't fit|I'm going to exchange
+중|쇼핑||*원 플러스 원이에요.|It's buy one, get one free.|it's one plus one
+중|쇼핑||*유통기한이 지났어요.|It's past the expiration date.|the expiration date passed
+중|쇼핑||*계산이 잘못된 것 같아요.|I think the bill is wrong.|the calculation seems wrong
+중|쇼핑||*마음에 쏙 들어요.|I absolutely love it.|it fits right into my heart
+중|여행||*창가 자리로/주세요.|A window seat, please.|to a window seat|please
+중|여행||*비행기를 놓쳤어요.|I missed my flight.|I missed the plane
+중|여행||*짐이 안 나왔어요.|My luggage didn't come out.|the luggage didn't come out
+중|여행||*몇 시까지/체크인해야 돼요?|What time do I need to check in by?|until what time|do I have to check in
+중|여행||*여기서 사진 찍기 좋아요.|This is a great spot for photos.|it's good for taking photos here
+중|여행||*현지인처럼/여행하고 싶어요.|I want to travel like a local.|like a local|I want to travel
+중|여행||*관광객이 너무 많네요.|There are so many tourists.|there are too many tourists
+중|여행||*시차 때문에/너무 피곤해요.|I'm so tired because of jet lag.|because of the time difference|so tired
+중|여행||*길 좀 물어봐도 될까요?|May I ask for directions?|may I ask the way
+중|여행||*이 근처에 맛집 있어요?|Are there any good restaurants around here?|is there a good restaurant nearby
+중|여행||*막차가 몇 시예요?|What time is the last train?|what time is the last train
+중|여행||*교통카드 충전하려고요.|I want to top up my transit card.|I'm going to charge my transit card
+중|여행||*렌터카를 빌렸어요.|I rented a car.|I rented a rental car
+중|여행||*일정이 바뀌었어요.|My schedule changed.|the schedule changed
+중|여행||*하룻밤 더/묵을 수 있을까요?|Could I stay one more night?|one more night|could I stay
+중|여행||*조식 포함이에요?|Is breakfast included?|is breakfast included
+중|여행||*방을 바꿀 수 있을까요?|Could I change rooms?|could I change the room
+중|여행||*에어컨이 안 돼요.|The air conditioner isn't working.|the AC doesn't work
+중|여행||*당일치기로/다녀왔어요.|I went on a day trip.|as a day trip|I went and came back
+중|여행||*여권을 두고 왔어요.|I left my passport behind.|I left the passport and came
+중|병원||*진료 예약하고 싶어요.|I'd like to book an appointment.|I want to book a consultation
+중|병원||*어디가 불편하세요?|What seems to be the problem?|where is uncomfortable
+중|병원||*목이 붓고/아파요.|My throat is swollen and sore.|throat swells and|it hurts
+중|병원||*콧물이 계속 나요.|My nose keeps running.|runny nose keeps coming
+중|병원||*어지러워요.|I feel dizzy.|I feel dizzy
+중|병원||*발목을 삐었어요.|I sprained my ankle.|I sprained my ankle
+중|병원||*처방전 주세요.|Please give me a prescription.|please give me a prescription
+중|병원||*하루에 세 번/드세요.|Take it three times a day.|three times a day|please take
+중|병원||*식후 30분에/드세요.|Take it 30 minutes after meals.|30 minutes after a meal|please take
+중|병원||*몸살 기운이 있어요.|I feel like I'm coming down with something.|I have signs of body aches
+중|병원||*잠을 잘 못 자요.|I can't sleep well.|I can't sleep well
+중|병원||*소화가 안 돼요.|I have indigestion.|digestion doesn't work
+중|병원||*알레르기 약 있어요?|Do you have allergy medicine?|is there allergy medicine
+중|병원||*검사 결과는/언제 나와요?|When will the test results come out?|the test results|when do they come out
+중|병원||*푹 자고 나니까/좀 나아졌어요.|After a good sleep, I feel a bit better.|after sleeping soundly|got a bit better

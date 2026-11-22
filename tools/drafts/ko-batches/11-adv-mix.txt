@@ -1,0 +1,60 @@
+# 고급 · 여러 상황
+고|쇼핑||*인터넷에서 보고 샀는데/실물이 훨씬 예쁘네요.|I bought it after seeing it online, and it's much prettier in person.|I bought it after seeing it online, but|the real thing is much prettier
+고|쇼핑||*할인한다길래 샀는데/알고 보니 원래 가격이랑 비슷했어요.|I bought it because it was on sale, but it turned out to be about the regular price.|I bought it since they said it's discounted, but|it turned out similar to the original price
+고|쇼핑||*배송이 일주일 넘게 걸린다고 해서/다른 데서 주문했어요.|They said shipping would take over a week, so I ordered elsewhere.|since they said delivery takes over a week|I ordered from another place
+고|쇼핑||*사고 싶은 건 많은데/통장이 텅 비었어요.|There's so much I want to buy, but my bank account is empty.|there's a lot I want to buy, but|my bankbook is empty
+고|쇼핑||*포장을 뜯었는데/부품이 하나 빠져 있었어요.|I opened the package and one part was missing.|I opened the packaging, and|one part was missing
+고|쇼핑||*사이즈를 고민하다가/결국 두 개 다 샀어요.|I agonized over the size and ended up buying both.|after agonizing over the size|I ended up buying both
+고|병원||*며칠째 열이 내리지 않아서/병원에 가 보려고요.|My fever hasn't gone down for days, so I'm going to see a doctor.|since the fever hasn't dropped for days|I'm going to try the hospital
+고|병원||*약을 먹었는데도/증상이 좀처럼 나아지지 않아요.|Even after taking medicine, my symptoms aren't getting any better.|even though I took medicine|the symptoms hardly improve
+고|병원||*건강검진 결과가 나왔는데/다행히 큰 문제는 없대요.|My checkup results came out, and luckily there's nothing serious.|the checkup results came out, and|thankfully they say no big problem
+고|병원||*허리가 아파서/오래 앉아 있기가 힘들어요.|My back hurts, so it's hard to sit for long.|since my back hurts|sitting for long is hard
+고|병원||*잠을 제대로 못 자서 그런지/하루 종일 머리가 멍해요.|Maybe because I didn't sleep well, my head's foggy all day.|maybe because I couldn't sleep properly|my head is foggy all day
+고|일상||*이사를 하고 나니까/출퇴근 시간이 절반으로 줄었어요.|After moving, my commute was cut in half.|after moving|the commute time halved
+고|일상||*요즘 물가가 너무 올라서/장 보기가 무서워요.|Prices have gone up so much that grocery shopping scares me.|since prices rose so much lately|grocery shopping is scary
+고|일상||*운동을 시작한 뒤로/몸이 한결 가벼워졌어요.|Since I started working out, my body feels much lighter.|ever since I started exercising|my body got much lighter
+고|일상||*혼자 사는 게 편하긴 한데/가끔은 외롭기도 해요.|Living alone is comfortable, but sometimes it's lonely too.|living alone is comfortable, but|sometimes it's lonely too
+고|일상||*요리를 배워 보니까/엄마가 얼마나 고생하셨는지 알겠어요.|Learning to cook, I now see how hard my mom worked.|after learning to cook|I understand how much mom struggled
+고|일상||*반려동물을 키우는 게/생각보다 손이 많이 가네요.|Having a pet takes more care than I expected.|raising a pet|takes more effort than expected
+고|일상||*휴대폰을 내려놓고/책을 읽는 습관을 들이고 싶어요.|I want to build a habit of putting my phone down and reading.|putting down the phone|I want to make a habit of reading books
+고|일상||*날씨가 풀리면/한강에서 자전거 타고 싶어요.|When the weather warms up, I want to ride a bike along the Han River.|when the weather loosens up|I want to ride a bike at the Han River
+고|일상||*택배 기사님이 집에 아무도 없어서/문 앞에 두고 가셨대요.|The courier said nobody was home, so they left it at the door.|since the courier found no one home|they left it in front of the door
+고|일상||*관리비가 생각보다 많이 나와서/깜짝 놀랐어요.|The maintenance fee was much higher than expected, and I was shocked.|since the maintenance fee came out higher than expected|I was startled
+고|일상||*주말마다 늦잠을 자다 보니/생활 리듬이 다 깨졌어요.|Sleeping in every weekend has thrown off my whole routine.|as I kept sleeping in every weekend|my daily rhythm broke completely
+고|일상||*새해 목표를 세웠는데/벌써 작심삼일이 됐어요.|I set New Year's goals, but they've already fizzled out after three days.|I set New Year's goals, but|it already became a three-day resolution
+고|일상||*친구 결혼식에 갔다가/오랜만에 동창들을 만났어요.|At a friend's wedding, I ran into old classmates after a long time.|after going to a friend's wedding|I met classmates after a long time
+고|감정||*남들은 쉽게 하는 것 같은데/나만 왜 이렇게 어려운지 모르겠어요.|Others seem to do it easily—I don't know why it's so hard for me.|others seem to do it easily, but|I don't know why it's only hard for me
+고|감정||*칭찬은 고래도 춤추게 한다고/한마디에 힘이 났어요.|Praise makes even whales dance—that one word lifted me up.|they say praise makes even whales dance|I got strength from one word
+고|감정||*불안한 마음을 떨쳐 버리려고/산책을 나갔어요.|I went for a walk to shake off my anxiety.|to shake off the anxious feeling|I went out for a walk
+고|감정||*그 사람 앞에만 서면/왜 이렇게 작아지는지 모르겠어요.|I don't know why I feel so small whenever I stand before them.|whenever I stand before that person|I don't know why I become so small
+고|감정||*혼자만의 시간을 가지면서/생각을 정리하고 싶어요.|I want some time alone to sort out my thoughts.|while having time for myself|I want to organize my thoughts
+고|감정||*진심은 언젠가/통하게 되어 있어요.|Sincerity always gets through eventually.|sincerity, someday|is bound to get through
+고|감정||*다른 사람 시선을 너무 신경 쓰다 보니/정작 내가 원하는 걸 잊었어요.|I cared so much about what others think that I forgot what I actually wanted.|as I cared too much about others' eyes|I forgot what I really wanted
+고|감정||*지나고 보니/그때가 제일 행복했던 것 같아요.|Looking back, I think that was my happiest time.|looking back now|that time seems to have been the happiest
+고|감정||*괜찮은 척하느라/너무 지쳤어요.|I'm exhausted from pretending to be fine.|from pretending to be okay|I'm so worn out
+고|회사||*오늘 안에 끝내기는/물리적으로 불가능할 것 같아요.|Finishing it today seems physically impossible.|finishing it within today|seems physically impossible
+고|회사||*회의에서 제 아이디어가 채택돼서/정말 뿌듯했어요.|I was really proud that my idea got adopted in the meeting.|since my idea was adopted in the meeting|I was really proud
+고|회사||*새로 온 팀장님이/생각보다 꼼꼼하셔서 긴장돼요.|The new team lead is more meticulous than I expected, so I'm nervous.|the newly arrived team lead|is more meticulous than expected, so I'm nervous
+고|회사||*퇴사하겠다고 말씀드렸더니/다시 생각해 보라고 하셨어요.|When I said I'd quit, they told me to think it over again.|when I said I'd resign|they told me to reconsider
+고|회사||*이번 프로젝트만 끝나면/휴가를 길게 쓰려고요.|Once this project wraps up, I'm taking a long vacation.|once only this project is done|I plan to take a long vacation
+고|회사||*전화로 말하기 애매한 내용이라/직접 뵙고 말씀드릴게요.|It's hard to explain over the phone, so I'll tell you in person.|since it's awkward to say on the phone|I'll see you in person and tell you
+고|회사||*하필 바쁜 날에/컴퓨터가 고장 났어요.|Of all days, my computer broke on a busy one.|of all times, on a busy day|the computer broke down
+고|학교||*조금 일찍 준비했더라면/결과가 달라졌을지도 몰라요.|If I'd prepared a little earlier, the result might have been different.|if I had prepared a bit earlier|the result might have changed
+고|학교||*외국어는 틀리면서 배우는 거니까/너무 겁먹지 마세요.|You learn a language by making mistakes, so don't be afraid.|since a foreign language is learned by getting it wrong|don't be too scared
+고|학교||*한국어를 배우면 배울수록/한국 문화가 더 궁금해져요.|The more Korean I learn, the more curious I get about Korean culture.|the more I learn Korean|I get more curious about Korean culture
+고|학교||*드라마 대사를 따라 하다 보니/억양이 자연스러워졌어요.|By shadowing drama lines, my intonation became natural.|as I kept copying drama lines|my intonation became natural
+고|학교||*같은 뜻이라도 상황에 따라/쓰는 표현이 달라요.|Even with the same meaning, the expression changes with the situation.|even if it's the same meaning, depending on the situation|the expressions used differ
+고|여행||*출국 전날까지/여권을 못 찾아서 식은땀이 났어요.|I couldn't find my passport until the day before departure and broke into a cold sweat.|until the day before departure|I couldn't find my passport and broke a cold sweat
+고|여행||*현지 친구 덕분에/관광지가 아닌 진짜 맛집을 알게 됐어요.|Thanks to a local friend, I found real eateries, not tourist traps.|thanks to a local friend|I learned real good restaurants, not tourist spots
+고|여행||*말이 안 통해서 고생했지만/그것도 다 추억이에요.|The language barrier was rough, but it's all a memory now.|I struggled since we couldn't communicate, but|that's all a memory too
+고|여행||*성수기라서 그런지/어딜 가도 사람이 북적거리네요.|Maybe because it's peak season, it's crowded everywhere.|maybe because it's peak season|it's crowded wherever you go
+고|여행||*혼자 여행을 떠나 보니/나에 대해 더 잘 알게 됐어요.|Traveling solo, I got to know myself better.|after leaving to travel alone|I came to know myself better
+고|약속||*내가 먼저 연락하려고 했는데/선수를 뺏겼네.|I was going to reach out first, but you beat me to it.|I was going to contact first, but|you took the first move
+고|약속||*거기까지 가기엔 너무 머니까/중간에서 만나는 게 어때?|It's too far to go all the way there—how about meeting halfway?|since it's too far to go there|how about meeting in the middle
+고|연락||*전화를 여러 번 했는데/계속 꺼져 있다고 나와요.|I called several times, but it keeps saying the phone is off.|I called several times, but|it keeps saying it's turned off
+고|연락||*메시지를 잘못 보내서/얼른 지웠는데 이미 읽었더라고요.|I sent the message to the wrong person and quickly deleted it, but they'd already read it.|since I sent the message by mistake|I quickly deleted it but they'd already read it
+고|연락||*바쁘면 답장 안 해도 되니까/편할 때 봐.|No need to reply if you're busy—read it whenever.|since it's okay not to reply if busy|look at it when convenient
+고|일상|슬랭|*이번 생은 망했다며/웃는데 좀 짠하더라.|They laughed saying "this life is ruined," and it was kind of sad.|while saying this life is ruined|they laughed and it was a bit pitiful
+고|일상|슬랭|*요즘 유행하는 말을 따라가기가/너무 벅차요.|It's so hard to keep up with the trendy slang these days.|keeping up with trendy words these days|is too overwhelming
+고|일상|슬랭|*그 정도면 완전 국룰 아니야?|Isn't that totally the unwritten rule?|isn't that totally a national rule at that level
+고|일상|슬랭|*뇌절 그만하고/이제 좀 넘어가자.|Stop beating a dead horse and let's move on.|stop overdoing the joke|let's move on now

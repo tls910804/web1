@@ -1,0 +1,56 @@
+# 고급 · 회사 / 학교
+고|회사||말씀하신 부분은/*내부적으로 검토한 후에/다시 회신 드리겠습니다.|I'll review what you mentioned internally and get back to you.|after reviewing internally|the part you mentioned|I'll reply again
+고|회사||일정이 빠듯하긴 하지만/*최대한 맞춰 보겠습니다.|The schedule is tight, but I'll do my best to meet it.|I'll try to meet it as much as possible|the schedule is tight, but
+고|회사||*번거로우시겠지만/한 번만 더 확인 부탁드립니다.|Sorry for the trouble, but could you check once more?|it may be a hassle, but|please check once more
+고|회사||*양해 부탁드립니다./일정이 조금 늦어질 것 같습니다.|We ask for your understanding; the schedule may be slightly delayed.|please understand|the schedule seems to be getting a bit late
+고|회사||이 건은/*제 선에서 결정하기 어려울 것 같아요.|I don't think I can decide on this one at my level.|it seems hard to decide at my level|this matter (topic)
+고|회사||*결론부터 말씀드리면/이번 프로젝트는 연기됐습니다.|To get to the point, this project has been postponed.|to start with the conclusion|this project was postponed
+고|회사||*바쁘신 와중에/시간 내 주셔서 감사합니다.|Thank you for making time despite your busy schedule.|in the midst of being busy|thank you for making time
+고|회사||예산이 부족해서/*우선순위를 다시 정해야 할 것 같아요.|We're short on budget, so we may need to reprioritize.|it seems we need to set priorities again|since the budget is short
+고|회사||고객 반응을 보고/*방향을 수정하는 게 좋겠어요.|It'd be better to adjust our direction based on customer response.|it'd be good to revise the direction|after seeing customer reactions
+고|회사||*책임지고/끝까지 마무리하겠습니다.|I'll take responsibility and see it through to the end.|taking responsibility|I'll finish it to the end
+고|회사||그 부분은/*제가 미처 생각하지 못했네요.|I hadn't thought of that part.|I failed to think of it in time|that part (topic)
+고|회사||*말이 나온 김에/다음 분기 계획도 정리해 볼까요?|Since it came up, shall we sort out next quarter's plan too?|since it came up|shall we organize next quarter's plan too
+고|회사||회의 시간을/*오후 세 시로 앞당겨도 괜찮을까요?|Would it be okay to move the meeting up to 3 p.m.?|is it okay to move it up to 3 p.m.|the meeting time (object)
+고|회사||이번 달 실적이/*기대에 못 미쳐서/아쉽네요.|It's disappointing that this month's results fell short of expectations.|fell short of expectations|this month's performance|it's a pity
+고|회사||*손이 많이 가는 일이라/시간이 좀 걸릴 거예요.|It's labor-intensive, so it'll take some time.|since it's a task that takes a lot of handling|it'll take some time
+고|회사||팀장님이/*승인해 주시면/바로 진행하겠습니다.|Once the team lead approves, I'll proceed right away.|if (they) approve|the team lead|I'll proceed right away
+고|회사||*다들 의견이 엇갈리니까/투표로 정하는 게 어때요?|Since opinions are divided, how about deciding by vote?|since everyone's opinions differ|how about deciding by vote
+고|회사||고객사에서/*급하게 수정 요청이 들어왔어요.|The client sent an urgent revision request.|an urgent revision request came in|from the client company
+고|회사||*경력이 짧은 편이지만/배우려는 의지는 누구보다 강합니다.|My experience is relatively short, but my will to learn is stronger than anyone's.|though my career is on the short side|my will to learn is stronger than anyone's
+고|회사||*연봉 협상이 생각보다/잘 안 풀렸어요.|The salary negotiation didn't go as well as I expected.|salary negotiation, than expected|didn't work out well
+고|회사||회사를 그만두고/*창업을 해 볼까 고민 중이에요.|I'm thinking about quitting and starting my own business.|considering trying to start a business|after quitting the company
+고|회사||*일과 삶의 균형을/지키는 게 제일 중요하다고 생각해요.|I think keeping a work-life balance is most important.|balance of work and life|I think keeping it is most important
+고|회사||다음 주까지/*초안을 공유해 주시면/피드백 드릴게요.|If you share a draft by next week, I'll give you feedback.|if you share the draft|by next week|I'll give feedback
+고|회사||*아무래도/이번 출장은 미루는 게 나을 것 같아요.|All things considered, it'd be better to postpone this trip.|after all, all things considered|it seems better to postpone this business trip
+고|회사||거래처와의 미팅이/*예상보다 길어지는 바람에/늦었습니다.|I'm late because the client meeting ran longer than expected.|because it ran longer than expected|the meeting with the client|I was late
+고|회사||*혹시 실례가 안 된다면/연락처를 여쭤봐도 될까요?|If it's not rude to ask, may I have your contact info?|if it's not rude|may I ask your contact info
+고|회사||이번 실수는/*전적으로 제 책임입니다.|This mistake is entirely my responsibility.|it's entirely my responsibility|this mistake (topic)
+고|회사||*그렇게 말씀해 주시니/큰 힘이 됩니다.|It means a lot to hear you say that.|since you say so|it's a great strength
+고|회사||*업무 분담을 명확하게/해 두면 좋겠어요.|It'd be good to clearly divide up the tasks.|work division clearly|it'd be nice to have it done
+고|회사||회의 내용을 정리해서/*공유 드라이브에 올려 두었습니다.|I summarized the meeting and uploaded it to the shared drive.|I uploaded it to the shared drive|after organizing the meeting content
+고|회사||*퇴근 시간이 다 돼서야/일이 끝났어요.|I only finished my work right at quitting time.|only when it was almost time to leave|the work ended
+고|회사||요즘 업무가 몰려서/*눈코 뜰 새 없이 바빠요.|Work has piled up, so I'm too busy to even breathe.|so busy there's no time to open eyes or nose|work is piling up lately
+고|회사||*신입 때는/모든 게 낯설고 어려웠어요.|When I was new, everything felt unfamiliar and difficult.|when I was a new hire|everything was unfamiliar and hard
+고|회사||*잘 부탁드립니다./앞으로 열심히 하겠습니다.|I look forward to working with you; I'll do my best.|please take good care of me|I'll work hard from now on
+고|회사||그 프로젝트는/*처음부터 다시 검토해야 할 것 같아요.|I think we need to review that project from scratch.|it seems we must review it again from the start|that project (topic)
+고|회사||*제 생각은 조금 다른데,/말씀드려도 될까요?|I see it a bit differently—may I share?|my view is a little different, but|may I tell you
+고|회사||*이 정도면/충분히 설득력이 있다고 봐요.|I think this is convincing enough.|at this level|I see it as persuasive enough
+고|회사||*발등에 불이 떨어져서/급하게 처리하고 있어요.|It's become urgent, so I'm rushing to handle it.|fire dropped on the top of my foot|I'm handling it urgently
+고|회사||고객 불만이 계속 들어와서/*대책을 세워야 할 것 같아요.|Customer complaints keep coming in, so we need a plan.|it seems we need to set up countermeasures|since customer complaints keep coming in
+고|회사||*다음부터는/이런 일이 없도록 주의하겠습니다.|I'll make sure this doesn't happen again.|from next time|I'll be careful so this doesn't happen
+고|학교||*시험 범위가 너무 넓어서/어디서부터 시작해야 할지 모르겠어요.|The test covers so much that I don't know where to start.|since the exam range is too wide|I don't know where to start
+고|학교||교수님께/*추천서를 부탁드리려고 하는데/좀 떨려요.|I'm going to ask my professor for a recommendation letter, and I'm nervous.|I'm about to ask for a recommendation letter|to the professor|I'm a bit nervous
+고|학교||*발표하다가/머릿속이 하얘졌어요.|My mind went blank in the middle of the presentation.|while presenting|my head went white
+고|학교||*공부할수록/모르는 게 더 많아지는 것 같아요.|The more I study, the more I realize I don't know.|the more I study|it seems what I don't know increases
+고|학교||*한국 드라마를 보면서/듣기 실력이 많이 늘었어요.|My listening improved a lot from watching Korean dramas.|while watching Korean dramas|my listening skill grew a lot
+고|학교||*말하기는 아직 자신이 없어서/연습이 더 필요해요.|I'm still not confident speaking, so I need more practice.|since I'm still not confident in speaking|I need more practice
+고|학교||논문 마감이 다가와서/*요즘 잠을 거의 못 자요.|My thesis deadline is approaching, so I barely sleep these days.|I can hardly sleep these days|since the thesis deadline is near
+고|학교||*유학을 갈지 말지/아직 결정을 못 했어요.|I still haven't decided whether to study abroad.|whether to study abroad or not|I haven't decided yet
+고|학교||조별 과제에서/*혼자 다 한 것 같아서/억울해요.|I feel wronged because it seems I did the whole group project alone.|since it seems I did it all alone|in the group project|I feel wronged
+고|학교||*존댓말과 반말을/구분해서 쓰는 게 아직도 어려워요.|It's still hard to tell when to use polite or casual speech.|polite and casual speech|using them separately is still hard
+고|학교||*하나를 배우면/열을 아는 학생이네요.|You're the kind of student who learns one thing and grasps ten.|if (you) learn one|a student who knows ten
+고|학교||*꾸준히 하다 보면/언젠가는 유창해질 거예요.|If you keep at it, you'll become fluent someday.|if you keep doing it steadily|you'll become fluent someday
+고|학교||*한국어로 꿈을 꾼 적이/있어요?|Have you ever dreamed in Korean?|the experience of dreaming in Korean|is there
+고|학교||받침 발음이/*생각보다 훨씬 까다롭네요.|Final consonant sounds are much trickier than I thought.|much trickier than I thought|final consonant pronunciation
+고|학교||*한국에서 살아 보니까/교과서랑 실제 말이 많이 달라요.|Living in Korea, I've found textbook Korean differs a lot from real speech.|after living in Korea|textbook and real speech differ a lot

@@ -1,0 +1,81 @@
+# 초급 · 감정 / 집 / 학교 / 회사
+초|감정||오늘/*기분이 좋아요.|I'm in a good mood today.|feel good|today
+초|감정||너무/*행복해요.|I'm so happy.|happy|so, too
+초|감정||좀/*슬퍼요.|I'm a little sad.|sad|a little
+초|감정||진짜/*화났어.|I'm really angry.|got angry|really
+초|감정||너무/*심심해요.|I'm so bored.|bored|so
+초|감정||좀/*무서워요.|I'm a bit scared.|scared|a little
+초|감정||*걱정돼요.|I'm worried.|I'm worried
+초|감정||*긴장돼요.|I'm nervous.|I'm nervous
+초|감정||완전/*신나요!|I'm so excited!|excited|totally
+초|감정||*부러워요.|I'm jealous. (I envy you.)|I envy
+초|감정||*속상해요.|I'm upset.|I'm hurt/upset
+초|감정||*외로워요.|I'm lonely.|lonely
+초|감정||*짜증 나.|I'm annoyed.|it's annoying
+초|감정||*놀랐어요.|I was surprised.|I was surprised
+초|감정||*다행이다.|What a relief.|that's a relief
+초|감정||*아쉬워요.|That's a shame.|it's a pity
+초|감정||*보고 싶어요.|I miss you.|I want to see (you)
+초|감정||*좋아해요.|I like you.|I like
+초|감정||*사랑해.|I love you.|I love
+초|감정||*힘내요!|Cheer up!|put your strength in
+초|감정||*대박!|Awesome! / No way!|jackpot, awesome
+초|감정||*귀여워!|So cute!|cute
+초|감정||*멋있어요.|You look cool.|cool, stylish
+초|감정||*예뻐요.|It's pretty.|pretty
+초|감정||*재미있어요.|It's fun.|fun, interesting
+초|감정||별로/*재미없어요.|It's not that fun.|not fun|not really
+초|감정||*마음에 들어요.|I like it.|it suits my heart
+초|감정||*마음에 안 들어요.|I don't like it.|I'm not satisfied with it
+초|감정||*창피해요.|I'm embarrassed.|embarrassed
+초|감정||*졸려요.|I'm sleepy.|sleepy
+초|집||엄마,/*나 왔어.|Mom, I'm home.|I'm here|mom
+초|집||*밥 먹자.|Let's eat.|let's eat
+초|집||*불 좀 꺼 줘.|Turn off the light, please.|please turn off the light
+초|집||*문 좀 닫아 줘.|Close the door, please.|please close the door
+초|집||*청소했어요.|I cleaned up.|I cleaned
+초|집||*설거지할게.|I'll do the dishes.|I'll wash the dishes
+초|집||*빨래 좀 해야겠다.|I need to do some laundry.|I'd better do laundry
+초|집||*TV 켜 줘.|Turn on the TV.|turn on the TV
+초|집||리모컨/*어디 있어?|Where's the remote?|where is it|remote control
+초|집||*물 좀 갖다줄래?|Can you bring me some water?|will you bring some water
+초|집||*일어나!|Wake up!|get up
+초|집||벌써/*아침이야.|It's already morning.|it's morning|already
+초|집||*늦잠 잤어.|I overslept.|I slept in
+초|집||*씻고 올게.|I'll go wash up.|I'll wash and come
+초|집||*배달 시킬까?|Should we order delivery?|shall we order delivery
+초|집||오늘/*뭐 먹지?|What should I eat today?|what shall I eat|today
+초|집||*냉장고에 있어.|It's in the fridge.|it's in the fridge
+초|집||*같이 가자.|Let's go together.|let's go together
+초|집||*조용히 해.|Be quiet.|be quiet
+초|집||*빨리 와.|Come quickly.|come fast
+초|학교||*숙제 했어?|Did you do your homework?|did you do homework
+초|학교||*시험 언제야?|When is the exam?|when is the test
+초|학교||*수업 끝났어요.|Class is over.|class ended
+초|학교||*질문 있어요.|I have a question.|I have a question
+초|학교||*잘 모르겠어요.|I'm not sure.|I don't know well
+초|학교||*다시 설명해 주세요.|Please explain it again.|please explain again
+초|학교||*몇 쪽이에요?|What page is it?|what page is it
+초|학교||*펜 좀 빌려줄래?|Can I borrow a pen?|will you lend me a pen
+초|학교||*같이 공부하자.|Let's study together.|let's study together
+초|학교||*시험 잘 봐!|Good luck on your test!|do well on the exam
+초|학교||*시험 망했어.|I bombed the test.|the test is ruined
+초|학교||*방학이다!|It's vacation!|it's school break
+초|학교||*출석 부를게요.|I'll take attendance.|I'll call attendance
+초|학교||오늘/*휴강이래.|They say class is canceled today.|they say class is canceled|today
+초|학교||*점심 같이 먹을래?|Want to have lunch together?|want to eat lunch together
+초|회사||*출근했어요.|I'm at work. (I've arrived at work.)|I went to work
+초|회사||*퇴근할게요.|I'm heading out. (leaving work)|I'll leave work
+초|회사||오늘/*야근해요.|I'm working late today.|working overtime|today
+초|회사||*회의 있어요.|I have a meeting.|there's a meeting
+초|회사||*점심 먹으러 가요.|Let's go eat lunch.|let's go eat lunch
+초|회사||*확인해 볼게요.|I'll check.|I'll check and see
+초|회사||*메일 보냈어요.|I sent the email.|I sent the email
+초|회사||*잠깐 시간 돼요?|Do you have a minute?|do you have a moment
+초|회사||*내일 휴가예요.|I'm off tomorrow.|tomorrow is vacation
+초|회사||*수고 많으셨어요.|You worked so hard.|you put in a lot of effort
+초|회사||*먼저 퇴근하겠습니다.|I'll be leaving first.|I'll leave work first
+초|회사||*커피 한잔할래요?|Want to grab a coffee?|want to have a coffee
+초|회사||*월급날이다!|It's payday!|it's payday
+초|회사||*바빠요.|I'm busy.|busy
+초|회사||*금요일이다!|It's Friday!|it's Friday
