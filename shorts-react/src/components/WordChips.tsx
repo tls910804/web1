@@ -41,8 +41,10 @@ export function WordChips({ card, highlight, selected, onWord, small, spoken, pa
     const last = groups[groups.length - 1];
     if (spoken === undefined && last && hl.includes(j) && hl.includes(j - 1)) last.push(j); else groups.push([j]);
   });
+  // 긴 문장은 글자를 줄여 한 화면에 들어오게 한다 (한·중·일 글자는 영문보다 넓어서 더 크게 센다)
+  const long = !small && card.words.join(' ').length * (['ko', 'ja', 'zh'].includes(card.lang) ? 1.8 : 1) > 45;
   return (
-    <div ref={box} {...dragProps} className={`words${small ? ' sm' : ''}${spoken !== undefined ? ' sync' : ''}${paged ? ' paged' : ''}`} lang={langTag(card.lang)}>
+    <div ref={box} {...dragProps} className={`words${small ? ' sm' : ''}${long ? ' long' : ''}${spoken !== undefined ? ' sync' : ''}${paged ? ' paged' : ''}`} lang={langTag(card.lang)}>
       {groups.map((g) => (
         <button
           key={g[0]}
