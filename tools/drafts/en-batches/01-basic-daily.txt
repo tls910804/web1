@@ -1,0 +1,98 @@
+# 초급 · 일상
+초|일상||I'm/*starving./Let's eat.|배고파 죽겠어. 밥 먹자.|배고파 죽겠어|배고파 죽겠는|extremely hungry|나는;밥 먹자
+초|일상||I/*overslept/again.|또 늦잠 잤어.|늦잠 잤어|늦잠 자다|to sleep too long|나는;또
+초|일상||I'm/*running out of/time.|시간이 얼마 없어.|얼마 없어|~이 다 떨어져 가다|to have little left|나는;시간
+초|일상||*Take your time.|천천히 해.|천천히 해|서두르지 마|don't hurry
+초|일상||Let me/*think about it.|생각 좀 해 볼게.|생각 좀 해 볼게|~에 대해 생각하다|to consider|내가 ~할게
+초|일상||I'll/*be right back.|금방 올게.|금방 올게|금방 돌아오다|to return soon|나는 ~할 거야
+초|일상||*Hang on/a second.|잠깐만 기다려.|기다려|잠깐 기다리다|to wait|1초만
+초|일상||It's/*no big deal.|별일 아니야.|별일 아니야|별일 아닌 것|not important|그것은
+초|일상||*Good for you!|잘됐다!|잘됐다|잘됐네|I'm happy for you
+초|일상||I/*can't wait!|너무 기대돼!|기대돼|너무 기다려지다|very excited|나는
+초|일상||That's/*so sweet/of you.|정말 다정하다.|다정하다|정말 다정한|very kind|그건;너의
+초|일상||*Same here.|나도 그래.|나도 그래|나도 마찬가지|me too
+초|일상||*Sounds good!|좋아!|좋아|좋게 들리다|that's fine
+초|일상||I'm/*on my way.|가는 중이야.|가는 중이야|가는 중인|coming now|나는
+초|일상||*Watch out!|조심해!|조심해|조심하다|be careful
+초|일상||*Calm down./It's okay.|진정해. 괜찮아.|진정해|진정하다|to relax|괜찮아
+초|일상||Don't/*worry about it.|신경 쓰지 마.|신경 쓰지|~에 대해 걱정하다|to be concerned|~하지 마
+초|일상||*Long time/no see!|오랜만이야!|오랜만이야|오랜만|a long time|못 봤다
+초|일상||*What's up?|무슨 일이야? / 잘 지내?|잘 지내|잘 지내? 무슨 일?|how are you
+초|일상||*How's it going?|어떻게 지내?|어떻게 지내|잘 되어 가?|how are you
+초|일상||I'm/*good,/thanks.|잘 지내, 고마워.|잘 지내|잘 지내는|fine|나는;고마워
+초|일상||*Nice to meet you.|만나서 반가워요.|만나서 반가워요|만나서 반가워요|glad to meet
+초|일상||*See you later!|나중에 봐!|나중에 봐|나중에 보자|goodbye for now
+초|일상||*Have a good one!|좋은 하루 보내!|좋은 하루 보내|좋은 시간 보내|enjoy your day
+초|일상||*Take care.|잘 지내. / 조심히 가.|잘 지내|몸조심해|be well
+초|일상||Thanks/*a lot.|정말 고마워.|정말|매우, 많이|very much|고마워
+초|일상||*No worries.|괜찮아. / 천만에.|괜찮아|괜찮아, 신경 쓰지 마|it's fine
+초|일상||*My bad.|내 실수야.|내 실수야|내 잘못|my mistake
+초|일상||*Excuse me,/is this seat taken?|실례지만, 이 자리 주인 있어요?|실례지만|실례합니다|sorry to bother|이 자리 주인 있어요?
+초|일상||Is this seat/*taken?|이 자리 주인 있어요?|주인 있어요|(자리가) 차 있는|occupied|이 자리
+초|일상||I'm/*just kidding.|농담이야.|농담이야|농담하다|joking|나는
+초|일상||*No way!|말도 안 돼!|말도 안 돼|말도 안 돼, 절대 아니야|impossible
+초|일상||*For real?|진짜로?|진짜로|진짜로|really
+초|일상||I/*have no idea.|전혀 모르겠어.|전혀 모르겠어|전혀 모르다|don't know at all|나는
+초|일상||It's/*up to you.|너한테 달렸어.|너한테 달렸어|너에게 달린|your choice|그것은
+초|일상||*Help yourself.|마음껏 드세요.|마음껏 드세요|마음껏 먹다/쓰다|take what you want
+초|일상||*Bless you!|(재채기 후) 몸조심해!|몸조심해|재채기한 사람에게 하는 말|said after a sneeze
+초|일상||*Cheer up!|힘내!|힘내|기운 내다|be happier
+초|일상||Let's/*call it a night.|오늘은 여기까지 하자.|여기까지 하자|(밤에) 그만 마치다|to stop for the night|~하자
+초|일상||I'm/*so tired/today.|오늘 너무 피곤해.|너무 피곤해|너무 피곤한|very tired|나는;오늘
+초|일상||It's/*freezing/outside.|밖이 엄청 추워.|엄청 추워|꽁꽁 얼 듯 추운|very cold|그것은;밖에
+초|일상||It's/*pouring.|비가 쏟아져.|쏟아져|비가 퍼붓다|raining hard|그것은
+초|일상||I'm/*soaked.|흠뻑 젖었어.|흠뻑 젖었어|흠뻑 젖은|very wet|나는
+초|일상||I/*need a break.|좀 쉬어야겠어.|쉬어야겠어|휴식이 필요하다|to need rest|나는
+초|일상||I'm/*stuffed.|배불러.|배불러|배가 꽉 찬|very full|나는
+초|일상||*Grab a seat.|앉아.|앉아|자리에 앉다|sit down
+초|일상||*Hurry up!/We're late.|서둘러! 우리 늦었어.|서둘러|서두르다|be quick|우리 늦었어
+초|일상||I/*forgot/my wallet.|지갑을 깜빡했어.|깜빡했어|잊다|forgot|나는;내 지갑
+초|일상||Where's/the/*restroom?|화장실이 어디예요?|화장실|화장실|toilet|~은 어디예요;그
+초|일상||Can I/*get/some water?|물 좀 주실래요?|주실래요|받다, 얻다|to have|~해도 돼요?;물 좀
+초|일상||I'm/*allergic to/peanuts.|땅콩 알레르기가 있어요.|알레르기가 있어요|~에 알레르기가 있는|allergic|나는;땅콩
+초|일상||What do you/*do/for a living?|무슨 일 하세요?|무슨 일 하세요|(직업으로) 하다|to work as|당신은 무엇을;생계를 위해
+초|일상||I/*live/in Seoul.|서울에 살아요.|살아요|살다|to live|나는;서울에
+초|일상||I'm/*from/Busan.|부산 출신이에요.|출신이에요|~ 출신인|coming from|나는;부산
+초|일상||How/*old/are you?|몇 살이에요?|몇 살|나이가 ~인|age|얼마나;당신은
+초|일상||I'm/*into/K-pop.|케이팝에 빠져 있어.|빠져 있어|~에 빠진, 좋아하는|interested in|나는;케이팝
+초|일상||I'm/*not a fan of/horror movies.|공포 영화는 별로 안 좋아해.|별로 안 좋아해|~을 좋아하지 않는|don't like|나는;공포 영화
+초|일상||It's/*my treat.|내가 살게.|내가 살게|내가 내는 것|I'll pay|그것은
+초|일상||*Let's split/the bill.|나눠서 내자.|나눠서 내자|나누다|to divide|계산서
+초|일상||I'm/*broke.|나 빈털터리야.|빈털터리야|돈이 없는|have no money|나는
+초|일상||*Make yourself/at home.|편하게 있어.|편하게|편하게 지내다|relax|집처럼
+초|일상||I'm/*home!|나 왔어!|왔어|집에 온|back home|나는
+초|일상||*Sleep tight.|잘 자.|잘 자|푹 자다|sleep well
+초|일상||Did you/*sleep well?|잘 잤어?|잘 잤어|잘 자다|rest well|너는 ~했니
+초|일상||I/*woke up/late.|늦게 일어났어.|일어났어|잠에서 깨다|stop sleeping|나는;늦게
+초|일상||I'm/*getting ready.|준비하고 있어.|준비하고 있어|준비하다|preparing|나는
+초|일상||I'm/*running late.|좀 늦어.|늦어|늦어지고 있는|behind time|나는
+초|일상||The bus/is/*packed.|버스가 꽉 찼어.|꽉 찼어|꽉 찬|very crowded|그 버스는;~이다
+초|일상||My phone/is/*dead.|휴대폰 배터리가 나갔어.|나갔어|(배터리가) 다 된|out of battery|내 휴대폰은;~이다
+초|일상||Can you/*turn up/the volume?|소리 좀 키워 줄래?|키워|(소리를) 키우다|to increase|~해 줄래;음량
+초|일상||*Turn off/the lights.|불 꺼.|꺼|끄다|to switch off|불
+초|일상||I'm/*in a hurry.|나 급해.|급해|서두르는|rushed|나는
+초|일상||*It depends.|상황에 따라 달라.|상황에 따라 달라|~에 따라 다르다|it varies
+초|일상||I/*totally agree.|완전 동의해.|완전 동의해|완전히 동의하다|agree completely|나는
+초|일상||*Me neither.|나도 아니야.|나도 아니야|나도 (안 그래)|not me either
+초|일상||*Not really.|별로.|별로|그다지 아닌|not much
+초|일상||*Of course!|물론이지!|물론이지|물론|certainly
+초|일상||*Never mind.|신경 쓰지 마. / 됐어.|됐어|신경 쓰지 마|forget it
+초|일상||*You're welcome.|천만에요.|천만에요|천만에요|no problem
+초|일상||*Why not?|왜 안 돼? / 좋아!|좋아|안 될 거 없지|sure
+초|일상||I'm/*kind of/busy.|좀 바빠.|좀|약간|a little|나는;바쁜
+초|일상||It/*looks good/on you.|너한테 잘 어울려.|잘 어울려|잘 어울리다|suits you|그것은;너에게
+초|일상||I/*love it!|완전 마음에 들어!|마음에 들어|아주 좋아하다|really like|나는
+초|일상||*Guess what!|있잖아!|있잖아|있잖아, 맞혀 봐|listen to this
+초|일상||I'm/*all ears.|잘 듣고 있어.|잘 듣고 있어|귀 기울이는|listening carefully|나는
+초|일상||*Go ahead.|그렇게 해. / 먼저 해.|그렇게 해|하세요, 먼저 하세요|you may start
+초|일상||*After you.|먼저 가세요.|먼저 가세요|먼저 하세요|you go first
+초|일상||I'll/*pass.|난 빠질게.|빠질게|사양하다|to decline|나는 ~할게
+초|일상||*That's it!|바로 그거야!|바로 그거야|그거야, 끝이야|exactly
+초|일상||*Here you go.|여기 있어요.|여기 있어요|여기 있어요|take this
+초|일상||*Keep the change.|잔돈은 가지세요.|잔돈은 가지세요|잔돈 가지다|don't return the change
+초|일상||It's/*on sale.|세일 중이에요.|세일 중이에요|할인 중인|discounted|그것은
+초|일상||I'm/*just looking.|그냥 보는 거예요.|그냥 보는 거예요|그냥 구경하는|only browsing|나는
+초|일상||How much/*is it?|이거 얼마예요?|얼마예요|~이다|costs|얼마나 많이
+초|일상||Can I/*try it on?|입어 봐도 돼요?|입어 봐도|입어 보다|to wear to test|~해도 돼요?
+초|일상||Do you/*take/cards?|카드 받아요?|받아요|받다|to accept|당신은 ~하나요;카드
+초|일상||I'll/*take it.|이걸로 살게요.|살게요|사다, 고르다|to buy|나는 ~할게요

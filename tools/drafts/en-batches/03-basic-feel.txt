@@ -1,0 +1,81 @@
+# 초급 · 감정 / 연애 / 집 / 연락
+초|감정||I'm/*so happy/for you.|정말 잘됐다.|잘됐다|정말 기쁜|very glad|나는;너를 위해
+초|감정||I'm/*bored/to death.|심심해 죽겠어.|심심해|지루한|not interested|나는;죽을 만큼
+초|감정||I'm/*nervous/about tomorrow.|내일 일 때문에 긴장돼.|긴장돼|긴장한|worried|나는;내일에 대해
+초|감정||I'm/*proud of/you.|네가 자랑스러워.|자랑스러워|~가 자랑스러운|pleased with|나는;너
+초|감정||I'm/*scared of/spiders.|거미가 무서워.|무서워|~을 무서워하는|afraid of|나는;거미
+초|감정||I/*feel bad/about it.|그거 미안하게 생각해.|미안하게|미안한 마음이 들다|feel sorry|나는;그것에 대해
+초|감정||I'm/*in a good mood.|기분이 좋아.|기분이 좋아|기분이 좋은|happy|나는
+초|감정||I'm/*not in the mood.|그럴 기분 아니야.|기분 아니야|~할 기분이 아닌|don't feel like it|나는
+초|감정||*That's annoying.|짜증 나네.|짜증 나네|짜증 나는|irritating
+초|감정||I'm/*jealous.|부러워.|부러워|질투 나는, 부러운|envious|나는
+초|감정||I'm/*so embarrassed.|너무 창피해.|창피해|창피한|ashamed|나는
+초|감정||I'm/*upset.|속상해.|속상해|속상한|unhappy|나는
+초|감정||I/*miss you.|보고 싶어.|보고 싶어|그리워하다|want to see|나는
+초|감정||I'm/*so excited!|너무 신나!|신나|신난|thrilled|나는
+초|감정||That's/*hilarious!|진짜 웃기다!|웃기다|아주 웃긴|very funny|그건
+초|감정||I'm/*so sorry/to hear that.|그 얘기 들으니 정말 안됐다.|정말 안됐다|정말 유감인|very sad|나는;그걸 듣게 돼서
+초|감정||I'm/*relieved.|안심이야.|안심이야|안도한|no longer worried|나는
+초|감정||*What a relief!|다행이다!|다행이다|정말 다행|so good to hear
+초|감정||I'm/*fed up.|진절머리 나.|진절머리 나|질린, 지긋지긋한|tired of it|나는
+초|감정||*I'm done.|나 이제 끝이야. / 그만할래.|그만할래|끝났어, 그만할래|I quit
+초|감정||I'm/*worried about/you.|네가 걱정돼.|걱정돼|~가 걱정되는|concerned for|나는;너
+초|감정||*Don't be sad.|슬퍼하지 마.|슬퍼하지 마|슬퍼하지 마|don't be unhappy
+초|감정||You/*made my day!|너 덕분에 오늘 최고야!|오늘 최고야|하루를 기쁘게 만들다|made me happy|너는
+초|감정||I/*hate/Mondays.|월요일 정말 싫어.|싫어|몹시 싫어하다|dislike|나는;월요일
+초|감정||I'm/*so done with/this.|이거 이제 질렸어.|질렸어|~에 질린|tired of|나는;이것
+초|연애|연애|I/*have a crush on/him.|그 사람한테 반했어.|반했어|~에게 반하다|to like someone|나는;그
+초|연애|연애|Are you/*seeing someone?|만나는 사람 있어?|만나는 사람|누군가를 만나다(사귀다)|dating someone|너는 ~하니
+초|연애|연애|*Will you/go out with me?|나랑 사귈래?|사귈래|~해 줄래?|would you|나와 사귀다
+초|연애|연애|We/*broke up.|우리 헤어졌어.|헤어졌어|헤어지다|ended the relationship|우리는
+초|연애|연애|I/*love you/so much.|정말 사랑해.|사랑해|사랑하다|to love|나는;너무 많이
+초|연애|연애|You're/*so cute.|너 너무 귀여워.|귀여워|귀여운|adorable|너는
+초|연애|연애|*I like you.|너 좋아해.|좋아해|너를 좋아해|I'm fond of you
+초|연애|연애|Let's/*go on a date.|데이트하자.|데이트하자|데이트하다|to date|~하자
+초|연애|연애|I'm/*single.|나 싱글이야.|싱글이야|애인이 없는|not dating|나는
+초|연애|연애|*Miss you/already.|벌써 보고 싶다.|보고 싶다|보고 싶어|I miss you|벌써
+초|집||*Dinner's ready!|저녁 다 됐어!|저녁 다 됐어|저녁이 준비됐어|food is done
+초|집||Can you/*do the dishes?|설거지 좀 해 줄래?|설거지|설거지하다|wash plates|~해 줄래
+초|집||I/*took out/the trash.|쓰레기 버렸어.|버렸어|내다 버리다|threw away|나는;쓰레기
+초|집||*Clean up/your room.|방 좀 치워.|치워|치우다|tidy|네 방
+초|집||I'm/*going to bed.|자러 갈게.|자러 갈게|자러 가다|go to sleep|나는
+초|집||Can you/*pick me up?|나 데리러 와 줄래?|데리러 와|데리러 오다|collect me|~해 줄래
+초|집||*Wake me up/at seven.|7시에 깨워 줘.|깨워 줘|깨우다|stop my sleep|7시에
+초|집||Who's/*cooking/tonight?|오늘 저녁 누가 요리해?|요리해|요리하다|making food|누가;오늘 밤
+초|집||Let's/*order in.|배달시키자.|배달시키자|배달 주문하다|get delivery|~하자
+초|집||The/*fridge/is empty.|냉장고가 텅 비었어.|냉장고|냉장고|refrigerator|그;비어 있다
+초|집||I/*did the laundry.|빨래했어.|빨래했어|빨래하다|washed clothes|나는
+초|집||*Lock the door.|문 잠가.|문 잠가|문을 잠그다|close with a key
+초|집||*Feel better!|빨리 나아!|빨리 나아|나아지다|get well
+초|집||I/*have a cold.|감기 걸렸어.|감기 걸렸어|감기에 걸리다|sick|나는
+초|집||I/*have a headache.|머리가 아파.|머리가 아파|두통이 있다|head hurts|나는
+초|연락||*Text me/when you get home.|집에 도착하면 문자해.|문자해|문자 보내다|message me|집에 도착하면
+초|연락||I'll/*call you/later.|나중에 전화할게.|전화할게|너에게 전화하다|phone you|나는 ~할게;나중에
+초|연락||*Who's calling?|누구세요? (전화)|누구세요|누가 전화했어요|who is it
+초|연락||Can I/*speak to/Jenny?|제니랑 통화할 수 있을까요?|통화할 수|~와 통화하다|talk with|~해도 돼요?;제니
+초|연락||*Hold on,/please.|잠시만 기다려 주세요.|잠시만 기다려|기다리다|wait|부탁해요
+초|연락||*Sorry,/wrong number.|죄송해요, 잘못 걸었어요.|죄송해요|죄송해요|apologies|잘못 건 번호
+초|연락||You're/*breaking up.|소리가 끊겨.|끊겨|(통화가) 끊기다|the sound cuts|너는
+초|연락||I'll/*text you/the address.|주소 문자로 보낼게.|문자로 보낼게|문자 보내다|message|나는 ~할게;그 주소
+초|연락||*Call me back.|다시 전화해 줘.|다시 전화해|다시 전화하다|return my call
+초|연락||I/*missed/your call.|전화 못 받았어.|못 받았어|놓치다|didn't answer|나는;네 전화
+초|연락||*Keep in touch!|연락하고 지내!|연락하고 지내|계속 연락하다|stay connected
+초|연락||*Talk soon!|또 얘기하자!|또 얘기하자|곧 또 얘기해|bye for now
+초|일상||It's/*getting dark.|어두워지고 있어.|어두워지고|어두워지는|becoming dark|그것은
+초|일상||*What a day!|정말 힘든 하루였어!|힘든 하루|정말 대단한 하루|such a day
+초|일상||I'm/*hungry/again.|또 배고파.|배고파|배고픈|want food|나는;또
+초|일상||*Let's go!|가자!|가자|가자|let us leave
+초|일상||I'm/*almost there.|거의 다 왔어.|거의 다 왔어|거의 도착한|nearly arrived|나는
+초|일상||*Wait for me!|나 기다려!|기다려|나를 기다려|don't leave
+초|일상||*Be careful!|조심해!|조심해|조심해|watch out
+초|일상||Is everything/*okay?|다 괜찮아?|괜찮아|괜찮은|fine|모든 게 ~이니
+초|일상||It's/*not my fault.|내 잘못 아니야.|내 잘못 아니야|내 잘못이 아닌|not my mistake|그것은
+초|일상||*Trust me.|날 믿어.|날 믿어|나를 믿다|believe me
+초|일상||*Let me help.|도와줄게.|도와줄게|내가 돕게 해 줘|I'll assist
+초|일상||I/*owe you one.|신세 졌어.|신세 졌어|빚을 지다|I'll repay you|나는
+초|일상||*Fingers crossed!|행운을 빌어!|행운을 빌어|행운을 빌다|hope for luck
+초|일상||It's/*a piece of cake.|식은 죽 먹기야.|식은 죽 먹기|아주 쉬운 일|very easy|그것은
+초|일상||*Time flies!|시간 빠르다!|시간 빠르다|시간이 빨리 가다|time goes fast
+초|일상||I'm/*all set.|준비 다 됐어.|준비 다 됐어|준비가 다 된|ready|나는
+초|일상||*Let's do this!|해 보자!|해 보자|이걸 해 보자|let's start
+초|일상||*Good luck!|행운을 빌어!|행운을 빌어|행운|best wishes

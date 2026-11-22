@@ -1,0 +1,47 @@
+# 고급 · 여러 상황
+고|카페·식당||Could you/*hold the onions/and add extra cheese, please?|양파는 빼고 치즈는 추가해 주시겠어요?|양파는 빼고|양파를 빼다|leave out onions|~해 주시겠어요;그리고 치즈 추가, 부탁해요
+고|카페·식당||I'm/*trying to cut back on/caffeine, so I'll have decaf.|카페인을 줄이려고 해서 디카페인으로 할게요.|줄이려고 해서|~을 줄이려고 하다|reduce|나는;카페인, 그래서 디카페인으로 할게요
+고|카페·식당||The service here/*leaves a lot to be desired,/honestly.|솔직히 여기 서비스는 아쉬운 점이 많아.|아쉬운 점이 많아|부족한 점이 많다|is not good|여기 서비스는;솔직히
+고|카페·식당||We/*had to wait/almost an hour for a table.|자리 나려고 거의 한 시간을 기다려야 했어.|기다려야 했어|기다려야 했다|needed to wait|우리는;자리를 위해 거의 한 시간
+고|카페·식당||Would you mind/*splitting the bill/three ways?|계산서를 셋으로 나눠 주실 수 있을까요?|셋으로 나눠|계산을 나누다|divide the check|~해 주실 수 있을까요;세 사람으로
+고|카페·식당||This/*is hands down/the best ramen I've ever had.|이건 단연코 내가 먹어 본 라멘 중 최고야.|단연코|의심할 여지 없이|definitely|이것은;내가 먹어 본 최고의 라멘
+고|쇼핑||I/*was going to buy it,/but it was out of stock.|사려고 했는데 재고가 없었어.|사려고 했는데|사려고 했다|planned to buy|나는;그런데 재고가 없었어
+고|쇼핑||It's/*not worth paying extra/for the brand name.|브랜드 이름값으로 돈을 더 낼 가치는 없어.|돈을 더 낼 가치는 없어|더 낼 가치가 없다|not worth more money|그것은;브랜드 이름을 위해
+고|쇼핑||I/*ordered it online,/but it still hasn't arrived.|온라인으로 주문했는데 아직 안 왔어.|온라인으로 주문했는데|온라인으로 주문하다|bought on the internet|나는;그런데 아직 도착하지 않았어
+고|쇼핑||I'd/*like to exchange this/for a different color.|이거 다른 색으로 교환하고 싶어요.|교환하고 싶어요|교환하고 싶다|swap|저는 ~하고 싶어요;다른 색으로
+고|쇼핑||They/*were giving away/free samples at the entrance.|입구에서 무료 샘플을 나눠 주고 있었어.|나눠 주고 있었어|무료로 나눠 주다|handing out|그들은;입구에서 무료 샘플을
+고|병원||I've/*had this cough/for over two weeks now.|기침이 2주 넘게 계속되고 있어요.|기침이|이 기침을 앓다|been coughing|저는 ~해 왔어요;지금까지 2주 넘게
+고|병원||The doctor/*told me to/get plenty of rest and drink water.|의사가 푹 쉬고 물을 많이 마시라고 했어요.|마시라고 했어요|~하라고 말하다|advised|의사가;충분히 쉬고 물을 마시다
+고|병원||I/*think I'm coming down with/something, so I'll go home.|뭔가 걸린 것 같아서 집에 갈게.|걸린 것 같아서|(병에) 걸리려 하다|getting sick|나는;뭔가, 그래서 집에 갈게
+고|병원||You/*should get it checked out/as soon as possible.|가능한 한 빨리 검사받아 봐.|검사받아 봐|검사를 받다|see a doctor|너는 ~해야 해;가능한 한 빨리
+고|병원||I/*couldn't get an appointment/until next Thursday.|다음 주 목요일까지 예약을 못 잡았어요.|예약을 못 잡았어요|예약을 잡다|book a time|저는;다음 주 목요일까지
+고|일상||I/*have a feeling/it's going to snow tonight.|오늘 밤에 눈이 올 것 같은 예감이 들어.|예감이 들어|~할 것 같은 느낌이 들다|sense|나는;오늘 밤 눈이 올 것
+고|일상||I'd/*better leave now/if I want to catch the last bus.|막차 타려면 지금 나가는 게 좋겠어.|지금 나가는 게 좋겠어|~하는 게 좋겠다|should go now|나는;막차를 타고 싶다면
+고|일상||I/*spent the whole weekend/binge-watching a new series.|주말 내내 새 드라마를 몰아 봤어.|주말 내내|주말 전부를 보내다|used all weekend|나는;새 시리즈를 몰아 보며
+고|일상||I/*can't decide whether/to cut my hair short or not.|머리를 짧게 자를지 말지 결정을 못 하겠어.|결정을 못 하겠어|~할지 결정하지 못하다|unsure if|나는;머리를 짧게 자를지 말지
+고|일상||Once you/*get the hang of it,/it's actually pretty easy.|요령만 익히면 사실 꽤 쉬워.|요령만 익히면|요령을 익히다|learn how|일단 네가;사실 꽤 쉬워
+고|일상||I/*tend to/procrastinate when I'm stressed out.|난 스트레스받으면 일을 미루는 경향이 있어.|경향이 있어|~하는 경향이 있다|usually|나는;스트레스받을 때 미루다
+고|일상||There's/*no point in/arguing about something so small.|그렇게 사소한 걸로 다툴 필요 없어.|다툴 필요 없어|~해 봐야 소용없다|useless to|~이 있다;그렇게 사소한 걸로 다투는 것
+고|일상||I/*was just about to/text you when you called.|네가 전화했을 때 막 문자하려던 참이었어.|막 문자하려던 참이었어|막 ~하려던 참이다|almost did|나는;네가 전화했을 때 문자하다
+고|일상||I/*wouldn't have made it/without your help.|네 도움 없었으면 못 해냈을 거야.|못 해냈을 거야|해내지 못했을 것이다|couldn't succeed|나는;네 도움 없이
+고|일상||I'm/*not sure it's a good idea/to go out in this storm.|이 폭풍에 나가는 건 좋은 생각 같지 않아.|좋은 생각 같지 않아|좋은 생각인지 모르겠다|doubt it|나는;이 폭풍 속에 나가는 것
+고|일상||The neighbors/*kept me up/all night with their party.|이웃들 파티 때문에 밤새 잠을 못 잤어.|잠을 못 잤어|잠 못 자게 하다|kept me awake|이웃들이;그들의 파티로 밤새
+고|일상||I/*figured out/how to fix the Wi-Fi by myself.|와이파이 고치는 방법을 혼자 알아냈어.|알아냈어|알아내다|discovered|나는;혼자 와이파이 고치는 방법
+고|일상||I/*almost forgot/that today is my mom's birthday.|오늘이 엄마 생신이라는 걸 깜빡할 뻔했어.|깜빡할 뻔했어|거의 잊을 뻔하다|nearly forgot|나는;오늘이 엄마 생일이라는 것
+고|일상||I'm/*considering/adopting a dog from the shelter.|보호소에서 강아지를 입양할까 생각 중이야.|생각 중이야|고려하다|thinking about|나는;보호소에서 강아지를 입양하는 것
+고|감정||I/*was really touched/by how many people showed up.|많은 사람이 와 줘서 정말 감동받았어.|정말 감동받았어|감동받다|moved|나는;얼마나 많은 사람이 왔는지에
+고|감정||I/*hate to admit it,/but you were right all along.|인정하긴 싫지만 처음부터 네가 맞았어.|인정하긴 싫지만|인정하기 싫지만|reluctantly|나는;하지만 너는 처음부터 옳았어
+고|감정||I/*feel terrible about/forgetting your birthday.|네 생일을 잊어서 정말 미안해.|정말 미안해|~에 대해 미안하다|very sorry|나는;네 생일을 잊은 것
+고|감정||It/*drives me crazy/when people talk during movies.|영화 보는데 사람들이 떠들면 미쳐 버릴 것 같아.|미쳐 버릴 것 같아|미치게 하다|annoys me|그것은;사람들이 영화 중에 떠들 때
+고|감정||I/*can't stop worrying about/the interview tomorrow.|내일 면접 걱정을 멈출 수가 없어.|걱정을 멈출 수가 없어|계속 걱정하다|keep worrying|나는;내일 면접
+고|감정||I'm/*so grateful for/everything you've done for me.|네가 해 준 모든 것에 정말 감사해.|정말 감사해|~에 감사하는|thankful for|나는;네가 나를 위해 해 준 모든 것
+고|감정||I/*was close to tears/when I read your letter.|네 편지를 읽고 눈물이 날 뻔했어.|눈물이 날 뻔했어|울기 직전인|almost crying|나는;네 편지를 읽었을 때
+고|감정||It/*makes me nervous/when I have to speak in public.|사람들 앞에서 말해야 하면 긴장돼.|긴장돼|긴장하게 만들다|makes me anxious|그것은;사람들 앞에서 말해야 할 때
+고|회사||I'd/*like to take a moment to/thank everyone for their hard work.|잠시 모두의 노고에 감사드리고 싶습니다.|잠시|잠시 ~하고 싶다|briefly|나는;모두의 노고에 감사하다
+고|회사||We're/*running out of time,/so let's focus on the main issue.|시간이 얼마 없으니 핵심 문제에 집중하죠.|시간이 얼마 없으니|시간이 다 떨어지다|have little time|우리는;그러니 핵심 문제에 집중하자
+고|회사||I'm/*happy to help/if you need anything else.|더 필요한 게 있으면 기꺼이 도와드릴게요.|기꺼이 도와드릴게요|기꺼이 돕다|glad to assist|나는;다른 게 필요하면
+고|회사||Please/*let me know/if there's anything I can do.|제가 할 수 있는 게 있으면 알려 주세요.|알려 주세요|알려 주다|tell me|부탁해요;제가 할 수 있는 게 있다면
+고|회사||We/*managed to/finish the project ahead of schedule.|우린 예정보다 일찍 프로젝트를 끝낼 수 있었어요.|끝낼 수 있었어요|가까스로 ~하다|succeeded in|우리는;예정보다 일찍 프로젝트를 끝내다
+고|학교||I/*wish I had paid more attention/in high school.|고등학교 때 더 집중할 걸 그랬어.|더 집중할 걸 그랬어|더 집중했으면 좋았을 텐데|regret not focusing|나는;고등학교에서
+고|학교||It's/*easier said than done,/but try to speak every day.|말처럼 쉽진 않지만 매일 말해 보려고 해 봐.|말처럼 쉽진 않지만|말은 쉽지만 하기는 어렵다|hard in practice|그것은;하지만 매일 말해 보려고 해 봐
+고|학교||I/*finally understood/what the teacher was trying to say.|선생님이 하려던 말을 드디어 이해했어.|드디어 이해했어|드디어 이해하다|got it at last|나는;선생님이 말하려던 것

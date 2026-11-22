@@ -1,0 +1,31 @@
+# 마지막 30개
+중|집||Can you/*help me carry/the groceries inside?|장 본 거 안으로 옮기는 것 좀 도와줄래?|옮기는 것 좀 도와줄래|나르는 걸 돕다|help move|~해 줄래;장 본 걸 안으로
+중|집||I/*forgot to turn off/the air conditioner.|에어컨 끄는 걸 깜빡했어.|끄는 걸 깜빡했어|끄는 걸 잊다|didn't switch off|나는;에어컨
+중|집||It's/*your turn to/walk the dog.|이번엔 네가 개 산책시킬 차례야.|산책시킬 차례야|~할 차례|time for you to|그것은;개를 산책시키다
+중|집||I'm/*going to stay in/tonight.|오늘 밤엔 집에 있을 거야.|집에 있을 거야|집에 있다|stay home|나는;오늘 밤
+중|집||Who/*left the lights on/all night?|누가 밤새 불을 켜 놨어?|불을 켜 놨어|불을 켜 두다|didn't turn off|누가;밤새
+중|연락||I'll/*give you a call/when I land.|착륙하면 전화할게.|전화할게|전화하다|phone you|나는;내가 착륙하면
+중|연락||Sorry,/I/*was in the shower/when you called.|미안, 네가 전화했을 때 샤워 중이었어.|샤워 중이었어|샤워 중이었다|washing|미안;나는;네가 전화했을 때
+중|연락||Let me know/*as soon as/you get there.|도착하자마자 알려 줘.|도착하자마자|~하자마자|right when|알려 줘;네가 거기 도착하다
+중|약속||I/*might be a little late,/so go ahead without me.|좀 늦을 수도 있으니까 나 없이 먼저 해.|좀 늦을 수도 있으니까|조금 늦을지도 모르는|maybe late|나는;그러니 나 없이 먼저 해
+중|약속||Is it okay/if we/*push it back/an hour?|한 시간 미뤄도 괜찮아?|미뤄도|미루다|delay|괜찮아;우리가 ~하면;한 시간
+중|약속||We're/*meeting up/at the café at five.|5시에 카페에서 만나기로 했어.|만나기로 했어|만나다|getting together|우리는;5시에 카페에서
+중|병원||I/*need to make an appointment/with a dentist.|치과 예약을 해야 해.|예약을 해야|예약을 하다|book a visit|나는;치과 의사와
+중|병원||My back/*has been killing me/all week.|일주일 내내 허리가 너무 아파.|너무 아파|몹시 아프게 하다|hurting a lot|내 허리가;일주일 내내
+중|쇼핑||They/*gave me a discount/because it was damaged.|흠이 있어서 할인해 줬어.|할인해 줬어|할인해 주다|lowered the price|그들은;그게 손상돼 있어서
+중|카페·식당||I'll/*have what she's having.|저 사람이 먹는 걸로 주세요.|먹는 걸로 주세요|같은 것을 먹다|order the same|나는 ~할게
+고|일상||I/*wish I had known/about this place sooner.|여길 더 일찍 알았으면 좋았을 텐데.|더 일찍 알았으면 좋았을 텐데|알았더라면 좋았을 텐데|regret not knowing|나는;이곳에 대해 더 빨리
+고|일상||I'm/*not in the habit of/eating breakfast, to be honest.|솔직히 아침 먹는 습관은 없어.|습관은 없어|~하는 습관이 있는|usually do|나는 아니다;아침을 먹는 것, 솔직히
+고|일상||It/*took a lot of effort/to get everything ready on time.|제시간에 다 준비하느라 정말 애썼어.|정말 애썼어|많은 노력이 들다|was hard work|그것은;제시간에 모든 걸 준비하는 데
+고|감정||I'm/*starting to feel/more confident about my English.|영어에 점점 자신감이 생기기 시작했어.|자신감이 생기기 시작했어|~한 느낌이 들기 시작하다|beginning to feel|나는;내 영어에 대해 더 자신 있는
+고|감정||I/*never thought I'd say this,/but I actually miss school.|이런 말 할 줄 몰랐는데 사실 학교가 그리워.|이런 말 할 줄 몰랐는데|이런 말을 할 줄 몰랐다|surprising to say|나는;하지만 사실 학교가 그리워
+고|회사||I'd/*like to clarify/a few points before we move on.|넘어가기 전에 몇 가지를 분명히 하고 싶어요.|분명히 하고 싶어요|분명히 하다|make clear|저는;넘어가기 전에 몇 가지
+고|회사||Please/*don't hesitate to/reach out if you have questions.|질문 있으시면 주저하지 말고 연락 주세요.|주저하지 말고|주저하지 말고 ~하다|feel free to|부탁해요;질문이 있으면 연락하다
+고|학교||I'm/*finally starting to/understand English movies without subtitles.|드디어 자막 없이 영어 영화를 이해하기 시작했어.|이해하기 시작했어|마침내 ~하기 시작하다|beginning to|나는;자막 없이 영어 영화를 이해하다
+고|여행||We're/*planning to/go backpacking across Europe next summer.|내년 여름에 유럽 배낭여행 갈 계획이야.|계획이야|~할 계획이다|intend to|우리는;내년 여름 유럽을 배낭여행하다
+고|여행||The hotel staff/*went out of their way/to help us.|호텔 직원들이 일부러 애써서 우리를 도와줬어.|일부러 애써서|일부러 수고를 하다|made extra effort|호텔 직원들은;우리를 돕기 위해
+고|연애|연애|I'm/*willing to/wait as long as it takes for you.|널 위해서라면 얼마든지 기다릴 수 있어.|얼마든지 기다릴 수 있어|기꺼이 ~하다|ready to|나는;너를 위해 걸리는 만큼 기다리다
+고|일상|드라마·영화|*If I were you,/I'd tell her how you feel right now.|내가 너라면 지금 당장 그녀한테 마음을 말할 거야.|내가 너라면|내가 너라면|in your place|지금 당장 그녀에게 네 마음을 말할 거야
+고|일상|슬랭|That's/*such a mood/after a long day at work.|일 끝나고 지친 날엔 완전 공감 그 자체야.|완전 공감 그 자체야|완전 공감되는 기분|so relatable|그건;회사에서 긴 하루를 보낸 후
+고|일상||I'd/*better write it down/before I forget.|잊어버리기 전에 적어 두는 게 좋겠어.|적어 두는 게 좋겠어|적어 두는 게 좋겠다|should note it|나는;잊기 전에
+고|감정||I'll/*never forget/how kind you were to me that day.|그날 네가 얼마나 친절했는지 절대 못 잊을 거야.|절대 못 잊을 거야|절대 잊지 않다|always remember|나는;그날 네가 나에게 얼마나 친절했는지

@@ -1,0 +1,28 @@
+# 인도네시아어 ~30
+초|일상||*Selamat pagi!|좋은 아침이에요!|좋은 아침이에요|좋은 아침|good morning
+초|일상||*Apa kabar?|잘 지내요?|잘 지내요|어떻게 지내요?|how are you
+초|일상||*Baik,/terima kasih.|잘 지내요, 고마워요.|잘 지내요|좋다|fine|고마워요
+초|일상||*Senang bertemu/dengan Anda.|만나서 반가워요.|만나서 반가워요|만나서 기쁘다|nice to meet|당신과
+초|일상||*Sampai jumpa!|또 만나요!|또 만나요|다시 만날 때까지|see you
+초|일상||*Maaf.|미안해요.|미안해요|미안|sorry
+초|일상||Saya/*tidak mengerti.|이해가 안 돼요.|이해가 안 돼요|이해하지 못하다|don't understand|나는
+초|일상||Toilet/*di mana?|화장실이 어디예요?|어디|어디에|where|화장실
+초|일상||Saya/*lapar.|배고파요.|배고파요|배고픈|hungry|나는
+초|일상||Saya/*capek.|피곤해요.|피곤해요|피곤한|tired|나는
+초|카페·식당||*Minta/satu kopi.|커피 하나 주세요.|주세요|부탁하다|please give|커피 하나
+초|카페·식당||*Minta bon,/ya.|계산서 주세요.|계산서|계산서를 부탁하다|the bill|~요
+초|카페·식당||*Enak sekali!|정말 맛있어요!|정말 맛있어요|아주 맛있다|very tasty
+초|쇼핑||Ini/*berapa?|이거 얼마예요?|얼마예요|얼마|how much|이것
+초|쇼핑||*Mahal sekali!|너무 비싸요!|너무 비싸요|아주 비싸다|very expensive
+초|감정||*Aku kangen kamu.|보고 싶어.|보고 싶어|너를 그리워하다|I miss you
+초|감정||*Aku sayang kamu.|사랑해.|사랑해|너를 아끼다|I love you
+중|일상||Saya/*sedang di jalan.|가는 중이에요.|가는 중이에요|길 위에 있는 중|on the way|나는
+중|일상||*Saya lupa/bawa kunci.|열쇠 가져오는 걸 잊었어요.|잊었어요|나는 잊었다|I forgot|열쇠를 가져오다
+중|일상||*Terserah/kamu.|너 마음대로 해.|마음대로 해|~에게 달렸다|up to|너
+중|일상||Saya/*baru saja/sampai rumah.|방금 집에 도착했어요.|방금|방금|just now|나는;집에 도착하다
+중|카페·식당||*Jangan terlalu pedas,/ya.|너무 맵지 않게 해 주세요.|너무 맵지 않게|너무 맵지 않게|not too spicy|~요
+중|쇼핑||*Bisa kurang/sedikit?|조금 깎아 줄 수 있어요?|깎아 줄 수|덜 할 수 있나|lower possible|조금
+중|감정||*Aku bosan/banget.|진짜 심심해.|심심해|지루한|bored|진짜
+고|일상||*Kalau tahu dari awal,/saya/pasti datang/lebih cepat.|처음부터 알았으면 분명 더 일찍 왔을 거예요.|처음부터 알았으면|처음부터 알았다면|if I'd known|나는;분명히 왔을 것이다;더 빨리
+고|일상||*Semakin sering berlatih,/semakin/mudah.|자주 연습할수록 더 쉬워요.|자주 연습할수록|더 자주 연습할수록|the more you practice|더;쉽다
+고|일상|드라마·영화|*Apa pun yang terjadi,/aku/akan selalu/ada untukmu.|무슨 일이 있어도 나는 항상 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|나는;항상 ~할 것이다;너를 위해 있다

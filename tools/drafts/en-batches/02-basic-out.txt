@@ -1,0 +1,85 @@
+# 초급 · 카페·식당 / 여행 / 쇼핑 / 회사 / 학교
+초|카페·식당||Can I/*have/a latte?|라떼 한 잔 주세요.|주세요|주문하다, 먹다|to order|~해도 돼요?;라떼 한 잔
+초|카페·식당||I'd/*like/a table for two.|두 명 자리 부탁해요.|부탁해요|~을 원하다|to want|나는 ~할 것이다;두 명 자리
+초|카페·식당||*For here/or to go?|드시고 가세요, 가져가세요?|드시고 가세요|매장에서 (먹다)|eat in the shop|아니면 포장
+초|카페·식당||*To go,/please.|포장이요.|포장|가지고 가는|take away|부탁해요
+초|카페·식당||Could I/see/the/*menu?|메뉴 좀 볼 수 있을까요?|메뉴|메뉴|list of food|~할 수 있을까요;보다;그
+초|카페·식당||What do you/*recommend?|뭐 추천하세요?|추천하세요|추천하다|to suggest|당신은 무엇을
+초|카페·식당||I'm/*ready to order.|주문할게요.|주문할게요|주문할 준비가 된|prepared to order|나는
+초|카페·식당||*No ice,/please.|얼음 빼 주세요.|얼음 빼|얼음 없이|without ice|부탁해요
+초|카페·식당||*Less sugar,/please.|설탕 적게 해 주세요.|설탕 적게|설탕 적게|not too sweet|부탁해요
+초|카페·식당||Can I/get a/*refill?|리필 돼요?|리필|리필|another serving|~해도 돼요?;받다
+초|카페·식당||*Check,/please.|계산서 주세요.|계산서|계산서|the bill|부탁해요
+초|카페·식당||This/is/*delicious!|이거 정말 맛있어요!|정말 맛있어요|아주 맛있는|very tasty|이것은;~이다
+초|카페·식당||It's/*too spicy/for me.|저한텐 너무 매워요.|너무 매워요|너무 매운|very hot|그것은;저에게는
+초|카페·식당||I'm/*full.|배불러요.|배불러요|배부른|not hungry|나는
+초|카페·식당||Can I/*get this/to go?|이거 포장돼요?|포장돼요|이걸 포장하다|take away|~해도 돼요?;포장으로
+초|카페·식당||Is/*service/included?|봉사료 포함이에요?|봉사료|봉사료|service charge|~인가요;포함된
+초|카페·식당||I'll/*have the same.|저도 같은 걸로요.|같은 걸로요|같은 것을 먹다|order the same|나는 ~할게요
+초|카페·식당||*Cheers!|건배!|건배|건배|said when drinking together
+초|카페·식당||*Enjoy/your meal.|맛있게 드세요.|맛있게 드세요|즐기다|to have fun|식사
+초|카페·식당||Can we/*sit outside?|밖에 앉아도 돼요?|밖에 앉아도|밖에 앉다|sit outdoors|우리 ~해도 돼요?
+초|여행||Where is/the/*subway station?|지하철역이 어디예요?|지하철역|지하철역|metro station|어디예요;그
+초|여행||How do I/*get to/the airport?|공항에 어떻게 가요?|가요|~에 가다|to reach|어떻게;공항
+초|여행||Is it/*far from here?|여기서 멀어요?|여기서 멀어요|여기서 먼|distant|그것이 ~인가요
+초|여행||Can you/*take a picture/of us?|저희 사진 좀 찍어 주실래요?|사진 좀 찍어|사진을 찍다|to photograph|~해 주실래요;저희의
+초|여행||I/*lost/my way.|길을 잃었어요.|잃었어요|잃다|couldn't find|나는;내 길
+초|여행||I/*have a reservation.|예약했어요.|예약했어요|예약이 있다|booked|나는
+초|여행||What time is/*check-out?|체크아웃 몇 시예요?|체크아웃|체크아웃|leaving the hotel|몇 시예요
+초|여행||Can I/*leave/my bags here?|여기 짐 맡겨도 돼요?|맡겨도|두고 가다|to keep|~해도 돼요?;내 짐 여기에
+초|여행||*One ticket/to Busan,/please.|부산행 표 한 장 주세요.|표 한 장|표 한 장|one pass|부산으로;부탁해요
+초|여행||Which/*platform?|몇 번 승강장이에요?|승강장|승강장|train stop area|어느
+초|여행||Does this train/*stop at/Seoul?|이 기차 서울에 서요?|서요|~에 서다|to halt at|이 기차가;서울
+초|여행||I/*missed/my stop.|내릴 곳을 지나쳤어요.|지나쳤어요|놓치다|failed to catch|나는;내 정류장
+초|여행||Where can I/*catch/a taxi?|택시 어디서 타요?|타요|(차를) 잡다|to get|어디서 ~할 수 있나요;택시
+초|여행||*Keep going/straight.|계속 직진하세요.|계속 직진하세요|계속 가다|continue|곧장
+초|여행||*Turn left/at the corner.|모퉁이에서 왼쪽으로 도세요.|왼쪽으로 도세요|왼쪽으로 돌다|go left|모퉁이에서
+초|여행||It's/*just around the corner.|바로 근처예요.|바로 근처예요|아주 가까운|very close|그것은
+초|여행||I'm/*here for/vacation.|휴가로 왔어요.|왔어요|~ 때문에 온|came for|나는;휴가
+초|여행||*How long/are you staying?|얼마나 머무세요?|얼마나|얼마나 오래|how much time|머무세요
+초|여행||Can I/*pay/by card?|카드로 계산돼요?|계산돼요|지불하다|to pay|~해도 돼요?;카드로
+초|여행||I/*need/a map.|지도가 필요해요.|필요해요|필요하다|to want|나는;지도
+초|쇼핑||Do you have/this/*in black?|이거 검은색 있어요?|검은색|검은색으로|in the color black|~있어요;이거
+초|쇼핑||Do you have/a/*smaller size?|더 작은 사이즈 있어요?|더 작은 사이즈|더 작은 사이즈|less big|~있어요;하나
+초|쇼핑||It's/*too tight.|너무 꽉 껴요.|너무 꽉 껴요|너무 꽉 끼는|too small|그것은
+초|쇼핑||It's/*a bit loose.|좀 헐렁해요.|좀 헐렁해요|약간 헐렁한|a little big|그것은
+초|쇼핑||Can I/*get a discount?|할인돼요?|할인돼요|할인받다|lower price|~해도 돼요?
+초|쇼핑||That's/*a good deal.|좋은 가격이네요.|좋은 가격|좋은 거래|cheap price|그건
+초|쇼핑||*It's a steal!|완전 거저네!|거저네|아주 싼 물건|very cheap
+초|쇼핑||Can I/*return/this?|이거 반품돼요?|반품돼요|반품하다|to give back|~해도 돼요?;이거
+초|쇼핑||I'd like/a/*receipt,/please.|영수증 주세요.|영수증|영수증|proof of payment|~을 원해요;하나;부탁해요
+초|쇼핑||Where's the/*fitting room?|탈의실 어디예요?|탈의실|탈의실|changing room|어디예요
+초|쇼핑||It's/*sold out.|품절이에요.|품절이에요|다 팔린|none left|그것은
+초|쇼핑||Do you/*deliver?|배달돼요?|배달돼요|배달하다|to bring to home|당신은 ~하나요
+초|쇼핑||I'll/*think about it.|생각해 볼게요.|생각해 볼게요|~에 대해 생각하다|to consider|나는 ~할게요
+초|쇼핑||*Just this,/please.|이것만 주세요.|이것만|이것만|only this|부탁해요
+초|쇼핑||Can I/get a/*bag?|봉투 하나 주실래요?|봉투|봉투|sack|~해도 돼요?;받다
+초|회사||I'm/*off/today.|오늘 쉬는 날이에요.|쉬는 날|쉬는, 근무 안 하는|not working|나는;오늘
+초|회사||I'm/*in a meeting.|회의 중이에요.|회의 중이에요|회의 중인|busy meeting|나는
+초|회사||Let's/*grab lunch.|점심 먹으러 가요.|점심 먹으러|점심을 간단히 먹다|have lunch|~하자
+초|회사||I'll/*get back to you.|다시 연락드릴게요.|다시 연락드릴게요|나중에 다시 연락하다|reply later|나는 ~할게요
+초|회사||I'm/*working on it.|지금 하고 있어요.|하고 있어요|~을 작업하는|doing it|나는
+초|회사||*Good job!|잘했어요!|잘했어요|잘한 일|well done
+초|회사||I/*finished/the report.|보고서 다 했어요.|다 했어요|끝내다|completed|나는;그 보고서
+초|회사||Can you/*send me/the file?|파일 보내 줄래요?|보내 줄래요|나에게 보내다|email me|~해 줄래요;그 파일
+초|회사||I/*got/the job!|합격했어요!|합격했어요|(일자리를) 얻다|was hired|나는;그 일자리
+초|회사||I/*work from home/on Fridays.|금요일엔 재택근무해요.|재택근무해요|재택근무하다|work at home|나는;금요일마다
+초|회사||I'm/*swamped/today.|오늘 일이 산더미예요.|일이 산더미예요|일에 파묻힌|very busy|나는;오늘
+초|회사||*Any questions?|질문 있나요?|질문 있나요|질문|anything to ask
+초|회사||Let's/*take a break.|잠깐 쉬어요.|쉬어요|휴식을 취하다|rest|~하자
+초|회사||I'm/*leaving/now.|이제 가 볼게요.|가 볼게요|떠나다|going|나는;지금
+초|학교||I/*have a test/tomorrow.|내일 시험 있어.|시험 있어|시험이 있다|exam|나는;내일
+초|학교||I/*failed/the test.|시험 떨어졌어.|떨어졌어|떨어지다, 낙제하다|didn't pass|나는;그 시험
+초|학교||I/*passed!|합격했어!|합격했어|합격하다|succeeded|나는
+초|학교||Can you/*explain/that again?|다시 설명해 줄래요?|설명해|설명하다|to make clear|~해 줄래요;그걸 다시
+초|학교||I/*don't get it.|이해가 안 돼.|이해가 안 돼|이해하지 못하다|don't understand|나는
+초|학교||*How do you say/this/in English?|이거 영어로 뭐라고 해요?|뭐라고 해요|~을 어떻게 말해요|what is the word|이것;영어로
+초|학교||What/does this/*mean?|이거 무슨 뜻이에요?|무슨 뜻|의미하다|to signify|무엇을;이것이
+초|학교||Can you/*spell/that?|철자 좀 불러 줄래요?|철자|철자를 말하다|to say the letters|~해 줄래요;그것
+초|학교||I/*did/my homework.|숙제 했어.|했어|하다|completed|나는;내 숙제
+초|학교||I'm/*studying/English.|영어 공부하고 있어요.|공부하고 있어요|공부하다|learning|나는;영어
+초|학교||*Practice/makes perfect.|연습이 완벽을 만든다.|연습|연습|training|완벽하게 만든다
+초|학교||I/*made a mistake.|실수했어.|실수했어|실수하다|did something wrong|나는
+초|학교||*Speak up,/please.|좀 크게 말해 주세요.|크게 말해|더 크게 말하다|talk louder|부탁해요
+초|학교||Class/*is over.|수업 끝났어.|끝났어|끝난|finished|수업이
+초|학교||I/*skipped/class.|수업 빠졌어.|빠졌어|빼먹다|didn't attend|나는;수업

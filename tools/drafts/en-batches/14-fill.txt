@@ -1,0 +1,45 @@
+# 1000개 채우기
+고|일상||I/*had a hard time/falling asleep because of the noise outside.|밖이 시끄러워서 잠들기 힘들었어.|힘들었어|~하는 데 어려움을 겪다|struggled|나는;밖의 소음 때문에 잠드는 것
+고|일상||It's/*a good idea to/back up your files regularly.|파일은 정기적으로 백업해 두는 게 좋아.|두는 게 좋아|~하는 게 좋다|wise to|그것은;정기적으로 파일을 백업하다
+고|일상||I'm/*not sure what to do/about my noisy neighbors.|시끄러운 이웃을 어떻게 해야 할지 모르겠어.|어떻게 해야 할지 모르겠어|무엇을 해야 할지 모르다|don't know how to act|나는;내 시끄러운 이웃에 대해
+고|일상||If you/*don't mind me asking,/how old are you?|실례가 안 된다면, 몇 살이세요?|실례가 안 된다면|물어봐도 괜찮다면|if it's okay to ask|만약 당신이;몇 살이세요
+고|일상||I've/*never seen anything like it/in my entire life.|평생 그런 건 처음 봐.|그런 건 처음 봐|그런 것을 본 적이 없다|totally new to me|나는;내 평생
+고|일상||I/*took a wrong turn/and ended up on the highway.|길을 잘못 들어서 고속도로로 가 버렸어.|길을 잘못 들어서|길을 잘못 들다|went the wrong way|나는;그리고 고속도로로 가게 됐어
+고|일상||It's/*hard to believe/we've known each other for ten years.|우리가 안 지 10년이 됐다니 믿기 어려워.|믿기 어려워|믿기 어려운|surprising|그것은;우리가 10년 동안 알고 지냈다는 것
+고|일상||I'd/*love to come,/but I already have plans that night.|정말 가고 싶은데 그날 밤엔 이미 약속이 있어.|정말 가고 싶은데|정말 가고 싶다|really want to come|나는;하지만 그날 밤엔 이미 계획이 있어
+고|일상||There's/*nothing worse than/waking up with a headache.|두통으로 잠에서 깨는 것만큼 최악은 없어.|최악은 없어|~보다 나쁜 건 없다|the worst|~이 있다;두통과 함께 깨는 것
+고|일상||I'm/*about to head out,/so I'll call you back later.|막 나가려던 참이라 나중에 다시 전화할게.|막 나가려던 참이라|막 나가려던 참이다|leaving now|나는;그러니 나중에 다시 전화할게
+고|감정||I'm/*really proud of/how far you've come this year.|올해 네가 얼마나 성장했는지 정말 자랑스러워.|정말 자랑스러워|~가 정말 자랑스러운|very proud of|나는;올해 네가 얼마나 멀리 왔는지
+고|감정||I/*didn't mean it/the way it sounded, I'm sorry.|그런 뜻으로 한 말 아니었어, 미안해.|그런 뜻으로 한 말 아니었어|그런 뜻이 아니었다|didn't intend|나는;그렇게 들린 방식으로, 미안해
+고|감정||It's/*been a rough week,/but I'm hanging in there.|힘든 한 주였지만 그럭저럭 버티고 있어.|힘든 한 주였지만|힘든 한 주|hard week|그것은;하지만 버티고 있어
+고|감정||I/*feel like I've known you/forever, even though we just met.|방금 만났는데도 오래 알던 사이 같아.|오래 알던 사이 같아|~를 알아 온 것 같다|seem to know you|나는;영원히, 방금 만났는데도
+고|감정||I/*can't stop smiling/since I got your message.|네 메시지 받고 나서 웃음이 멈추질 않아.|웃음이 멈추질 않아|계속 웃다|keep smiling|나는;네 메시지를 받은 후로
+고|회사||I'd/*like to propose/a slightly different approach.|조금 다른 방식을 제안하고 싶어요.|제안하고 싶어요|제안하다|suggest|저는 ~하고 싶어요;약간 다른 접근
+고|회사||We/*have to make a decision/by the end of this week.|이번 주 말까지 결정을 내려야 해요.|결정을 내려야|결정을 내리다|decide|우리는;이번 주 말까지
+고|회사||I'll/*forward you the email/so you can see the details.|세부 사항 볼 수 있게 메일 전달해 드릴게요.|메일 전달해 드릴게요|메일을 전달하다|send on the email|나는;세부 사항을 볼 수 있도록
+고|회사||The team/*worked around the clock/to fix the issue.|팀이 문제를 고치려고 밤낮없이 일했어요.|밤낮없이 일했어요|쉬지 않고 일하다|worked nonstop|그 팀은;문제를 고치기 위해
+고|회사||I/*don't think it's realistic/to finish this in two days.|이걸 이틀 만에 끝내는 건 현실적이지 않은 것 같아요.|현실적이지 않은 것 같아요|현실적이지 않다|not practical|나는;이틀 만에 이걸 끝내는 것
+고|학교||I've/*been studying English for years,/but I still get nervous.|몇 년째 영어를 공부하는데도 아직 긴장돼.|몇 년째 영어를 공부하는데도|몇 년 동안 공부해 왔다|studied a long time|나는;하지만 아직 긴장돼
+고|학교||It/*helps a lot to/watch shows with English subtitles.|영어 자막으로 영상 보는 게 많이 도움 돼.|많이 도움 돼|~하는 데 많이 도움 되다|very useful to|그것은;영어 자막으로 영상을 보는 것
+고|여행||We/*were blown away by/how beautiful the beaches were.|해변이 얼마나 아름다운지 완전 감탄했어.|완전 감탄했어|~에 깊은 감명을 받다|amazed by|우리는;해변이 얼마나 아름다웠는지
+고|여행||I'd/*recommend staying/at least three nights to see everything.|다 보려면 적어도 3박은 하는 걸 추천해.|하는 걸 추천해|머무는 걸 추천하다|suggest staying|나는;모든 걸 보려면 적어도 3박
+고|연애|연애|I/*can't imagine my life/without you in it anymore.|이제 네가 없는 내 삶은 상상도 못 하겠어.|상상도 못 하겠어|상상할 수 없다|can't picture|나는;더 이상 네가 없는
+고|일상|드라마·영화|I've/*waited my whole life/for a moment like this.|이런 순간을 평생 기다려 왔어.|평생 기다려 왔어|평생 기다려 오다|always waited|나는;이런 순간을 위해
+고|일상|슬랭|Honestly,/that new album/*hits different/late at night.|솔직히 그 새 앨범 밤늦게 들으면 느낌이 달라.|느낌이 달라|특별하게 와닿다|feels special|솔직히;그 새 앨범은;밤늦게
+중|일상||I'll/*be there/in a few minutes.|몇 분 안에 갈게.|갈게|거기에 가다|arrive|나는;몇 분 안에
+중|일상||Can you/*save my seat/for a minute?|잠깐 내 자리 좀 맡아 줄래?|자리 좀 맡아|자리를 맡아 주다|keep my seat|~해 줄래;잠깐
+중|일상||I/*left my umbrella/on the subway.|지하철에 우산을 두고 내렸어.|우산을 두고 내렸어|우산을 두고 오다|forgot my umbrella|나는;지하철에
+중|일상||It's/*not a big deal/at all.|전혀 별일 아니야.|별일 아니야|큰일이 아닌|not important|그것은;전혀
+중|일상||I'm/*bad at/remembering names.|난 이름 외우는 걸 잘 못해.|잘 못해|~을 잘 못하는|not good at|나는;이름을 기억하는 것
+중|일상||I/*need to catch up on/some sleep.|밀린 잠 좀 자야겠어.|밀린 잠 좀 자야겠어|밀린 것을 따라잡다|make up for|나는;잠 좀
+중|일상||Let's/*keep in touch/after graduation.|졸업하고도 연락하고 지내자.|연락하고 지내자|계속 연락하다|stay in contact|~하자;졸업 후에
+중|일상||I/*think I left/the stove on!|가스레인지 켜 놓고 나온 것 같아!|켜 놓고 나온 것 같아|두고 온 것 같다|maybe left|나는;가스레인지를 켠 채로
+중|일상||That's/*the last thing/I wanted to hear.|그건 정말 듣고 싶지 않은 말이었어.|듣고 싶지 않은|가장 원하지 않는 것|least wanted|그건;내가 듣고 싶었던
+중|일상||I'm/*dying for/a cold drink.|시원한 음료가 너무 마시고 싶어.|너무 마시고 싶어|몹시 원하는|really want|나는;시원한 음료
+중|감정||I/*was so moved/by her speech.|그녀의 연설에 너무 감동받았어.|너무 감동받았어|감동받은|touched|나는;그녀의 연설에
+중|감정||Don't/*let it get to you.|그런 거에 휘둘리지 마.|휘둘리지|신경 쓰이게 하다|bother you|~하지 마
+중|감정||I'm/*so sick and tired of/waiting.|기다리는 거 정말 지긋지긋해.|정말 지긋지긋해|몹시 질린|fed up with|나는;기다리는 것
+중|회사||I'll/*need a few more days/to finish.|끝내려면 며칠 더 필요해요.|며칠 더 필요해요|며칠 더 필요하다|need more time|나는;끝내기 위해
+중|회사||Let's/*schedule a meeting/for Monday.|월요일로 회의 잡죠.|회의 잡죠|회의를 잡다|plan a meeting|~하자;월요일로
+중|여행||Do you know/*a good place/to eat around here?|이 근처에 밥 먹기 좋은 데 알아?|좋은 데|좋은 장소|nice spot|너는 알아;이 근처에서 먹을
+중|카페·식당||Could I/*get this without/the sauce?|이거 소스 빼고 주실 수 있어요?|소스 빼고|~ 없이 받다|leave out|~할 수 있을까요;소스

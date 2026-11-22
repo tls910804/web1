@@ -1,0 +1,30 @@
+# 베트남어 ~35
+초|일상||*Xin chào!|안녕하세요!|안녕하세요|안녕하세요|hello
+초|일상||Bạn/*khỏe không?|잘 지내요?|잘 지내요|건강하세요?|how are you|당신
+초|일상||Tôi/*khỏe,/cảm ơn.|잘 지내요, 고마워요.|잘 지내요|건강한|fine|나는;고마워요
+초|일상||*Rất vui được gặp bạn.|만나서 반가워요.|만나서 반가워요|만나서 정말 기쁘다|nice to meet you
+초|일상||*Hẹn gặp lại!|또 만나요!|또 만나요|다시 만나요|see you again
+초|일상||*Xin lỗi.|죄송해요.|죄송해요|미안합니다|sorry
+초|일상||Tôi/*không hiểu.|이해가 안 돼요.|이해가 안 돼요|이해하지 못하다|don't understand|나는
+초|일상||Nhà vệ sinh/*ở đâu?|화장실이 어디예요?|어디|어디에|where|화장실
+초|일상||Tôi/*đói rồi.|배고파요.|배고파요|배고프다|hungry|나는
+초|일상||Tôi/*mệt quá.|너무 피곤해요.|너무 피곤해요|너무 피곤하다|so tired|나는
+초|카페·식당||*Cho tôi/một ly cà phê.|커피 한 잔 주세요.|주세요|나에게 주세요|give me|커피 한 잔
+초|카페·식당||*Tính tiền/giúp tôi.|계산해 주세요.|계산해|계산하다|pay|나를 도와
+초|카페·식당||*Ngon quá!|너무 맛있어요!|너무 맛있어요|너무 맛있다|so delicious
+초|쇼핑||Cái này/*bao nhiêu tiền?|이거 얼마예요?|얼마예요|얼마|how much|이것
+초|쇼핑||*Đắt quá!|너무 비싸요!|너무 비싸요|너무 비싸다|too expensive
+초|감정||*Anh nhớ em.|보고 싶어.|보고 싶어|나는 너를 그리워해|I miss you
+초|감정||*Anh yêu em.|사랑해.|사랑해|나는 너를 사랑해|I love you
+중|일상||Tôi/*sắp đến/rồi.|거의 다 왔어요.|거의 다 왔어요|곧 도착하다|almost there|나는;~이다
+중|일상||Tôi/*bị trễ/một chút.|좀 늦었어요.|좀 늦었어요|늦다|be late|나는;조금
+중|일상||*Tôi quên/mang chìa khóa.|열쇠 챙기는 걸 잊었어요.|잊었어요|나는 잊었다|I forgot|열쇠를 챙기다
+중|일상||*Sao cũng được.|뭐든 괜찮아요.|뭐든 괜찮아요|어떻게든 괜찮다|anything is fine
+중|일상||*Tôi vừa mới/về nhà.|방금 집에 왔어요.|방금|방금|just now|집에 오다
+중|카페·식당||*Không cay/nhé.|안 맵게 해 주세요.|안 맵게|맵지 않게|not spicy|~해요
+중|쇼핑||*Bớt/một chút/được không?|조금 깎아 줄 수 있어요?|깎아|깎다|lower the price|조금;되나요
+중|여행||*Có xa/không?|멀어요?|멀어요|멀다|far|~요?
+중|감정||*Tôi chán/lắm rồi.|정말 지겨워요.|지겨워요|지루하다, 질리다|tired of|너무 ~이다
+고|일상||*Nếu biết trước,/tôi/đã đến/sớm hơn.|미리 알았으면 더 일찍 왔을 거예요.|미리 알았으면|미리 알았다면|if I'd known|나는;왔을 것이다;더 일찍
+고|일상||*Càng luyện tập,/càng/dễ.|연습할수록 더 쉬워요.|연습할수록|더 연습할수록|the more you practice|더;쉽다
+고|일상|드라마·영화|*Dù có chuyện gì xảy ra,/anh/vẫn/ở bên em.|무슨 일이 있어도 나는 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나도|whatever happens|나는;여전히;네 곁에 있다

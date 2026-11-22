@@ -1,0 +1,75 @@
+# 중급 · 여행 / 카페·식당 / 쇼핑 / 병원 / 연애 / 슬랭
+중|여행||Our flight/*got delayed/by two hours.|비행기가 두 시간 지연됐어.|지연됐어|지연되다|was late|우리 비행기가;두 시간만큼
+중|여행||We/*checked into/the hotel/at noon.|정오에 호텔에 체크인했어.|체크인했어|~에 체크인하다|registered at|우리는;그 호텔;정오에
+중|여행||I'd like to/*upgrade/my room.|방을 업그레이드하고 싶어요.|업그레이드하고|업그레이드하다|to improve|~하고 싶어요;제 방
+중|여행||Is breakfast/*included/in the price?|가격에 조식 포함인가요?|포함인가요|포함된|part of|조식이;가격에
+중|여행||Could you/*recommend/a good restaurant nearby?|근처 괜찮은 식당 추천해 주실래요?|추천해|추천하다|to suggest|~해 주실래요;근처 좋은 식당
+중|여행||We/*got lost/on the way here.|여기 오다가 길을 잃었어.|길을 잃었어|길을 잃다|couldn't find the way|우리는;여기 오는 길에
+중|여행||I/*left my passport/at the hotel.|호텔에 여권을 두고 왔어.|여권을 두고 왔어|여권을 두고 오다|forgot my passport|나는;호텔에
+중|여행||The view/from here/*is breathtaking.|여기서 보는 경치가 숨 막힐 정도야.|숨 막힐 정도야|숨이 멎을 듯한|very beautiful|그 경치;여기서
+중|여행||Let's/*get off/at the next stop.|다음 정류장에서 내리자.|내리자|내리다|to exit|~하자;다음 정류장에서
+중|여행||How long/*does it take/to get there?|거기까지 얼마나 걸려요?|얼마나 걸려요|(시간이) 걸리다|how much time|얼마나;거기 가는 데
+중|여행||I'm/*jet-lagged/and exhausted.|시차 때문에 너무 피곤해.|시차|시차로 피곤한|tired from travel|나는;그리고 지쳤어
+중|여행||We should/*book/a taxi in advance.|택시를 미리 예약해야 해.|예약해야|예약하다|to reserve|우리는 ~해야 해;택시를 미리
+중|여행||Can I/*get a window seat?|창가 자리로 주실 수 있나요?|창가 자리|창가 자리를 받다|seat by the window|~할 수 있나요
+중|여행||I/*can't wait to/explore the city.|도시를 빨리 둘러보고 싶어.|빨리 둘러보고 싶어|빨리 ~하고 싶다|eager to|나는;도시를 탐험하다
+중|여행||The hotel/*was fully booked.|호텔이 꽉 찼어.|꽉 찼어|예약이 꽉 찬|no rooms|그 호텔은
+중|카페·식당||Could we/*get the check,/please?|계산서 좀 주시겠어요?|계산서|계산서를 받다|the bill|~할 수 있을까요;부탁해요
+중|카페·식당||I'd like my steak/*medium rare.|스테이크는 미디엄 레어로 해 주세요.|미디엄 레어|살짝 덜 익힌|lightly cooked|제 스테이크는 ~했으면 해요
+중|카페·식당||This/*isn't what/I ordered.|이건 제가 주문한 게 아니에요.|주문한 게 아니에요|~한 것이 아닌|not the thing|이것은;내가 주문한
+중|카페·식당||Can I/*have the dressing/on the side?|드레싱은 따로 주시겠어요?|드레싱|드레싱을 받다|sauce|~할 수 있나요;옆에 따로
+중|카페·식당||We've been/*waiting for/half an hour.|30분째 기다리고 있어요.|기다리고 있어요|~을 기다리다|staying for|우리는 계속 ~해 왔다;30분
+중|카페·식당||This place/*is always packed.|여긴 항상 사람이 꽉 차.|사람이 꽉 차|사람이 꽉 찬|very crowded|이곳은
+중|카페·식당||Let's/*grab a bite/before the movie.|영화 보기 전에 간단히 뭐 좀 먹자.|간단히 뭐 좀 먹자|간단히 먹다|eat a little|~하자;영화 전에
+중|카페·식당||I'm/*craving/something sweet.|단 게 너무 당겨.|당겨|몹시 원하다|really want|나는;단 것
+중|카페·식당||The food here/*is to die for.|여기 음식 진짜 끝내줘.|진짜 끝내줘|정말 훌륭한|amazing|여기 음식은
+중|카페·식당||Can you/*make it/less spicy?|덜 맵게 해 줄 수 있어요?|해 줄 수|만들다|to prepare|~할 수 있어요;덜 맵게
+중|카페·식당||I'll/*pick up the tab/tonight.|오늘 밤은 내가 계산할게.|내가 계산할게|계산을 떠맡다|pay the bill|나는 ~할게;오늘 밤
+중|카페·식당||Is there/*a wait/for a table?|자리 기다려야 해요?|기다려야|대기|waiting time|~있나요;자리를 위한
+중|쇼핑||This/*doesn't fit/me anymore.|이거 이제 나한테 안 맞아.|안 맞아|맞지 않다|wrong size|이것은;나에게 더 이상
+중|쇼핑||I/*bought it/on impulse.|충동적으로 샀어.|샀어|그것을 사다|purchased it|나는;충동으로
+중|쇼핑||It's/*way too expensive/for me.|나한텐 너무 비싸.|너무 비싸|훨씬 너무 비싼|far too costly|그것은;나에게
+중|쇼핑||I/*returned/the shoes/yesterday.|어제 신발 반품했어.|반품했어|반품하다|gave back|나는;그 신발;어제
+중|쇼핑||They/*ran out of/my size.|내 사이즈가 다 떨어졌대.|다 떨어졌대|~이 다 떨어지다|have none left|그들은;내 사이즈
+중|쇼핑||I'm/*shopping around/for a new phone.|새 휴대폰 사려고 여기저기 알아보고 있어.|여기저기 알아보고|여러 곳을 비교하다|comparing stores|나는;새 휴대폰을 위해
+중|쇼핑||Is this/*on sale/too?|이것도 세일해요?|세일해요|할인 중인|discounted|이것이;~도
+중|쇼핑||It/*comes in/three colors.|세 가지 색으로 나와요.|나와요|~로 나오다|is available in|그것은;세 가지 색
+중|쇼핑||Can you/*gift-wrap/this for me?|이거 선물 포장해 주실래요?|선물 포장해|선물 포장하다|wrap as a gift|~해 주실래요;이걸 저를 위해
+중|병원||I/*have a sore throat/and a fever.|목이 아프고 열이 나요.|목이 아프고|목이 아프다|throat hurts|나는;그리고 열
+중|병원||I/think I/*sprained/my ankle.|발목을 삔 것 같아요.|삔 것 같아요|삐다|twisted|나는;~인 것 같아;발목
+중|병원||I/*need to see/a doctor.|진찰을 받아야 해요.|진찰을 받아야|(의사를) 만나야 하다|must visit|나는;의사
+중|병원||I've been/*coughing/all night.|밤새 기침했어요.|기침했어요|기침하다|cough|나는 계속 ~해 왔다;밤새
+중|병원||Take this medicine/*twice a day.|이 약은 하루 두 번 드세요.|하루 두 번|하루에 두 번|two times daily|이 약을 드세요
+중|병원||I/*feel dizzy/when I stand up.|일어나면 어지러워요.|어지러워요|어지럽다|lightheaded|나는;일어날 때
+중|병원||Do I/*need a prescription/for this?|이거 처방전이 필요해요?|처방전이 필요해요|처방전이 필요하다|need a doctor's note|제가 ~하나요;이것을 위해
+중|병원||I'm/*feeling much better/now.|이제 훨씬 나아졌어요.|훨씬 나아졌어요|훨씬 나아진|recovering|나는;이제
+중|병원||I/*threw up/this morning.|오늘 아침에 토했어요.|토했어요|토하다|vomited|나는;오늘 아침에
+중|병원||I/*can't stop/sneezing.|재채기가 멈추지 않아요.|멈추지 않아요|멈출 수 없다|keep doing|나는;재채기
+중|병원||You should/*get some rest.|좀 쉬어야 해.|좀 쉬어야|휴식을 취하다|to rest|너는 ~해야 해
+중|연애|연애|I/*think I'm falling for/her.|그녀에게 빠지고 있는 것 같아.|빠지고 있는|~에게 빠지다|starting to love|나는;그녀
+중|연애|연애|He/*asked me out/yesterday.|그가 어제 데이트 신청했어.|데이트 신청했어|데이트 신청하다|invited on a date|그는;어제
+중|연애|연애|We've been/*dating/for a year.|우리 사귄 지 1년 됐어.|사귄 지|사귀다|seeing each other|우리는 계속 ~해 왔다;1년 동안
+중|연애|연애|She/*stood me up/last night.|그녀가 어젯밤 날 바람맞혔어.|바람맞혔어|바람맞히다|didn't come to meet|그녀가;어젯밤
+중|연애|연애|I/*got dumped/on my birthday.|생일에 차였어.|차였어|차이다|was left|나는;내 생일에
+중|연애|연애|They/*got back together/again.|그 둘 또 다시 사귀어.|다시 사귀어|다시 사귀다|reunited|그들은;또
+중|연애|연애|I'm/*head over heels/for him.|그에게 완전히 빠졌어.|완전히 빠졌어|사랑에 푹 빠진|deeply in love|나는;그에게
+중|연애|연애|Are you two/*a thing/now?|너희 둘 이제 사귀어?|사귀어|사귀는 사이|a couple|너희 둘은;이제
+중|연애|연애|He/*ghosted/me/after one date.|한 번 데이트하고 그가 잠수 탔어.|잠수 탔어|연락을 끊다|disappeared|그는;나를;한 번 데이트 후
+중|연애|연애|I/*can't stop thinking about/you.|네 생각이 멈추질 않아.|생각이 멈추질 않아|계속 생각하다|always think of|나는;너
+중|연애|연애|We're/*just friends,/I swear.|우린 그냥 친구야, 맹세해.|그냥 친구야|그냥 친구인|only friends|우리는;맹세해
+중|일상|슬랭|That party/*was lit!|그 파티 완전 끝내줬어!|완전 끝내줬어|아주 신나는|very exciting|그 파티는
+중|일상|슬랭|*No cap,/this is the best pizza.|진짜로, 이게 최고의 피자야.|진짜로|거짓말 아니고|for real|이게 최고의 피자야
+중|일상|슬랭|That outfit/*is fire.|그 옷 완전 멋져.|완전 멋져|아주 멋진|really cool|그 옷은
+중|일상|슬랭|I'm/*low-key/obsessed with this song.|나 은근히 이 노래에 빠졌어.|은근히|은근히|secretly|나는;이 노래에 집착하는
+중|일상|슬랭|He's/*so extra/sometimes.|걔 가끔 너무 오버야.|너무 오버야|과하게 오버하는|too dramatic|그는;가끔
+중|일상|슬랭|*It's giving/main character energy.|완전 주인공 느낌이야.|느낌이야|~한 느낌을 주다|feels like|주인공 에너지
+중|일상|슬랭|I/*can't even/right now.|지금 진짜 말이 안 나와.|말이 안 나와|말도 안 나온다|too much to handle|나는;지금
+중|일상|슬랭|That's/*a total vibe.|완전 분위기 좋다.|분위기 좋다|좋은 분위기|nice feeling|그건
+중|일상|슬랭|*Spill the tea!/What happened?|썰 좀 풀어 봐! 무슨 일인데?|썰 좀 풀어 봐|가십을 털어놓다|tell the gossip|무슨 일인데
+중|일상|슬랭|*I'm so down/for that.|완전 좋아, 나 할래.|완전 좋아|~에 찬성인|up for it|그것을 위해
+중|일상|슬랭|That's/*sus,/don't you think?|그거 수상하지 않아?|수상하지|수상한|suspicious|그건;그렇게 생각하지 않아
+중|일상|슬랭|He/*flexed/his new car again.|그가 또 새 차 자랑했어.|자랑했어|과시하다|showed off|그는;또 그의 새 차를
+중|일상|슬랭|*Bet,/see you at eight.|오케이, 8시에 봐.|오케이|좋아, 알겠어|okay|8시에 봐
+중|일상|슬랭|I'm/*dead,/that's so funny.|웃겨 죽겠다, 너무 웃겨.|웃겨 죽겠다|너무 웃겨서 죽은|laughing hard|나는;그거 너무 웃기다
+중|일상|슬랭|That movie/*slaps!|그 영화 진짜 좋아!|진짜 좋아|끝내준다|is great|그 영화는
+중|일상|슬랭|Stop/*being so salty/about it.|그거 갖고 삐치지 좀 마.|삐치지|짜증 나 하는, 삐친|bitter|그만해;그것에 대해

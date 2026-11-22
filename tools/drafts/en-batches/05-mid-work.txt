@@ -1,0 +1,65 @@
+# 중급 · 회사 / 학교
+중|회사||Can we/*touch base/later this week?|이번 주 후반에 잠깐 얘기 나눌 수 있을까요?|잠깐 얘기 나눌|간단히 연락하다|to check in|우리 ~할 수 있을까요;이번 주 후반에
+중|회사||I'll/*follow up/with the client.|고객한테 후속 연락할게요.|후속 연락할게요|후속 조치하다|to contact again|나는 ~할게요;고객과
+중|회사||Let's/*go over/the plan again.|계획 한 번 더 검토해요.|검토해요|검토하다|to review|~하자;그 계획 다시
+중|회사||I'm/*behind on/my work.|일이 밀려 있어요.|밀려 있어요|~이 밀린|late with|나는;내 일
+중|회사||We need to/*meet the deadline.|마감을 맞춰야 해요.|마감을 맞춰야|마감을 지키다|finish on time|우리는 ~해야 해요
+중|회사||Can you/*fill in for/me tomorrow?|내일 나 대신 일해 줄 수 있어요?|대신 일해|~을 대신하다|to replace|~해 줄 수 있어요;나 내일
+중|회사||I/*took the day off/yesterday.|어제 하루 쉬었어요.|하루 쉬었어요|하루 휴가를 내다|didn't work|나는;어제
+중|회사||She/*got promoted/last month.|그녀는 지난달 승진했어요.|승진했어요|승진하다|moved up|그녀는;지난달
+중|회사||I'm/*looking for/a new job.|새 일자리를 찾고 있어요.|찾고 있어요|찾다|searching for|나는;새 일자리
+중|회사||Let's/*wrap it up/for today.|오늘은 여기서 마무리하죠.|마무리하죠|마무리하다|to finish|~하자;오늘은
+중|회사||I'll/*look into/it right away.|바로 알아볼게요.|알아볼게요|조사하다|to check|나는 ~할게요;그것을 바로
+중|회사||Could you/*walk me through/the process?|과정을 차근차근 설명해 주실래요?|차근차근 설명해|단계별로 설명하다|explain step by step|~해 주실래요;그 과정
+중|회사||We're/*on the same page.|우리 생각이 같네요.|생각이 같네요|같은 생각인|agree|우리는
+중|회사||Let's/*brainstorm/some ideas.|아이디어를 좀 같이 내 봐요.|같이 내 봐요|아이디어를 마구 내다|share ideas|~하자;아이디어 좀
+중|회사||I/*sent it/to the wrong person.|엉뚱한 사람한테 보냈어요.|보냈어요|그것을 보내다|emailed it|나는;엉뚱한 사람에게
+중|회사||The meeting/*got pushed back.|회의가 미뤄졌어요.|미뤄졌어요|연기되다|was delayed|그 회의가
+중|회사||I'm/*swamped with/emails.|메일에 파묻혀 있어요.|파묻혀 있어요|~에 파묻힌|overloaded with|나는;이메일
+중|회사||Can I/*run something by/you?|뭐 좀 의견 들어 봐도 될까요?|의견 들어 봐도|~에게 의견을 묻다|ask your opinion|~해도 될까요;당신
+중|회사||We're/*short-staffed/this week.|이번 주에 일손이 모자라요.|일손이 모자라요|인원이 부족한|need more people|우리는;이번 주
+중|회사||I'll/*handle/the paperwork.|서류 작업은 제가 처리할게요.|처리할게요|처리하다|to deal with|나는 ~할게요;서류 작업
+중|회사||She's/*out of the office/until Monday.|그녀는 월요일까지 부재중이에요.|부재중이에요|사무실에 없는|away|그녀는;월요일까지
+중|회사||I'll/*cc you/on the email.|메일에 참조로 넣을게요.|참조로 넣을게요|참조로 넣다|copy you|나는 ~할게요;그 메일에
+중|회사||Let's/*stick to/the plan.|계획대로 해요.|계획대로|~을 고수하다|to keep to|~하자;그 계획
+중|회사||I/*quit/my job/last week.|지난주에 회사를 그만뒀어요.|그만뒀어요|그만두다|left|나는;내 일;지난주
+중|회사||He's/*working overtime/again.|그는 또 야근하고 있어요.|야근하고|초과 근무하다|working late|그는;또
+중|회사||Let's/*keep it short.|짧게 하죠.|짧게 하죠|짧게 하다|be brief|~하자
+중|회사||Can you/*double-check/these numbers?|이 숫자들 한 번 더 확인해 줄래요?|한 번 더 확인해|다시 확인하다|check again|~해 줄래요;이 숫자들
+중|회사||I/*have a lot on my plate.|할 일이 너무 많아요.|할 일이 너무 많아요|할 일이 많다|very busy|나는
+중|회사||We/*closed the deal!|계약 성사됐어요!|계약 성사됐어요|거래를 성사시키다|signed the contract|우리는
+중|회사||*That makes sense/to me.|제 생각엔 말이 돼요.|말이 돼요|이치에 맞다|is logical|나에게
+중|회사||I'm/*not on board with/that.|그건 찬성하기 어려워요.|찬성하기 어려워요|~에 찬성하지 않는|disagree with|나는;그것
+중|회사||Let's/*get down to/business.|본론으로 들어가죠.|본론으로 들어가죠|~에 착수하다|start|~하자;업무
+중|회사||I'll/*be working remotely/next week.|다음 주엔 원격으로 일할 거예요.|원격으로 일할|원격 근무하다|work from home|나는 ~할 거예요;다음 주
+중|회사||Thanks for/*covering for/me.|나 대신 일해 줘서 고마워요.|대신 일해 줘서|~을 대신해 주다|replacing|~해서 고마워요;나
+중|회사||My boss/*is on my case/again.|상사가 또 날 들볶아요.|날 들볶아요|잔소리하다|criticizing me|내 상사가;또
+중|회사||We/*need to cut/costs.|비용을 줄여야 해요.|줄여야|줄여야 하다|must reduce|우리는;비용
+중|회사||Let me/*get back to you/on that.|그건 확인하고 다시 말씀드릴게요.|다시 말씀드릴게요|나중에 다시 답하다|reply later|내가 ~할게요;그것에 대해
+중|회사||I/*applied for/the position.|그 자리에 지원했어요.|지원했어요|~에 지원하다|asked for|나는;그 자리
+중|회사||The interview/*went well.|면접 잘 봤어요.|잘 봤어요|잘 되다|was good|그 면접이
+중|회사||I'm/*on leave/this week.|이번 주 휴가 중이에요.|휴가 중이에요|휴가 중인|away from work|나는;이번 주
+중|학교||I/*pulled an all-nighter/for the exam.|시험 때문에 밤샜어.|밤샜어|밤을 새우다|didn't sleep|나는;그 시험을 위해
+중|학교||I'm/*cramming for/finals.|기말고사 벼락치기 중이야.|벼락치기 중이야|~을 위해 벼락치기하다|studying hard fast|나는;기말고사
+중|학교||I/*signed up for/a yoga class.|요가 수업 등록했어.|등록했어|~에 등록하다|registered for|나는;요가 수업
+중|학교||The assignment/*is due/on Friday.|과제는 금요일까지야.|금요일까지야|마감인|must be done|그 과제는;금요일에
+중|학교||Can I/*borrow/your notes?|네 필기 좀 빌려도 돼?|빌려도|빌리다|to use for a while|~해도 돼;네 필기
+중|학교||I/*did better than/I expected.|예상보다 잘 봤어.|예상보다 잘 봤어|~보다 잘하다|performed better|나는;내가 예상한 것
+중|학교||I'm/*majoring in/economics.|경제학 전공이야.|전공이야|~을 전공하다|studying mainly|나는;경제학
+중|학교||I/*dropped/that class.|그 수업 취소했어.|취소했어|(수업을) 빼다|stopped taking|나는;그 수업
+중|학교||I/*can't keep up with/the lessons.|수업을 못 따라가겠어.|못 따라가겠어|~을 따라가다|stay level with|나는;그 수업들
+중|학교||We/*have a group project/due soon.|곧 조별 과제 마감이야.|조별 과제|조별 과제가 있다|team work|우리는;곧 마감인
+중|학교||I/*need to brush up on/my grammar.|문법을 다시 공부해야 해.|다시 공부해야|복습하다, 다듬다|to improve|나는;내 문법
+중|학교||My English/*is getting better.|영어 실력이 늘고 있어.|늘고 있어|나아지고 있다|improving|내 영어가
+중|학교||I/*got a scholarship!|장학금 받았어!|장학금 받았어|장학금을 받다|won money for school|나는
+중|학교||Can you/*correct/my essay?|내 글 좀 고쳐 줄래?|고쳐|고치다|to fix|~해 줄래;내 에세이
+중|학교||I/*graduated/last year.|작년에 졸업했어.|졸업했어|졸업하다|finished school|나는;작년에
+중|학교||I'm/*taking a gap year.|1년 쉬고 있어.|1년 쉬고|1년 쉬다|year off|나는
+중|학교||I/*made friends/with my roommate.|룸메이트랑 친해졌어.|친해졌어|친구가 되다|became friends|나는;내 룸메이트와
+중|학교||She/*speaks English/fluently.|그녀는 영어를 유창하게 해.|영어를|영어를 말하다|talks in English|그녀는;유창하게
+중|학교||I/*have trouble/with pronunciation.|발음이 어려워.|어려워|~에 어려움이 있다|struggle|나는;발음으로
+중|학교||*Practice/every day,/even a little.|조금이라도 매일 연습해.|연습해|연습하다|train|매일;조금이라도
+중|학교||I/*learned it/by heart.|그거 외웠어.|외웠어|외우다|memorized|나는;마음으로
+중|학교||I'm/*taking notes/in class.|수업 중에 필기하고 있어.|필기하고|필기하다|write down|나는;수업 중에
+중|학교||She/*aced/her exam.|그녀는 시험을 완벽하게 봤어.|완벽하게 봤어|아주 잘 보다|did perfectly|그녀는;그녀의 시험
+중|학교||I/*can't wait for/summer break.|여름방학이 너무 기다려져.|너무 기다려져|빨리 ~했으면 하다|excited about|나는;여름방학

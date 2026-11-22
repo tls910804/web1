@@ -1,0 +1,60 @@
+# 프랑스어 ~70
+초|일상||*Bonjour !|안녕하세요!|안녕하세요|안녕하세요|hello
+초|일상||*Ça va ?|잘 지내?|잘 지내|괜찮아?|how are you
+초|일상||*Ça va bien,/merci.|잘 지내, 고마워.|잘 지내|잘 지내다|doing well|고마워
+초|일상||*Enchanté.|만나서 반가워요.|만나서 반가워요|반갑습니다|nice to meet you
+초|일상||*À demain !|내일 봐!|내일 봐|내일 봐|see you tomorrow
+초|일상||*Excusez-moi.|실례합니다.|실례합니다|실례합니다|excuse me
+초|일상||Je/*ne comprends pas.|이해가 안 돼요.|이해가 안 돼요|이해하지 못하다|don't understand|나는
+초|일상||Vous pouvez/*répéter ?|다시 말해 주실래요?|다시 말해|반복하다|repeat|~할 수 있나요
+초|일상||Où sont/les/*toilettes ?|화장실이 어디예요?|화장실|화장실|toilets|어디에 있나요;그
+초|일상||J'ai/*faim.|배고파요.|배고파요|배고픔|hunger|나는 가지고 있다
+초|일상||Je suis/*fatigué.|피곤해요.|피곤해요|피곤한|tired|나는 ~이다
+초|일상||Il fait/*froid/aujourd'hui.|오늘 추워요.|추워요|추운|cold|(날씨가) ~하다;오늘
+초|일상||*Pas de problème.|문제없어요.|문제없어요|문제없음|no problem
+초|일상||*Bonne journée !|좋은 하루 보내세요!|좋은 하루|좋은 하루|have a nice day
+초|카페·식당||*Un café,/s'il vous plaît.|커피 한 잔 주세요.|커피 한 잔|커피 한 잔|a coffee|부탁해요
+초|카페·식당||*L'addition,/s'il vous plaît.|계산서 주세요.|계산서|계산서|the bill|부탁해요
+초|카페·식당||C'est/*délicieux !|정말 맛있어요!|정말 맛있어요|맛있는|delicious|그것은
+초|카페·식당||*À emporter,/s'il vous plaît.|포장해 주세요.|포장|가져가기|to go|부탁해요
+초|쇼핑||*Combien/ça coûte ?|이거 얼마예요?|얼마|얼마|how much|그게 ~해요
+초|쇼핑||C'est/*trop cher.|너무 비싸요.|너무 비싸요|너무 비싼|too expensive|그것은
+초|쇼핑||Je/*regarde/seulement.|그냥 보는 중이에요.|보는|보다|look|나는;그냥
+초|여행||Où est/la/*gare ?|기차역이 어디예요?|기차역|기차역|train station|어디에 있나요;그
+초|여행||Je/*suis perdu.|길을 잃었어요.|길을 잃었어요|길을 잃은|lost|나는
+초|감정||Je suis/*content.|기뻐요.|기뻐요|기쁜|happy|나는 ~이다
+초|감정||*Tu me manques.|보고 싶어.|보고 싶어|네가 그립다|I miss you
+초|감정||*Je t'aime.|사랑해.|사랑해|너를 사랑해|I love you
+초|감정||*Bon courage !|힘내!|힘내|용기를 내|good luck
+중|일상||Je suis/*en retard,/désolé.|늦었어요, 미안해요.|늦었어요|늦은|late|나는 ~이다;미안해요
+중|일상||J'arrive/*dans cinq minutes.|5분 안에 도착해요.|5분 안에|5분 안에|in five minutes|나는 도착한다
+중|일상||*J'ai oublié/mes clés.|열쇠를 잊어버렸어.|잊어버렸어|잊어버렸다|I forgot|내 열쇠
+중|일상||*Ça m'est égal.|상관없어.|상관없어|나에겐 같다|I don't mind
+중|일상||*Ça vaut le coup/d'essayer.|해 볼 만해.|해 볼 만해|할 가치가 있다|worth it|시도하는 것
+중|일상||*J'ai envie de/sortir ce soir.|오늘 밤에 나가고 싶어.|나가고 싶어|~하고 싶다|feel like|오늘 밤 나가다
+중|일상||*Je viens de/rentrer.|방금 집에 왔어.|방금|방금 ~했다|just did|돌아오다
+중|일상||Il y a/*beaucoup de monde/ici.|여기 사람이 많아.|사람이 많아|사람이 많음|lots of people|~이 있다;여기
+중|카페·식당||Je voudrais/*réserver/une table.|테이블을 예약하고 싶어요.|예약하고|예약하다|reserve|~하고 싶어요;테이블 하나
+중|카페·식당||Qu'est-ce que vous/*me conseillez ?|뭘 추천해 주시겠어요?|추천해|나에게 추천하다|recommend to me|당신은 무엇을
+중|카페·식당||*C'est moi qui invite/ce soir.|오늘 밤은 내가 살게.|내가 살게|내가 사는 것|I'm treating|오늘 밤
+중|쇼핑||Vous avez/*une taille au-dessus ?|한 사이즈 큰 거 있어요?|한 사이즈 큰|한 치수 위|one size up|있나요
+중|쇼핑||Je peux/*l'essayer ?|입어 봐도 돼요?|입어 봐도|그것을 입어 보다|try it on|~할 수 있나요
+중|여행||C'est/*loin d'ici ?|여기서 멀어요?|여기서 멀어요|여기서 먼|far from here|그것은
+중|여행||Le train/*part/à quelle heure ?|기차는 몇 시에 출발해요?|출발해요|떠나다|leave|그 기차는;몇 시에
+중|회사||*Je te tiens au courant.|계속 소식 알려 줄게.|소식 알려 줄게|계속 알려 주다|keep you posted
+중|회사||J'ai/*une réunion/à quatorze heures.|오후 2시에 회의가 있어요.|회의|회의|meeting|나는 가지고 있다;14시에
+중|감정||*J'en ai marre/de ce travail.|이 일 지긋지긋해.|지긋지긋해|질렸다|fed up|이 일에
+중|감정||*Ça me stresse/beaucoup.|그게 날 엄청 스트레스받게 해.|스트레스받게 해|나를 스트레스받게 하다|stresses me|많이
+중|감정||*Quelle honte !|정말 창피해!|정말 창피해|무슨 수치|how embarrassing
+중|연애|연애|*Tu veux/sortir avec moi ?|나랑 사귈래?|~할래|너는 원하니|do you want|나와 사귀다
+중|연애|연애|On/*s'est séparés/l'année dernière.|우리 작년에 헤어졌어.|헤어졌어|헤어지다|broke up|우리는;작년에
+중|일상|슬랭|*C'est trop cool !|완전 멋지다!|완전 멋지다|너무 멋지다|so cool
+중|일상|슬랭|*Grave !|완전!|완전|완전, 엄청|totally
+고|일상||*Si j'avais su,/je serais venu/plus tôt.|알았더라면 더 일찍 왔을 텐데.|알았더라면|내가 알았더라면|if I had known|나는 왔을 텐데;더 일찍
+고|일상||*Bien que/je sois fatigué,/je vais/finir ce travail.|피곤하지만 이 일은 끝낼 거야.|~하지만|비록 ~일지라도|although|나는 피곤하다;나는 ~할 거야;이 일을 끝내다
+고|일상||*Plus je pratique,/plus/c'est facile.|연습할수록 더 쉬워.|연습할수록|더 연습할수록|the more I practice|더;그것은 쉽다
+고|일상||*Je ne me suis pas rendu compte/qu'il était si tard.|그렇게 늦은 줄 몰랐어.|몰랐어|알아차리지 못했다|didn't realize|그렇게 늦었다는 것
+고|회사||*Je vous serais reconnaissant de/m'envoyer le dossier/avant vendredi.|금요일 전에 파일을 보내 주시면 감사하겠습니다.|감사하겠습니다|~해 주시면 감사하겠다|I'd be grateful if|나에게 파일을 보내다;금요일 전에
+고|감정||*Je regrette de ne pas/t'avoir dit/la vérité.|너한테 진실을 말하지 않은 걸 후회해.|후회해|~하지 않은 걸 후회하다|regret not|너에게 말한 것;진실을
+고|여행||*Ça valait vraiment la peine/de faire/ce voyage.|이 여행은 정말 할 만한 가치가 있었어.|정말 할 만한 가치가 있었어|정말 그럴 가치가 있었다|was really worth it|하다;이 여행을
+고|일상|드라마·영화|*Quoi qu'il arrive,/je serai/toujours/là pour toi.|무슨 일이 있어도 항상 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|나는 있을 것이다;항상;너를 위해 거기에

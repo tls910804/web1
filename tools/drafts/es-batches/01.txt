@@ -1,0 +1,77 @@
+# 스페인어 ~85
+초|일상||*¡Buenos días!|좋은 아침이에요!|좋은 아침이에요|좋은 아침|good morning
+초|일상||*¿Qué tal?|어떻게 지내?|어떻게 지내|어때?|how's it going
+초|일상||Muy/*bien,/gracias.|아주 잘 지내, 고마워.|잘 지내|잘|well|아주;고마워
+초|일상||*Mucho gusto.|만나서 반가워요.|만나서 반가워요|반갑습니다|nice to meet you
+초|일상||*¡Hasta luego!|나중에 봐!|나중에 봐|나중에 봐|see you later
+초|일상||*Lo siento.|미안해요.|미안해요|미안합니다|I'm sorry
+초|일상||*No pasa nada.|괜찮아.|괜찮아|아무 일도 없어|it's okay
+초|일상||No/*entiendo.|이해가 안 돼요.|이해가 안 돼요|이해하다|understand|~하지 않다
+초|일상||¿Puede/*repetir,/por favor?|다시 말해 주실래요?|다시 말해|반복하다|repeat|~해 주실래요;부탁해요
+초|일상||¿Dónde está/el/*baño?|화장실이 어디예요?|화장실|화장실|bathroom|어디에 있어요;그
+초|일상||Tengo/*hambre.|배고파요.|배고파요|배고픔|hunger|나는 가지고 있다
+초|일상||Tengo/*sueño.|졸려요.|졸려요|졸음|sleepiness|나는 가지고 있다
+초|일상||Hace/*mucho calor.|정말 더워요.|정말 더워요|아주 더움|very hot|(날씨가) ~하다
+초|일상||*¡Cuidado!|조심해!|조심해|조심|careful
+초|일상||*¡Qué bien!|잘됐다!|잘됐다|정말 좋다|how nice
+초|일상||Estoy/*cansado.|피곤해요.|피곤해요|피곤한|tired|나는 ~이다
+초|일상||*Ya voy.|지금 가요.|지금 가요|지금 가|coming
+초|일상||*Un momento,/por favor.|잠깐만요.|잠깐만요|잠깐|one moment|부탁해요
+초|카페·식당||*La carta,/por favor.|메뉴판 주세요.|메뉴판|메뉴판|menu|부탁해요
+초|카페·식당||*Quiero/un café.|커피 한 잔 주세요.|주세요|원하다|I want|커피 한 잔
+초|카페·식당||¿Qué me/*recomienda?|뭐 추천해 주시겠어요?|추천해|추천하다|recommend|저에게 무엇을
+초|카페·식당||*Está riquísimo.|정말 맛있어요.|정말 맛있어요|정말 맛있는|delicious
+초|카페·식당||*Para llevar,/por favor.|포장해 주세요.|포장|가져가기 위해|to go|부탁해요
+초|쇼핑||¿Cuánto/*cuesta?|얼마예요?|얼마예요|값이 ~하다|cost|얼마나
+초|쇼핑||Es/*muy caro.|너무 비싸요.|너무 비싸요|아주 비싼|very expensive|~이다
+초|쇼핑||*Solo estoy mirando.|그냥 보는 중이에요.|그냥 보는 중이에요|그냥 보고 있다|just looking
+초|여행||¿Dónde está/la/*estación?|역이 어디예요?|역|역|station|어디에 있어요;그
+초|여행||*Me perdí.|길을 잃었어요.|길을 잃었어요|길을 잃다|got lost
+초|여행||*Un billete/para Madrid.|마드리드행 표 한 장이요.|표 한 장|표 한 장|one ticket|마드리드행
+초|감정||Estoy/*muy contento.|정말 기뻐요.|정말 기뻐요|아주 기쁜|very happy|나는 ~이다
+초|감정||*Te quiero.|사랑해.|사랑해|너를 사랑해|I love you
+초|감정||*Te echo de menos.|보고 싶어.|보고 싶어|너를 그리워하다|I miss you
+초|감정||*¡Ánimo!|힘내!|힘내|힘내|cheer up
+중|일상||Voy/*a llegar tarde.|늦을 것 같아요.|늦을 것 같아요|늦게 도착하다|arrive late|나는 ~할 것이다
+중|일상||Estoy/*de camino.|가는 중이에요.|가는 중이에요|가는 길에|on the way|나는 ~이다
+중|일상||*Se me olvidó/las llaves.|열쇠를 깜빡했어요.|깜빡했어요|잊어버렸다|I forgot|열쇠
+중|일상||*Me da igual.|상관없어.|상관없어|나에겐 똑같다|I don't mind
+중|일상||*No tengo ni idea.|전혀 모르겠어.|전혀 모르겠어|전혀 모르다|no idea
+중|일상||*Vale la pena/intentarlo.|해 볼 만해.|해 볼 만해|~할 가치가 있다|worth it|그것을 시도하다
+중|일상||*Tengo ganas de/ir a la playa.|바다에 가고 싶어.|가고 싶어|~하고 싶다|feel like|해변에 가다
+중|일상||*Acabo de/llegar a casa.|방금 집에 도착했어.|방금|방금 ~했다|just did|집에 도착하다
+중|일상||*Hay mucho tráfico/hoy.|오늘 차가 많이 막혀.|차가 많이 막혀|교통량이 많다|heavy traffic|오늘
+중|일상||*Echo una siesta/después de comer.|밥 먹고 낮잠 잘래.|낮잠|낮잠을 자다|take a nap|먹은 후에
+중|카페·식당||*La cuenta,/cuando pueda.|편하실 때 계산서 주세요.|계산서|계산서|the bill|가능하실 때
+중|카페·식당||¿Me pone/*otra cerveza?|맥주 한 잔 더 주실래요?|한 잔 더|맥주 한 잔 더|another beer|주시겠어요
+중|카페·식당||*Invito yo/hoy.|오늘은 내가 살게.|내가 살게|내가 낸다|I'll pay|오늘
+중|쇼핑||¿Tiene/una talla/*más grande?|더 큰 사이즈 있어요?|더 큰|더 큰|bigger|있나요;사이즈
+중|쇼핑||¿Puedo/*probármelo?|입어 봐도 돼요?|입어 봐도|입어 보다|try on|~해도 돼요
+중|쇼핑||¿Puedo/*pagar con tarjeta?|카드로 결제돼요?|카드로 결제|카드로 지불하다|pay by card|~할 수 있나요
+중|여행||¿Está/*lejos de aquí?|여기서 멀어요?|여기서 멀어요|여기서 먼|far from here|~인가요
+중|여행||¿A qué hora/*sale/el tren?|기차는 몇 시에 출발해요?|출발해요|출발하다|leave|몇 시에;그 기차가
+중|여행||Tengo/*una reserva/a nombre de Kim.|김 이름으로 예약했어요.|예약|예약|reservation|나는 가지고 있다;김 이름으로
+중|회사||*Te mando/el archivo/ahora.|지금 파일 보낼게.|보낼게|너에게 보내다|send you|그 파일;지금
+중|회사||Tengo/*una reunión/a las tres.|3시에 회의가 있어요.|회의|회의|meeting|나는 가지고 있다;3시에
+중|회사||*Lo reviso/y te digo.|확인해 보고 말해 줄게.|확인해 보고|그것을 검토하다|check it|그리고 너에게 말하다
+중|감정||*Estoy harto de/esperar.|기다리는 거 지긋지긋해.|지긋지긋해|~에 질린|fed up with|기다리는 것
+중|감정||*Me pone nervioso/hablar en público.|사람들 앞에서 말하면 긴장돼.|긴장돼|나를 긴장하게 하다|makes me nervous|대중 앞에서 말하기
+중|감정||*¡Qué vergüenza!|정말 창피해!|정말 창피해|정말 부끄럽다|so embarrassing
+중|연애|연애|*Me gustas/mucho.|너 정말 좋아.|좋아|네가 좋다|I like you|많이
+중|연애|연애|¿Quieres/*salir conmigo?|나랑 사귈래?|사귈래|나와 데이트하다|go out with me|~하고 싶니
+중|연애|연애|*Rompimos/la semana pasada.|지난주에 헤어졌어.|헤어졌어|헤어졌다|broke up|지난주에
+중|일상|슬랭|*¡Qué guay!|완전 멋지다!|완전 멋지다|정말 멋지다|so cool
+중|일상|슬랭|*Mola/mucho.|진짜 끝내줘.|끝내줘|멋지다|it's cool|많이
+고|일상||*Si hubiera sabido/que llovería,/habría traído/un paraguas.|비 올 줄 알았으면 우산을 가져왔을 텐데.|알았으면|알았더라면|had I known|비가 올 것을;가져왔을 텐데;우산
+고|일상||*Aunque/esté cansado,/voy a terminar/esto hoy.|피곤하더라도 오늘 이건 끝낼 거야.|~하더라도|비록 ~일지라도|even if|피곤하다;끝낼 거야;이걸 오늘
+고|일상||*Cuanto más/practico,/más/fácil me resulta.|연습할수록 더 쉬워져.|~할수록|~할수록|the more|연습하다;더;나에게 쉬워진다
+고|일상||*No me di cuenta de/que ya era tan tarde.|벌써 그렇게 늦은 줄 몰랐어.|몰랐어|~을 알아차리지 못했다|didn't realize|벌써 그렇게 늦었다는 것
+고|일상||*Me encantaría/ir,/pero/ya tengo planes.|정말 가고 싶은데 이미 약속이 있어.|정말 가고 싶은데|정말 ~하고 싶다|would love to|가다;하지만;이미 계획이 있다
+고|일상||*Estoy pensando en/mudarme a/otra ciudad.|다른 도시로 이사 갈까 생각 중이야.|생각 중이야|~을 생각하는 중|thinking about|이사하다;다른 도시로
+고|회사||*Le agradecería/que me enviara/el informe/antes del viernes.|금요일 전에 보고서를 보내 주시면 감사하겠습니다.|감사하겠습니다|감사하겠습니다|I would appreciate|저에게 보내 주시는 것;보고서;금요일 전에
+고|회사||*Tenemos que/tomar una decisión/cuanto antes.|가능한 한 빨리 결정을 내려야 해요.|해야 해요|~해야 한다|we have to|결정을 내리다;가능한 한 빨리
+고|감정||*Me arrepiento de/no haberte dicho/la verdad.|너한테 진실을 말하지 않은 걸 후회해.|후회해|~을 후회하다|regret|너에게 말하지 않은 것;진실을
+고|감정||*No sé cómo/agradecerte/todo lo que hiciste.|네가 해 준 모든 것에 어떻게 감사해야 할지 모르겠어.|어떻게|어떻게 ~할지 모르다|don't know how|너에게 감사하다;네가 한 모든 것
+고|여행||*Valió la pena/el viaje/aunque/fue largo.|길었지만 여행할 가치가 있었어.|가치가 있었어|~할 가치가 있었다|was worth it|그 여행;비록;길었다
+고|연애|연애|*Desde que te conocí,/mi vida/ha cambiado/por completo.|너를 만난 후로 내 삶이 완전히 바뀌었어.|너를 만난 후로|너를 알게 된 이후로|since I met you|내 삶이;바뀌었다;완전히
+고|일상|드라마·영화|*Pase lo que pase,/siempre/estaré/a tu lado.|무슨 일이 있어도 항상 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|항상;나는 있을 것이다;네 곁에

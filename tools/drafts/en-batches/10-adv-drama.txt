@@ -1,0 +1,49 @@
+# 고급 · 연애 / 드라마·영화 / 관용구 / 여행
+고|연애|연애|I/*think I'm falling in love/with you, and it scares me.|너를 사랑하게 된 것 같아서 무서워.|사랑하게 된 것 같아서|사랑에 빠지다|start to love|나는;너와, 그리고 그게 날 무섭게 해
+고|연애|연애|We/*drifted apart/after she moved to another city.|그녀가 다른 도시로 이사 간 뒤로 우린 멀어졌어.|멀어졌어|점점 멀어지다|grew distant|우리는;그녀가 다른 도시로 이사 간 후
+고|연애|연애|He/*swept me off my feet/on our very first date.|첫 데이트에서 그가 날 완전히 사로잡았어.|완전히 사로잡았어|~을 홀딱 반하게 하다|charmed me|그는;바로 우리 첫 데이트에서
+고|연애|연애|I/*don't want to rush things,/so let's take it slow.|서두르고 싶지 않으니까 천천히 하자.|서두르고 싶지 않으니까|일을 서두르다|hurry|나는;그러니까 천천히 하자
+고|연애|연애|She/*broke up with/him over text, which was harsh.|그녀가 문자로 그와 헤어졌는데, 좀 매정했어.|헤어졌는데|~와 헤어지다|ended it with|그녀는;그를 문자로, 그건 가혹했어
+고|연애|연애|We've/*been through a lot/together, so I trust him.|우린 함께 많은 일을 겪어서 난 그를 믿어.|많은 일을 겪어서|많은 일을 겪다|experienced much|우리는;함께, 그래서 나는 그를 믿어
+고|연애|연애|I/*can't get you out of my head/no matter what I do.|뭘 해도 네 생각이 머리에서 떠나질 않아.|머리에서 떠나질 않아|머리에서 지울 수 없다|always think of you|나는;내가 무엇을 하든
+고|연애|연애|Are you/*sure you want to/give it another chance?|정말 한 번 더 기회를 주고 싶어?|주고 싶어|정말 ~하길 원하다|really want to|너는;그것에 한 번 더 기회를 주다
+고|연애|연애|He/*popped the question/at the top of the mountain.|그가 산 정상에서 청혼했어.|청혼했어|청혼하다|proposed|그는;산 정상에서
+고|연애|연애|I/*love you for who you are,/not what you have.|네가 가진 게 아니라 너라는 사람 자체를 사랑해.|너라는 사람 자체를 사랑해|있는 그대로 사랑하다|love the real you|나는;네가 가진 것이 아니라
+고|일상|드라마·영화|I/*should have told you/the truth from the very beginning.|처음부터 너한테 사실대로 말했어야 했어.|말했어야 했어|~했어야 했다|regret not telling|나는;처음부터 진실을
+고|일상|드라마·영화|You/*have no idea/what I've been through to get here.|내가 여기까지 오려고 무슨 일을 겪었는지 넌 몰라.|넌 몰라|전혀 모르다|don't know|너는;내가 여기 오려고 겪은 일
+고|일상|드라마·영화|*Whatever happens,/promise me you won't give up.|무슨 일이 있어도 포기하지 않겠다고 약속해.|무슨 일이 있어도|무슨 일이 있어도|no matter what|포기하지 않겠다고 약속해
+고|일상|드라마·영화|I/*won't let you down/this time, I swear.|이번엔 실망시키지 않을게, 맹세해.|실망시키지 않을게|실망시키다|disappoint|나는;이번엔, 맹세해
+고|일상|드라마·영화|It's/*now or never,/so let's do this together.|지금 아니면 기회는 없어, 같이 해 보자.|지금 아니면 기회는 없어|지금이 아니면 끝|last chance|그것은;그러니 같이 해 보자
+고|일상|드라마·영화|We're/*in this together,/no matter how hard it gets.|아무리 힘들어도 우린 함께야.|우린 함께야|함께 겪는 중인|together|우리는;아무리 힘들어지더라도
+고|일상|드라마·영화|I've got/*a bad feeling about/this whole plan.|이 계획 전체가 왠지 불길해.|왠지 불길해|~에 대해 불길한 예감|feel uneasy about|나는 가지고 있다;이 계획 전체
+고|일상|드라마·영화|You/*can't just walk away/after everything we've been through.|우리가 겪은 걸 다 두고 그냥 떠날 순 없어.|그냥 떠날 순 없어|그냥 떠나 버리다|leave|너는;우리가 함께 겪은 모든 일 뒤에
+고|일상|드라마·영화|*Over my dead body/will you sell this house.|내 눈에 흙이 들어가기 전엔 이 집 못 팔아.|내 눈에 흙이 들어가기 전엔|절대로 안 돼|absolutely not|네가 이 집을 팔 거라고
+고|일상|드라마·영화|I'm/*doing this for you,/whether you believe it or not.|믿든 안 믿든 이건 다 너를 위해서야.|너를 위해서야|너를 위해 하다|for your sake|나는;네가 믿든 안 믿든
+고|일상||*Every cloud has a silver lining,/so don't lose hope.|모든 일엔 좋은 면이 있으니 희망을 잃지 마.|모든 일엔 좋은 면이 있으니|나쁜 일에도 좋은 면이 있다|good in every bad|그러니 희망을 잃지 마
+고|일상||Let's/*not count our chickens/before they hatch.|김칫국부터 마시지 말자.|김칫국부터 마시지|떡 줄 사람은 생각도 않는데 김칫국부터 마시다|assume too early|~하자;부화하기 전에
+고|일상||He/*let the cat out of the bag/about the surprise party.|그가 깜짝 파티 비밀을 누설해 버렸어.|비밀을 누설해 버렸어|비밀을 누설하다|told the secret|그는;깜짝 파티에 대해
+고|일상||It's/*not rocket science;/anyone can learn to cook.|그렇게 어려운 거 아니야, 누구나 요리 배울 수 있어.|그렇게 어려운 거 아니야|아주 어려운 일|very difficult|그것은;누구나 요리를 배울 수 있어
+고|일상||I'll/*cross that bridge when I come to it.|그 문제는 닥치면 그때 생각할게.|닥치면 그때 생각할게|문제가 생기면 그때 해결하다|deal with it later|나는 ~할게
+고|일상||We/*killed two birds with one stone/by meeting at the mall.|쇼핑몰에서 만나서 일석이조였어.|일석이조였어|일석이조|did two things at once|우리는;쇼핑몰에서 만나서
+고|일상||She/*hit the nail on the head/with her comment.|그녀의 말이 정곡을 찔렀어.|정곡을 찔렀어|정확히 맞히다|was exactly right|그녀는;그녀의 말로
+고|일상||I/*was on pins and needles/waiting for the results.|결과를 기다리며 안절부절못했어.|안절부절못했어|안절부절못하는|anxious|나는;결과를 기다리면서
+고|일상||Don't/*judge a book by its cover;/he's actually really kind.|겉만 보고 판단하지 마, 걔 사실 정말 착해.|겉만 보고 판단하지|겉모습으로 판단하다|judge by looks|~하지 마;그는 사실 정말 친절해
+고|일상||The new phone/*costs an arm and a leg,/but I want it.|새 휴대폰이 엄청 비싸지만 갖고 싶어.|엄청 비싸지만|아주 비싸다|is very expensive|새 휴대폰은;하지만 나는 그걸 원해
+고|일상||I'm/*feeling a bit under the weather,/so I'll stay home.|몸이 좀 안 좋아서 집에 있을게.|몸이 좀 안 좋아서|몸이 좀 안 좋은|slightly sick|나는;그래서 집에 있을게
+고|일상||Let's/*call it a day/and finish the rest tomorrow.|오늘은 여기까지 하고 나머지는 내일 하자.|오늘은 여기까지 하고|하루 일을 마치다|stop working|~하자;그리고 나머지는 내일 끝내자
+고|일상||She/*has her head in the clouds/most of the time.|그녀는 대부분 딴생각에 빠져 있어.|딴생각에 빠져 있어|공상에 빠져 있다|daydreaming|그녀는;대부분의 시간
+고|일상||I/*bent over backwards/to help him, and he didn't even thank me.|그를 도우려고 온갖 애를 썼는데 고맙다는 말도 안 했어.|온갖 애를 썼는데|무척 애쓰다|tried very hard|나는;그를 도우려고, 그런데 그는 고맙다고도 안 했어
+고|일상||The meeting/*was a total waste of time,/to be honest.|솔직히 그 회의는 완전 시간 낭비였어.|완전 시간 낭비였어|완전한 시간 낭비|useless|그 회의는;솔직히
+고|일상||You/*can say that again;/that movie was terrible.|그 말이 맞아, 그 영화 진짜 별로였어.|그 말이 맞아|정말 그래|I agree|너는;그 영화는 형편없었어
+고|일상||I'm/*all for it/if it means we can leave early.|일찍 갈 수 있다면 난 완전 찬성이야.|완전 찬성이야|전적으로 찬성하는|fully support|나는;그게 일찍 갈 수 있다는 뜻이라면
+고|일상||It's/*on the tip of my tongue,/but I can't remember.|혀끝에서 맴도는데 기억이 안 나.|혀끝에서 맴도는데|생각날 듯 말 듯한|almost remember|그것은;하지만 기억이 안 나
+고|여행||We/*were lucky enough to/catch the sunset from the top.|운 좋게 정상에서 일몰을 볼 수 있었어.|운 좋게|운 좋게 ~할 수 있었다|fortunate to|우리는;정상에서 일몰을 보다
+고|여행||I/*always get lost/in big cities without a map.|큰 도시에선 지도 없으면 항상 길을 잃어.|항상 길을 잃어|항상 길을 잃다|lose my way|나는;지도 없이 큰 도시에서
+고|여행||Let's/*make the most of/our last day here.|여기서의 마지막 날을 최대한 즐기자.|최대한 즐기자|~을 최대한 활용하다|enjoy fully|~하자;여기서 우리의 마지막 날
+고|여행||The flight/*was overbooked,/so they offered us a voucher.|비행기가 초과 예약돼서 바우처를 줬어.|초과 예약돼서|초과 예약된|too many tickets sold|그 비행기는;그래서 그들이 바우처를 줬어
+고|여행||We/*decided to/extend our stay for a few more days.|며칠 더 머물기로 했어.|머물기로 했어|~하기로 결정하다|chose to|우리는;며칠 더 머무는 것을 연장하다
+고|여행||I/*recommend/booking the tickets at least a month ahead.|적어도 한 달 전에 표를 예매하는 걸 추천해.|추천해|추천하다|suggest|나는;적어도 한 달 전에 표를 예매하는 것
+고|여행||The locals/*were so friendly/that we felt right at home.|현지인들이 너무 친절해서 편안했어.|너무 친절해서|매우 친절한|very kind|현지인들은;그래서 우리는 집처럼 편안했어
+고|여행||I/*couldn't sleep/on the plane because of the turbulence.|난기류 때문에 비행기에서 잠을 못 잤어.|잠을 못 잤어|잠들 수 없었다|stayed awake|나는;난기류 때문에 비행기에서
+고|여행||We/*should have taken/the train instead of driving.|운전하지 말고 기차를 탔어야 했어.|탔어야 했어|~했어야 했다|regret not taking|우리는;운전 대신 기차
+고|여행||It's/*worth visiting/if you're ever in the area.|그 근처에 가면 가 볼 만해.|가 볼 만해|방문할 가치가 있는|good to visit|그것은;혹시 그 지역에 가게 되면

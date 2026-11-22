@@ -1,0 +1,49 @@
+# 고급 · 추가
+고|일상||I/*just found out/that my favorite café is closing down.|제일 좋아하는 카페가 문 닫는다는 걸 방금 알았어.|방금 알았어|알게 되다|learned|나는;내가 제일 좋아하는 카페가 문을 닫는다는 것
+고|일상||I/*couldn't figure out/why my laptop kept shutting down.|노트북이 왜 자꾸 꺼지는지 알 수가 없었어.|알 수가 없었어|알아내다|understand|나는;내 노트북이 왜 계속 꺼지는지
+고|일상||I'm/*thinking of taking up/painting as a new hobby.|새 취미로 그림을 시작해 볼까 해.|시작해 볼까 해|(취미를) 시작할까 하다|considering starting|나는;새 취미로 그림을
+고|일상||It/*never occurred to me/that she might be upset.|그녀가 속상할 수도 있다는 생각은 전혀 못 했어.|생각은 전혀 못 했어|생각이 떠오르다|I never thought|그것은;그녀가 속상할 수도 있다는 것
+고|일상||I'll/*make it up to you,/I promise.|이 빚은 꼭 갚을게, 약속해.|꼭 갚을게|보상하다, 만회하다|compensate|나는;약속해
+고|일상||I've/*been under a lot of pressure/at work lately.|요즘 회사에서 압박을 많이 받고 있어.|압박을 많이 받고 있어|압박을 많이 받는|stressed|나는;요즘 회사에서
+고|일상||I/*would have called you,/but my phone died.|전화하려고 했는데 휴대폰이 꺼졌어.|전화하려고 했는데|전화했을 것이다|would have phoned|나는;그런데 내 휴대폰이 꺼졌어
+고|일상||The movie/*was so boring/that I fell asleep halfway through.|영화가 너무 지루해서 중간에 잠들었어.|너무 지루해서|아주 지루한|very dull|그 영화는;그래서 중간에 잠들었어
+고|일상||I'm/*in no hurry,/so take as much time as you need.|난 급하지 않으니까 필요한 만큼 시간 써.|급하지 않으니까|서두르지 않는|not rushed|나는;그러니 필요한 만큼 시간을 가져
+고|일상||It's/*getting harder and harder/to find affordable housing.|적당한 가격의 집을 구하기가 점점 어려워지고 있어.|점점 어려워지고 있어|점점 더 어려워지는|more and more difficult|그것은;적당한 가격의 집을 찾는 것
+고|일상||I'd/*rather not talk about it/right now, if that's okay.|괜찮으면 지금은 그 얘기 안 하고 싶어.|그 얘기 안 하고 싶어|~하지 않는 편이 낫다|prefer not to discuss|나는;괜찮다면 지금은
+고|일상||I/*finally got around to/reading the book you lent me.|네가 빌려준 책을 드디어 읽었어.|드디어|마침내 ~할 짬을 내다|finally did|나는;네가 빌려준 책을 읽는 것
+고|일상||I'm/*not used to/driving on the left side of the road.|왼쪽 차선 운전이 익숙하지 않아.|익숙하지 않아|~에 익숙하지 않은|unfamiliar with|나는;도로 왼쪽으로 운전하는 것
+고|일상||We/*ran into each other/at the airport by coincidence.|공항에서 우연히 서로 마주쳤어.|서로 마주쳤어|서로 우연히 만나다|met by chance|우리는;공항에서 우연히
+고|일상||I've/*made up my mind,/and nothing will change it.|마음먹었으니 아무것도 그걸 바꾸지 못해.|마음먹었으니|결심하다|decided|나는;그리고 아무것도 그걸 바꾸지 못할 거야
+고|일상||The concert/*was sold out/within ten minutes of going on sale.|콘서트가 판매 시작 10분 만에 매진됐어.|매진됐어|매진된|no tickets left|그 콘서트는;판매 시작 10분 만에
+고|일상||I'm/*trying to/spend less time on my phone before bed.|자기 전에 휴대폰 보는 시간을 줄이려고 노력 중이야.|노력 중이야|~하려고 노력하다|attempting|나는;자기 전에 휴대폰에 시간을 덜 쓰다
+고|일상||I/*didn't expect/the exam to be this difficult.|시험이 이렇게 어려울 줄 몰랐어.|몰랐어|예상하다|anticipate|나는;그 시험이 이렇게 어려울 것을
+고|일상||I/*can't believe/how fast this year went by.|올해가 이렇게 빨리 지나갔다니 믿기지 않아.|믿기지 않아|믿을 수 없다|amazed|나는;올해가 얼마나 빨리 지나갔는지
+고|일상||I'm/*looking for/someone to share an apartment with.|같이 집을 쓸 사람을 찾고 있어.|찾고 있어|찾다|searching for|나는;아파트를 함께 쓸 사람
+고|감정||I/*felt completely out of my depth/in that meeting.|그 회의에서 완전히 내 능력 밖이라고 느꼈어.|완전히 내 능력 밖이라고|감당하기 벅찬|in over my head|나는 느꼈다;그 회의에서
+고|감정||I'm/*still trying to wrap my head around/what happened.|무슨 일이 있었는지 아직도 이해하려고 애쓰는 중이야.|아직도 이해하려고|이해하려고 애쓰다|understand|나는;무슨 일이 있었는지
+고|감정||It/*felt so good/to finally tell someone the truth.|드디어 누군가에게 진실을 말하니 너무 후련했어.|너무 후련했어|기분이 아주 좋다|felt great|그것은;마침내 누군가에게 진실을 말하는 것
+고|감정||I/*don't blame you/for being angry about it.|네가 그걸로 화내는 거 이해해.|이해해|~를 탓하다|criticize|나는;네가 그것에 화내는 것에 대해
+고|감정||I/*was really looking forward to/seeing you this weekend.|이번 주말에 너 보는 거 정말 기대했어.|정말 기대했어|~을 고대하다|eager for|나는;이번 주말에 너를 보는 것
+고|감정||It's/*the least I can do/after everything you did for me.|네가 날 위해 해 준 걸 생각하면 이 정도는 당연하지.|이 정도는 당연하지|최소한의 도리|at least|그것은;네가 날 위해 해 준 모든 것 뒤에
+고|감정||I/*can't thank you enough/for staying with me last night.|어젯밤 곁에 있어 줘서 아무리 고마워해도 모자라.|아무리 고마워해도 모자라|아무리 감사해도 부족하다|very thankful|나는;어젯밤 나와 함께 있어 준 것에
+고|감정||I'm/*not going to lie,/that was pretty scary.|솔직히 말하면 그거 꽤 무서웠어.|솔직히 말하면|거짓말 안 할게|honestly|나는;그건 꽤 무서웠어
+고|감정||I/*have a hard time saying no/to my friends.|친구들한테 거절을 잘 못해.|거절을 잘 못해|거절하기 어려워하다|struggle to refuse|나는;내 친구들에게
+고|감정||I/*felt a little left out/when they made plans without me.|나 빼고 약속 잡았을 때 좀 소외감 느꼈어.|좀 소외감 느꼈어|소외된 느낌|excluded|나는;그들이 나 없이 계획을 세웠을 때
+고|회사||We/*need to come up with/a better strategy for next year.|내년을 위한 더 나은 전략을 생각해 내야 해요.|생각해 내야|생각해 내다|create|우리는 ~해야 해요;내년을 위한 더 나은 전략
+고|회사||I'm/*afraid I won't be able to/attend the meeting tomorrow.|죄송하지만 내일 회의에 참석하지 못할 것 같아요.|참석하지 못할 것 같아요|~하지 못할 것 같다|can't|저는;내일 회의에 참석하다
+고|회사||Let's/*set up a call/to discuss the details next week.|다음 주에 세부 사항 논의하게 통화 일정을 잡죠.|통화 일정을 잡죠|통화를 잡다|arrange a call|~하자;다음 주에 세부 사항을 논의하기 위해
+고|회사||She/*was put in charge of/the new marketing team.|그녀가 새 마케팅 팀을 맡게 됐어요.|맡게 됐어요|~의 책임자가 되다|made leader of|그녀는;새 마케팅 팀
+고|회사||I'll/*have it ready/by the end of the day.|오늘 안으로 준비해 둘게요.|준비해 둘게요|준비해 두다|prepare|나는;오늘 일과 끝까지
+고|회사||We/*should keep an eye on/how the market reacts.|시장 반응을 지켜봐야 해요.|지켜봐야|주시하다|watch|우리는 ~해야 해요;시장이 어떻게 반응하는지
+고|회사||The client/*seemed pleased with/the final version.|고객이 최종본에 만족한 것 같았어요.|만족한 것 같았어요|~에 만족해 보이다|looked happy with|그 고객은;최종본
+고|회사||I'd/*like to hear/everyone's thoughts before we decide.|결정하기 전에 모두의 생각을 듣고 싶어요.|듣고 싶어요|듣고 싶다|want to know|저는;결정하기 전에 모두의 생각
+고|회사||He/*has a lot of experience/in the finance industry.|그는 금융 업계에서 경험이 많아요.|경험이 많아요|경험이 많다|very experienced|그는;금융 업계에서
+고|회사||I'm/*sorry for the delay/in getting back to you.|답장이 늦어서 죄송합니다.|늦어서 죄송합니다|지연에 대해 미안하다|apologize for lateness|저는;당신에게 회신하는 데
+고|학교||I/*had no idea/the test would cover so much material.|시험 범위가 그렇게 넓을 줄 전혀 몰랐어.|전혀 몰랐어|전혀 몰랐다|didn't know|나는;시험이 그렇게 많은 내용을 다룰 줄
+고|학교||Learning a language/*takes a lot of patience/and practice.|언어를 배우려면 인내심과 연습이 많이 필요해.|인내심과|많은 인내가 필요하다|needs patience|언어를 배우는 것은;그리고 연습
+고|학교||I'm/*getting better at/understanding fast speech.|빠른 말을 알아듣는 게 점점 나아지고 있어.|점점 나아지고 있어|~을 더 잘하게 되다|improving at|나는;빠른 말을 이해하는 것
+고|학교||Don't/*be afraid of making mistakes/when you speak.|말할 때 실수하는 걸 두려워하지 마.|실수하는 걸 두려워하지|실수를 두려워하다|fear errors|~하지 마;네가 말할 때
+고|여행||I/*would love to/visit Iceland someday to see the northern lights.|언젠가 오로라 보러 아이슬란드에 꼭 가 보고 싶어.|꼭 가 보고 싶어|정말 ~하고 싶다|really want to|나는;언젠가 오로라를 보러 아이슬란드를 방문하다
+고|여행||We/*got stuck/at the airport because of the snowstorm.|눈보라 때문에 공항에 발이 묶였어.|발이 묶였어|꼼짝 못 하게 되다|were trapped|우리는;눈보라 때문에 공항에서
+고|여행||It/*was the trip of a lifetime,/and I'll never forget it.|평생 한 번뿐인 여행이었고 절대 못 잊을 거야.|평생 한 번뿐인 여행이었고|일생일대의 여행|best trip ever|그것은;그리고 나는 절대 잊지 못할 거야
+고|여행||I/*always try to/learn a few phrases before I travel.|여행 전엔 항상 몇 마디라도 배우려고 해.|배우려고 해|항상 ~하려고 하다|attempt to|나는;여행 전에 몇 마디를 배우다

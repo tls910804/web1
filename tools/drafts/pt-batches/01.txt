@@ -1,0 +1,42 @@
+# 포르투갈어(브라질) ~45
+초|일상||*Bom dia!|좋은 아침이에요!|좋은 아침이에요|좋은 아침|good morning
+초|일상||*Tudo bem?|잘 지내?|잘 지내|다 괜찮아?|how are you
+초|일상||*Tudo ótimo,/obrigado.|아주 좋아, 고마워.|아주 좋아|다 아주 좋다|all great|고마워
+초|일상||*Prazer.|반가워요.|반가워요|기쁨, 반가움|nice to meet you
+초|일상||*Até logo!|나중에 봐!|나중에 봐|나중에 봐|see you later
+초|일상||*Desculpa.|미안해.|미안해|미안|sorry
+초|일상||Não/*entendi.|이해 못 했어요.|이해 못 했어요|이해했다|understood|~않다
+초|일상||Onde fica/o/*banheiro?|화장실이 어디예요?|화장실|화장실|bathroom|어디에 있어요;그
+초|일상||Estou/*com fome.|배고파요.|배고파요|배고픈|hungry|나는 ~이다
+초|일상||Estou/*cansado.|피곤해요.|피곤해요|피곤한|tired|나는 ~이다
+초|일상||*Sem problema.|문제없어요.|문제없어요|문제없음|no problem
+초|카페·식당||*Um café,/por favor.|커피 한 잔 주세요.|커피 한 잔|커피 한 잔|a coffee|부탁해요
+초|카페·식당||*A conta,/por favor.|계산서 주세요.|계산서|계산서|the bill|부탁해요
+초|카페·식당||Está/*uma delícia!|정말 맛있어요!|정말 맛있어요|아주 맛있는 것|delicious|~이다
+초|쇼핑||*Quanto custa?|얼마예요?|얼마예요|얼마예요|how much
+초|쇼핑||Está/*muito caro.|너무 비싸요.|너무 비싸요|아주 비싼|very expensive|~이다
+초|여행||*Estou perdido.|길을 잃었어요.|길을 잃었어요|길 잃은|lost
+초|감정||*Que saudade!|너무 그리워!|너무 그리워|그리움|longing
+초|감정||*Eu te amo.|사랑해.|사랑해|너를 사랑해|I love you
+초|감정||*Que legal!|멋지다!|멋지다|정말 멋지다|how cool
+중|일상||Vou/*chegar atrasado.|늦을 것 같아요.|늦을 것 같아요|늦게 도착하다|arrive late|나는 ~할 것이다
+중|일상||Já estou/*a caminho.|벌써 가는 중이에요.|가는 중이에요|가는 길에|on the way|이미 나는 ~이다
+중|일상||*Esqueci/minhas chaves.|열쇠를 깜빡했어.|깜빡했어|잊었다|I forgot|내 열쇠
+중|일상||*Tanto faz.|아무래도 상관없어.|상관없어|상관없다|whatever
+중|일상||*Não faço ideia.|전혀 모르겠어.|전혀 모르겠어|전혀 모르다|no idea
+중|일상||*Estou a fim de/sair hoje.|오늘 나가고 싶어.|나가고 싶어|~하고 싶은|in the mood for|오늘 나가다
+중|일상||*Acabei de/chegar em casa.|방금 집에 도착했어.|방금|방금 ~했다|just did|집에 도착하다
+중|카페·식당||O que você/*recomenda?|뭘 추천해요?|추천해요|추천하다|recommend|당신은 무엇을
+중|카페·식당||*Hoje é por minha conta.|오늘은 내가 낼게.|내가 낼게|내 몫이다|it's on me
+중|쇼핑||Tem/*um tamanho maior?|더 큰 사이즈 있어요?|더 큰 사이즈|더 큰 사이즈|bigger size|있나요
+중|여행||É/*longe daqui?|여기서 멀어요?|여기서 멀어요|여기서 먼|far from here|~인가요
+중|회사||*Te mando/o arquivo/agora.|지금 파일 보낼게.|보낼게|너에게 보내다|send you|그 파일;지금
+중|감정||*Estou de saco cheio/disso.|그거 진짜 지긋지긋해.|진짜 지긋지긋해|질린|fed up|그것에
+중|연애|연애|*Quer sair/comigo?|나랑 데이트할래?|데이트할래|나가고 싶니|want to go out|나와
+중|연애|연애|*A gente terminou.|우리 헤어졌어.|헤어졌어|우리가 끝냈다|we broke up
+중|일상|슬랭|*Massa!|끝내준다!|끝내준다|멋지다|awesome
+고|일상||*Se eu soubesse,/teria chegado/mais cedo.|알았더라면 더 일찍 왔을 텐데.|알았더라면|내가 알았더라면|if I had known|도착했을 텐데;더 일찍
+고|일상||*Embora esteja cansado,/vou terminar/isso hoje.|피곤하지만 오늘 이건 끝낼 거야.|피곤하지만|비록 피곤하지만|although tired|끝낼 거야;이걸 오늘
+고|일상||*Quanto mais eu pratico,/mais fácil/fica.|연습할수록 더 쉬워져.|연습할수록|더 연습할수록|the more I practice|더 쉽게;된다
+고|회사||*Eu agradeceria se/você pudesse/me enviar o relatório/até sexta.|금요일까지 보고서를 보내 주시면 감사하겠습니다.|감사하겠습니다|~하면 감사하겠다|I'd appreciate if|당신이 ~할 수 있다면;나에게 보고서를 보내다;금요일까지
+고|일상|드라마·영화|*Aconteça o que acontecer,/eu/vou estar/sempre ao seu lado.|무슨 일이 있어도 항상 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|나는;있을 것이다;항상 네 곁에

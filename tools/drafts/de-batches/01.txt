@@ -1,0 +1,50 @@
+# 독일어 ~60
+초|일상||*Guten Morgen!|좋은 아침이에요!|좋은 아침이에요|좋은 아침|good morning
+초|일상||*Wie geht's?|어떻게 지내?|어떻게 지내|어떻게 지내?|how are you
+초|일상||Mir geht's/*gut,/danke.|잘 지내, 고마워.|잘 지내|좋은|good|나는 ~지내;고마워
+초|일상||*Freut mich.|반가워요.|반가워요|반갑다|nice to meet you
+초|일상||*Bis später!|나중에 봐!|나중에 봐|나중에 봐|see you later
+초|일상||*Entschuldigung.|실례합니다. / 죄송해요.|실례합니다|실례합니다|excuse me
+초|일상||Ich/*verstehe/nicht.|이해가 안 돼요.|이해가|이해하다|understand|나는;~않다
+초|일상||Wo ist/die/*Toilette?|화장실이 어디예요?|화장실|화장실|toilet|어디에 있나요;그
+초|일상||Ich habe/*Hunger.|배고파요.|배고파요|배고픔|hunger|나는 가지고 있다
+초|일상||Ich bin/*müde.|피곤해요.|피곤해요|피곤한|tired|나는 ~이다
+초|일상||Es ist/*kalt/heute.|오늘 추워요.|추워요|추운|cold|~이다;오늘
+초|일상||*Kein Problem.|문제없어요.|문제없어요|문제없음|no problem
+초|일상||*Schönen Tag noch!|좋은 하루 보내세요!|좋은 하루|좋은 하루 되세요|have a nice day
+초|카페·식당||*Einen Kaffee,/bitte.|커피 한 잔 주세요.|커피 한 잔|커피 한 잔|a coffee|부탁해요
+초|카페·식당||*Die Rechnung,/bitte.|계산서 주세요.|계산서|계산서|the bill|부탁해요
+초|카페·식당||Das ist/*lecker!|맛있어요!|맛있어요|맛있는|tasty|그것은
+초|쇼핑||Was/*kostet/das?|이거 얼마예요?|얼마예요|값이 ~하다|cost|무엇;그것
+초|쇼핑||Das ist/*zu teuer.|너무 비싸요.|너무 비싸요|너무 비싼|too expensive|그것은
+초|여행||Ich habe mich/*verlaufen.|길을 잃었어요.|길을 잃었어요|길을 잃다|got lost|나는 ~했다
+초|감정||Ich bin/*glücklich.|행복해요.|행복해요|행복한|happy|나는 ~이다
+초|감정||*Ich vermisse dich.|보고 싶어.|보고 싶어|너를 그리워하다|I miss you
+초|감정||*Ich liebe dich.|사랑해.|사랑해|너를 사랑해|I love you
+중|일상||Ich/*komme/ein bisschen später.|좀 늦게 갈게요.|갈게요|오다|come|나는;조금 늦게
+중|일상||Ich bin/*unterwegs.|가는 중이에요.|가는 중이에요|가는 중인|on the way|나는 ~이다
+중|일상||*Ich habe vergessen,/den Schlüssel mitzunehmen.|열쇠 챙기는 걸 잊었어.|잊었어|나는 잊었다|I forgot|열쇠를 챙기다
+중|일상||*Das ist mir egal.|상관없어.|상관없어|나에겐 상관없다|I don't care
+중|일상||*Ich habe keine Ahnung.|전혀 모르겠어.|전혀 모르겠어|전혀 모르다|no idea
+중|일상||*Ich habe Lust auf/eine Pizza.|피자가 당겨.|당겨|~이 당기다|feel like|피자 하나
+중|일상||*Es lohnt sich,/das auszuprobieren.|그거 해 볼 만해.|해 볼 만해|할 가치가 있다|worth it|그걸 시도하다
+중|카페·식당||Was können Sie/*empfehlen?|뭘 추천하시겠어요?|추천하시겠어요|추천하다|recommend|무엇을 ~할 수 있나요
+중|카페·식당||*Zusammen oder getrennt?|같이 계산하세요, 따로 하세요?|같이 계산하세요, 따로 하세요|함께 아니면 따로|together or separate
+중|쇼핑||Haben Sie/das/*eine Nummer größer?|이거 한 치수 큰 거 있어요?|한 치수 큰|한 치수 큰|one size bigger|있나요;그것
+중|쇼핑||Kann ich/das/*anprobieren?|입어 봐도 돼요?|입어 봐도|입어 보다|try on|~해도 돼요;그것
+중|여행||Ist es/*weit von hier?|여기서 멀어요?|여기서 멀어요|여기서 먼|far from here|~인가요
+중|여행||Wann/*fährt/der Zug ab?|기차가 언제 출발해요?|출발해요|떠나다|depart|언제;그 기차가
+중|회사||Ich habe/*um drei/ein Meeting.|3시에 회의가 있어요.|3시에|3시에|at three|나는 가지고 있다;회의 하나
+중|회사||*Ich melde mich/später.|나중에 연락할게요.|연락할게요|연락하다|get in touch|나중에
+중|감정||*Ich habe die Nase voll/von dem Regen.|비가 지긋지긋해.|지긋지긋해|질리다|fed up|그 비에
+중|감정||*Das ist mir peinlich.|창피해.|창피해|나에게 창피하다|embarrassing
+중|연애|연애|*Willst du/mit mir ausgehen?|나랑 데이트할래?|~할래|너는 원하니|do you want|나와 데이트하다
+중|연애|연애|Wir haben/*Schluss gemacht.|우리 헤어졌어.|헤어졌어|끝내다|broke up|우리는 ~했다
+중|일상|슬랭|*Voll krass!|완전 대박!|완전 대박|완전 대단해|totally crazy
+중|일상|슬랭|*Alles klar!|알겠어!|알겠어|다 좋아|all good
+고|일상||*Wenn ich das gewusst hätte,/wäre ich/früher gekommen.|알았더라면 더 일찍 왔을 텐데.|알았더라면|그걸 알았더라면|had I known|나는 ~했을 텐데;더 일찍 왔다
+고|일상||*Obwohl ich müde bin,/mache ich/das heute/noch fertig.|피곤하지만 오늘 이건 끝낼 거야.|피곤하지만|비록 피곤하지만|although tired|나는 하다;그걸 오늘;아직 끝내다
+고|일상||*Je mehr ich übe,/desto/einfacher/wird es.|연습할수록 더 쉬워져.|연습할수록|더 연습할수록|the more I practice|그만큼;더 쉬운;그것은 된다
+고|회사||*Ich wäre Ihnen dankbar,/wenn Sie mir/den Bericht/bis Freitag schicken.|금요일까지 보고서를 보내 주시면 감사하겠습니다.|감사하겠습니다|감사하겠다|I'd be grateful|당신이 나에게;보고서를;금요일까지 보낸다면
+고|감정||*Ich bereue es,/dir nicht/die Wahrheit/gesagt zu haben.|너한테 진실을 말하지 않은 걸 후회해.|후회해|그것을 후회하다|I regret it|너에게 ~않다;진실을;말한 것
+고|일상|드라마·영화|*Egal was passiert,/ich bin/immer/für dich da.|무슨 일이 있어도 항상 네 곁에 있을게.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|나는 ~이다;항상;너를 위해 거기에
