@@ -14,7 +14,8 @@ fetch(`${base}manifest.json`)
 
 // 아이폰(사파리)은 사용자가 누른 순간에 한 번 재생한 audio 요소만 나중에 스스로 재생할 수 있어요.
 // 그래서 재생기를 하나만 두고, 첫 터치 때 아주 짧은 무음을 틀어 잠금을 풀어 둬요 (자동재생용).
-const player = new Audio();
+let player: HTMLAudioElement | null = null; // 테스트(브라우저 아님)에서도 불러올 수 있게 처음 쓸 때 만들어요
+const getPlayer = () => (player ??= new Audio());
 function silentWav() {
   const n = 240, b = new DataView(new ArrayBuffer(44 + n * 2)); // 24kHz 10ms 무음
   const s = (o: number, t: string) => [...t].forEach((c, i) => b.setUint8(o + i, c.charCodeAt(0)));
@@ -27,7 +28,8 @@ let unlocked = false;
 const unlock = () => {
   if (unlocked) return;
   unlocked = true;
-  if (!player.src) { player.src = silentWav(); player.play().catch(() => { unlocked = false; }); }
+  const p = getPlayer();
+  if (p.paused) { p.src = silentWav(); p.play().catch(() => { unlocked = false; }); } // 첫 터치 전에 막힌 자동재생이 있어도 무음으로 잠금만 풀어요
 };
 if (typeof document !== 'undefined') ['touchend', 'click'].forEach((t) => document.addEventListener(t, unlock, { capture: true }));
 
@@ -57,7 +59,7 @@ export function playAudio(text: string, lang: string, slow: boolean, repeat = 1)
   const url = `${base}${e.f}${slow && e.s ? '.slow' : ''}.m4a`;
   let left = repeat;
   const play = () => {
-    const a = player;
+    const a = getPlayer();
     a.src = url;
     // 느린 파일이 따로 없으면 보통 파일을 느리게(음높이는 그대로). 사파리는 src를 바꾸면 속도를 default로 되돌려요
     a.defaultPlaybackRate = a.playbackRate = slow && !e.s ? 0.75 : 1;
