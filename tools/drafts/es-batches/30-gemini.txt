@@ -1,0 +1,222 @@
+# Gemini gemini-3.8-flash 초안 (검사 전)
+초|일상||Oye, / *baja el volumen, / porfa.|야, 볼륨 좀 줄여줘, 부탁이야.|볼륨 좀 줄여줘|소리를 줄이다|turn down the volume|야;부탁이야
+초|병원||Desde esta mañana/*tengo náuseas.|오늘 아침부터 속이 메스꺼워요.|속이 메스꺼워요|구역질이 난다|I feel nauseated|오늘 아침부터
+초|카페·식당||¿Tienen/*leche de avena?|오트밀크 있나요?|오트밀크|귀리 우유|oat milk|있나요
+초|쇼핑||¿Tiene cambio/*de cincuenta euros?|50유로짜리 거스름돈 있으세요?|50유로짜리|50유로의|for fifty euros|거스름돈 있으세요
+초|일상||Cierra la ventana,/*entra frío.|창문 닫아, 찬 바람 들어와.|찬 바람 들어와|찬 기운이 들어온다|cold air comes in|창문 닫아
+초|연애||Me alegro de/*haberte conocido.|널 알게 돼서 기뻐.|널 알게 돼서|너를 알게 된 것|having met you|기뻐
+중|회사||Luego/*le echo un vistazo/al informe.|나중에 보고서 한번 훑어볼게.|한번 훑어볼게|한번 훑어보다|take a look at it|나중에;보고서를
+중|감정||*No me entra en la cabeza/cómo pudo hacer eso.|걔가 어떻게 그럴 수 있는지 도무지 이해가 안 가.|도무지 이해가 안 가|이해할 수가 없다|I can't wrap my head around it|걔가 어떻게 그럴 수 있는지
+중|카페·식당||A esta sopa/*le falta un poco de sal.|이 수프는 소금이 좀 부족해.|소금이 좀 부족해|소금이 약간 부족하다|it lacks a bit of salt|이 수프는
+중|여행||¿Cuánto cuesta/*un billete de ida y vuelta?|왕복 표 얼마예요?|왕복 표|왕복 티켓|round-trip ticket|얼마예요
+중|병원||Tengo la piel muy seca/*por culpa de la calefacción.|난방 때문에 피부가 너무 건조해.|난방 때문에|난방 탓에|because of the heating|피부가 너무 건조해
+중|연애|연애|Vosotros dos/*hacéis muy buena pareja.|너희 둘 참 잘 어울려.|참 잘 어울려|아주 잘 어울리는 짝이다|make a great couple|너희 둘
+중|감정||Ese chico/*me da mala espina.|저 남자애 왠지 느낌이 안 좋아.|왠지 느낌이 안 좋아|불길한 느낌이 들다|gives me a bad vibe|저 남자애
+중|쇼핑||En las rebajas,/lo compré/*a mitad de precio.|세일 때 그거 반값에 샀어.|반값에|절반 가격에|at half price|세일 때;그것을 샀다
+중|일상||Antes de que anochezca,/*tengo que tender la colada.|해 지기 전에 빨래 널어야 해.|빨래 널어야 해|빨래를 널어야 한다|have to hang the laundry|해 지기 전에
+고|회사||*Por si las moscas,/guarda una copia/de todo el proyecto.|혹시 모르니까 프로젝트 전체 복사본을 저장해 둬.|혹시 모르니까|만약을 대비해서|just in case|복사본을 저장해 둬;프로젝트 전체의
+고|일상||A fuerza de practicar todos los días,/al final/*consiguió sacarse el carnet.|매일 연습한 끝에 결국 운전면허를 땄어.|운전면허를 땄어|면허를 취득했다|managed to get the driver's license|매일 꾸준히 연습해서;결국
+고|연애|연애|Aunque me duela admitirlo,/*lo nuestro no va a ninguna parte.|인정하기 마음 아프지만 우리 관계는 미래가 없어.|우리 관계는 미래가 없어|발전 가능성이 없다|our relationship is going nowhere|인정하기 마음 아프지만
+고|감정||Intenté mantener la calma,/pero al final/*exploté de rabia.|침착함을 유지하려고 애썼지만 결국 분통을 터뜨리고 말았어.|분통을 터뜨리고 말았어|화를 폭발시켰다|exploded with anger|침착함을 유지하려고 애썼다;하지만 결국
+고|여행||Por culpa del pinchazo,/*nos quedamos tirados/en mitad de la nada.|타이어 펑크 때문에 외딴곳에서 완전히 발이 묶였어.|완전히 발이 묶였어|꼼짝 못 하고 발이 묶이다|were left stranded|타이어 펑크 때문에;외딴곳에서
+고|카페·식당||Con tanto trabajo acumulado,/como cualquier cosa/*para salir del paso.|밀린 일이 너무 많아서 대충 때우려고 아무거나 먹어.|대충 때우려고|임시방편으로 때우다|to make do|밀린 일이 너무 많아서;아무거나 먹는다
+초|일상||Deja la llave/*encima de la mesa.|열쇠는 테이블 위에 둬.|테이블 위에|식탁 위에|on the table|열쇠는 둬
+초|카페·식당||Esta sopa/*está un poco sosa.|이 국물은 좀 싱거워.|좀 싱거워|간이 덜 되었다|is a bit bland|이 국물은
+초|쇼핑||Este abrigo/*abriga un montón.|이 코트 진짜 따뜻해.|진짜 따뜻해|보온성이 아주 좋다|is super warm|이 코트는
+초|감정||Con esta música/*se me pone la piel de gallina.|이 음악 들으면 소름이 쫙 돋아.|소름이 쫙 돋아|닭살이 돋는다|I get goosebumps|이 음악 들으면
+초|병원||*Ponte hielo/en el golpe.|부딪힌 부위에 얼음찜질해 줘.|얼음찜질해 줘|얼음을 대다|put some ice|부딪힌 부위에
+초|회사||El enlace/*mándamelo por el chat.|그 링크는 채팅창으로 보내 줘.|채팅창으로 보내 줘|채팅을 통해 보내라|send it to me in the chat|그 링크는
+초|카페·식당||Come rápido,/que la comida/*se queda fría.|얼른 먹어, 음식이 다 식어 버려.|다 식어 버려|식어 버린다|gets cold|얼른 먹어;음식이
+초|쇼핑||Esta cazadora/*está a mitad de precio.|이 점퍼는 반값 할인 중이야.|반값 할인 중이야|반값이다|is half price|이 점퍼는
+초|일상||Sujeta el vaso,/*que se te va a caer el café.|컵 잘 잡아, 커피 쏟아질라.|커피 쏟아질라|커피가 쏟아질 것이다|your coffee is going to spill|컵 잘 잡아
+초|연애||Esta noche/*cenamos a la luz de las velas.|오늘 밤에는 촛불 켜고 오붓하게 저녁 먹자.|촛불 켜고 오붓하게 저녁 먹자|촛불 아래에서 저녁을 먹다|we're having dinner by candlelight|오늘 밤에는
+중|일상||Por favor,/*ve al grano/y no te enrolles tanto.|제발 본론만 말하고 말 길게 늘이지 마.|본론만 말하고|요점으로 바로 가다|get straight to the point|제발;말 길게 늘이지 마
+중|회사|슬랭|Si nos dividimos las tareas,/*esto está chupado.|각자 일 분담해서 하면 이거 완전 거저먹기야.|완전 거저먹기야|매우 쉽다|this is a piece of cake|각자 일 분담해서 하면
+중|감정||No le des más vueltas, solo/*quiere hacerte rabiar.|더 이상 신경 쓰지 마, 그냥 너 약 올리려는 거야.|너 약 올리려는 거야|너를 화나게 하길 원한다|wants to make you mad|더 이상 곱씹지 마, 단지
+중|일상||Si dudas con la receta,/*echa un vistazo/al videotutorial.|요리 레시피가 헷갈리면 동영상 튜토리얼 한번 훑어봐.|한번 훑어봐|한번 쳐다보다|take a quick look|요리 레시피가 헷갈리면;동영상 튜토리얼을
+중|쇼핑||En pleno agosto,/los billetes de tren/*están por las nubes.|8월 한여름에는 기차표가 천정부지로 치솟아.|천정부지로 치솟아|구름 위에 있다 / 값이 매우 비싸다|are through the roof|8월 한여름에는;기차표가
+중|회사||Para terminar antes de las seis,/*tenemos que ponernos las pilas.|6시 전에 끝내려면 우리 바짝 분발해야 해.|우리 바짝 분발해야 해|배터리를 끼우다 / 정신 차리고 서두르다|we need to step it up|6시 전에 끝내려면
+중|연애|연애|Ayer Lucas se declaró, pero/*le dieron calabazas.|어제 루카스가 고백했지만 딱지 맞았어.|딱지 맞았어|퇴짜를 맞다 / 거절당하다|she turned him down|어제 루카스가 고백했지만
+중|일상||Anoche/*no pegué ojo/por la tormenta eléctrica.|어젯밤 천둥 번개 때문에 한숨도 눈을 못 붙였어.|한숨도 눈을 못 붙였어|눈을 붙이지 못했다|didn't sleep a wink|어젯밤;천둥 번개 때문에
+중|일상||Tenía que comprar el pan, pero/*se me fue el santo al cielo.|빵을 샀어야 했는데 깜빡하고 다른 생각에 정신이 팔렸네.|깜빡하고 다른 생각에 정신이 팔렸네|정신이 딴 데 팔려 까먹다|it totally slipped my mind|빵을 샀어야 했는데
+중|카페·식당||Ese mesón del barrio/*tiene muy buena fama/por sus postres caseros.|동네의 저 식당은 수제 디저트로 입소문이 자자해.|입소문이 자자해|명성이 자자하다|has a great reputation|동네의 저 식당은;수제 디저트로
+중|병원||Me picó una avispa, y/*la zona no para de hincharse.|말벌에 쏘였는데 쏘인 부위가 계속 퉁퉁 붓고 있어.|계속 퉁퉁 붓고 있어|붓기를 멈추지 않는다|keeps swelling up|말벌에 쏘였는데
+중|감정||En mitad de la entrevista,/*me quedé en blanco/por los nervios.|면접 도중에 긴장 때문에 머릿속이 새하얘졌어.|머릿속이 새하얘졌어|머리가 백지가 되었다|my mind went completely blank|면접 도중에;긴장 때문에
+중|연애|연애|A mi parecer,/esos dos/*hacen una pareja genial.|내가 보기에는 저 둘은 진짜 잘 어울리는 한 쌍이야.|진짜 잘 어울리는 한 쌍이야|멋진 커플을 이루다|make an awesome couple|내가 보기에는;저 둘은
+중|일상||Mi prima se toma un café y/*empieza a hablar por los codos.|사촌 언니는 커피만 마시면 입에 모터를 단 듯 쉴 새 없이 떠들어.|입에 모터를 단 듯 쉴 새 없이 떠들어|팔꿈치로 말하다 / 쉴 새 없이 말하다|talks endlessly|사촌 언니는 커피만 마시면
+중|카페·식당||Para cuidar la voz, póngame/*agua del tiempo,/por favor.|목 관리하게 상온의 미지근한 물로 부탁드려요.|상온의 미지근한 물로|실온의 물|room-temperature water|목을 관리하도록 제게 주세요;부탁합니다
+중|여행||En el aeropuerto de Fráncfort,/*perdimos el vuelo de conexión.|프랑크푸르트 공항에서 환승 항공편을 놓쳤어.|환승 항공편을 놓쳤어|연결 비행편을 놓치다|missed our connecting flight|프랑크푸르트 공항에서
+중|회사||Si te surge cualquier duda,/*dímelo sobre la marcha.|혹시 궁금한 점이 생기면 그때그때 바로바로 물어봐.|그때그때 바로바로 물어봐|진행하면서 내게 말해라|tell me as we go along|궁금한 점이 생기면
+중|일상||Siempre que como fabada,/*me entra una modorra tremenda.|콩스튜를 먹을 때마다 미친 듯이 졸음이 쏟아져.|미친 듯이 졸음이 쏟아져|엄청난 나른함/졸음이 몰려온다|I get hit with extreme drowsiness|콩스튜를 먹을 때마다
+중|쇼핑||Esta cazadora de cuero te queda genial, pero/*cuesta un pastizal.|이 가죽 재킷 너한테 정말 잘 어울리지만 가격이 진짜 후덜덜하다.|가격이 진짜 후덜덜하다|큰돈이 든다|costs an absolute fortune|이 가죽 재킷 너한테 정말 잘 어울리지만
+중|병원||Con esta faringitis,/*apenas puedo tragar saliva.|이 인후염 때문에 침조차 겨우 삼켜.|침조차 겨우 삼켜|침을 거의 삼킬 수가 없다|can barely swallow saliva|이 인후염 때문에
+중|회사||Con los nuevos inversores,/*conviene andar con pies de plomo.|새로운 투자자들과는 돌다리도 두들겨 가며 조심해야 해.|돌다리도 두들겨 가며 조심해야 해|납 발로 걷다 / 매우 조심성 있게 행동하다|tread carefully|새로운 투자자들과는
+중|회사||Para sacar adelante la campaña,/*todos debemos arrimar el hombro.|캠페인을 성공시키기 위해 우리 모두 힘을 보태야 해.|우리 모두 힘을 보태야 해|모두 어깨를 맞대다 / 협동하다|we all need to chip in|캠페인을 성공시키기 위해
+중|감정||Su comentario fuera de lugar/*me sentó como un tiro.|눈치 없는 그의 말에 기분이 확 상해 버렸어.|기분이 확 상해 버렸어|총알을 맞은 것 마냥 매우 불쾌했다|felt like a slap in the face|눈치 없는 그의 말에
+고|일상||Como nos pilló el chaparrón sin paraguas,/*acabamos empapados hasta los huesos.|우산 없이 장대비를 만나는 바람에 뼛속까지 흠뻑 젖어 버렸어.|뼛속까지 흠뻑 젖어 버렸어|뼛속까지 흠뻑 젖었다|soaked to the bone|우산 없이 장대비를 만나는 바람에
+고|회사||Antes de tomar una decisión tan arriesgada,/*será mejor consultarlo con la almohada.|그렇게 위험 부담이 큰 결정을 내리기 전에는 하룻밤 자면서 신중히 고민해 보는 게 상책이야.|하룻밤 자면서 신중히 고민해 보는 게 상책이야|베개와 상의하다 / 하룻밤 자며 신중히 생각하다|sleep on it before deciding|그렇게 위험 부담이 큰 결정을 내리기 전에는
+고|감정||Al escuchar las palabras de mi abuelo,/*se me puso un nudo en la garganta.|할아버지의 말씀을 들었을 때 울컥하고 목이 메었어.|울컥하고 목이 메었어|목에 매듭이 걸리다 / 목이 메다|got a lump in my throat|할아버지의 말씀을 들었을 때
+고|회사||El director prefirió/*hacer la vista gorda/para evitar un escándalo.|부장님은 차라리 그냥 눈감아 주기로 하셨어, 스캔들을 피하려고.|그냥 눈감아 주기로 하셨어|못 본 체하다 / 눈감아주다|turn a blind eye|부장님은 차라리 원하셨다;스캔들을 피하기 위해
+고|일상||Aunque el camino se vuelva cuesta arriba,/*jamás deberías tirar la toalla.|비록 길이 오르막길이 되더라도 절대 쉽게 포기해선 안 돼.|절대 쉽게 포기해선 안 돼|수건을 던지다 / 기권하다|throw in the towel|비록 길이 오르막길이 되더라도
+고|여행||Para esquivar las obras de la carretera,/*tuvimos que dar un rodeo/interminable.|도로 공사를 피하려고 끝없는 먼 길을 둘러가야 했어.|먼 길을 둘러가야 했어|우회하다 / 빙 돌아가다|take a long detour|도로 공사를 피하기 위해;끝없는
+고|일상||Estaba en mitad de una anécdota y/de repente/*perdí el hilo/por completo.|재미난 이야기의 중간에 있었는데 갑자기 완전히 맥을 놓쳐 버렸어.|맥을 놓쳐 버렸어|이야기의 실마리를 잃다|lost my train of thought|재미난 이야기의 중간에 있었다;갑자기;완전히
+고|카페·식당||Si os apetece algo informal,/*podemos tapear un rato/por el barrio viejo.|부담 없는 것을 원한다면 옛날 동네에서 타파스나 골라 먹자.|타파스나 골라 먹자|타파스를 먹다|go eat some tapas|부담 없는 것을 원한다면;옛날 동네에서
+고|연애|연애|Aunque discuten a todas horas,/*estos dos se quieren con locura/desde que se conocieron.|시도 때도 없이 다투지만 처음 만났을 때부터 저 둘은 미치도록 사랑해.|저 둘은 미치도록 사랑해|미친 듯이 사랑하다|love each other madly|시도 때도 없이 다투지만;처음 만났을 때부터
+고|회사||En mitad del debate presupuestario,/*sacó a relucir viejos errores/para desviar la atención.|예산 토론의 한가운데에서 관심을 돌리기 위해 예전 실수들을 들춰내더라고.|예전 실수들을 들춰내더라고|과거의 잘못들을 들추어내다|brought up past mistakes|예산 토론의 한가운데에서;관심을 돌리기 위해
+고|감정||Con la tensión acumulada del trimestre,/*le dio una crisis de ansiedad/durante la presentación.|분기 동안 누적된 긴장감 때문에 발표 중에 공황 발작이 찾아왔어.|공황 발작이 찾아왔어|불안 발작이 일어났다|suffered an anxiety attack|분기 동안 누적된 긴장감 때문에;발표 중에
+고|일상||Para no presentarme con las manos vacías,/*llevé una caja de pasteles/recién hechos.|빈손으로 나타나지 않기 위해 갓 구워진 조각 케이크 한 상자를 사 갔어.|조각 케이크 한 상자를 사 갔어|케이크 한 상자를 가져갔다|brought a box of pastries|빈손으로 나타나지 않기 위해;갓 구워진
+고|병원||Si sigue las indicaciones del doctor,/*la inflamación remitirá/en un par de días.|의사의 지시를 따른다면 이틀 정도 뒤에 붓기가 가라앉을 겁니다.|붓기가 가라앉을 겁니다|염증/붓기가 완화되다|the swelling will subside|의사의 지시를 따른다면;이틀 정도 뒤에
+고|일상|슬랭|Cada vez que le toca colaborar,/*se hace el sueco/y se escaquea.|협동할 차례가 될 때마다 짐짓 모른 척하며 슬그머니 발을 빼.|짐짓 모른 척하며|스웨덴 사람인 척하다 / 못 들은 척 딴청 피우다|plays dumb / turns a deaf ear|협동할 차례가 될 때마다;슬그머니 발을 뺀다
+고|여행||Antes de subir al barco,/*hay que sellar el billete/en la ventanilla.|배에 타기 전에 매표 창구에서 승선권 도장을 받아야 해.|승선권 도장을 받아야 해|승차권을 날인/스탬프 찍다|validate the ticket with a stamp|배에 타기 전에;매표 창구에서
+초|일상||Hace fresco,/*abrígate bien.|날이 쌀쌀하니까 옷 따뜻하게 입어.|옷 따뜻하게 입어|옷을 챙겨 입다|bundle up well|날이 쌀쌀하니까
+초|쇼핑||¿Puedo pagar/*en efectivo?|현금으로 계산할 수 있나요?|현금으로|현금으로|in cash|계산할 수 있나요?
+초|카페·식당||La sopa/*está sosa.|수프가 싱거워요.|싱거워요|싱겁다 / 간이 덜 되다|is bland|수프가
+초|병원||Me arde/*la garganta.|목이 따끔거려요.|목이|목 / 목구멍|the throat|따끔거려요
+초|일상||Pon la alarma/*a las siete en punto.|알람을 7시 정각에 맞춰 놔.|7시 정각에|7시 정각에|at seven sharp|알람을 맞춰 놔
+초|여행||Cruza la calle/*por el paso de cebra.|횡단보도로 길을 건너세요.|횡단보도로|횡단보도로|at the zebra crossing|길을 건너세요
+초|회사||Cuando esté listo,/*avísame.|준비되면 나한테 알려줘.|나한테 알려줘|나에게 알리다|let me know|준비되면
+초|쇼핑|슬랭|Este reloj/*está tirado de precio.|이 시계 가격이 거저네.|가격이 거저네|가격이 아주 싸다|is dirt cheap|이 시계
+초|감정||Hablar en público/*me da mucha vergüenza.|사람들 앞에서 말하는 건 너무 부끄러워.|너무 부끄러워|너무 부끄럽다|makes me very embarrassed|사람들 앞에서 말하는 건
+초|일상||El ascensor/*está fuera de servicio.|엘리베이터가 작동을 안 해.|작동을 안 해|운행 중단이다 / 고장이다|is out of service|엘리베이터가
+초|쇼핑||Esta chaqueta/*me queda holgada.|이 재킷은 나한테 헐렁해.|나한테 헐렁해|헐렁하다 / 넉넉하다|fits loosely on me|이 재킷은
+초|연애|연애|Para que no te pierdas,/*dame la mano.|길 잃지 않게 손 잡아줘.|손 잡아줘|손을 건네다 / 손을 잡다|give me your hand|길 잃지 않게
+중|일상||Hablé de más y/*metí la pata.|말을 너무 많이 해서 실수해 버렸어.|실수해 버렸어|실수를 저지르다|put my foot in it|말을 너무 많이 해서
+중|회사||Por fin/*cerramos el trato/con el cliente.|마침내 고객과의 계약을 성사시켰어.|계약을 성사시켰어|거래를 성사시키다|closed the deal|마침내;고객과의
+중|일상||Voy al gimnasio/*día sí, día no.|격일로 헬스장에 가.|격일로|하루 걸러 하루|every other day|헬스장에 가
+중|카페·식당||Ten cuidado,/que este plato/*lleva cilantro.|조심해, 이 요리에 고수 들어가 있어.|고수 들어가 있어|고수가 들어가다|contains cilantro|조심해;이 요리에
+중|병원||Cortando la cebolla,/*me corté/el dedo.|양파를 썰다가 손가락을 베였어요.|베였어요|베여서 상처가 나다|cut myself|양파를 썰다가;손가락을
+중|감정||No te agobies tanto,/*que no pasa nada grave.|너무 안달하지 마, 별일 아니니까.|별일 아니니까|심각한 일은 아니다|nothing serious is happening|너무 안달하지 마
+중|연애|연애|Al principio éramos amigos,/pero luego/*surgió la química.|처음엔 친구 사이였는데 나중에 케미가 통했어.|케미가 통했어|서로 통하다 / 불꽃이 일다|chemistry developed|처음엔 친구 사이였는데;나중에
+중|여행||Antes de subir al tren,/*hay que picar el billete/en la máquina.|기차를 타기 전에 기계에서 표를 찍어야 해요.|표를 찍어야 해요|표를 개표하다|validate the ticket|기차를 타기 전에;기계에서
+중|일상||Mi gato siempre/*se hace una rosca/en el sofá.|우리 고양이는 항상 소파에서 몸을 둥글게 말고 자.|몸을 둥글게 말고 자|몸을 둥글게 웅크리다|curls up into a ball|우리 고양이는 항상;소파에서
+중|회사||En cuanto termine la reunión,/*te doy un toque/al móvil.|회의 끝나는 대로 휴대폰으로 전화 한 번 줄게.|전화 한 번 줄게|신호를 주다 / 짧게 전화하다|give you a quick ring|회의 끝나는 대로;휴대폰으로
+중|쇼핑||Si te llevas dos pares,/*te sale a mitad de precio.|두 켤레를 사면 반값에 해줘요.|반값에 해줘요|반값에 제공되다|it comes out to half price|두 켤레를 사면
+중|일상||Puse la lavadora/y ahora/*voy a tender la ropa.|세탁기 돌렸고 이제 빨래 널려고 해.|빨래 널려고 해|빨래를 널다|hang the laundry|세탁기 돌렸고;이제
+중|감정||Al escuchar el final de la historia,/*se me puso la carne de gallina.|이야기의 결말을 듣는데 소름이 쫙 돋았어.|소름이 쫙 돋았어|소름/닭살이 돋다|I got goosebumps|이야기의 결말을 듣는데
+중|카페·식당||El filete/*está en su punto,/muy tierno.|스테이크가 딱 먹기 좋게 익어서 아주 부드러워.|딱 먹기 좋게 익어서|굽기/간이 알맞게 되다|is cooked to perfection|스테이크가;아주 부드러워
+중|병원||Para la revisión,/*tengo que hacerme un análisis de sangre/en ayunas.|건강검진을 위해 금식 상태로 피검사를 받아야 해.|피검사를 받아야 해|혈액 검사를 받다|have a blood test|건강검진을 위해;금식 상태로
+중|연애|연애|Si de verdad te gusta,/no te cortes y/*da el primer paso.|그 사람이 진짜 좋으면 망설이지 말고 먼저 다가가 봐.|먼저 다가가 봐|첫걸음을 떼다 / 먼저 다가가다|take the first step|그 사람이 진짜 좋으면;망설이지 말고
+중|일상||Antes de irte a dormir,/*echa la llave.|자기 전에 문 꼭 잠가.|문 꼭 잠가|열쇠로 문을 잠그다|lock the door with the key|자기 전에
+중|여행||El autobús va lleno,/*nos toca ir de pie.|버스에 사람이 꽉 차서 서서 가야 해.|서서 가야 해|서서 갈 차례/운명이다|we have to stand|버스에 사람이 꽉 차서
+중|회사||Por los nervios,/*me quedé en blanco/en medio de la entrevista.|긴장해서 면접 도중에 머릿속이 새하얘졌어.|머릿속이 새하얘졌어|머릿속이 하얘지다 / 백지가 되다|my mind went blank|긴장해서;면접 도중에
+중|감정|슬랭|Cuenta los chistes tan bien que/*me muero de la risa.|걔가 농담을 너무 잘해서 웃겨 죽겠어.|웃겨 죽겠어|웃겨 죽겠다|I'm dying of laughter|걔가 농담을 너무 잘해서
+중|일상||Para cuidar la ropa,/*prefiero lavarla a mano.|옷감을 아끼려고 손빨래하는 걸 선호해.|손빨래하는 걸 선호해|손으로 세탁하는 걸 선호하다|I prefer to wash it by hand|옷감을 아끼려고
+중|쇼핑||Esta tela es delicada,/*se encoge con facilidad.|이 원단은 섬세해서 쉽게 줄어들어.|쉽게 줄어들어|쉽게 수축하다 / 줄어들다|shrinks easily|이 원단은 섬세해서
+중|일상||Te has dejado las llaves/*pegadas en la cerradura.|너 열쇠를 자물쇠에 꽂아 둔 채 놔뒀더라.|자물쇠에 꽂아 둔 채|자물쇠에 꽂아 둔 채로|stuck in the lock|너 열쇠를 놔뒀더라
+고|일상||Para esquivar el atasco de la mañana,/*conviene salir antes de las siete.|아침 교통 체증을 피하려면 7시 전에 출발하는 게 좋아.|7시 전에 출발하는 게 좋아|7시 전에 나서는 편이 낫다|it's advisable to leave before seven|아침 교통 체증을 피하려면
+고|회사||Al terminar la reunión,/para evitar confusiones,/*conviene dejarlo todo por escrito.|회의가 끝난 뒤 혼선을 방지하려면 모든 걸 서면으로 남겨두는 게 좋아요.|모든 걸 서면으로 남겨두는 게 좋아요|서면으로 남겨놓는 것이 좋다|it's advisable to leave everything in writing|회의가 끝난 뒤;혼선을 방지하려면
+고|감정||Al ver que el proyecto salió bien,/tras una semana tan caótica,/*por fin respiro tranquilo.|프로젝트가 무사히 끝난 걸 보니 그렇게 혼란스럽던 한 주 끝에 드디어 마음이 놓여.|드디어 마음이 놓여|마침내 편안히 숨을 쉬다 / 안도하다|finally breathe easily|프로젝트가 무사히 끝난 걸 보니;그렇게 혼란스럽던 한 주 끝에
+고|카페·식당||Como era viernes por la noche,/*tuvimos que hacer cola/casi cuarenta minutos.|금요일 저녁이라 거의 40분 동안 줄을 서야 했어.|줄을 서야 했어|줄을 서야만 했다|we had to wait in line|금요일 저녁이라;거의 40분 동안
+고|연애|연애|Por mucho que discutamos a veces,/al final del día,/*siempre llegamos a un acuerdo.|가끔 아무리 다투더라도 하루 끝엔 늘 합의점을 찾아내.|늘 합의점을 찾아내|항상 합의에 도달하다|we always reach an agreement|가끔 아무리 다투더라도;하루 끝엔
+고|일상||Antes de formatear el ordenador,/haz una copia de seguridad,/*por si las moscas.|컴퓨터를 포맷하기 전에 만약을 위해 백업을 해 둬.|만약을 위해|만약을 대비해서 / 혹시 모르니까|just in case|컴퓨터를 포맷하기 전에;백업을 해 둬
+고|병원||Aunque notes mejoría estos días,/*es indispensable terminar los antibióticos/para evitar recaídas.|요즘 호전을 느끼더라도 재발을 방지하기 위해 항생제 복용을 끝까지 마치는 게 필수적이에요.|항생제 복용을 끝까지 마치는 게 필수적이에요|항생제를 끝까지 다 복용하는 것이 필수다|it is essential to finish the antibiotics|요즘 호전을 느끼더라도;재발을 방지하기 위해
+고|여행||Nada más bajar del metro,/*lo primero que hago es orientarme/con el mapa de la estación.|지하철에서 내리자마자 역 안내도로 제일 먼저 방향부터 잡아.|제일 먼저 방향부터 잡아|우선 방향 감각을 잡다 / 위치를 파악하다|the first thing I do is get my bearings|지하철에서 내리자마자;역 안내도로
+고|회사||Para cumplir con los plazos previstos,/no nos queda más opción que/*arrimar el hombro entre todos.|예정된 기한을 맞추려면 다 함께 힘을 모으는 것 외에는 다른 방법이 없다.|다 함께 힘을 모으는 것|다 같이 협력하다 / 어깨를 나란히 힘을 보태다|pull together as a team|예정된 기한을 맞추려면;외에는 다른 방법이 없다
+고|일상||Entre el trabajo y las clases de la tarde,/*apenas me queda un respiro/para desconectar un poco.|회사 일과 저녁 수업 틈에서 머리를 식히며 숨 돌릴 틈이 거의 없어.|숨 돌릴 틈이 거의 없어|한숨 돌릴 여유가 거의 없다|I barely have a breathing space|회사 일과 저녁 수업 틈에서;머리를 식히며
+고|쇼핑||En lugar de comprar por impulso,/*conviene comparar las opiniones/de otros usuarios.|충동구매를 하는 대신 다른 사용자들의 후기를 비교해 보는 편이 좋아.|후기를 비교해 보는 편이 좋아|의견이나 리뷰를 비교해보는 편이 낫다|it's advisable to compare reviews|충동구매를 하는 대신;다른 사용자들의
+고|일상||Al principio te costará madrugar tanto,/pero con el paso de los días,/*te irás acostumbrando.|처음엔 이렇게 일찍 일어나는 게 힘들겠지만 며칠 지나면 점점 익숙해질 거야.|점점 익숙해질 거야|점차 익숙해질 것이다|you'll gradually get used to it|처음엔 이렇게 일찍 일어나는 게 힘들겠지만;며칠 지나면
+고|감정||Al escuchar ese frenazo en la calle,/pensando que había un accidente,/*se me encogió el corazón.|길에서 급브레이크 소리를 들었을 때 사고가 난 줄 알고 심장이 덜컥 내려앉았어.|심장이 덜컥 내려앉았어|심장이 조여들다 / 가슴이 철렁하다|my heart sank|길에서 급브레이크 소리를 들었을 때;사고가 난 줄 알고
+고|카페·식당||Si tienes dudas con el menú,/*déjate asesorar/por el camarero de la mesa.|메뉴 고르는 데 고민이 된다면 테이블 담당 직원에게 추천을 받아 봐.|추천을 받아 봐|조언이나 안내를 받다|let yourself be advised|메뉴 고르는 데 고민이 된다면;테이블 담당 직원에게
+고|일상||Para mantenerte en forma,/*es fundamental ser constante/con el ejercicio físico.|건강한 체형을 유지하려면 신체 운동에서 꾸준함을 유지하는 것이 핵심이에요.|꾸준함을 유지하는 것이 핵심이에요|한결같이 꾸준한 태도를 갖는 것이 기본이다|it is essential to be consistent|건강한 체형을 유지하려면;신체 운동에서
+초|일상||¿Me pasas / *el mando de la tele?|TV 리모컨 좀 건네줄래?|TV 리모컨|TV 리모컨|the TV remote|나에게 건네줄래?
+초|카페·식당||La salsa, / *aparte, por favor.|소스는 따로 담아 주세요.|따로 담아 주세요|따로 부탁합니다|on the side, please|소스는
+초|감정||Hoy / *estoy de buen humor.|오늘 나 기분 진짜 좋아.|기분 진짜 좋아|기분이 좋다|I'm in a good mood|오늘은
+초|쇼핑||¿Tiene / *bolsa de papel?|혹시 종이봉투 있나요?|종이봉투|종이봉투|paper bag|가지고 있나요
+초|일상||Voy a / *sacar al perro.|나 강아지 산책시키러 가.|강아지 산책시키러|개를 데리고 나가다|walk the dog|나는 갈 것이다
+초|일상|슬랭|Baja el volumen, / *porfa.|소리 좀 줄여 줘, 부탁이야.|부탁이야|제발/부탁해|please (casual)|볼륨을 낮춰 줘
+초|병원||Tengo / *dolor de garganta.|나 목이 따끔거려.|목이 따끔거려|목 통증|sore throat|가지고 있다
+초|일상||De repente / *se ha ido la wifi.|갑자기 와이파이가 끊겼어.|와이파이가 끊겼어|와이파이가 나가 버렸다|the Wi-Fi went out|갑자기
+초|회사||¿Quién / *lleva este tema?|이 건 담당자가 누구예요?|이 건 담당자가|이 사안을 맡다|handles this matter|누구인가요
+초|여행||¿Dónde se compran / *los billetes de metro?|지하철 표는 어디서 사요?|지하철 표는|지하철 표들|metro tickets|어디서 구매되나요
+초|연애|연애|¿Me das / *un abrazo fuerte?|나 꽉 안아줄래?|꽉 안아줄래|강한 포옹|a big hug|나에게 줄래
+중|일상||Esta mañana / *he puesto una lavadora.|오늘 아침에 세탁기 한 번 돌렸어.|세탁기 한 번 돌렸어|세탁기를 돌렸다|put on a wash|오늘 아침에
+중|카페·식당||¿Nos pones / unas aceitunas / *para picar?|집어먹게 올리브 좀 주실래요?|집어먹게|가볍게 안주로 먹기 위해|for nibbling|우리에게 주실래요;올리브 좀
+중|회사||Ahora mismo / te paso / *el enlace de la reunión.|지금 바로 회의 링크 보내줄게.|회의 링크|회의 링크|meeting link|지금 바로;너에게 넘겨줄게
+중|감정||Ese vídeo / *me da vergüenza ajena.|저 영상 보는데 내가 다 민망해.|내가 다 민망해|남 부끄러움을 느끼다|gives me secondhand embarrassment|저 영상
+중|일상||Por despistado, / *se me ha quemado / la tostada.|딴생각하다가 토스트 태워 먹었어.|태워 먹었어|나에게 타 버렸다|burned on me|멍때리다가;토스트
+중|연애|연애|Ayer por la tarde / *tuve una cita a ciegas.|어제 오후에 나 소개팅했잖아.|나 소개팅했잖아|소개팅을 가졌다|had a blind date|어제 오후에
+중|쇼핑||Si te llevas dos, / la segunda unidad / *sale a mitad de precio.|두 개 사시면 두 번째 건 반값이에요.|반값이에요|반값으로 나오다|comes out at half price|두 개를 가져가시면;두 번째 상품은
+중|일상||Al salir del trabajo / *voy a hacer la compra.|퇴근하고 나서 장 보러 갈 거야.|장 보러 갈 거야|장을 볼 것이다|going to do grocery shopping|퇴근할 때
+중|일상||He dejado las llaves / *en el mueble de la entrada.|열쇠 현관 수납장에 뒀어.|현관 수납장에|현관 가구에|on the entryway furniture|열쇠를 두었다
+중|병원||Anoche / *me picó un mosquito / en el párpado.|어젯밤에 눈꺼풀에 모기 물렸어.|모기 물렸어|모기가 나를 물었다|a mosquito bit me|어젯밤에;눈꺼풀에
+중|일상||¿En qué contenedor / se tira / *el cartón para reciclar?|재활용 종이상자는 어느 분리수거함에 버려요?|재활용 종이상자는|재활용용 종이상자|cardboard for recycling|어느 수거함에;버려지나요
+중|감정||Con este frío / *se me pone la piel de gallina.|날이 이렇게 추우니 닭살이 돋네.|닭살이 돋네|소름/닭살이 돋다|get goosebumps|이런 추위와 함께
+중|회사||Al final / han ampliado / *el plazo de entrega.|결국 제출 마감 기한을 늘려줬어.|제출 마감 기한을|납품/제출 기한|the delivery deadline|결국;늘려주었다
+중|여행||Prefiero coger vacaciones / *en temporada baja.|난 휴가를 비수기에 쓰는 걸 선호해.|비수기에|비수기에|in low season|휴가를 내는 것을 선호한다
+중|연애|연애|Creo que / *me he pillado por / mi compañero de clase.|나 우리 반 걔한테 푹 빠졌나 봐.|푹 빠졌나 봐|~에게 푹 빠지다|fell hard for|~인 것 같다;내 반 친구
+중|카페·식당||¿Me puede calentar la leche / *en el microondas?|우유 전자레인지에 데워 주실 수 있나요?|전자레인지에|전자레인지에|in the microwave|저에게 우유를 데워 주실 수 있나요
+중|일상||Tengo el móvil al dos por ciento, / *voy a ponerlo a cargar.|휴대폰 배터리 2% 남아서 충전기에 꽂아둘게.|충전기에 꽂아둘게|그것을 충전되도록 두겠다|I'm going to put it on charge|휴대폰 배터리가 2퍼센트다
+중|일상||Esta noche refresca, / *así que abrígate / antes de salir.|오늘 밤 쌀쌀하니까 나가기 전에 옷 따뜻하게 입어.|옷 따뜻하게 입어|따뜻하게 챙겨 입어라|so wrap up warm|오늘 밤 쌀쌀해진다;나가기 전에
+중|회사||Por favor, / *manténme al tanto / de las novedades.|새로운 소식 들어오면 계속 알려줘.|계속 알려줘|나에게 상황을 계속 알려두다|keep me posted|부탁이야;새 소식들의
+중|일상||¿Salimos a / *dar una vuelta / por el parque?|공원에 바람 쐬러 나갈래?|바람 쐬러|한 바퀴 돌다|take a stroll|나갈까;공원으로
+중|감정||No le des tantas vueltas, / que el asunto / *no tiene importancia.|너무 깊게 생각하지 마, 그 일 별로 안 중요해.|별로 안 중요해|중요성을 갖지 않는다|isn't important|그렇게 많은 생각을 굴리지 마;그 문제는
+고|회사||Para evitar malentendidos, / siempre conviene / *dejar las cosas por escrito.|오해를 방지하려면 모든 내용을 문서로 남겨두는 게 좋아.|문서로 남겨두는 게 좋아|서면으로 남겨두다|put things in writing|오해를 피하기 위해;항상 ~하는 편이 좋다
+고|일상||Si te planificas con calma, / seguro que / *te da tiempo a terminarlo.|차근차근 계획 세우면 분명 그거 다 끝낼 시간 될 거야.|다 끝낼 시간 될 거야|그것을 끝낼 시간이 나다|you'll have enough time to finish it|침착하게 계획을 세우면;분명히
+고|감정||Aunque intentaba sonreír, / *se le notaba a la legua / que estaba destrozado.|애써 웃어 보이려 했지만 멘붕 온 게 훤히 보였어.|훤히 보였어|멀리서도 뻔히 눈에 띄다|it was obvious from miles away|미소 지으려 애썼지만;완전히 무너져 있었다는 것이
+고|연애|연애|Al principio éramos solo amigos, / pero con los meses / *me fue ganando el corazón.|처음엔 그냥 친구였는데 몇 달 지나면서 내 마음을 사로잡았어.|내 마음을 사로잡았어|내 마음을 얻어 가다|won my heart over|처음에는 우리는 단지 친구였다;하지만 몇 달이 흐르며
+고|여행||Para no pagar sobrepeso, / *tuve que deshacerme de / un montón de recuerdos.|수하물 초과 요금 안 내려고 기념품 잔뜩 처분해야 했어.|처분해야 했어|~을 처분하다|had to get rid of|초과 무게를 내지 않기 위해;수많은 기념품들
+고|일상||Con los palos de la vida / he aprendido a / *no tomarme las críticas tan a pecho.|인생의 쓴맛을 보며 비판을 너무 마음에 담아두지 않는 법을 배웠어.|너무 마음에 담아두지 않는|비판을 너무 마음에 담아두지 않다|not take criticism so personally|인생의 시련들과 함께;~하는 법을 배웠다
+고|회사||En vez de buscar culpables, / lo profesional es / *asumir los propios fallos.|남 탓할 사람 찾지 말고 자기 실수를 인정하는 게 프로다운 거야.|자기 실수를 인정하는 게|자신의 실수를 인정하다|own up to one's mistakes|범인을 찾는 대신에;프로다운 것은 ~이다
+고|카페·식당||El camarero tardó tanto / que al final / *se me quitaron las ganas de comer.|직원이 너무 늦게 와서 결국 밥맛이 뚝 떨어졌어.|밥맛이 뚝 떨어졌어|먹고 싶은 의욕이 가셨다|lost my appetite|웨이터가 너무 지체해서;결국
+고|병원||Si no respetas los horarios del medicamento, / *no te va a hacer ningún efecto.|약 복용 시간을 안 지키면 아무런 약효도 안 들 거야.|아무런 약효도 안 들 거야|어떤 효과도 내지 못할 것이다|won't have any effect at all|약의 시간들을 지키지 않는다면
+고|일상||A base de insistir e insistir, / mi hermano / *se salió con la suya.|계속 우기고 조르더니 내 동생이 결국 지 뜻대로 해냈어.|지 뜻대로 해냈어|자기 고집대로 이루다|got his way|조르고 또 조른 끝에;내 남동생이
+고|일상||Me pasé la tarde entera tumbado / *sin hacer nada de provecho.|오후 내내 누워만 있느라 보람 있는 일 하나도 못 했어.|보람 있는 일 하나도 못 했어|유익한 일을 아무것도 하지 않고|without doing anything worthwhile|나는 오후 전체를 누워서 보냈다
+고|쇼핑||Aunque la cafetera parece cara, / a la larga / *sale mucho más a cuenta.|이 커피머신이 비싸 보여도 길게 보면 훨씬 더 이득이야.|훨씬 더 이득이야|훨씬 더 수지가 맞다|works out much more economical|커피 머신이 비싸 보이지만;길게 보면
+고|연애|연애|Discutíamos todos los días / hasta que / *la convivencia se volvió insoportable.|우리는 매일같이 싸우다가 같이 사는 게 못 견딜 지경이 됐어.|같이 사는 게 못 견딜 지경이 됐어|동거 생활이 참을 수 없게 되다|living together became unbearable|우리는 매일 다투었다;~할 때까지
+고|회사||En caso de haber imprevistos, / le ruego que me avise / *a la mayor brevedad posible.|예기치 못한 상황이 생기면 가급적 신속하게 연락 부탁드립니다.|가급적 신속하게|가능한 한 가장 신속하게|as soon as possible|예상치 못한 일이 있을 경우에;저에게 알려주시기를 부탁드립니다
+초|감정||No te pongas/*así.|너무 그러지 마.|그러지|그렇게|like that|되지 마
+초|쇼핑||¿Se puede pagar/*en efectivo?|현금 결제 가능한가요?|현금 결제|현금으로|in cash|결제할 수 있나요?
+초|일상||No encuentro/*las llaves de casa.|집 열쇠를 못 찾겠어.|집 열쇠를|집 열쇠들|house keys|못 찾겠어
+초|병원||Me duele/*la garganta.|목이 따끔거려요.|목이|목|throat|아파요
+초|여행||Cruza/*el paso de peatones.|횡단보도를 건너세요.|횡단보도를|횡단보도|pedestrian crossing|건너세요
+초|연애||Pienso en ti/*a todas horas.|하루 종일 네 생각해.|하루 종일|언제나|all the time|너를 생각해
+초|회사||Te paso/*el contacto/luego.|나중에 연락처 넘겨줄게.|연락처|연락처|the contact info|너에게 넘겨줄게;나중에
+초|일상||Baja/*el volumen,/por favor.|볼륨 좀 낮춰 줘.|볼륨 좀|볼륨을|the volume|낮춰 줘;부탁해
+초|감정||*Menuda sorpresa/nos has dado.|진짜 깜짝 놀랐잖아.|진짜 깜짝 놀랐잖아|엄청난 놀람|what a surprise|우리에게 주었다
+초|일상||Se ha ido/*el internet.|인터넷 끊겼어.|인터넷|인터넷이|the internet|끊어졌다
+중|일상|슬랭|*No me da la vida/con tantos exámenes.|시험이 너무 많아서 정신이 하나도 없어.|정신이 하나도 없어|시간/여유가 안 난다|I can't keep up|시험이 너무 많아서
+중|여행||¿Te importa/*vigilarme la mochila/un momento?|잠깐 가방 좀 봐줄 수 있어?|가방 좀 봐줄 수|내 배낭을 지켜보다|watch my backpack|괜찮다면;잠깐
+중|카페·식당||¿Nos cobras,/*cuando puedas?|편하실 때 계산해 주실래요?|편하실 때|가능할 때|whenever you can|계산해 주시겠어요?
+중|회사||A ver si/*nos ponemos al día/la semana que viene.|다음 주에 시간 봐서 밀린 이야기나 좀 하자.|밀린 이야기나 좀 하자|밀린 것을 따라잡다|catch up|시간 봐서;다음 주에
+중|연애||Cada vez que me escribe,/*siento mariposas en el estómago.|그 사람이 문자할 때마다 가슴이 두근거려.|가슴이 두근거려|설레다, 긴장되다|feel butterflies in my stomach|그 사람이 나에게 문자할 때마다
+중|쇼핑||¿Tienen esto/*en otra tienda?|이거 다른 매장에는 재고 있나요?|다른 매장에는|다른 매장에|in another store|이거 있나요?
+중|병원||Me he dado un golpe/*se me ha hinchado la muñeca.|부딪혀서 손목이 부어올랐어요.|손목이 부어올랐어요|손목이 붓다|my wrist got swollen|부딪혀서
+중|감정||Es solo una broma,/*no te lo tomes a pecho.|그냥 농담이니까 너무 마음에 담아두지 마.|너무 마음에 담아두지 마|마음에 깊이 담아두지 마라|don't take it to heart|그냥 농담이니까
+중|일상||El fin de semana/*se me ha pasado volando.|주말이 눈 깜짝할 사이에 지나갔어.|눈 깜짝할 사이에 지나갔어|날아가듯 지나갔다|flew by for me|주말이
+중|회사||*No doy abasto/con tantos mensajes de clientes.|고객 문의가 너무 쏟아져서 감당이 안 돼.|감당이 안 돼|감당하지 못하다|can't keep up / overwhelmed|고객들의 너무 많은 메시지 때문에
+중|카페·식당||¿Esta salsa/*pica mucho?|이 소스 많이 매워요?|많이 매워요|많이 맵다|is it very spicy|이 소스는
+중|일상||He quedado con Carlos/*para dar una vuelta.|카를로스랑 바람 좀 쐬려고 만났어.|바람 좀 쐬려고|한 바퀴 돌기 위해 (산책/마실)|to go for a walk|카를로스와 약속을 잡았다
+중|감정||No fue mi intención/*hacerte daño.|상처 줄 생각은 전혀 없었어.|상처 줄|너에게 상처를 주다|hurt you|내 의도가 아니었어
+중|여행||¿Hay algún autobús directo/*al centro histórico?|구시가지로 가는 직통버스가 있나요?|구시가지로 가는|역사적 중심지로|to the historic center|직통버스가 있나요?
+중|연애||A veces me cuesta/*expresar mis sentimientos.|가끔 내 감정을 표현하는 게 어렵더라.|내 감정을 표현하는 게|내 감정들을 표현하다|express my feelings|때때로 나에게 어렵다
+중|일상||Acuérdate de/*tender la ropa/antes de salir.|나가기 전에 빨래 너는 거 잊지 마.|빨래 너는 거|빨래를 널다|hang out the laundry|기억해;나가기 전에
+중|카페·식당||¿Podría calentarme/*el plato un poco,/por favor?|음식 좀 살짝 데워 주실 수 있나요?|음식 좀 살짝 데워|음식을 조금 데우다|warm up the dish a bit|저에게 데워주실 수 있나요;부탁합니다
+중|병원||Tengo la piel/*bastante irritada/por el sol.|햇볕 때문에 피부가 많이 따가워요.|피부가 많이 따가워요|피부가 꽤 자극받은|skin quite irritated|나는 가지고 있다;햇볕 때문에
+중|쇼핑||¿Tiene algún modelo/*más económico?|혹시 더 저렴한 모델도 있나요?|더 저렴한|더 경제적인|cheaper / more economical|어떤 모델이 있나요?
+중|회사||Se me ha pasado/*por alto/ese detalle.|그 세부 사항을 내가 깜빡 놓쳤네.|깜빡 놓쳤네|간과하다, 놓치다|overlooked|나에게 넘어갔다;그 세부사항
+중|일상||Siempre lo dejas todo/*para el último momento.|넌 항상 모든 걸 막판까지 미루더라.|막판까지 미루더라|마지막 순간으로|to the last minute|너는 항상 모든 것을 둔다
+중|연애||Tenemos que/*hablar largo y tendido/sobre nosotros.|우리 관계에 대해 차분하게 이야기 좀 하자.|차분하게 이야기 좀 하자|길고 깊이 있게 이야기하다|have a long and serious talk|우리는 해야 한다;우리에 대해서
+중|일상||Antes de comer,/*voy a poner una lavadora.|점심 먹기 전에 세탁기 하나 돌릴게.|세탁기 하나 돌릴게|세탁기를 돌리다|put on a wash|점심 먹기 전에
+고|일상||Entre unas cosas y otras,/*se me ha echado el tiempo encima.|이것저것 하다 보니 시간이 훌쩍 지나버렸네.|시간이 훌쩍 지나버렸네|시간이 촉박해졌다|time ran out on me|이런저런 일들 사이에
+고|회사||A menos que nos den el visto bueno hoy,/*no llegaremos al plazo fijado.|오늘 승인이 떨어지지 않으면 정해진 기한을 못 맞출 거야.|정해진 기한을 못 맞출 거야|정해진 마감에 맞추지 못할 것이다|we won't meet the deadline|오늘 그들이 우리에게 승인을 주지 않는 한
+고|일상||De haber sabido que había tanto tráfico,/*habría cogido el metro.|차가 이렇게 밀릴 줄 알았으면 지하철 탈 걸 그랬어.|지하철 탈 걸 그랬어|지하철을 탔을 텐데|I would have taken the subway|교통 체증이 이렇게 심한 걸 알았더라면
+고|감정||*Se me puso la piel de gallina/cuando empezó a cantar.|노래를 부르기 시작했을 때 온몸에 소름이 돋았어.|온몸에 소름이 돋았어|소름이 돋았다|I got goosebumps|노래를 부르기 시작했을 때
+고|회사||Será mejor que/*dejemos las cosas claras/antes de firmar.|계약하기 전에 조건을 명확하게 짚고 넘어갑시다.|조건을 명확하게 짚고 넘어갑시다|상황을 분명히 해두다|make things clear|더 나을 것이다;서명하기 전에
+고|여행||Valdría la pena madrugar un poco/*para evitar las colas.|줄 안 서고 들어가려면 조금 일찍 서두르는 편이 나아.|줄 안 서고 들어가려면|줄 서는 것을 피하기 위해|to avoid the lines|조금 일찍 일어나는 것이 가치 있을 것이다
+고|병원||Por culpa del estrés,/*llevo arrastrando este cansancio/desde hace semanas.|스트레스 때문에 몇 주째 피로를 계속 달고 사네요.|피로를 계속 달고 사네요|이 피로를 질질 끌며 겪고 있다|I've been carrying this fatigue around|스트레스 탓에;몇 주 전부터
+고|카페·식당||A pesar de estar lleno hasta arriba,/*este sitio tiene un servicio impecable.|손님들로 꽉 찼는데도 여긴 서비스가 흠잡을 데가 없네.|서비스가 흠잡을 데가 없네|흠잡을 데 없는 서비스를 갖추다|has impeccable service|손님으로 완전히 가득 찼음에도 불구하고
+고|연애||Por mucho que discutamos a veces,/*siempre acabamos haciendo las paces.|가끔 티격태격해도 우리는 결국엔 늘 화해해.|우리는 결국엔 늘 화해해|항상 결국 화해한다|we always end up making up|때때로 아무리 우리가 말다툼을 해도
+고|쇼핑||Antes de pagar,/*fíjate bien en la etiqueta/por si tiene tara.|계산하기 전에 혹시 결함 있는지 라벨을 잘 살펴봐.|라벨을 잘 살펴봐|라벨을 주의 깊게 봐라|check the label carefully|계산하기 전에;혹시 결함이 있을 경우를 대비해
+고|일상||*Por si las moscas,/voy a dejar una copia de la llave/a los vecinos.|혹시 모를 일에 대비해서 이웃한테 비상 열쇠 하나 맡겨둘게.|혹시 모를 일에 대비해서|만약의 경우를 대비하여|just in case|열쇠 복사본을 남겨둘 것이다;이웃들에게
+고|감정||No pude evitar/*sentir un nudo en la garganta/al despedirme.|작별 인사할 때 목이 컥 메는 기분을 참을 수가 없었어.|목이 컥 메는 기분을|목이 메는 것을 느끼다|feel a lump in my throat|참을 수 없었다;작별할 때
+고|회사||*Para que todo salga sobre ruedas/tenemos que coordinarnos bien.|모든 게 순조롭게 굴러가려면 손발을 잘 맞춰야 해.|모든 게 순조롭게 굴러가려면|모든 일이 척척 풀리도록|for everything to go smoothly|우리는 서로 잘 조율해야 한다
+고|일상||Con este temporal,/*se me han quitado las ganas de salir/a la calle.|날씨가 워낙 험해서 밖에 나갈 엄두가 안 나네.|밖에 나갈 엄두가 안 나네|외출할 생각이 완전히 사라졌다|I lost all desire to go out|이런 폭풍우 속에서;거리로
+고|연애||Por más que intentes disimular,/*se te nota a la legua/que estás colado por ella.|네가 아무리 숨기려 해봤자 걔한테 푹 빠진 게 뻔히 다 보여.|뻔히 다 보여|멀리서도 훤히 티가 난다|it's obvious from a mile away|네가 아무리 숨기려 해봤자;네가 그녀에게 푹 빠졌다는 게
+초|일상||Vuelvo/*en un segundo.|금방 돌아올게.|금방|순식간에|in a second|돌아올게
+초|일상||No encuentro/*el mando de la tele.|TV 리모컨을 못 찾겠어.|TV 리모컨을|텔레비전 리모컨|the TV remote|못 찾겠어
+중|회사||Esta semana/*se me ha acumulado el trabajo.|이번 주에 일이 너무 많이 쌓였어.|일이 너무 많이 쌓였어|일이 밀리다|work has piled up on me|이번 주에
+중|카페·식당||A esta sopa/*le falta sal.|이 수프는 간이 좀 덜 됐어.|간이 좀 덜 됐어|소금이 부족하다|it lacks salt|이 수프는
+중|병원||Con el café caliente/*me he quemado la lengua.|뜨거운 커피를 마시다가 혀를 데었어.|혀를 데었어|혀를 데었다|I burned my tongue|뜨거운 커피를 마시다가
+중|연애|연애|Aún no me atrevo a/*dar el primer paso.|아직 먼저 다가갈 엄두가 안 나.|먼저 다가갈|첫 발을 내딛다|take the first step|아직 엄두가 안 나
+고|여행||Al final/*se nos hizo de noche/buscando el hotel.|결국 호텔을 찾다가 날이 저물어 버렸어.|날이 저물어 버렸어|밤이 되다|night fell on us|결국;호텔을 찾다가
+고|일상||Con los precios por las nubes,/*cuesta llegar a fin de mes/con este sueldo.|물가가 너무 올라서 이 월급으로는 월말까지 버티기가 빠듯해.|월말까지 버티기가 빠듯해|한 달 생계를 이어가기 힘들다|it's hard to make ends meet|물가가 너무 올라서;이 월급으로는
