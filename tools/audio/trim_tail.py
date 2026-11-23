@@ -3,7 +3,7 @@
 사용: python3 trim_tail.py 파일.m4a ...   (원본은 backup-gemini-raw/에 보관하고 고친 파일로 바꿔요)
 gen_gemini.py도 만들 때 trim()을 써요.
 """
-import array, os, shutil, struct, subprocess, sys, tempfile
+import array, math, os, shutil, struct, subprocess, sys, tempfile
 
 def trim(pcm, sr=24000):
     a = array.array('h', pcm[:len(pcm) // 2 * 2])
@@ -20,9 +20,37 @@ def trim(pcm, sr=24000):
     for i in range(f): a[len(a) - f + i] = int(a[len(a) - f + i] * (f - i) / f)
     return a.tobytes()
 
+def pick_cuts(first, last, runs, texts, G=1.0):
+    """쉰 곳 중 n-1군데 고르기. 길게 쉰 곳일수록, 조각 길이가 글자 수에 맞을수록 좋아요(동적 계획법).
+    Gemini가 두 문장을 거의 안 쉬고 붙여 읽어도 글자 수로 짧은 쉼을 찾아내요. 정상 묶음은 '가장 긴 n-1곳'과 같게 나와요."""
+    n = len(texts); R = [r for r in runs if r[1] - r[0] >= 4]  # 80ms보다 짧은 쉼은 문장 사이로 안 봐요
+    m = len(R)
+    if m < n - 1: return None
+    if n == 1: return []
+    exp = [len(t) + 8 for t in texts]
+    top = sorted((e - s for s, e in R), reverse=True)[:n - 1]
+    rate = max((last + 1 - first) - sum(top), 1) / sum(exp)  # 글자 하나에 몇 프레임
+    def pc(d, k): return math.log(max(d, 1) / (rate * exp[k])) ** 2
+    INF = float('inf')
+    dp = [[INF] * m for _ in range(n)]; bk = [[-1] * m for _ in range(n)]  # dp[k][j]: k번째 자르기가 R[j]
+    for j in range(m): dp[1][j] = pc(R[j][0] - first, 0) - G * math.log(R[j][1] - R[j][0])
+    for k in range(2, n):
+        for j in range(k - 1, m):
+            best, bi = INF, -1
+            for i in range(k - 2, j):
+                if dp[k - 1][i] < INF:
+                    c = dp[k - 1][i] + pc(R[j][0] - R[i][1], k - 1)
+                    if c < best: best, bi = c, i
+            if bi >= 0: dp[k][j] = best - G * math.log(R[j][1] - R[j][0]); bk[k][j] = bi
+    j = min(range(m), key=lambda j: dp[n - 1][j] + pc(last + 1 - R[j][1], n - 1))
+    if dp[n - 1][j] == INF: return None
+    out = []
+    for k in range(n - 1, 0, -1): out.append(R[j]); j = bk[k][j]
+    return out[::-1]
+
 def split(pcm, texts, sr=24000):
-    """문장 여러 개를 한 번에 읽은 소리를, 가장 길게 쉰 곳 n-1군데에서 잘라 문장별 조각으로 나눠요.
-    쉰 곳이 모자라거나 조각 길이가 글자 수와 안 맞으면(엉뚱하게 잘림) None → 한 문장씩 다시 만들어요."""
+    """문장 여러 개를 한 번에 읽은 소리를 pick_cuts()로 고른 n-1군데에서 잘라 문장별 조각으로 나눠요.
+    쉰 곳이 모자라거나 조각 길이가 글자 수와 안 맞으면(엉뚱하게 잘림) None → 멈춰요."""
     n = len(texts)
     a = array.array('h', trim(pcm, sr))  # 맨 끝 '치지직' 잡음부터 잘라요 (안 하면 마지막 문장에 붙어요)
     w = sr // 50  # 20ms
@@ -38,14 +66,28 @@ def split(pcm, texts, sr=24000):
             while not loud[j]: j += 1
             runs.append((i, j)); i = j
         else: i += 1
-    cuts = sorted(sorted(runs, key=lambda r: r[0] - r[1])[:n - 1])
-    print(f'  [자르기] 쉰 곳 {len(runs)}군데, 긴 순서(ms): {sorted(((e - s) * 20 for s, e in runs), reverse=True)[:n + 2]}')
-    if len(cuts) < n - 1 or any(e - s < 13 for s, e in cuts): print('  [자르기] 문장 사이 쉼이 모자라요'); return None  # 260ms보다 짧게 쉬면 문장 사이가 아니에요
+    def attempt(first, runs):
+        cuts = pick_cuts(first, last, runs, texts)
+        if cuts is None: return None
+        bounds = [first] + [c for s, e in cuts for c in (s, e)] + [last + 1]
+        parts = [(bounds[k], bounds[k + 1]) for k in range(0, len(bounds), 2)]
+        return first, parts, [(e - s) / (len(t) + 8) for (s, e), t in zip(parts, texts)]
+    got = attempt(first, runs)
+    if not got: print('  [자르기] 문장 사이 쉼이 모자라요'); return None
+    # 중국어·일본어에서 Gemini가 맨 앞에 지시문을 소리 내 읽을 때가 있어요 → 첫 조각이 유난히 길면
+    # 앞 1분 안의 긴 쉼(260ms+) 뒤를 진짜 시작으로 보고, 조각 길이가 가장 고른 쪽을 골라요(그 앞은 버림)
+    med = sorted(got[2])[n // 2]
+    if max(got[2][:10]) > 3 * med:
+        for k, (s, e) in enumerate(runs):
+            if s - first > 3000: break
+            if e - s >= 13:
+                alt = attempt(e, runs[k + 1:])
+                if alt and max(alt[2]) / min(alt[2]) < max(got[2]) / min(got[2]): got = alt
+        if got[0] != first: print(f'  [자르기] 맨 앞 {round((got[0] - first) * 0.02, 1)}초(지시문 읽은 부분)를 버렸어요')
+    first, parts, ratio = got
     pad = 5  # 100ms 여유
-    bounds = [first] + [c for s, e in cuts for c in (s, e)] + [last + 1]
-    parts = [(bounds[k], bounds[k + 1]) for k in range(0, len(bounds), 2)]
-    ratio = [(e - s) / (len(t) + 8) for (s, e), t in zip(parts, texts)]
-    if max(ratio) > 3 * min(ratio): print(f'  [자르기] 조각 길이가 문장과 안 맞아요: {[round(r, 1) for r in ratio]}'); return None
+    # 느슨하게: 잘못 잘린 건 check_gemini.py 받아쓰기 검수가 잡아요
+    if max(ratio) > 8 * min(ratio): print(f'  [자르기] 조각 길이가 문장과 안 맞아요: {[round(r, 1) for r in ratio]}'); return None
     out = []
     for s, e in parts:
         b = a[max(first - 2, s - pad, 0) * w:min(len(loud), e + pad) * w]
