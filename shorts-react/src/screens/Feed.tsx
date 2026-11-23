@@ -182,6 +182,8 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
             {hasCards && <Button kind="line" auto style={{ marginTop: 12, minHeight: 44, fontSize: 14 }} onClick={openFilter}>{tt('필터 열기')}</Button>}
           </div>
         ) : cards.map((c, i) => (
+          // 카드가 1,000장이 넘어서, 지금 카드 앞뒤 3장만 내용을 그려요 (나머지는 같은 높이의 빈 칸이라 스크롤 위치는 그대로)
+          Math.abs(i - index) > 3 ? <article className="card" key={c.id} aria-hidden /> :
           c.video?.full || (overlay && c.video) ? (
           <article className={`card full${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className="card-body vcard">
