@@ -46,6 +46,12 @@ const unlock = () => {
 };
 if (typeof document !== 'undefined') ['touchend', 'click'].forEach((t) => document.addEventListener(t, unlock, { capture: true }));
 
+/** 아이폰 소리 모드: 'playback'(재생 전용)이면 마이크가 안 열려요(InvalidStateError). AI 전화에서는 'play-and-record'로 바꿔요 */
+export function setAudioMode(mode: 'playback' | 'play-and-record') {
+  const session = (navigator as unknown as { audioSession?: { type: string } }).audioSession;
+  if (session && ctx) session.type = mode; // ctx가 없으면 원래 모드 그대로라 바꿀 필요 없어요
+}
+
 let current: HTMLAudioElement | null = null;
 let token = 0;
 

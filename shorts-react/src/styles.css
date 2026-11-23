@@ -1486,3 +1486,5 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .call-home .ch-mission{margin:auto 0;min-height:0;overflow-y:auto;flex-shrink:1}
 .call-home .ch-bottom{flex:none;padding:0 4px}
 @media (max-height:700px){.call-home .ch-in{display:none}.call-home .ch-center h1{font-size:30px}.call-home .ch-bottom{gap:14px}}
+/* 아이폰은 글자가 16px보다 작은 입력칸을 누르면 화면을 확대해서 오른쪽이 잘려요 → 터치 기기에서는 입력칸 글자를 16px 이상으로 */
+@media (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,select{font-size:max(16px,1em) !important}}

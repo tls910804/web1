@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { tt } from '../i18n';
 import { Icon } from '../components/Icon';
 import { CARDS } from '../data';
-import { stopAudio } from '../lib/audio';
+import { setAudioMode, stopAudio } from '../lib/audio';
 import { speechOk } from '../lib/speech';
 import { useUi } from '../ui';
 import { useActions } from '../lib/useActions';
@@ -71,6 +71,7 @@ const micMsg = (code: string): [string, string] => {
 
 // 아이폰은 사용자가 누른 순간에만 마이크 허용 창을 띄워요. 통화 받기(밀기)를 놓는 순간 미리 물어봐요
 const askMic = () => {
+  setAudioMode('play-and-record');
   if (Recognition && window.isSecureContext && navigator.mediaDevices?.getUserMedia)
     navigator.mediaDevices.getUserMedia({ audio: true }).then((st) => st.getTracks().forEach((t) => t.stop()), () => { /* 거절하면 통화 중에 안내가 떠요 */ });
 };
@@ -283,6 +284,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
   const [heard, setHeard] = useState('');
   const [listening, setListening] = useState(false);
   const [micErr, setMicErr] = useState(Recognition ? '' : 'no-recognition');
+  useEffect(() => () => setAudioMode('playback'), []); // 통화가 끝나면 재생 전용 모드로(카드 '딱' 소리 방지)
   const [say, setSay] = useState('');
   const [help, setHelp] = useState(false);
   const [native, setNative] = useState<number | null>(null);
@@ -351,6 +353,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     if (!Recognition || (micErr && !force)) return;
     hush(); // 상대 목소리가 마이크에 섞이지 않게
     if (!window.isSecureContext) { setMicErr('insecure'); setTyping(true); return; }
+    setAudioMode('play-and-record');
     if (!asked.current && navigator.mediaDevices?.getUserMedia) {
       // 마이크 허용 창을 먼저 띄운다 (말 인식만 켜면 크롬이 조용히 막는 경우가 있음)
       try { const st = await navigator.mediaDevices.getUserMedia({ audio: true }); st.getTracks().forEach((t) => t.stop()); }
