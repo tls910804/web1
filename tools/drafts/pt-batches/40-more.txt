@@ -1,0 +1,231 @@
+# 200 more #3 (2026-11-23) 브라질
+초|일상||Meu celular/*tá quase sem bateria.|휴대폰 배터리가 거의 없어.|배터리가 거의 없어|거의 배터리 없이 있다|almost out of battery|내 휴대폰
+초|일상||Você tem/*um carregador?|충전기 있어?|충전기|충전기 하나|a charger|너는 가지고 있니
+초|일상||Me manda/*a foto.|그 사진 보내 줘.|그 사진|그 사진|the photo|나에게 보내
+초|일상||Aqui/*não pega sinal.|여기 신호가 안 잡혀.|신호가 안 잡혀|신호를 잡지 않는다|no signal|여기
+초|일상||O wi-fi/*não tá funcionando.|와이파이가 안 돼.|안 돼|작동하고 있지 않다|isn't working|와이파이가
+초|일상||Faço yoga/*de manhã.|아침에 요가 해.|아침에|아침에|in the morning|나는 요가를 한다
+초|일상||Eu corro/*todo dia.|매일 달려.|매일|매일|every day|나는 달린다
+초|일상||Amanhã/tenho/*prova.|내일 시험 있어.|시험|시험|a test|내일;나는 가지고 있다
+초|일상||Minha gata/*dorme o dia todo.|우리 고양이는 하루 종일 자.|하루 종일 자|하루 종일 잔다|sleeps all day|내 고양이
+초|일상||Vou/*passear com o cachorro.|개 산책시킬게.|개 산책시킬게|개와 산책하다|walk the dog|나는 ~할 것이다
+초|일상||Eu toco/*violão.|나 기타 쳐.|기타|기타|guitar|나는 연주한다
+초|일상||Gosto de/*cozinhar.|요리하는 거 좋아해.|요리하는 거|요리하다|cooking|나는 좋아한다
+초|일상||Hoje à noite/*tem macarrão.|오늘 저녁은 파스타야.|파스타야|파스타가 있다|there's pasta|오늘 밤
+초|일상||O ônibus/*tá atrasado.|버스가 늦어.|늦어|늦은|is late|버스가
+초|감정||Tô/*com ciúme.|질투 나.|질투 나|질투를 가진|jealous|나는 ~이다
+초|감정||Tô/*com vergonha.|부끄러워.|부끄러워|부끄러움을 가진|embarrassed|나는 ~이다
+초|감정||*Que alívio!|다행이다!|다행이다|얼마나 안도인지|what a relief|
+초|일상||Hoje/*é minha folga.|오늘 쉬는 날이야.|쉬는 날이야|나의 휴무다|my day off|오늘
+초|쇼핑||Comprei/*pela internet.|인터넷으로 샀어.|인터넷으로|인터넷으로|online|나는 샀다
+초|쇼핑||Isso/*tá na promoção?|이거 세일해요?|세일해요|할인 중이다|on sale|이것
+초|카페·식당||Um pão de queijo,/*por favor.|치즈빵 하나 주세요.|주세요|부탁합니다|please|치즈빵 하나
+초|카페·식당||É/*apimentado?|매워요?|매워요|매운|spicy|~이다
+초|여행||Onde fica/*o ponto de ônibus?|버스 정류장이 어디예요?|버스 정류장이|버스 정류장|the bus stop|어디에 있나
+초|여행||Tô procurando/*meu hotel.|호텔 찾고 있어요.|호텔|내 호텔|my hotel|나는 찾고 있다
+초|병원||Tô com/*dor de barriga.|배 아파요.|배 아파요|복통|a stomachache|나는 가지고 있다
+초|병원||Tô tossindo/*muito.|기침을 많이 해요.|많이|많이|a lot|나는 기침하고 있다
+초|회사||Tenho/*muito e-mail.|메일이 많아.|메일이 많아|많은 이메일|lots of emails|나는 가지고 있다
+초|회사||Tô/*em reunião.|회의 중이에요.|회의 중|회의 중|in a meeting|나는 ~이다
+초|연애|연애|Você é/*muito fofo.|너 너무 귀여워.|너무 귀여워|아주 귀여운|so cute|너는 ~이다
+초|연애|연애|Vamos sair/*hoje à noite?|오늘 밤에 데이트할래?|오늘 밤|오늘 밤|tonight|나갈까
+초|일상||O quarto/tá/*muito quente.|방이 너무 더워.|너무 더워|아주 더운|very hot|방이;~이다
+초|일상||Perdi/*meus óculos.|안경 잃어버렸어.|안경|내 안경|my glasses|나는 잃었다
+초|일상||Tô/*de pijama.|잠옷 입고 있어.|잠옷|잠옷 차림|in pajamas|나는 ~이다
+초|일상||Tô vendo/*uma série.|드라마 보는 중이야.|드라마|시리즈 하나|a series|나는 보는 중이다
+초|일상||Odeio/*segunda-feira.|월요일 진짜 싫어.|월요일|월요일|Mondays|나는 싫어한다
+초|감정||*Que massa!|대박!|대박|얼마나 멋진지|awesome|
+초|일상||Dormiu/*bem?|잘 잤어?|잘|잘|well|잤니
+초|일상||Vou/*fazer compras.|장 보러 갈게.|장 보러|쇼핑을 하다|go shopping|나는 ~할 것이다
+초|감정||Me desculpa,/*de verdade.|정말 미안해.|정말|진심으로|really|미안해
+초|일상||A gente se vê/*amanhã.|내일 보자.|내일|내일|tomorrow|우리 서로 본다
+초|일상||Tô/*em casa.|나 집이야.|집이야|집에|at home|나는 ~이다
+초|일상||Tá/*chovendo forte!|비가 세게 와!|비가 세게 와|세게 비가 오는 중|it's pouring|~이다
+초|일상||Dormi/*mal.|잠 설쳤어.|잠 설쳤어|나쁘게|badly|나는 잤다
+초|일상||Bebo/*café demais.|커피를 너무 많이 마셔.|커피를 너무 많이|커피를 너무|too much coffee|나는 마신다
+초|쇼핑||Tá/*caro demais.|너무 비싸요.|너무 비싸요|너무 비싼|too expensive|~이다
+초|일상||Não tô/*mais com fome.|이제 배 안 고파.|이제 배 안 고파|더 이상 배고프지 않은|not hungry anymore|나는 ~가 아니다
+초|일상||*Que horas/são?|몇 시야?|몇 시|몇 시|what time|~이니
+초|일상||Tô/*morto.|완전 지쳤어.|완전 지쳤어|죽은|dead tired|나는 ~이다
+중|일상||Esqueci/*minha senha.|비밀번호 까먹었어.|비밀번호|내 비밀번호|my password|나는 잊었다
+중|일상||Meu notebook/*trava toda hora.|노트북이 맨날 멈춰.|맨날 멈춰|매시간 멈춘다|freezes all the time|내 노트북
+중|일상||Me manda/*o link?|링크 보내 줄래?|링크|링크|the link|나에게 보내 줄래
+중|일상||Ele postou/*uma foto da gente.|걔가 우리 사진 올렸어.|우리 사진|우리의 사진 하나|a photo of us|그는 올렸다
+중|일상||Passo/*tempo demais/no celular.|휴대폰에 시간을 너무 많이 써.|시간을 너무 많이|너무 많은 시간|too much time|나는 보낸다;휴대폰에
+중|일상||*Apaguei/o aplicativo.|그 앱 지웠어.|지웠어|나는 지웠다|I deleted|그 앱을
+중|일상||Me inscrevi/*num curso de culinária.|요리 수업 등록했어.|요리 수업|요리 강좌에|in a cooking class|나는 등록했다
+중|일상||Voltei/*a fazer academia.|헬스 다시 시작했어.|헬스 다시 시작했어|헬스를 다시 하다|got back to the gym|나는 돌아왔다
+중|일상||Tô/*todo dolorido/do treino.|운동 때문에 온몸이 쑤셔.|온몸이 쑤셔|온통 아픈|sore all over|나는 ~이다;운동 때문에
+중|일상||Meu filho/*tá estudando/pro vestibular.|아들이 수능 공부하고 있어.|공부하고 있어|공부하는 중이다|is studying|내 아들;대입 시험을 위해
+중|일상||Tirei/*nota boa/em matemática.|수학 점수 잘 받았어.|점수 잘|좋은 점수|a good grade|나는 받았다;수학에서
+중|일상||O professor/*passou um monte de/lição.|선생님이 숙제를 잔뜩 내줬어.|잔뜩 내줬어|한 무더기를 내줬다|gave a ton of|선생님이;숙제
+중|일상||Preciso/*levar o cachorro pra passear/antes de sair.|나가기 전에 개 산책시켜야 해.|개 산책시켜야|개를 산책에 데려가다|take the dog for a walk|나는 필요하다;나가기 전에
+중|일상||A gata/*quebrou/um copo.|고양이가 컵을 깼어.|깼어|깨뜨렸다|broke|고양이가;컵 하나
+중|일상||Tá faltando/*um pouco de sal.|소금이 좀 부족해.|소금이 좀|약간의 소금|a bit of salt|부족하다
+중|일상||*Queimei/o arroz.|밥 태웠어.|태웠어|태웠다|I burned|밥을
+중|일상||Hoje/*é minha vez de/cozinhar.|오늘은 내가 요리할 차례야.|내 차례|나의 차례|my turn to|오늘;요리하다
+중|일상||O ônibus/*tava lotado/hoje cedo.|오늘 아침 버스 꽉 찼었어.|꽉 찼었어|가득 차 있었다|was packed|버스가;오늘 아침
+중|일상||Passei/*do meu ponto.|정류장 지나쳤어.|내 정류장|내 정류장을|my stop|나는 지나쳤다
+중|일상||Tem/*obra/na rua.|길에 공사 중이야.|공사|공사|construction|있다;길에
+중|감정||Isso/*me deixa louco.|그거 날 미치게 해.|날 미치게 해|나를 미치게 남긴다|drives me crazy|그것
+중|감정||Tô/*decepcionado comigo/hoje.|오늘 나한테 실망했어.|나한테 실망했어|나 자신에게 실망한|disappointed in myself|나는 ~이다;오늘
+중|감정||Tô/*meio pra baixo.|좀 처져.|좀 처져|조금 아래로|a bit down|나는 ~이다
+중|감정||Tô/*de coração partido.|마음이 찢어졌어.|마음이 찢어졌어|부서진 마음의|heartbroken|나는 ~이다
+중|감정||Isso/*me deixou emocionado.|그거 진짜 감동이었어.|진짜 감동이었어|나를 감동하게 했다|moved me|그것
+중|쇼핑||Meu pedido/*não chegou.|주문한 게 안 왔어요.|안 왔어요|도착하지 않았다|hasn't arrived|내 주문
+중|쇼핑||Quero/*meu dinheiro de volta.|환불받고 싶어요.|환불받고|내 돈을 돌려받다|my money back|나는 원한다
+중|쇼핑||*O frete/é grátis?|배송비 무료예요?|배송비|운송비|shipping|무료인가요
+중|카페·식당||Dá pra/*dividir a conta?|계산 나눠서 해도 돼요?|계산 나눠서|계산서를 나누다|split the bill|가능한가요
+중|카페·식당||Vou querer/*a mesma coisa.|저도 같은 걸로요.|같은 걸로|같은 것|the same thing|나는 원할 것이다
+중|카페·식당||Tem/*um cabelo/na minha sopa.|수프에 머리카락이 있어요.|머리카락이|머리카락 하나|a hair|있다;내 수프에
+중|여행||Meu voo/*foi cancelado.|비행기가 결항됐어요.|결항됐어요|취소되었다|was canceled|내 항공편
+중|여행||Eu/*enjoo/de barco.|배 타면 멀미해요.|멀미해요|멀미하다|get seasick|나는;배에서
+중|여행||Posso/*pagar em dinheiro?|현금으로 내도 돼요?|현금으로 내도|현금으로 지불하다|pay in cash|할 수 있나요
+중|여행||Tenho/*uma escala/em Lisboa.|리스본에서 경유해요.|경유|경유|a layover|나는 가지고 있다;리스본에서
+중|병원||Preciso de/*um atestado.|진단서가 필요해요.|진단서|진단서|a doctor's note|나는 필요하다
+중|병원||Tô/*gripado/desde segunda.|월요일부터 감기 걸렸어요.|감기 걸렸어요|독감에 걸린|have the flu|나는 ~이다;월요일부터
+중|병원||Tenho que/*marcar dentista.|치과 예약해야 해요.|치과 예약해야|치과를 잡다|book the dentist|나는 해야 한다
+중|회사||Tenho reunião/*a manhã toda.|오전 내내 회의야.|오전 내내|아침 전체|all morning|나는 회의가 있다
+중|회사||O projeto/*tá atrasado.|프로젝트가 늦어지고 있어요.|늦어지고 있어요|늦은 상태다|is behind|프로젝트
+중|회사||Te ligo de volta/*em cinco minutos.|5분 뒤에 다시 전화할게.|5분 뒤에|5분 후에|in five minutes|다시 전화할게
+중|회사||Ele/*pediu demissão/semana passada.|걔 지난주에 그만뒀어.|그만뒀어|사직을 요청했다|quit|그;지난주
+중|회사||O prazo/*é sexta.|마감이 금요일이야.|금요일이야|금요일이다|is Friday|마감
+중|연애|연애|Ele me mandou/*flores.|그가 나한테 꽃을 보냈어.|꽃을|꽃|flowers|그가 나에게 보냈다
+중|연애|연애|A gente/*brigou/ontem à noite.|어젯밤에 우리 싸웠어.|싸웠어|싸웠다|fought|우리;어젯밤
+중|연애|연애|Já/*tô com saudade dela.|벌써 그녀가 보고 싶어.|그녀가 보고 싶어|그녀에 대한 그리움이 있다|I miss her|벌써
+중|슬랭|슬랭|Isso é/*muito estranho, mano.|이거 완전 이상해, 야.|완전 이상해, 야|아주 이상해, 형제|so weird, bro|이것은 ~이다
+중|슬랭|슬랭|Tô/*varado de fome.|배고파 쓰러지겠어.|배고파 쓰러지겠어|배고픔에 꿰뚫린|starving|나는 ~이다
+중|일상||Não consigo/*dormir/à noite.|밤에 잠이 안 와.|잠이|자다|sleep|할 수 없다;밤에
+중|일상||Meus pais/*vêm jantar/hoje.|오늘 부모님이 저녁 드시러 오셔.|저녁 드시러 오셔|저녁 먹으러 온다|are coming for dinner|우리 부모님;오늘
+중|일상||Minha irmã/*vai casar/em junho.|언니가 6월에 결혼해.|결혼해|결혼할 것이다|is getting married|내 언니가;6월에
+중|일상||Meu avô/*tá internado.|할아버지가 입원해 계셔.|입원해 계셔|입원해 있다|is in the hospital|우리 할아버지
+중|일상||Amanhã/vou/*no cabeleireiro.|내일 미용실 가.|미용실|미용실에|to the hairdresser|내일;나는 간다
+중|일상||Preciso/*abastecer o carro.|차에 기름 넣어야 해.|기름 넣어야|차에 연료를 넣다|fill up the car|필요하다
+중|일상||*Furou/o pneu.|타이어 펑크 났어.|펑크 났어|구멍 났다|got a flat|타이어가
+중|일상||Tô procurando/*um apê mais barato.|더 싼 집 찾고 있어.|더 싼 집|더 싼 아파트|a cheaper place|나는 찾고 있다
+중|일상||O aluguel/*subiu de novo.|월세가 또 올랐어.|또 올랐어|다시 올랐다|went up again|월세가
+중|일상||Tem/*um vazamento/no banheiro.|화장실에 물이 새.|물이 새|누수|a leak|있다;화장실에
+중|일상||Lavei/*a roupa/hoje cedo.|오늘 아침에 빨래했어.|빨래|옷을|the laundry|나는 빨았다;오늘 아침
+중|일상||Preciso/*passar aspirador.|청소기 돌려야 해.|청소기 돌려야|청소기를 돌리다|vacuum|필요하다
+중|일상||Vou na academia/*três vezes por semana.|일주일에 세 번 헬스장 가.|일주일에 세 번|일주일에 세 번|three times a week|나는 헬스장에 간다
+중|일상||*Torci/o pulso.|손목을 삐었어.|삐었어|비틀었다|I sprained|손목을
+중|일상||Ele/*joga videogame/a noite toda.|걔 밤새 게임해.|게임해|비디오 게임을 한다|plays video games|그;밤새
+중|일상||Escuto/*muito podcast.|팟캐스트 많이 들어.|팟캐스트 많이|많은 팟캐스트|lots of podcasts|나는 듣는다
+중|일상||Domingo/*a gente vai fazer piquenique.|일요일에 소풍 가.|소풍 가|우리는 피크닉을 할 것이다|we're having a picnic|일요일
+중|일상||Faço/*aula de piano.|피아노 레슨 받아.|피아노 레슨|피아노 수업|piano lessons|나는 한다
+중|감정||Tô/*de saco cheio/desse trampo.|이 일 진짜 지긋지긋해.|진짜 지긋지긋해|가득 찬 자루의|fed up|나는 ~이다;이 일에
+중|감정||Tô/*orgulhoso de mim.|나 자신이 자랑스러워.|나 자신이 자랑스러워|나를 자랑스러워하는|proud of myself|나는 ~이다
+중|감정||Essa história/*me dá medo.|그 얘기 무서워.|무서워|나에게 두려움을 준다|scares me|그 이야기
+중|일상||Abaixa/*o volume,/por favor.|소리 좀 줄여 줘.|소리|볼륨을|the volume|낮춰;부탁해
+중|일상||Meu celular/*tá sem espaço.|휴대폰 저장 공간이 없어.|저장 공간이 없어|공간이 없다|is out of space|내 휴대폰
+중|일상||Você viu/*o jogo/ontem?|어제 경기 봤어?|경기|그 경기|the game|너는 봤니;어제
+중|일상||Nosso time/*ganhou.|우리 팀이 이겼어.|이겼어|이겼다|won|우리 팀
+중|일상||Acordo/*às seis/todo dia.|매일 6시에 일어나.|6시에|6시에|at six|나는 깬다;매일
+중|일상||Hoje/*vou dormir cedo.|오늘은 일찍 잘 거야.|일찍 잘 거야|일찍 잘 것이다|I'll sleep early|오늘
+중|일상||*Troquei/de celular.|휴대폰 바꿨어.|바꿨어|바꿨다|I changed|휴대폰을
+중|일상||Me empresta/*sua bicicleta?|자전거 좀 빌려줄래?|자전거|너의 자전거|your bike|나에게 빌려줄래
+중|감정||Tô/*morrendo de rir.|웃겨 죽겠어.|웃겨 죽겠어|웃음에 죽는 중|dying of laughter|나는 ~이다
+중|일상||Esqueci de/*carregar o celular.|휴대폰 충전하는 거 깜빡했어.|휴대폰 충전하는 거|휴대폰을 충전하다|charge my phone|나는 ~를 잊었다
+고|일상||Desde que saí das redes sociais,/*me sinto bem mais tranquilo.|SNS 끊은 뒤로 훨씬 마음이 편해.|훨씬 마음이 편해|훨씬 더 평온하게 느낀다|I feel much calmer|소셜 미디어에서 나온 이후로
+고|일상||Meu celular desligou/*bem no meio/da ligação.|통화 한창 하다가 휴대폰이 꺼졌어.|한창 하다가|딱 한가운데에서|right in the middle|내 휴대폰이 꺼졌다;통화의
+고|일상||Levei horas/*pra entender/como esse aplicativo funciona.|이 앱 사용법 이해하는 데 몇 시간 걸렸어.|이해하는 데|이해하기 위해|to figure out|나는 몇 시간이 걸렸다;이 앱이 어떻게 작동하는지
+고|일상||Se você ficar no celular antes de dormir,/*vai ter dificuldade/pra pegar no sono.|자기 전에 휴대폰 보면 잠들기 힘들 거야.|힘들 거야|어려움을 가질 것이다|you'll have trouble|자기 전에 휴대폰에 있으면;잠드는 데
+고|일상||Comecei a correr/*pra desestressar/depois do trabalho.|퇴근 후에 스트레스 풀려고 달리기 시작했어.|스트레스 풀려고|스트레스를 풀기 위해|to destress|나는 달리기를 시작했다;일 후에
+고|일상||Faz três meses que vou na academia/*e já tô vendo/resultado.|헬스 다닌 지 3달 됐는데 벌써 효과가 보여.|벌써 보여|그리고 이미 보고 있다|and I'm already seeing|내가 헬스장에 간 지 3개월이다;결과를
+고|일상||Meu filho faz vestibular esse ano,/*então a família toda/tá meio tensa.|아들이 올해 수능이라 온 가족이 좀 긴장해 있어.|그래서 온 가족이|그래서 가족 전체가|so the whole family|내 아들이 올해 대입 시험을 본다;조금 긴장해 있다
+고|일상||O professor percebeu/*que eu tinha colado/do meu colega.|선생님이 내가 친구 거 베낀 걸 알아챘어.|내가 베낀 걸|내가 커닝했다는 것|that I had cheated|선생님이 알아챘다;내 친구에게서
+고|일상||Desde que adotamos o cachorro,/*a gente sai muito mais/do que antes.|개를 입양한 뒤로 예전보다 훨씬 많이 나가.|훨씬 많이 나가|우리는 훨씬 더 많이 나간다|we go out much more|우리가 개를 입양한 이후로;예전보다
+고|일상||A gata derrubou minha xícara/*bem na hora que/eu tava saindo.|딱 나가려는데 고양이가 컵을 엎었어.|딱 ~할 때|딱 그때|right when|고양이가 내 컵을 넘어뜨렸다;내가 나가고 있었다
+고|일상||Tentei fazer um bolo,/*mas ele afundou/quando tirei do forno.|케이크를 만들려고 했는데 오븐에서 꺼내니 꺼져 버렸어.|하지만 꺼져 버렸어|하지만 그것이 가라앉았다|but it sank|나는 케이크를 만들려고 했다;오븐에서 꺼냈을 때
+고|일상||*A massa tem que descansar/pelo menos uma hora antes de assar.|굽기 전에 반죽을 최소 한 시간 쉬게 둬야 해.|반죽을 쉬게 둬야 해|반죽은 쉬어야 한다|the dough has to rest|굽기 전에 최소 한 시간
+고|일상||O metrô tava em greve,/*então tive que ir a pé/pro escritório.|지하철 파업이라 사무실까지 걸어가야 했어.|그래서 걸어가야 했어|그래서 나는 걸어서 가야 했다|so I had to walk|지하철이 파업 중이었다;사무실로
+고|일상||*Com esse trânsito todo,/vou chegar atrasado na reunião.|이렇게 막히니까 회의에 늦겠다.|이렇게 막히니까|이 모든 교통으로|with all this traffic|나는 회의에 늦게 도착할 것이다
+고|감정||Não esperava que ele reagisse assim,/*isso me magoou muito.|걔가 그렇게 반응할 줄 몰랐어, 진짜 상처받았어.|진짜 상처받았어|그것이 나를 많이 아프게 했다|that really hurt me|그가 그렇게 반응할 거라 예상하지 못했다
+고|감정||*Quanto mais eu penso nisso,/mais injusto eu acho.|생각하면 할수록 불공평한 것 같아.|생각하면 할수록|그것에 대해 더 생각할수록|the more I think about it|더 불공평하다고 생각한다
+고|감정||Por mais que eu diga que não é nada,/*não consigo deixar pra lá.|별거 아니라고 아무리 말해도 털어 낼 수가 없어.|털어 낼 수가 없어|그냥 둘 수 없다|I can't let it go|아무리 별것 아니라고 말해도
+고|쇼핑||Comprei uma jaqueta pela internet,/*mas ela não tem nada a ver/com a foto.|인터넷으로 재킷 샀는데 사진이랑 전혀 딴판이야.|전혀 딴판이야|하지만 아무 관계가 없다|but it's nothing like|나는 인터넷으로 재킷을 샀다;사진과
+고|쇼핑||*Acima de cem reais,/o frete é grátis.|100헤알 넘으면 배송비 무료예요.|100헤알 넘으면|100헤알 이상이면|over a hundred reais|배송이 무료다
+고|카페·식당||A gente esperou quase uma hora/*até o prato principal/chegar.|메인 요리 나오기까지 거의 한 시간 기다렸어.|메인 요리가 ~까지|메인 요리가 ~할 때까지|until the main course|우리는 거의 한 시간 기다렸다;도착하다
+고|카페·식당||*É melhor reservar,/sábado à noite sempre lota.|토요일 밤엔 늘 꽉 차니까 예약하는 게 좋아.|예약하는 게 좋아|예약하는 게 낫다|it's better to book|토요일 밤은 항상 가득 찬다
+고|여행||Nosso voo atrasou três horas,/*aí a gente perdeu/a conexão.|비행기가 3시간 지연돼서 환승편을 놓쳤어.|그래서 놓쳤어|그래서 우리는 잃었다|so we missed|우리 비행기가 3시간 지연됐다;연결편을
+고|여행||*O que mais me marcou/foi a simpatia das pessoas.|제일 기억에 남는 건 사람들의 친절함이야.|제일 기억에 남는 건|나에게 가장 자국을 남긴 것|what stuck with me most|사람들의 친절함이었다
+고|병원||O médico disse/*pra eu ficar de repouso/pelo menos uma semana.|의사가 최소 일주일은 쉬라고 했어.|쉬라고|내가 휴식하도록|for me to rest|의사가 말했다;최소 일주일
+고|병원||*Faz semanas que/minhas costas doem por causa da cadeira.|의자 때문에 몇 주째 허리가 아파.|몇 주째|몇 주가 됐다|for weeks|의자 때문에 내 허리가 아프다
+고|회사||Não tive tempo de preparar a apresentação,/*então vou improvisar.|발표 준비할 시간이 없어서 즉흥으로 할 거야.|그래서 즉흥으로 할 거야|그래서 즉흥할 것이다|so I'll improvise|나는 발표를 준비할 시간이 없었다
+고|회사||Meu chefe pediu/*pra eu ficar até mais tarde/pra terminar o relatório.|사장님이 보고서 끝내게 늦게까지 남아 달래.|늦게까지 남아|내가 더 늦게까지 머물도록|for me to stay late|우리 사장님이 요청했다;보고서를 끝내기 위해
+고|회사||*Se a gente não achar uma solução logo,/o cliente vai pro concorrente.|빨리 해결책 못 찾으면 고객이 경쟁사로 가요.|빨리 해결책 못 찾으면|우리가 곧 해결책을 찾지 못하면|if we don't find a solution soon|고객이 경쟁사로 갈 것이다
+고|회사||Mandei o e-mail/*pra pessoa errada,/que vergonha.|메일을 엉뚱한 사람한테 보냈어, 창피해.|엉뚱한 사람한테|잘못된 사람에게|to the wrong person|나는 이메일을 보냈다;창피하다
+고|연애|연애|A gente se conheceu num aplicativo,/*mas rolou uma química/logo de cara.|앱에서 만났는데 보자마자 케미가 통했어.|케미가 통했어|화학 작용이 일어났다|there was chemistry|우리는 앱에서 만났다;처음부터 바로
+고|연애|연애|Ele não responde mais minhas mensagens/*desde que a gente se viu/no sábado.|토요일에 만난 뒤로 걔가 내 문자에 답을 안 해.|우리가 만난 뒤로|우리가 서로 본 이후|since we saw each other|그는 더 이상 내 메시지에 답하지 않는다;토요일에
+고|연애|연애|*Acho que tô me apaixonando/pela minha melhor amiga.|제일 친한 친구한테 반하고 있는 것 같아.|반하고 있는 것 같아|사랑에 빠지는 중인 것 같다|I think I'm falling in love|내 가장 친한 친구에게
+고|일상||Meus pais se conheceram na faculdade/*e tão juntos/há quarenta anos.|부모님은 대학에서 만나서 40년째 함께하셔.|그리고 함께하셔|그리고 함께다|and they've been together|우리 부모님은 대학에서 만났다;40년 동안
+고|일상||*Mesmo brigando muito,/me dou bem com a minha irmã.|많이 싸우긴 해도 언니랑 사이 좋아.|많이 싸우긴 해도|많이 싸우면서도|even though we fight a lot|나는 언니와 잘 지낸다
+고|일상||Minha avó/*sempre conta/as mesmas histórias.|할머니는 늘 같은 얘기를 하셔.|늘 이야기하셔|항상 이야기한다|always tells|우리 할머니;같은 이야기들
+고|일상||O vizinho de cima/*faz barulho/até as duas da manhã.|윗집이 새벽 두 시까지 시끄러워.|시끄러워|소음을 만든다|makes noise|윗집 이웃이;새벽 두 시까지
+고|일상||Liguei pro encanador há três dias,/*mas ele ainda não veio.|사흘 전에 배관공 불렀는데 아직도 안 왔어.|아직도 안 왔어|하지만 그는 아직 오지 않았다|but he still hasn't come|나는 사흘 전에 배관공에게 전화했다
+고|일상||*Desde que o bebê nasceu,/a gente procura um apê maior.|아기 태어난 뒤로 더 큰 집 찾고 있어.|아기 태어난 뒤로|아기가 태어난 이후로|since the baby was born|우리는 더 큰 아파트를 찾는다
+고|일상||No fim de semana,/*gosto de dar uma volta/na feira.|주말엔 장터 한 바퀴 도는 게 좋아.|한 바퀴 도는 게 좋아|한 바퀴 도는 것을 좋아한다|I like to stroll around|주말에;장터에서
+고|일상||Comecei violão há seis meses,/*mas ainda toco/muito mal.|6개월 전에 기타 시작했는데 아직도 못 쳐.|아직도 쳐|하지만 아직도 연주한다|but I still play|나는 6개월 전에 기타를 시작했다;아주 서툴게
+고|일상||*O que mais me relaxa/é cozinhar ouvindo música.|제일 힐링 되는 건 음악 들으면서 요리하는 거야.|제일 힐링 되는 건|나를 가장 쉬게 하는 것|what relaxes me most|음악을 들으며 요리하는 것이다
+고|감정||Quando vi meu nome na lista,/*pulei de alegria.|명단에서 내 이름 봤을 때 기뻐서 펄쩍 뛰었어.|기뻐서 펄쩍 뛰었어|기쁨으로 뛰었다|I jumped for joy|내가 명단에서 내 이름을 봤을 때
+고|감정||*Não suporto que falem comigo/nesse tom.|그런 말투로 말하는 거 못 참아.|말하는 거 못 참아|나에게 말하는 걸 견딜 수 없다|I can't stand being spoken to|그런 말투로
+고|일상||*Não adianta ficar nervoso,/o trem não vai chegar mais rápido.|초조해 봤자 소용없어, 기차가 더 빨리 오지 않아.|초조해 봤자 소용없어|긴장해도 소용없다|there's no point getting worked up|기차가 더 빨리 오지 않을 것이다
+고|드라마·영화|드라마·영화|*Não vou deixar você/destruir tudo que a gente construiu.|우리가 쌓아 온 걸 네가 망치게 두지 않을 거야.|네가 ~하게 두지 않을 거야|너를 내버려 두지 않을 것이다|I won't let you|우리가 쌓은 모든 것을 망치다
+고|드라마·영화|드라마·영화|Você mentiu pra mim desde o começo,/*como eu vou confiar/em você?|처음부터 거짓말했잖아, 내가 어떻게 널 믿어?|내가 어떻게 믿어|내가 어떻게 믿을 것인가|how am I going to trust|너는 처음부터 나에게 거짓말했다;너를
+고|드라마·영화|드라마·영화|*Tá na hora de você/assumir suas responsabilidades.|이제 네 책임을 질 때야.|이제 네가 ~할 때야|네가 ~할 시간이다|it's time for you to|너의 책임을 떠맡다
+고|일상||Não deu tempo de almoçar,/*então tô morrendo/de fome.|점심 먹을 시간이 없어서 배고파 죽겠어.|그래서 죽겠어|그래서 나는 죽는 중이다|so I'm dying|점심 먹을 시간이 없었다;배고픔으로
+고|일상||*A gente devia lembrar de/comprar as passagens pro Natal.|크리스마스 표 사는 거 기억해 둬야겠다.|기억해 둬야겠다|우리는 ~를 기억해야 한다|we should remember to|크리스마스 표를 사다
+고|일상||Tô tão cansado que/*dormiria/doze horas seguidas.|너무 피곤해서 열두 시간은 내리 잘 것 같아.|잘 것 같아|잘 것이다|I'd sleep|나는 너무 피곤해서;열두 시간 연속
+고|일상||*De tanto trabalhar à noite,/meu sono ficou todo bagunçado.|밤에 일하다 보니 수면 패턴이 다 엉망이 됐어.|밤에 일하다 보니|밤에 그렇게 많이 일해서|from working nights so much|내 수면이 완전히 엉망이 됐다
+고|일상||A gente devia/*aproveitar o tempo bom/pra ir à praia.|날씨 좋을 때 바다 가야지.|날씨 좋을 때|좋은 날씨를 즐기다|make the most of the nice weather|우리는 ~해야 한다;해변에 가기 위해
+고|일상||Meu irmão pegou dinheiro emprestado comigo/*e nunca devolveu.|동생이 돈을 빌려 가서 안 갚았어.|안 갚았어|그리고 결코 돌려주지 않았다|and never paid it back|내 동생이 나에게서 돈을 빌렸다
+고|일상||*Se eu soubesse que era tão caro,/nunca teria comprado.|이렇게 비싼 줄 알았으면 절대 안 샀지.|이렇게 비싼 줄 알았으면|그게 그렇게 비싼 줄 알았다면|if I'd known it was so expensive|나는 결코 사지 않았을 것이다
+고|일상||As crianças finalmente dormiram,/*agora dá pra respirar/um pouco.|애들이 드디어 잠들어서 이제 좀 숨 돌릴 수 있겠다.|이제 숨 돌릴 수 있겠다|이제 숨 쉴 수 있다|now we can breathe|아이들이 드디어 잤다;조금
+고|회사||Desculpa a demora,/*deu um problema/no servidor.|늦어서 죄송해요, 서버에 문제가 생겼어요.|문제가 생겼어요|문제가 생겼다|there was a problem|지연 죄송합니다;서버에서
+고|회사||*Você pode me mandar a ata/da reunião de ontem?|어제 회의록 보내 줄 수 있어요?|회의록 보내 줄 수 있어요|회의록을 보내 줄 수 있나|could you send me the minutes|어제 회의의
+고|회사||Acho que a gente devia/*rever as prioridades/do trimestre.|이번 분기 우선순위를 다시 봐야 할 것 같아요.|우선순위를 다시 봐야|우선순위를 재검토하다|review the priorities|우리는 ~해야 한다고 생각한다;분기의
+고|병원||Tomei um analgésico de manhã,/*mas ainda não fez efeito.|아침에 진통제 먹었는데 아직도 효과가 없어.|아직도 효과가 없어|하지만 아직 효과를 내지 않았다|but it hasn't kicked in yet|나는 아침에 진통제를 먹었다
+고|병원||*É melhor ir ao médico/se a febre não baixar.|열이 안 내리면 병원 가는 게 좋아.|병원 가는 게 좋아|의사에게 가는 게 낫다|you'd better see a doctor|열이 내리지 않으면
+고|여행||A gente alugou um carro/*pra rodar/pelo litoral.|해안 따라 돌려고 차를 빌렸어.|돌려고|돌아다니기 위해|to drive around|우리는 차를 빌렸다;해안을 따라
+고|여행||*Não esquece de conferir/a validade do passaporte.|여권 유효 기간 확인하는 거 잊지 마.|확인하는 거 잊지 마|확인하는 것을 잊지 마|don't forget to check|여권의 유효 기간을
+고|여행||O hotel era longe do centro,/*mas a vista era de tirar o fôlego.|호텔이 시내랑 멀었지만 경치가 숨 막히게 멋졌어.|경치가 숨 막히게 멋졌어|하지만 전망이 숨을 앗아 갔다|but the view was breathtaking|호텔은 중심에서 멀었다
+고|일상||*Sempre coloco um despertador reserva/caso eu não ouça o primeiro.|첫 알람 못 들을까 봐 항상 예비 알람을 맞춰.|항상 예비 알람을 맞춰|항상 예비 알람을 놓는다|I always set a backup alarm|첫 번째를 못 들을 경우를 대비해
+고|일상||Meu computador é tão lento que/*perco um tempão/toda manhã.|컴퓨터가 너무 느려서 매일 아침 시간을 엄청 날려.|시간을 엄청 날려|엄청난 시간을 잃는다|I waste ages|내 컴퓨터가 너무 느려서;매일 아침
+고|일상||Ele postou uma foto minha sem perguntar,/*e isso me irritou muito.|걔가 묻지도 않고 내 사진 올려서 엄청 짜증 났어.|엄청 짜증 났어|그리고 그것이 나를 많이 짜증 나게 했다|and that really annoyed me|그는 묻지 않고 내 사진을 올렸다
+고|일상||*A gente devia dar um tempo das telas/pelo menos uma vez por semana.|최소 일주일에 한 번은 화면에서 쉬어야 해.|화면에서 쉬어야 해|화면에서 휴식을 줘야 한다|we should take a break from screens|최소 일주일에 한 번
+고|감정||*Fiquei muito tocado/que você lembrou de mim.|날 기억해 줘서 정말 감동했어.|정말 감동했어|아주 감동받았다|I was really touched|네가 나를 기억했다는 것
+고|감정||Me sinto meio perdido/*desde que saí/do meu antigo emprego.|예전 직장 그만둔 뒤로 좀 길을 잃은 느낌이야.|그만둔 뒤로|내가 나온 이후|since I left|나는 조금 길을 잃은 느낌이다;내 예전 직장에서
+고|연애|연애|*A gente decidiu morar junto/no ano que vem.|내년에 같이 살기로 했어.|같이 살기로 했어|함께 살기로 결정했다|we decided to move in together|내년에
+고|연애|연애|Ele sempre esquece nossas datas importantes,/*isso me deixa maluca.|걔는 맨날 우리 기념일 까먹어, 미치겠어.|미치겠어|그것이 나를 미치게 한다|it drives me nuts|그는 항상 우리 중요한 날짜를 잊는다
+고|일상||*Pelo menos uma vez,/queria passar um fim de semana sem fazer nada.|한 번쯤은 아무것도 안 하는 주말을 보내고 싶어.|한 번쯤은|적어도 한 번|just once|아무것도 하지 않고 주말을 보내고 싶었다
+고|일상||Achei um gatinho na rua/*e não tive coragem/de deixar ele lá.|길에서 아기 고양이를 발견했는데 두고 올 수가 없었어.|두고 올 용기가 없었어|그리고 용기가 없었다|and I didn't have the heart|나는 길에서 아기 고양이를 발견했다;그를 거기 두다
+고|일상||*Faz bem/se desconectar de vez em quando.|가끔은 인터넷 끊고 지내는 게 좋아.|좋아|좋게 한다|it's good|가끔 연결을 끊는 것
+고|일상||Meu filho quer um celular,/*mas acho que ele ainda é muito novo.|아들이 휴대폰을 원하는데 아직 너무 어린 것 같아.|아직 너무 어린 것 같아|하지만 그가 아직 너무 어리다고 생각한다|but I think he's still too young|내 아들은 휴대폰을 원한다
+고|일상||*Aprendi a cozinhar/vendo vídeos na internet.|인터넷 영상 보면서 요리를 배웠어.|요리를 배웠어|요리하는 것을 배웠다|I learned to cook|인터넷에서 영상을 보면서
+고|일상||O cachorro late toda vez que alguém toca a campainha,/*e acorda todo mundo.|누가 초인종 누를 때마다 개가 짖어서 다 깨.|다 깨|그리고 모두를 깨운다|and wakes everyone up|누군가 초인종을 누를 때마다 개가 짖는다
+고|일상||*Nem acredito que/já é dezembro.|벌써 12월이라니 믿기지도 않아.|믿기지도 않아|믿지도 못하겠다|I can't even believe|벌써 12월이다
+고|회사||*A partir da semana que vem,/vou trabalhar dois dias por semana em casa.|다음 주부터 일주일에 이틀은 재택근무해.|다음 주부터|다음 주부터|starting next week|나는 일주일에 이틀 집에서 일할 것이다
+고|회사||Ele levou todo o crédito pelo meu trabalho,/*e eu não tive coragem/de falar nada.|걔가 내 일로 공을 다 가져갔는데 아무 말도 못 했어.|아무 말도 못 했어|그리고 나는 용기가 없었다|and I didn't have the guts|그는 내 일에 대한 모든 공을 가져갔다;아무것도 말하다
+고|감정||*Sinto que tô andando em círculos/há semanas.|몇 주째 제자리걸음인 느낌이야.|제자리걸음인 느낌이야|원을 그리며 걷는 느낌|I feel like I'm going in circles|몇 주째
+고|감정||Minha melhor amiga vai morar fora,/*não sei como vou ficar/sem ela.|제일 친한 친구가 외국으로 가, 걔 없이 어떻게 지낼지 모르겠어.|어떻게 지낼지 모르겠어|내가 어떻게 있을지 모르겠다|I don't know how I'll be|내 가장 친한 친구가 외국에 살 것이다;그녀 없이
+고|드라마·영화|드라마·영화|*Você não tem o direito de/falar assim comigo.|너 나한테 그렇게 말할 권리 없어.|권리 없어|너는 권리가 없다|you have no right to|나와 그렇게 말하다
+고|드라마·영화|드라마·영화|*Se você sair agora,/não volta nunca mais.|지금 나가면 다시는 돌아오지 마.|지금 나가면|네가 지금 나가면|if you leave now|절대 다시 돌아오지 마
+고|일상||A geladeira tá vazia,/*a gente precisa muito/fazer mercado hoje.|냉장고가 텅 비었어, 오늘은 꼭 장 봐야 해.|꼭 ~해야 해|우리는 정말 필요하다|we really need to|냉장고가 비었다;오늘 장을 보다
+고|일상||Coloquei o endereço errado/*e a encomenda foi parar/na casa de outra pessoa.|주소를 잘못 넣어서 택배가 다른 사람 집으로 갔어.|택배가 가 버렸어|그리고 소포가 결국 갔다|and the package ended up|나는 잘못된 주소를 넣었다;다른 사람의 집에
+고|감정||Depois de um dia longo,/*nada melhor que/um banho quente.|긴 하루 끝엔 따뜻한 샤워만 한 게 없지.|~만 한 게 없지|~보다 좋은 것은 없다|nothing better than|긴 하루 후에;뜨거운 샤워
+고|일상||Não consegui ingresso,/*esgotou/em dez minutos.|표를 못 구했어, 10분 만에 매진됐어.|매진됐어|매진됐다|it sold out|나는 표를 얻지 못했다;10분 만에
+고|일상||*Duvido que/ele chegue na hora.|걔가 제시간에 올 리가 없어.|~할 리가 없어|~를 의심한다|I doubt|그가 제시간에 도착한다
+고|일상||Meu avô não sabe usar o celular,/*então eu ensino pra ele/todo fim de semana.|할아버지가 휴대폰을 못 쓰셔서 주말마다 알려 드려.|그래서 알려 드려|그래서 내가 그에게 가르친다|so I teach him|우리 할아버지는 휴대폰 쓰는 법을 모른다;매 주말
+고|감정||*Choro toda vez que/vejo esse filme.|그 영화 볼 때마다 울어.|볼 때마다 울어|~할 때마다 운다|I cry every time|이 영화를 본다
+고|드라마·영화|드라마·영화|*Eu faria qualquer coisa/pra te proteger.|널 지키기 위해서라면 뭐든 할 거야.|뭐든 할 거야|무엇이든 할 것이다|I'd do anything|너를 보호하기 위해
+고|일상||A liquidação começa amanhã,/*as lojas vão ficar/lotadas.|세일이 내일 시작이라 가게가 꽉 찰 거야.|가게가 ~할 거야|가게들이 ~될 것이다|the shops will be|세일이 내일 시작한다;가득 찬
+고|일상||Tentei consertar a bicicleta sozinho,/*mas só piorei/as coisas.|자전거를 혼자 고치려다 더 망쳤어.|더 망쳤어|단지 악화시켰다|I only made it worse|나는 혼자 자전거를 고치려고 했다;상황을
+고|일상||*Assim que chego em casa,/coloco o celular no silencioso.|집에 오자마자 휴대폰을 무음으로 해.|집에 오자마자|집에 도착하자마자|as soon as I get home|휴대폰을 무음으로 놓는다
+고|회사||*A gente precisa fechar/o orçamento antes de segunda.|월요일 전에 예산을 확정해야 해요.|확정해야 해요|우리가 닫아야 한다|we need to finalize|월요일 전에 예산을
+고|감정||*Foi um choque/rever ele depois de dez anos.|10년 만에 걔를 다시 보니 충격이었어.|충격이었어|충격이었다|it was a shock|10년 후에 그를 다시 보는 것
+고|일상||Não acho minhas chaves,/*devo ter deixado/no escritório.|열쇠가 안 보여, 사무실에 두고 왔나 봐.|두고 왔나 봐|두었음에 틀림없다|I must have left them|나는 열쇠를 찾지 못한다;사무실에
+고|여행||O ônibus noturno tava lotado,/*a gente teve que ir em pé/boa parte do caminho.|야간 버스가 꽉 차서 한참을 서서 가야 했어.|서서 가야 했어|우리는 서서 가야 했다|we had to stand|야간 버스가 가득 찼다;길의 상당 부분
+고|일상||*Nada me irrita mais do que/gente falando alto no celular.|휴대폰으로 크게 통화하는 사람만큼 짜증 나는 게 없어.|~만큼 짜증 나는 게 없어|아무것도 ~보다 더 나를 짜증 나게 하지 않는다|nothing annoys me more than|휴대폰으로 크게 말하는 사람들
+고|일상||Meu pai começou a mexer com jardinagem depois de aposentado/*e passa o dia todo/lá.|아빠가 은퇴하고 정원 일을 시작해서 하루 종일 거기 계셔.|하루 종일|그리고 하루 종일 보낸다|and spends the whole day|우리 아빠는 은퇴 후 정원 일을 시작했다;거기서
+고|감정||*Ainda tô sem palavras,/foi incrível demais.|아직도 말이 안 나와, 너무 대단했어.|아직도 말이 안 나와|아직 말이 없는 상태다|I'm still speechless|너무 대단했다
+고|일상||A gata dorme no meu teclado/*toda vez que eu tento/trabalhar.|내가 일하려고 할 때마다 고양이가 키보드 위에서 자.|내가 ~하려고 할 때마다|내가 시도할 때마다|every time I try|고양이가 내 키보드 위에서 잔다;일하다

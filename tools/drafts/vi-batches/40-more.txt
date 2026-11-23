@@ -1,0 +1,231 @@
+# 200 more #3 (2026-11-23)
+초|일상||Điện thoại mình/*sắp hết pin.|휴대폰 배터리가 거의 없어.|배터리가 거의 없어|곧 배터리가 다 되다|almost out of battery|내 휴대폰
+초|일상||Bạn có/*sạc/không?|충전기 있어?|충전기|충전기|a charger|너는 있니;요?
+초|일상||Gửi mình/*tấm hình đó.|그 사진 보내 줘.|그 사진|그 사진 한 장|that photo|나에게 보내
+초|일상||Ở đây/*không có sóng.|여기 신호가 안 잡혀.|신호가 안 잡혀|신호가 없다|no signal|여기
+초|일상||Wifi/*bị hư rồi.|와이파이 고장 났어.|고장 났어|고장 났다|is broken|와이파이
+초|일상||Mình tập yoga/*mỗi sáng.|매일 아침 요가 해.|매일 아침|매일 아침|every morning|나는 요가를 한다
+초|일상||Mình chạy bộ/*mỗi ngày.|매일 달려.|매일|매일|every day|나는 달리기를 한다
+초|일상||Ngày mai/*mình có bài kiểm tra.|내일 시험 있어.|시험 있어|나는 시험이 있다|I have a test|내일
+초|일상||Con mèo/*ngủ cả ngày.|고양이가 하루 종일 자.|하루 종일 자|하루 종일 잔다|sleeps all day|고양이
+초|일상||Mình/*dắt chó đi dạo.|개 산책시키는 중이야.|개 산책시키는|개를 끌고 산책하다|walking the dog|나
+초|일상||Mình/*chơi đàn guitar.|나 기타 쳐.|기타 쳐|기타를 연주하다|play guitar|나
+초|일상||Mình thích/*nấu ăn.|요리하는 거 좋아해.|요리하는 거|요리하다|cooking|나는 좋아한다
+초|일상||Tối nay/*ăn mì.|오늘 저녁은 국수야.|국수야|국수를 먹다|eat noodles|오늘 저녁
+초|일상||Xe buýt/*tới trễ.|버스가 늦게 와.|늦게 와|늦게 오다|is late|버스
+초|감정||Mình/*ghen.|질투 나.|질투 나|질투하다|jealous|나
+초|감정||Mình/*xấu hổ quá.|너무 부끄러워.|너무 부끄러워|너무 부끄럽다|so embarrassed|나
+초|감정||*Nhẹ cả người!|마음이 놓인다!|마음이 놓인다|온몸이 가볍다|what a relief|
+초|일상||Hôm nay/*mình được nghỉ.|오늘 쉬는 날이야.|쉬는 날이야|쉬게 되다|I'm off|오늘
+초|쇼핑||Mình mua/*trên mạng.|인터넷으로 샀어.|인터넷으로|인터넷에서|online|나는 샀다
+초|쇼핑||Cái này/*có giảm giá không?|이거 할인해요?|할인해요|할인이 있나|is it on sale|이것
+초|카페·식당||Cho tôi/*một ổ bánh mì.|반미 하나 주세요.|반미 하나|빵 한 개|a banh mi|저에게 주세요
+초|카페·식당||Món này/*có cay không?|이거 매워요?|매워요|매운가|is it spicy|이 음식
+초|여행||*Trạm xe buýt/ở đâu?|버스 정류장 어디예요?|버스 정류장|버스 정류장|the bus stop|어디에
+초|여행||Tôi đang tìm/*khách sạn.|호텔 찾고 있어요.|호텔|호텔|the hotel|나는 찾는 중이다
+초|병원||Tôi/*bị đau bụng.|배 아파요.|배 아파요|복통을 겪다|have a stomachache|나
+초|병원||Tôi/*ho nhiều.|기침 많이 해요.|기침 많이 해요|많이 기침하다|cough a lot|나
+초|회사||Tôi có/*nhiều email quá.|메일이 너무 많아요.|메일이 너무 많아요|이메일이 너무 많다|so many emails|나는 있다
+초|회사||Tôi/*đang họp.|회의 중이에요.|회의 중이에요|회의하는 중이다|in a meeting|나
+초|연애|연애|Em/*dễ thương quá.|너 너무 귀여워.|너무 귀여워|너무 귀엽다|so cute|너(여자)
+초|연애|연애|Tối nay/*đi chơi không?|오늘 밤에 놀러 갈래?|놀러 갈래|놀러 가나|go out|오늘 밤
+초|일상||Phòng/*nóng quá.|방이 너무 더워.|너무 더워|너무 덥다|so hot|방
+초|일상||Mình/*làm mất kính/rồi.|안경 잃어버렸어.|안경 잃어버렸어|안경을 잃어버리다|lost my glasses|나;이미
+초|일상||Mình/*đang mặc đồ ngủ.|잠옷 입고 있어.|잠옷 입고 있어|잠옷을 입는 중이다|in pajamas|나
+초|일상||Mình/*đang coi phim bộ.|드라마 보는 중이야.|드라마 보는 중|시리즈 영화를 보는 중|watching a series|나
+초|일상||Mình ghét/*thứ hai.|월요일 진짜 싫어.|월요일|월요일|Mondays|나는 싫어한다
+초|감정||*Tuyệt vời!|대박!|대박|훌륭하다|awesome|
+초|일상||Tối qua/*ngủ ngon không?|어젯밤 잘 잤어?|잘 잤어|잘 잤나|sleep well|어젯밤
+초|일상||Mình/*đi chợ/đây.|장 보러 간다.|장 보러|시장에 가다|go to the market|나;이제
+초|감정||Mình/*thật sự xin lỗi.|정말 미안해.|정말 미안해|정말로 사과하다|truly sorry|나
+초|일상||*Mai gặp/nha.|내일 봐.|내일 봐|내일 만나다|see you tomorrow|요
+초|일상||Mình/*đang ở nhà.|나 집에 있어.|집에 있어|집에 있는 중|at home|나
+초|일상||Trời/*mưa to quá!|비가 엄청 와!|비가 엄청 와|비가 너무 크게 온다|it's pouring|하늘
+초|일상||Tối qua/*mình ngủ không được.|어젯밤 잠을 못 잤어.|잠을 못 잤어|나는 잘 수 없었다|I couldn't sleep|어젯밤
+초|일상||Mình uống/*cà phê nhiều quá.|커피를 너무 많이 마셔.|커피를 너무 많이|커피를 너무 많이|too much coffee|나는 마신다
+초|쇼핑||*Mắc quá!|너무 비싸요!|너무 비싸요|너무 비싸다|too expensive|
+초|일상||Mình/*hết đói rồi.|이제 배 안 고파.|이제 배 안 고파|배고픔이 다 됐다|not hungry anymore|나
+초|일상||*Mấy giờ/rồi?|몇 시야?|몇 시|몇 시|what time|이미
+초|일상||Mình/*mệt muốn xỉu.|피곤해서 쓰러질 것 같아.|피곤해서 쓰러질 것 같아|기절하고 싶을 만큼 피곤하다|exhausted|나
+중|일상||Mình quên/*mật khẩu/rồi.|비밀번호 까먹었어.|비밀번호|비밀번호|password|나는 잊었다;이미
+중|일상||Laptop mình/*cứ bị treo hoài.|노트북이 맨날 멈춰.|맨날 멈춰|계속 멈춘다|keeps freezing|내 노트북
+중|일상||Gửi mình/*cái link/nha.|링크 보내 줘.|링크|링크|the link|나에게 보내;요
+중|일상||Anh ấy/*đăng hình tụi mình/lên mạng.|걔가 우리 사진을 인터넷에 올렸어.|우리 사진을 올렸어|우리 사진을 게시하다|posted our photo|그가;인터넷에
+중|일상||Mình/*dùng điện thoại/nhiều quá.|휴대폰을 너무 많이 써.|휴대폰을 써|휴대폰을 사용하다|use my phone|나;너무 많이
+중|일상||Mình/*xóa app đó/rồi.|그 앱 지웠어.|그 앱 지웠어|그 앱을 지우다|deleted that app|나;이미
+중|일상||Mình/*đăng ký lớp nấu ăn/rồi.|요리 수업 등록했어.|요리 수업 등록|요리 수업을 등록하다|signed up for cooking class|나;이미
+중|일상||Mình/*tập gym lại/rồi.|헬스 다시 시작했어.|헬스 다시|다시 헬스를 하다|back to the gym|나;이미
+중|일상||Tập xong/*mình đau ê ẩm/khắp người.|운동 끝나고 온몸이 쑤셔.|온몸이 쑤셔|욱신욱신 아프다|aching all over|운동 끝나고;온몸
+중|일상||Con trai mình/*đang ôn thi/đại học.|아들이 대학 입시 공부 중이야.|입시 공부 중이야|시험 복습 중|studying for exams|우리 아들;대학
+중|일상||Mình được/*điểm cao/môn toán.|수학 점수 잘 받았어.|점수 잘|높은 점수|a high score|나는 받았다;수학 과목
+중|일상||Cô giáo/*giao cả đống/bài tập.|선생님이 숙제를 잔뜩 내줬어.|잔뜩 내줬어|한 무더기를 주었다|gave a ton of|선생님;숙제
+중|일상||Mình phải/*dắt chó đi dạo/trước khi đi.|나가기 전에 개 산책시켜야 해.|개 산책시켜야|개를 끌고 산책하다|walk the dog|나는 해야 한다;가기 전에
+중|일상||Con mèo/*làm vỡ/cái ly.|고양이가 컵을 깼어.|깼어|깨뜨리다|broke|고양이;컵
+중|일상||Món này/*hơi nhạt.|이거 좀 싱거워.|좀 싱거워|조금 싱겁다|a bit bland|이 음식
+중|일상||Mình/*làm khét cơm/rồi.|밥 태웠어.|밥 태웠어|밥을 태우다|burned the rice|나;이미
+중|일상||Hôm nay/*tới phiên mình/nấu cơm.|오늘은 내가 밥할 차례야.|내 차례|내 차례가 오다|my turn|오늘;밥을 하다
+중|일상||Sáng nay/*xe buýt chật cứng.|오늘 아침 버스 꽉 찼어.|버스 꽉 찼어|버스가 꽉 찼다|the bus was packed|오늘 아침
+중|일상||Mình/*đi lố trạm/rồi.|정류장 지나쳤어.|정류장 지나쳤어|정류장을 지나치다|missed my stop|나;이미
+중|일상||Đường đang/*sửa.|길이 공사 중이야.|공사|수리하다|under repair|길이 ~하는 중이다
+중|감정||Chuyện đó/*làm mình phát điên.|그 일 때문에 미치겠어.|미치겠어|나를 미치게 하다|drives me crazy|그 일
+중|감정||Hôm nay/*mình thất vọng về bản thân.|오늘 나한테 실망했어.|나한테 실망했어|나 자신에게 실망하다|disappointed in myself|오늘
+중|감정||Mình/*đang buồn.|기분이 우울해.|기분이 우울해|슬픈 중이다|feeling down|나
+중|감정||Mình/*tan nát cõi lòng.|마음이 찢어졌어.|마음이 찢어졌어|마음이 산산조각 나다|heartbroken|나
+중|감정||Chuyện đó/*làm mình cảm động lắm.|그 일 정말 감동이었어.|정말 감동이었어|나를 아주 감동시키다|really moved me|그 일
+중|쇼핑||Đơn hàng của tôi/*chưa tới.|주문한 게 아직 안 왔어요.|아직 안 왔어요|아직 오지 않았다|hasn't arrived yet|내 주문
+중|쇼핑||Tôi muốn/*hoàn tiền.|환불받고 싶어요.|환불받고|돈을 돌려받다|get a refund|나는 원한다
+중|쇼핑||*Có miễn phí ship/không?|배송비 무료예요?|배송비 무료|무료 배송이 있나|free shipping|요?
+중|카페·식당||Tính tiền/*riêng/được không?|따로 계산해도 돼요?|따로|따로|separately|계산하다;되나요
+중|카페·식당||Cho tôi/*giống vậy.|저도 같은 걸로요.|같은 걸로|그렇게 똑같이|the same|저에게 주세요
+중|카페·식당||Trong tô phở/*có sợi tóc.|쌀국수에 머리카락이 있어요.|머리카락이 있어요|머리카락 한 가닥이 있다|there's a hair|쌀국수 그릇 안에
+중|여행||Chuyến bay của tôi/*bị hủy.|비행기가 결항됐어요.|결항됐어요|취소되었다|was canceled|내 항공편
+중|여행||Tôi/*bị say sóng.|뱃멀미 해요.|뱃멀미 해요|파도 멀미에 걸리다|get seasick|나
+중|여행||Trả/*bằng tiền mặt/được không?|현금으로 내도 돼요?|현금으로|현금으로|in cash|내다;되나요
+중|여행||Tôi/*quá cảnh/ở Singapore.|싱가포르에서 경유해요.|경유해요|환승하다|transit|나;싱가포르에서
+중|병원||Tôi cần/*giấy xác nhận bệnh.|진단서가 필요해요.|진단서|병 확인서|a medical certificate|나는 필요하다
+중|병원||Tôi/*bị cảm/từ thứ hai.|월요일부터 감기 걸렸어요.|감기 걸렸어요|감기에 걸리다|caught a cold|나;월요일부터
+중|병원||Tôi phải/*đặt lịch nha sĩ.|치과 예약해야 해요.|치과 예약해야|치과 일정을 잡다|book the dentist|나는 해야 한다
+중|회사||Cả buổi sáng/*tôi họp liên tục.|오전 내내 계속 회의야.|계속 회의야|나는 연속으로 회의한다|back-to-back meetings|오전 내내
+중|회사||Dự án/*bị trễ tiến độ.|프로젝트가 일정보다 늦어요.|일정보다 늦어요|진도가 늦어지다|is behind schedule|프로젝트
+중|회사||Năm phút nữa/*tôi gọi lại.|5분 뒤에 다시 전화할게요.|다시 전화할게요|나는 다시 전화한다|I'll call back|5분 더 뒤
+중|회사||Anh ấy/*nghỉ việc/tuần trước.|그 사람 지난주에 그만뒀어.|그만뒀어|일을 그만두다|quit|그;지난주
+중|회사||Hạn chót/*là thứ sáu.|마감은 금요일이야.|금요일이야|금요일이다|is Friday|마감
+중|연애|연애|Anh ấy/*tặng hoa/cho mình.|그가 나한테 꽃을 선물했어.|꽃을 선물했어|꽃을 선물하다|gave flowers|그가;나에게
+중|연애|연애|Tối qua/*tụi mình cãi nhau.|어젯밤에 우리 싸웠어.|우리 싸웠어|우리는 서로 다퉜다|we had a fight|어젯밤
+중|연애|연애|Mình/*đã nhớ cô ấy/rồi.|벌써 그녀가 보고 싶어.|그녀가 보고 싶어|그녀를 그리워했다|miss her|나;벌써
+중|슬랭|슬랭|Cái này/*kỳ cục ghê.|이거 완전 이상해.|완전 이상해|아주 기묘하다|so weird|이것
+중|슬랭|슬랭|Mình/*đói meo/rồi.|배고파 죽겠어.|배고파 죽겠어|배가 홀쭉하다|starving|나;이미
+중|일상||Mình/*không ngủ được/ban đêm.|밤에 잠이 안 와.|잠이 안 와|잘 수 없다|can't sleep|나;밤에
+중|일상||Tối nay/*ba mẹ qua ăn cơm.|오늘 저녁에 부모님이 식사하러 오셔.|부모님이 식사하러 오셔|부모님이 밥 먹으러 건너오다|my parents are coming to eat|오늘 저녁
+중|일상||Chị mình/*cưới/vào tháng sáu.|언니가 6월에 결혼해.|결혼해|결혼하다|is getting married|우리 언니;6월에
+중|일상||Ông mình/*đang nằm viện.|할아버지가 입원해 계셔.|입원해 계셔|병원에 누워 있다|is in the hospital|우리 할아버지
+중|일상||Mai/*mình đi cắt tóc.|내일 머리 자르러 가.|머리 자르러 가|나는 머리 자르러 간다|I'm getting a haircut|내일
+중|일상||Mình phải/*đổ xăng.|기름 넣어야 해.|기름 넣어야|휘발유를 붓다|get gas|나는 해야 한다
+중|일상||Xe mình/*bị xẹp bánh.|내 오토바이 바퀴 바람 빠졌어.|바퀴 바람 빠졌어|바퀴가 납작해지다|got a flat|내 오토바이
+중|일상||Mình đang tìm/*phòng trọ rẻ hơn.|더 싼 방 찾고 있어.|더 싼 방|더 싼 하숙방|a cheaper room|나는 찾는 중이다
+중|일상||Tiền nhà/*lại tăng nữa.|집세가 또 올랐어.|또 올랐어|다시 또 오르다|went up again|집세
+중|일상||Nhà tắm/*bị rỉ nước.|욕실에 물이 새.|물이 새|물이 새다|is leaking|욕실
+중|일상||Sáng nay/*mình giặt đồ.|오늘 아침에 빨래했어.|빨래했어|나는 옷을 빨았다|I did the laundry|오늘 아침
+중|일상||Mình phải/*lau nhà.|바닥 닦아야 해.|바닥 닦아야|집을 닦다|mop the floor|나는 해야 한다
+중|일상||Mình đi gym/*tuần ba buổi.|일주일에 세 번 헬스 가.|일주일에 세 번|한 주에 세 번|three times a week|나는 헬스에 간다
+중|일상||Mình/*bị trẹo cổ tay.|손목을 삐었어.|손목을 삐었어|손목이 삐다|sprained my wrist|나
+중|일상||Nó/*chơi game/suốt đêm.|걔 밤새 게임해.|게임해|게임을 하다|plays games|그 애;밤새
+중|일상||Mình nghe/*nhiều podcast lắm.|팟캐스트 엄청 많이 들어.|팟캐스트 엄청 많이|아주 많은 팟캐스트|lots of podcasts|나는 듣는다
+중|일상||Chủ nhật/*tụi mình đi picnic.|일요일에 소풍 가.|소풍 가|우리는 피크닉 간다|we're going on a picnic|일요일
+중|일상||Mình/*học đàn piano.|피아노 배워.|피아노 배워|피아노를 배우다|learn piano|나
+중|감정||Mình/*chán ngấy/công việc này.|이 일 진짜 질렸어.|진짜 질렸어|물리도록 지겹다|sick and tired of|나;이 일
+중|감정||Mình/*tự hào về bản thân.|나 자신이 자랑스러워.|나 자신이 자랑스러워|나 자신에 대해 자랑스럽다|proud of myself|나
+중|감정||Câu chuyện đó/*làm mình sợ.|그 이야기 무서워.|무서워|나를 무섭게 하다|scares me|그 이야기
+중|일상||*Vặn nhỏ/tiếng lại đi.|소리 좀 줄여.|줄여|작게 돌려|turn it down|소리를 해
+중|일상||Điện thoại mình/*hết bộ nhớ.|휴대폰 저장 공간이 다 찼어.|저장 공간이 다 찼어|메모리가 다 됐다|is out of storage|내 휴대폰
+중|일상||Tối qua/*bạn coi trận đấu không?|어젯밤 경기 봤어?|경기 봤어|경기를 봤나|watch the match|어젯밤
+중|일상||Đội mình/*thắng/rồi.|우리 팀이 이겼어.|이겼어|이기다|won|우리 팀;이미
+중|일상||Mình dậy/*lúc sáu giờ/mỗi ngày.|매일 6시에 일어나.|6시에|6시에|at six|나는 일어난다;매일
+중|일상||Tối nay/*mình đi ngủ sớm.|오늘 밤엔 일찍 잘게.|일찍 잘게|일찍 자러 가다|go to bed early|오늘 밤
+중|일상||Mình/*mới đổi điện thoại.|휴대폰 바꿨어.|휴대폰 바꿨어|막 휴대폰을 바꾸다|just got a new phone|나
+중|일상||Cho mình/*mượn xe đạp/nha.|자전거 좀 빌려줘.|빌려줘|빌리다|borrow|나에게 줘;자전거를 요
+중|감정||Mình/*cười muốn xỉu.|웃겨 죽겠어.|웃겨 죽겠어|기절할 만큼 웃다|dying laughing|나
+중|일상||Mình quên/*sạc điện thoại.|휴대폰 충전하는 거 깜빡했어.|휴대폰 충전하는 거|휴대폰을 충전하다|charge my phone|나는 잊었다
+고|일상||Từ khi bỏ mạng xã hội,/*mình thấy thoải mái hơn nhiều.|SNS 끊은 뒤로 훨씬 마음이 편해.|훨씬 마음이 편해|훨씬 편하게 느낀다|I feel much more relaxed|SNS를 그만둔 때부터
+고|일상||Điện thoại tắt ngúm/*ngay giữa lúc/đang gọi.|통화 한창 하다가 휴대폰이 꺼졌어.|한창 하다가|바로 ~하는 도중에|right in the middle of|휴대폰이 꺼져 버렸다;통화하는 중
+고|일상||Mình mất mấy tiếng/*mới hiểu/app này dùng sao.|이 앱 사용법을 몇 시간 걸려서 겨우 알았어.|겨우 알았어|비로소 이해했다|to finally understand|나는 몇 시간을 썼다;이 앱을 어떻게 쓰는지
+고|일상||Nếu cứ coi điện thoại trước khi ngủ,/*sẽ khó ngủ/lắm đó.|자기 전에 계속 휴대폰 보면 잠들기 많이 힘들 거야.|잠들기 힘들 거야|잠들기 어려울 것이다|it'll be hard to sleep|자기 전에 계속 휴대폰을 보면;아주
+고|일상||Mình bắt đầu chạy bộ/*để xả stress/sau giờ làm.|퇴근 후에 스트레스 풀려고 달리기 시작했어.|스트레스 풀려고|스트레스를 풀기 위해|to relieve stress|나는 달리기를 시작했다;일 끝난 후
+고|일상||Mình tập gym được ba tháng rồi/*và bắt đầu thấy/kết quả.|헬스 다닌 지 3달 됐는데 효과가 보이기 시작해.|효과가 보이기 시작해|그리고 보기 시작한다|and I'm starting to see|나는 헬스를 3개월 했다;결과를
+고|일상||Năm nay con trai mình thi đại học,/*nên cả nhà/hơi căng thẳng.|올해 아들이 대학 입시라 온 가족이 좀 긴장해 있어.|그래서 온 가족이|그래서 온 집이|so the whole family|올해 우리 아들이 대학 시험을 본다;조금 긴장된다
+고|일상||Cô giáo phát hiện/*mình chép bài/của bạn.|선생님이 내가 친구 거 베낀 걸 알아챘어.|내가 베낀 걸|내가 답을 베끼다|that I copied|선생님이 발견했다;친구의
+고|일상||Từ khi nuôi con chó,/*tụi mình ra ngoài/nhiều hơn hẳn.|개를 키운 뒤로 확실히 더 많이 나가.|더 많이 나가|우리는 밖에 나간다|we go out|개를 키운 때부터;확연히 더 많이
+고|일상||Con mèo làm đổ ly cà phê/*đúng lúc/mình chuẩn bị đi.|딱 나가려는데 고양이가 커피를 엎었어.|딱 ~할 때|정확히 그때|right when|고양이가 커피잔을 엎었다;내가 갈 준비를 하다
+고|일상||Mình định làm bánh kem,/*nhưng bánh bị xẹp/khi lấy ra khỏi lò.|케이크를 만들려 했는데 오븐에서 꺼내니 꺼져 버렸어.|하지만 꺼져 버렸어|하지만 케이크가 꺼졌다|but it sank|나는 케이크를 만들 계획이었다;오븐에서 꺼낼 때
+고|일상||*Phải để bột nghỉ/ít nhất một tiếng trước khi nướng.|굽기 전에 반죽을 최소 한 시간 쉬게 둬야 해.|반죽을 쉬게 둬야 해|반죽을 쉬게 해야 한다|let the dough rest|굽기 전에 최소 한 시간
+고|일상||Hôm qua xe buýt đình công,/*nên mình phải đi bộ/tới công ty.|어제 버스 파업이라 회사까지 걸어가야 했어.|그래서 걸어가야 했어|그래서 나는 걸어가야 했다|so I had to walk|어제 버스가 파업했다;회사까지
+고|일상||*Kẹt xe kiểu này/chắc mình trễ họp mất.|이렇게 막히면 회의에 늦을 것 같아.|이렇게 막히면|이런 식으로 차가 막히면|with traffic like this|아마 나는 회의에 늦어 버릴 것이다
+고|감정||Mình không ngờ anh ấy phản ứng như vậy,/*mình tổn thương lắm.|걔가 그렇게 반응할 줄 몰랐어, 정말 상처받았어.|정말 상처받았어|나는 아주 상처받았다|I'm really hurt|나는 그가 그렇게 반응할 줄 몰랐다
+고|감정||*Càng nghĩ/càng thấy bất công.|생각할수록 불공평해.|생각할수록|더 생각할수록|the more I think|더 불공평하게 느낀다
+고|감정||Dù tự nhủ là không sao,/*mình vẫn không vượt qua được.|괜찮다고 스스로 말해도 아직 극복이 안 돼.|아직 극복이 안 돼|나는 여전히 넘어설 수 없다|I still can't get over it|괜찮다고 스스로 다독여도
+고|쇼핑||Mình đặt áo khoác trên mạng,/*mà nhận được/khác hẳn hình.|인터넷으로 재킷을 주문했는데 받아 보니 사진이랑 완전 달라.|받아 보니|그런데 받은 것은|but what I got|나는 인터넷에서 재킷을 주문했다;사진과 완전히 다르다
+고|쇼핑||*Đơn trên năm trăm nghìn/được miễn phí giao hàng.|50만 동 넘게 주문하면 배송 무료예요.|50만 동 넘게 주문하면|50만 넘는 주문|orders over 500,000|무료 배송이 된다
+고|카페·식당||Tụi mình chờ gần một tiếng/*mới có/món chính.|메인 요리 나오기까지 거의 한 시간 기다렸어.|비로소 나왔어|비로소 있었다|before we got|우리는 거의 한 시간을 기다렸다;메인 요리
+고|카페·식당||*Nên đặt bàn trước,/tối thứ bảy lúc nào cũng kín chỗ.|토요일 저녁은 늘 꽉 차니까 미리 예약하는 게 좋아.|미리 예약하는 게 좋아|미리 테이블을 예약해야 한다|you should book ahead|토요일 저녁은 언제나 자리가 꽉 찬다
+고|여행||Chuyến bay bị trễ ba tiếng,/*nên tụi mình lỡ/chuyến nối.|비행기가 3시간 지연돼서 환승편을 놓쳤어.|그래서 우리는 놓쳤어|그래서 우리는 놓쳤다|so we missed|비행기가 3시간 지연됐다;연결편
+고|여행||*Điều mình nhớ nhất/là sự thân thiện của người dân.|제일 기억에 남는 건 사람들의 친절함이야.|제일 기억에 남는 건|내가 가장 기억하는 것은|what I remember most|주민들의 친근함이다
+고|병원||Bác sĩ dặn/*phải nghỉ ngơi/ít nhất một tuần.|의사가 최소 일주일은 쉬라고 했어.|쉬라고|쉬어야 한다|to rest|의사가 당부했다;최소 일주일
+고|병원||*Mấy tuần nay/mình bị đau lưng vì cái ghế.|의자 때문에 몇 주째 허리가 아파.|몇 주째|요 몇 주|for weeks now|나는 의자 때문에 허리 통증을 겪는다
+고|회사||Tôi không kịp chuẩn bị bài thuyết trình,/*nên sẽ ứng biến.|발표 준비할 시간이 없어서 즉흥으로 할게요.|그래서 즉흥으로 할게요|그래서 즉흥할 것이다|so I'll improvise|나는 발표를 준비할 시간이 없었다
+고|회사||Sếp nhờ tôi/*ở lại muộn/để làm xong báo cáo.|사장님이 보고서 끝내게 늦게까지 남아 달래요.|늦게까지 남아|늦게 남다|stay late|사장님이 나에게 부탁했다;보고서를 끝내기 위해
+고|회사||*Nếu không tìm ra giải pháp sớm,/khách hàng sẽ qua đối thủ.|빨리 해결책을 못 찾으면 고객이 경쟁사로 가요.|빨리 해결책을 못 찾으면|해결책을 일찍 못 찾으면|if we don't find a solution soon|고객이 경쟁사로 넘어갈 것이다
+고|회사||Tôi gửi email/*nhầm người,/ngại quá.|메일을 엉뚱한 사람한테 보냈어요, 너무 민망해.|엉뚱한 사람한테|사람을 잘못|to the wrong person|나는 이메일을 보냈다;너무 민망하다
+고|연애|연애|Tụi mình quen qua app,/*nhưng gặp ngoài đời/là hợp nhau liền.|앱으로 알게 됐는데 실제로 만나자마자 잘 맞았어.|실제로 만나자마자|하지만 실제로 만나다|but meeting in real life|우리는 앱을 통해 알게 됐다;바로 서로 맞았다
+고|연애|연애|Anh ấy không trả lời tin nhắn nữa/*từ hôm gặp nhau/thứ bảy.|토요일에 만난 날부터 걔가 답장을 안 해.|만난 날부터|서로 만난 날부터|since the day we met|그는 더 이상 메시지에 답하지 않는다;토요일
+고|연애|연애|*Hình như mình đang thích/bạn thân của mình.|나 제일 친한 친구를 좋아하게 된 것 같아.|좋아하게 된 것 같아|좋아하고 있는 것 같다|I think I'm falling for|내 친한 친구를
+고|일상||Ba mẹ mình quen nhau hồi đại học/*và đã bên nhau/bốn mươi năm.|부모님은 대학 때 만나서 40년째 함께하셔.|40년째 함께하셔|그리고 서로 곁에 있었다|and have been together|우리 부모님은 대학 때 알게 됐다;40년
+고|일상||*Dù hay cãi nhau,/mình vẫn rất thân với chị gái.|자주 싸워도 언니랑은 정말 친해.|자주 싸워도|자주 다투더라도|even though we often argue|나는 여전히 언니와 아주 친하다
+고|일상||Bà mình/*lúc nào cũng kể/mấy chuyện cũ.|할머니는 늘 옛날 얘기를 하셔.|늘 이야기하셔|언제나 이야기한다|always tells|우리 할머니;옛날 이야기들
+고|일상||Nhà trên lầu/*làm ồn/tới hai giờ sáng.|윗집이 새벽 두 시까지 시끄러워.|시끄러워|소란을 피운다|makes noise|위층 집;새벽 두 시까지
+고|일상||Mình gọi thợ sửa ống nước ba ngày rồi/*mà vẫn chưa thấy tới.|배관공 부른 지 사흘 됐는데 아직도 안 와.|아직도 안 와|그런데 아직 오는 게 안 보인다|but he still hasn't come|나는 사흘 전에 배관공을 불렀다
+고|일상||*Từ khi có em bé,/tụi mình tìm nhà rộng hơn.|아기가 생긴 뒤로 더 넓은 집을 찾고 있어.|아기가 생긴 뒤로|아기가 있을 때부터|since the baby came|우리는 더 넓은 집을 찾는다
+고|일상||Cuối tuần/*mình thích đi dạo/chợ.|주말엔 시장 구경하는 게 좋아.|구경하는 게 좋아|산책하는 것을 좋아한다|I like to stroll|주말;시장을
+고|일상||Mình học guitar được sáu tháng rồi/*mà vẫn đàn dở/lắm.|기타 배운 지 6개월 됐는데 아직도 완전 못 쳐.|아직도 못 쳐|그런데 여전히 못 친다|but I still play badly|나는 기타를 6개월 배웠다;아주
+고|일상||*Điều làm mình thư giãn nhất/là vừa nấu ăn vừa nghe nhạc.|제일 힐링 되는 건 음악 들으면서 요리하는 거야.|제일 힐링 되는 건|나를 가장 쉬게 하는 일은|what relaxes me most|요리하면서 음악을 듣는 것이다
+고|감정||Khi thấy tên mình trong danh sách,/*mình nhảy cẫng lên/vì vui.|명단에서 내 이름을 봤을 때 기뻐서 펄쩍 뛰었어.|펄쩍 뛰었어|나는 깡충 뛰어올랐다|I jumped up|명단에서 내 이름을 봤을 때;기뻐서
+고|감정||*Mình không chịu nổi/khi bị nói bằng giọng đó.|그런 말투로 말하면 못 참아.|못 참아|나는 견딜 수 없다|I can't stand it|그런 목소리로 말해질 때
+고|일상||*Bực bội cũng vô ích,/tàu đâu có tới nhanh hơn.|짜증 내 봤자 소용없어, 기차가 더 빨리 오는 것도 아니고.|짜증 내 봤자 소용없어|짜증 내도 소용없다|getting annoyed is useless|기차가 더 빨리 오는 것도 아니다
+고|드라마·영화|드라마·영화|*Anh sẽ không để em/phá hủy những gì tụi mình đã xây dựng.|우리가 쌓아 온 걸 네가 망치게 두지 않을 거야.|네가 ~하게 두지 않을 거야|나는 너를 두지 않을 것이다|I won't let you|우리가 쌓아 온 것들을 파괴하다
+고|드라마·영화|드라마·영화|Em đã nói dối anh từ đầu,/*làm sao anh tin/em được nữa?|처음부터 거짓말했잖아, 내가 어떻게 너를 또 믿어?|내가 어떻게 믿어|어떻게 내가 믿나|how can I trust|너는 처음부터 나에게 거짓말했다;너를 더 이상
+고|드라마·영화|드라마·영화|*Đã đến lúc/em phải chịu trách nhiệm.|이제 네가 책임질 때야.|이제 ~할 때야|때가 됐다|it's time|네가 책임을 져야 한다
+고|일상||Trưa nay không kịp ăn,/*nên giờ mình đói/muốn xỉu.|점심을 못 먹어서 지금 배고파 쓰러질 것 같아.|그래서 지금 배고파|그래서 지금 나는 배고프다|so now I'm hungry|오늘 점심 먹을 시간이 없었다;기절할 만큼
+고|일상||*Nhớ đặt vé/về quê ăn Tết sớm nha.|설에 고향 가는 표 일찍 예약하는 거 잊지 마.|표 예약하는 거 잊지 마|표 예약하는 걸 기억해|remember to book tickets|일찍 설 쇠러 고향에 가는 요
+고|일상||Mình mệt tới mức/*có thể ngủ/mười hai tiếng.|너무 피곤해서 열두 시간은 잘 수 있을 것 같아.|잘 수 있을 것 같아|잘 수 있다|could sleep|나는 ~할 정도로 피곤하다;열두 시간
+고|일상||*Vì làm ca đêm/mà giờ giấc ngủ của mình loạn hết.|야간 근무 때문에 수면 시간이 다 엉망이 됐어.|야간 근무 때문에|밤 근무를 하기 때문에|because of night shifts|내 수면 시간이 다 엉망이 됐다
+고|일상||Tụi mình nên/*tranh thủ trời đẹp/đi biển.|날씨 좋을 때 얼른 바다 가자.|날씨 좋을 때 얼른|좋은 날씨를 틈타다|take advantage of the nice weather|우리는 ~해야 한다;바다에 가다
+고|일상||Em trai mượn tiền mình/*rồi không bao giờ trả.|남동생이 돈을 빌려 가서 절대 안 갚아.|절대 안 갚아|그러고는 결코 갚지 않는다|and never paid it back|남동생이 나에게서 돈을 빌렸다
+고|일상||*Biết mắc vậy/thì mình đã không mua rồi.|이렇게 비싼 줄 알았으면 안 샀지.|이렇게 비싼 줄 알았으면|이렇게 비싼 걸 알았다면|if I'd known it was this pricey|나는 사지 않았을 것이다
+고|일상||Mấy đứa nhỏ cuối cùng cũng ngủ,/*giờ mới được thở/một chút.|애들이 드디어 잠들어서 이제야 숨 좀 돌리겠다.|이제야 숨 좀 돌리겠다|이제야 숨을 쉬게 됐다|now I can finally breathe|아이들이 마침내 잠들었다;조금
+고|회사||Xin lỗi vì trễ,/*máy chủ bị lỗi/một chút.|늦어서 죄송해요, 서버에 좀 문제가 있었어요.|서버에 문제가 있었어요|서버가 오류 났다|the server had an error|늦어서 죄송합니다;조금
+고|회사||*Anh gửi giúp tôi biên bản/cuộc họp hôm qua/được không?|어제 회의록 좀 보내 주실 수 있어요?|회의록 좀 보내 주실|나를 도와 회의록을 보내 주다|send me the minutes|어제 회의;되나요
+고|회사||Tôi nghĩ chúng ta nên/*xem lại thứ tự ưu tiên/cho quý này.|이번 분기 우선순위를 다시 봐야 할 것 같아요.|우선순위를 다시 봐야|우선순위를 다시 보다|review our priorities|나는 우리가 ~해야 한다고 생각한다;이번 분기를 위해
+고|병원||Sáng nay tôi uống thuốc giảm đau,/*mà vẫn chưa thấy đỡ.|아침에 진통제 먹었는데 아직도 나아지질 않아.|아직도 나아지질 않아|그런데 아직 나아짐이 안 보인다|but it hasn't helped yet|오늘 아침 나는 진통제를 먹었다
+고|병원||*Nếu sốt không hạ/thì nên đi khám bác sĩ.|열이 안 내리면 병원 가 보는 게 좋아.|열이 안 내리면|열이 내리지 않으면|if the fever doesn't go down|그러면 의사에게 진찰받는 게 좋다
+고|여행||Tụi mình thuê xe máy/*để đi vòng quanh/Đà Lạt.|달랏 한 바퀴 돌려고 오토바이를 빌렸어.|한 바퀴 돌려고|빙 돌아 다니기 위해|to ride around|우리는 오토바이를 빌렸다;달랏을
+고|여행||*Đừng quên kiểm tra/hạn hộ chiếu nha.|여권 만료일 확인하는 거 잊지 마.|확인하는 거 잊지 마|확인하는 걸 잊지 마|don't forget to check|여권 기한을 요
+고|여행||Khách sạn hơi xa trung tâm,/*nhưng view thì đẹp/mê hồn.|호텔이 시내에서 좀 멀었지만 경치는 넋을 잃을 만큼 예뻤어.|하지만 경치는 예뻤어|하지만 뷰는 아름다웠다|but the view was stunning|호텔이 중심에서 조금 멀었다;넋을 잃을 만큼
+고|일상||*Mình luôn đặt thêm một cái báo thức/phòng khi không nghe cái đầu.|첫 알람 못 들을까 봐 항상 알람 하나 더 맞춰.|항상 알람 하나 더 맞춰|항상 알람 하나를 더 놓는다|I always set an extra alarm|첫 번째를 못 들을 경우를 대비해
+고|일상||Máy tính chậm tới nỗi/*sáng nào mình cũng mất/cả đống thời gian.|컴퓨터가 너무 느려서 매일 아침 시간을 엄청 버려.|매일 아침 버려|어느 아침이든 나는 잃는다|every morning I lose|컴퓨터가 너무 느려서;엄청난 시간을
+고|일상||Anh ấy đăng hình mình mà không hỏi,/*làm mình bực/hết sức.|걔가 묻지도 않고 내 사진을 올려서 너무 짜증 났어.|짜증 났어|나를 짜증 나게 했다|it annoyed me|그는 묻지 않고 내 사진을 올렸다;몹시
+고|일상||*Nên rời xa màn hình/ít nhất một lần mỗi tuần.|최소 일주일에 한 번은 화면에서 멀어져야 해.|화면에서 멀어져야 해|화면에서 멀리 떨어져야 한다|you should step away from screens|최소 매주 한 번
+고|감정||*Mình cảm động lắm/vì bạn đã nghĩ tới mình.|날 생각해 줘서 정말 감동이야.|정말 감동이야|나는 아주 감동했다|I'm really touched|네가 나를 생각해 줘서
+고|감정||Mình thấy hơi lạc lõng/*từ khi nghỉ/công việc cũ.|예전 일을 그만둔 뒤로 좀 길 잃은 느낌이야.|그만둔 뒤로|그만둔 때부터|since I quit|나는 조금 외톨이 같은 느낌이다;예전 일을
+고|연애|연애|*Tụi mình quyết định dọn về sống chung/vào năm sau.|내년에 같이 살기로 했어.|같이 살기로 했어|함께 살러 이사하기로 결정했다|we decided to move in together|내년에
+고|연애|연애|Anh ấy toàn quên mấy ngày kỷ niệm,/*làm mình điên lên.|걔는 맨날 기념일을 까먹어, 미치겠어.|미치겠어|나를 미치게 한다|it drives me crazy|그는 늘 기념일들을 잊는다
+고|일상||*Ít nhất một lần,/mình muốn có cuối tuần không làm gì hết.|한 번쯤은 아무것도 안 하는 주말을 갖고 싶어.|한 번쯤은|적어도 한 번|just once|나는 아무것도 안 하는 주말을 갖고 싶다
+고|일상||Mình thấy một con mèo con ngoài đường/*và không nỡ/bỏ nó lại.|길에서 아기 고양이를 발견했는데 차마 두고 올 수 없었어.|차마 ~할 수 없었어|그리고 차마 못 했다|and couldn't bear to|나는 길 밖에서 새끼 고양이를 봤다;그것을 두고 오다
+고|일상||*Thỉnh thoảng ngắt kết nối/cũng tốt cho mình.|가끔 인터넷을 끊는 것도 좋아.|가끔 인터넷을 끊는 것|가끔 연결을 끊다|disconnecting sometimes|나에게도 좋다
+고|일상||Con trai muốn có điện thoại,/*nhưng mình thấy nó còn nhỏ/quá.|아들이 휴대폰을 원하는데 아직 너무 어린 것 같아.|하지만 아직 어린 것 같아|하지만 나는 그가 아직 어리다고 본다|but I think he's still young|아들이 휴대폰을 갖고 싶어 한다;너무
+고|일상||*Mình học nấu ăn/nhờ coi video trên mạng.|인터넷 영상 보면서 요리를 배웠어.|요리를 배웠어|나는 요리를 배웠다|I learned to cook|인터넷에서 영상을 본 덕분에
+고|일상||Cứ có ai bấm chuông là con chó sủa,/*làm cả nhà thức giấc.|누가 초인종만 누르면 개가 짖어서 온 집이 다 깨.|온 집이 다 깨|온 집을 깨게 한다|wakes the whole house|누가 벨을 누르기만 하면 개가 짖는다
+고|일상||*Không tin nổi/là đã tháng mười hai rồi.|벌써 12월이라니 믿기지 않아.|믿기지 않아|믿을 수가 없다|I can't believe|이미 12월이 됐다
+고|회사||*Từ tuần sau,/tôi sẽ làm việc ở nhà hai ngày một tuần.|다음 주부터 일주일에 이틀은 집에서 일해요.|다음 주부터|다음 주부터|starting next week|나는 일주일에 이틀 집에서 일할 것이다
+고|회사||Anh ta nhận hết công việc của tôi là của mình,/*mà tôi không dám/nói gì.|그 사람이 내 일을 다 자기 거라고 했는데 아무 말도 못 했어.|아무 말도 못 했어|그런데 나는 감히 못 했다|and I didn't dare|그가 내 일을 전부 자기 것으로 했다;아무것도 말하다
+고|감정||*Mình cảm thấy cứ dậm chân tại chỗ/mấy tuần nay.|몇 주째 제자리걸음인 느낌이야.|제자리걸음인 느낌이야|제자리에서 발을 구르는 느낌|I feel like I'm stuck|요 몇 주
+고|감정||Bạn thân mình sắp ra nước ngoài sống,/*không biết mình sẽ ra sao/khi thiếu nó.|제일 친한 친구가 외국으로 가는데 걔 없이 어떻게 될지 모르겠어.|어떻게 될지 모르겠어|내가 어떻게 될지 모르겠다|I don't know what I'll do|내 친한 친구가 곧 외국에 살러 간다;그 애 없이
+고|드라마·영화|드라마·영화|*Anh không có quyền/nói chuyện với em như vậy.|넌 나한테 그렇게 말할 권리 없어.|권리 없어|너는 권리가 없다|you have no right|나와 그렇게 이야기하다
+고|드라마·영화|드라마·영화|*Nếu bây giờ anh đi,/thì đừng bao giờ quay lại.|지금 가면 다시는 돌아오지 마.|지금 가면|네가 지금 가면|if you leave now|그러면 절대 돌아오지 마
+고|일상||Tủ lạnh trống trơn,/*tối nay nhất định phải/đi siêu thị.|냉장고가 텅 비었어, 오늘 밤엔 꼭 마트 가야 해.|꼭 ~해야 해|반드시 해야 한다|we must|냉장고가 텅 비었다;슈퍼에 가다
+고|일상||Mình ghi sai địa chỉ/*nên gói hàng bị giao/cho người khác.|주소를 잘못 써서 택배가 다른 사람한테 배달됐어.|택배가 배달됐어|그래서 소포가 배달되었다|so the package was delivered|나는 주소를 잘못 썼다;다른 사람에게
+고|감정||Sau một ngày dài,/*không gì bằng/tắm nước nóng.|긴 하루 끝엔 뜨거운 물로 씻는 게 최고야.|최고야|무엇도 ~와 같지 않다|nothing beats|긴 하루 후에;뜨거운 물로 씻기
+고|일상||Mình không mua được vé,/*hết sạch/trong mười phút.|표를 못 샀어, 10분 만에 싹 다 팔렸어.|싹 다 팔렸어|깨끗이 다 떨어졌다|completely sold out|나는 표를 살 수 없었다;10분 안에
+고|일상||*Mình nghi là/anh ấy không tới đúng giờ đâu.|걔가 제시간에 안 올 것 같아.|~것 같아|나는 의심한다|I doubt|그가 제시간에 오지 않을 것이다
+고|일상||Ông mình không biết xài điện thoại,/*nên cuối tuần nào mình cũng chỉ/cho ông.|할아버지가 휴대폰을 못 쓰셔서 주말마다 알려 드려.|주말마다 알려 드려|어느 주말이든 나는 가르쳐 준다|so every weekend I show|우리 할아버지는 휴대폰을 쓸 줄 모른다;할아버지에게
+고|감정||*Lần nào coi phim đó/mình cũng khóc.|그 영화 볼 때마다 울어.|그 영화 볼 때마다|그 영화를 볼 때마다|every time I watch that movie|나는 운다
+고|드라마·영화|드라마·영화|*Anh sẽ làm bất cứ điều gì/để bảo vệ em.|널 지키기 위해서라면 뭐든 할 거야.|뭐든 할 거야|어떤 일이든 할 것이다|I'll do anything|너를 보호하기 위해
+고|일상||Mai bắt đầu giảm giá,/*chắc các cửa hàng/đông nghẹt.|내일 세일 시작이라 가게마다 꽉 찰 거야.|가게마다|아마 가게들이|the shops will probably|내일 할인이 시작된다;꽉 막히게 붐빈다
+고|일상||Mình tự sửa xe đạp,/*ai dè/còn tệ hơn.|자전거를 혼자 고쳤는데 웬걸 더 망가졌어.|웬걸|누가 알았겠나|who knew|나는 혼자 자전거를 고쳤다;더 나빠졌다
+고|일상||*Vừa về tới nhà/là mình để điện thoại im lặng.|집에 오자마자 휴대폰을 무음으로 해.|집에 오자마자|집에 막 도착하면|as soon as I get home|나는 휴대폰을 무음으로 둔다
+고|회사||*Chúng ta cần thống nhất/ngân sách trước thứ hai.|월요일 전에 예산을 합의해야 해요.|합의해야 해요|우리는 통일할 필요가 있다|we need to agree on|월요일 전에 예산을
+고|감정||*Mình sốc lắm/khi gặp lại anh ấy sau mười năm.|10년 만에 걔를 다시 만나서 충격이었어.|충격이었어|나는 아주 충격받았다|I was shocked|10년 후에 그를 다시 만났을 때
+고|일상||Mình không thấy chìa khóa đâu,/*chắc để quên/ở công ty.|열쇠가 안 보여, 회사에 두고 온 것 같아.|두고 온 것 같아|아마 깜빡 두다|I must have left|나는 열쇠를 어디에서도 못 본다;회사에
+고|여행||Xe khách đêm chật kín,/*tụi mình phải đứng/gần nửa đường.|야간 버스가 꽉 차서 거의 절반을 서서 갔어.|서서 갔어|우리는 서야 했다|we had to stand|야간 버스가 꽉 찼다;거의 절반 길
+고|일상||*Không gì làm mình bực bằng/người nói chuyện điện thoại to.|크게 통화하는 사람만큼 짜증 나는 게 없어.|~만큼 짜증 나는 게 없어|아무것도 ~만큼 나를 짜증 나게 하지 않는다|nothing bugs me more than|전화로 크게 말하는 사람
+고|일상||Ba mình nghỉ hưu rồi mê làm vườn,/*ngày nào cũng ở/ngoài vườn.|아빠가 은퇴하고 정원 일에 빠져서 매일 정원에 계셔.|매일 계셔|어느 날이든 있다|is there every day|우리 아빠는 은퇴하고 정원 가꾸기에 빠졌다;정원 밖에
+고|감정||*Mình vẫn còn choáng ngợp,/thật sự quá tuyệt.|아직도 얼떨떨해, 진짜 대단했어.|아직도 얼떨떨해|아직 압도되어 있다|I'm still overwhelmed|정말 너무 훌륭했다
+고|일상||Con mèo nằm lên bàn phím/*mỗi lần mình định/làm việc.|내가 일하려고 할 때마다 고양이가 키보드에 누워.|내가 ~하려고 할 때마다|내가 할 계획일 때마다|every time I try to|고양이가 키보드 위에 눕는다;일하다
