@@ -63,7 +63,8 @@ const micMsg = (code: string): [string, string] => {
     return [tt('마이크를 찾지 못했어요'), tt('이어폰·마이크가 연결돼 있는지, 컴퓨터 소리 설정의 입력 장치를 확인해 주세요')];
   if (code === 'NotReadableError' || code === 'TrackStartError')
     return [tt('마이크를 열 수 없어요'), tt('다른 앱(줌·디스코드 등)이 마이크를 쓰고 있거나') + (MAC ? ' ' + tt('맥 시스템 설정에서 Chrome 마이크가 꺼져 있어요') : ' ' + tt('기기 설정에서 브라우저 마이크가 꺼져 있어요'))];
-  if (code === 'service-not-allowed') return [tt('이 브라우저는 말 인식을 막고 있어요'), tt('컴퓨터·안드로이드의 크롬이나 사파리에서 써 주세요')];
+  if (code === 'service-not-allowed') return IOS ? [tt('말 인식이 꺼져 있어요'), tt('마이크 버튼을 눌러 다시 말해 보세요. 그래도 안 되면 아이폰 설정 → 일반 → 키보드 → 받아쓰기 활성화를 켜 주세요')]
+    : [tt('이 브라우저는 말 인식을 막고 있어요'), tt('컴퓨터·안드로이드의 크롬이나 사파리에서 써 주세요')];
   if (code === 'no-recognition') return [tt('이 브라우저는 말 인식이 안 돼요'), tt('아이폰은 사파리, 컴퓨터·안드로이드는 크롬에서 말로 대답할 수 있어요. 지금은 키보드로 써 주세요')];
   if (code === 'insecure') return [tt('보안 연결(https)에서만 마이크를 쓸 수 있어요'), tt('https 주소로 열어 주세요')];
   return [tt('마이크를 쓸 수 없어요'), tt('마이크를 허용하거나 키보드로 써 주세요') + ` (${code})`];
@@ -318,7 +319,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     const n = turn.ai.split(' ').length, ms = talkMs(turn.ai) * (opts.slow ? 1.45 : 1);
     setReveal(0);
     const iv = setInterval(() => setReveal((r) => Math.min(n, r + 1)), ms / n);
-    const t = setTimeout(() => { clearInterval(iv); setReveal(n); setPhase('me'); setHelp(opts.hint); setSay(''); setHeard(''); heardRef.current = ''; if (asked.current && !typing) listen(); }, ms + 300);
+    const t = setTimeout(() => { clearInterval(iv); setReveal(n); setPhase('me'); setHelp(opts.hint); setSay(''); setHeard(''); heardRef.current = ''; if (asked.current && !typing && !IOS) listen(); }, ms + 300); // 아이폰은 누른 순간에만 말 인식을 허락해서 자동으로 듣지 않아요(마이크 버튼)
     return () => { clearInterval(iv); clearTimeout(t); };
   }, [phase, k]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -354,7 +355,8 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
     hush(); // 상대 목소리가 마이크에 섞이지 않게
     if (!window.isSecureContext) { setMicErr('insecure'); setTyping(true); return; }
     setAudioMode('play-and-record');
-    if (!asked.current && navigator.mediaDevices?.getUserMedia) {
+    // 아이폰: 기다리면(await) '누른 순간'이 끊겨서 말 인식이 막혀요 → 미리 묻지 않고 바로 시작 (말 인식이 마이크 허용도 같이 물어봐요)
+    if (!asked.current && !IOS && navigator.mediaDevices?.getUserMedia) {
       // 마이크 허용 창을 먼저 띄운다 (말 인식만 켜면 크롬이 조용히 막는 경우가 있음)
       try { const st = await navigator.mediaDevices.getUserMedia({ audio: true }); st.getTracks().forEach((t) => t.stop()); }
       catch (err) { setMicErr((err as DOMException)?.name || 'not-allowed'); setTyping(true); return; }
