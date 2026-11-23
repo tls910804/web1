@@ -302,7 +302,7 @@ function FilterMenu({ tabs, tab, cats, onApply, onClose }: { tabs: string[]; tab
             {tt('\'이미 알아요\'로 숨긴 문장 {n}개', { n: state.known.length })}<b>{tt('다시 보기')}</b>
           </button>
         )}
-        <Button kind="dark" disabled={!n} onClick={() => onApply(lv, t, picked)}>{n ? tt('{n}개 문장 보기', { n }) : tt('맞는 문장이 없어요')}</Button>
+        <div className="fm-go"><Button kind="dark" disabled={!n} onClick={() => onApply(lv, t, picked)}>{n ? tt('{n}개 문장 보기', { n }) : tt('맞는 문장이 없어요')}</Button></div>
       </div>
     </>
   );

@@ -25,10 +25,23 @@ function silentWav() {
   return URL.createObjectURL(new Blob([b.buffer], { type: 'audio/wav' }));
 }
 let unlocked = false;
+let ctx: AudioContext | null = null;
 const unlock = () => {
   if (unlocked) return;
   unlocked = true;
   const p = getPlayer();
+  // 아이폰은 소리를 낼 때마다 스피커를 켜면서 '딱' 소리가 나요 → Web Audio를 켜 두고 재생기를 그 위로 연결해 스피커를 계속 켜 둬요.
+  // Web Audio는 무음 스위치를 따르므로, 지원하면 '재생' 종류로 지정해 무음 모드에서도 들리게 해요(iOS 17+)
+  try {
+    const AC = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+    const session = (navigator as unknown as { audioSession?: { type: string } }).audioSession;
+    if (AC && session && !ctx) {
+      session.type = 'playback';
+      ctx = new AC();
+      ctx.createMediaElementSource(p).connect(ctx.destination);
+    }
+    ctx?.resume().catch(() => {});
+  } catch { /* 안 되면 예전처럼 그냥 재생 */ }
   if (p.paused) { p.src = silentWav(); p.play().catch(() => { unlocked = false; }); } // 첫 터치 전에 막힌 자동재생이 있어도 무음으로 잠금만 풀어요
 };
 if (typeof document !== 'undefined') ['touchend', 'click'].forEach((t) => document.addEventListener(t, unlock, { capture: true }));
@@ -60,6 +73,7 @@ export function playAudio(text: string, lang: string, slow: boolean, repeat = 1)
   let left = repeat;
   const play = () => {
     const a = getPlayer();
+    ctx?.resume().catch(() => {}); // 앱을 다시 열었을 때 멈춰 있으면 깨워요 (안 깨우면 소리가 안 나요)
     a.src = url;
     // 느린 파일이 따로 없으면 보통 파일을 느리게(음높이는 그대로). 사파리는 src를 바꾸면 속도를 default로 되돌려요
     a.defaultPlaybackRate = a.playbackRate = slow && !e.s ? 0.75 : 1;

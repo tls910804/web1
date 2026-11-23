@@ -53,10 +53,12 @@ const W = window as unknown as { SpeechRecognition?: Rec; webkitSpeechRecognitio
 const Recognition = W.SpeechRecognition || W.webkitSpeechRecognition;
 
 // 마이크가 안 될 때 원인별 안내 (getUserMedia 오류 이름 · 말 인식 오류 코드)
-const MAC = /Mac/.test(navigator.platform);
+const IOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const MAC = !IOS && /Mac/.test(navigator.platform);
 const micMsg = (code: string): [string, string] => {
   if (code === 'NotAllowedError' || code === 'not-allowed' || code === 'PermissionDeniedError')
-    return [tt('마이크가 막혀 있어요'), tt('주소창 왼쪽 자물쇠(사이트 설정) → 마이크 "허용"으로 바꾼 뒤 다시 시도를 눌러 주세요') + (MAC ? ' ' + tt('맥이라면 시스템 설정 → 개인정보 보호 및 보안 → 마이크에서 Chrome도 켜 주세요') : '')];
+    return IOS ? [tt('마이크가 막혀 있어요'), tt('아이폰 설정 → 쓰는 브라우저(Chrome·Safari) → 마이크를 켜고, 이 페이지를 새로고침한 뒤 다시 시도를 눌러 주세요')]
+      : [tt('마이크가 막혀 있어요'), tt('주소창 왼쪽 자물쇠(사이트 설정) → 마이크 "허용"으로 바꾼 뒤 다시 시도를 눌러 주세요') + (MAC ? ' ' + tt('맥이라면 시스템 설정 → 개인정보 보호 및 보안 → 마이크에서 Chrome도 켜 주세요') : '')];
   if (code === 'NotFoundError' || code === 'audio-capture' || code === 'DevicesNotFoundError')
     return [tt('마이크를 찾지 못했어요'), tt('이어폰·마이크가 연결돼 있는지, 컴퓨터 소리 설정의 입력 장치를 확인해 주세요')];
   if (code === 'NotReadableError' || code === 'TrackStartError')
@@ -65,6 +67,12 @@ const micMsg = (code: string): [string, string] => {
   if (code === 'no-recognition') return [tt('이 브라우저는 말 인식이 안 돼요'), tt('아이폰은 사파리, 컴퓨터·안드로이드는 크롬에서 말로 대답할 수 있어요. 지금은 키보드로 써 주세요')];
   if (code === 'insecure') return [tt('보안 연결(https)에서만 마이크를 쓸 수 있어요'), tt('https 주소로 열어 주세요')];
   return [tt('마이크를 쓸 수 없어요'), tt('마이크를 허용하거나 키보드로 써 주세요') + ` (${code})`];
+};
+
+// 아이폰은 사용자가 누른 순간에만 마이크 허용 창을 띄워요. 통화 받기(밀기)를 놓는 순간 미리 물어봐요
+const askMic = () => {
+  if (Recognition && window.isSecureContext && navigator.mediaDevices?.getUserMedia)
+    navigator.mediaDevices.getUserMedia({ audio: true }).then((st) => st.getTracks().forEach((t) => t.stop()), () => { /* 거절하면 통화 중에 안내가 떠요 */ });
 };
 
 const words = (s: string) => s.toLowerCase().replace(/[^a-z' ]/g, '').split(' ').filter(Boolean);
@@ -252,7 +260,7 @@ function Slide({ label, onGo }: { label: string; onGo: () => void }) {
   const up = () => {
     const d = drag.current; drag.current = null;
     if (!d) return;
-    if (x < 6 || x > d.max * 0.7) { setX(d.max); setTimeout(onGo, 150); } else setX(0);
+    if (x < 6 || x > d.max * 0.7) { askMic(); setX(d.max); setTimeout(onGo, 150); } else setX(0);
   };
   return (
     <div className="ch-slide" ref={track}>
