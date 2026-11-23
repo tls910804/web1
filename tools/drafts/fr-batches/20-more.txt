@@ -1,0 +1,219 @@
+# 200 more #2 (2026-11-23)
+초|일상||Aujourd'hui,/il y a/*du soleil.|오늘 해가 났어.|해가|햇빛|sun|오늘;~가 있다
+초|일상||Il y a/*beaucoup de bouchons/ce matin.|오늘 아침 차가 엄청 막혀.|차가 엄청 막혀|많은 교통 체증|lots of traffic jams|~가 있다;오늘 아침
+초|일상||Mon frère/est/*très grand.|우리 형은 키가 아주 커.|키가 아주 커|아주 큰|very tall|내 형제;~이다
+초|일상||J'ai/*deux chats.|고양이 두 마리 있어.|고양이 두 마리|고양이 두 마리|two cats|나는 가지고 있다
+초|일상||J'aime/*lire/le soir.|저녁에 책 읽는 거 좋아해.|책 읽는|읽다|read|나는 좋아한다;저녁에
+초|일상||J'apprends/*le coréen.|나 한국어 배워.|한국어|한국어|Korean|나는 배운다
+초|쇼핑||Il me faut/*du pain et du lait.|빵이랑 우유 사야 해.|빵이랑 우유|빵과 우유|bread and milk|나에게 필요하다
+초|일상||J'habite/*près d'ici.|이 근처에 살아.|이 근처에|여기 가까이|near here|나는 산다
+초|일상||Ma mère/*cuisine super bien.|우리 엄마 요리 엄청 잘해.|요리 엄청 잘해|아주 잘 요리한다|cooks really well|우리 엄마
+초|감정||Je/*m'ennuie.|심심해.|심심해|지루해하다|I'm bored|나는
+초|일상||Le café/est/*brûlant.|커피가 엄청 뜨거워.|엄청 뜨거워|타는 듯한|scalding|커피가;~이다
+초|일상||Lave-toi/*les mains.|손 씻어.|손|손|your hands|씻어
+초|여행||Il y a/*du wifi/ici?|여기 와이파이 있어요?|와이파이|와이파이|wifi|~가 있나요;여기
+초|여행||Un billet/*pour Lyon,/s'il vous plaît.|리옹행 표 한 장 주세요.|리옹행|리옹을 위한|to Lyon|표 한 장;부탁합니다
+초|일상||C'est/*mon anniversaire/aujourd'hui.|오늘 내 생일이야.|내 생일|내 생일|my birthday|이것은 ~이다;오늘
+초|일상||J'ai mal/*au pied.|발이 아파.|발이|발에|my foot|나는 아프다
+초|감정||Quelle/*surprise!|깜짝이야!|깜짝이야|놀라움|surprise|얼마나
+초|일상||Mon téléphone/*ne marche pas.|내 휴대폰이 안 돼.|안 돼|작동하지 않는다|doesn't work|내 전화기
+초|일상||J'ai/*déjà mangé.|벌써 먹었어.|벌써 먹었어|이미 먹었다|already ate|나는
+초|일상||Je vais/*au supermarché.|마트 가.|마트|슈퍼마켓에|to the supermarket|나는 간다
+초|카페·식당||Un thé/*au citron,/s'il vous plaît.|레몬차 한 잔 주세요.|레몬|레몬 넣은|with lemon|차 한 잔;부탁합니다
+초|일상||Il y a/*du vent.|바람 불어.|바람|바람|wind|~가 있다
+초|일상||Demain,/*je travaille.|내일 일해.|일해|나는 일한다|I work|내일
+초|일상||J'ai/*très soif.|목이 너무 말라.|목이 너무 말라|아주 갈증|very thirsty|나는 가지고 있다
+초|일상||Mon père/est/*prof.|우리 아빠는 선생님이야.|선생님|교사|a teacher|우리 아빠;~이다
+초|일상||Attends/*une seconde.|잠깐만 기다려.|잠깐만|1초|a second|기다려
+초|여행||La plage/est/*magnifique.|해변이 정말 멋져.|정말 멋져|훌륭한|gorgeous|해변이;~이다
+초|일상||J'adore/*le chocolat.|초콜릿 너무 좋아.|초콜릿|초콜릿|chocolate|나는 아주 좋아한다
+초|일상||Tu viens/*d'où?|어디서 왔어?|어디서|어디에서|from where|너는 온다
+초|일상||Je viens/*de Corée.|한국에서 왔어.|한국에서|한국에서|from Korea|나는 온다
+초|일상||Tu parles/*très bien/français.|프랑스어 정말 잘한다.|정말 잘|아주 잘|very well|너는 말한다;프랑스어를
+초|일상||Plus lentement,/*s'il vous plaît.|좀 더 천천히 부탁해요.|부탁해요|부탁합니다|please|더 천천히
+초|일상||Je/*ne comprends pas.|이해가 안 돼요.|이해가 안 돼요|이해하지 못한다|I don't understand|나는
+초|일상||Comment/*on dit ça/en français?|이거 프랑스어로 뭐라고 해요?|뭐라고 해요|그것을 말한다|do you say that|어떻게;프랑스어로
+초|일상||Je vais/*prendre une douche.|샤워할게.|샤워할게|샤워를 하다|take a shower|나는 ~할 것이다
+초|일상||Le magasin/est/*fermé.|가게 문 닫았어.|문 닫았어|닫힌|closed|가게가;~이다
+초|일상||Il n'y a pas/*cours/aujourd'hui.|오늘 수업 없어.|수업|수업|class|~가 없다;오늘
+초|감정||Je t'aime/*fort,/maman.|엄마, 많이 사랑해.|많이|강하게|so much|나는 너를 사랑한다;엄마
+초|일상||Mon chien/*s'appelle/Toby.|우리 개 이름은 토비야.|이름은|자신을 부른다|is called|내 개;토비
+초|일상||J'ai/*froid.|추워.|추워|추위|cold|나는 가지고 있다
+초|일상||Éteins/*la lumière.|불 꺼.|불|불|the light|꺼
+초|일상||Allume/*la télé.|TV 켜.|TV|텔레비전|the TV|켜
+초|여행||Le vol/part/*à huit heures.|비행기는 8시에 출발해요.|8시에|8시에|at eight|항공편이;출발한다
+초|쇼핑||Où est/*la caisse?|계산대가 어디예요?|계산대가|계산대|the checkout|어디에 있나
+초|일상||Ce soir,/je sors/*avec des amis.|오늘 밤 친구들이랑 나가.|친구들이랑|친구들과|with friends|오늘 밤;나는 나간다
+초|일상||J'aime/*l'été.|여름 좋아해.|여름|여름|summer|나는 좋아한다
+초|일상||Il pleut/*beaucoup/ici.|여긴 비가 많이 와.|많이|많이|a lot|비가 온다;여기
+초|일상||Je suis/*content/aujourd'hui.|오늘 기분 좋아.|기분 좋아|기쁜|happy|나는 ~이다;오늘
+중|일상||Ces derniers temps,/*je dors mal.|요즘 잠을 잘 못 자.|잠을 잘 못 자|나는 잘 못 잔다|I sleep badly|요즘
+중|일상||J'essaie de/*manger plus sain.|더 건강하게 먹으려고 해.|더 건강하게 먹으려고|더 건강하게 먹다|eat healthier|나는 ~하려고 노력한다
+중|일상||Ma sœur/vient d'avoir/*un bébé.|언니가 막 아기를 낳았어.|아기를|아기 하나|a baby|내 언니가;막 가졌다
+중|일상||L'écran de mon téléphone/*est cassé.|휴대폰 화면이 깨졌어.|깨졌어|깨진|is cracked|내 휴대폰 화면이
+중|일상||Il faut/*sortir les poubelles/ce soir.|오늘 밤에 쓰레기 내놔야 해.|쓰레기 내놔야|쓰레기통을 내놓다|take out the trash|~해야 한다;오늘 밤
+중|일상||Vivre ici,/ça coûte/*les yeux de la tête.|여기 사는 데 돈이 엄청 들어.|돈이 엄청|머리의 눈|an arm and a leg|여기 사는 것;그것은 든다
+중|일상||Ma grand-mère/*fête ses quatre-vingt-dix ans/dimanche.|할머니가 일요일에 아흔 생신을 맞으셔.|아흔 생신을 맞으셔|90세를 축하하다|celebrates her 90th|우리 할머니;일요일에
+중|감정||Quand il pleut,/*j'ai le cafard.|비 오면 우울해져.|우울해져|바퀴벌레를 가진다|I feel down|비가 올 때
+중|일상||J'habite à Séoul/*depuis trois ans.|서울에 산 지 3년 됐어.|3년 됐어|3년 전부터|for three years|나는 서울에 산다
+중|일상||Mon coloc/ne nettoie/*jamais/la cuisine.|룸메이트가 부엌 청소를 절대 안 해.|절대|결코|never|내 룸메이트;청소하지 않는다;부엌을
+중|일상||Ce matin,/*je ne me suis pas réveillé.|오늘 아침에 못 일어났어.|못 일어났어|나는 깨지 못했다|I didn't wake up|오늘 아침
+중|일상||Tu m'aides/*à déplacer/le canapé?|소파 옮기는 거 도와줄래?|옮기는|옮기는 것을|to move|너는 나를 돕니;소파를
+중|일상||Ce week-end,/on va/*à la montagne.|이번 주말에 산에 가.|산에|산에|to the mountains|이번 주말;우리는 간다
+중|일상||Je suis/*à sec/ce mois-ci.|이번 달 완전 빈털터리야.|빈털터리|마른|broke|나는 ~이다;이번 달
+중|여행||Le train/*a du retard.|기차가 연착이에요.|연착이에요|지연을 가지다|is late|기차가
+중|여행||Je peux/*laisser ma valise/ici un moment?|여기 잠깐 가방 맡겨도 돼요?|가방 맡겨도|내 가방을 두다|leave my suitcase|나는 할 수 있나;여기 잠깐
+중|여행||Il n'y a pas/*d'eau chaude/dans la chambre.|방에 뜨거운 물이 안 나와요.|뜨거운 물이|뜨거운 물|hot water|~가 없다;방에
+중|여행||Je voudrais/*changer des dollars/en euros.|달러를 유로로 바꾸고 싶어요.|달러를 바꾸고|달러를 바꾸다|change dollars|~하고 싶다;유로로
+중|카페·식당||Le service/*est compris?|서비스료 포함이에요?|포함이에요|포함된|included|서비스는
+중|카페·식당||Je voudrais/*réserver une table/pour quatre.|네 명 자리 예약하고 싶어요.|자리 예약하고|테이블을 예약하다|book a table|~하고 싶다;넷을 위해
+중|카페·식당||Ce vin/est/*délicieux.|이 와인 진짜 맛있다.|진짜 맛있다|아주 맛있는|delicious|이 와인;~이다
+중|카페·식당||Je suis végétarien,/*qu'est-ce que vous me conseillez?|저 채식주의자인데 뭐 추천해요?|뭐 추천해요|무엇을 나에게 권하세요|what do you recommend|나는 채식주의자다
+중|쇼핑||Vous pouvez/*me faire une réduction?|좀 깎아 주실 수 있어요?|좀 깎아|나에게 할인을 해 주다|give me a discount|당신은 할 수 있나요
+중|쇼핑||Je cherche/*un cadeau/pour ma copine.|여자 친구 줄 선물 찾아요.|선물|선물 하나|a gift|나는 찾는다;내 여자 친구를 위해
+중|쇼핑||La couleur/*ne me plaît pas trop.|색이 별로 마음에 안 들어요.|별로 마음에 안 들어요|나에게 그다지 들지 않는다|I don't really like|색깔이
+중|회사||Le patron/est/*de mauvaise humeur/aujourd'hui.|오늘 사장님 기분이 안 좋아.|기분이 안 좋아|나쁜 기분의|in a bad mood|사장님이;~이다;오늘
+중|회사||Je dois/*faire des heures sup/cette semaine.|이번 주에 야근해야 해.|야근해야|초과 근무를 하다|work overtime|나는 ~해야 한다;이번 주
+중|회사||Tu peux/*me donner un coup de main/avec ça?|이것 좀 도와줄래?|좀 도와줄래|나에게 손을 한 번 주다|give me a hand|너는 할 수 있니;이것으로
+중|회사||Demain,/j'ai/*un entretien d'embauche.|내일 면접 있어.|면접|채용 면접|a job interview|내일;나는 가지고 있다
+중|회사||J'ai envoyé/*mon CV/à trois boîtes.|세 회사에 이력서 보냈어.|이력서|내 이력서|my CV|나는 보냈다;세 회사에
+중|병원||Je me suis/*tordu la cheville.|발목을 삐었어요.|발목을 삐었어요|발목을 비틀었다|twisted my ankle|나는
+중|병원||Il faut/*une ordonnance/pour ça?|이거 처방전 필요해요?|처방전|처방전|a prescription|필요한가요;이것을 위해
+중|병원||J'ai/*le nez bouché/depuis hier.|어제부터 코가 막혔어요.|코가 막혔어요|막힌 코|a stuffy nose|나는 가지고 있다;어제부터
+중|감정||Perdre du temps,/*ça m'énerve.|시간 낭비하는 거 짜증 나.|짜증 나|나를 짜증 나게 한다|it annoys me|시간을 잃는 것
+중|감정||J'ai hâte/*qu'on soit vendredi.|빨리 금요일이 됐으면 좋겠어.|금요일이 됐으면|우리가 금요일이 되기를|for it to be Friday|나는 기대된다
+중|감정||Je me sens/*un peu seul/ici.|여기서 좀 외로워.|좀 외로워|조금 혼자인|a bit lonely|나는 느낀다;여기
+중|감정||*Le prends pas mal,/mais j'aime pas.|기분 나쁘게 듣지 마, 근데 별로야.|기분 나쁘게 듣지 마|나쁘게 받아들이지 마|don't take it badly|하지만 나는 좋아하지 않는다
+중|연애|연애|Je lui ai demandé/*de sortir avec moi/et elle a dit oui.|사귀자고 했더니 좋대.|사귀자고|나와 사귀자고|to go out with me|나는 그녀에게 요청했다;그리고 그녀는 그렇다고 했다
+중|연애|연애|Je crois que/*je plais/à ton ami.|네 친구가 나 좋아하는 것 같아.|나 좋아하는|내가 마음에 들다|he likes me|~인 것 같다;네 친구에게
+중|연애|연애|On est ensemble/*depuis un an.|우리 1년째 사귀어.|1년째|1년 전부터|for a year|우리는 함께다
+중|일상||J'ai/*envie de sucré.|단 거 당긴다.|단 거 당긴다|단 것이 당김|craving sweets|나는 가지고 있다
+중|일상||Il n'y a/*plus de café.|커피 다 떨어졌어.|커피 다 떨어졌어|커피가 더 없다|no more coffee|~가 없다
+중|일상||*Chaque fois que/je sors, il se met à pleuvoir.|나가기만 하면 비가 와.|나가기만 하면|매번 ~할 때|every time|내가 나가면, 비가 오기 시작한다
+중|일상||Il est/*temps d'aller/se coucher.|이제 잘 시간이야.|잘 시간|갈 시간|time to go|~이다;자다
+중|일상||Mon fils/*ne veut pas/aller à l'école.|아들이 학교 가기 싫대.|가기 싫대|원하지 않는다|doesn't want|내 아들;학교에 가다
+중|일상||J'ai/*des tonnes de/devoirs.|숙제가 산더미야.|산더미|수 톤의|tons of|나는 가지고 있다;숙제
+중|일상||Ça te dérange/*si j'ouvre/la fenêtre?|창문 열어도 괜찮아?|열어도|내가 열면|if I open|너를 방해하니;창문을
+중|일상||Hier,/*je suis tombé sur/ton frère.|어제 네 동생 우연히 만났어.|우연히 만났어|~ 위에 떨어졌다|I ran into|어제;네 형제
+중|일상||Rien ne presse,/*prends ton temps.|급할 거 없어, 천천히 해.|천천히 해|네 시간을 가져|take your time|아무것도 급하지 않다
+중|일상||J'adore/*me balader/dans le parc.|공원 산책하는 거 너무 좋아.|산책하는|산책하다|stroll|나는 아주 좋아한다;공원에서
+중|일상||*Ça se voit que/tu es fatigué.|피곤한 게 티 나.|티 나|그것이 보인다|you can tell|네가 피곤하다
+중|일상||Aujourd'hui,/*c'est moi qui/invite.|오늘은 내가 살게.|내가|나다, ~하는 사람은|it's me who|오늘;초대한다
+중|일상||Tu as vu/*mes clés?|내 열쇠 봤어?|내 열쇠|내 열쇠|my keys|너는 봤니
+중|일상||J'oublie/*toujours/son anniversaire.|걔 생일을 맨날 까먹어.|맨날|항상|always|나는 잊는다;그의 생일을
+중|감정||J'ai/*trop envie de voir/ma famille.|가족 너무 보고 싶다.|너무 보고 싶다|보고 싶은 마음이 너무 크다|really want to see|나는 가지고 있다;내 가족
+중|감정||Son copain,/*je peux pas le sentir.|걔 남자 친구 진짜 별로야.|진짜 별로야|그를 냄새 맡을 수 없다|I can't stand him|그녀의 남자 친구
+중|여행||On peut/*y aller à pied?|걸어서 갈 수 있어요?|걸어서 갈|거기 걸어서 가다|walk there|우리가 할 수 있나요
+중|여행||Je veux/*voir le coucher de soleil/sur la plage.|해변에서 노을 보고 싶어.|노을 보고|일몰을 보다|watch the sunset|나는 원한다;해변 위에서
+중|쇼핑||Vous l'avez/*en plus grand?|더 큰 거 있어요?|더 큰 거|더 크게|in a bigger size|당신은 그것을 가지고 있나요
+중|일상||Je dois/*passer à la banque/avant deux heures.|두 시 전에 은행 들러야 해.|은행 들러야|은행에 들르다|stop by the bank|나는 ~해야 한다;두 시 전에
+중|일상||Mes voisins/*font beaucoup de bruit.|이웃들이 너무 시끄러워.|너무 시끄러워|소음을 많이 낸다|make a lot of noise|내 이웃들
+중|일상||Ça fait un moment/*que je t'attends.|한참 기다렸어.|기다렸어|내가 너를 기다린다|that I've been waiting for you|한동안 됐다
+중|회사||Je suis/*en arrêt maladie/à cause de la grippe.|독감 때문에 병가 중이에요.|병가 중|병가 중|on sick leave|나는 ~이다;독감 때문에
+중|회사||La réunion/*a été annulée.|회의가 취소됐어요.|취소됐어요|취소되었다|has been canceled|회의가
+중|일상||Je me suis/*fait couper les cheveux.|머리 잘랐어.|머리 잘랐어|머리를 자르게 했다|got a haircut|나는
+중|일상||Cette robe/*te va très bien.|그 원피스 너한테 잘 어울려.|잘 어울려|너에게 아주 잘 간다|suits you well|이 원피스
+중|일상||Les enfants,/*ça grandit vite.|애들은 진짜 빨리 커.|빨리 커|빨리 자란다|grow up fast|아이들은
+중|일상||Mon petit frère/*est à la fac.|남동생이 대학생이야.|대학생이야|대학에 있다|is in college|내 남동생
+중|일상||J'ai oublié/*d'arroser/les plantes.|화분에 물 주는 거 깜빡했어.|물 주는 거|물을 주다|to water|나는 잊었다;식물들
+중|일상||On se retrouve/*pour boire un verre?|한잔하러 만날까?|한잔하러|한 잔 마시러|for a drink|우리 만날까
+중|여행||Il faut/*combien de temps/pour aller à l'aéroport?|공항까지 얼마나 걸려요?|얼마나|얼마의 시간|how long|필요한가요;공항에 가기 위해
+중|일상||Le petit/*s'est endormi/dans la voiture.|애가 차에서 잠들었어.|잠들었어|잠들었다|fell asleep|꼬마가;차에서
+중|감정||La façon dont ton père parle,/*ça me fait rire.|너희 아빠 말투 웃겨.|웃겨|나를 웃게 한다|makes me laugh|너희 아빠가 말하는 방식
+중|일상||Aujourd'hui,/*je suis allé au travail à pied.|오늘은 걸어서 출근했어.|걸어서 출근했어|걸어서 직장에 갔다|I walked to work|오늘
+중|일상||Je n'ai/*plus de batterie.|배터리가 다 됐어.|배터리가 다 됐어|더 이상 배터리가 없다|no more battery|나는 가지고 있다
+중|일상||Tu es au courant/*pour Anne?|안 얘기 들었어?|안 얘기|안에 대해|about Anne|너는 알고 있니
+중|감정||J'ai/*une peur bleue/de l'examen.|시험 때문에 무서워 죽겠어.|무서워 죽겠어|파란 공포|scared stiff|나는 가지고 있다;시험에 대해
+중|일상||Il fait/*un froid de canard.|날씨가 엄청 추워.|엄청 추워|오리의 추위|freezing cold|날씨가 ~하다
+중|일상||Cet été,/*je pars en vacances/en Italie.|이번 여름에 이탈리아로 휴가 가.|휴가 가|휴가를 떠난다|I'm going on vacation|이번 여름;이탈리아로
+중|일상||Je mets de l'argent de côté/*pour une nouvelle voiture.|새 차 사려고 돈 모으는 중이야.|새 차 사려고|새 차를 위해|for a new car|나는 돈을 옆에 둔다
+중|일상||J'avais oublié/*que c'était férié/aujourd'hui.|오늘 공휴일인 걸 까먹었어.|공휴일인 걸|공휴일이었다는 것을|that it was a holiday|나는 잊었었다;오늘
+중|감정||Ça me fait plaisir/*de te voir/en forme.|잘 지내는 거 보니 좋다.|보니|너를 보는 것|to see you|나에게 기쁨을 준다;건강하게
+중|회사||J'ai demandé/*une semaine de congé.|일주일 휴가 신청했어요.|일주일 휴가|일주일의 휴가|a week off|나는 요청했다
+중|일상||Sois patient,/*on y est presque.|조금만 참아, 거의 다 왔어.|거의 다 왔어|우리는 거의 거기 있다|we're almost there|인내심을 가져
+중|일상||Il est/*nul en/maths.|걔 수학 완전 못해.|완전 못해|~에 형편없는|hopeless at|그는 ~이다;수학
+중|일상||Je dois/*rendre ce livre/à la bibliothèque.|이 책 도서관에 반납해야 해.|이 책 반납해야|이 책을 돌려주다|return this book|나는 ~해야 한다;도서관에
+중|감정||Franchement,/*ça m'est égal.|솔직히 난 상관없어.|난 상관없어|나에게 같다|I don't mind|솔직히
+고|일상||Depuis que j'ai déménagé,/*je n'ai pas eu le temps de/défaire les cartons.|이사 온 뒤로 짐 풀 시간이 없었어.|시간이 없었어|~할 시간이 없었다|I haven't had time to|내가 이사한 이후;상자를 풀다
+고|일상||Si tu continues à manger autant de bonbons,/*tu vas avoir des caries.|사탕 그렇게 계속 먹으면 충치 생긴다.|충치 생긴다|충치를 갖게 될 것이다|you'll get cavities|그렇게 많은 사탕을 계속 먹으면
+고|회사||On m'a proposé/*un poste à Lyon,/mais je ne sais pas si je vais accepter.|리옹 자리를 제안받았는데 받을지 모르겠어.|리옹 자리를|리옹의 자리|a job in Lyon|나에게 제안했다;하지만 받아들일지 모르겠다
+고|감정||Ce qui me manque le plus de chez moi,/*c'est la cuisine de ma mère.|집에서 제일 그리운 건 엄마 요리야.|엄마 요리야|그것은 우리 엄마의 요리다|it's my mom's cooking|집에서 가장 그리운 것은
+고|일상||J'ai beau faire le ménage,/la maison/*est toujours en bazar.|아무리 치워도 집이 늘 난장판이야.|늘 난장판이야|항상 엉망이다|is always a mess|청소해 봐도 소용없다;집은
+고|여행||Ce que j'ai préféré pendant le voyage,/*ce sont les gens.|여행에서 제일 좋았던 건 사람들이야.|사람들이야|그것은 사람들이다|it's the people|여행 동안 내가 가장 좋았던 것은
+고|일상||Mes parents/*veulent que je fasse médecine,/mais moi, j'aime l'art.|부모님은 내가 의대 가길 원하는데 난 미술이 좋아.|의대 가길 원하는데|내가 의학을 하길 원한다|want me to study medicine|우리 부모님은;하지만 나는 예술을 좋아한다
+고|회사||Je ne pense pas/*qu'on aura le temps de finir/avant la fin du mois.|월말 전에 끝낼 시간이 없을 것 같아.|끝낼 시간이|끝낼 시간을 가질 것|we'll have time to finish|나는 생각하지 않는다;월말 전에
+고|감정||J'étais tellement stressé que/*j'ai oublié tout ce que/je voulais dire.|너무 긴장해서 하려던 말을 다 까먹었어.|다 까먹었어|~한 모든 것을 잊었다|I forgot everything|너무 스트레스 받아서;내가 말하고 싶었던
+고|일상||*Pour être honnête,/le film ne m'a pas trop plu.|솔직히 그 영화 별로였어.|솔직히|정직하기 위해|to be honest|그 영화가 그다지 마음에 들지 않았다
+고|연애|연애|Ça fait tellement longtemps qu'on est ensemble/*qu'on se comprend sans parler.|너무 오래 같이 있어서 말 안 해도 통해.|말 안 해도 통해|말하지 않고도 서로 이해한다|we understand each other without words|우리가 함께한 지 너무 오래돼서
+고|일상||Chaque fois que je vais chez ma grand-mère,/*elle me force à manger/trois assiettes.|할머니 댁에 갈 때마다 세 그릇은 먹이셔.|먹이셔|나에게 먹게 강요한다|she makes me eat|할머니 댁에 갈 때마다;세 접시를
+고|여행||*Ça aurait été mieux de/réserver l'hôtel plus tôt.|호텔을 더 일찍 예약했으면 좋았을 텐데.|~했으면 좋았을 텐데|~하는 게 더 나았을 것이다|it would have been better to|호텔을 더 일찍 예약하다
+고|병원||Vous devez prendre/*ces comprimés trois fois par jour/après les repas.|이 알약을 하루 세 번 식후에 드세요.|이 알약을 하루 세 번|이 알약들을 하루 세 번|these pills three times a day|당신은 먹어야 한다;식사 후에
+고|일상||J'ai du mal à me concentrer/*quand il y a du bruit/au bureau.|사무실이 시끄러우면 집중하기 힘들어.|시끄러우면|소음이 있을 때|when there's noise|나는 집중하기 어렵다;사무실에
+고|감정||Je suis content/*que tu m'en aies parlé,/même si c'est difficile.|어렵겠지만 얘기해 줘서 고마워.|얘기해 줘서|네가 나에게 그것을 말해 줘서|that you told me|나는 기쁘다;어렵더라도
+고|일상||*C'est pas grave,/c'est juste une égratignure.|별거 아니야, 그냥 긁힌 거야.|별거 아니야|심각하지 않다|it's no big deal|그냥 긁힌 상처다
+고|회사||On cherche quelqu'un/*qui parle anglais/et qui a de l'expérience.|영어 하고 경력 있는 사람 찾아요.|영어 하고|영어를 말하는|who speaks English|우리는 누군가를 찾는다;그리고 경험이 있는
+고|일상||J'aimerais bien/*qu'il pleuve moins/dans cette ville.|이 도시에 비가 좀 덜 왔으면 좋겠다.|비가 좀 덜 왔으면|비가 덜 오기를|for it to rain less|나는 바란다;이 도시에서
+고|감정||Je n'avais aucune idée/*que tu traversais une période difficile.|네가 힘든 시기를 보내는 줄 전혀 몰랐어.|힘든 시기를 보내는 줄|네가 힘든 시기를 지나고 있다는 것|that you were going through a hard time|나는 전혀 몰랐다
+고|여행||*Si tu as l'occasion,/ne rate pas le marché du dimanche.|기회 되면 일요 시장 꼭 가 봐.|기회 되면|기회가 있으면|if you get the chance|일요일 시장을 놓치지 마
+고|일상||J'ai enfin/*fini de rembourser/ma voiture.|드디어 차 할부를 다 갚았어.|다 갚았어|상환을 끝냈다|finished paying off|나는 마침내;내 차를
+고|회사||J'aimerais proposer/*qu'on fasse la réunion/en visio.|회의는 화상으로 하자고 제안하고 싶어요.|회의는|우리가 회의를 하는 것|that we hold the meeting|나는 제안하고 싶다;화상으로
+고|일상||*Au lieu de te plaindre,/tu pourrais m'aider un peu.|불평하지 말고 좀 도와줘.|불평하지 말고|불평하는 대신|instead of complaining|너는 나를 조금 도울 수 있다
+고|감정||Ça m'a fait très plaisir/*qu'ils se souviennent/de mon anniversaire.|내 생일을 기억해 줘서 정말 기뻤어.|기억해 줘서|그들이 기억하는 것|that they remembered|나에게 큰 기쁨을 줬다;내 생일을
+고|연애|연애|On s'est rencontrés à un mariage et/*depuis, on ne se quitte plus.|결혼식에서 만나서 그 뒤로 쭉 붙어 다녀.|그 뒤로 쭉 붙어 다녀|그 후로 서로 떠나지 않는다|we've been inseparable since|우리는 결혼식에서 만났다 그리고
+고|일상||Avant de partir,/*vérifie que/tu as bien fermé le gaz.|나가기 전에 가스 잘 잠갔는지 확인해.|확인해|~를 확인해|check that|나가기 전에;너는 가스를 잘 잠갔다
+고|일상||Distrait comme je suis,/*je vais encore perdre/mes clés.|나 덜렁대니까 또 열쇠 잃어버릴 거야.|또 잃어버릴 거야|또 잃어버릴 것이다|I'll lose again|나처럼 덜렁대니;내 열쇠를
+고|회사||Ça fait toute la matinée que/*j'essaie de joindre/le client.|아침 내내 고객한테 연락하려고 하고 있어.|연락하려고|연락하려고 시도한다|I've been trying to reach|아침 내내이다;고객을
+고|감정||*J'ai l'impression que/quelque chose va mal tourner.|뭔가 잘못될 것 같은 느낌이야.|느낌이야|~라는 인상을 갖다|I have the feeling that|뭔가 나쁘게 돌아갈 것이다
+고|일상||Finalement,/*le restaurant était fermé.|결국 그 식당 문 닫았더라.|식당 문 닫았더라|식당이 닫혀 있었다|the restaurant was closed|결국
+고|드라마·영화|드라마·영화|Ne m'oblige pas/*à choisir entre toi/et ma famille.|너랑 우리 가족 중에 고르게 하지 마.|너랑 ~ 중에 고르게|너와 ~ 사이에서 선택하는 것|to choose between you|나에게 강요하지 마;그리고 내 가족
+고|드라마·영화|드라마·영화|Je t'avais prévenu,/*mais tu ne m'as pas écouté.|내가 경고했는데 넌 안 들었잖아.|넌 안 들었잖아|하지만 너는 내 말을 듣지 않았다|but you didn't listen to me|나는 너에게 경고했었다
+고|일상||Cette année,/*je me suis promis de/faire du sport tous les jours.|올해는 매일 운동하겠다고 다짐했어.|다짐했어|나 자신에게 약속했다|I promised myself to|올해;매일 운동하다
+고|여행||C'est la première fois que je voyage seule,/*alors je stresse un peu.|혼자 여행은 처음이라 좀 긴장돼.|좀 긴장돼|그래서 조금 스트레스 받는다|so I'm a bit nervous|내가 혼자 여행하는 건 처음이다
+고|카페·식당||Vous pourriez/*nous apporter une autre carafe d'eau,/s'il vous plaît?|물 한 병 더 갖다주실 수 있어요?|물 한 병 더 갖다주실|우리에게 물 한 병을 더 가져오다|bring us another jug of water|당신은 할 수 있을까요;부탁합니다
+고|쇼핑||Si ça ne vous va pas,/*vous pouvez le retourner/sous trente jours.|안 맞으시면 30일 안에 반품하실 수 있어요.|반품하실 수 있어요|그것을 돌려보낼 수 있다|you can return it|당신에게 맞지 않으면;30일 이내에
+고|일상||Quand il fait froid,/*j'ai la flemme d'aller/à la salle.|추우면 헬스장 가기 귀찮아.|가기 귀찮아|가기 귀찮음|I can't be bothered to go|추울 때;헬스장에
+고|감정||Je n'avais jamais été/*aussi fier de mon fils.|아들이 이렇게 자랑스러운 적은 처음이야.|이렇게 자랑스러운|이렇게 내 아들을 자랑스러워하는|so proud of my son|나는 결코 ~인 적이 없었다
+고|회사||*S'il y a le moindre problème,/n'hésite pas à m'appeler.|조금이라도 문제 생기면 망설이지 말고 전화해.|조금이라도 문제 생기면|최소한의 문제라도 있으면|if there's any problem|나에게 전화하는 걸 망설이지 마
+고|일상||*D'après ce que j'ai compris,/les prix vont encore augmenter.|내가 알기로는 가격이 또 오른대.|내가 알기로는|내가 이해한 바에 따르면|from what I understood|가격이 또 오를 것이다
+고|일상||Je pense/*m'inscrire à des cours de danse.|댄스 수업 등록할까 생각 중이야.|댄스 수업 등록할까|댄스 수업에 등록하다|sign up for dance classes|나는 생각한다
+고|감정||Ça m'agace/*que les gens ne respectent pas/la queue.|사람들이 줄 안 서는 거 짜증 나.|줄 안 서는|사람들이 존중하지 않는 것|that people don't respect|나를 짜증 나게 한다;줄을
+고|일상||*Grâce à toi,/j'ai réussi l'examen.|네 덕분에 시험 붙었어.|네 덕분에|너 덕분에|thanks to you|나는 시험에 성공했다
+고|연애|연애|Je ne sais pas comment lui dire/*que je ne ressens plus la même chose.|이제 같은 마음이 아니란 걸 어떻게 말할지 모르겠어.|같은 마음이 아니란 걸|내가 더 이상 같은 것을 느끼지 않는다는 것|that I don't feel the same anymore|그에게 어떻게 말할지 모르겠다
+고|일상||*Malgré le froid,/on est sortis se promener.|추운데도 산책하러 나갔어.|추운데도|추위에도 불구하고|despite the cold|우리는 산책하러 나갔다
+고|회사||On a dû/*repousser le lancement/à cause d'un bug.|버그 때문에 출시를 미뤄야 했어요.|출시를 미뤄야|출시를 미루다|push back the launch|우리는 ~해야 했다;버그 때문에
+고|일상||L'avantage de vivre ici,/*c'est que tout est proche.|여기 사는 장점은 다 가깝다는 거야.|다 가깝다는 거야|모든 것이 가깝다는 것이다|it's that everything is close|여기 사는 것의 장점은
+고|감정||Je regrette/*de ne pas avoir passé plus de temps/avec mon grand-père.|할아버지랑 시간을 더 못 보낸 게 후회돼.|시간을 더 못 보낸 게|더 많은 시간을 보내지 않은 것|not having spent more time|나는 후회한다;할아버지와
+고|여행||On nous a changé/*la porte d'embarquement/à la dernière minute.|막판에 탑승구가 바뀌었어.|탑승구가|탑승구|the boarding gate|우리에게 바꿨다;마지막 순간에
+고|일상||Si tu m'avais prévenu,/*je serais venu te chercher/à l'aéroport.|미리 말해 줬으면 공항에 데리러 갔을 텐데.|데리러 갔을 텐데|너를 찾으러 왔을 것이다|I would have come to pick you up|네가 나에게 알렸다면;공항에
+고|드라마·영화|드라마·영화|Quoi qu'il arrive,/*je serai toujours là/pour toi.|무슨 일이 있어도 항상 네 곁에 있을게.|항상 곁에 있을게|나는 항상 거기 있을 것이다|I'll always be there|무슨 일이 일어나든;너를 위해
+고|일상||*Rien de tel qu'/un café chaud le matin.|아침엔 뜨거운 커피만 한 게 없지.|~만 한 게 없지|~ 같은 것은 없다|nothing like|아침의 뜨거운 커피
+고|회사||Il paraît que/*l'entreprise va embaucher/plus de monde.|회사가 사람을 더 뽑는대요.|회사가 뽑는대요|회사가 고용할 것이다|the company is going to hire|~라고 한다;더 많은 사람을
+고|감정||Je me suis senti très mal/*quand je l'ai vue pleurer.|걔가 우는 걸 보고 너무 마음이 안 좋았어.|우는 걸 보고|그녀가 우는 걸 봤을 때|when I saw her cry|나는 아주 나쁘게 느꼈다
+고|일상||*Depuis tout petit,/j'ai toujours voulu avoir un chien.|어릴 때부터 늘 개를 키우고 싶었어.|어릴 때부터|아주 어릴 때부터|since I was little|나는 항상 개를 갖고 싶었다
+고|일상||Je te fais confiance,/*je te laisse t'en occuper.|널 믿으니까 네가 맡아.|네가 맡아|네가 그것을 맡게 둔다|I'll let you handle it|나는 너를 믿는다
+고|여행||Je ne m'attendais pas/*à ce qu'il fasse aussi chaud/en octobre.|10월에 이렇게 더울 줄은 몰랐어.|이렇게 더울 줄은|이렇게 덥다는 것을|for it to be so hot|나는 예상하지 못했다;10월에
+고|감정||Ça me manque, l'époque où/*on n'avait pas autant de soucis.|걱정이 이렇게 많지 않던 시절이 그리워.|걱정이 이렇게 많지 않던|우리가 그렇게 많은 걱정이 없었던|we didn't have so many worries|그 시절이 그립다
+고|일상||Je viens de me rendre compte/*que j'ai mis mon pull/à l'envers.|스웨터 거꾸로 입은 걸 이제 알았어.|스웨터 입은 걸|내가 스웨터를 입었다는 것|that I put my sweater on|나는 막 깨달았다;뒤집어서
+고|회사||*D'après le rapport,/les ventes ont baissé de dix pour cent.|보고서에 따르면 매출이 10% 줄었어요.|보고서에 따르면|보고서에 따르면|according to the report|매출이 10퍼센트 줄었다
+고|일상||*Mieux vaut prévenir/que guérir.|병 고치는 것보다 예방이 낫지.|예방이 낫지|예방하는 게 낫다|better to prevent|치료하는 것보다
+고|감정||Quand j'ai vu le cadeau,/*je suis resté sans voix.|선물 보고 말문이 막혔어.|말문이 막혔어|목소리 없이 남았다|I was speechless|선물을 봤을 때
+고|일상||Ça fait une éternité/*que je ne suis pas allé/au cinéma.|영화관 안 간 지 백만 년 됐어.|안 간 지|내가 가지 않은 지|since I last went|영원이 되었다;영화관에
+고|드라마·영화|드라마·영화|*Ce n'est pas ce que tu crois,/laisse-moi t'expliquer.|네가 생각하는 거 아니야, 설명할게.|네가 생각하는 거 아니야|네가 믿는 것이 아니다|it's not what you think|내가 너에게 설명하게 해 줘
+고|일상||*Si je me souviens bien,/on s'est rencontrés en 2015.|내 기억이 맞다면 우리 2015년에 만났어.|내 기억이 맞다면|내가 잘 기억한다면|if I remember correctly|우리는 2015년에 만났다
+고|회사||Je te mets/*en copie/du prochain mail.|다음 메일에 참조로 넣을게.|참조로|사본에|in copy|너를 넣는다;다음 메일의
+고|일상||J'aimerais bien venir, mais/*j'ai déjà prévu quelque chose/samedi.|가고 싶은데 토요일에 이미 약속 있어.|이미 약속 있어|이미 무언가를 계획했다|I already have plans|정말 오고 싶다, 하지만;토요일
+고|병원||Depuis que je cours,/*je me sens beaucoup mieux.|달리기 시작한 뒤로 몸이 훨씬 좋아졌어.|몸이 훨씬 좋아졌어|훨씬 더 좋게 느낀다|I feel much better|내가 달린 이후로
+고|일상||Ma fille/*passe ses journées/collée à son téléphone.|우리 딸은 하루 종일 휴대폰만 붙잡고 있어.|하루 종일|그녀의 날들을 보낸다|spends her days|내 딸은;휴대폰에 붙어서
+고|감정||Quand on m'a annoncé la nouvelle,/*je ne pouvais plus m'arrêter de pleurer.|그 소식 들었을 때 눈물이 멈추지 않았어.|눈물이 멈추지 않았어|더 이상 우는 걸 멈출 수 없었다|I couldn't stop crying|사람들이 나에게 소식을 알렸을 때
+고|여행||On s'est perdus plusieurs fois, mais/*le voyage en valait la peine.|몇 번 길을 잃었지만 여행은 그럴 가치가 있었어.|그럴 가치가 있었어|여행은 그 수고의 가치가 있었다|the trip was worth it|우리는 여러 번 길을 잃었다, 하지만
+고|회사||Désolé, mais/*je ne peux pas m'engager/sur cette date.|죄송하지만 그 날짜는 약속 못 드려요.|약속 못 드려요|약속할 수 없다|I can't commit|미안하지만;그 날짜에
+고|일상||Même si ça ne se voit pas,/*je suis assez timide/avec les inconnus.|안 그래 보여도 낯선 사람 앞에선 꽤 낯가려.|꽤 낯가려|꽤 수줍다|I'm quite shy|그게 보이지 않더라도;모르는 사람들과
+고|연애|연애|Il m'a dit qu'il m'aimait et/*je n'ai pas su quoi répondre.|날 사랑한다는데 뭐라고 답할지 몰랐어.|뭐라고 답할지 몰랐어|무엇을 대답할지 몰랐다|I didn't know what to answer|그가 나를 사랑한다고 말했고
+고|일상||Avec ce temps,/*le mieux, c'est de rester à la maison/devant une série.|이런 날씨엔 집에서 드라마 보는 게 최고야.|집에 있는 게 최고야|가장 좋은 것은 집에 머무는 것|the best thing is to stay home|이런 날씨로는;시리즈 앞에서
+고|감정||Enfin,/*je me sens en paix/avec moi-même.|드디어 나 자신과 편안해졌어.|편안해졌어|평화를 느낀다|I feel at peace|마침내;나 자신과
+고|일상||Je n'arrive pas à croire/*que mon bébé entre/à l'école cette année.|우리 아기가 올해 학교 들어간다니 믿기지 않아.|학교 들어간다니|내 아기가 들어간다는 것|that my baby is starting|믿을 수 없다;올해 학교에
+고|회사||Pourriez-vous/*me rappeler/dans une demi-heure?|30분 뒤에 다시 전화 주실 수 있어요?|다시 전화 주실|나에게 다시 전화하다|call me back|당신은 할 수 있나요;30분 뒤에
+고|감정||Je suis tellement soulagé/*que tout se soit bien passé.|다 잘 끝나서 정말 다행이야.|다 잘 끝나서|모든 것이 잘 지나간 것|that everything went well|나는 너무 안도했다
+고|일상||Il faudrait que/*je m'achète des chaussures/pour l'hiver.|겨울 신발 하나 사야겠어.|신발 하나 사야겠어|나에게 신발을 사다|buy myself some shoes|~해야 할 것이다;겨울을 위해
+고|드라마·영화|드라마·영화|Après tout ce qu'on a vécu,/*tu ne peux pas partir/comme ça.|우리가 함께 겪은 게 얼만데 이렇게 떠나면 안 돼.|이렇게 떠나면 안 돼|너는 떠날 수 없다|you can't leave|우리가 겪은 모든 것 후에;이렇게
+고|일상||Je ne me rappelle plus/*où j'ai garé/la voiture.|차를 어디에 세웠는지 기억이 안 나.|어디에 세웠는지|내가 어디에 주차했는지|where I parked|더 이상 기억나지 않는다;차를
