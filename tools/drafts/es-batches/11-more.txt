@@ -1,0 +1,37 @@
+# 보충 (핵심 가운데·뒤)
+초|쇼핑||¿Tienen esto/*en azul?|이거 파란색으로 있어요?|파란색으로|파란색으로|in blue|이거 있어요
+초|쇼핑||Busco/*unos zapatos/cómodos.|편한 신발 찾고 있어요.|신발|신발 몇 켤레|some shoes|찾고 있다;편한
+초|카페·식당||Un café/*bien cargado,/por favor.|커피 진하게 한 잔 주세요.|진하게|진하게 탄|nice and strong|커피 한 잔;부탁합니다
+초|병원||Me duele/*mucho/la espalda.|허리가 많이 아파요.|많이|많이|a lot|나는 아프다;허리
+초|일상||Hoy/*no salgo.|오늘은 안 나가.|안 나가|나가지 않는다|I'm not going out|오늘
+초|여행||El hotel/*está cerca/de la playa.|호텔이 해변 근처예요.|근처예요|가깝다|is near|호텔;해변에서
+중|쇼핑||¿Me lo puede/*envolver para regalo?|선물 포장해 주실 수 있어요?|선물 포장|선물용으로 싸다|gift-wrap|해 주실 수 있나요
+중|쇼핑||Quería/*devolver/esta camiseta.|이 티셔츠 환불하고 싶어요.|환불하고|돌려주다|return|~하고 싶었다;이 티셔츠
+중|쇼핑||¿Hay/*descuento/para estudiantes?|학생 할인 있어요?|할인|할인|discount|있나요;학생을 위한
+중|카페·식당||La carne/*poco hecha,/por favor.|고기는 덜 익혀 주세요.|덜 익혀|조금 익힌|rare|고기는;부탁합니다
+중|카페·식당||¿Este plato/*lleva/frutos secos?|이 요리에 견과류 들어가요?|들어가요|가지고 있다|contain|이 요리;견과류
+중|카페·식당||Creo que/*hay un error/en la cuenta.|계산서에 착오가 있는 것 같아요.|착오가 있는|오류가 있다|there's a mistake|~인 것 같다;계산서에
+중|병원||Necesito/*pedir cita/con el médico.|진료 예약을 하고 싶어요.|예약을|약속을 잡다|make an appointment|필요하다;의사와
+중|병원||Soy/*alérgico/a la penicilina.|페니실린 알레르기가 있어요.|알레르기|알레르기가 있는|allergic|나는 ~이다;페니실린에
+중|병원||¿Me puede dar/*algo para/el dolor?|진통제 좀 주실 수 있어요?|진통제|~를 위한 무언가|something for|주실 수 있나요;통증
+중|일상||Mañana/*sin falta/te lo devuelvo.|내일 꼭 돌려줄게.|꼭|빠짐없이|without fail|내일;너에게 돌려줄게
+중|일상||Lo hizo/*a propósito,/estoy seguro.|일부러 그런 거야, 확실해.|일부러|목적을 갖고|on purpose|그가 그걸 했다;나는 확신한다
+중|일상||Nos vemos/*dentro de/una hora.|한 시간 뒤에 보자.|뒤에|~ 안에|in|우리 보자;한 시간
+중|회사||Estoy/*de vacaciones/hasta el lunes.|월요일까지 휴가예요.|휴가|휴가 중|on vacation|나는 ~이다;월요일까지
+중|회사||Hoy trabajo/*desde casa.|오늘은 재택근무해요.|재택|집에서|from home|오늘 일한다
+중|감정||Estoy/*un poco agobiado/con tantas cosas.|할 게 너무 많아서 좀 벅차.|좀 벅차|조금 압박받는|a bit overwhelmed|나는 ~이다;이렇게 많은 일로
+중|감정||Me siento/*fatal/por lo que pasó.|그 일 때문에 기분이 최악이야.|최악|최악으로|awful|나는 느낀다;일어난 일 때문에
+중|여행||¿Este autobús/*para en/la plaza mayor?|이 버스 중앙 광장에 서요?|서요|~에 서다|stop at|이 버스;중앙 광장
+중|여행||Quiero/*alquilar un coche/para tres días.|3일 동안 차 빌리고 싶어요.|차 빌리고|차를 빌리다|rent a car|원한다;3일 동안
+중|연애|연애|Anoche/*nos dimos/el primer beso.|어젯밤에 첫 키스 했어.|했어|우리가 서로 줬다|we had|어젯밤;첫 키스
+중|일상||Ese chico/*me cae muy bien.|그 남자애 마음에 들어.|마음에 들어|나에게 아주 잘 떨어지다|I really like him|그 남자애
+중|일상||Ya no/*me acuerdo/de su nombre.|그 사람 이름이 이제 기억 안 나.|기억|기억하다|remember|이제 ~ 않다;그의 이름을
+고|일상||Te lo digo/*en serio,/no es ninguna broma.|진지하게 말하는 거야, 장난 아니야.|진지하게|진지하게|seriously|너에게 말한다;전혀 농담이 아니다
+고|회사||El informe/*tiene que estar listo/antes del final del día.|보고서가 오늘 안에 준비돼야 해요.|준비돼야 해요|준비되어 있어야 한다|has to be ready|보고서는;하루가 끝나기 전에
+고|카페·식당||Perdone, pero/*esto no es lo que pedí,/yo quería pescado.|죄송한데 이건 제가 시킨 게 아니에요, 생선을 원했어요.|제가 시킨 게 아니에요|이건 내가 주문한 것이 아니다|this isn't what I ordered|실례지만;나는 생선을 원했다
+고|쇼핑||Me gusta mucho, pero/*se me va de presupuesto/ahora mismo.|정말 마음에 드는데 지금은 예산을 넘어요.|예산을 넘어요|나에게 예산을 벗어나다|it's over my budget|정말 좋은데;지금은
+고|병원||Desde hace una semana/*no consigo dormir/bien por las noches.|일주일 전부터 밤에 잠을 잘 못 자요.|잠을 잘 못 자요|잠드는 데 성공하지 못한다|I can't sleep|일주일 전부터;밤에 잘
+고|감정||Cuando me lo contó,/*no supe qué decir/de lo sorprendido que estaba.|그 얘기 들었을 때 너무 놀라서 뭐라 할 말이 없었어.|뭐라 할 말이 없었어|무엇을 말할지 몰랐다|I didn't know what to say|그가 나에게 말했을 때;내가 너무 놀라서
+고|여행||Cuando viajo,/*prefiero perderme/por las calles antes que ir a museos.|여행할 땐 박물관 가는 것보다 골목을 헤매는 게 좋아.|헤매는 게 좋아|길을 잃는 것을 선호한다|I prefer to get lost|내가 여행할 때;박물관에 가기보다 거리에서
+고|연애|연애|Llevamos cinco años juntos y/*todavía me hace reír/como el primer día.|5년째 같이 있는데 아직도 첫날처럼 날 웃게 해.|아직도 날 웃게 해|아직도 나를 웃게 한다|he still makes me laugh|우리는 5년째 함께다 그리고;첫날처럼
+고|일상||Al final/*lo dejamos para otro día/porque estaba lloviendo a cántaros.|비가 억수같이 와서 결국 다른 날로 미뤘어.|다른 날로 미뤘어|그것을 다른 날로 남겼다|we put it off for another day|결국;비가 양동이로 쏟아지고 있어서

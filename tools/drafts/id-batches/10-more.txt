@@ -1,0 +1,214 @@
+# 200 more (2026-11-23)
+초|일상||Aku/*lagi jalan/ke sana.|나 지금 가는 중이야.|가는 중이야|걸어가는 중|on my way|나;거기로
+초|일상||Aku/*capek banget.|나 너무 피곤해.|너무 피곤해|아주 지친|so tired|나
+초|카페·식당||*Minta bonnya,/ya.|계산서 주세요.|계산서 주세요|영수증을 부탁하다|the bill, please|요
+초|쇼핑||Ini/*berapa harganya?|이거 얼마예요?|얼마예요|그 가격이 얼마인가|how much is it|이것
+초|일상||Aku/*lapar banget.|나 엄청 배고파.|엄청 배고파|아주 배고픈|so hungry|나
+초|일상||Aku/*ngantuk.|졸려.|졸려|졸린|sleepy|나
+초|여행||Saya/*tersesat.|길을 잃었어요.|길을 잃었어요|길을 잃은|lost|저
+초|병원||Saya/*sakit kepala.|머리가 아파요.|머리가 아파요|두통|headache|저
+초|병원||Saya/*demam.|열이 있어요.|열이|열이 나는|feverish|저
+초|일상||Hari ini/*dingin banget.|오늘 엄청 추워.|엄청 추워|아주 추운|so cold|오늘
+초|카페·식당||*Tanpa es,/ya.|얼음 빼 주세요.|얼음 빼|얼음 없이|no ice|요
+초|카페·식당||*Dibungkus,/ya.|포장해 주세요.|포장|싸서|to go|요
+초|일상||*Hati-hati!|조심해!|조심해|조심|be careful|
+초|감정||Aku/*udah muak.|이제 지긋지긋해.|지긋지긋해|이미 질린|fed up|나
+초|일상||Aku suka/*lagu ini.|이 노래 좋아.|이 노래|이 노래|this song|나는 좋아한다
+초|여행||*Jauh nggak?|멀어요?|멀어요|먼가 아닌가|is it far|
+초|일상||*Nggak apa-apa.|괜찮아.|괜찮아|아무것도 아니다|it's okay|
+초|감정||*Malu banget!|완전 창피해!|완전 창피해|아주 부끄러운|so embarrassing|
+초|연애|연애|Aku/*kangen kamu.|너 보고 싶어.|보고 싶어|너를 그리워하다|I miss you|나
+초|연애|연애|Aku/*suka banget/sama kamu.|너 진짜 좋아해.|진짜 좋아해|아주 좋아하다|really like|나;너를
+초|회사||Saya/*lagi sibuk.|지금 바빠요.|바빠요|바쁜 중|busy|저
+초|쇼핑||Saya/*cuma lihat-lihat.|그냥 구경해요.|그냥 구경해요|그냥 보는 중|just looking|저
+초|일상||*Oke,/sampai nanti.|그래, 나중에 봐.|그래|오케이|okay|나중까지
+초|일상||*Serius?|진짜?|진짜|진지한|seriously|
+초|감정||Aku/*deg-degan.|두근두근해.|두근두근해|떨리는|nervous|나
+초|일상||*Selamat makan!|맛있게 먹어!|맛있게 먹어|즐거운 식사|enjoy your meal|
+초|일상||*Enak banget!|진짜 맛있다!|진짜 맛있다|아주 맛있는|so tasty|
+초|일상||Aku/*di rumah aja.|나 그냥 집에 있을게.|그냥 집에|집에 그냥|just at home|나
+초|감정||*Jangan khawatir.|걱정하지 마.|걱정하지 마|걱정하지 마|don't worry|
+초|일상||*Sampai jumpa!|또 만나!|또 만나|만날 때까지|see you|
+초|감정||*Sayang banget.|너무 아쉽다.|너무 아쉽다|아주 아까운|what a shame|
+초|쇼핑||Boleh/*dicoba?|입어 봐도 돼요?|입어 봐도|시도되다|try on|되나요
+초|일상||*Nggak tahu.|몰라.|몰라|모른다|I don't know|
+초|회사||*Kerja bagus!|잘했어요!|잘했어요|좋은 일|good work|
+초|일상||Telepon aku/*nanti.|나중에 전화해.|나중에|나중에|later|나에게 전화해
+초|일상||*Tutup/pintunya.|문 닫아.|닫아|닫다|close|그 문
+초|일상||Aku/*nggak ada waktu.|나 시간 없어.|시간 없어|시간이 없다|no time|나
+초|여행||Keretanya/*berangkat jam berapa?|기차 몇 시에 출발해요?|몇 시에 출발해요|몇 시에 출발하나|what time does it leave|그 기차
+초|카페·식당||*Meja untuk dua orang.|두 명 자리요.|두 명 자리요|두 사람을 위한 테이블|a table for two|
+초|일상||*Hujan lagi.|또 비 와.|또 비 와|다시 비|raining again|
+초|감정||Aku/*bangga sama kamu.|네가 자랑스러워.|자랑스러워|너를 자랑스러워하는|proud of you|나
+초|일상||*Pasti bisa!|분명 할 수 있어!|분명 할 수 있어|분명 가능하다|you can do it|
+초|병원||Saya/*kurang enak badan.|몸이 좀 안 좋아요.|몸이 좀 안 좋아요|몸이 덜 좋은|not feeling well|저
+초|일상||*Udah,/lupain aja.|됐어, 그냥 잊어.|됐어|이미|enough|그냥 잊어
+초|일상||*Yuk,/jalan!|자, 가자!|자|가자|come on|걸어가자
+초|일상||Aku/*telat.|나 늦었어.|늦었어|늦은|late|나
+초|일상||Cuacanya/*cerah banget/hari ini.|오늘 날씨 엄청 맑다.|엄청 맑다|아주 맑은|so sunny|날씨가;오늘
+초|카페·식당||Minta/*air putih,/ya.|물 좀 주세요.|물|흰 물(생수)|plain water|부탁해요;요
+초|여행||*Stasiunnya/di mana?|역이 어디예요?|역이|그 역|the station|어디에
+초|일상||Aku/*kenyang.|배불러.|배불러|배부른|full|나
+중|일상||HP-ku/*ketinggalan/di rumah.|휴대폰을 집에 두고 왔어.|두고 왔어|남겨지다|left behind|내 휴대폰;집에
+중|일상||Akhirnya/*nggak keburu.|결국 시간 안에 못 했어.|시간 안에 못 했어|제때 못 하다|didn't make it|결국
+중|회사||Saya/*kirim emailnya/sekarang.|지금 메일 보낼게요.|메일 보낼게요|그 이메일을 보내다|send the email|저;지금
+중|감정||Aku/*kesel/kalau dia begitu.|걔가 그러면 짜증 나.|짜증 나|짜증 난|annoyed|나;그가 그러면
+중|카페·식당||*Rekomendasi/dessert-nya apa?|디저트 추천 뭐예요?|추천|추천|recommendation|그 디저트는 무엇
+중|여행||*Ke pusat kota/naik apa?|시내까지 뭐 타고 가요?|시내까지|도심으로|to downtown|무엇을 타고
+중|일상||Hari ini/*giliranku/cuci piring.|오늘은 내가 설거지할 차례야.|내 차례|나의 차례|my turn|오늘;설거지하다
+중|일상||Aku/*pengen banget/ke pantai.|바다 너무 가고 싶다.|너무 가고 싶다|아주 원하다|really want|나;해변에
+중|연애|연애|*Ketemuan/Sabtu malam, yuk?|토요일 밤에 만날래?|만날래|만나다|meet up|토요일 밤, 하자
+중|회사||Minggu ini/*kerjaanku numpuk.|이번 주에 일이 쌓였어요.|일이 쌓였어요|내 일이 쌓이다|work is piling up|이번 주
+중|감정||Aku/*udah nggak sabar/mau liburan.|휴가 가는 게 너무 기다려져.|너무 기다려져|이미 참을 수 없다|can't wait|나;휴가 가고 싶다
+중|일상||Aku/*kangen masakan ibu.|엄마 요리가 그리워.|엄마 요리가 그리워|엄마 요리를 그리워하다|miss mom's cooking|나
+중|쇼핑||*Saya ambil yang ini,/makasih.|이걸로 할게요, 고마워요.|이걸로 할게요|이것을 가져가겠다|I'll take this one|고마워요
+중|병원||Saya batuk/*sudah dua hari.|벌써 이틀째 기침해요.|벌써 이틀째|이미 이틀|for two days now|저는 기침한다
+중|일상||Kamu/*nggak usah/datang.|안 와도 돼.|안 와도 돼|~할 필요 없다|don't need to|너;오다
+중|여행||Koper saya/*hilang.|제 가방이 없어졌어요.|없어졌어요|사라진|lost|제 여행 가방
+중|일상||Besok/*kayaknya hujan.|내일 비 올 것 같아.|비 올 것 같아|비가 올 것 같다|looks like rain|내일
+중|감정||Aku/*nggak peduli/kata orang.|남들이 뭐라든 상관없어.|상관없어|신경 쓰지 않는다|don't care|나;사람들의 말
+중|회사||Hari Senin/*Bapak bisa?|월요일 괜찮으세요?|괜찮으세요|선생님 가능하세요|can you make it|월요일
+중|일상||Pakai jaket,/*dingin lho.|재킷 입어, 춥다니까.|춥다니까|춥다고|it's cold, you know|재킷을 입어
+중|일상||Aku/*baru aja/sampai rumah.|방금 집에 도착했어.|방금|막|just now|나;집에 도착하다
+중|일상||Aku/*tidur siang/dulu, ya.|나 먼저 낮잠 좀 잘게.|낮잠|낮잠 자다|take a nap|나;먼저, 응
+중|연애|연애|Aku/*tergila-gila/sama dia.|나 걔한테 푹 빠졌어.|푹 빠졌어|미쳐 있는|crazy about|나;그에게
+중|감정||Aku/*nggak tahan/sama panasnya.|더워서 못 참겠어.|못 참겠어|견디지 못한다|can't stand|나;그 더위에
+중|일상||*Anggap aja/rumah sendiri.|네 집처럼 생각해.|네 집처럼 생각해|그냥 여겨|just think of it as|자기 집
+중|회사||Saya/*ada rapat/jam tiga.|3시에 회의 있어요.|회의 있어요|회의가 있다|have a meeting|저;3시에
+중|여행||Harus/*pesan dulu/nggak?|미리 예약해야 해요?|미리 예약해야|먼저 주문하다|book first|해야 하나요;아닌가요
+중|쇼핑||Minggu ini/*lagi diskon.|이번 주에 할인 중이에요.|할인 중이에요|할인 중|on sale|이번 주
+중|일상||*Nonton film,/yuk?|영화 보러 갈래?|영화 보러|영화를 보다|watch a movie|하자
+중|병원||Bapak harus/*istirahat/beberapa hari.|며칠 쉬셔야 해요.|쉬셔야|쉬다|rest|선생님은 해야 한다;며칠
+중|일상||*Mati lampu/lagi.|또 정전이야.|정전이야|전등이 죽다|power's out|다시
+중|회사||Sebelum Jumat/*udah beres.|금요일 전에 끝날 거예요.|끝날 거예요|이미 정리된|it'll be done|금요일 전에
+중|일상||Di sini/*makin rame.|여기 점점 붐벼.|점점 붐벼|점점 붐비는|getting more crowded|여기
+중|감정||Aku/*ikut senang/buat kamu.|나도 덩달아 기뻐.|덩달아 기뻐|함께 기쁜|happy too|나;너를 위해
+중|여행||Saya nginep/*di hostel/dekat stasiun.|역 근처 호스텔에 묵어요.|호스텔에|호스텔에|at a hostel|저는 묵는다;역 근처
+중|일상||Aku/*bingung mau pakai apa/hari ini.|오늘 뭐 입을지 고민이야.|뭐 입을지 고민|뭘 입을지 헷갈리다|can't decide what to wear|나;오늘
+중|카페·식당||Boleh/*lihat menunya?|메뉴 좀 볼 수 있어요?|메뉴 좀 볼|그 메뉴를 보다|see the menu|되나요
+중|연애|연애|Dia/*ngilang/lagi.|걔 또 잠수 탔어.|잠수 탔어|사라지다|ghosted|그;또
+중|감정||Aku/*capek banget/habis olahraga.|운동하고 나서 완전 녹초야.|완전 녹초야|아주 지친|totally worn out|나;운동 후에
+중|일상||Awalnya/*susah banget.|처음엔 진짜 어려웠어.|진짜 어려웠어|아주 어려운|really hard|처음엔
+중|회사||Harus/*dikumpulin/sebelum jam dua belas.|12시 전에 제출해야 해요.|제출해야|모아지다(제출되다)|be handed in|해야 한다;12시 전에
+중|일상||Aku/*daftar/gym.|헬스장 등록했어.|등록했어|등록하다|signed up|나;헬스장
+중|감정||*Untung/kamu datang.|네가 와서 다행이다.|다행이다|다행히|luckily|네가 왔다
+중|쇼핑||Bisa/*bayar pakai kartu?|카드로 계산돼요?|카드로 계산|카드로 지불하다|pay by card|가능한가요
+중|여행||Bisa/*fotoin saya/nggak?|제 사진 좀 찍어 주실래요?|제 사진 좀 찍어|나를 사진 찍어 주다|take my photo|할 수 있나요;아닌가요
+중|일상||Nama itu/*nggak asing.|그 이름 낯설지 않아.|낯설지 않아|낯설지 않은|sounds familiar|그 이름
+중|회사||Bulan ini/*saya naik jabatan.|이번 달에 승진했어요.|승진했어요|직급이 오르다|I got promoted|이번 달
+중|일상||Hari ini/*males masak.|오늘은 요리하기 귀찮아.|요리하기 귀찮아|요리하기 게으른|too lazy to cook|오늘
+중|카페·식당||Saya/*pesan es teh/satu.|저는 아이스티 하나요.|아이스티|아이스티를 주문하다|order iced tea|저;하나
+중|병원||Obatnya/*diminum berapa kali/sehari?|약은 하루에 몇 번 먹어요?|몇 번 먹어요|몇 번 마셔지다|taken how many times|그 약은;하루에
+중|연애|연애|Kami/*pacaran/dari bulan Maret.|우리 3월부터 사귀었어.|사귀었어|연애하다|dating|우리;3월부터
+중|일상||*Pesan pizza,/yuk.|피자 시키자.|피자 시키자|피자 주문하다|order pizza|하자
+중|여행||Aku/*ketinggalan bus terakhir.|막차 놓쳤어.|막차 놓쳤어|마지막 버스를 놓치다|missed the last bus|나
+중|회사||Nanti/*saya jelaskan.|나중에 설명해 드릴게요.|설명해 드릴게요|제가 설명하다|I'll explain|나중에
+중|일상||Aku/*lagi mikir buat pindahan.|이사할까 생각 중이야.|이사할까 생각 중|이사를 위해 생각 중|thinking about moving|나
+중|일상||*Boleh minta tolong/sebentar?|잠깐 부탁 좀 해도 돼?|부탁 좀 해도 돼|도움을 청해도 되나|can I ask a favor|잠깐
+중|감정||*Nggak nyangka!|생각도 못 했어!|생각도 못 했어|예상하지 못한다|I didn't expect that|
+중|쇼핑||Celana ini/*kekecilan.|이 바지 너무 작아요.|너무 작아요|너무 작은|too small|이 바지
+중|일상||Bawa payung,/*buat jaga-jaga.|혹시 모르니까 우산 챙겨.|혹시 모르니까|대비하기 위해|just in case|우산 가져가
+중|회사||Bisa/*diundur/ke besok?|내일로 미뤄도 될까요?|미뤄도|미뤄지다|postponed|가능한가요;내일로
+중|감정||Dia/*lucu banget.|걔 진짜 웃겨.|진짜 웃겨|아주 웃긴|so funny|그
+중|일상||Dari sini/*sepuluh menit/aja.|여기서 10분이면 돼.|10분|10분|ten minutes|여기서부터;그냥
+중|일상||Aku/*mager/keluar.|나가기 귀찮아.|귀찮아|움직이기 싫은|too lazy|나;나가다
+중|감정||Aku/*kecewa/sama filmnya.|그 영화 실망했어.|실망했어|실망한|disappointed|나;그 영화에
+중|일상||Ketemu/*di depan bioskop/ya?|영화관 앞에서 만나자?|영화관 앞에서|영화관 앞에서|in front of the cinema|만나다;응
+중|슬랭|슬랭|*Keren abis!|완전 멋지다!|완전 멋지다|끝까지 멋진|super cool|
+중|슬랭|슬랭|*Gabut/banget nih.|진짜 할 거 없어.|할 거 없어|할 일 없는|bored with nothing to do|진짜 이거
+중|일상||*Udah lama banget/nggak ketemu!|진짜 오랜만이다!|진짜 오랜만|이미 아주 오래|it's been so long|못 만나다
+중|감정||Sebelum ujian/*aku deg-degan banget.|시험 전에 엄청 떨려.|엄청 떨려|나는 아주 두근거린다|I'm so nervous|시험 전에
+중|회사||Saya/*lagi istirahat makan siang.|점심시간이에요.|점심시간|점심 휴식 중|on lunch break|저
+중|일상||Kamu/*kelihatan seger/hari ini.|오늘 얼굴 좋아 보여.|얼굴 좋아 보여|상쾌해 보이는|you look fresh|너;오늘
+중|쇼핑||Ini/*agak mahal/buat saya.|이건 저한테 좀 비싸요.|좀 비싸요|조금 비싼|a bit expensive|이것;저에게
+중|연애|연애|Dia/*mutusin aku.|걔가 나 찼어.|나 찼어|나를 끊다|dumped|그
+중|일상||Malam ini/*aku tidur cepat.|오늘 밤엔 일찍 잘게.|일찍 잘게|나는 빨리 잔다|I'll sleep early|오늘 밤
+고|회사||*Kalau Bapak nggak keberatan,/besok pagi kita bahas bareng.|괜찮으시면 내일 아침에 같이 논의해요.|괜찮으시면|선생님이 반대하지 않으면|if you don't mind|내일 아침 우리 함께 논의하자
+고|일상||Aku nggak ngerti/*gimana dia bisa/kerja sambil kuliah.|걔가 어떻게 일하면서 대학까지 다니는지 모르겠어.|어떻게 할 수 있는지|그가 어떻게 할 수 있는지|how he can|나는 이해 못 한다;대학 다니면서 일하다
+고|감정||*Aku merasa bersalah banget/nggak bisa datang ke ulang tahunmu.|네 생일에 못 가서 너무 미안해.|너무 미안해|아주 죄책감을 느낀다|I feel really bad|네 생일에 올 수 없어서
+고|여행||*Mending/naik taksi aja, MRT-nya udah tutup.|MRT 끊겼으니 그냥 택시 타는 게 나아.|나아|더 낫다|better|그냥 택시를 타, 그 MRT는 이미 닫혔다
+고|일상||*Aku baru mau/telepon kamu waktu kamu chat.|네가 채팅했을 때 막 전화하려던 참이었어.|막 ~하려던 참|막 ~하려고 했다|I was just about to|너에게 전화하다 네가 채팅했을 때
+고|회사||Saya diminta/*pegang proyek baru/mulai Januari.|1월부터 새 프로젝트를 맡아 달래요.|새 프로젝트를 맡아|새 프로젝트를 잡다|handle the new project|저는 요청받았다;1월부터
+고|연애|연애|Kayaknya/*aku mulai sayang sama dia/lebih dari yang aku kira.|생각보다 걔가 더 좋아지기 시작한 것 같아.|더 좋아지기 시작한|그를 아끼기 시작하다|I'm starting to care for him|~인 것 같다;내가 생각한 것보다 더
+고|감정||*Sekeras apa pun aku coba,/aku tetap nggak bisa lupain dia.|아무리 노력해도 그를 잊을 수가 없어.|아무리 노력해도|아무리 세게 시도해도|however hard I try|나는 여전히 그를 잊을 수 없다
+고|일상||Kalau tahu begini,/*aku nggak bakal bawa mobil.|이럴 줄 알았으면 차 안 가져왔지.|차 안 가져왔지|차를 가져오지 않았을 것이다|I wouldn't have brought the car|이렇게 될 줄 알았다면
+고|카페·식당||Kentang gorengnya/*bisa diganti/salad nggak?|감자튀김을 샐러드로 바꿀 수 있어요?|바꿀 수 있어요|바뀔 수 있다|can be swapped|그 감자튀김;샐러드로 아닌가요
+고|회사||*Melihat/anggarannya, kita perlu mengurangi tim.|예산을 보면 팀을 줄여야 해요.|보면|보면서|looking at|그 예산, 우리는 팀을 줄일 필요가 있다
+고|일상||*Bukannya aku nggak mau,/aku memang nggak ada waktu.|싫은 게 아니라 진짜 시간이 없어.|싫은 게 아니라|내가 원하지 않는 게 아니라|it's not that I don't want to|나는 정말 시간이 없다
+고|감정||Aku sedih/*kamu mau pindah/sejauh itu.|네가 그렇게 멀리 이사 간다니 슬퍼.|네가 이사 간다니|네가 이사하려 한다|you're going to move|나는 슬프다;그렇게 멀리
+고|여행||*Begitu sampai hotel,/kita langsung tidur siang ya.|호텔 도착하자마자 바로 낮잠 자자.|도착하자마자|호텔에 도착하자마자|as soon as we get to the hotel|우리 바로 낮잠 자자
+고|일상||Seminggu ini/*aku terus kepikiran/omonganmu.|일주일째 네 말이 계속 마음에 걸려.|계속 마음에 걸려|계속 생각이 나다|it keeps bugging me|이번 일주일;너의 말
+고|회사||Saya akan sangat berterima kasih/*kalau bisa dikirim/sebelum Kamis.|목요일 전에 보내 주시면 정말 감사하겠습니다.|보내 주시면|보내질 수 있다면|if it could be sent|저는 매우 감사할 것이다;목요일 전에
+고|병원||Dokter/*menyarankan saya/berhenti merokok secepatnya.|의사가 최대한 빨리 담배를 끊으라고 했어요.|끊으라고 했어요|나에게 권했다|suggested I|의사가;최대한 빨리 흡연을 멈추다
+고|연애|연애|Aku nggak tahu/*dia lagi modus/atau cuma baik.|걔가 작업 거는 건지 그냥 친절한 건지 모르겠어.|작업 거는|속셈이 있는 중|he's making a move|나는 모른다;아니면 그냥 친절한지
+고|일상||*Sekarang udah telat/buat ngeluh.|이제 와서 불평하기엔 늦었어.|이제 와서 늦었어|지금은 이미 늦었다|it's too late now|불평하기에는
+고|감정||*Aku sampai speechless/waktu dia cerita kabar itu.|걔가 그 소식 말했을 때 말문이 막혔어.|말문이 막혔어|말을 잃을 정도였다|I was speechless|그가 그 소식을 이야기했을 때
+고|일상||*Mumpung kamu/di dapur, ambilin aku air dong.|부엌에 있는 김에 물 좀 갖다줘.|있는 김에|네가 ~에 있는 김에|while you're|부엌에, 나에게 물 좀 가져다줘
+고|회사||Kita perlu pikirkan/*apakah layak/dilanjutkan.|계속할 가치가 있는지 생각해 봐야 해요.|가치가 있는지|적절한지|whether it's worth|우리는 생각할 필요가 있다;계속되다
+고|여행||Ternyata/*jauh lebih murah/dari perkiraan.|알고 보니 예상보다 훨씬 쌌어.|훨씬 쌌어|훨씬 더 싼|much cheaper|알고 보니;예상보다
+고|일상||*Udah dibilangin berkali-kali,/dia tetap naruh baju di lantai.|여러 번 말했는데도 걔는 여전히 옷을 바닥에 둬.|여러 번 말했는데도|이미 여러 번 말해졌다|even after being told many times|그는 여전히 옷을 바닥에 둔다
+고|감정||*Aku udah bosan/dia selalu telat.|걔가 맨날 늦는 거 이제 질렸어.|이제 질렸어|이미 지겨운|I'm already tired|그가 항상 늦는 것
+고|회사||*Soal/tenggat waktu, saya rasa nggak ada masalah.|마감은 문제없을 것 같아요.|~은|~에 관한 문제|as for|마감 시간, 저는 문제가 없다고 생각한다
+고|일상||*Aku susah banget/bangun pagi pas akhir pekan.|주말에 일찍 일어나는 게 너무 힘들어.|너무 힘들어|아주 어려운|I find it really hard|주말에 아침 일찍 일어나다
+고|드라마·영화|드라마·영화|*Lebih baik terlambat/daripada tidak sama sekali.|안 하는 것보다 늦게라도 하는 게 낫지.|늦게라도|늦는 것이 더 낫다|better late|전혀 안 하는 것보다
+고|일상||*Coba dulu waktu kecil/aku belajar berenang.|어릴 때 수영 배웠으면 좋았을 텐데.|어릴 때 ~했으면 좋았을 텐데|어릴 때 해 봤다면|if only as a kid|내가 수영을 배웠다
+고|카페·식당||Boleh/*kecilin musiknya/sedikit?|음악 좀 줄여 주실 수 있어요?|음악 좀 줄여|그 음악을 작게 하다|turn the music down|되나요;조금
+고|감정||*Aku nggak semangat sama sekali/harus kerja hari Minggu.|일요일에 일해야 해서 의욕이 하나도 없어.|의욕이 하나도 없어|전혀 의욕이 없다|I'm not motivated at all|일요일에 일해야 한다
+고|일상||Kalau nggak buruan,/*nanti ketinggalan/kereta.|서두르지 않으면 기차 놓쳐.|놓쳐|나중에 놓치다|you'll miss|서두르지 않으면;기차를
+고|회사||*Saya pastikan/semuanya siap sebelum rapat.|회의 전에 다 준비되게 할게요.|되게 할게요|확실히 하다|I'll make sure|회의 전에 모든 것이 준비되다
+고|연애|연애|*Sejak putus,/aku nggak pernah dengar kabar dia lagi.|헤어진 뒤로 걔 소식을 다시는 못 들었어.|헤어진 뒤로|헤어진 이후|since we broke up|나는 그의 소식을 다시 들은 적이 없다
+고|감정||*Jantungku serasa copot/waktu lihat nilainya.|점수 보고 심장 떨어지는 줄 알았어.|심장 떨어지는 줄|내 심장이 빠지는 듯하다|my heart nearly stopped|그 점수를 봤을 때
+고|여행||*Sebaiknya bawa/uang tunai, nggak semua tempat terima kartu.|모든 곳에서 카드가 되진 않으니 현금 챙기는 게 좋아.|챙기는 게 좋아|가져가는 게 좋다|you'd better bring|현금, 모든 곳이 카드를 받지는 않는다
+고|회사||*Masalahnya,/kita nggak dikasih waktu yang cukup.|문제는 우리한테 시간을 충분히 안 줬다는 거예요.|문제는|그 문제는|the problem is|우리는 충분한 시간을 받지 못했다
+고|일상||*Jangan harap,/kue ini punyaku.|꿈도 꾸지 마, 이 케이크 내 거야.|꿈도 꾸지 마|기대하지 마|don't even hope|이 케이크는 내 것이다
+고|감정||*Lega banget rasanya/tahu semuanya baik-baik aja.|다 괜찮다는 거 알고 나니 너무 후련해.|너무 후련해|느낌이 아주 홀가분하다|such a relief|모든 게 다 괜찮다는 걸 알고
+고|일상||*Katanya,/di pojok mau buka supermarket.|모퉁이에 슈퍼가 생긴대.|생긴대|말하기를|they say|모퉁이에 슈퍼마켓을 열 거라고
+고|드라마·영화|드라마·영화|*Ini belum selesai,/aku janji.|이거 아직 안 끝났어, 약속해.|아직 안 끝났어|이것은 아직 끝나지 않았다|this isn't over|나는 약속한다
+고|회사||*Dengan kondisi begini,/lebih baik acaranya dibatalkan.|이런 상황이면 행사를 취소하는 게 나아요.|이런 상황이면|이런 상황으로|under these conditions|그 행사가 취소되는 게 더 낫다
+고|일상||Aku sadar/*marah karena hal sepele/itu nggak ada gunanya.|사소한 걸로 화내는 건 아무 소용 없다는 걸 깨달았어.|사소한 걸로 화내는|사소한 일 때문에 화내다|getting mad over little things|나는 깨달았다;그것은 쓸모가 없다
+고|연애|연애|*Aku jatuh cinta/sama orang yang tinggal di luar negeri.|외국에 사는 사람한테 반했어.|반했어|사랑에 빠졌다|I fell in love|외국에 사는 사람에게
+고|감정||*Yang paling bikin kesel,/dia bahkan nggak kasih kabar.|제일 짜증 나는 건 걔가 연락도 안 했다는 거야.|제일 짜증 나는 건|가장 짜증 나게 만드는 것|what annoys me most|그는 소식조차 주지 않았다
+고|일상||*Apa pun yang terjadi,/jangan bilang apa-apa ke ibu.|무슨 일이 있어도 엄마한테 아무 말도 하지 마.|무슨 일이 있어도|무슨 일이 일어나든|whatever happens|엄마에게 아무것도 말하지 마
+고|여행||*Kalau sempat,/aku mau mampir ke museum sebelum pulang.|시간 되면 돌아가기 전에 박물관 들르고 싶어.|시간 되면|여유가 있으면|if I get the chance|나는 돌아가기 전에 박물관에 들르고 싶다
+고|회사||*Makin besar perusahaannya,/makin perlu sistem yang rapi.|회사가 커질수록 체계가 더 필요해요.|회사가 커질수록|회사가 클수록|the bigger the company|정돈된 시스템이 더 필요하다
+고|일상||*Ada hikmahnya/di balik semua ini.|이 모든 일 뒤에 다 이유가 있어.|다 이유가 있어|교훈이 있다|there's a lesson|이 모든 것 뒤에
+고|감정||Sampai sekarang/*aku masih nggak percaya/dia udah pergi.|그가 떠났다는 게 아직도 믿기지 않아.|아직도 믿기지 않아|나는 여전히 믿지 못한다|I still can't believe|지금까지;그가 이미 갔다
+고|드라마·영화|드라마·영화|*Kali ini kamu udah keterlaluan.|이번엔 너 진짜 선 넘었어.|진짜 선 넘었어|이번에 너는 이미 지나쳤다|this time you've gone too far|
+고|일상||*Mending bawa jaket,/nanti dingin.|이따 추우니까 재킷 챙기는 게 나아.|재킷 챙기는 게 나아|재킷을 가져가는 게 낫다|better bring a jacket|나중에 춥다
+고|회사||Saya menulis/*untuk mengonfirmasi/janji kita Selasa depan.|다음 주 화요일 약속 확인차 연락드립니다.|확인차|확인하기 위해|to confirm|저는 씁니다;다음 화요일 우리 약속을
+고|감정||*Aku gugup banget/kalau harus ngomong di depan banyak orang.|많은 사람 앞에서 말해야 하면 엄청 긴장돼.|엄청 긴장돼|아주 긴장한|I get so nervous|많은 사람 앞에서 말해야 하면
+고|일상||*Dengan harga sewa/di sini, aku hampir nggak bisa nabung.|여기 월세로는 거의 저축을 못 해.|월세로는|임대 가격으로|with the rent|여기서, 나는 거의 저축할 수 없다
+고|연애|연애|*Kami sepakat break dulu/buat mikir.|생각할 시간 갖자고 잠깐 쉬기로 했어.|잠깐 쉬기로 했어|먼저 쉬기로 합의했다|we agreed to take a break|생각하기 위해
+고|일상||*Makin cepat mulai,/makin cepat selesai.|빨리 시작할수록 빨리 끝나.|빨리 시작할수록|더 빨리 시작할수록|the sooner you start|더 빨리 끝난다
+고|감정||*Aku malu/minta nomornya.|번호 물어보기 부끄러웠어.|부끄러웠어|부끄러운|I was too shy|그의 번호를 청하다
+고|여행||Akhirnya/*kami harus nunggu/hampir dua jam di bandara.|결국 공항에서 거의 두 시간 기다려야 했어.|기다려야 했어|우리는 기다려야 했다|we had to wait|결국;공항에서 거의 두 시간
+고|회사||*Saya tunggu/kabar baiknya.|좋은 소식 기다리겠습니다.|기다리겠습니다|제가 기다린다|I'll wait for|그 좋은 소식
+고|감정||*Yang bikin aku emosi/itu nada bicaranya.|날 화나게 한 건 걔 말투야.|날 화나게 한 건|나를 감정적으로 만든 것|what set me off|그것은 그의 말투
+고|드라마·영화|드라마·영화|*Kamu nggak tahu/apa yang udah aku lewati.|내가 뭘 겪었는지 넌 몰라.|넌 몰라|너는 모른다|you don't know|내가 이미 지나온 것
+고|회사||*Karena kliennya/berubah pikiran, desainnya harus diulang.|고객이 마음을 바꿔서 디자인을 다시 해야 해요.|고객이 ~해서|그 고객이 ~때문에|since the client|생각을 바꿨다, 그 디자인은 반복되어야 한다
+고|일상||*HP-ku mati/pas lagi butuh peta.|지도가 필요할 때 딱 휴대폰이 꺼졌어.|휴대폰이 꺼졌어|내 휴대폰이 죽었다|my phone died|지도가 필요한 바로 그때
+고|감정||Kamu nggak tahu/*betapa bersyukurnya/aku.|내가 얼마나 감사한지 넌 몰라.|얼마나 감사한지|얼마나 감사한지|how grateful|너는 모른다;나
+고|병원||Sudah seminggu/*saya susah tidur/di malam hari.|일주일째 밤에 잠들기가 힘들어요.|잠들기가 힘들어요|자기 어렵다|I have trouble sleeping|벌써 일주일;밤에
+고|카페·식당||Maaf,/*ini bukan pesanan saya.|죄송한데 이건 제가 시킨 게 아니에요.|제가 시킨 게 아니에요|이것은 내 주문이 아니다|this isn't my order|죄송합니다
+고|쇼핑||Saya suka banget, tapi/*di luar budget/saya.|정말 마음에 드는데 예산 밖이에요.|예산 밖이에요|예산 밖|out of budget|아주 좋아요, 하지만;제
+고|여행||Kalau jalan-jalan,/*aku lebih suka keliling/kota daripada ke museum.|여행할 땐 박물관보다 동네 돌아다니는 게 좋아.|돌아다니는 게 좋아|더 돌아다니는 걸 좋아한다|I prefer to wander around|여행할 때면;박물관 가는 것보다 도시를
+고|연애|연애|Udah lima tahun pacaran tapi/*dia masih bikin aku ketawa.|5년째 사귀는데 아직도 날 웃게 해.|아직도 날 웃게 해|그는 여전히 나를 웃게 만든다|he still makes me laugh|연애한 지 이미 5년이지만
+고|일상||Kami/*undur ke hari lain/karena hujan deras.|비가 많이 와서 다른 날로 미뤘어.|다른 날로 미뤘어|다른 날로 미루다|postponed to another day|우리는;폭우 때문에
+중|쇼핑||Ada/*warna biru/nggak?|파란색 있어요?|파란색|파란 색|blue|있나요;아닌가요
+중|쇼핑||Saya mau/*tukar/baju ini.|이 옷 교환하고 싶어요.|교환하고|바꾸다|exchange|저는 원한다;이 옷
+중|카페·식당||Pedasnya/*sedang aja,/ya.|맵기는 중간으로 해 주세요.|중간으로|그냥 중간|medium|그 매운 정도는;요
+중|병원||Saya mau/*bikin janji/sama dokter.|진료 예약하고 싶어요.|예약하고|약속을 만들다|make an appointment|저는 원한다;의사와
+중|병원||Saya/*alergi/udang.|새우 알레르기가 있어요.|알레르기|알레르기가 있다|allergic to|저;새우
+중|일상||Dia/*sengaja/begitu.|걔 일부러 그런 거야.|일부러|고의로|on purpose|그;그렇게
+중|회사||Hari ini/*saya kerja dari rumah.|오늘은 재택근무해요.|재택근무해요|저는 집에서 일한다|I work from home|오늘
+중|여행||Bus ini/*berhenti di/Monas nggak?|이 버스 모나스에 서요?|서요|~에 서다|stop at|이 버스;모나스 아닌가요
+중|여행||Saya mau/*sewa motor/tiga hari.|오토바이 3일 빌리고 싶어요.|오토바이 빌리고|오토바이를 빌리다|rent a motorbike|저는 원한다;3일
+중|일상||Aku/*lupa/namanya.|그 사람 이름 잊어버렸어.|잊어버렸어|잊다|forgot|나;그의 이름
+중|감정||Aku/*lagi kewalahan/sama semuanya.|요즘 다 너무 벅차.|너무 벅차|감당 못 하는 중|overwhelmed|나;모든 것에
+중|연애|연애|Kemarin/*kami ciuman/pertama kali.|어제 처음 키스했어.|키스했어|우리는 키스하다|we kissed|어제;처음으로
+중|일상||Aku/*nggak jago/masak.|난 요리 잘 못해.|잘 못해|능숙하지 않다|not good at|나;요리
+고|일상||*Semalaman aku nggak bisa tidur/gara-gara berisik.|시끄러워서 밤새 잠을 못 잤어.|밤새 잠을 못 잤어|밤새 나는 잘 수 없었다|I couldn't sleep all night|시끄러웠기 때문에
+고|회사||Saya akan kabari/*secepatnya/dengan jawaban.|최대한 빨리 답변 드릴게요.|최대한 빨리|가능한 빨리|as soon as possible|제가 알려 드리겠다;답변과 함께
+고|일상||Aku harus/*beres-beres rumah/sebelum orang tua datang.|부모님 오시기 전에 집 정리해야 해.|집 정리해야|집을 정리하다|tidy up the house|나는 해야 한다;부모님이 오기 전에
+고|감정||Aku/*lega banget/kamu pulang dengan selamat.|네가 무사히 돌아와서 너무 안심이야.|너무 안심이야|아주 안도한|so relieved|나;네가 무사히 돌아왔다
+중|일상||Hari ini/*gimana harimu?|오늘 하루 어땠어?|하루 어땠어|너의 하루는 어땠나|how was your day|오늘
