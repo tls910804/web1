@@ -1,0 +1,75 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>문장 모아보기</title>
+<!-- 문장 모아보기: langshorts.com/sentences (→ /app/sentences.html). 배포에선 content.json, 개발 서버에선 src/data/cards.json을 읽어요 -->
+<style>
+  body{margin:0;font:15px/1.5 -apple-system,'Noto Sans KR',sans-serif;background:#faf9f6;color:#1f2430}
+  header{position:sticky;top:0;background:#faf9f6;padding:14px 16px 0;border-bottom:1px solid #e6e3dc;z-index:1}
+  h1{font-size:18px;margin:0 0 10px}
+  .tabs{display:flex;gap:4px;overflow-x:auto;padding-bottom:10px}
+  .tabs button{flex:none;border:0;border-radius:999px;padding:6px 12px;background:#eeece6;font:inherit;font-size:14px;cursor:pointer}
+  .tabs button.on{background:#6f86f5;color:#fff;font-weight:600}
+  .bar{display:flex;gap:8px;padding:0 0 10px}
+  .bar input,.bar select{font:inherit;padding:6px 10px;border:1px solid #ddd;border-radius:8px;background:#fff}
+  .bar input{flex:1;min-width:0}
+  main{padding:8px 16px 40px}
+  .row{display:grid;grid-template-columns:34px 1fr auto;gap:10px;padding:10px 0;border-bottom:1px solid #eeece6;align-items:start}
+  .n{color:#999;font-size:13px;padding-top:2px}
+  .s{font-weight:600;font-size:16px}
+  .s mark{background:#e3e8fd;color:#3b52f0;border-radius:4px;padding:0 3px}
+  .t{color:#555;font-size:14px}
+  .m{font-size:12.5px;color:#888;margin-top:2px}
+  .lv{font-size:12px;padding:1px 8px;border-radius:999px;background:#eeece6;margin-right:4px}
+  .play{border:0;border-radius:50%;width:34px;height:34px;background:#6f86f5;color:#fff;cursor:pointer;font-size:13px}
+  .play:disabled{background:#ccc;cursor:default}
+  .empty{color:#999;padding:30px 0;text-align:center}
+</style>
+<header>
+  <h1>문장 모아보기 <small id="total" style="color:#999;font-weight:400"></small></h1>
+  <div class="tabs" id="tabs"></div>
+  <div class="bar">
+    <input id="q" placeholder="문장·번역 검색">
+    <select id="lv"><option value="">난이도 전체</option><option>초급</option><option>중급</option><option>고급</option></select>
+  </div>
+</header>
+<main id="list"></main>
+<script type="module">
+const NAMES = { en: '영어', ko: '한국어', ja: '일본어', zh: '중국어', es: '스페인어', fr: '프랑스어', de: '독일어', pt: '포르투갈어', ru: '러시아어', vi: '베트남어', id: '인도네시아어' };
+const NO_SPACE = ['ja', 'zh'];
+const [cards, manifest] = await Promise.all([
+  fetch('content.json').then((r) => r.json()).then((c) => c.cards).catch(() => fetch('/src/data/cards.json').then((r) => r.json())),
+  fetch('audio/manifest.json').then((r) => r.json()).catch(() => ({})),
+]);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const textOf = (c) => c.words.join(NO_SPACE.includes(c.lang) ? '' : ' ');
+const langs = Object.keys(NAMES).filter((l) => cards.some((c) => c.lang === l));
+let cur = langs[0];
+const audio = new Audio();
+document.getElementById('total').textContent = `전체 ${cards.length}개`;
+
+function render() {
+  document.getElementById('tabs').innerHTML = langs.map((l) =>
+    `<button data-l="${l}" class="${l === cur ? 'on' : ''}">${NAMES[l]} ${cards.filter((c) => c.lang === l).length}</button>`).join('');
+  const q = document.getElementById('q').value.trim().toLowerCase(), lv = document.getElementById('lv').value;
+  const rows = cards.filter((c) => c.lang === cur && (!lv || c.level === lv) &&
+    (!q || (textOf(c) + ' ' + Object.values(c.tr || {}).join(' ')).toLowerCase().includes(q)))
+    .sort((a, b) => !!manifest[`${b.lang}|${textOf(b)}`] - !!manifest[`${a.lang}|${textOf(a)}`]);  // 음성 있는 문장 먼저
+  document.getElementById('list').innerHTML = rows.length ? rows.map((c, i) => {
+    const sep = NO_SPACE.includes(c.lang) ? '' : ' ';
+    const s = c.words.map((w, j) => (c.key || []).includes(j) ? `<mark>${esc(w)}</mark>` : esc(w)).join(sep);
+    const tr = c.tr?.ko || c.tr?.en || '';
+    const mean = c.mean?.ko || c.mean?.en || '';
+    const e = manifest[`${c.lang}|${textOf(c)}`];
+    return `<div class="row"><span class="n">${i + 1}</span><div>
+      <div class="s" lang="${c.lang}">${s}</div><div class="t">${esc(tr)}</div>
+      <div class="m"><span class="lv">${esc(c.level || '-')}</span>${esc(c.cat || '')} · ${esc(c.expr)} = ${esc(mean)}${e ? ` · 🔊 ${esc(e.v || '예전 음성')}` : ''}</div></div>
+      <button class="play" ${e ? `data-f="${e.f}"` : 'disabled title="음성 파일 없음"'}>▶</button></div>`;
+  }).join('') : '<div class="empty">맞는 문장이 없어요</div>';
+}
+document.getElementById('tabs').onclick = (ev) => { const l = ev.target.dataset?.l; if (l) { cur = l; render(); scrollTo(0, 0); } };
+document.getElementById('q').oninput = render;
+document.getElementById('lv').onchange = render;
+document.getElementById('list').onclick = (ev) => { const f = ev.target.dataset?.f; if (f) { audio.src = `audio/${f}.m4a`; audio.play(); } };
+render();
+</script>
