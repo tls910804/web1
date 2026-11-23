@@ -98,7 +98,8 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   const curId = cur?.id;
 
   // 목록이 바뀌면 현재 위치로 다시 스크롤한다
-  const listKey = cards.map((c) => c.id).join();
+  const listKey = useMemo(() => cards.map((c) => c.id).join(), [cards]);
+  const lo = Math.max(0, index - 3), hi = Math.min(cards.length, index + 4);
   useLayoutEffect(() => {
     const el = listRef.current;
     if (el) el.scrollTop = Math.min(index, Math.max(cards.length - 1, 0)) * el.clientHeight;
@@ -181,9 +182,10 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
             {hasCards ? tt("필터를 바꾸거나, '이미 알아요'로 숨긴 문장을 다시 볼 수 있어요.") : tt('다른 언어를 고르거나 배울래요 탭에서 직접 문장을 추가해 보세요.')}
             {hasCards && <Button kind="line" auto style={{ marginTop: 12, minHeight: 44, fontSize: 14 }} onClick={openFilter}>{tt('필터 열기')}</Button>}
           </div>
-        ) : cards.map((c, i) => (
-          // 카드가 1,000장이 넘어서, 지금 카드 앞뒤 3장만 내용을 그려요 (나머지는 같은 높이의 빈 칸이라 스크롤 위치는 그대로)
-          Math.abs(i - index) > 3 ? <article className="card" key={c.id} aria-hidden /> :
+        ) : <>
+          {/* 카드가 2,000장이 넘어서, 지금 카드 앞뒤 3장만 만들고 나머지는 위아래 빈 공간 하나씩으로 채워요 (스크롤 길이는 그대로) */}
+          <div style={{ height: `${lo * 100}%` }} aria-hidden />
+          {cards.slice(lo, hi).map((c, k) => { const i = lo + k; return (
           c.video?.full || (overlay && c.video) ? (
           <article className={`card full${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className="card-body vcard">
@@ -210,8 +212,9 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
               {!onlyVideo && <button className="study-btn" onClick={() => startStudy(i)}><i><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></i><span><b>{(() => { const n = Math.min(10, cards.slice(i).filter((x) => !x.video).length); return n === 10 ? tt('10문장 공부하기') : tt('{n}문장 공부하기', { n }); })()}</b><small>{tt('듣고 · 빈칸 채우기')}</small></span><svg className="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>}
             </div>
           </article>
-          )
-        ))}
+          )); })}
+          <div style={{ height: `${(cards.length - hi) * 100}%` }} aria-hidden />
+        </>}
       </div>
 
       {onlyVideo && <div className="feed-top sh">{modeSw}</div>}
