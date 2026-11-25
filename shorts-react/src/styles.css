@@ -43,6 +43,8 @@ button:disabled{opacity:.4;cursor:default}input,textarea{font:inherit;color:inhe
   .app{top:50%;height:min(100dvh - 40px,880px);transform:translate(-50%,-50%);border-radius:28px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
 }
 .screen{position:absolute;inset:0;overflow:hidden;background:var(--bg)}
+/* 아이폰 상태바(시간·배터리) 아래부터 화면 시작. 휴식 장면은 배경이 꽉 차야 해서 제외 */
+.screen:not(.rest){top:env(safe-area-inset-top,0px)}
 .glow{background:var(--bg)}
 .page{position:absolute;inset:0;padding:28px 16px 110px;overflow-y:auto;overscroll-behavior:contain}
 h2.title{font-size:26px;font-weight:500;margin:4px 0 8px}
@@ -569,7 +571,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-l
   color:var(--ink);
 }
 .shorts .feed-head,.shorts .peek{display:none}
-.shorts .card-body{left:0;right:0;top:env(safe-area-inset-top,0px);bottom:150px;padding:0 20px;border:0;border-radius:0;box-shadow:none;background:none}
+.shorts .card-body{left:0;right:0;top:0;bottom:150px;padding:0 20px;border:0;border-radius:0;box-shadow:none;background:none}
 .shorts .card-body.has-vid .vid{margin:0 -20px 14px;border:0;height:min(360px,44vh);max-height:none}
 .sh-meta{display:flex;justify-content:space-between;margin-bottom:12px;font-size:13px;font-weight:500;color:var(--muted)}
 .shorts .card.cur .card-body>.vid{animation:none}
@@ -1249,7 +1251,7 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .shorts .mode-sw{background:rgba(255,255,255,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .shorts .mode-sw button{color:rgba(255,255,255,.75)}
 .shorts .mode-sw .on{background:#fff;color:#111}
-.shorts .card-body{top:calc(env(safe-area-inset-top,0px) + 60px)}
+.shorts .card-body{top:60px}
 .my-rec{display:flex;align-items:center;gap:12px;width:100%;text-align:left;color:var(--ink);margin-bottom:12px;padding:14px 16px}
 .my-rec .fl{width:40px;height:40px;border-radius:13px;background:rgba(255,122,47,.13);display:flex;align-items:center;justify-content:center;flex:none}
 .my-rec .fl .i{width:20px;height:20px;stroke:#ff7a2f;fill:#ff7a2f}
