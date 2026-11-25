@@ -157,6 +157,7 @@ export function Settings() {
       <div className="my-card list">
         {/* 임시: 온보딩 확인용, 나중에 지운다 */}
         <Item icon="undo" color="#6b7078" label={tt('처음 화면 다시 보기')} value={tt('언어 고르기부터 다시 시작')} onClick={() => go('onboarding')} />
+        <Item icon="repeat" color="#2563eb" label={tt('새로 고침')} value={tt('새로 배포한 내용 받기')} onClick={() => location.reload()} />
       </div>
       <Note>{tt('문장 쇼츠 · 외국어 문장과 뜻은 아직 원어민 검수 전이에요.')}</Note>
     </div></section>
