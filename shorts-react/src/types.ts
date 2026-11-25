@@ -71,6 +71,8 @@ export interface AppState {
   lastBackup: number | null;
   /** 단어장 기록: '언어:단어' → [칸, 다음에 볼 시각] */
   vocab: Record<string, [number, number]>;
+  /** 단어장에서 고른 주제. ''은 전체 */
+  vocabTopic: string;
 }
 
 export type Screen =

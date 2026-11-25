@@ -32,6 +32,7 @@ const defaults: AppState = {
   notifyAsked: false,
   lastBackup: null,
   vocab: {},
+  vocabTopic: '',
 };
 
 // 이전 버전 데이터도 그대로 읽도록 기본값 위에 덮어쓴다 (저장 키는 기존 앱과 같다)
