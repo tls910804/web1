@@ -44,7 +44,6 @@ export function AutoSheet() {
       <SheetHead title={tt('자동재생')} />
       <Group style={{ margin: 0 }}>
         <button className="row" onClick={() => set({ auto: !state.auto })}><span className="lb">{tt('자동재생')}<small>{tt('카드를 넘기면 발음이 바로 나와요')}</small></span><span className={`switch${state.auto ? ' on' : ''}`} /></button>
-        <button className="row" onClick={() => set({ slow: !state.slow })}><span className="lb">{tt('천천히 듣기')}<small>{tt('발음을 조금 느리게 들려줘요')}</small></span><span className={`switch${state.slow ? ' on' : ''}`} /></button>
       </Group>
       <Lbl>{tt('반복')}</Lbl>
       <div className="grid">{[1, 2, 3].map((n) => <Chip key={n} on={state.autoRepeat === n} onClick={() => set({ autoRepeat: n })}>{tt('{n}번', { n })}</Chip>)}</div>

@@ -8,7 +8,7 @@ import { allCats, countFeed, feedCards, allCards, tabList, videoCards } from '..
 import { LEVELS } from '../constants';
 import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
-import { lang, langTag, sentence, trOf } from '../lib/text';
+import { langTag, sentence, trOf, langName } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
@@ -151,6 +151,12 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   };
 
   const [menu, setMenu] = useState(false);
+  const [speedOpen, setSpeedOpen] = useState(false);
+  const pickSpeed = (v: number, name: string) => {
+    set({ speed: v }); setSpeedOpen(false);
+    if (cur) speak(sentence(cur), cur.lang, { speed: v });
+    toast(v === 1 ? tt('보통 속도로 들려줘요') : tt('{name}({v}×) 들려줘요', { name, v }));
+  };
   const openFilter = () => setMenu(true);
 
   const hasCards = allCards(state).length > 0;
@@ -164,8 +170,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   const modeSw = (
     <div className="mode-tabs">
       <button className={onlyVideo ? '' : 'on'} onClick={() => ui.go('feed')}><Icon name="copy" />{tt('문장')}<small>{textCards.length}</small></button>
-      <button className={onlyVideo && !overlay ? 'on sh' : ''} onClick={() => ui.go('shorts')}><Icon name="play" />{tt('쇼츠')}<small>{vidCards.length}</small></button>
-      {import.meta.env.DEV && <button className={overlay ? 'on sh' : ''} onClick={() => ui.go('shorts2')}><Icon name="play" />{tt('시안쇼츠')}</button>}
+      <button className={onlyVideo ? 'on sh' : ''} onClick={() => ui.go('shorts')}><Icon name="play" />{tt('쇼츠')}<small>{vidCards.length}</small></button>
     </div>
   );
   // 처음 한 번만: 문장 / 쇼츠가 무엇인지 알려 준다
@@ -200,12 +205,12 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
           <article className={`card${c.id === curId ? ' cur' : ''}`} key={c.id}>
             <div className={`card-body${c.video ? ' has-vid' : ''}`} onClick={(e) => { if (state.hideTr && (e.target as Element).closest('.tr,.expr')) e.currentTarget.querySelector('.tr')?.classList.toggle('hide'); }}>
               {!onlyVideo && <div className="band">
-                <span>{tt(c.cat)} · {lang(c.lang).name} · {i + 1} / {cards.length}</span>
+                <span>{tt(c.cat)} · {langName(c.lang)} · {i + 1} / {cards.length}</span>
                 <button className={`auto-chip${state.auto ? ' on' : ''}`} aria-label={tt('자동재생')} onClick={() => openSheet(<AutoSheet />)}><Icon name="repeat" />{tt('자동')}</button>
               </div>}
               {i === 0 && !state.tapped && !onlyVideo && <span className="hint">{tt('단어를 눌러 보세요')}</span>}
               {c.video && <VideoBlock video={c.video} active={c.id === curId} onSpoken={onSpoken(c)} />}
-              {onlyVideo && <div className="sh-meta"><span>{tt(c.cat)} · {lang(c.lang).name}</span><span>{i + 1} / {cards.length}</span></div>}
+              {onlyVideo && <div className="sh-meta"><span>{tt(c.cat)} · {langName(c.lang)}</span><span>{i + 1} / {cards.length}</span></div>}
               <WordChips card={c} selected={selection?.cardId === c.id ? selection.set : undefined} onWord={(wi) => onWord(c, wi)} spoken={spokenOf(c)} paged={!!c.video} />
               <p className={`tr${state.hideTr ? ' hide' : ''}`}>{trOf(c.tr, state.native)}</p>
               {c.expr && <><div className="divider" /><Expr lang={langTag(c.lang)} text={c.expr} mean={trOf(c.mean, state.native)} /></>}
@@ -244,7 +249,17 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
         <div className="acts">
           <button key={saved ? 'on' : 'off'} className={`act${saved ? ' on pop' : ''}`} aria-label={tt('배울 문장으로 저장')} onClick={() => cur && toggleSave('s', cur)}><Icon name="mark" /></button>
           <button className="act" aria-label={tt('발음 듣기')} onClick={() => cur && speak(sentence(cur), cur.lang)}><Icon name="speak" /></button>
-          <button className="act" aria-label={tt('느리게 듣기')} onClick={() => cur && speak(sentence(cur), cur.lang, { rate: 0.55 })}><Icon name="clock" /></button>
+          <div className="spd-wrap">
+            <button className={`act spd${state.speed < 1 ? ' on' : ''}`} aria-label={tt('듣기 속도')} aria-expanded={speedOpen} onClick={() => setSpeedOpen(!speedOpen)}>{state.speed}×</button>
+            {speedOpen && (
+              <div className="spd-pop" role="menu">
+                <b>{tt('듣기 속도')}</b>
+                {([[1, '보통'], [0.8, '조금 느리게'], [0.6, '느리게']] as const).map(([v, n]) => (
+                  <button key={v} role="menuitemradio" aria-checked={state.speed === v} className={state.speed === v ? 'on' : ''} onClick={() => pickSpeed(v, tt(n))}><i>{v}×</i>{tt(n)}</button>
+                ))}
+              </div>
+            )}
+          </div>
           <button className={`act${state.hideTr ? ' off' : ''}`} aria-label={tt('해석 가리기')} onClick={() => set({ hideTr: !state.hideTr })}><Icon name={state.hideTr ? 'eyeOff' : 'eye'} /></button>
           <button className="act" aria-label={tt('문장 복사')} onClick={copy}><Icon name="copy" /></button>
           <button className="act" aria-label={tt('공유 카드 만들기')} onClick={() => cur && openSheet(<ShareSheet card={cur} />)}><Icon name="share" /></button>

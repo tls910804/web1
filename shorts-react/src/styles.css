@@ -1490,3 +1490,44 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 @media (max-height:700px){.call-home .ch-in{display:none}.call-home .ch-center h1{font-size:30px}.call-home .ch-bottom{gap:14px}}
 /* 아이폰은 글자가 16px보다 작은 입력칸을 누르면 화면을 확대해서 오른쪽이 잘려요 → 터치 기기에서는 입력칸 글자를 16px 이상으로 */
 @media (pointer:coarse){input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,select{font-size:max(16px,1em) !important}}
+
+/* 카드 오른쪽 듣기 속도 버튼 + 고르는 창 */
+.spd-wrap{position:relative}
+.act.spd{width:32px;height:32px;border:1.5px solid var(--ink);border-radius:50%;font:700 11px var(--f-latin);color:var(--ink);letter-spacing:-.3px}
+.act.spd.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.spd-pop{position:absolute;right:44px;top:50%;transform:translateY(-50%);width:176px;padding:8px;border-radius:16px;background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,.18);display:flex;flex-direction:column;gap:2px;z-index:5}
+.spd-pop b{font-size:12px;font-weight:600;color:var(--muted);padding:6px 10px 4px}
+.spd-pop button{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;font-size:14px;color:var(--ink)}
+.spd-pop button i{font:700 13px var(--f-latin);font-style:normal;width:34px;color:var(--muted)}
+.spd-pop button.on{background:var(--blue-soft);color:var(--blue)}.spd-pop button.on i{color:var(--blue)}
+
+/* 단어장 */
+.vb h1{margin:0 0 12px;font-size:24px}
+.vb-langs{display:flex;gap:8px;margin-bottom:12px}
+.vb-top{display:flex;flex-direction:column;gap:14px}
+.vb-nums{display:flex}.vb-nums span{flex:1;text-align:center}.vb-nums b{display:block;font:700 24px var(--f-latin)}
+.vb-bar{display:flex;height:6px;border-radius:3px;background:var(--track);overflow:hidden}
+.vb-bar i{background:var(--blue);transition:width .25s}.vb-bar i.mid{opacity:.35}
+.vb-done{margin:0;text-align:center;color:var(--muted);font-size:14px}
+.vb-list{list-style:none;margin:14px 0 0;padding:0}
+.vb-list button{display:flex;align-items:center;gap:12px;width:100%;padding:12px 4px;border-bottom:1px solid var(--line);text-align:left}
+.vb-list span{flex:1;min-width:0}.vb-list b{display:block;font-size:16px}.vb-list small{display:block;font-size:13px;color:var(--muted)}
+.vb-list em{display:flex;gap:3px}.vb-list em i{width:5px;height:5px;border-radius:50%;background:var(--track)}.vb-list em i.on{background:var(--blue)}
+.vb-list svg{width:18px;height:18px;color:var(--muted);flex:none}
+.vb-session{position:absolute;inset:0;z-index:6;display:flex;flex-direction:column;background:var(--bg)}
+.vb-head{display:flex;align-items:center;gap:12px;padding:14px 16px}.vb-head .vb-bar{flex:1}.vb-head svg{width:22px;height:22px;display:block}
+.vb-body{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:14px;padding:12px 20px var(--cta-b);text-align:center}
+.vb-q{color:var(--muted);font-size:13px}
+.vb-word{display:flex;align-items:center;justify-content:center;gap:10px;margin:8px 0;width:100%;text-align:center}.vb-word b{font-size:30px}.vb-word svg{width:24px;height:24px;color:var(--blue)}
+.vb-mean{margin:0;font-size:18px;color:var(--sub)}
+.vb-ex{display:block;width:100%;padding:14px;border-radius:14px;background:var(--soft);text-align:left}
+.vb-ex b{display:block;font-size:15px;font-weight:600}.vb-ex small{display:block;margin-top:4px;color:var(--muted);font-size:13px}
+.vb-opts{display:flex;flex-direction:column;gap:10px}
+.vb-opts button{padding:14px;min-height:52px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);text-align:center;font-size:16px}
+.vb-opts button:disabled{opacity:1}
+.vb-opts button.ok,.vb-body input.ok{border-color:#16a34a;background:rgba(22,163,74,.12)}
+.vb-opts button.no,.vb-body input.no{border-color:var(--danger);background:var(--danger-soft)}
+.vb-body input{width:100%;padding:14px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);text-align:center;font-size:18px}
+.vb-skip{margin-top:10px;padding:10px;width:100%;text-align:center;color:var(--muted);font-size:14px}
+.vb-foot{margin-top:auto;display:flex;flex-direction:column;gap:8px}
+.vb-end{justify-content:center}.vb-end h2{margin:0}.vb-end p{margin:0;color:var(--muted)}

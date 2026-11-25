@@ -5,7 +5,7 @@ import { Button, Chip, IconButton } from '../components/Button';
 import { Icon } from '../components/Icon';
 import { Lbl } from '../components/Layer';
 import { newItem } from '../lib/useActions';
-import { lang } from '../lib/text';
+import { lang, langName } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
@@ -51,10 +51,10 @@ export function Add() {
         </div>
         <p className="desc" style={{ marginTop: 6 }}>{tt('드라마·수업·대화에서 만난 문장을 내 카드로 저장해요')}</p>
         <Lbl>{tt('배우는 언어')}</Lbl>
-        <div className="grid">{state.learn.map((c) => <Chip key={c} on={c === code} onClick={() => { setCode(c); setSel([]); }}>{lang(c).name}</Chip>)}</div>
+        <div className="grid">{state.learn.map((c) => <Chip key={c} on={c === code} onClick={() => { setCode(c); setSel([]); }}>{langName(c)}</Chip>)}</div>
         <label className="lbl" htmlFor="add-text">{tt('문장')}</label>
         <textarea className="field" id="add-text" rows={2} placeholder="I'm running late, be there in ten." value={text} onChange={(e) => setText(e.target.value)} />
-        <label className="lbl" htmlFor="add-tr">{tt('해석')}<small>{lang(state.native).ko}</small></label>
+        <label className="lbl" htmlFor="add-tr">{tt('해석')}<small>{tt(lang(state.native).ko)}</small></label>
         <textarea className="field" id="add-tr" rows={1} placeholder={tt('좀 늦어, 10분 안에 갈게.')} value={tr} onChange={(e) => setTr(e.target.value)} />
         <Lbl small={tt('선택 · 단어를 눌러 묶어요')}>{tt('핵심 표현')}</Lbl>
         <div className="words sm">

@@ -57,7 +57,7 @@ function Reader({ story, onBack }: { story: Story; onBack: () => void }) {
     setAt(i);
     document.querySelectorAll('.sy-line')[i]?.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
     speak(text, story.lang, { quiet: i > 0 });
-    timer.current = window.setTimeout(() => playFrom(i + 1), guessMs(text, state.slow));
+    timer.current = window.setTimeout(() => playFrom(i + 1), guessMs(text, state.speed < 1));
   };
   return (
     <section className="screen sy-read"><div className="page">

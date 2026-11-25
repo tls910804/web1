@@ -5,7 +5,7 @@ import { Icon } from '../components/Icon';
 import { NO_SPACE } from '../constants';
 import { CARDS } from '../data';
 import { rateResult } from '../lib/srs';
-import { clean, lang, langTag, sentence, trOf, wordInfo } from '../lib/text';
+import { clean, langTag, sentence, trOf, wordInfo, langName } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card, SavedItem } from '../types';
@@ -185,7 +185,7 @@ export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKin
       <>
         <div className="rv-body ex-body">
           <div className="rcard ex ex-dict">
-            <span className="rc-chip">{tt('듣고 받아쓰기')} · {lang(c.lang).name}</span>
+            <span className="rc-chip">{tt('듣고 받아쓰기')} · {langName(c.lang)}</span>
             <button className="ex-play" aria-label={tt('발음 듣기')} onClick={() => speak(sentence(c), c.lang)}><Icon name="speak" /></button>
             <button className="ex-slow" onClick={() => speak(sentence(c), c.lang, { rate: 0.7 })}>{tt('느리게 듣기')}</button>
           </div>
@@ -239,7 +239,7 @@ export function Exercise({ kind, item, onDone, onSkip, practice }: { kind: ExKin
     <>
       <div className="rv-body ex-body">
         <div className="rcard ex">
-          <span className="rc-chip">{tt('빈칸 채우기')} · {lang(c.lang).name}</span>
+          <span className="rc-chip">{tt('빈칸 채우기')} · {langName(c.lang)}</span>
           <p className="rc-s" lang={langTag(c.lang)}>{parts}</p>
           <p className="rc-tr">{keyBlank ? <KoLine card={c} native={state.native} /> : tr}</p>
           <BlankNote code={c.lang} text={text} answer={answer} mean={ansMean} shown={shown && !end} tried={tried} miss={miss} />

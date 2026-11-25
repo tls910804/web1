@@ -1,4 +1,4 @@
-import { LANGS } from '../data';
+import { LANGS, SHOWN_LANGS } from '../data';
 import { tt } from '../i18n';
 import { Chip } from '../components/Button';
 import { useStore } from '../store';
@@ -32,14 +32,14 @@ export function LangPickers({ onboarding, part }: { onboarding?: boolean; part?:
       {part !== 'learn' && <>
         <h3 className="sec">{tt('내 언어 (해석으로 보여줄 언어)')}</h3>
         <div className="grid">
-          {LANGS.map((l) => <Chip key={l.code} on={l.code === state.native} onClick={() => setNative(l.code)}>{l.name}{!onboarding && <small>{l.ko}</small>}</Chip>)}
+          {LANGS.map((l) => <Chip key={l.code} on={l.code === state.native} onClick={() => setNative(l.code)}>{l.name}{!onboarding && <small>{tt(l.ko)}</small>}</Chip>)}
         </div>
       </>}
       {part !== 'native' && <>
         <h3 className="sec">{tt('배우는 언어 (여러 개 선택)')}</h3>
         <div className="grid">
-          {LANGS.filter((l) => l.code !== state.native).map((l) => (
-            <Chip key={l.code} on={state.learn.includes(l.code)} onClick={() => toggleLearn(l.code)}>{l.name}{!onboarding && <small>{l.ko}</small>}</Chip>
+          {SHOWN_LANGS.filter((l) => l.code !== state.native).map((l) => (
+            <Chip key={l.code} on={state.learn.includes(l.code)} onClick={() => toggleLearn(l.code)}>{l.name}{!onboarding && <small>{tt(l.ko)}</small>}</Chip>
           ))}
         </div>
       </>}

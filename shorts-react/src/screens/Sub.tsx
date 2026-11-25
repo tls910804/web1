@@ -1,5 +1,5 @@
 import { useRef, type ChangeEvent } from 'react';
-import { tt } from '../i18n';
+import { tt, uiLang } from '../i18n';
 import { FONT_SIZES, MODES, THEMES } from '../constants';
 import { IconButton } from '../components/Button';
 import { Icon } from '../components/Icon';
@@ -80,10 +80,10 @@ export function Sub() {
       <><Header title={tt('학습')} />
         <Group>
           <ToggleRow label={tt('자동재생')} sub={tt('카드를 넘기면 발음이 자동으로 나와요')} on={state.auto} onClick={() => set({ auto: !state.auto })} />
-          <ToggleRow label={tt('천천히 듣기')} sub={tt('발음을 조금 느리게 들려줘요')} on={state.slow} onClick={() => set({ slow: !state.slow })} />
+          <Row label={tt('듣기 속도')} value={`${state.speed}× · ${tt('카드에서 바꿀 수 있어요')}`} onClick={() => set({ speed: state.speed === 1 ? 0.8 : state.speed === 0.8 ? 0.6 : 1 })} />
           <Row label={tt('복습 방식')} value={tt(MODES[state.mode].name)} onClick={() => openSub('review-mode')} />
           <Row label={tt('하루 복습 개수')} value={tt('{n}문장', { n: state.daily })} onClick={() => openSub('review-mode')} />
-          <Row label={tt('난이도')} value={state.level} onClick={() => openSheet(<LevelSheet />)} />
+          <Row label={tt('난이도')} value={tt(state.level)} onClick={() => openSheet(<LevelSheet />)} />
         </Group></>
     );
   }
@@ -139,7 +139,7 @@ export function Sub() {
           <Row label={tt('파일에서 가져오기')} value="JSON" onClick={() => fileRef.current?.click()} />
           <Row label={tt('\'이미 알아요\' 문장 다시 보기')} value={tt('{n}개', { n: state.known.length })} onClick={unhide} disabled={!state.known.length} />
         </Group>
-        <Note>{tt('마지막 백업')}: {state.lastBackup ? new Date(state.lastBackup).toLocaleString('ko-KR') : tt('없음')}</Note></>
+        <Note>{tt('마지막 백업')}: {state.lastBackup ? new Date(state.lastBackup).toLocaleString(uiLang()) : tt('없음')}</Note></>
     );
   }
   if (sub === 'account') {

@@ -13,10 +13,16 @@ type Content = { v: number; cards: unknown; gloss: unknown; stories: unknown; vi
 const KEY = 'content-cache';
 const bundled: Content = { v: __CONTENT_V__, cards, gloss, stories, videos, calls };
 
+// 저장 공간(약 500만 글자)은 학습 기록과 같이 써요. 큰 내용을 담으면 기록 저장이 실패할 수 있어서 받아 두지 않아요
+// shortcut: 지금 내용은 이보다 커서 서버 갱신분은 담기지 않음. 앱스토어 앱에서 필요해지면 Cache API로 옮기기
+export const keepable = (raw: string) => raw.length <= 2_000_000;
+
 function load(): Content {
   try {
-    const c = JSON.parse(localStorage.getItem(KEY) || 'null') as Content | null;
+    const raw = localStorage.getItem(KEY);
+    const c = raw && keepable(raw) ? (JSON.parse(raw) as Content) : null;
     if (c && c.v > bundled.v) return c;
+    if (raw) localStorage.removeItem(KEY); // 크거나 낡은 것은 지워서 자리를 비워요
   } catch { /* 저장소를 못 쓰면 앱에 묶인 내용으로 */ }
   return bundled;
 }
@@ -24,8 +30,10 @@ function load(): Content {
 export const CONTENT = load();
 
 fetch(`${CONTENT_BASE}content.json`, { cache: 'no-cache' })
-  .then((r) => (r.ok ? r.json() : null))
-  .then((c: Content | null) => {
-    if (c && typeof c.v === 'number' && c.v > CONTENT.v) localStorage.setItem(KEY, JSON.stringify(c));
+  .then((r) => (r.ok ? r.text() : ''))
+  .then((raw) => {
+    if (!raw || !keepable(raw)) return;
+    const c = JSON.parse(raw) as Content;
+    if (typeof c.v === 'number' && c.v > CONTENT.v) localStorage.setItem(KEY, raw);
   })
   .catch(() => { /* 인터넷이 없으면 지금 내용 그대로 */ });

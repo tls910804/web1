@@ -12,7 +12,7 @@ type Layer =
 
 interface Toast { id: number; msg: string; label?: string; fn?: () => void }
 
-export interface SpeakOpt { rate?: number; repeat?: number; quiet?: boolean }
+export interface SpeakOpt { speed?: number; rate?: number; repeat?: number; quiet?: boolean }
 
 interface Ui {
   screen: Screen;
@@ -115,9 +115,10 @@ export function UiProvider({ children }: { children: ReactNode }) {
   }, [toastNode]);
 
   const speak = useCallback((text: string, code: string, opt: SpeakOpt = {}) => {
-    const rate = opt.rate || (state.slow ? 0.7 : 0.9);
+    const sp = opt.speed ?? state.speed;
+    const rate = opt.rate || 0.9 * sp;
     // 미리 만들어 둔 음성이 있으면 그걸 쓰고, 없을 때만 브라우저 기본 음성으로 읽는다
-    if (playAudio(text, code, rate < 0.8, opt.repeat)) {
+    if (playAudio(text, code, opt.rate ? (opt.rate < 0.8 ? 0.75 : 1) : sp, opt.repeat)) {
       if (speechOk()) speechSynthesis.cancel();
       return;
     }
@@ -128,10 +129,10 @@ export function UiProvider({ children }: { children: ReactNode }) {
     if (!hasVoice(code) && !voiceWarned.current[code]) {
       voiceWarned.current[code] = true;
       const l = lang(code);
-      openDialog(tt('이 기기에 {l} 음성이 없어요', { l: l.ko }), tt('기기 설정의 \'텍스트 음성 변환\'에서 {l} 음성을 내려받으면 정확한 발음으로 들을 수 있어요. 지금은 기본 음성으로 읽어요.', { l: l.ko }), [{ label: tt('확인'), kind: 'dark' }]);
+      openDialog(tt('이 기기에 {l} 음성이 없어요', { l: tt(l.ko) }), tt('기기 설정의 \'텍스트 음성 변환\'에서 {l} 음성을 내려받으면 정확한 발음으로 들을 수 있어요. 지금은 기본 음성으로 읽어요.', { l: tt(l.ko) }), [{ label: tt('확인'), kind: 'dark' }]);
     }
     say(text, code, rate, opt.repeat);
-  }, [openDialog, state.slow]);
+  }, [openDialog, state.speed]);
 
   const value = useMemo<Ui>(() => ({
     screen, go, sub, openSub, goBack, layer, openSheet, openDialog, closeLayer, selection, setSelection,

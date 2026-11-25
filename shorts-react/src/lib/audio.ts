@@ -70,7 +70,8 @@ export function stopAudio() {
   if (current) { current.pause(); current = null; }
 }
 
-export function playAudio(text: string, lang: string, slow: boolean, repeat = 1): boolean {
+export function playAudio(text: string, lang: string, rate: number, repeat = 1): boolean {
+  const slow = rate < 1;
   const e = manifest?.[`${lang}|${text}`];
   if (!e) return false;
   stopAudio();
@@ -82,7 +83,7 @@ export function playAudio(text: string, lang: string, slow: boolean, repeat = 1)
     ctx?.resume().catch(() => {}); // 앱을 다시 열었을 때 멈춰 있으면 깨워요 (안 깨우면 소리가 안 나요)
     a.src = url;
     // 느린 파일이 따로 없으면 보통 파일을 느리게(음높이는 그대로). 사파리는 src를 바꾸면 속도를 default로 되돌려요
-    a.defaultPlaybackRate = a.playbackRate = slow && !e.s ? 0.75 : 1;
+    a.defaultPlaybackRate = a.playbackRate = slow && !e.s ? rate : 1;
     current = a;
     a.onended = () => { if (token === my && --left > 0) setTimeout(play, 350); };
     a.play().catch(() => { /* 자동 재생이 막힌 경우는 조용히 넘어간다 */ });

@@ -1,7 +1,8 @@
 // 정답 확인·필터 개수 자체 점검. 실행: npm run test
 import assert from 'node:assert/strict';
 import { diff, findMiss, norm, blankOf, exKind } from '../screens/Exercise';
-import { countFeed, tabOf, TABS } from './feed';
+import { countFeed, tabOf, TABS, timed, videoCards } from './feed';
+import { keepable } from './content';
 import { GRAD_AT, interval, rateResult, streakInfo, wrongNote } from './srs';
 import { normalize } from '../store';
 import { dayKey } from './text';
@@ -80,5 +81,13 @@ assert.equal(old.saved[0].wi, -1);
 assert.equal(old.saved[0].step, 0);
 assert.deepEqual(old.notify, { morning: false, evening: false });
 assert.equal(normalize({ log: 'x' } as unknown as Partial<AppState>).log.constructor, Object);
+
+// 영상: 단어 수만큼 시간이 있어야 보여줘요
+const vid = (times?: number[]) => ({ words: ['a', 'b'], video: { id: 'x', start: 0, end: 1, times } }) as unknown as Parameters<typeof timed>[0];
+assert.ok(timed(vid([0, 0.5])) && !timed(vid()) && !timed(vid([0])));
+assert.equal(videoCards({ learn: ['en'], known: [] } as unknown as AppState).length, 11);
+
+// 큰 내용은 기록 저장 공간에 담지 않아요
+assert.ok(keepable('a') && !keepable('a'.repeat(2_000_001)));
 
 console.log('ok answer/filter');

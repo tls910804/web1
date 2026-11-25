@@ -26,6 +26,7 @@ import { Call, SurpriseCall } from './screens/Call';
 import { Rest } from './screens/Rest';
 import { StoryScreen } from './screens/Story';
 import { Sub } from './screens/Sub';
+import { Vocab } from './screens/Vocab';
 
 export function App() {
   const { state, set, saveFailed, retrySave } = useStore();
@@ -124,7 +125,7 @@ export function App() {
       {screen === 'splash' && <Splash />}
       {screen === 'onboarding' && <Onboarding />}
       {screen === 'feed' && <Feed />}
-      {screen === 'shorts' && <Feed onlyVideo />}
+      {screen === 'shorts' && <Feed onlyVideo overlay />}
       {screen === 'shorts2' && <Feed onlyVideo overlay />}
       {screen === 'saved' && <Saved />}
       {screen === 'stats' && <Stats />}
@@ -138,6 +139,7 @@ export function App() {
       {screen === 'rest' && <Rest />}
       {screen === 'story' && <StoryScreen />}
       {screen === 'call' && <Call />}
+      {screen === 'vocab' && <Vocab />}
 
       {!online && (
         <div className="net"><Icon name="offline" /><span><b>{tt('오프라인이에요')}</b>{tt('저장한 문장과 복습은 그대로 쓸 수 있어요')}</span></div>

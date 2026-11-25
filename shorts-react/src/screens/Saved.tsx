@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { tt } from '../i18n';
+import { tt, uiLang } from '../i18n';
 import { VideoBlock } from './Feed';
 import { Button, Chip, IconButton } from '../components/Button';
 import { Icon } from '../components/Icon';
@@ -8,7 +8,7 @@ import { Expr, Pill } from '../components/Rows';
 import { DAY } from '../constants';
 import { daysLabel, dueItems, GRAD_AT, isWeak, minutesFor, nextDueText, retryItems, todayCount, weakInToday, weakItems, WEAK_AT } from '../lib/srs';
 import { useActions } from '../lib/useActions';
-import { lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
+import { langTag, sentence, startOfDay, trOf, wordInfo, langName } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import { RetryBar, useNow } from './Review';
@@ -146,7 +146,7 @@ export function Saved() {
           <button className="chip" onClick={() => speak(t.say, x.card.lang, { rate: 0.7 })}><Icon name="clock" />{tt('느리게')}</button>
         </div>
         <div className="det-tiles">
-          <div className="det-tile"><b>{new Date(x.at).toLocaleDateString('ko-KR', { month: 'long', day: 'numeric' })}</b><span>{tt('저장한 날')}</span></div>
+          <div className="det-tile"><b>{new Date(x.at).toLocaleDateString(uiLang(), { month: 'long', day: 'numeric' })}</b><span>{tt('저장한 날')}</span></div>
           <div className="det-tile hi"><b>{next}</b><span>{tt('다음 복습')}</span></div>
         </div>
         <label className="det-memo-l"><span>{tt('메모')}</span>
@@ -221,7 +221,7 @@ export function Saved() {
         return (
           <div className={`item${on ? ' sel' : ''}`} key={x.id} {...press(x)}>
             {sel && <i className={`chk${on ? ' on' : ''}`} />}
-            <div className="tags"><Pill>{lang(x.card.lang).name}</Pill>{badge}</div>
+            <div className="tags"><Pill>{langName(x.card.lang)}</Pill>{badge}</div>
             {x.card.video && <div onClick={(e) => e.stopPropagation()} onPointerDown={(e) => e.stopPropagation()}><VideoBlock video={x.card.video} active={false} onSpoken={() => {}} /></div>}
             <div className="en" lang={langTag(x.card.lang)}>{t.head}</div>
             <div className="ko">{t.sub}</div>

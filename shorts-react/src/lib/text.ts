@@ -1,6 +1,7 @@
 import { GLOSS, LANGS } from '../data';
 import { NO_SPACE } from '../constants';
 import type { Card } from '../types';
+import { tt, uiLang } from '../i18n';
 
 /** 글꼴을 고르는 데 쓰는 언어 태그. 중국어는 간체/번체가 글꼴이 달라서 구분한다 */
 export const langTag = (code: string) => (code === 'zh' ? 'zh-Hans' : code);
@@ -8,6 +9,9 @@ export const langTag = (code: string) => (code === 'zh' ? 'zh-Hans' : code);
 export function lang(code: string) {
   return LANGS.find((l) => l.code === code) ?? LANGS[0];
 }
+
+/** 카드 위에 붙는 언어 이름: 한국어 화면은 그 나라 말(English, 日本語), 다른 화면은 화면 언어로 (Korean) */
+export const langName = (code: string) => (uiLang() === 'ko' ? lang(code).name : tt(lang(code).ko));
 
 export function trOf(obj: Record<string, string> | undefined, native: string): string {
   if (!obj) return '';
@@ -17,11 +21,15 @@ export function trOf(obj: Record<string, string> | undefined, native: string): s
 export const sentence = (card: Card) => card.words.join(NO_SPACE[card.lang] ? '' : ' ');
 export const clean = (w: string) => w.replace(/^[¡¿\s]+|[.,!?。、！？\s]+$/g, '');
 
+// gloss 한 칸 "ko|en|id|ja|zh|es"의 순서. tools/translate/fill.py의 ORDER와 같아야 해요
+const GLOSS_ORDER = ['ko', 'en', 'id', 'ja', 'zh', 'es'];
+
 function glossOf(card: Card, wi: number, native: string) {
   const g = GLOSS[card.id]?.[wi] || '';
   if (!g) return '';
   const p = g.split('|');
-  return native === 'ko' ? p[0] || p[1] || '' : p[1] || p[0] || '';
+  // 내 언어 뜻이 없으면 영어, 그것도 없으면 한국어
+  return p[GLOSS_ORDER.indexOf(native)] || p[1] || p[0] || '';
 }
 
 export interface WordInfo { wi: number; expr: boolean; text: string; mean: string; speak: string }

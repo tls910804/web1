@@ -59,7 +59,8 @@ export interface AppState {
   level: string;
   auto: boolean;
   autoRepeat: number;
-  slow: boolean;
+  /** 듣기 속도: 1 보통 · 0.8 조금 느리게 · 0.6 느리게 */
+  speed: number;
   mode: ModeKey;
   daily: number;
   fontSize: FontKey;
@@ -68,11 +69,13 @@ export interface AppState {
   notified: { m?: string; e?: string };
   notifyAsked: boolean;
   lastBackup: number | null;
+  /** 단어장 기록: '언어:단어' → [칸, 다음에 볼 시각] */
+  vocab: Record<string, [number, number]>;
 }
 
 export type Screen =
   | 'splash' | 'onboarding' | 'feed' | 'shorts' | 'saved' | 'stats' | 'settings'
-  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest' | 'shorts2' | 'story';
+  | 'sub' | 'review' | 'review-done' | 'add' | 'streak' | 'study' | 'call' | 'rest' | 'shorts2' | 'story' | 'vocab';
 
 export type SubName = 'langs' | 'learn' | 'review-mode' | 'notify' | 'display' | 'data' | 'account';
 

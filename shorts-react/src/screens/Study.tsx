@@ -6,7 +6,7 @@ import { NO_SPACE } from '../constants';
 import { stopAudio } from '../lib/audio';
 import { speechOk } from '../lib/speech';
 import { useActions } from '../lib/useActions';
-import { clean, lang, langTag, sentence, trOf } from '../lib/text';
+import { clean, langTag, sentence, trOf, langName } from '../lib/text';
 import { streakOf } from '../lib/srs';
 import { useStore } from '../store';
 import { useUi } from '../ui';
@@ -125,7 +125,7 @@ export function Study() {
             </div>
           )}
           <div className="st-ko">
-            <small>{tt(c.cat)} · {lang(c.lang).name}</small>
+            <small>{tt(c.cat)} · {langName(c.lang)}</small>
             <p><KoLine card={c} native={state.native} /></p>
           </div>
           {phase === 'blank'

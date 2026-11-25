@@ -4,6 +4,7 @@ import { LOCALES } from './locales';
 
 let cur = 'ko';
 export const setUiLang = (code: string) => { cur = code; };
+export const uiLang = () => cur;
 
 export function tt(src: string, p?: Record<string, string | number>) {
   let s = LOCALES[cur]?.[src] ?? src;

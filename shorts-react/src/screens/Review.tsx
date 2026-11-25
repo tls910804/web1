@@ -7,7 +7,7 @@ import { WordChips } from '../components/WordChips';
 import { DAY } from '../constants';
 import { daysLabel, mastered, nextDueText, rateResult, streakOf } from '../lib/srs';
 import { useActions } from '../lib/useActions';
-import { dayKey, lang, langTag, sentence, startOfDay, trOf, wordInfo } from '../lib/text';
+import { dayKey, langTag, sentence, startOfDay, trOf, wordInfo, langName } from '../lib/text';
 import { Exercise, exKind } from './Exercise';
 import { useStore } from '../store';
 import { useUi } from '../ui';
@@ -65,7 +65,7 @@ export function Review() {
       {top}
       <div className="rv-body">
         <div className={`rcard${rv.shown ? ' back' : ''}`} onClick={() => rv.shown && setRv({ ...rv, shown: false })}>
-          <span className="rc-chip">{tt(c.cat)} · {lang(c.lang).name}{item.kind === 'w' ? ` · ${tt(item.wi >= 0 ? '단어' : '표현')}` : ''}</span>
+          <span className="rc-chip">{tt(c.cat)} · {langName(c.lang)}{item.kind === 'w' ? ` · ${tt(item.wi >= 0 ? '단어' : '표현')}` : ''}</span>
           <div className="rc-main">
             {item.kind === 'w'
               ? <WordChips card={c} highlight={item.wi >= 0 ? [item.wi] : c.key} />

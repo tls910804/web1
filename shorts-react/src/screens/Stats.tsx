@@ -126,7 +126,7 @@ export function Stats() {
         <div className="stack"><i className="a" style={{ width: pct(learned) }} /><i className="b" style={{ width: pct(learning) }} /><i className="c" style={{ width: pct(fresh) }} /></div>
         <div className="legend"><span><i className="a" />{tt('외움 {n}', { n: learned })}</span><span><i className="b" />{tt('외우는 중 {n}', { n: learning })}</span><span><i className="c" />{tt('새로 담음 {n}', { n: fresh })}</span></div>
         {langs.length > 1 && (
-          <div className="langs">{langs.map((c) => { const it = state.saved.filter((x) => x.card.lang === c); return <span key={c}><small>{lang(c).ko}</small><b>{it.filter(mastered).length} / {it.length}</b></span>; })}</div>
+          <div className="langs">{langs.map((c) => { const it = state.saved.filter((x) => x.card.lang === c); return <span key={c}><small>{tt(lang(c).ko)}</small><b>{it.filter(mastered).length} / {it.length}</b></span>; })}</div>
         )}
       </div>
 

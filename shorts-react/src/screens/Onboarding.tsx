@@ -3,9 +3,9 @@ import { tt } from '../i18n';
 import { Button } from '../components/Button';
 import { FaceButton } from '../components/FaceButton';
 import { Icon } from '../components/Icon';
-import { CARDS, LANGS } from '../data';
+import { CARDS, LANGS, SHOWN_LANGS } from '../data';
 import { WordChips } from '../components/WordChips';
-import { lang, langTag, sentence, trOf } from '../lib/text';
+import { lang, langTag, sentence, trOf, langName } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import { useLangPick } from './LangPickers';
@@ -70,9 +70,9 @@ export function Onboarding() {
   const practiceCard = (back: boolean) => sample && (
     <div className={`rcard ob-practice${back ? ' back' : ` g${guide}`}`} onDoubleClick={() => !back && setSaved(true)}>
       {back ? (
-        <span className="rc-chip">{sample.cat} · {lang(sample.lang).name}</span>
+        <span className="rc-chip">{tt(sample.cat)} · {langName(sample.lang)}</span>
       ) : (
-        <div className="ob-head"><span className="ob-tag">{tt('연습')}</span><span className="rc-chip">{lang(sample.lang).name}</span></div>
+        <div className="ob-head"><span className="ob-tag">{tt('연습')}</span><span className="rc-chip">{langName(sample.lang)}</span></div>
       )}
       <div className="rc-main">
         {back
@@ -121,7 +121,7 @@ export function Onboarding() {
             <div className="ob-nat">
               {[...LANGS].sort((a, b) => (a.code === dev ? -1 : b.code === dev ? 1 : LANG_ORDER.indexOf(a.code) - LANG_ORDER.indexOf(b.code))).map((l) => {
                 const on = l.code === state.native;
-                const sub = l.code === dev ? ask[2] : state.native === 'ko' && l.code !== 'ko' ? l.ko : '';
+                const sub = l.code === dev ? ask[2] : state.native === 'ko' && l.code !== 'ko' ? tt(l.ko) : '';
                 return (
                   <button key={l.code} className={on ? 'on' : ''} onClick={() => setNative(l.code)}>
                     <Flag code={l.code} />
@@ -135,15 +135,15 @@ export function Onboarding() {
         )}
         {step === 2 && (
           <>
-            <div className="ob-top"><Dots at={1} /><button className="ob-natpill" onClick={() => setStep(1)}>{tt('뜻은')} <b>{lang(state.native).ko}</b><Icon name="chev" /></button></div>
+            <div className="ob-top"><Dots at={1} /><button className="ob-natpill" onClick={() => setStep(1)}>{tt('뜻은')} <b>{tt(lang(state.native).ko)}</b><Icon name="chev" /></button></div>
             <h2 className="title ob-q">{tt('어떤 언어를')}<br />{tt('배울까요?')}</h2>
             <p className="desc">{tt('여러 개 골라도 돼요. 고른 언어 문장이 섞여서 나와요.')}</p>
             <div className="lg-grid ob-grid">
-              {LANGS.filter((l) => l.code !== state.native).map((l) => {
+              {SHOWN_LANGS.filter((l) => l.code !== state.native).map((l) => {
                 const on = state.learn.includes(l.code);
                 return (
                   <button key={l.code} className={on ? 'on' : ''} onClick={() => toggleLearn(l.code)}>
-                    <Code c={l.code} /><span className="nm">{l.ko}<small>{l.name}</small></span><span className="ck">{on && <Icon name="check" />}</span>
+                    <Code c={l.code} /><span className="nm">{tt(l.ko)}<small>{l.name}</small></span><span className="ck">{on && <Icon name="check" />}</span>
                   </button>
                 );
               })}

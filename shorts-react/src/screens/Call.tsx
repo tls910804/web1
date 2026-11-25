@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { tt } from '../i18n';
+import { tt, uiLang } from '../i18n';
 import { Icon } from '../components/Icon';
 import { CARDS } from '../data';
 import { setAudioMode, stopAudio } from '../lib/audio';
@@ -107,7 +107,7 @@ function Marked({ text, upto }: { text: string; upto?: number }) {
 
 // how: 마이크로 말함 / 키보드로 씀 / 추천 대답을 그냥 보냄 (결과에서 따로 센다)
 type Line = { who: 'ai' | 'me'; en: string; ko?: string; good?: boolean; how?: 'said' | 'typed' | 'picked'; flag?: boolean; turn: number; at: number };
-const hm = (t: number) => new Date(t).toLocaleTimeString('ko-KR', { hour: 'numeric', minute: '2-digit' });
+const hm = (t: number) => new Date(t).toLocaleTimeString(uiLang(), { hour: 'numeric', minute: '2-digit' });
 
 export function Call() {
   const [scene, setScene] = useState<Scene>(SCENES[0]);
@@ -135,7 +135,7 @@ export function Call() {
       <div className="ch-mission">
         <span>{tt('이번 통화에서 써 볼 표현')}</span>
         <ul>{scene.mission.map((m, i) => (
-          <li key={m}><span><b lang="en">{m}</b><small>{scene.missionKo[i]}</small></span><button aria-label={tt('듣기')} onClick={() => speak(m, 'en')}><PlayI /></button></li>
+          <li key={m}><span><b lang="en">{m}</b><small>{ko(scene.missionKo[i])}</small></span><button aria-label={tt('듣기')} onClick={() => speak(m, 'en')}><PlayI /></button></li>
         ))}</ul>
       </div>
       <div className="ch-bottom">
@@ -410,9 +410,9 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
                 <div className="line">
                   <div className="bub">
                     <p lang="en"><Marked text={l.en} upto={speaking ? reveal : undefined} /></p>
-                    {showSide && (hideKo && !peek.includes(i)
-                      ? <button className="see-ko" aria-label={tt('뜻 보기')} onClick={() => setPeek((p) => [...p, i])}>{l.ko}</button>
-                      : <small className="ko">{l.ko}</small>)}
+                    {showSide && ko(l.ko) && (hideKo && !peek.includes(i)
+                      ? <button className="see-ko" aria-label={tt('뜻 보기')} onClick={() => setPeek((p) => [...p, i])}>{ko(l.ko)}</button>
+                      : <small className="ko">{ko(l.ko)}</small>)}
                   </div>
                   {showSide && (
                     <div className="side">
@@ -442,7 +442,7 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
               </div>
               {!l.good && l.how !== 'picked' && (i !== lastMe || phase !== 'check') && (
                 native === i
-                  ? <div className="nat"><small>{tt('원어민스러운 문장')}</small><p lang="en">{scene.turns[l.turn].replies[0].en}</p><small>{scene.turns[l.turn].replies[0].ko}</small></div>
+                  ? <div className="nat"><small>{tt('원어민스러운 문장')}</small><p lang="en">{scene.turns[l.turn].replies[0].en}</p><small>{ko(scene.turns[l.turn].replies[0].ko)}</small></div>
                   : <button className="pill" onClick={() => setNative(i)}><Spark />{tt('원어민스러운 문장')}</button>
               )}
             </div>
@@ -454,14 +454,14 @@ function Live({ scene, opts, onEnd }: { scene: Scene; opts: Opts; onEnd: (lines:
         )}
         {myTurn && help && !practice && (
           <div className="cl-picks">
-            {turn.replies.map((r) => <button key={r.en} onClick={() => { setPractice(r); setHelp(false); }}><b lang="en">{r.en}</b><small>{r.ko}</small></button>)}
+            {turn.replies.map((r) => <button key={r.en} onClick={() => { setPractice(r); setHelp(false); }}><b lang="en">{r.en}</b><small>{ko(r.ko)}</small></button>)}
           </div>
         )}
         {myTurn && practice && (
           <div className="cl-prac">
             <small>{tt('이렇게 말해 보세요')}</small>
             <b lang="en">{practice.en}</b>
-            <p>{practice.ko}</p>
+            <p>{ko(practice.ko)}</p>
             <div className="pacts">
               <button onClick={() => speak(practice.en, 'en')}><PlayI />{tt('듣기')}</button>
               <button onClick={() => speak(practice.en, 'en', { rate: 0.7 })}>{tt('천천히')}</button>
@@ -512,6 +512,8 @@ const PlayI = () => <svg className="play" viewBox="0 0 10 10"><path d="M1.5 0.5l
 const Spark = () => <svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" /></svg>;
 
 /** 다듬은 문장을 배울래요에 담을 수 있게 카드 모양으로 */
+// 통화 대본의 뜻은 아직 한국어만 있어요. 다른 화면 언어에서는 한국어 뜻을 숨겨요
+const ko = (s?: string) => (uiLang() === 'ko' ? s : '');
 const asCard = (en: string, ko: string): Card => ({ id: `call-${en}`, lang: 'en', cat: '일상', words: en.split(' '), key: [], expr: '', tr: { ko }, mean: {} });
 
 function Summary({ scene, lines, secs, onClose, onAgain }: { scene: Scene; lines: Line[]; secs: number; onClose: () => void; onAgain: () => void }) {
@@ -546,7 +548,7 @@ function Summary({ scene, lines, secs, onClose, onAgain }: { scene: Scene; lines
               const on = !!findSaved('s', card);
               return (
                 <div key={x.m} className="cs-miss">
-                  <span><b lang="en">{x.m}</b><small>{x.ko}</small></span>
+                  <span><b lang="en">{x.m}</b><small>{ko(x.ko)}</small></span>
                   <button className={on ? 'on' : ''} onClick={() => toggleSave('s', card)}>{on ? tt('담았어요') : tt('+ 배울래요')}</button>
                 </div>
               );
@@ -561,7 +563,7 @@ function Summary({ scene, lines, secs, onClose, onAgain }: { scene: Scene; lines
               <div className="hd"><b>{tt('다듬어 볼 문장')}</b></div>
               <p className="said" lang="en">{f.said}</p>
               <p className="better" lang="en"><Icon name="check" />{f.better.en}</p>
-              <small className="note">{f.better.ko} · {tt('이렇게 말하면 더 자연스러워요')}</small>
+              <small className="note">{ko(f.better.ko) ? `${f.better.ko} · ` : ''}{tt('이렇게 말하면 더 자연스러워요')}</small>
               <button className={`cs-save${on ? ' on' : ''}`} onClick={() => toggleSave('s', card)}>{on ? tt('배울래요에 담았어요') : tt('+ 배울래요에 담기')}</button>
             </div>
           );
@@ -594,7 +596,7 @@ function Replay({ scene, lines, onBack, onAgain }: { scene: Scene; lines: Line[]
           <div key={i} className="cl-ai">
             <span className="av">{scene.who[0]}</span>
             <div className="col"><div className="line">
-              <div className="bub"><p lang="en"><Marked text={l.en} /></p><small className="ko">{l.ko}</small></div>
+              <div className="bub"><p lang="en"><Marked text={l.en} /></p><small className="ko">{ko(l.ko)}</small></div>
               <button className="cs-play" aria-label={tt('다시 듣기')} onClick={() => speak(l.en, 'en')}><svg viewBox="0 0 10 10"><path d="M1 0l8.5 5L1 10z" /></svg></button>
             </div></div>
           </div>

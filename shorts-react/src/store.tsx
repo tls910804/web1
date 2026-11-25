@@ -1,6 +1,7 @@
 import { setUiLang } from './i18n';
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import { STORE_KEY } from './constants';
+import { ON_LANGS } from './data';
 import type { AppState } from './types';
 
 const defaults: AppState = {
@@ -21,7 +22,7 @@ const defaults: AppState = {
   level: '전체',
   auto: true,
   autoRepeat: 1,
-  slow: false,
+  speed: 1,
   mode: 'std',
   daily: 10,
   fontSize: 'md',
@@ -30,6 +31,7 @@ const defaults: AppState = {
   notified: {},
   notifyAsked: false,
   lastBackup: null,
+  vocab: {},
 };
 
 // 이전 버전 데이터도 그대로 읽도록 기본값 위에 덮어쓴다 (저장 키는 기존 앱과 같다)
@@ -43,6 +45,10 @@ export function normalize(raw: Partial<AppState>): AppState {
       : Array.isArray(d) ? Array.isArray(v) : v !== null && typeof v === typeof d;
     if (!ok) all[k] = d;
   }
+  // 예전 '천천히 듣기' 켜 둔 사람은 조금 느리게로
+  const old = all.slow; delete all.slow;
+  if (raw.speed === undefined && old === true) s.speed = 0.8;
+  if (![1, 0.8, 0.6].includes(s.speed)) s.speed = 1;
   s.custom = s.custom.filter((c) => Array.isArray(c?.words));
   s.saved = s.saved.filter((x) => typeof x?.id === 'string' && Array.isArray(x.card?.words)).map((x) => {
     const item = { ...x };
@@ -54,6 +60,8 @@ export function normalize(raw: Partial<AppState>): AppState {
     return item;
   });
   if (!s.best || s.best < s.streak) s.best = s.streak;
+  // 숨긴 언어를 배울 언어로 골라 둔 경우 빼요 (내 언어는 11개 다 돼요)
+  s.learn = s.learn.filter((c) => ON_LANGS.includes(c) && c !== s.native);
   return s;
 }
 

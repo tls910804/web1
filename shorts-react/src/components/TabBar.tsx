@@ -12,11 +12,12 @@ const TABS: { id: Screen; label: string; icon: 'compass' | 'play' | 'phone' | 'm
   // { id: 'story', label: '이야기', icon: 'book' },
   // 쉼 탭은 잠시 뺐어요(화면 코드 Rest.tsx와 라우트는 그대로). 다시 넣으려면 아래 줄 주석만 풀면 돼요.
   // { id: 'rest', label: '쉼', icon: 'moon' },
+  { id: 'vocab', label: '단어장', icon: 'book' },
   { id: 'saved', label: '배울래요', icon: 'mark' },
   { id: 'settings', label: '마이', icon: 'user' },
 ];
 
-export const TAB_SCREENS: Screen[] = ['feed', 'shorts', 'shorts2', 'call', 'rest', 'story', 'saved', 'stats', 'settings'];
+export const TAB_SCREENS: Screen[] = ['feed', 'shorts', 'shorts2', 'call', 'rest', 'story', 'saved', 'stats', 'settings', 'vocab'];
 
 export function TabBar() {
   const { screen, go } = useUi();
