@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>제철음식 달력</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 계절별 4색 + 일반 달력(왼쪽) · 오늘의 카드(오른쪽). 좁으면 위아래로 */
+:root{
+  --bg:#fbfaf7; --card:#ffffff; --fg:#2b2a33; --muted:#6d6b78; --line:#ebe8e1; --chip:#f4f2ec;
+  --spring:#f08cb2; --summer:#3fb08f; --autumn:#e8902e; --winter:#6a95e0; --red:#e0526b; --blue:#4f7fd8;
+  --display:"Jua","Noto Sans KR",system-ui,sans-serif;
+  --body:"Noto Sans KR",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#18171d; --card:#222129; --fg:#eeedf3; --muted:#a5a3b2; --line:#33313c; --chip:#2c2b34;
+  --spring:#d9789e; --summer:#3a9e81; --autumn:#d4822a; --winter:#5f88d3; --red:#ff7d92; --blue:#86a9f0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#18171d; --card:#222129; --fg:#eeedf3; --muted:#a5a3b2; --line:#33313c; --chip:#2c2b34;
+  --spring:#d9789e; --summer:#3a9e81; --autumn:#d4822a; --winter:#5f88d3; --red:#ff7d92; --blue:#86a9f0; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding-block:32px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2rem,5vw,3rem);margin:0;text-wrap:balance}
+.sub{color:var(--muted);margin:0}
+button{font:inherit;color:inherit}
+button:focus-visible,input:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+.tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:20px}
+.tabs button{font-family:var(--display);font-size:1.15rem;background:none;border:0;color:var(--muted);
+  padding:8px 16px;border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--fg)}
+
+/* 진행도 + 도구 */
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:14px}
+.prog{flex:1 1 240px;min-width:0}
+.prog .t{font-size:.9rem;margin-bottom:4px}
+.prog .track{height:10px;background:var(--chip);border-radius:999px;overflow:hidden}
+.prog .fill{height:100%;background:linear-gradient(90deg,var(--spring),var(--summer),var(--autumn),var(--winter));border-radius:999px;transition:width .3s}
+.tool{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:.92rem}
+.tool:hover{border-color:var(--muted)}
+
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;align-items:start}
+@media (max-width:860px){.layout{grid-template-columns:minmax(0,1fr)}}
+.cal-nav{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.cal-nav h2{font-family:var(--display);font-weight:400;font-size:1.8rem;margin:0;flex:1;text-align:center}
+.cal-nav button{font-size:1.2rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);cursor:pointer}
+.ending{background:var(--chip);border-radius:12px;padding:8px 12px;margin-bottom:10px;font-size:.9rem}
+.cal-head{background:var(--c);color:#fff;border-radius:16px 16px 0 0;padding:12px 16px;display:flex;flex-direction:column;gap:8px}
+.cal-head .chip{background:rgba(255,255,255,.25);color:#fff}
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));background:var(--card);border:1px solid var(--line);
+  border-top:0;border-radius:0 0 16px 16px;overflow:hidden}
+.wd{text-align:center;font-size:.8rem;font-weight:700;padding:8px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.day{min-height:84px;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px;background:none;
+  display:flex;flex-direction:column;align-items:stretch;gap:2px;text-align:left;cursor:pointer;position:relative;font-variant-numeric:tabular-nums;min-width:0}
+.cal>:nth-child(7n){border-right:0}
+.day:hover{background:var(--chip)}
+.day.out{background:var(--chip);cursor:default}
+.day .n{align-self:flex-start;font-size:.85rem}
+.day .e{font-size:1.5rem;line-height:1;align-self:center;margin-top:2px}
+.day .ev{font-size:.66rem;line-height:1.2;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.day .st{position:absolute;top:4px;right:5px;font-size:.85rem}
+.sun,.red,.red .ev{color:var(--red)}.sat{color:var(--blue)}
+.day.today .n{background:var(--c);color:#fff;border-radius:999px;padding:0 7px}
+.day.sel{box-shadow:inset 0 0 0 3px var(--c)}
+@media (max-width:480px){.day{min-height:62px;padding:4px}.day .e{font-size:1.15rem}.day .ev{font-size:.58rem}}
+
+/* 오늘의 카드 */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;position:sticky;top:12px}
+.panel .ph{background:var(--c);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.panel .ph .big{font-size:2.6rem;line-height:1}
+.panel .ph .d{font-size:.85rem;opacity:.95}
+.panel .ph .f{font-family:var(--display);font-size:1.6rem;line-height:1.1}
+.panel .pb{padding:14px 18px 18px;display:flex;flex-direction:column;gap:12px}
+.panel .row .k{font-size:.75rem;color:var(--muted);letter-spacing:.04em}
+.panel .row p{margin:2px 0 0}
+.evbox{background:var(--chip);border-radius:12px;padding:10px 12px;font-size:.92rem}
+.ate{border:2px solid var(--c);background:transparent;border-radius:12px;padding:10px;cursor:pointer;font-weight:700}
+.ate[aria-pressed="true"]{background:var(--c);color:#fff}
+
+/* 공유 이미지 */
+.share{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;align-items:center}
+.share img{width:100%;max-width:480px;border-radius:12px;border:1px solid var(--line)}
+.share .row2{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;font-size:.9rem;color:var(--muted)}
+.copybox{width:100%;max-width:480px;min-height:120px;font:inherit;border:1px solid var(--line);border-radius:12px;padding:10px;background:var(--bg);color:var(--fg)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);
+  padding:10px 18px;border-radius:999px;font-size:.9rem}
+
+/* 1년 한눈에 */
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.legend button{font-size:.9rem;border:2px solid var(--c);background:transparent;border-radius:999px;padding:4px 14px;cursor:pointer}
+.legend button[aria-pressed="true"]{background:var(--c);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.month{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.month.now{border:3px solid var(--c)}
+.top{background:var(--c);color:#fff;padding:12px 16px;display:flex;align-items:center;gap:10px}
+.top .m{font-family:var(--display);font-size:1.7rem;line-height:1}
+.top .s{font-size:.8rem;opacity:.95}
+.top .big{margin-left:auto;font-size:2rem;line-height:1}
+.badge{background:#fff;color:#2b2a33;font-size:.72rem;font-weight:700;border-radius:999px;padding:2px 8px}
+.body{padding:12px 16px 16px;display:flex;flex-direction:column;gap:10px}
+.label{font-size:.75rem;color:var(--muted);letter-spacing:.04em;margin-bottom:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border-radius:999px;padding:3px 10px 3px 7px;font-size:.88rem;white-space:nowrap}
+.chip span{margin-right:3px}
+.chip.eaten{outline:2px solid var(--c)}
+footer{color:var(--muted);font-size:.8rem;margin-top:24px}
+@media (prefers-reduced-motion:no-preference){.top .big{transition:transform .2s}.month:hover .big{transform:rotate(-12deg) scale(1.15)}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>🍓 제철음식 달력 🍊</h1>
+    <p class="sub">날짜를 누르면 그날의 제철음식과 고르는 법, 요리를 알려 줘요.</p>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button type="button" role="tab" id="tab-cal" aria-selected="true">📅 달력</button>
+    <button type="button" role="tab" id="tab-all" aria-selected="false">🗂️ 1년 한눈에</button>
+  </nav>
+
+  <section id="view-cal">
+    <div class="bar">
+      <div class="prog"><div class="t" id="prog-t"></div><div class="track"><div class="fill" id="prog-f"></div></div></div>
+      <button type="button" class="tool" id="shop">🛒 이번 주 장보기 목록</button>
+      <button type="button" class="tool" id="img">🖼️ 이번 달 이미지로 저장</button>
+    </div>
+    <div class="layout">
+      <div>
+        <div class="cal-nav">
+          <button type="button" id="prev" aria-label="이전 달">‹</button>
+          <h2 id="cal-title"></h2>
+          <button type="button" id="next" aria-label="다음 달">›</button>
+        </div>
+        <div class="ending" id="ending" hidden></div>
+        <div class="cal-head" id="cal-head"></div>
+        <div class="cal" id="cal"></div>
+      </div>
+      <aside class="panel" id="panel" aria-live="polite"></aside>
+    </div>
+    <div class="share" id="share" hidden></div>
+  </section>
+
+  <section id="view-all" hidden>
+    <div class="legend" id="legend"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+  <footer>한국 기준이에요. 지역·날씨에 따라 한두 달 차이가 날 수 있어요. 음력 명절·대체공휴일은 2026~2027년만 들어 있어요. 먹은 기록은 이 기기에만 저장돼요.</footer>
+  <div class="toast" id="toast" hidden></div>
+</div>
+
+<script>
+const SEASONS={spring:["봄","🌸"],summer:["여름","☀️"],autumn:["가을","🍁"],winter:["겨울","⛄"]};
+const SCOL={spring:"#f08cb2",summer:"#3fb08f",autumn:"#e8902e",winter:"#6a95e0"};
+const seasonOf=m=>m<=2||m===12?"winter":m<=5?"spring":m<=8?"summer":"autumn";
+// [달, 대표 이모티콘, 채소·과일, 해산물]
+const DATA=[
+ [1,"🍊",["🍊 귤","🍊 한라봉","🍓 딸기","🥬 시금치","🥕 당근","⚪ 무"],["🐟 대구","🐟 명태","🦪 굴","🐚 꼬막"]],
+ [2,"🍓",["🍓 딸기","🍊 한라봉","🌿 냉이","🥬 시금치","🥬 봄동"],["🦪 굴","🐚 꼬막","🐟 과메기","🐟 대구"]],
+ [3,"🌱",["🍓 딸기","🌿 달래","🌿 냉이","🌿 쑥","🥬 봄동"],["🐙 주꾸미","🐚 바지락","🐟 도미","🌊 미역"]],
+ [4,"🌷",["🌿 두릅","🌿 미나리","🌿 쑥","🥬 취나물","🍓 딸기"],["🐙 주꾸미","🦀 암꽃게","🐚 키조개","🪸 멍게"]],
+ [5,"🧄",["🍈 참외","🧄 마늘","🧅 양파","🫛 완두콩","🌿 아스파라거스"],["🦀 암꽃게","🪸 멍게","🐚 소라","🐟 병어"]],
+ [6,"🍒",["🍒 체리","🫒 매실","🥔 감자","🥒 오이","🍈 참외"],["🦑 오징어","🐚 전복","🐟 농어","🐟 준치"]],
+ [7,"🍉",["🍉 수박","🍑 복숭아","🌽 옥수수","🍅 토마토","🍆 가지","🫐 블루베리"],["🐍 장어","🐚 전복","🐟 민어"]],
+ [8,"🍑",["🍑 복숭아","🍇 포도","🍉 수박","🌽 옥수수","🌶️ 고추","🥒 애호박"],["🐟 갈치","🐚 전복","🦔 성게"]],
+ [9,"🍇",["🍇 포도","🍐 배","🍎 사과","🌰 밤","🍠 고구마","🟣 무화과"],["🐟 전어","🦀 꽃게","🦐 대하"]],
+ [10,"🍎",["🍎 사과","🍐 배","🟠 감","🌰 밤","🍄 버섯","🍠 고구마"],["🦐 대하","🦀 꽃게","🐟 고등어","🐟 삼치"]],
+ [11,"🟠",["🍊 귤","🟠 감","🍋 유자","🥬 배추","⚪ 무","🍄 버섯"],["🐟 방어","🦪 굴","🐚 가리비","🐟 고등어"]],
+ [12,"🎄",["🍊 귤","🍓 딸기","🍋 유자","🥬 배추","⚪ 무"],["🐟 방어","🦪 굴","🦀 대게","🐚 꼬막","🐚 홍합"]],
+];
+// 이름: [왜 지금 맛있나, 고르는 법, 추천 요리]
+const INFO={
+ 귤:["추위 속에 당도가 꽉 차요","꼭지가 초록색이고 작고 단단한 것","그냥 까먹기, 귤청"],
+ 한라봉:["겨울 끝물에 새콤달콤함이 최고예요","꼭지가 볼록하고 묵직한 것","한라봉 에이드"],
+ 딸기:["겨울~봄 하우스 딸기가 가장 달아요","꼭지가 싱싱하고 끝까지 빨간 것","딸기우유, 딸기 샌드위치"],
+ 시금치:["추위를 견디며 단맛이 올라와요","잎이 짧고 뿌리가 붉은 것","시금치나물, 된장국"],
+ 당근:["겨울 당근은 달고 아삭해요","색이 진하고 매끈한 것","당근라페, 볶음밥"],
+ 무:["겨울 무는 달아서 '인삼보다 낫다'고 해요","묵직하고 초록 부분이 넓은 것","소고기뭇국, 무생채"],
+ 대구:["산란기 전이라 살이 통통해요","눈이 맑고 아가미가 붉은 것","대구탕, 대구전"],
+ 명태:["찬 바다에서 살이 단단해져요","살이 탄력 있고 비늘이 반짝이는 것","동태찌개, 코다리조림"],
+ 굴:["'R'이 들어간 달(9~4월)에 먹으라는 말이 있어요","유백색에 테두리가 검고 탱탱한 것","굴전, 굴국밥, 생굴"],
+ 꼬막:["겨울에 살이 차고 쫄깃해요","입을 꼭 다물고 있는 것","꼬막비빔밥, 꼬막무침"],
+ 냉이:["봄을 제일 먼저 알리는 향긋한 나물","잎이 작고 뿌리가 굵지 않은 것","냉이 된장국"],
+ 봄동:["겨울을 난 배추라 고소하고 달아요","잎이 퍼지고 노란 속이 보이는 것","봄동 겉절이, 봄동 비빔밥"],
+ 과메기:["찬 바닷바람에 말려야 제맛이에요","윤기가 돌고 기름이 적당한 것","김·미역에 싸서 쌈으로"],
+ 달래:["봄 향이 가장 진할 때예요","알뿌리가 굵고 잎이 싱싱한 것","달래장, 달래 된장찌개"],
+ 쑥:["어린 쑥이 연하고 향이 좋아요","잎 뒤가 하얗고 작은 것","쑥국, 쑥버무리"],
+ 주꾸미:["봄 산란기라 알이 꽉 차요","빨판이 선명하고 몸이 탱탱한 것","주꾸미볶음, 샤브샤브"],
+ 바지락:["봄에 살이 오르고 시원한 맛이 나요","껍데기를 닫고 있거나 건드리면 닫는 것","바지락칼국수, 술찜"],
+ 도미:["봄 벚꽃철 도미가 가장 맛있어요","눈이 맑고 몸빛이 선명한 것","도미회, 도미찜"],
+ 미역:["봄 미역이 연하고 부드러워요","색이 진하고 윤기 나는 것","미역국, 미역 초무침"],
+ 두릅:["'봄나물의 왕', 순이 막 올라올 때예요","순이 짧고 통통한 것","두릅 데쳐서 초장에"],
+ 미나리:["봄 미나리는 줄기가 연하고 향긋해요","줄기가 너무 굵지 않고 잎이 싱싱한 것","미나리전, 삼겹살과 함께"],
+ 취나물:["봄 들판에서 막 올라와 향이 진해요","잎이 작고 연한 것","취나물 무침, 취나물밥"],
+ 암꽃게:["봄 암꽃게는 알이 꽉 차요","배딱지가 둥글고 묵직한 것","간장게장, 꽃게탕"],
+ 키조개:["봄에 관자가 두툼해져요","입을 꼭 다물고 무거운 것","관자 버터구이"],
+ 멍게:["초여름 직전 향이 가장 진해요","색이 선명하고 탱탱한 것","멍게비빔밥"],
+ 참외:["햇빛을 받아 당도가 오르는 때예요","노란색이 진하고 골이 뚜렷한 것","시원하게 깎아서"],
+ 마늘:["햇마늘이 나와 알싸하고 촉촉해요","통이 단단하고 무거운 것","마늘장아찌, 통마늘구이"],
+ 양파:["햇양파는 달고 즙이 많아요","단단하고 껍질이 반짝이는 것","양파 장아찌, 양파링"],
+ 완두콩:["초여름 햇완두가 달고 포슬해요","꼬투리가 통통하고 초록빛인 것","완두콩밥"],
+ 아스파라거스:["봄에 순이 연하고 달아요","끝이 꽉 닫혀 있고 곧은 것","버터구이, 베이컨말이"],
+ 소라:["봄에 살이 오르고 쫄깃해요","입구 살이 탱탱하고 움직이는 것","소라숙회, 소라무침"],
+ 병어:["초여름 살이 부드럽고 고소해요","몸이 은빛으로 반짝이는 것","병어조림"],
+ 체리:["짧게 반짝 나오는 초여름 과일이에요","꼭지가 초록이고 색이 진한 것","그냥 먹기, 요거트 토핑"],
+ 매실:["청을 담그는 단 몇 주가 제철이에요","흠 없고 단단한 청매실","매실청, 매실장아찌"],
+ 감자:["하지 무렵 햇감자가 포슬포슬해요","싹이 없고 껍질이 매끈한 것","감자전, 찐감자"],
+ 오이:["초여름 오이는 아삭하고 시원해요","가시가 뾰족하고 곧은 것","오이소박이, 오이냉국"],
+ 오징어:["여름 밤바다에서 많이 잡혀요","몸이 투명하고 눈이 맑은 것","오징어볶음, 숙회"],
+ 전복:["여름에 살이 오르고 쫄깃해요","살이 움직이고 껍데기보다 큰 것","전복죽, 전복버터구이"],
+ 농어:["여름 농어는 기름이 올라 고소해요","몸에 윤기가 흐르는 것","농어회, 농어구이"],
+ 준치:["'썩어도 준치'라 할 만큼 맛있어요","비늘이 반짝이고 단단한 것","준치회무침"],
+ 수박:["한여름 볕을 받아 가장 달아요","두드리면 통통 맑은 소리가 나는 것","화채, 수박주스"],
+ 복숭아:["한여름 복숭아는 향이 가득해요","향이 진하고 꼭지 쪽이 노란 것","그냥 먹기, 복숭아 병조림"],
+ 옥수수:["여름 햇옥수수가 쫀득하고 달아요","수염이 갈색이고 알이 꽉 찬 것","찐옥수수, 콘치즈"],
+ 토마토:["여름 볕에 빨갛게 익어요","꼭지가 싱싱하고 묵직한 것","토마토 마리네이드, 달걀볶음"],
+ 가지:["여름 가지는 껍질이 얇고 부드러워요","보라색이 진하고 윤기 나는 것","가지볶음, 가지튀김"],
+ 블루베리:["여름 노지 블루베리가 진하고 달아요","하얀 분이 묻어 있고 탱탱한 것","요거트, 블루베리 잼"],
+ 장어:["여름 보양식으로 기름이 올라요","살이 두툼하고 윤기 나는 것","장어구이"],
+ 민어:["'복날엔 민어' 할 만큼 여름 생선이에요","살이 단단하고 배가 하얀 것","민어탕, 민어회"],
+ 포도:["늦여름 포도가 가장 달아요","알이 꽉 차고 하얀 분이 있는 것","그냥 먹기, 포도주스"],
+ 고추:["여름 햇고추가 아삭하고 매콤해요","윤기 나고 꼭지가 싱싱한 것","고추전, 꽈리고추 멸치볶음"],
+ 애호박:["여름 애호박이 연하고 달아요","크기가 고르고 흠 없는 것","호박전, 된장찌개"],
+ 갈치:["늦여름부터 살이 통통해져요","은빛 가루가 고르게 묻어 있는 것","갈치조림, 갈치구이"],
+ 성게:["여름에 알이 차고 달아요","주황빛이 선명하고 모양이 살아 있는 것","성게비빔밥, 성게미역국"],
+ 배:["가을 햇배는 시원하고 즙이 많아요","껍질이 매끈하고 묵직한 것","배숙, 그냥 깎아서"],
+ 사과:["선선해지면 아삭함과 당도가 최고예요","꼭지가 싱싱하고 단단한 것","사과 샐러드, 사과잼"],
+ 밤:["가을 햇밤이 포슬하고 달아요","껍질이 윤기 나고 묵직한 것","군밤, 밤밥"],
+ 고구마:["가을 수확 후 숙성되며 더 달아져요","껍질 색이 고르고 매끈한 것","군고구마, 고구마맛탕"],
+ 무화과:["가을 잠깐만 나오는 귀한 과일이에요","살짝 말랑하고 꼭지에서 즙이 비치는 것","무화과 샐러드, 그냥 먹기"],
+ 전어:["'집 나간 며느리도 돌아온다'는 가을 맛","등이 푸르고 은빛이 선명한 것","전어구이, 전어회"],
+ 꽃게:["가을 숫꽃게는 살이 꽉 차요","배딱지가 뾰족하고 무거운 것","꽃게탕, 꽃게찜"],
+ 대하:["가을 대하가 가장 크고 달아요","껍질이 투명하고 머리가 붙어 있는 것","소금구이"],
+ 감:["가을에 단감·홍시가 가장 달아요","색이 고르고 꼭지가 붙어 있는 것","단감, 홍시, 곶감"],
+ 버섯:["선선한 가을에 향이 진해져요","갓이 덜 펴지고 단단한 것","버섯전골, 버섯볶음"],
+ 고등어:["가을~겨울에 기름이 올라 고소해요","눈이 맑고 등무늬가 선명한 것","고등어구이, 고등어조림"],
+ 삼치:["가을부터 살이 부드럽고 기름져요","몸이 단단하고 윤기 나는 것","삼치구이"],
+ 유자:["늦가을 향이 가장 진해요","껍질이 울퉁불퉁하고 향이 강한 것","유자차, 유자 드레싱"],
+ 배추:["김장철 배추는 달고 아삭해요","속이 꽉 차고 묵직한 것","김장김치, 배춧국"],
+ 방어:["겨울 대방어는 기름이 꽉 올라요","살이 선홍색이고 윤기 나는 것","방어회"],
+ 가리비:["찬 바다에서 관자가 달아져요","입을 꼭 다물었거나 건드리면 닫는 것","가리비 치즈구이, 찜"],
+ 대게:["겨울에 살이 꽉 차요","배를 눌렀을 때 단단하고 무거운 것","대게찜, 게딱지 비빔밥"],
+ 홍합:["겨울 홍합은 살이 통통하고 시원해요","껍데기를 닫고 있고 윤기 나는 것","홍합탕, 홍합 술찜"],
+};
+// 매년 같은 날 [이름, 쉬는 날?, 이모티콘, 먹는 음식]
+const YEARLY={"01-01":[["신정",1,"🍲","떡국"]],"02-04":[["입춘",0,"🌱","봄나물"]],"03-01":[["삼일절",1]],"03-03":[["삼겹살데이",0,"🥓","삼겹살"]],
+ "05-05":[["어린이날",1,"🍰","좋아하는 간식"]],"06-06":[["현충일",1]],"08-15":[["광복절",1]],"10-03":[["개천절",1]],"10-09":[["한글날",1]],
+ "11-11":[["빼빼로데이",0,"🍫","빼빼로"]],"12-22":[["동지",0,"🥣","팥죽"]],"12-25":[["크리스마스",1,"🎂","케이크"]]};
+// 음력 명절·대체공휴일(2026~2027)
+const DATED={
+ "2026-02-16":[["설날 연휴",1]],"2026-02-17":[["설날",1,"🍲","떡국"]],"2026-02-18":[["설날 연휴",1]],"2026-03-02":[["대체공휴일",1]],
+ "2026-03-03":[["정월대보름",0,"🥜","부럼·오곡밥"]],"2026-05-24":[["부처님오신날",1]],"2026-05-25":[["대체공휴일",1]],"2026-06-03":[["지방선거일",1]],
+ "2026-06-19":[["단오",0,"🍃","수리취떡"]],"2026-08-17":[["대체공휴일",1]],"2026-09-24":[["추석 연휴",1]],"2026-09-25":[["추석",1,"🌕","송편"]],
+ "2026-09-26":[["추석 연휴",1]],"2026-10-05":[["대체공휴일",1]],
+ "2027-02-06":[["설날 연휴",1]],"2027-02-07":[["설날",1,"🍲","떡국"]],"2027-02-08":[["설날 연휴",1]],"2027-02-09":[["대체공휴일",1]],
+ "2027-02-21":[["정월대보름",0,"🥜","부럼·오곡밥"]],"2027-05-13":[["부처님오신날",1]],"2027-08-16":[["대체공휴일",1]],"2027-09-14":[["추석 연휴",1]],
+ "2027-09-15":[["추석",1,"🌕","송편"]],"2027-09-16":[["추석 연휴",1]],"2027-10-04":[["대체공휴일",1]],"2027-10-11":[["대체공휴일",1]],"2027-12-27":[["대체공휴일",1]]};
+const pad=n=>String(n).padStart(2,"0");
+const key=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
+const eventsOf=(y,m,d)=>[...(YEARLY[`${pad(m+1)}-${pad(d)}`]||[]),...(DATED[key(y,m,d)]||[])];
+const split=x=>{const i=x.indexOf(" ");return [x.slice(0,i),x.slice(i+1)]};
+const foodsOf=m=>{const [,,v,s]=DATA[m];return [...v,...s].map(split)};
+const foodOfDay=(m,d)=>{const f=foodsOf(m);return f[(d-1)%f.length]};
+const ALL_FOODS=[...new Set(DATA.flatMap((_,m)=>foodsOf(m).map(f=>f[1])))];
+
+// 먹은 기록: { "2026-11-26": "방어" } — 이 기기에만
+const SKEY="seasonal-food-eaten-v1";
+let eaten={};try{eaten=JSON.parse(localStorage.getItem(SKEY))||{}}catch(e){}
+const save=()=>{try{localStorage.setItem(SKEY,JSON.stringify(eaten))}catch(e){}};
+const eatenThisYear=y=>new Set(Object.entries(eaten).filter(([k])=>k.startsWith(y+"-")).map(([,v])=>v));
+
+const chips=(a,done)=>a.map(x=>{const [e,n]=split(x);return `<span class="chip${done&&done.has(n)?" eaten":""}"><span aria-hidden="true">${e}</span>${n}${done&&done.has(n)?" ✓":""}</span>`}).join("");
+const $=id=>document.getElementById(id);
+function toast(t){const el=$("toast");el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,2200)}
+
+// ── 1년 한눈에
+const today=new Date(),now=today.getMonth()+1;
+function drawGrid(){
+  const done=eatenThisYear(today.getFullYear());
+  $("grid").innerHTML=DATA.map(([m,big,veg,sea])=>{
+    const s=seasonOf(m),[name,icon]=SEASONS[s];
+    return `<article class="month${m===now?" now":""}" data-season="${s}" style="--c:var(--${s})">
+      <div class="top"><div><div class="m">${m}월</div><div class="s">${icon} ${name}</div></div>
+        ${m===now?'<span class="badge">이번 달</span>':""}<span class="big" aria-hidden="true">${big}</span></div>
+      <div class="body"><div><div class="label">과일 · 채소</div><div class="chips">${chips(veg,done)}</div></div>
+        <div><div class="label">해산물</div><div class="chips">${chips(sea,done)}</div></div></div></article>`}).join("");
+}
+const legend=$("legend");
+legend.innerHTML=Object.entries(SEASONS).map(([k,[n,i]])=>`<button type="button" id="f-${k}" data-s="${k}" aria-pressed="false" style="--c:var(--${k})">${i} ${n}</button>`).join("");
+let seasonFilter=null;
+legend.addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  seasonFilter=seasonFilter===b.dataset.s?null:b.dataset.s;
+  legend.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.s===seasonFilter)));
+  document.querySelectorAll(".month").forEach(c=>c.hidden=!!seasonFilter&&c.dataset.season!==seasonFilter);
+});
+
+// ── 탭
+const tabs={cal:$("tab-cal"),all:$("tab-all")};
+Object.entries(tabs).forEach(([k,b])=>b.addEventListener("click",()=>{
+  Object.entries(tabs).forEach(([k2,b2])=>{b2.setAttribute("aria-selected",String(k2===k));$("view-"+k2).hidden=k2!==k});
+  if(k==="all"){drawGrid();legend.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));seasonFilter=null}
+}));
+
+// ── 달력
+let y=today.getFullYear(),mo=today.getMonth(),sel=today.getDate();
+function drawProgress(){
+  const n=[...eatenThisYear(y)].filter(f=>ALL_FOODS.includes(f)).length;
+  $("prog-t").textContent=`🏅 ${y}년에 먹은 제철음식 ${n} / ${ALL_FOODS.length}개`;
+  $("prog-f").style.width=(n/ALL_FOODS.length*100)+"%";
+}
+function drawCal(){
+  const [m,big,veg,sea]=DATA[mo],s=seasonOf(m),[name,icon]=SEASONS[s];
+  $("view-cal").style.setProperty("--c",`var(--${s})`);
+  $("cal-title").textContent=`${y}년 ${m}월 ${big}`;
+  $("cal-head").innerHTML=`<div>${icon} ${name} · 이달의 제철</div><div class="chips">${chips([...veg,...sea])}</div>`;
+  // 이번 달엔 있고 다음 달엔 없는 것 = 곧 끝남
+  const next=new Set(foodsOf((mo+1)%12).map(f=>f[1]));
+  const ending=foodsOf(mo).filter(f=>!next.has(f[1]));
+  $("ending").hidden=!ending.length;
+  $("ending").innerHTML=`🔔 <b>이번 달이 마지막이에요:</b> ${ending.map(f=>f.join(" ")).join(", ")}`;
+  const first=new Date(y,mo,1).getDay(),days=new Date(y,mo+1,0).getDate(),cells=Math.ceil((first+days)/7)*7;
+  let h=["일","월","화","수","목","금","토"].map((d,i)=>`<div class="wd${i===0?" sun":i===6?" sat":""}">${d}</div>`).join("");
+  for(let i=0;i<cells;i++){
+    const d=i-first+1,wd=i%7;
+    if(d<1||d>days){h+=`<div class="day out" aria-hidden="true"></div>`;continue}
+    const ev=eventsOf(y,mo,d),red=wd===0||ev.some(e=>e[1]),[fe,fn]=foodOfDay(mo,d);
+    const special=ev.find(e=>e[2]);
+    const isToday=y===today.getFullYear()&&mo===today.getMonth()&&d===today.getDate();
+    const cls=(red?" red":wd===6?" sat":"")+(isToday?" today":"")+(d===sel?" sel":"");
+    h+=`<button type="button" class="day${cls}" data-d="${d}" aria-label="${m}월 ${d}일 ${ev.map(e=>e[0]).join(" ")} ${special?special[3]:fn}">
+      <span class="n">${d}</span>${eaten[key(y,mo,d)]?'<span class="st" aria-hidden="true">⭐</span>':""}
+      <span class="e" aria-hidden="true">${special?special[2]:fe}</span>${ev.length?`<span class="ev">${ev.map(e=>e[0]).join("·")}</span>`:""}</button>`;
+  }
+  $("cal").innerHTML=h;
+  drawPanel();drawProgress();
+}
+function drawPanel(){
+  const d=sel,[fe,fn]=foodOfDay(mo,d),info=INFO[fn]||["지금이 가장 맛있을 때예요","싱싱하고 묵직한 것","좋아하는 방법으로"];
+  const ev=eventsOf(y,mo,d),wd="일월화수목금토"[new Date(y,mo,d).getDay()],k=key(y,mo,d),done=eaten[k]===fn;
+  $("panel").innerHTML=`<div class="ph"><span class="big" aria-hidden="true">${fe}</span>
+      <div><div class="d">${mo+1}월 ${d}일 (${wd}) 오늘의 제철음식</div><div class="f">${fn}</div></div></div>
+    <div class="pb">
+      ${ev.length?`<div class="evbox">${ev.map(e=>`<div><b>${e[2]?e[2]+" ":"📌 "}${e[0]}</b>${e[3]?` · 이날은 <b>${e[3]}</b>을(를) 먹어요`:""}</div>`).join("")}</div>`:""}
+      <div class="row"><div class="k">왜 지금?</div><p>${info[0]}</p></div>
+      <div class="row"><div class="k">고르는 법</div><p>${info[1]}</p></div>
+      <div class="row"><div class="k">추천 요리</div><p>${info[2]}</p></div>
+      <button type="button" class="ate" id="ate" aria-pressed="${done}">${done?"⭐ 먹었어요! (누르면 취소)":"🍽️ 오늘 먹었어요"}</button>
+    </div>`;
+  $("ate").onclick=()=>{if(eaten[k]===fn)delete eaten[k];else{eaten[k]=fn;toast(`${fe} ${fn} 스티커를 붙였어요!`)}save();drawCal()};
+}
+$("cal").addEventListener("click",e=>{const b=e.target.closest("button.day");if(!b)return;sel=+b.dataset.d;drawCal()});
+$("prev").onclick=()=>{if(--mo<0){mo=11;y--}sel=1;$("share").hidden=true;drawCal()};
+$("next").onclick=()=>{if(++mo>11){mo=0;y++}sel=1;$("share").hidden=true;drawCal()};
+
+// ── 장보기 목록: 고른 날이 있는 주(일~토)의 음식
+$("shop").onclick=async()=>{
+  const start=new Date(y,mo,sel-new Date(y,mo,sel).getDay()),items=new Map();
+  for(let i=0;i<7;i++){const t=new Date(start);t.setDate(start.getDate()+i);const [e,n]=foodOfDay(t.getMonth(),t.getDate());items.set(n,e)}
+  const text=`🛒 이번 주 제철 장보기 (${start.getMonth()+1}/${start.getDate()}~)\n`+[...items].map(([n,e])=>`☐ ${e} ${n}`).join("\n");
+  try{await navigator.clipboard.writeText(text);toast("장보기 목록을 복사했어요. 메모장이나 카톡에 붙여 넣으세요!")}
+  catch(err){showShare(`<textarea class="copybox" id="copybox" readonly>${text}</textarea><div class="row2">복사가 막혀 있어요. 위 글을 길게 눌러 복사하세요.</div>`);$("copybox").select()}
+};
+
+// ── 이번 달 이미지
+function showShare(html){$("share").innerHTML=html+`<button type="button" class="tool" id="close-share">닫기</button>`;$("share").hidden=false;
+  $("close-share").onclick=()=>$("share").hidden=true;$("share").scrollIntoView({behavior:"smooth",block:"nearest"})}
+$("img").onclick=async()=>{
+  await document.fonts.ready;
+  const [m,big,veg,sea]=DATA[mo],s=seasonOf(m),col=SCOL[s],W=1080,H=1350,c=document.createElement("canvas");
+  c.width=W;c.height=H;const x=c.getContext("2d"),F=(sz,f="Jua")=>`${sz}px ${f},"Noto Sans KR",sans-serif`;
+  x.fillStyle="#fbfaf7";x.fillRect(0,0,W,H);
+  x.fillStyle=col;x.beginPath();x.roundRect(40,40,W-80,300,36);x.fill();
+  x.fillStyle="#fff";x.font=F(84);x.fillText(`${y}년 ${m}월`,90,150);
+  x.font=F(110,"sans-serif");x.textAlign="right";x.fillText(big,W-90,165);x.textAlign="left";
+  x.font=F(38);x.fillText(`${SEASONS[s][1]} 이달의 제철음식`,90,220);
+  const list=[...veg,...sea];x.font=F(32,"Noto Sans KR");
+  let lx=90,ly=280;for(const it of list){const w=x.measureText(it).width+28;if(lx+w>W-90){lx=90;ly+=46}if(ly>320)break;
+    x.fillStyle="rgba(255,255,255,.28)";x.beginPath();x.roundRect(lx-10,ly-34,w,44,22);x.fill();x.fillStyle="#fff";x.fillText(it,lx,ly);lx+=w+10}
+  const gx=60,gy=400,cw=(W-120)/7,first=new Date(y,mo,1).getDay(),days=new Date(y,mo+1,0).getDate(),rows=Math.ceil((first+days)/7),ch=(H-gy-110)/rows;
+  x.font=F(30,"Noto Sans KR");x.textAlign="center";
+  "일월화수목금토".split("").forEach((d,i)=>{x.fillStyle=i===0?"#e0526b":i===6?"#4f7fd8":"#6d6b78";x.fillText(d,gx+cw*i+cw/2,gy-20)});
+  for(let d=1;d<=days;d++){const i=first+d-1,cx=gx+(i%7)*cw,cy=gy+Math.floor(i/7)*ch,ev=eventsOf(y,mo,d),sp=ev.find(e=>e[2]);
+    x.fillStyle="#fff";x.strokeStyle="#ebe8e1";x.lineWidth=2;x.beginPath();x.roundRect(cx+4,cy+4,cw-8,ch-8,16);x.fill();x.stroke();
+    x.fillStyle=(i%7===0||ev.some(e=>e[1]))?"#e0526b":i%7===6?"#4f7fd8":"#2b2a33";x.textAlign="left";x.font=F(26,"Noto Sans KR");x.fillText(d,cx+16,cy+38);
+    x.textAlign="center";x.font=F(Math.min(56,ch*.42),"sans-serif");x.fillText(sp?sp[2]:foodOfDay(mo,d)[0],cx+cw/2,cy+ch*.72);
+    if(eaten[key(y,mo,d)]){x.font=F(26,"sans-serif");x.fillText("⭐",cx+cw-26,cy+36)}}
+  x.textAlign="center";x.fillStyle="#6d6b78";x.font=F(30);x.fillText("🍓 제철음식 달력 🍊",W/2,H-45);
+  showShare(`<img src="${c.toDataURL("image/png")}" alt="${y}년 ${m}월 제철음식 달력 이미지"><div class="row2">📱 휴대폰은 이미지를 길게 눌러, 컴퓨터는 오른쪽 클릭해서 저장하세요.</div>`);
+};
+
+drawCal();
+</script>
+</body>
+</html>
