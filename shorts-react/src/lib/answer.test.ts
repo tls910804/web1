@@ -1,6 +1,6 @@
 // 정답 확인·필터 개수 자체 점검. 실행: npm run test
 import assert from 'node:assert/strict';
-import { diff, findMiss, norm, blankOf, exKind } from '../screens/Exercise';
+import { diff, findMiss, norm, blankOf, exKind, alike, altOf } from '../screens/Exercise';
 import { countFeed, tabOf, TABS, timed, videoCards } from './feed';
 import { keepable } from './content';
 import { GRAD_AT, interval, rateResult, streakInfo, wrongNote } from './srs';
@@ -91,3 +91,29 @@ assert.equal(videoCards({ learn: ['en'], known: [] } as unknown as AppState).len
 assert.ok(keepable('a') && !keepable('a'.repeat(2_000_001)));
 
 console.log('ok answer/filter');
+
+// alike: 강조 말·줄임말·끝의 '요'가 달라도 같은 답
+assert.ok(alike('really happy', 'very happy', 'en'));
+assert.ok(alike("I am late", "I'm late", 'en'));
+assert.ok(alike('진짜 기뻐', '정말 기뻐요', 'ko'));
+assert.ok(!alike('happy', 'very happy', 'en'));
+// altOf: 카드에 적어 둔 다른 답은 '좋은 표현'
+const moon = CARDS.find((c) => c.id === 'en5')!;
+assert.ok(altOf('Thrilled', moon, 'ko'));
+assert.ok(altOf('super happy', moon, 'ko'));
+assert.ok(!altOf('sad', moon, 'ko'));
+
+// 6개 언어 규칙
+assert.ok(alike('colour', 'color', 'en'));
+assert.ok(alike('esta bien', 'Está bien', 'es'));
+assert.ok(alike('yo estoy cansado', 'estoy cansado', 'es'));
+assert.ok(alike('saya nggak tahu', 'saya tidak tahu', 'id'));
+assert.ok(alike('senang sekali', 'sangat senang', 'id'));
+assert.ok(alike('すごく嬉しい', 'とても嬉しい', 'ja'));
+assert.ok(alike('遅れそうです', '遅れそう', 'ja'));
+assert.ok(alike('おくれそう', '遅れそう', 'ja', 'おくれそう'));
+assert.ok(alike('オクレソウ', '遅れそう', 'ja', 'おくれそう'));
+assert.ok(alike('bing meishi', '冰美式', 'zh', 'bingmeishi'));
+assert.ok(alike('bīng měishì', '冰美式', 'zh', 'bingmeishi'));
+assert.ok(alike('非常开心', '很开心', 'zh'));
+assert.ok(!alike('bing', '冰美式', 'zh', 'bingmeishi'));

@@ -18,9 +18,8 @@ export const accountName = (account: string | null) => (account ? tt('{a} 계정
 
 type IconName = Parameters<typeof Icon>[0]['name'];
 
-export const LANG_COLOR: Record<string, string> = { en: '#2563eb', ko: '#0ea5e9', ja: '#e11d48', zh: '#d97706', es: '#16a34a', fr: '#7c5cff', de: '#0f766e', pt: '#65a30d', ru: '#9333ea', vi: '#dc2626', id: '#ea580c' };
 export const Code = ({ c }: { c: string }) => {
-  const col = LANG_COLOR[c] || '#6b7078';
+  const col = 'var(--sub)'; // 흑백 톤: 언어마다 색을 따로 주지 않아요
   return <span className="lg-code" style={{ color: col, background: `color-mix(in srgb, ${col} 13%, transparent)` }}>{c.toUpperCase()}</span>;
 };
 
@@ -134,30 +133,30 @@ export function Settings() {
       <div className="group-t">{tt('바로 바꾸기')}</div>
       <div className="my-quick">
         <button onClick={() => set({ auto: !state.auto })}>
-          <span className="top"><span className="my-ic" style={{ color: '#2563eb', background: 'color-mix(in srgb, #2563eb 13%, transparent)' }}><Icon name="skip" /></span><span className={`switch${state.auto ? ' on' : ''}`} /></span>
+          <span className="top"><span className="my-ic" style={{ color: 'var(--sub)', background: 'color-mix(in srgb, var(--sub) 13%, transparent)' }}><Icon name="skip" /></span><span className={`switch${state.auto ? ' on' : ''}`} /></span>
           <b>{tt('자동재생')}</b><small>{state.auto ? tt('켜짐 · 다음 문장으로') : tt('꺼짐 · 직접 넘기기')}</small>
         </button>
         <button onClick={() => set({ theme: dark ? 'light' : 'dark' })}>
-          <span className="top"><span className="my-ic" style={{ color: '#7c5cff', background: 'color-mix(in srgb, #7c5cff 13%, transparent)' }}><Icon name="moon" /></span><span className={`switch${dark ? ' on' : ''}`} /></span>
+          <span className="top"><span className="my-ic" style={{ color: 'var(--sub)', background: 'color-mix(in srgb, var(--sub) 13%, transparent)' }}><Icon name="moon" /></span><span className={`switch${dark ? ' on' : ''}`} /></span>
           <b>{tt('다크 모드')}</b><small>{dark ? tt('켜짐 · 어두운 화면') : tt('꺼짐 · 밝은 화면')}</small>
         </button>
       </div>
 
       <div className="group-t">{tt('학습')}</div>
       <div className="my-card list">
-        <Item icon="book" color="#16a34a" label={tt('학습 방식')} value={`${state.auto ? tt('자동재생') : tt('수동')} · ${tt(MODES[state.mode].name)}`} onClick={() => openSub('learn')} />
-        <Item icon="bell" color="#f97316" label={tt('알림')} value={notifySummary(state)} onClick={() => openSub('notify')} />
+        <Item icon="book" color="var(--sub)" label={tt('학습 방식')} value={`${state.auto ? tt('자동재생') : tt('수동')} · ${tt(MODES[state.mode].name)}`} onClick={() => openSub('learn')} />
+        <Item icon="bell" color="var(--sub)" label={tt('알림')} value={notifySummary(state)} onClick={() => openSub('notify')} />
       </div>
       <div className="group-t">{tt('화면 · 데이터')}</div>
       <div className="my-card list">
-        <Item icon="screen" color="#7c5cff" label={tt('화면')} value={`${tt(FONT_SIZES[state.fontSize].name)} · ${tt(THEMES[state.theme])}`} onClick={() => openSub('display')} />
-        <Item icon="download" color="#0d9488" label={tt('데이터')} value={state.lastBackup ? tt('백업함') : tt('마지막 백업 없음 · 백업하기')} onClick={() => openSub('data')} />
+        <Item icon="screen" color="var(--sub)" label={tt('화면')} value={`${tt(FONT_SIZES[state.fontSize].name)} · ${tt(THEMES[state.theme])}`} onClick={() => openSub('display')} />
+        <Item icon="download" color="var(--sub)" label={tt('데이터')} value={state.lastBackup ? tt('백업함') : tt('마지막 백업 없음 · 백업하기')} onClick={() => openSub('data')} />
       </div>
       <div className="group-t">{tt('기타')}</div>
       <div className="my-card list">
         {/* 임시: 온보딩 확인용, 나중에 지운다 */}
-        <Item icon="undo" color="#6b7078" label={tt('처음 화면 다시 보기')} value={tt('언어 고르기부터 다시 시작')} onClick={() => go('onboarding')} />
-        <Item icon="repeat" color="#2563eb" label={tt('새로 고침')} value={tt('새로 배포한 내용 받기')} onClick={() => location.reload()} />
+        <Item icon="undo" color="var(--sub)" label={tt('처음 화면 다시 보기')} value={tt('언어 고르기부터 다시 시작')} onClick={() => go('onboarding')} />
+        <Item icon="repeat" color="var(--sub)" label={tt('새로 고침')} value={tt('새로 배포한 내용 받기')} onClick={() => location.reload()} />
       </div>
       <Note>{tt('문장 쇼츠 · 외국어 문장과 뜻은 아직 원어민 검수 전이에요.')}</Note>
     </div></section>

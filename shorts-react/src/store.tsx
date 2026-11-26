@@ -33,11 +33,10 @@ const defaults: AppState = {
   lastBackup: null,
   vocab: {},
   vocabTopic: '',
-  vocabGoal: 20,
   vocabDays: [],
   vocabStar: [],
   vocabMute: false,
-  vocabFree: { n: 0, day: '', today: 0, done: '' },
+  vocabFree: { n: 0 },
   vocabRun: { code: '', ids: [], done: [], miss: [], knew: [] },
 };
 
@@ -56,7 +55,6 @@ export function normalize(raw: Partial<AppState>): AppState {
   const old = all.slow; delete all.slow;
   if (raw.speed === undefined && old === true) s.speed = 0.8;
   if (![1, 0.8, 0.6].includes(s.speed)) s.speed = 1;
-  if (![10, 20, 30].includes(s.vocabGoal)) s.vocabGoal = 20;
   s.custom = s.custom.filter((c) => Array.isArray(c?.words));
   s.saved = s.saved.filter((x) => typeof x?.id === 'string' && Array.isArray(x.card?.words)).map((x) => {
     const item = { ...x };

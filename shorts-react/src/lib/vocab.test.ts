@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildSteps, cloze, hintShape, knownLog, placementIds, why, dueAt, nextBox, pickSession, todayCount, dayStreak, weekOf, dayOf, freeLeft, spendFree, NO_FREE } from './vocab.ts';
+import { buildSteps, cloze, hintShape, knownLog, placementIds, why, dueAt, nextBox, pickSession, todayCount, dayStreak, weekOf, dayOf, freeLeft } from './vocab.ts';
 
 const now = new Date(2026, 0, 10, 15).getTime();
 assert.equal(nextBox(0, false), 1);
@@ -10,7 +10,7 @@ assert.equal(dueAt(1, now), new Date(2026, 0, 11).getTime());
 // 복습할 것이 먼저, 아직 때가 안 된 것은 빠진다
 assert.deepEqual(pickSession(['a', 'b', 'c', 'd'], { c: [1, now - 1], b: [2, now + 1e9] }, now, 3), [2, 0, 3]);
 const steps = buildSteps([0, 1, 2], (i) => (i === 0 ? 3 : 0));
-assert.deepEqual(steps.map((s) => s.kind), ['cloze', 'intro', 'choose', 'cloze', 'intro', 'choose', 'cloze']);
+assert.deepEqual(steps.map((s) => s.kind), ['cloze', 'choose', 'choose']);
 assert.deepEqual(cloze('He never complains about work.', 'complains', true), ['He never ', 'complains', ' about work.']);
 // 모든 단어는 예문에 빈칸을 만들 수 있어야 해요
 const book = JSON.parse(readFileSync(new URL('../data/words.json', import.meta.url), 'utf8')) as Record<string, string[][]>;
@@ -47,19 +47,12 @@ console.log('ok vocab');
   assert.deepEqual(weekOf([d(0), d(3)], now), [true, false, false, true, false, false, false]);
 }
 
-// 무료: 처음 30개 → 30개 채운 날은 끝 → 다음 날 5개 → 5개 쓰면 끝 → 다음 날 다시 5개
+// 무료: 모두 30개, 하루 제한 없음
 {
-  let f = NO_FREE;
-  assert.equal(freeLeft(f, 'd1'), 30);
-  for (let i = 0; i < 29; i++) f = spendFree(f, 'd1');
-  assert.equal(freeLeft(f, 'd1'), 1);
-  f = spendFree(f, 'd2');
-  assert.equal(freeLeft(f, 'd2'), 0);
-  assert.equal(freeLeft(f, 'd3'), 5);
-  for (let i = 0; i < 5; i++) f = spendFree(f, 'd3');
-  assert.equal(freeLeft(f, 'd3'), 0);
-  assert.equal(freeLeft(f, 'd4'), 5);
-  // 새 단어는 한도까지만, 복습은 그대로
+  assert.equal(freeLeft(0), 30);
+  assert.equal(freeLeft(25), 5);
+  assert.equal(freeLeft(31), 0);
+// 새 단어는 한도까지만, 복습은 그대로
   assert.deepEqual(pickSession(['a', 'b', 'c', 'd'], { a: [1, 0] }, 1, 20, undefined, 2), [0, 1, 2]);
 }
 

@@ -30,6 +30,46 @@ export const norm = (s: string, code: string) => {
   return NO_SPACE[code] ? t.replace(/\s+/g, '') : t.replace(/\s+/g, ' ').trim();
 };
 
+// 언어마다 '같은 답'으로 봐 줄 것: 강조 말, 줄임말, 말투, 악센트, 정중체 끝 등 (6개 언어)
+const SAME: Record<string, [RegExp, string][]> = {
+  en: [[/\b(really|so|super|extremely|very)\b/g, 'very'], [/\bi am\b/g, 'im'], [/\bit is\b/g, 'its'], [/\bdo not\b/g, 'dont'], [/\b(can not|cannot)\b/g, 'cant'],
+    [/\bthat is\b/g, 'thats'], [/\byou are\b/g, 'youre'], [/\bwe are\b/g, 'were'], [/\bthey are\b/g, 'theyre'], [/([a-z])our\b/g, '$1or']], // colour = color
+  ko: [[/(정말|진짜|너무|엄청|아주|되게|무척|참)/g, '정말'], [/요$/, '']],
+  ja: [[/(本当に|ほんとうに|ほんとに|すごく|とても|めっちゃ|超)/g, 'とても'], [/(です|ます|だ)$/, '']],
+  zh: [[/(很|非常|特别|真|挺|太)/g, '很']],
+  es: [[/^(yo|tu|usted|nosotros|vosotros|ellos|ellas|ustedes) /, ''], [/\b(muy|super|bastante)\b/g, 'muy']], // 악센트는 canon에서 빼요
+  id: [[/\b(tidak|nggak|enggak|gak|ga|ndak)\b/g, 'tidak'], [/\b(sangat|sekali|banget|amat)\b/g, ''], [/\s+/g, ' ']],
+};
+const kataToHira = (s: string) => s.replace(/[ァ-ヶ]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+const noMarks = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').normalize('NFC');
+function canon(s: string, code: string) {
+  let t = norm(s, code);
+  if (code === 'ja') t = kataToHira(t);
+  if (code === 'es') t = noMarks(t); // está = esta
+  return (SAME[code] ?? []).reduce((x, [re, to]) => x.replace(re, to), t).trim();
+}
+/** 병음: 성조·띄어쓰기 빼고, ü는 u로 */
+const pinyin = (s: string) => noMarks(s.toLowerCase()).replace(/[üv]/g, 'u').replace(/[^a-z]/g, '');
+
+/** 글자는 달라도 같은 답인지. reading: 정답의 읽기 (일본어 히라가나, 중국어 병음) — 읽기로 써도 정답 */
+export function alike(typed: string, answer: string, code: string, reading?: string) {
+  const t = canon(typed, code);
+  if (!t) return false;
+  if (t === canon(answer, code)) return true;
+  if (!reading) return false;
+  if (code === 'zh') return /[a-z]/i.test(typed) && pinyin(typed) === pinyin(reading);
+  return t === canon(reading, code);
+}
+
+/** 정답은 아니지만 같은 뜻의 다른 표현인지: 카드에 적어 둔 다른 답, 또는 다른 카드에서 같은 뜻으로 배운 표현 */
+export function altOf(typed: string, card: Card, native: string) {
+  const t = norm(typed, card.lang);
+  if (!t) return false;
+  if (card.alt?.some((x) => alike(x, typed, card.lang))) return true;
+  const mean = card.mean[native] ?? card.mean.ko;
+  return !!mean && dict(card.lang, native).get(t) === mean;
+}
+
 // 같은 언어 카드의 표현·단어 뜻 사전 (잘못 쓴 단어 설명용)
 const dicts: Record<string, Map<string, string>> = {};
 function dict(code: string, native: string) {

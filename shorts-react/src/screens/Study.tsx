@@ -10,7 +10,11 @@ import { clean, langTag, sentence, trOf, langName } from '../lib/text';
 import { streakOf } from '../lib/srs';
 import { useStore } from '../store';
 import { useUi } from '../ui';
-import { BlankNote, KoLine, ding, findMiss, join, norm, visLen } from './Exercise';
+import { BlankNote, KoLine, alike, altOf, ding, findMiss, join, norm, visLen } from './Exercise';
+import READINGS from '../data/readings.json';
+
+// 일본어·중국어 빈칸 정답의 읽기 (tools/readings/gen_readings.py로 만들어요)
+const READ = READINGS as Record<string, string>;
 import type { Card } from '../types';
 
 const SIZE = 10;
@@ -20,7 +24,8 @@ const nextMs = (c: Card) => talkMs(c) + 2200;
 
 const hush = () => { stopAudio(); if (speechOk()) speechSynthesis.cancel(); };
 
-type Res = { card: Card; ok: boolean };
+/** alt: 정답은 아니지만 같은 뜻의 다른 표현을 써서 맞은 걸로 친 경우 */
+type Res = { card: Card; ok: boolean; alt?: boolean };
 
 /** 자동 공부: 한 번 듣기 → 빈칸 채우기 → 결과(저절로 다음), 10문장씩 */
 export function Study() {
@@ -119,7 +124,7 @@ export function Study() {
           {result && (
             <div className="st-res">
               <span key={c.id} className="ic">{result === 'ok' ? <Icon name="check" /> : '!'}</span>
-              <b>{result === 'ok' ? tt('정답이에요!') : tt('괜찮아요, 다음에 또 나와요')}</b>
+              <b>{result === 'ok' ? (last?.alt ? tt('좋은 표현이에요!') : tt('정답이에요!')) : tt('괜찮아요, 다음에 또 나와요')}</b>
               {result === 'ok' && run >= 3 && <span className="st-run">{tt('{n}연속', { n: run })}</span>}
               <button className={`st-save${saved ? ' on' : ''}`} aria-label={tt('배울 문장으로 저장')} onClick={() => toggleSave('s', c)}><Icon name="mark" /></button>
             </div>
@@ -129,10 +134,11 @@ export function Study() {
             <p><KoLine card={c} native={state.native} /></p>
           </div>
           {phase === 'blank'
-            ? <Blank key={c.id} card={c} onEnd={(ok) => { if (ok) ding(); setRes((r) => [...r, { card: c, ok }]); setTimeout(() => setPhase('result'), ok ? 450 : 200); }} />
+            ? <Blank key={c.id} card={c} onEnd={(ok, alt) => { if (ok) ding(); setRes((r) => [...r, { card: c, ok, alt }]); setTimeout(() => setPhase('result'), ok ? 450 : 200); }} />
             : (
               <div className="st-en">
                 <p className="st-s" lang={langTag(c.lang)}>{c.words.map((w, k) => <span key={k} className={c.key.includes(k) ? 'key' : ''}>{w}{NO_SPACE[c.lang] ? '' : ' '}</span>)}</p>
+                {phase === 'result' && last?.alt && last.card.id === c.id && <p className="st-alt">{tt('그 말도 맞아요. 이 문장에서는 이 표현을 배워요')}</p>}
                 {phase === 'result' && c.expr && <p className="st-expr"><b lang={langTag(c.lang)}>{c.expr}</b> = {trOf(c.mean, state.native)}</p>}
               </div>
             )}
@@ -147,7 +153,9 @@ export function Study() {
             </button>
           </div>
         )}
-        {phase === 'blank' && <p className="st-cap">{c?.trKey?.[state.native] ? tt('색이 다른 부분에 맞는 표현을 빈칸에 써 보세요') : tt('뜻을 보고 빈칸에 들어갈 표현을 써 보세요')}</p>}
+        {phase === 'blank' && <p className="st-cap">{c?.trKey?.[state.native] ? tt('색이 다른 부분에 맞는 표현을 빈칸에 써 보세요') : tt('뜻을 보고 빈칸에 들어갈 표현을 써 보세요')}
+          {c.lang === 'zh' && <small>{tt('간체자나 병음으로 써 주세요')}</small>}
+          {c.lang === 'ja' && <small>{tt('한자나 히라가나 둘 다 괜찮아요')}</small>}</p>}
       </div>
 
       {paused && (
@@ -165,7 +173,7 @@ export function Study() {
 }
 
 /** 빈칸: 힌트 → 정답 보기(흐리게 깔고 다시 쓰기), 다 쓰고 틀리면 몇 글자 다른지 */
-function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void }) {
+function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean, alt?: boolean) => void }) {
   const { state } = useStore();
   const { speak } = useUi();
   const { logAct } = useActions();
@@ -183,14 +191,17 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
   const tried = !!t && t !== a && (t.length >= a.length || sent);
   const miss = !shown && text ? findMiss(text, answer, c.lang, state.native) : null;
 
-  const finish = (ok: boolean) => {
+  const finish = (ok: boolean, alt?: boolean) => {
     if (done !== null) return;
     setDone(ok);
     logAct('s');
     navigator.vibrate?.(ok ? 12 : [20, 40, 20]);
-    onEnd(ok && !shown);
+    onEnd(ok && !shown, alt);
   };
-  const onType = (v: string) => { setText(v); setSent(false); if (norm(v, c.lang) === a) finish(true); };
+  // 띄어쓰기·강조 말(really=very)·줄임말이 달라도 같은 답이면 바로 정답
+  const onType = (v: string) => { setText(v); setSent(false); if (norm(v, c.lang) === a || alike(v, answer, c.lang, READ[c.id])) finish(true); };
+  // 엔터: 같은 뜻의 다른 표현이면 '좋은 표현'으로 맞은 걸로, 아니면 틀린 이유를 보여 줘요
+  const submit = () => { if (!shown && altOf(text, c, state.native)) finish(true, true); else setSent(true); };
 
   const first = idx[0], lastI = idx[idx.length - 1];
   const tail = c.words[lastI].match(/[.,!?。、！？]+$/)?.[0] ?? '';
@@ -205,7 +216,7 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
             <input ref={input} value={text} lang={langTag(c.lang)} aria-label={tt('빈칸 입력')} enterKeyHint="done"
               autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false}
               style={{ width: `${(Math.max(visLen(answer), visLen(text)) + 1) * 0.7}ch` }}
-              onChange={(e) => onType(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && setSent(true)} />
+              onChange={(e) => onType(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && submit()} />
           )}
         </span>, tail, ' ',
       );
@@ -231,7 +242,7 @@ function Blank({ card: c, onEnd }: { card: Card; onEnd: (ok: boolean) => void })
 }
 
 function Confetti({ gold }: { gold: boolean }) {
-  const cols = gold ? ['#f5b301', '#fbbf24', '#d97706', '#fde68a'] : ['#2563eb', '#16a34a', '#f59e0b', '#ef4444', '#a855f7', '#06b6d4'];
+  const cols = gold ? ['#2563eb', '#93b4ff', '#22262b'] : ['#2563eb', '#93b4ff', '#22262b', '#c9ccd1']; // 흑백 + 파랑 하나
   const bits = useMemo(() => Array.from({ length: gold ? 90 : 60 }, (_, k) => ({
     left: Math.random() * 100, delay: Math.random() * 0.35, dur: 1 + Math.random() * 0.8, rot: Math.random() * 360, c: cols[k % cols.length], round: k % 3 === 0,
   })), [gold]); // eslint-disable-line react-hooks/exhaustive-deps

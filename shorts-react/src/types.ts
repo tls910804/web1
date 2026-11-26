@@ -13,6 +13,8 @@ export interface Card {
   mean: Record<string, string>;
   /** 뜻(tr) 안에서 빈칸(key)에 해당하는 부분. 자동 공부에서 색으로 표시 */
   trKey?: Record<string, string>;
+  /** 빈칸에 써도 '좋은 표현'으로 받아 주는 다른 답 (예: over the moon → thrilled) */
+  alt?: string[];
   /** 초급(A1~A2 흔한 말) · 중급(B1~B2 관용 표현) · 고급(C1 긴 문장·뉘앙스). 없으면 길이로 추정 */
   level?: string;
   /** 유튜브 영상 카드: 이 구간(초)을 카드 위에서 재생한다 */
@@ -74,8 +76,6 @@ export interface AppState {
   /** 단어장에서 고른 주제. ''은 전체 */
   vocabTopic: string;
   /** 하다 만 단어장 한 판 (이어서 하기). code가 ''이면 없음 */
-  /** 하루 목표 단어 수 (10·20·30) */
-  vocabGoal: number;
   /** 단어장 공부한 날 (dayKey) */
   vocabDays: string[];
   /** 어려운 단어 (틀리면 저절로, 직접 별표도) */
@@ -83,7 +83,7 @@ export interface AppState {
   /** 소리 없이: 저절로 읽어 주지 않아요 */
   vocabMute: boolean;
   /** 무료 새 단어 사용량 (lib/vocab.ts freeLeft) */
-  vocabFree: { n: number; day: string; today: number; done: string };
+  vocabFree: { n: number };
   vocabRun: { code: string; ids: number[]; done: number[]; miss: number[]; knew: number[] };
 }
 

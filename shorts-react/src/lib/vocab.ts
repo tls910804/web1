@@ -1,10 +1,11 @@
 // 단어장 학습 규칙: 틀리면 처음 칸, 맞히면 한 칸씩 올라가고 칸이 높을수록 늦게 다시 나온다.
 /** 단어별 기록 [칸(1~5), 다음에 볼 시각] */
 export type VocabLog = Record<string, [number, number]>;
-export type Step = { w: number; kind: 'intro' | 'choose' | 'cloze' };
+/** again: 한 바퀴 돈 뒤 틀렸던 단어를 다시 하는 문제 */
+export type Step = { w: number; kind: 'intro' | 'choose' | 'cloze'; again?: boolean };
 
 const GAP = [0, 1, 3, 7, 14, 30]; // 칸별 다음 복습까지 일수
-export const SESSION = 20;
+export const SESSION = 10; // 한 번에 10개씩
 /** '이미 알아요'로 뺀 단어의 칸. 다시 나오지 않아요 */
 export const KNOWN = 9;
 export const knownLog = (): [number, number] => [KNOWN, 8.64e15];
@@ -22,9 +23,10 @@ export function pickSession(keys: string[], log: VocabLog, now: number, size = S
   return [...due.slice(0, size - keep), ...fresh].slice(0, size);
 }
 
-/** 단어마다 빈칸 한 번. 새 단어는 보기 → 뜻 고르기 → 빈칸 (알아보기 다음에 떠올리기) */
+/** 말해보카처럼 문제 먼저: 새 단어는 뜻 고르기부터, 복습 단어는 빈칸 쓰기.
+ *  틀린 새 단어는 그때 카드로 배우고, 한 바퀴 뒤에 고르기 → 쓰기로 다시 (Session이 붙여요) */
 export function buildSteps(ids: number[], boxOf: (i: number) => number): Step[] {
-  return ids.flatMap((w): Step[] => (boxOf(w) ? [{ w, kind: 'cloze' }] : [{ w, kind: 'intro' }, { w, kind: 'choose' }, { w, kind: 'cloze' }]));
+  return ids.map((w): Step => ({ w, kind: boxOf(w) ? 'cloze' : 'choose' }));
 }
 
 /** 예문을 [빈칸 앞, 정답, 뒤]로 나눈다. 영어는 단어 전체만, 한국어는 뒤에 조사가 붙어도 돼요 */
@@ -109,21 +111,6 @@ export function weekOf(days: string[], now: number) {
   return [0, 1, 2, 3, 4, 5, 6].map((k) => has.has(dayOf(back(mon, -k))));
 }
 
-/** 무료 새 단어: 처음 30개, 그다음은 하루 5개 (복습은 언제나 무료). 프리미엄이면 제한 없음 */
-export const FREE_START = 30, FREE_DAILY = 5;
-/** n: 지금까지 배운 새 단어 수, day/today: 마지막으로 배운 날과 그날 개수, done: 처음 30개를 다 채운 날 */
-export type Free = { n: number; day: string; today: number; done: string };
-export const NO_FREE: Free = { n: 0, day: '', today: 0, done: '' };
-
-/** 오늘 무료로 더 배울 수 있는 새 단어 수. 30개를 채운 날은 0, 다음 날부터 5개 (모아 두지 않아요) */
-export function freeLeft(f: Free, today: string) {
-  if (f.n < FREE_START) return FREE_START - f.n;
-  if (f.done === today) return 0;
-  return Math.max(0, FREE_DAILY - (f.day === today ? f.today : 0));
-}
-
-/** 새 단어 하나를 배웠을 때 */
-export function spendFree(f: Free, today: string): Free {
-  const n = f.n + 1;
-  return { n, day: today, today: f.day === today ? f.today + 1 : 1, done: n === FREE_START ? today : f.done };
-}
+/** 무료 새 단어는 모두 30개 (하루 제한 없음). 그다음 새 단어는 프리미엄. 복습은 언제나 무료 */
+export const FREE_WORDS = 30;
+export const freeLeft = (learned: number) => Math.max(0, FREE_WORDS - learned);
