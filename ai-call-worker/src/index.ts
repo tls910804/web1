@@ -1,8 +1,8 @@
-import Anthropic from '@anthropic-ai/sdk';
 import { POLICY, dayKey, invalid, overLimit, systemPrompt, type ReactBody } from './policy';
 
 export interface Env {
-  ANTHROPIC_API_KEY: string; // wrangler secret put ANTHROPIC_API_KEY 로만 넣어요(코드·저장소에 두지 않음)
+  GOOGLE_TTS_KEY: string; // wrangler secret put GOOGLE_TTS_KEY (Text-to-Speech API만 쓰게 제한한 키)
+  GEMINI_KEY: string; // wrangler secret put GEMINI_KEY (Gemini는 따로 만든 키여야 해요)
   LIMITS: KVNamespace;
   ALLOWED_ORIGINS: string; // 쉼표로 구분
 }
@@ -37,35 +37,50 @@ export default {
     const ttl = { expirationTtl: 60 * 60 * 26 };
     const count = () => Promise.all([env.LIMITS.put(keys.device, String(n.device + 1), ttl), env.LIMITS.put(keys.ip, String(n.ip + 1), ttl), env.LIMITS.put(keys.all, String(n.all + 1), ttl)]);
 
-    const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
     try {
-      const res = await client.messages.create({
-        model: POLICY.model,
-        max_tokens: POLICY.maxTokens,
-        output_config: {
-          effort: 'low',
-          format: {
-            type: 'json_schema',
-            schema: { type: 'object', properties: { en: { type: 'string' }, ko: { type: 'string' } }, required: ['en', 'ko'], additionalProperties: false },
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${POLICY.model}:generateContent`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-goog-api-key': env.GEMINI_KEY },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: systemPrompt(body) }] },
+          contents: [{ role: 'user', parts: [{ text: `Call so far:\n${body.history.map((l) => `${l.who === 'ai' ? 'You' : 'Learner'}: ${l.en}`).join('\n')}\n\nLearner just said: ${JSON.stringify(body.said)}` }] }],
+          generationConfig: {
+            maxOutputTokens: POLICY.maxTokens,
+            responseMimeType: 'application/json',
+            responseSchema: { type: 'OBJECT', properties: { en: { type: 'STRING' }, ko: { type: 'STRING' } }, required: ['en', 'ko'] },
           },
-        },
-        system: systemPrompt(body),
-        messages: [
-          {
-            role: 'user',
-            content: `Call so far:\n${body.history.map((l) => `${l.who === 'ai' ? 'You' : 'Learner'}: ${l.en}`).join('\n')}\n\nLearner just said: ${JSON.stringify(body.said)}`,
-          },
-        ],
+        }),
       });
-      if (res.stop_reason !== 'end_turn') return json({ error: 'no_reply' }, 502, origin);
-      const text = res.content.find((c) => c.type === 'text');
-      const out = text?.type === 'text' ? (JSON.parse(text.text) as { en: string; ko: string }) : null;
+      if (!r.ok) {
+        console.log('gemini', r.status, (await r.text()).slice(0, 300)); // wrangler tail로 이유 확인 (키·사용자 말은 안 남겨요)
+        return json({ error: r.status === 429 ? 'busy' : 'upstream', status: r.status }, 502, origin);
+      }
+      const d = (await r.json()) as { candidates?: { finishReason?: string; content?: { parts?: { text?: string }[] } }[] };
+      const c = d.candidates?.[0];
+      if (c?.finishReason !== 'STOP' || !c.content?.parts?.[0]?.text) return json({ error: 'no_reply' }, 502, origin);
+      const out = JSON.parse(c.content.parts[0].text) as { en?: string; ko?: string };
       if (!out?.en) return json({ error: 'no_reply' }, 502, origin);
+      const en = out.en.slice(0, 200);
+      const audio = await speak(en, env.GOOGLE_TTS_KEY);
+      if (!audio) return json({ error: 'tts' }, 502, origin); // 목소리 없이 글만 보내지 않아요 (앱은 대본 음성으로 이어가요)
       await count();
-      return json({ en: out.en.slice(0, 200), ko: (out.ko || '').slice(0, 200), left: POLICY.perDevicePerDay - n.device - 1 }, 200, origin);
+      return json({ en, ko: (out.ko || '').slice(0, 200), audio, left: POLICY.perDevicePerDay - n.device - 1 }, 200, origin);
     } catch (e) {
+      console.log('error', String(e).slice(0, 200));
       // 실패해도 앱은 대본으로 이어가요
-      return json({ error: e instanceof Anthropic.RateLimitError ? 'busy' : 'upstream' }, 502, origin);
+      return json({ error: 'upstream' }, 502, origin);
     }
   },
 };
+
+/** Google Chirp 3 HD로 읽은 mp3(base64). 실패하면 null */
+async function speak(text: string, key: string): Promise<string | null> {
+  const r = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${encodeURIComponent(key)}`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ input: { text }, voice: { languageCode: 'en-US', name: POLICY.voice }, audioConfig: { audioEncoding: 'MP3' } }),
+  }).catch(() => null);
+  if (!r?.ok) return null;
+  const d = (await r.json().catch(() => null)) as { audioContent?: string } | null;
+  return d?.audioContent || null;
+}

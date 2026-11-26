@@ -8,9 +8,6 @@
     "test": "node --experimental-strip-types --test src/policy.test.ts",
     "check": "tsc --noEmit"
   },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^1.8.0"
-  },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20261114.1",
     "typescript": "~5.6.3",

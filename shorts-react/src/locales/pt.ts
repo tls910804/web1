@@ -824,4 +824,13 @@ export const pt: Record<string, string> = {
   "그 말도 맞아요. 이 문장에서는 이 표현을 배워요": "Isso também vale. Esta frase ensina esta expressão",
   "간체자나 병음으로 써 주세요": "Escreva em chinês simplificado ou pinyin",
   "한자나 히라가나 둘 다 괜찮아요": "Kanji ou hiragana, tanto faz",
+  "1분이면 끝나요 · 틀려도 괜찮아요 · 막히면 글로 써도 돼요": "Leva 1 min · errar não tem problema · se travar, escreva",
+  "괜찮아요, 다음에 이어서 해요": "Tudo bem, continue da próxima vez",
+  "내가 한 말": "O que você disse",
+  "들어 보기": "Ouvir",
+  "써 볼 표현 · 선택": "Expressões para testar · opcional",
+  "오늘의 한 줄": "A frase de hoje",
+  "잘 통했어요!": "Deu tudo certo!",
+  "처음이라면": "Primeira vez?",
+  "펼치기": "Mostrar",
 };

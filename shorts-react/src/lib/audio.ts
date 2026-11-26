@@ -70,6 +70,18 @@ export function stopAudio() {
   if (current) { current.pause(); current = null; }
 }
 
+/** 서버가 보낸 음성(AI 전화 즉석 대사)을 같은 재생기로 틀어요 (아이폰 잠금 풀린 재생기라야 소리가 나요) */
+export function playSrc(src: string, rate = 1) {
+  stopAudio();
+  const a = getPlayer();
+  ctx?.resume().catch(() => {});
+  a.onended = null;
+  a.src = src;
+  a.defaultPlaybackRate = a.playbackRate = rate;
+  current = a;
+  a.play().catch(() => {});
+}
+
 export function playAudio(text: string, lang: string, rate: number, repeat = 1): boolean {
   const slow = rate < 1;
   const e = manifest?.[`${lang}|${text}`];

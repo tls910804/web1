@@ -824,4 +824,13 @@ export const id: Record<string, string> = {
   "그 말도 맞아요. 이 문장에서는 이 표현을 배워요": "Itu juga benar. Kalimat ini mengajarkan ungkapan ini",
   "간체자나 병음으로 써 주세요": "Tulis dengan aksara Mandarin sederhana atau pinyin",
   "한자나 히라가나 둘 다 괜찮아요": "Kanji atau hiragana sama-sama boleh",
+  "1분이면 끝나요 · 틀려도 괜찮아요 · 막히면 글로 써도 돼요": "Cuma 1 menit · salah tidak apa-apa · kalau macet, ketik saja",
+  "괜찮아요, 다음에 이어서 해요": "Tidak apa-apa, lanjut lain kali",
+  "내가 한 말": "Yang kamu ucapkan",
+  "들어 보기": "Dengarkan",
+  "써 볼 표현 · 선택": "Frasa untuk dicoba · opsional",
+  "오늘의 한 줄": "Kalimat hari ini",
+  "잘 통했어요!": "Lancar sekali!",
+  "처음이라면": "Pertama kali?",
+  "펼치기": "Buka",
 };

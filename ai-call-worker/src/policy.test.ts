@@ -30,3 +30,7 @@ test('프롬프트에 다음 대사와 미션이 들어감', () => {
   const p = systemPrompt(ok);
   assert.ok(p.includes(ok.next) && p.includes('running late'));
 });
+test('마지막 줄(다음 대사 없음)은 통과하고 작별 인사를 시켜요', () => {
+  assert.equal(invalid({ ...ok, next: '' }), null);
+  assert.ok(systemPrompt({ ...ok, next: '' }).includes('goodbye'));
+});

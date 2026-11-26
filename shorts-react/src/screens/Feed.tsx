@@ -8,7 +8,7 @@ import { allCats, countFeed, feedCards, allCards, tabList, videoCards } from '..
 import { LEVELS } from '../constants';
 import { preloadAudio } from '../lib/audio';
 import { useActions } from '../lib/useActions';
-import { langTag, sentence, trOf, langName } from '../lib/text';
+import { langTag, sentence, trOf, langName, wordInfo } from '../lib/text';
 import { useStore } from '../store';
 import { useUi } from '../ui';
 import type { Card } from '../types';
@@ -109,7 +109,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
   // 자동재생: 카드가 바뀌거나 자동재생을 켜면 발음을 들려준다
   useEffect(() => {
     if (!state.auto || !cur || cur.video) return;
-    const t = setTimeout(() => speak(sentence(cur), cur.lang, { repeat: state.autoRepeat, quiet: true }), 450);
+    const t = setTimeout(() => speak(sentence(cur), cur.lang, { repeat: state.autoRepeat, quiet: true }), 150); // 빠르게 여러 장 넘길 때 중간 카드는 안 읽게 짧게만 기다려요
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [curId, state.auto, state.autoRepeat]);
@@ -142,6 +142,7 @@ export function Feed({ onlyVideo, overlay }: { onlyVideo?: boolean; overlay?: bo
     const isExpr = wi < 0 || card.key.includes(wi);
     ui.setSelection({ cardId: card.id, set: isExpr ? card.key : [wi] });
     openSheet(<WordSheet card={card} wi={wi} />);
+    if (!card.video) speak(wordInfo(card, wi, state.native).speak, card.lang, { quiet: true }); // 영상 카드는 영상 소리와 겹쳐서 안 읽어요
   };
 
   const copy = () => {

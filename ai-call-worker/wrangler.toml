@@ -11,3 +11,8 @@ ALLOWED_ORIGINS = "https://tls910804.github.io,https://langshorts.com,https://ww
 [[kv_namespaces]]
 binding = "LIMITS"
 id = "1ded7234c9634113941f537539450f96"
+
+# Gemini는 홍콩 등 일부 지역에서 못 써요(User location is not supported) → 서버를 미국 Google 지역 근처에서만 돌려요
+[placement]
+mode = "targeted"
+region = "gcp:us-central1"

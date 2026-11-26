@@ -824,4 +824,13 @@ export const vi: Record<string, string> = {
   "그 말도 맞아요. 이 문장에서는 이 표현을 배워요": "Như vậy cũng đúng. Câu này dạy cụm từ này",
   "간체자나 병음으로 써 주세요": "Hãy viết bằng chữ Hán giản thể hoặc pinyin",
   "한자나 히라가나 둘 다 괜찮아요": "Kanji hay hiragana đều được",
+  "1분이면 끝나요 · 틀려도 괜찮아요 · 막히면 글로 써도 돼요": "Chỉ 1 phút · sai cũng không sao · bí thì cứ gõ chữ",
+  "괜찮아요, 다음에 이어서 해요": "Không sao, lần sau làm tiếp nhé",
+  "내가 한 말": "Bạn đã nói",
+  "들어 보기": "Nghe thử",
+  "써 볼 표현 · 선택": "Cụm từ để thử · tùy chọn",
+  "오늘의 한 줄": "Câu của hôm nay",
+  "잘 통했어요!": "Nói chuyện suôn sẻ lắm!",
+  "처음이라면": "Lần đầu à?",
+  "펼치기": "Mở",
 };
