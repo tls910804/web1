@@ -1503,12 +1503,8 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 
 /* 단어장 */
 .vb h1{margin:0 0 12px;font-size:24px}
-.vb-langs{display:flex;gap:8px;margin-bottom:12px}
-.vb-top{display:flex;flex-direction:column;gap:14px}
-.vb-nums{display:flex}.vb-nums span{flex:1;text-align:center}.vb-nums b{display:block;font:700 24px var(--f-latin)}
 .vb-bar{display:flex;height:6px;border-radius:3px;background:var(--track);overflow:hidden}
 .vb-bar i{background:var(--blue);transition:width .25s}.vb-bar i.mid{opacity:.35}
-.vb-done{margin:0;text-align:center;color:var(--muted);font-size:14px}
 .vb-list{list-style:none;margin:14px 0 0;padding:0}
 .vb-list button{display:flex;align-items:center;gap:12px;width:100%;padding:12px 4px;border-bottom:1px solid var(--line);text-align:left}
 .vb-list span{flex:1;min-width:0}.vb-list b{display:block;font-size:16px}.vb-list small{display:block;font-size:13px;color:var(--muted)}
@@ -1587,3 +1583,96 @@ svg.play{width:11px;height:11px;fill:#fff;stroke:none}
 .vb-trophy svg{width:28px;height:28px;stroke:#fff;stroke-width:3}
 .vb-foot{margin-top:auto;padding-top:16px;display:flex;flex-direction:column;gap:8px}
 .vb-end{justify-content:center}.vb-end>:first-child{margin-top:auto}.vb-end h2{margin:0}.vb-end p{margin:0;color:var(--muted)}
+/* 키보드가 열리면 탭 막대를 숨기고 확인 버튼을 키보드 바로 위에 */
+.app:has(.vb-card input:focus) .tabs{display:none}
+.vb-session:has(.vb-card input:focus){padding-bottom:0}
+.vb-session:has(.vb-card input:focus) .vb-body{padding-bottom:8px}
+.vb-session .vb-foot{position:sticky;bottom:0;background:linear-gradient(transparent,var(--bg) 16px);z-index:1}
+/* 단어장: 강도·복습·결과 (시안 7차 전체) */
+.vb-goalpick{display:flex;align-items:center;gap:6px}.vb-goalpick small{flex:1;font-size:13px;color:var(--muted)}
+.vb-goalpick button{min-width:44px;height:32px;padding:0 10px;border-radius:16px;background:var(--soft);font:600 14px var(--f-latin);color:var(--sub)}
+.vb-goalpick button.on{background:var(--ink);color:var(--bg)}
+.vb-goalpick.big{gap:8px}.vb-goalpick.big button{flex:1;height:auto;padding:10px 0;border-radius:14px;display:flex;flex-direction:column;gap:2px;border:1.5px solid var(--line);background:var(--card)}
+.vb-goalpick.big button b{font-size:20px}.vb-goalpick.big button small{font:400 12px inherit;color:inherit;opacity:.75}
+.vb-goalpick.big button.on{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.vb-h2{margin:22px 0 10px;font-size:17px}
+.vb-star{flex:none;width:36px;font-size:18px;color:var(--muted);padding:6px 0}.vb-star.on{color:#e0a100}
+.vb-list .vb-star{width:32px}
+.vb-head .vb-star{width:auto;padding:4px}
+.vb-mute{position:relative;display:grid;place-items:center;padding:4px!important}.vb-mute svg{width:18px;height:18px;stroke:var(--muted)}
+.vb-mute i{position:absolute;left:3px;right:3px;top:50%;height:2px;background:var(--danger);transform:rotate(-40deg)}
+.vb-steps{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);flex-shrink:0}
+.vb-steps i{width:14px;height:1px;background:var(--line)}.vb-steps b{color:var(--blue);font-weight:700}
+.vb-card .vb-steps{justify-content:flex-start;margin-bottom:6px}
+.vb-test .vb-steps{margin-top:24px}
+.vb-opts button span{font-weight:700}
+.vb-why p.saved{color:#b07d00;font-size:12.5px}
+.vb-report{display:flex;flex-direction:column;gap:12px;margin:6px 0 0;width:100%}
+.vb-stats{display:flex;gap:8px}.vb-stats span{flex:1;padding:12px 4px;border-radius:14px;background:var(--card);box-shadow:var(--shadow-card)}
+.vb-stats b{display:block;font:700 20px var(--f-latin);color:var(--ink)}.vb-stats small{font-size:12px;color:var(--muted)}
+.vb-week{display:flex;justify-content:space-between;padding:10px 12px;border-radius:14px;background:var(--soft)}
+.vb-week span{display:flex;flex-direction:column;align-items:center;gap:4px}
+.vb-week i{width:30px;height:30px;border-radius:50%;background:var(--track);display:grid;place-items:center;font-style:normal;font-size:15px}
+.vb-week span.on i{background:var(--warn-soft)}.vb-week span.now small{color:var(--ink);font-weight:700}
+.vb-week small{font-size:11px;color:var(--muted)}
+.vb-more{display:flex;flex-direction:column;width:100%;text-align:left;margin-top:4px}
+.vb-more small{font-size:12px;color:var(--muted);margin-bottom:2px}
+.vb-more button{display:flex;align-items:center;justify-content:space-between;padding:12px 2px;border-bottom:1px solid var(--line);font-size:14px;color:var(--sub)}
+.vb-more svg{width:16px;height:16px;stroke:var(--muted)}
+.vb-end>.vb-trophy:first-child{margin-top:auto}
+/* 단어장 첫 화면: '지금 할 일' 카드 하나가 주인공 (Figma 674:1141) */
+.vb-top-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.vb-top-row h1{margin:0}
+.vb-lang{position:relative;display:flex;align-items:center;padding:7px 12px;border-radius:18px;background:var(--card);border:1px solid var(--line);font:700 13px var(--f-latin);color:var(--ink)}
+.vb-lang select{position:absolute;inset:0;opacity:0;width:100%;font-size:16px}
+.vb-hero{--hero:#d9f852;display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:24px;background:var(--hero);color:#22262b}
+
+.vb-hero>small{font-size:13px;font-weight:600;opacity:.75}
+.vb-hero h2{margin:0;font-size:25px;line-height:1.25}
+.vb-hero p{margin:0;font-size:14px;opacity:.8}
+.vb-hero-bar{display:flex;flex-direction:column;gap:6px;margin-top:2px}
+.vb-hero-bar::before{content:'';display:block;height:8px;border-radius:4px;background:rgba(34,38,43,.15)}
+.vb-hero-bar i{display:block;height:8px;border-radius:4px;background:#22262b;margin-top:-14px;transition:width .3s}
+.vb-hero-bar small{font-size:12px;opacity:.75}
+.vb-hero-btn{margin-top:4px;text-align:center;width:100%;min-height:52px;border-radius:16px;background:#22262b;color:#fff;font-size:17px;font-weight:700}
+.vb-hero-link{align-self:center;font-size:13px;opacity:.75;padding:4px}
+.vb-hero-opts{display:flex;gap:8px;flex-wrap:wrap}
+.vb-hero-opts button{padding:6px 11px;border-radius:14px;background:rgba(34,38,43,.1);font-size:12px;font-weight:600;color:inherit}
+.vb-hero .vb-topics{margin:0 -22px;padding:0 22px}
+.vb-hero .vb-goalpick button{background:rgba(34,38,43,.1);color:#22262b}.vb-hero .vb-goalpick button.on{background:#22262b;color:#fff}
+.vb-h2-row{display:flex;align-items:baseline;justify-content:space-between}.vb-h2-row h2{margin:0;font-size:17px}.vb-h2-row small{color:var(--muted);font-size:13px}
+.vb-more-card{display:flex;flex-direction:column;border-radius:18px;background:var(--card);box-shadow:var(--shadow-card);overflow:hidden}
+.vb-more-card button{display:flex;align-items:center;gap:12px;padding:14px 16px;text-align:left}.vb-more-card button+button{border-top:1px solid var(--line)}
+.vb-more-card .ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--blue-soft);font-size:18px}.vb-more-card .ic.hard{background:var(--warn-soft);color:#e0a100}
+.vb-more-card span:not(.ic){flex:1;display:flex;flex-direction:column;gap:2px}.vb-more-card b{font-size:15px}.vb-more-card small{font-size:12px;color:var(--muted)}
+.vb-more-card svg{width:18px;height:18px;stroke:var(--muted)}
+.vb-list.my-card{margin:0;padding:0 14px}.vb-list.my-card li:last-child{border-bottom:0}
+.vb-empty{padding:20px 0;justify-content:center;color:var(--muted);font-size:13px}
+.vb-all{display:block;margin:10px auto 0;padding:8px;font-size:13px;color:var(--muted)}
+.vb-retest{display:flex;flex-direction:column;align-items:center;gap:2px;margin:24px 0 8px}.vb-retest small{font-size:12px;color:var(--muted)}.vb-retest button{font-size:13px;font-weight:700;color:var(--sub);padding:4px}
+.vb-hero-note{align-self:center;font-size:12px;opacity:.75}
+.vb-hero-btn{display:flex;align-items:center;justify-content:center;gap:8px}.vb-sparkle{width:22px;height:22px;flex:none;filter:drop-shadow(0 0 5px rgba(255,43,214,.6))}
+
+/* 단어장 첫 화면 2차: 연속 카드, 내 단어장 탭 */
+.vb-streak{margin-top:14px;padding:16px}
+.vb-streak-top{display:flex;align-items:center;gap:12px}
+.vb-streak-top .fire{flex:none;width:44px;height:44px;border-radius:14px;background:#fff1e0;display:grid;place-items:center;font-size:24px}
+.vb-streak-top div{display:flex;flex-direction:column;gap:2px}.vb-streak-top b{font-size:16px}.vb-streak-top small{font-size:13px;color:var(--muted)}
+.vb-week2{display:flex;justify-content:space-between;margin-top:14px}
+.vb-week2 span{display:flex;flex-direction:column;align-items:center;gap:5px;flex:1}
+.vb-week2 i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:15px;font-weight:800;color:#fff;background:var(--track)}
+.vb-week2 .on i{background:#ff6a00}
+.vb-week2 .today i{background:transparent;box-shadow:inset 0 0 0 2px #ff6a00}
+.vb-week2 .later i{background:transparent;box-shadow:inset 0 0 0 1.5px var(--line)}
+.vb-week2 small{font-size:11px;color:var(--muted)}.vb-week2 .today small,.vb-week2 .on small{color:var(--ink);font-weight:700}
+.vb-sum{margin-top:10px;padding:14px 16px}.vb-sum p{margin:0 0 8px;font-size:14px;font-weight:600}
+.vb-bar i.all{background:#00c853;opacity:1}
+.vb-tabs{display:flex;gap:4px;margin:12px 0 6px;padding:4px;border-radius:14px;background:var(--soft)}
+.vb-tabs button{flex:1;display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 2px;border-radius:10px;font-size:12px;color:var(--muted);white-space:nowrap}
+.vb-tabs button b{font:700 15px var(--f-latin);color:var(--sub)}
+.vb-tabs button.on{background:var(--card);color:var(--ink);font-weight:700;box-shadow:0 1px 3px rgba(0,0,0,.08)}.vb-tabs button.on b{color:var(--ink)}
+.vb-tab-note{margin:4px 2px 10px;font-size:12.5px;color:var(--muted)}
+.vb-due{flex:none;font-style:normal;font-size:12px;font-weight:600;color:var(--muted);padding:4px 8px;border-radius:8px;background:var(--soft)}
+.vb-due.now{background:#ff6a00;color:#fff}
+.vb-retest .vb-reset{margin-top:6px;font-weight:600;color:var(--muted)}
+.vb-hero-free{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;font-weight:600;opacity:.8}
+.vb-hero-free button{font-size:12px;font-weight:700;text-decoration:underline;color:inherit;padding:2px}

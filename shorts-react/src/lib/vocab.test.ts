@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { buildSteps, cloze, hintShape, knownLog, placementIds, why, dueAt, nextBox, pickSession } from './vocab.ts';
+import { buildSteps, cloze, hintShape, knownLog, placementIds, why, dueAt, nextBox, pickSession, todayCount, dayStreak, weekOf, dayOf, freeLeft, spendFree, NO_FREE } from './vocab.ts';
 
 const now = new Date(2026, 0, 10, 15).getTime();
 assert.equal(nextBox(0, false), 1);
@@ -10,7 +10,7 @@ assert.equal(dueAt(1, now), new Date(2026, 0, 11).getTime());
 // 복습할 것이 먼저, 아직 때가 안 된 것은 빠진다
 assert.deepEqual(pickSession(['a', 'b', 'c', 'd'], { c: [1, now - 1], b: [2, now + 1e9] }, now, 3), [2, 0, 3]);
 const steps = buildSteps([0, 1, 2], (i) => (i === 0 ? 3 : 0));
-assert.deepEqual(steps.map((s) => s.kind), ['cloze', 'intro', 'cloze', 'intro', 'cloze']);
+assert.deepEqual(steps.map((s) => s.kind), ['cloze', 'intro', 'choose', 'cloze', 'intro', 'choose', 'cloze']);
 assert.deepEqual(cloze('He never complains about work.', 'complains', true), ['He never ', 'complains', ' about work.']);
 // 모든 단어는 예문에 빈칸을 만들 수 있어야 해요
 const book = JSON.parse(readFileSync(new URL('../data/words.json', import.meta.url), 'utf8')) as Record<string, string[][]>;
@@ -28,3 +28,46 @@ assert.deepEqual(placementIds(['a', 'b', 'c', 'd', 'e', 'f'], { b: [1, 0] }, 3),
 assert.equal(hintShape('appointment'), 'ap········t');
 assert.equal(hintShape('가요'), '··');
 console.log('ok vocab');
+
+// 오늘 본 단어만 세요 (아는 단어·수준 테스트 표시·지난 기록은 빼고)
+{
+  const now = new Date(2026, 10, 26, 15).getTime();
+  const log = { 'en:a': [1, dueAt(1, now)], 'en:b': [2, dueAt(2, now)], 'en:c': [1, dueAt(1, now - 86400000)], 'en:d': knownLog(), 'en#start': [0, dueAt(0, now)] } as Record<string, [number, number]>;
+  assert.equal(todayCount(log, now), 2);
+}
+
+// 연속: 하루 쉬어도 이어지고 이틀 쉬면 끊겨요. 이번 주 칸은 월요일부터
+{
+  const now = new Date(2026, 10, 26, 15).getTime(); // 목요일
+  const d = (n: number) => dayOf(now - n * 86400000);
+  assert.equal(dayStreak([d(0), d(1), d(3), d(4)], now), 4);
+  assert.equal(dayStreak([d(1), d(2)], now), 2);
+  assert.equal(dayStreak([d(0), d(3)], now), 1);
+  assert.equal(dayStreak([], now), 0);
+  assert.deepEqual(weekOf([d(0), d(3)], now), [true, false, false, true, false, false, false]);
+}
+
+// 무료: 처음 30개 → 30개 채운 날은 끝 → 다음 날 5개 → 5개 쓰면 끝 → 다음 날 다시 5개
+{
+  let f = NO_FREE;
+  assert.equal(freeLeft(f, 'd1'), 30);
+  for (let i = 0; i < 29; i++) f = spendFree(f, 'd1');
+  assert.equal(freeLeft(f, 'd1'), 1);
+  f = spendFree(f, 'd2');
+  assert.equal(freeLeft(f, 'd2'), 0);
+  assert.equal(freeLeft(f, 'd3'), 5);
+  for (let i = 0; i < 5; i++) f = spendFree(f, 'd3');
+  assert.equal(freeLeft(f, 'd3'), 0);
+  assert.equal(freeLeft(f, 'd4'), 5);
+  // 새 단어는 한도까지만, 복습은 그대로
+  assert.deepEqual(pickSession(['a', 'b', 'c', 'd'], { a: [1, 0] }, 1, 20, undefined, 2), [0, 1, 2]);
+}
+
+// 복습이 한 판보다 많아도 새 단어 5개 자리는 남아요
+{
+  const keys = [...Array(30)].map((_, i) => 'k' + i);
+  const log = Object.fromEntries(keys.slice(0, 25).map((k) => [k, [1, 0] as [number, number]]));
+  const q = pickSession(keys, log, 1, 20);
+  assert.equal(q.length, 20);
+  assert.equal(q.filter((i) => i >= 25).length, 5);
+}

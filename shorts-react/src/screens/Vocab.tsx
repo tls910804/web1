@@ -5,9 +5,10 @@ import { Icon } from '../components/Icon';
 import WORDS from '../data/words.json';
 import TOPIC_DATA from '../data/word-topics.json';
 import { langName, langTag } from '../lib/text';
-import { buildSteps, cloze, dueAt, hintShape, KNOWN, knownLog, nextBox, pickSession, placementIds, SESSION, why, type Op, type Step } from '../lib/vocab';
+import { buildSteps, cloze, dueAt, hintShape, KNOWN, knownLog, nextBox, pickSession, placementIds, todayCount, freeLeft, spendFree, NO_FREE, dayOf, dayStreak, weekOf, why, type Op, type Step } from '../lib/vocab';
 import { useStore } from '../store';
 import { useUi } from '../ui';
+import type { AppState } from '../types';
 
 // [단어, 뜻, 예문, 예문 뜻, 예문 속 모양(활용형일 때만)]. 영어 단어의 뜻은 한국어, 한국어 단어의 뜻은 영어
 // shortcut: 앱에 묶어 둠. 몇천 개가 되면 언어별 파일로 나눠 받기
@@ -23,9 +24,12 @@ const EMOJI: Record<string, string> = {
   '건강': '💊', '자주 쓰는 표현': '💬', '장소': '📍', '사람': '👥', '날씨·건강': '🌦️', '취미·일': '🎨', '기본 동사·형용사': '🔤',
 };
 
+type Mode = 'learn' | 'review' | 'hard' | 'quick';
+const NO_RUN = { code: '', ids: [], done: [], miss: [], knew: [] };
+
 export function Vocab() {
   const { state, set } = useStore();
-  const { speak } = useUi();
+  const { speak, toast, openDialog } = useUi();
   const codes = Object.keys(BOOK).filter((c) => c !== state.native);
   const [picked, setPicked] = useState(() => state.learn.find((c) => codes.includes(c)) ?? codes[0]);
   const code = codes.includes(picked) ? picked : codes[0];
@@ -34,24 +38,59 @@ export function Vocab() {
   const topics = TOPICS[code] ?? {};
   const topic = topics[state.vocabTopic] ? state.vocabTopic : '';
   const inTopic = (i: number) => !topic || topics[topic].includes(words[i][0]);
-  const pick = () => pickSession(keys, state.vocab, Date.now(), SESSION, inTopic);
-  // 처음엔 아는 단어 고르기, 그다음부터는 학습 화면이 첫 화면이에요. 목록은 버튼으로
-  const [view, setView] = useState<'pick' | 'study' | 'list'>(() => (!state.vocab[startKey(code)] ? 'pick' : pick().length ? 'study' : 'list'));
-  const [queue, setQueue] = useState<number[]>(() => pick());
+  const goal = state.vocabGoal;
+  // 새 단어는 무료 한도까지만 (처음 30개, 그다음 하루 5개). 복습은 언제나
+  const left = freeLeft(state.vocabFree, dayOf(Date.now()));
+  const pick = () => pickSession(keys, state.vocab, Date.now(), goal, inTopic, left);
+  // 하다 만 판이 있으면 거기서 이어서 (단어 목록이 바뀌었으면 버려요)
+  const run = state.vocabRun;
+  const live = run.code === code && run.done.length < run.ids.length && run.ids.every((i) => i < words.length);
+  // 처음엔 수준 테스트, 그다음부터는 '지금 할 일' 카드가 있는 첫 화면
+  const [view, setView] = useState<'pick' | 'study' | 'list'>(() => (!state.vocab[startKey(code)] ? 'pick' : 'list'));
+  const [mode, setMode] = useState<Mode>('learn');
+  const [queue, setQueue] = useState<number[]>(() => (live ? run.ids : pick()));
+  // 첫 화면: 펼친 설정, 내 단어 필터, 전체 보기
+  const [panel, setPanel] = useState<'' | 'topic' | 'goal'>('');
+  const [tab, setTab] = useState<'' | 'learning' | 'learned' | 'new' | 'off'>('');
+  const [all, setAll] = useState(false);
 
   const now = Date.now();
-  const shown = keys.filter((_, i) => inTopic(i));
-  const known = shown.filter((k) => state.vocab[k]?.[0] === KNOWN).length;
-  const learned = shown.filter((k) => (state.vocab[k]?.[0] ?? 0) >= 4).length - known;
-  const learning = shown.filter((k) => state.vocab[k]).length - learned - known;
-  const due = shown.filter((k) => state.vocab[k] && state.vocab[k][0] !== KNOWN && state.vocab[k][1] <= now).length;
+  const ids = words.map((_, i) => i).filter(inTopic);
+  const boxOf = (i: number) => state.vocab[keys[i]]?.[0] ?? 0;
+  const hardIds = ids.filter((i) => boxOf(i) !== KNOWN && state.vocabStar.includes(keys[i]));
+  const seenIds = ids.filter((i) => boxOf(i) && boxOf(i) !== KNOWN);
   const next = pick();
-  const start = () => { setQueue(pick()); setView('study'); };
+  const open = (m: Mode, q: number[]) => { setMode(m); setQueue(q); setView('study'); };
+  const start = () => { set({ vocabRun: NO_RUN }); open('learn', pick()); };
   const toggle = (k: string) => set((s) => {
     const vocab = { ...s.vocab };
     if (vocab[k]?.[0] === KNOWN) delete vocab[k]; else vocab[k] = knownLog();
     return { vocab };
   });
+  // 새로고침: 이 언어의 단어 기록만 지우고 처음부터 다시 배워요 (수준 테스트 표시·연속 기록은 남겨요)
+  const reset = () => openDialog(tt('단어장을 새로 시작할까요?'), tt('{l} 단어의 공부 기록이 모두 지워지고 처음부터 다시 배워요. 되돌릴 수 없어요.', { l: langName(code) }), [
+    { label: tt('취소'), kind: 'light' },
+    { label: tt('새로 시작'), kind: 'danger', fn: () => {
+      set((s) => {
+        const vocab = { ...s.vocab };
+        for (const k of keys) delete vocab[k];
+        return { vocab, vocabStar: s.vocabStar.filter((k) => !keys.includes(k)), vocabRun: NO_RUN, vocabFree: NO_FREE };
+      });
+      setTab(''); toast(tt('단어장을 새로 시작했어요'));
+    } },
+  ]);
+  // 테스트용 '다음날': 시계를 바꾸는 대신 기록을 하루 앞당겨서, 내일 열었을 때처럼 보여요
+  // shortcut: 테스트용 버튼이라 정식 공개 전에 빼기
+  const nextDay = () => {
+    set((s) => {
+      const vocab = { ...s.vocab };
+      for (const k of keys) if (vocab[k] && vocab[k][0] !== KNOWN) vocab[k] = [vocab[k][0], vocab[k][1] - 86400000];
+      const back = (d: string) => { if (!d) return d; const [y, m, dd] = d.split('-').map(Number); return dayOf(new Date(y, m - 1, dd - 1).getTime()); };
+      return { vocab, vocabDays: s.vocabDays.map(back), vocabFree: { ...s.vocabFree, day: back(s.vocabFree.day), done: back(s.vocabFree.done) } };
+    });
+    toast(tt('하루가 지났어요'));
+  };
+  const star = (k: string) => set((s) => ({ vocabStar: s.vocabStar.includes(k) ? s.vocabStar.filter((x) => x !== k) : [...s.vocabStar, k] }));
   const topicChips = Object.keys(topics).length > 0 && (
     <div className="vb-topics">
       <Chip on={!topic} onClick={() => set({ vocabTopic: '' })}><span aria-hidden>📚 </span>{tt('전체')}</Chip>
@@ -67,64 +106,215 @@ export function Vocab() {
           for (const k of sel) vocab[k] = knownLog();
           set({ vocab });
           // 고른 뒤 바로 학습으로
-          const q = pickSession(keys, vocab, Date.now(), SESSION, inTopic);
-          setQueue(q); setView(q.length ? 'study' : 'list');
+          const q = pickSession(keys, vocab, Date.now(), state.vocabGoal, inTopic, left);
+          setMode('learn'); setQueue(q); setView(q.length ? 'study' : 'list');
         }} />
     </section>
   );
 
   if (view === 'study' && queue.length) return (
     <section className="screen">
-      <Session key={queue.join()} code={code} ids={queue} onList={() => setView('list')} onMore={start} more={next.length > 0} />
+      <Session key={mode + queue.join()} code={code} ids={queue} mode={mode} run={mode === 'learn' && live && run.ids.join() === queue.join() ? run : undefined}
+        onList={() => setView('list')} onMore={start} more={next.length > 0} />
     </section>
   );
+
+  // 첫 화면은 '지금 할 일' 카드 하나가 주인공. 나머지는 아래에 작게
+  const today = todayCount(state.vocab, now);
+  const fresh = next.filter((i) => !boxOf(i)).length, review = next.length - fresh;
+  const mins = (n: number) => Math.max(1, Math.round(n / 3));
+  const tomorrow = new Date(now).setHours(48, 0, 0, 0);
+  const dueSoon = ids.filter((i) => boxOf(i) && boxOf(i) !== KNOWN && state.vocab[keys[i]][1] < tomorrow).length;
+  const firstTime = !seenIds.length;
+  const streak = dayStreak(state.vocabDays, now), week = weekOf(state.vocabDays, now), wd = (new Date(now).getDay() + 6) % 7;
+  const premium = () => toast(tt('프리미엄은 준비 중이에요'));
+  const locked = !live && !next.length && left === 0 && ids.some((i) => !boxOf(i)); // 무료 새 단어를 다 씀
+  const allDone = !live && !next.length && !locked;
+  const goalMet = !live && next.length > 0 && today >= goal;
+  const goalDone = locked || allDone || goalMet;
+  const soon = dueSoon ? tt('내일 복습 {n}개도 기다려요', { n: dueSoon }) : tt('오늘은 쉬어도 연속이 이어져요');
+  const hero = live
+    ? { label: tt('아까 하던 학습'), title: `${tt('이어서 하기')} · ${run.done.length} / ${run.ids.length}`, sub: tt('{n}개 남았어요 · 약 {m}분', { n: run.ids.length - run.done.length, m: mins(run.ids.length - run.done.length) }), btn: tt('이어서 하기'), go: () => open('learn', run.ids) }
+    : locked
+      ? { label: `${state.vocabFree.done === dayOf(now) ? tt('무료 단어 30개 완료') : tt('오늘 무료 단어 완료')} 🎉`, title: tt('내일 새 단어 5개가 열려요'), sub: tt('기다리지 않고 더 배우고 싶다면'), btn: tt('프리미엄으로 계속 배우기'), go: premium }
+      : allDone
+        ? { label: `${tt('오늘 목표 달성')} 🎉`, title: tt('오늘 할 단어를 다 했어요'), sub: '', btn: '', go: start }
+        : goalMet
+          ? { label: `${tt('오늘 목표 달성')} 🎉`, title: tt('조금 더 해 볼까요?'), sub: tt('단어 {n}개 · 약 {m}분', { n: next.length, m: mins(next.length) }), btn: tt('더 하기'), go: start }
+          : !fresh
+            ? { label: tt('오늘 할 일'), title: tt('복습 {n}개 하기', { n: review }), sub: tt('헷갈렸던 단어예요 · 약 {m}분', { m: mins(review) }), btn: tt('복습 시작'), go: start }
+            : { label: firstTime ? tt('첫 학습') : tt('오늘 할 일'), title: firstTime ? tt('첫 단어 {n}개 배우기', { n: next.length }) : tt('단어 {n}개 배우기', { n: next.length }),
+                sub: (review ? tt('복습 {a}개 + 새 단어 {b}개', { a: review, b: fresh }) : tt('새 단어 {n}개', { n: fresh })) + ' · ' + tt('약 {m}분', { m: mins(next.length) }), btn: tt('시작하기'), go: start };
+  // 무료로 남은 새 단어 (카드 아래 한 줄)
+  const freeNote = live || allDone ? '' : state.vocabFree.n < 30 ? tt('처음 무료 단어 30개 중 {n}개 남았어요', { n: left })
+    : left ? tt('오늘 무료 새 단어 {n}개 남았어요', { n: left }) : locked ? '' : tt('오늘 무료 새 단어는 다 배웠어요 · 복습은 무료예요');
+  // 내 단어장: 공부 중(1~3칸) / 외운 단어(4~5칸) / 아직 안 배운 단어 / 뺀 단어
+  const group = (i: number) => { const b = boxOf(i); return b === KNOWN ? 'off' : !b ? 'new' : b >= 4 ? 'learned' : 'learning'; };
+  const groups = { learning: 0, learned: 0, new: 0, off: 0 };
+  ids.forEach((i) => groups[group(i)]++);
+  const curTab = tab || (groups.learning ? 'learning' : 'new');
+  const shownIds = ids.filter((i) => group(i) === curTab);
+  const visible = all ? shownIds : shownIds.slice(0, 5);
+  const studied = groups.learning + groups.learned;
+  const startToday = new Date(now).setHours(0, 0, 0, 0);
+  const when = (i: number) => {
+    const d = Math.round((state.vocab[keys[i]][1] - startToday) / 86400000);
+    return d <= 0 ? tt('오늘 복습') : d === 1 ? tt('내일 복습') : tt('{n}일 뒤 복습', { n: d });
+  };
+  const doneToday = state.vocabDays.includes(dayOf(now));
+  const extra = hardIds.length > 0 || seenIds.length >= 4;
 
   return (
     <section className="screen">
       <div className="page vb">
-        <h1>{tt('단어장')}</h1>
-        {codes.length > 1 && <div className="vb-langs">{codes.map((c) => <Chip key={c} on={c === code} onClick={() => setPicked(c)}>{langName(c)}</Chip>)}</div>}
-        {topicChips}
-        <div className="my-card vb-top">
-          <div className="vb-nums">
-            <span><b>{learned}</b><small>{tt('외움')}</small></span>
-            <span><b>{learning}</b><small>{tt('학습 중')}</small></span>
-            <span><b>{shown.length - learned - learning - known}</b><small>{tt('새 단어')}</small></span>
-          </div>
-          <div className="vb-bar"><i style={{ width: `${(learned / shown.length) * 100}%` }} /><i className="mid" style={{ width: `${(learning / shown.length) * 100}%` }} /></div>
-          {known > 0 && <p className="vb-done">{tt('아는 단어 {n}개는 빼고 배워요', { n: known })}</p>}
-          {next.length > 0
-            ? <Button onClick={start}>{due > 0 ? tt('복습 {n}개 포함 · 학습 시작', { n: Math.min(due, SESSION) }) : tt('새 단어 {n}개 배우기', { n: next.length })}</Button>
-            : <p className="vb-done">{tt('오늘 할 단어를 다 했어요')}</p>}
-          <Button kind="line" onClick={() => setView('pick')}>{tt('수준 테스트 다시 하기')}</Button>
+        <div className="vb-top-row">
+          <h1>{tt('단어장')}</h1>
+          {codes.length > 1 && (
+            <label className="vb-lang">
+              <select value={code} onChange={(e) => setPicked(e.target.value)} aria-label={tt('배울 언어')}>
+                {codes.map((c) => <option key={c} value={c}>{langName(c)}</option>)}
+              </select>
+              <span aria-hidden>{langName(code)} ▾</span>
+            </label>
+          )}
         </div>
-        <ul className="vb-list">
-          {words.map((w, i) => {
-            if (!inTopic(i)) return null;
-            const box = state.vocab[keys[i]]?.[0] ?? 0;
-            const off = box === KNOWN;
-            return (
-              <li key={w[0]} className={off ? 'off' : ''}>
-                <button onClick={() => speak(w[0], code)}>
-                  <span><b lang={langTag(code)}>{w[0]}</b><small>{off ? tt('뺀 단어') : w[1]}</small></span>
-                  {!off && <em aria-label={tt('외운 정도 5칸 중 {n}칸', { n: box })}>{[1, 2, 3, 4, 5].map((n) => <i key={n} className={n <= box ? 'on' : ''} />)}</em>}
-                  <Icon name="speak" />
+        <div className={`vb-hero${goalDone ? ' goal-met' : ''}`}>
+          <small>{hero.label}</small>
+          <h2>{hero.title}</h2>
+          {hero.sub && <p>{hero.sub}</p>}
+          {!goalDone && (
+            <div className="vb-hero-bar"><i style={{ width: `${Math.min(1, today / goal) * 100}%` }} /><small>{tt('오늘 {a} / {b}개 했어요', { a: today, b: goal })}</small></div>
+          )}
+          {hero.btn && <button className="vb-hero-btn" onClick={hero.go}>{goalDone && <Sparkle />}{hero.btn}</button>}
+          {live && <button className="vb-hero-link" onClick={start}>{tt('처음부터 다시')}</button>}
+          {goalDone && <small className="vb-hero-note">{soon}</small>}
+          {freeNote && <small className="vb-hero-free">{freeNote}{!locked && !left && <button onClick={premium}>{tt('프리미엄')} ›</button>}</small>}
+          {!live && !goalDone && (
+            <div className="vb-hero-opts">
+              {Object.keys(topics).length > 0 && <button aria-expanded={panel === 'topic'} onClick={() => setPanel(panel === 'topic' ? '' : 'topic')}>{topic ? EMOJI[topic] ?? '' : '📚'} {tt('주제')}: {topic ? tt(topic) : tt('전체')} ▾</button>}
+              <button aria-expanded={panel === 'goal'} onClick={() => setPanel(panel === 'goal' ? '' : 'goal')}>{tt('하루 {n}개', { n: goal })} ▾</button>
+            </div>
+          )}
+          {panel === 'topic' && !live && topicChips}
+          {panel === 'goal' && !live && (
+            <div className="vb-goalpick" role="radiogroup" aria-label={tt('하루 양')}>
+              {[10, 20, 30].map((n) => <button key={n} role="radio" aria-checked={goal === n} className={goal === n ? 'on' : ''} onClick={() => { set({ vocabGoal: n }); setPanel(''); }}>{n}</button>)}
+            </div>
+          )}
+        </div>
+
+        <div className="my-card vb-streak">
+          <div className="vb-streak-top">
+            <span className="fire" aria-hidden>🔥</span>
+            <div>
+              <b>{streak > 0 ? tt('{n}일 연속 공부 중', { n: streak }) : tt('연속 기록을 시작해 봐요')}</b>
+              <small>{doneToday ? tt('오늘 공부 완료! 내일도 하면 {n}일 연속', { n: streak + 1 }) : streak > 0 ? tt('오늘 공부하면 {n}일 연속이 돼요', { n: streak + 1 }) : tt('오늘 단어를 공부하면 1일째예요')}</small>
+            </div>
+          </div>
+          <div className="vb-week2" aria-label={tt('이번 주 공부한 날')}>
+            {['월', '화', '수', '목', '금', '토', '일'].map((d, k) => (
+              <span key={d} className={week[k] ? 'on' : k === wd ? 'today' : k > wd ? 'later' : 'miss'}>
+                <i>{week[k] ? '✓' : ''}</i><small>{k === wd ? tt('오늘') : tt(d)}</small>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {extra && (
+          <>
+            <h2 className="vb-h2">{tt('더 하고 싶을 때')}</h2>
+            <div className="vb-more-card">
+              {hardIds.length > 0 && (
+                <button onClick={() => open('hard', hardIds.slice(0, goal))}>
+                  <span className="ic hard" aria-hidden>★</span>
+                  <span><b>{tt('어려운 단어 {n}개', { n: hardIds.length })}</b><small>{tt('틀렸던 단어만 다시 써 보기')}</small></span>
+                  <Icon name="chev" />
                 </button>
-                <button className="vb-x" onClick={() => toggle(keys[i])}>{off ? tt('되돌리기') : tt('빼기')}</button>
+              )}
+              {seenIds.length >= 4 && (
+                <button onClick={() => open('quick', shuffle(seenIds).slice(0, 10))}>
+                  <span className="ic" aria-hidden>⚡</span>
+                  <span><b>{tt('빠른 복습')}</b><small>{tt('뜻 고르기 10개 · 1분')}</small></span>
+                  <Icon name="chev" />
+                </button>
+              )}
+            </div>
+          </>
+        )}
+
+        <h2 className="vb-h2">{tt('내 단어장')}</h2>
+        <div className="my-card vb-sum">
+          <p>{tt('{a}개 중 {b}개 공부했어요', { a: ids.length - groups.off, b: studied })}</p>
+          <div className="vb-bar"><i className="all" style={{ width: `${(studied / Math.max(1, ids.length - groups.off)) * 100}%` }} /></div>
+        </div>
+        <div className="vb-tabs" role="tablist">
+          {([['learning', '공부 중'], ['learned', '외운 단어'], ['new', '안 배운 단어'], ['off', '뺀 단어']] as const).map(([k, l]) => (k !== 'off' || groups.off > 0) && (
+            <button key={k} role="tab" aria-selected={curTab === k} className={curTab === k ? 'on' : ''} onClick={() => { setTab(k); setAll(false); }}>{tt(l)}<b>{groups[k]}</b></button>
+          ))}
+        </div>
+        <p className="vb-tab-note">{tt(({ learning: '복습 날짜가 되면 다시 나와요', learned: '여러 번 맞혀서 잘 아는 단어예요', new: '앞으로 배울 단어예요. 이미 알면 ‘알아요’를 눌러요', off: '안 배우기로 한 단어예요' } as const)[curTab])}</p>
+        <ul className="vb-list my-card">
+          {visible.map((i) => {
+            const w = words[i], starred = state.vocabStar.includes(keys[i]);
+            const due = curTab === 'learning' || curTab === 'learned' ? when(i) : '';
+            return (
+              <li key={w[0]}>
+                <button onClick={() => speak(w[0], code)} aria-label={`${w[0]} ${tt('듣기')}`}>
+                  <span><b lang={langTag(code)}>{w[0]}</b><small>{w[1]}</small></span>
+                  {due && <em className={`vb-due${due === tt('오늘 복습') ? ' now' : ''}`}>{due}</em>}
+                </button>
+                {due && <button className={`vb-star${starred ? ' on' : ''}`} aria-label={tt('어려운 단어')} aria-pressed={starred} onClick={() => star(keys[i])}>{starred ? '★' : '☆'}</button>}
+                {curTab === 'new' && <button className="vb-x" onClick={() => toggle(keys[i])}>{tt('알아요')}</button>}
+                {curTab === 'off' && <button className="vb-x" onClick={() => toggle(keys[i])}>{tt('되돌리기')}</button>}
               </li>
             );
           })}
+          {!visible.length && <li className="vb-empty">{curTab === 'learning' ? tt('아직 공부한 단어가 없어요') : curTab === 'learned' ? tt('조금만 더 하면 여기에 모여요') : tt('여기에 맞는 단어가 없어요')}</li>}
         </ul>
+        {shownIds.length > 5 && <button className="vb-all" onClick={() => setAll(!all)}>{all ? tt('접기') : tt('단어 {n}개 더 보기', { n: shownIds.length - 5 })} {all ? '▴' : '▾'}</button>}
+        <div className="vb-retest">
+          <small>{tt('실력이 바뀌었나요?')}</small>
+          <button onClick={() => setView('pick')}>{tt('수준 테스트 다시 하기')}</button>
+          <button className="vb-reset" onClick={reset}>↻ {tt('단어장 새로고침')}</button>
+          <button className="vb-reset" onClick={nextDay}>☀ {tt('다음날로 넘기기 (테스트)')}</button>
+        </div>
       </div>
     </section>
   );
 }
 
+/** 결과 화면: 맞힌 수 · 걸린 시간 · 연속, 이번 주 7칸 */
+function Report({ right, ms }: { right: number; ms: number }) {
+  const { state } = useStore();
+  const now = Date.now(), week = weekOf(state.vocabDays, now), today = (new Date(now).getDay() + 6) % 7;
+  const min = Math.round(ms / 60000);
+  return (
+    <div className="vb-report">
+      <div className="vb-stats">
+        <span><b>{right}</b><small>{tt('맞힌 단어')}</small></span>
+        <span><b>{min ? tt('{n}분', { n: min }) : tt('{n}초', { n: Math.max(1, Math.round(ms / 1000)) })}</b><small>{tt('걸린 시간')}</small></span>
+        <span><b>{tt('{n}일', { n: dayStreak(state.vocabDays, now) })}</b><small>{tt('연속')}</small></span>
+      </div>
+      <div className="vb-week" aria-label={tt('이번 주')}>
+        {['월', '화', '수', '목', '금', '토', '일'].map((d, k) => <span key={d} className={(week[k] ? 'on' : '') + (k === today ? ' now' : '')}><i>{week[k] ? '🔥' : ''}</i><small>{tt(d)}</small></span>)}
+      </div>
+    </div>
+  );
+}
+
+/** 프리미엄 표시: 알록달록한 네 갈래 반짝이 */
+const Sparkle = () => (
+  <svg className="vb-sparkle" viewBox="0 0 24 24" aria-hidden>
+    <defs><linearGradient id="vb-sp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#00b8ff" /><stop offset=".38" stopColor="#7b3dff" /><stop offset=".68" stopColor="#ff2bd6" /><stop offset="1" stopColor="#ffc400" /></linearGradient></defs>
+    <path fill="url(#vb-sp)" d="M12 0c.6 6.3 5.7 11.4 12 12-6.3.6-11.4 5.7-12 12-.6-6.3-5.7-11.4-12-12C6.3 11.4 11.4 6.3 12 0z" />
+  </svg>
+);
+
 const shuffle = <T,>(a: T[]) => a.map((x) => [Math.random(), x] as const).sort((p, q) => p[0] - q[0]).map((p) => p[1]);
 
 /** 수준 테스트 (말해보카처럼): 단어 20개의 뜻을 빠르게 고르고, 맞힌 단어는 아는 단어로 빼요 */
 function Placement({ code, words, keys, chips, onDone }: { code: string; words: Word[]; keys: string[]; chips: ReactNode; onDone: (sel: string[]) => void }) {
-  const { state } = useStore();
+  const { state, set } = useStore();
   const { speak } = useUi();
   const [ids] = useState(() => placementIds(keys, state.vocab));
   const [at, setAt] = useState(0);
@@ -164,6 +354,12 @@ function Placement({ code, words, keys, chips, onDone }: { code: string; words: 
         <h2>{tt('{n}개를 이미 알고 있어요', { n: right.length })}</h2>
         <p>{tt('아는 단어는 빼고, 모르는 단어부터 배워요. 배우고 싶은 주제도 골라 보세요.')}</p>
         {chips}
+        <p className="vb-q">{tt('하루에 몇 개씩 배울까요?')}</p>
+        <div className="vb-goalpick big" role="radiogroup" aria-label={tt('하루 양')}>
+          {[[10, '가볍게'], [20, '보통'], [30, '열심히']].map(([n, l]) => (
+            <button key={n} role="radio" aria-checked={state.vocabGoal === n} className={state.vocabGoal === n ? 'on' : ''} onClick={() => set({ vocabGoal: n as number })}><b>{n}</b><small>{tt(l as string)}</small></button>
+          ))}
+        </div>
         <div className="vb-foot"><Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={() => onDone(right)}>{tt('학습 시작')}</Button></div>
       </div>
     </div>
@@ -217,70 +413,109 @@ function reason(kind: string, ops: Op[], typed: string, ans: string, w: Word) {
 }
 
 // 한 판에 단어 20개, 단어마다 빈칸 한 번. 틀린 단어는 다 맞힐 때까지 다음 판으로 이어서
-function Session({ code, ids, onList, onMore, more }: { code: string; ids: number[]; onList: () => void; onMore: () => void; more: boolean }) {
+type Run = AppState['vocabRun'];
+const TITLE: Record<Mode, string> = { learn: '단어 빈칸', review: '복습', hard: '어려운 단어', quick: '빠른 복습' };
+
+/** 뜻 고르기 보기 4개: 같은 주제 단어에서 골라 헷갈리게 */
+function optionsFor(code: string, i: number) {
+  const words = BOOK[code], same = Object.values(TOPICS[code] ?? {}).find((t) => t.includes(words[i][0])) ?? [];
+  const near = shuffle(words.map((_, k) => k).filter((k) => k !== i && same.includes(words[k][0])));
+  const rest = shuffle(words.map((_, k) => k).filter((k) => k !== i && !near.includes(k)));
+  return shuffle([i, ...[...near, ...rest].slice(0, 3)]);
+}
+
+// 한 판에 하루 양만큼, 단어마다 빈칸 한 번. 틀린 단어는 다 맞힐 때까지 다음 판으로 이어서
+function Session({ code, ids, run, mode, onList, onMore, more }: { code: string; ids: number[]; run?: Run; mode: Mode; onList: () => void; onMore: () => void; more: boolean }) {
   const { state, set } = useStore();
-  const { speak } = useUi();
+  const { speak, go: goTo } = useUi();
   const words = BOOK[code];
+  const quick = mode === 'quick';
+  const say = (t: string) => { if (!state.vocabMute) speak(t, code, { quiet: true }); };
+  const [t0] = useState(Date.now);
   const [round, setRound] = useState(1);
   const [list, setList] = useState(ids);
-  const [steps, setSteps] = useState<Step[]>(() => buildSteps(ids, (i) => state.vocab[keyOf(code, words[i])]?.[0] ?? 0));
+  const [steps, setSteps] = useState<Step[]>(() => (quick ? ids.map((w): Step => ({ w, kind: 'choose' }))
+    : buildSteps(ids.filter((i) => !run?.done.includes(i)), (i) => state.vocab[keyOf(code, words[i])]?.[0] ?? 0)));
   const [at, setAt] = useState(0);
-  const [done, setDone] = useState<number[]>([]);
-  const [miss, setMiss] = useState<number[]>([]);
-  const [knew, setKnew] = useState<number[]>([]); // '이미 알아요'로 뺀 단어 (맞힌 수에 안 셈)
+  const [done, setDone] = useState<number[]>(run?.done ?? []);
+  const [miss, setMiss] = useState<number[]>(run?.miss ?? []);
+  const [knew, setKnew] = useState<number[]>(run?.knew ?? []); // '이미 알아요'로 뺀 단어 (맞힌 수에 안 셈)
   // ok: 맞힘, wrong: 틀림, shown: 정답 봄. 셋 다 그 단어는 끝
   const [result, setResult] = useState<'ok' | 'wrong' | 'shown'>();
   const [hint, setHint] = useState(false);
   const [text, setText] = useState('');
+  const [opts, setOpts] = useState<number[]>([]);
+  const [chosen, setChosen] = useState<number | null>(null);
   const step = steps[at] as Step | undefined;
   const w = step ? words[step.w] : undefined;
+  const k = w ? keyOf(code, w) : '';
   const en = code === 'en';
 
   const gap = w ? cloze(w[2], w[4] ?? w[0], en) ?? ['', w[0], ''] : null;
   const ans = gap?.[1] ?? '';
 
   useEffect(() => {
-    if (w && step!.kind === 'intro') speak(w[0], code, { quiet: true });
+    if (!w) return;
+    if (step!.kind === 'choose') setOpts(optionsFor(code, step!.w));
+    // 새 단어는 보기 화면에서 한 번 읽어 줘요. 빠른 복습은 고르기 화면에서
+    if (step!.kind === 'intro' || (quick && step!.kind === 'choose')) say(w[0]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [at, round]);
 
-  const go = () => { setAt((i) => i + 1); setResult(undefined); setHint(false); setText(''); };
-  // 맞히면 저절로 다음 단어
+  // 첫 판은 단어마다 저장해서, 나갔다 와도 이어서 해요. 다 풀면 지워요
   useEffect(() => {
-    if (result !== 'ok') return;
-    const t = setTimeout(go, 1500);
-    return () => clearTimeout(t);
-  }, [result]);
+    if (round !== 1 || mode !== 'learn') return;
+    set({ vocabRun: done.length < list.length ? { code, ids: list, done, miss, knew } : NO_RUN });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done.length, round]);
+
+  const go = () => { setAt((i) => i + 1); setResult(undefined); setHint(false); setText(''); setChosen(null); };
+  const markDay = () => set((s) => (s.vocabDays.includes(dayOf(Date.now())) ? {} : { vocabDays: [...s.vocabDays.slice(-400), dayOf(Date.now())] }));
 
   const end = (r: 'ok' | 'wrong' | 'shown' | 'skip' | 'known') => {
     if (!step || !w || result) return;
     if (r === 'known') {
-      const k = keyOf(code, w);
       set((s) => ({ vocab: { ...s.vocab, [k]: knownLog() } }));
       setDone((d) => [...d, step.w]); setKnew((x) => [...x, step.w]);
-      // 소개 화면이면 뒤의 빈칸 문제도 건너뛰어요
-      setAt(steps[at + 1]?.w === step.w ? at + 2 : at + 1); setHint(false); setText('');
+      // 보기·고르기 화면이면 뒤의 문제도 건너뛰어요
+      let n = at + 1;
+      while (steps[n]?.w === step.w) n++;
+      setAt(n); setHint(false); setText(''); setChosen(null);
       return;
     }
     const missed = r !== 'ok' || hint;
     setDone((d) => [...d, step.w]);
     if (missed) setMiss((m) => [...m, step.w]);
+    markDay();
     // 첫 판은 맞힘·틀림 모두 기록, 다시 하는 판은 이미 1칸이라 그대로
-    if (round === 1 || missed) {
-      const k = keyOf(code, w);
-      set((s) => {
-        const box = nextBox(s.vocab[k]?.[0] ?? 0, missed);
-        return { vocab: { ...s.vocab, [k]: [box, dueAt(box, Date.now())] } };
-      });
-    }
+    set((s) => {
+      const box = nextBox(s.vocab[k]?.[0] ?? 0, missed);
+      // 처음 배우는 단어면 무료 한도에서 하나 써요
+      const vocabFree = s.vocab[k] ? s.vocabFree : spendFree(s.vocabFree, dayOf(Date.now()));
+      const vocab = round === 1 || missed ? { ...s.vocab, [k]: [box, dueAt(box, Date.now())] as [number, number] } : s.vocab;
+      // 틀리면 어려운 단어에 담고, 어려운 단어 복습에서 맞히면 빼요
+      const has = s.vocabStar.includes(k);
+      const vocabStar = r === 'wrong' && !has ? [...s.vocabStar, k] : mode === 'hard' && !missed ? s.vocabStar.filter((x) => x !== k) : s.vocabStar;
+      return { vocab, vocabStar, vocabFree };
+    });
     if (r === 'skip') return go();
     setResult(r);
-    speak(w[2], code, { quiet: true });
+    say(w[2]);
+  };
+
+  const choose = (c: number) => {
+    if (!step || chosen !== null) return;
+    setChosen(c);
+    if (c === step.w) say(w![0]);
+    // 빠른 복습은 고르기가 곧 문제예요 (기록은 바꾸지 않아요)
+    if (quick) { setDone((d) => [...d, step.w]); if (c !== step.w) setMiss((m) => [...m, step.w]); markDay(); }
   };
 
   const same = (a: string) => a.trim().toLowerCase().replace(/\s+/g, ' ');
   const check = () => { if (text.trim() && !result) end(same(text) === same(ans) ? 'ok' : 'wrong'); };
-  const again = () => { setRound((r) => r + 1); setList(miss); setSteps(miss.map((w): Step => ({ w, kind: 'cloze' }))); setAt(0); setDone([]); setMiss([]); };
+  const again = () => { setRound((r) => r + 1); setList(miss); setSteps(miss.map((w): Step => ({ w, kind: quick ? 'choose' : 'cloze' }))); setAt(0); setDone([]); setMiss([]); setKnew([]); };
+  const starred = state.vocabStar.includes(k);
+  const big = { minHeight: 49, padding: '14px 16px' };
 
   // 인스타그램 스토리처럼 단어마다 한 칸
   const prog = (
@@ -288,12 +523,17 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
       <div className="vb-story" role="progressbar" aria-valuenow={done.length} aria-valuemax={list.length}>
         {list.map((x) => <i key={x} className={done.includes(x) ? 'on' : step?.w === x ? 'now' : ''} />)}
       </div>
-      <button onClick={onList}>{tt('단어 목록')}</button>
+      {w && <button className={`vb-star${starred ? ' on' : ''}`} aria-label={tt('어려운 단어')} aria-pressed={starred}
+        onClick={() => set((s) => ({ vocabStar: starred ? s.vocabStar.filter((x) => x !== k) : [...s.vocabStar, k] }))}>{starred ? '★' : '☆'}</button>}
+      <button className={`vb-mute${state.vocabMute ? ' on' : ''}`} aria-pressed={state.vocabMute} onClick={() => set({ vocabMute: !state.vocabMute })}
+        aria-label={tt('소리 없이')}><Icon name="speak" />{state.vocabMute && <i aria-hidden />}</button>
+      <button onClick={onList}>{tt('목록')}</button>
     </div>
   );
 
   if (!step || !w) {
     const right = list.length - miss.length - knew.length;
+    const all = round === 1 ? right : list.length - knew.length;
     return (
       <div className="vb-session">
         {prog}
@@ -302,16 +542,23 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
             <>
               <h2>{right ? tt('{n}개 맞혔어요', { n: right }) : tt('한 번 더 해 봐요')}</h2>
               <p>{tt('헷갈린 단어를 바로 이어서 연습해요')}</p>
-              <div className="vb-foot"><Button onClick={again}>{tt('이어서 공부하기')}</Button></div>
+              <div className="vb-foot"><Button style={big} onClick={again}>{tt('이어서 공부하기')}</Button></div>
             </>
           ) : (
             <>
               <span className="vb-trophy"><Icon name="check" /></span>
-              <h2>{right > 0 ? tt('{n}개 모두 맞혔어요!', { n: round === 1 ? right : list.length - knew.length }) : tt('다 끝났어요!')}</h2>
-              <p>{more ? tt('다음 {n}개 배우러 갈까요?', { n: SESSION }) : tt('오늘 할 단어를 다 했어요')}</p>
+              <h2>{todayCount(state.vocab, Date.now()) >= state.vocabGoal ? tt('오늘 목표 달성!') : all > 0 ? tt('{n}개 모두 맞혔어요!', { n: all }) : tt('다 끝났어요!')}</h2>
+              <Report right={all} ms={Date.now() - t0} />
+              {mode === 'learn' && (
+                <div className="vb-more">
+                  <small>{tt('원하면 이어서')}</small>
+                  <button onClick={() => goTo('feed')}>{tt('문장 카드에서 써 보기')}<Icon name="chev" /></button>
+                  <button onClick={() => goTo('call')}>{tt('AI 전화에서 써 보기')}<Icon name="chev" /></button>
+                </div>
+              )}
               <div className="vb-foot">
-                {more && <Button onClick={onMore}>{tt('다음 {n}개 배우기', { n: SESSION })}</Button>}
-                <Button kind={more ? 'link' : 'line'} onClick={onList}>{tt('단어 목록')}</Button>
+                {mode === 'learn' && more && <Button style={big} onClick={onMore}>{tt('더 배우기')}</Button>}
+                <Button kind={mode === 'learn' && more ? 'link' : 'dark'} style={mode === 'learn' && more ? undefined : big} onClick={onList}>{tt('단어장으로')}</Button>
               </div>
             </>
           )}
@@ -324,13 +571,41 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
     <div className="vb-session">
       {prog}
       <div className="vb-body">
+        <span className="vb-steps" aria-hidden><b>{tt('보기')}</b><i />{tt('고르기')}<i />{tt('쓰기')}</span>
         <small className="vb-q">{tt('새 단어')}</small>
         <button className="vb-word" onClick={() => speak(w[0], code)}><b lang={langTag(code)}>{w[0]}</b><Icon name="speak" /></button>
         <p className="vb-mean">{w[1]}</p>
         <button className="vb-ex" onClick={() => speak(w[2], code)}><b lang={langTag(code)}>{w[2]}</b><small>{w[3]}</small></button>
         <div className="vb-foot">
-          <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={go}>{tt('다음')}</Button>
+          <Button kind="dark" style={big} onClick={go}>{tt('다음')}</Button>
           <Button kind="link" style={{ marginTop: -6 }} onClick={() => end('known')}>{tt('이미 알아요')}</Button>
+        </div>
+      </div>
+    </div>
+  );
+
+  if (step.kind === 'choose') return (
+    <div className="vb-session">
+      {prog}
+      <div className="vb-body vb-test">
+        {quick ? <span className="rc-chip">{tt('빠른 복습')} · {langName(code)}</span>
+          : <span className="vb-steps" aria-hidden>{tt('보기')}<i /><b>{tt('고르기')}</b><i />{tt('쓰기')}</span>}
+        <button className="vb-word" onClick={() => speak(w[0], code)}><b lang={langTag(code)}>{w[0]}</b><Icon name="speak" /></button>
+        <p className="vb-q">{tt('알맞은 뜻은?')}</p>
+        <div className="vb-opts">
+          {opts.map((o) => (
+            <button key={o} disabled={chosen !== null} onClick={() => choose(o)}
+              className={chosen === null ? '' : o === step.w ? 'ok' : o === chosen ? 'no' : ''}>
+              {chosen !== null && o === step.w && <span aria-label={tt('정답')}>✓ </span>}
+              {chosen !== null && o === chosen && o !== step.w && <span aria-label={tt('내 답')}>✕ </span>}
+              {words[o][1]}
+            </button>
+          ))}
+        </div>
+        <div className="vb-foot">
+          {chosen !== null
+            ? <Button kind="dark" style={big} onClick={go}>{tt('다음')}</Button>
+            : <Button kind="link" onClick={() => choose(-1)}>{tt('몰라요')}</Button>}
         </div>
       </div>
     </div>
@@ -351,7 +626,9 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
               <span className="ic">{result === 'ok' ? <Icon name="check" /> : '!'}</span>
               <b>{result === 'ok' ? tt('정답이에요!') : tt('괜찮아요, 다음에 또 나와요')}</b>
             </div>
-          ) : <span className="rc-chip">{tt('단어 빈칸')} · {langName(code)}</span>}
+          ) : steps[at - 1]?.w === step.w
+            ? <span className="vb-steps" aria-hidden>{tt('보기')}<i />{tt('고르기')}<i /><b>{tt('쓰기')}</b></span>
+            : <span className="rc-chip">{tt(TITLE[mode])} · {langName(code)}</span>}
           <form onSubmit={(e) => { e.preventDefault(); check(); }}>
             <p className="rc-s" lang={langTag(code)}>
               {gap![0]}
@@ -365,21 +642,23 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
                       autoCapitalize="off" autoCorrect="off" autoComplete="off" spellCheck={false} />
                   )}
                 </span>
+                {/* 기본형은 답을 거의 알려 줘서 풀기 전에는 숨기고, 답을 본 뒤에만 보여 줘요 */}
                 {hint && !result && <small>{tt('{n}글자', { n: [...ans].length })}</small>}
               </span>
               {gap![2]}
             </p>
           </form>
           <p className="rc-tr">{w[3]}</p>
-          {result === 'ok' && <p className="vb-meanline" lang={langTag(code)}>{ans} = {w[1]}</p>}
+          {result === 'ok' && <p className="vb-meanline" lang={langTag(code)}>{ans} = {w[1]}{ans !== w[0] ? ` · ${tt('기본형')} ${w[0]}` : ''}</p>}
 
           {fault && (
             <div className="vb-why" role="alert">
               <b>{title}</b>
-              <div className="vb-row"><small>{tt('내 답')}</small><span lang={langTag(code)}><Mine text={typed} ops={marks} /></span></div>
-              <div className="vb-row right"><small>{tt('정답')}</small><span lang={langTag(code)}><Right text={ans} ops={marks} /></span></div>
+              <div className="vb-row"><small>✕ {tt('내 답')}</small><span lang={langTag(code)}><Mine text={typed} ops={marks} /></span></div>
+              <div className="vb-row right"><small>✓ {tt('정답')}</small><span lang={langTag(code)}><Right text={ans} ops={marks} /></span></div>
               {detail && <p>{detail}</p>}
-              <p className="mean">{ans} = {w[1]}</p>
+              <p className="mean">{ans} = {w[1]}{ans !== w[0] && fault.kind !== 'form' ? ` · ${tt('기본형')} ${w[0]}` : ''}</p>
+              <p className="saved">★ {tt('어려운 단어에 담았어요')}</p>
             </div>
           )}
           {result === 'shown' && (
@@ -407,9 +686,9 @@ function Session({ code, ids, onList, onMore, more }: { code: string; ids: numbe
 
         <div className="vb-foot">
           {result
-            ? <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} onClick={go}>{tt('다음')}</Button>
+            ? <Button kind="dark" style={big} onClick={go}>{tt('다음')}</Button>
             : <>
-                <Button kind="dark" style={{ minHeight: 49, padding: '14px 16px' }} disabled={!text.trim()} onClick={check}>{tt('확인')}</Button>
+                <Button kind="dark" style={big} disabled={!text.trim()} onClick={check}>{tt('확인')}</Button>
                 <div className="vb-links">
                   <Button kind="link" auto onClick={() => end('skip')}>{tt('건너뛰기')}</Button>
                   <i aria-hidden>·</i>

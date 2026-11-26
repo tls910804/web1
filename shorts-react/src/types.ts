@@ -73,6 +73,18 @@ export interface AppState {
   vocab: Record<string, [number, number]>;
   /** 단어장에서 고른 주제. ''은 전체 */
   vocabTopic: string;
+  /** 하다 만 단어장 한 판 (이어서 하기). code가 ''이면 없음 */
+  /** 하루 목표 단어 수 (10·20·30) */
+  vocabGoal: number;
+  /** 단어장 공부한 날 (dayKey) */
+  vocabDays: string[];
+  /** 어려운 단어 (틀리면 저절로, 직접 별표도) */
+  vocabStar: string[];
+  /** 소리 없이: 저절로 읽어 주지 않아요 */
+  vocabMute: boolean;
+  /** 무료 새 단어 사용량 (lib/vocab.ts freeLeft) */
+  vocabFree: { n: number; day: string; today: number; done: string };
+  vocabRun: { code: string; ids: number[]; done: number[]; miss: number[]; knew: number[] };
 }
 
 export type Screen =
