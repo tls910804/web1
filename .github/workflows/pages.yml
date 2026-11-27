@@ -45,6 +45,8 @@ jobs:
             --exclude='참고자료' --exclude='docs' --exclude='tools' --exclude='ai-call-worker' --exclude='HANDOFF.md' --exclude='CLAUDE.md' --exclude='README.md' --exclude='.DS_Store' ./ _site/
           mkdir _site/app
           cp -R shorts-react/dist/. _site/app/
+          # 음성 파일은 R2(audio.langshorts.com)에서 받아요. 목록(manifest.json)만 사이트에 남겨요 (tools/audio/upload_r2.sh로 먼저 올리기)
+          find _site/app/audio -name '*.m4a' -delete
           # 예전 주소(/shorts-react/)는 새 주소로 보내요. 같은 사이트라 기기 기록(localStorage)은 그대로예요
           mkdir _site/shorts-react
           printf '<!doctype html><meta charset="utf-8"><title>Langshorts</title><script>location.replace("/app/"+location.search+location.hash)</script><a href="/app/">langshorts.com/app</a>\n' > _site/shorts-react/index.html

@@ -5,9 +5,10 @@ import { CONTENT_BASE } from './content';
 interface Entry { f: string; s?: number }
 
 let manifest: Record<string, Entry> | null = null;
-const base = `${CONTENT_BASE}audio/`;
+// 목록(manifest)은 사이트와 같이 배포하고, 음성 파일은 R2(VITE_AUDIO_BASE)에서 받아요. 없으면(개발) 사이트의 public/audio
+const base = `${import.meta.env.VITE_AUDIO_BASE || CONTENT_BASE}audio/`;
 
-fetch(`${base}manifest.json`)
+fetch(`${CONTENT_BASE}audio/manifest.json`)
   .then((r) => (r.ok ? r.json() : null))
   .then((m) => { manifest = m; })
   .catch(() => { manifest = null; });
@@ -15,7 +16,8 @@ fetch(`${base}manifest.json`)
 // 아이폰(사파리)은 사용자가 누른 순간에 한 번 재생한 audio 요소만 나중에 스스로 재생할 수 있어요.
 // 그래서 재생기를 하나만 두고, 첫 터치 때 아주 짧은 무음을 틀어 잠금을 풀어 둬요 (자동재생용).
 let player: HTMLAudioElement | null = null; // 테스트(브라우저 아님)에서도 불러올 수 있게 처음 쓸 때 만들어요
-const getPlayer = () => (player ??= new Audio());
+// crossOrigin: R2(다른 주소) 음성을 Web Audio에 연결하면 CORS 허가 없이는 소리가 0이 돼요 (버킷에 CORS 설정함)
+const getPlayer = () => (player ??= Object.assign(new Audio(), { crossOrigin: 'anonymous' }));
 function silentWav() {
   const n = 240, b = new DataView(new ArrayBuffer(44 + n * 2)); // 24kHz 10ms 무음
   const s = (o: number, t: string) => [...t].forEach((c, i) => b.setUint8(o + i, c.charCodeAt(0)));
@@ -61,8 +63,10 @@ export function preloadAudio(text: string, lang: string) {
   const e = manifest?.[`${lang}|${text}`];
   if (!e || warm.has(e.f)) return;
   warm.add(e.f);
-  const a = new Audio(`${base}${e.f}.m4a`);
+  const a = new Audio();
+  a.crossOrigin = 'anonymous'; // 재생기와 같은 방식으로 받아야 캐시를 같이 써요
   a.preload = 'auto';
+  a.src = `${base}${e.f}.m4a`;
 }
 
 export function stopAudio() {
